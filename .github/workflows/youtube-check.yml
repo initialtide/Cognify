@@ -1,0 +1,32 @@
+name: YouTube Link Check
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'src/data/courses/**'
+      - 'scripts/verify_youtube_oembed.mjs'
+  schedule:
+    # Weekly check every Monday at 09:00 UTC to catch removed/unavailable videos
+    - cron: '0 9 * * 1'
+  workflow_dispatch:
+
+concurrency:
+  group: youtube-check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify-youtube:
+    name: Verify Course YouTube Embeds (oEmbed)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Verify YouTube IDs via oEmbed
+        run: node scripts/verify_youtube_oembed.mjs
