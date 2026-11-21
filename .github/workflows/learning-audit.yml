@@ -1,0 +1,82 @@
+name: Learning Quality Audit
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    # Every Monday at 09:30 UTC — updates the tracked weekly learning improvement issue
+    - cron: '30 9 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
+concurrency:
+  group: learning-audit-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    name: Score Pedagogical Depth & Prioritize Next Upgrades
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate Learning Quality Scorecard
+        run: |
+          node scripts/audit_learning_quality.mjs --markdown > learning_report.md
+          cat learning_report.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Update Weekly Learning Automation Issue
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('node:fs');
+            const report = fs.readFileSync('learning_report.md', 'utf8');
+            const title = '[Learning Automation] Cognify Learning Quality Scorecard & Next Upgrades';
+            const body = [
+              report,
+              '---',
+              '_Automatically refreshed by `.github/workflows/learning-audit.yml`. Pick any **P1** or **P2** item above, run `npm run check` + `npm run audit:learning:write`, and open a PR to raise Cognify\'s Learning Depth Score._',
+            ].join('\n');
+
+            const issues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              per_page: 50,
+            });
+
+            const existing = issues.data.find((i) => i.title === title && !i.pull_request);
+            if (existing) {
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.number,
+                body,
+              });
+              core.info(`Updated existing tracking issue #${existing.number}`);
+            } else {
+              const created = await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body,
+              });
+              core.info(`Created tracking issue #${created.data.number}`);
+            }

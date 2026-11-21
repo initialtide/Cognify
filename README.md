@@ -22,7 +22,9 @@ Useful scripts:
 npm run typecheck                  # TypeScript strict check (tsc --noEmit)
 npm run test                       # Run Vitest unit & curriculum integrity tests
 npm run build                      # Typecheck + production Vite bundle
-node scripts/verify_youtube_oembed.mjs  # Verify all youtubeId values return HTTP 200 via oEmbed
+npm run check                      # Full local CI gate (typecheck + test + build)
+npm run audit:learning             # Score pedagogical depth & list top next learning upgrades
+npm run verify:youtube             # Verify all youtubeId values return HTTP 200 via oEmbed
 ```
 
 ## Tech Stack
@@ -32,6 +34,8 @@ node scripts/verify_youtube_oembed.mjs  # Verify all youtubeId values return HTT
 - **Lucide React**
 - **Vitest** + **Testing Library** + **jsdom**
 
-## Remote Development Roadmap
+## Development Workflow & Roadmap
 
-See [`PLAN.md`](./PLAN.md) for the complete architecture notes, current curriculum coverage, verified YouTube video pool (`docs/yt_verified_pool.json`), and step-by-step roadmap for expanding all remaining IGCSE and A-Level subjects.
+- [`WORKFLOW.md`](./WORKFLOW.md) — Repeatable development loop, continuous learning automation, content standards, clean architecture guardrails for future backend/app expansion, CI, and deployment checklist.
+- [`docs/LEARNING_QUALITY_REPORT.md`](./docs/LEARNING_QUALITY_REPORT.md) — Auto-generated Learning Quality Scorecard & prioritized next learning upgrades.
+- [`PLAN.md`](./PLAN.md) — Current curriculum coverage, verified YouTube video pool (`docs/yt_verified_pool.json`), and phase-by-phase roadmap for expanding all remaining IGCSE and A-Level subjects.
