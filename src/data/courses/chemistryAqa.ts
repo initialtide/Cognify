@@ -1,0 +1,1163 @@
+import {
+  CheatSheetItem,
+  ExamQuestionItem,
+  FlashcardItem,
+  KeyTermEntry,
+  NoteLesson,
+  PastPaperDoc,
+  QuizQuestion,
+  TopicDefinition,
+} from '../../types/curriculum';
+
+export const CHEMISTRY_TOPICS: TopicDefinition[] = [
+  {
+    number: 1,
+    title: 'Atomic Structure & the Periodic Table',
+    subtopics: [
+      { id: 'chem-1-1', code: '1.1', slug: '1.1-atoms-elements-compounds', title: 'Atoms, Elements & Compounds', readingMinutes: 8, hasDeepContent: true },
+      { id: 'chem-1-2', code: '1.2', slug: '1.2-the-periodic-table', title: 'Development & Groups of the Periodic Table', readingMinutes: 9, hasDeepContent: true },
+    ],
+  },
+  {
+    number: 2,
+    title: 'Bonding, Structure & the Properties of Matter',
+    subtopics: [
+      { id: 'chem-2-1', code: '2.1', slug: '2.1-ionic-covalent-metallic', title: 'Ionic, Covalent & Metallic Bonding', readingMinutes: 10, hasDeepContent: true },
+      { id: 'chem-2-2', code: '2.2', slug: '2.2-diamond-graphite-fullerenes', title: 'States of Matter & Allotropes of Carbon', readingMinutes: 8, hasDeepContent: true },
+    ],
+  },
+  {
+    number: 3,
+    title: 'Quantitative Chemistry',
+    subtopics: [
+      { id: 'chem-3-1', code: '3.1', slug: '3.1-relative-formula-mass-moles', title: 'Relative Formula Mass & Moles', readingMinutes: 10, hasDeepContent: true },
+    ],
+  },
+  {
+    number: 4,
+    title: 'Chemical Changes',
+    subtopics: [
+      { id: 'chem-4-1', code: '4.1', slug: '4.1-acids-alkalis-electrolysis', title: 'Reactivity Series, Acids & Electrolysis', readingMinutes: 10, hasDeepContent: true },
+    ],
+  },
+  {
+    number: 5,
+    title: 'Energy Changes',
+    subtopics: [
+      { id: 'chem-5-1', code: '5.1', slug: '5.1-exothermic-endothermic', title: 'Exothermic & Endothermic Reactions', readingMinutes: 8, hasDeepContent: true },
+    ],
+  },
+  {
+    number: 6,
+    title: 'The Rate & Extent of Chemical Change',
+    subtopics: [
+      { id: 'chem-6-1', code: '6.1', slug: '6.1-rates-of-reaction', title: 'Collision Theory & Rates of Reaction', readingMinutes: 9, hasDeepContent: true },
+    ],
+  },
+  {
+    number: 7,
+    title: 'Organic Chemistry',
+    subtopics: [
+      { id: 'chem-7-1', code: '7.1', slug: '7.1-crude-oil-alkanes', title: 'Crude Oil, Fractional Distillation & Alkanes', readingMinutes: 9, hasDeepContent: true },
+    ],
+  },
+  {
+    number: 8,
+    title: 'Chemical Analysis',
+    subtopics: [
+      { id: 'chem-8-1', code: '8.1', slug: '8.1-chromatography-gas-tests', title: 'Purity, Chromatography & Gas Tests', readingMinutes: 8, hasDeepContent: true },
+    ],
+  },
+  {
+    number: 9,
+    title: 'Chemistry of the Atmosphere',
+    subtopics: [
+      { id: 'chem-9-1', code: '9.1', slug: '9.1-evolution-of-atmosphere', title: 'Earth’s Early Atmosphere & Greenhouse Effect', readingMinutes: 9, hasDeepContent: true },
+    ],
+  },
+  {
+    number: 10,
+    title: 'Using Resources',
+    subtopics: [
+      { id: 'chem-10-1', code: '10.1', slug: '10.1-potable-water-lca', title: 'Potable Water & Life Cycle Assessments', readingMinutes: 8, hasDeepContent: true },
+    ],
+  },
+];
+
+export const CHEMISTRY_NOTES: Record<string, NoteLesson> = {
+  'chem-1-1': {
+    subtopicId: 'chem-1-1',
+    subtopicCode: '1.1',
+    subtopicTitle: 'Atoms, Elements & Compounds',
+    readingMinutes: 8,
+    videoTitle: 'Atoms & Ions | Protons, Neutrons, Electrons',
+    youtubeId: 'zuQ469vjwgo',
+    videoChannel: 'Cognito',
+    videoDuration: '7:48',
+    timestamps: [
+      { time: '0:00', seconds: 0, label: 'What are Atoms?', cardId: 'chem-1-1-c1' },
+      { time: '1:18', seconds: 78, label: 'Relative Mass & Charge of Subatomic Particles', cardId: 'chem-1-1-c1' },
+      { time: '2:33', seconds: 153, label: 'Atomic Dimensions & Nuclear Symbols', cardId: 'chem-1-1-c1' },
+      { time: '6:03', seconds: 363, label: 'Calculating Protons, Neutrons, and Electrons', cardId: 'chem-1-1-c2' },
+    ],
+    cards: [
+      {
+        id: 'chem-1-1-c1',
+        title: 'Subatomic Particles & Nuclear Symbols',
+        summary: 'Relative mass and charge of protons, neutrons, electrons, and isotopic neutron differences.',
+        diagram: 'atomic-structure',
+        bullets: [
+          'Atoms have a tiny positively charged **nucleus** (containing protons and neutrons) surrounded by **electrons** orbiting in shells.',
+          'Protons: relative mass 1, charge +1. Neutrons: relative mass 1, charge 0. Electrons: relative mass ~1/1836 (very small), charge −1.',
+          'Neutral atoms have equal numbers of **protons** and **electrons** so overall charge is 0.',
+          'Isotopes are atoms of the same element (same number of **protons**) with different numbers of **neutrons** (different mass numbers).',
+        ],
+        glossaryPills: [
+          { term: 'Isotopes', definition: 'Atoms of the same element with the same atomic number (protons) but different mass numbers (different numbers of neutrons).' },
+        ],
+        memoryAid: 'Atomic number = Proton number (smaller number). Mass number = Protons + Neutrons (top number).',
+      },
+      {
+        id: 'chem-1-1-c2',
+        title: 'Electron Configuration',
+        summary: 'Filling the first three electron shells (2,8,8) and distinguishing compounds from mixtures.',
+        bullets: [
+          'Electrons occupy shells starting from the lowest energy level closest to the **nucleus**.',
+          'Shell capacity for the first 20 elements: 2 in the 1st shell, 8 in the 2nd shell, 8 in the 3rd shell.',
+          'For example, Carbon (atomic number 6) has configuration 2,4; Sodium (11) has configuration 2,8,1.',
+        ],
+        commonMistake: 'Don’t confuse compounds with mixtures: compounds are chemically bonded in fixed proportions, whereas mixtures can be separated physically (filtration, distillation, chromatography).',
+      },
+    ],
+    keyTerms: [
+      { term: 'Atom', definition: 'Smallest part of an element that can exist, consisting of a central nucleus and orbiting electrons.' },
+      { term: 'Isotope', definition: 'Atoms with the same number of protons but different numbers of neutrons.' },
+      { term: 'Compound', definition: 'Substance formed when two or more elements are chemically combined in fixed proportions.' },
+    ],
+    checklistPoints: [
+      'Atoms are electrically neutral because number of protons equals number of electrons.',
+      'Isotopes share identical atomic numbers and chemical properties but differ in neutron count.',
+      'First three electron shells fill in a 2, 8, 8 pattern.',
+    ],
+  },
+  'chem-1-2': {
+    subtopicId: 'chem-1-2',
+    subtopicCode: '1.2',
+    subtopicTitle: 'The Periodic Table',
+    readingMinutes: 9,
+    videoTitle: 'GCSE Chemistry - Development of the Periodic Table',
+    youtubeId: 'NVnnIjUbXNQ',
+    videoChannel: 'Cognito',
+    videoDuration: '6:07',
+    timestamps: [
+      { time: '0:00', seconds: 0, label: 'Introduction to Mendeleev & Early Tables', cardId: 'chem-1-2-c1' },
+      { time: '1:38', seconds: 98, label: 'Groups & Outer-Shell Electrons', cardId: 'chem-1-2-c2' },
+      { time: '3:48', seconds: 228, label: 'Group 0 Elements: Noble Gases', cardId: 'chem-1-2-c2' },
+      { time: '5:01', seconds: 301, label: 'Variations in Periodic Table Layouts', cardId: 'chem-1-2-c3' },
+    ],
+    cards: [
+      {
+        id: 'chem-1-2-c1',
+        title: 'Mendeleev & Development of the Periodic Table',
+        summary: 'How Mendeleev’s gaps and atomic number ordering built the modern periodic table.',
+        bullets: [
+          'Early periodic tables ordered elements strictly by atomic weight, causing mismatched properties until Dmitri Mendeleev left gaps for undiscovered elements and swapped pairs (like Te and I) to keep chemically similar elements in columns.',
+          'Discovery of **isotopes** explained why ordering by atomic weight was occasionally wrong; the modern periodic table orders elements by atomic (proton) number so outer electron count matches Group number.',
+        ],
+      },
+      {
+        id: 'chem-1-2-c2',
+        title: 'Group 1 (Alkali Metals) & Group 0 (Noble Gases)',
+        summary: 'Reactivity increase down Group 1 alkali metals vs inert full-shell Group 0 noble gases.',
+        bullets: [
+          '**Group 1** (Alkali Metals — Li, Na, K): soft metals with 1 outer electron that react vigorously with water (forming alkaline hydroxides + H₂), oxygen, and chlorine.',
+          'Reactivity INCREASES down **Group 1** because atoms get larger with more shells, increasing shielding and weakening attraction between the nucleus and outer electron so it is lost more easily.',
+          '**Group 0** (Noble **Gases** — He, Ne, Ar): unreactive monatomic gases because they have stable full outer shells; boiling points increase down the group due to stronger intermolecular forces.',
+        ],
+        glossaryPills: [
+          { term: 'shielding', definition: 'Repulsion from inner electron shells that reduces the net attraction felt by outer-shell electrons from the positive nucleus.' },
+        ],
+      },
+      {
+        id: 'chem-1-2-c3',
+        title: 'Group 7 (Halogens) & Displacement Reactions',
+        summary: 'Decreasing reactivity down Group 7 halogens and aqueous halide displacement reactions.',
+        bullets: [
+          '**Group 7** (Halogens — F₂, Cl₂, Br₂, I₂) are diatomic non-metals with 7 outer electrons. Down the group, relative molecular mass and melting/boiling points INCREASE.',
+          'Reactivity DECREASES down **Group 7** because greater distance and shielding make it harder for the nucleus to attract an incoming electron into the outer shell.',
+          'A more reactive halogen displaces a less reactive halide ion from an aqueous salt solution (e.g., Cl₂ + 2KBr → 2KCl + Br₂).',
+        ],
+        commonMistake: 'Group 1 reactivity INCREASES down the group (easier to LOSE an electron), whereas Group 7 reactivity DECREASES down the group (harder to GAIN an electron)!',
+      },
+    ],
+    keyTerms: [
+      { term: 'Alkali metals', definition: 'Reactive Group 1 metals with 1 outer electron that react vigorously with water to form alkaline hydroxides and hydrogen.' },
+      { term: 'Halogens', definition: 'Group 7 non-metals existing as diatomic molecules (F₂, Cl₂, Br₂, I₂) with 7 outer electrons.' },
+      { term: 'Noble gases', definition: 'Unreactive Group 0 elements possessing stable full outer shells.' },
+    ],
+    checklistPoints: [
+      'Mendeleev left gaps and predicted properties of undiscovered elements before isotopes were known.',
+      'Group 1 metals get MORE reactive down the group (easier to lose outer electron).',
+      'Group 7 halogens get LESS reactive down the group (harder to gain an electron).',
+    ],
+  },
+  'chem-2-1': {
+    subtopicId: 'chem-2-1',
+    subtopicCode: '2.1',
+    subtopicTitle: 'Ionic, Covalent & Metallic Bonding',
+    readingMinutes: 10,
+    videoTitle: 'GCSE Chemistry - Ionic Bonding - Formation | Dot and Cross Diagrams',
+    youtubeId: 'MdU44WeiLps',
+    videoChannel: 'Cognito',
+    videoDuration: '4:38',
+    timestamps: [
+      { time: '0:00', seconds: 0, label: 'Introduction to Ionic Bonding', cardId: 'chem-2-1-c1' },
+      { time: '0:20', seconds: 20, label: 'What Ions Are', cardId: 'chem-2-1-c1' },
+      { time: '2:03', seconds: 123, label: 'Dot & Cross Diagrams', cardId: 'chem-2-1-c1' },
+      { time: '2:47', seconds: 167, label: 'Worked Example: Magnesium Chloride', cardId: 'chem-2-1-c1' },
+    ],
+    cards: [
+      {
+        id: 'chem-2-1-c1',
+        title: 'Ionic Bonding & Giant Ionic Lattices',
+        summary: 'Electron transfer creating high-melting giant ionic lattices conducting when molten or aqueous.',
+        diagram: 'ionic-covalent-bonding',
+        bullets: [
+          '**Ionic bonding** (Metal + Non-metal): metals lose outer electrons to become positive ions; non-metals gain electrons to become negative ions, held together in all directions by strong electrostatic forces in a **giant ionic lattice**.',
+          'Ionic compounds have high melting and boiling points because huge amounts of energy are needed to break the many strong **electrostatic forces**.',
+          'Ionic compounds conduct electricity ONLY when molten or dissolved in water because ions are then free to move and carry electrical charge (in solids, ions are fixed in place).',
+        ],
+      },
+      {
+        id: 'chem-2-1-c2',
+        title: 'Covalent Bonding & Simple Molecules',
+        summary: 'Shared electron pairs in simple covalent molecules held by weak intermolecular forces.',
+        bullets: [
+          '**Covalent bonding** (Non-metals): atoms share one or more pairs of outer electrons (shown by dot-and-cross diagrams).',
+          'Small simple covalent molecules (H₂O, CH₄, CO₂, Cl₂) have LOW melting and boiling points because only WEAK intermolecular forces between molecules are overcome upon heating.',
+          'Intermolecular forces grow stronger with larger molecule size (longer polymers have higher melting points); simple covalent substances never conduct electricity because molecules carry no overall charge.',
+        ],
+        commonMistake: 'When melting simple covalent molecules like water or methane, weak INTERMOLECULAR forces break — NOT the strong covalent bonds inside the molecule!',
+      },
+      {
+        id: 'chem-2-1-c3',
+        title: 'Metallic Bonding & Alloys',
+        summary: 'Positive metal ions in delocalised electrons and why alloys resist layer sliding.',
+        bullets: [
+          '**Metallic bonding** consists of positive metal ions arranged in regular layers surrounded by a sea of delocalised outer electrons.',
+          'Metals have high melting points and conduct electricity and thermal energy because delocalised electrons move freely throughout the entire structure.',
+          'Pure metals are soft and easily bent because regular layers of identical atoms slide past each other; alloys mix atoms of different sizes that distort the layers, making alloys much harder.',
+        ],
+        glossaryPills: [
+          { term: 'delocalised', definition: 'Outer-shell electrons not attached to any single atom, free to move through metals or graphite to conduct electricity.' },
+        ],
+      },
+    ],
+    keyTerms: [
+      { term: 'Ionic bond', definition: 'Strong electrostatic attraction between oppositely charged metal and non-metal ions.' },
+      { term: 'Covalent bond', definition: 'Shared pair of electrons between two non-metal atoms.' },
+      { term: 'Delocalised electrons', definition: 'Outer-shell electrons free to move throughout a giant metallic lattice or graphite layers.' },
+    ],
+    checklistPoints: [
+      'Ionic compounds conduct electricity only when molten or aqueous because ions must be free to move.',
+      'Simple covalent substances have low boiling points because of weak intermolecular forces.',
+      'Alloys are harder than pure metals because different-sized atoms disrupt layers from sliding.',
+    ],
+  },
+  'chem-2-2': {
+    subtopicId: 'chem-2-2',
+    subtopicCode: '2.2',
+    subtopicTitle: 'States of Matter & Allotropes of Carbon',
+    readingMinutes: 8,
+    videoTitle: 'GCSE Chemistry - Diamond & Graphite - Structure | Properties',
+    youtubeId: 'RVV8pncaA7A',
+    videoChannel: 'Cognito',
+    videoDuration: '3:46',
+    timestamps: [
+      { time: '0:00', seconds: 0, label: 'Introduction to Giant Covalent Carbon', cardId: 'chem-2-2-c2' },
+      { time: '0:20', seconds: 20, label: 'What are Allotropes? (Diamond)', cardId: 'chem-2-2-c2' },
+      { time: '1:37', seconds: 97, label: 'Graphite Structure & Properties', cardId: 'chem-2-2-c2' },
+      { time: '2:54', seconds: 174, label: 'Graphene and Fullerenes', cardId: 'chem-2-2-c3' },
+    ],
+    cards: [
+      {
+        id: 'chem-2-2-c1',
+        title: 'States of Matter & Limitations of the Particle Model',
+        summary: 'Particle arrangement across states, state symbols, and limitations of the solid-sphere model.',
+        bullets: [
+          '**Solids** have fixed regular particles vibrating in place; liquids have closely packed particles sliding randomly; gases have widely separated fast-moving particles.',
+          'State symbols in equations: (s) solid, (l) liquid, (g) gas, (aq) dissolved in water (aqueous).',
+          'Higher Tier limitations of the simple sphere model: it assumes particles are solid inelastic spheres with no forces shown between them and ignores actual particle sizes.',
+        ],
+      },
+      {
+        id: 'chem-2-2-c2',
+        title: 'Diamond & Graphite (Giant Covalent Allotropes)',
+        summary: 'Contrasting 4-bond insulating diamond with 3-bond slippery conductive graphite.',
+        bullets: [
+          '**Diamond**: each carbon atom forms FOUR strong covalent bonds in a rigid 3D lattice → extremely hard, very high melting point, does NOT conduct electricity (zero delocalised electrons).',
+          '**Graphite**: each carbon forms THREE covalent bonds in hexagonal rings arranged in flat layers with NO covalent bonds between layers (only weak intermolecular forces) → layers slide easily (soft/slippery lubricant).',
+          '**Graphite** has ONE delocalised electron per carbon atom free to move along layers → conducts electricity and thermal energy (used in electrolysis electrodes).',
+        ],
+        glossaryPills: [
+          { term: 'delocalised', definition: 'Outer-shell electron not bound to a single atom, free to move along graphite layers and conduct electrical current.' },
+        ],
+        memoryAid: 'Diamond = 4 bonds (hard insulator); Graphite = 3 bonds + 1 free electron (slippery conductor)!',
+      },
+      {
+        id: 'chem-2-2-c3',
+        title: 'Graphene, Fullerenes & Carbon Nanotubes',
+        summary: 'Single-sheet graphene, spherical C₆₀ fullerenes, and high-strength carbon nanotubes.',
+        bullets: [
+          'Graphene is a single isolated atom-thick layer of graphite — extraordinarily strong, lightweight, and an outstanding electrical conductor for flexible electronics and composites.',
+          'Fullerenes are hollow carbon molecules based on hexagonal (and pentagonal/heptagonal) rings — e.g., Buckminsterfullerene (C₆₀) is spherical; used for targeted drug delivery, lubricants, and catalysts.',
+          '**Carbon nanotubes** are cylindrical fullerenes with very high length-to-diameter ratios, high tensile strength, and high electrical/thermal conductivity (used in nanotechnology, electronics, and reinforced materials).',
+        ],
+        commonMistake: 'Do NOT write that covalent bonds break when graphite layers slide — ONLY weak intermolecular forces between layers are overcome!',
+      },
+    ],
+    keyTerms: [
+      { term: 'Diamond', definition: 'Giant covalent carbon allotrope where each carbon forms 4 strong covalent bonds; extremely hard insulator.' },
+      { term: 'Graphite', definition: 'Layered giant covalent carbon allotrope (3 bonds per C) conducting electricity via delocalised electrons.' },
+      { term: 'Graphene', definition: 'A single one-atom-thick sheet of graphite with exceptional strength and conductivity.' },
+      { term: 'Fullerene', definition: 'Hollow cage or tube molecule of carbon atoms such as Buckminsterfullerene (C₆₀) and carbon nanotubes.' },
+    ],
+    checklistPoints: [
+      'State limitations of the simple solid-sphere particle model.',
+      'Explain why diamond is hard and insulating while graphite is slippery and conductive.',
+      'Describe structures and uses of graphene, Buckminsterfullerene (C₆₀), and carbon nanotubes.',
+    ],
+  },
+  'chem-3-1': {
+    subtopicId: 'chem-3-1',
+    subtopicCode: '3.1',
+    subtopicTitle: 'Relative Formula Mass & Moles',
+    readingMinutes: 10,
+    videoTitle: 'GCSE Chemistry - Moles & Mass - Avogadro\'s Constant | Formula for Moles, Mass & Mr',
+    youtubeId: 'kBlmEfS_P00',
+    videoChannel: 'Cognito',
+    videoDuration: '4:53',
+    timestamps: [
+      { time: '0:00', seconds: 0, label: 'Introduction to Quantitative Chemistry', cardId: 'chem-3-1-c1' },
+      { time: '1:06', seconds: 66, label: 'Avogadro\'s Constant', cardId: 'chem-3-1-c2' },
+      { time: '2:40', seconds: 160, label: 'Calculating Mass from Moles', cardId: 'chem-3-1-c2' },
+      { time: '3:50', seconds: 230, label: 'Moles in Balanced Equations', cardId: 'chem-3-1-c2' },
+    ],
+    cards: [
+      {
+        id: 'chem-3-1-c1',
+        title: 'Conservation of Mass & Relative Formula Mass (Mr)',
+        summary: 'Conservation of mass, open-vessel gas mass changes, and calculating Mr.',
+        bullets: [
+          'Law of conservation of mass: no atoms are created or destroyed during a chemical reaction, so total mass of reactants equals total mass of products.',
+          'Apparent mass changes occur in non-enclosed vessels when a GAS reactant enters from air (e.g., magnesium burning in O₂ increases mass) or a GAS product escapes (e.g., thermal decomposition of CaCO₃ releasing CO₂ decreases mass).',
+          'Relative formula mass (Mr) is the sum of the relative atomic masses (Ar) of all atoms in a formula (e.g., CaCO₃ = 40 + 12 + 3×16 = 100).',
+        ],
+      },
+      {
+        id: 'chem-3-1-c2',
+        title: 'Moles, Avogadro Constant & Limiting Reactants (Higher)',
+        summary: 'Avogadro’s constant, n = m ÷ Mr, balanced mole ratios, and limiting reactants.',
+        bullets: [
+          '**One mole** of any substance contains 6.02 × 10²³ particles (Avogadro constant) and has a mass in grams equal to its Mr.',
+          'Core equation: Moles (mol) = Mass (g) ÷ Mr. Use balanced equation mole ratios to compute reacting masses or deduce balancing numbers from measured masses.',
+          'The limiting reactant is completely used up first and stops the reaction, directly controlling the maximum mass of product formed (other reactants are in excess).',
+        ],
+        glossaryPills: [
+          { term: 'limiting reactant', definition: 'The reactant completely consumed first in a reaction, capping how much product can form.' },
+        ],
+        memoryAid: 'Moles = Mass ÷ Mr ("Mr sits at the bottom under Mass!").',
+      },
+      {
+        id: 'chem-3-1-c3',
+        title: 'Concentration, Percentage Yield & Atom Economy',
+        summary: 'Concentration (g/dm³ & mol/dm³), percentage yield, atom economy, and 24 dm³ gas volume.',
+        bullets: [
+          'Solution concentration: c (g/dm³) = mass (g) ÷ volume (dm³), or c (mol/dm³) = moles ÷ volume (dm³). Always convert cm³ to dm³ by dividing by 1,000!',
+          '**Percentage yield** = (Actual mass produced ÷ Theoretical maximum mass) × 100%.',
+          '**Atom economy** = (Relative formula mass of DESIRED product ÷ Sum of Mr of ALL reactants) × 100%. High atom economy reduces waste and promotes sustainable industrial chemistry.',
+          'Molar gas volume at room temperature and pressure (20 °C, 1 atm) = 24 dm³ per mole of gas.',
+        ],
+        commonMistake: 'When calculating Atom Economy, remember to multiply each formula’s Mr by its BIG balancing number in the equation!',
+      },
+    ],
+    keyTerms: [
+      { term: 'Relative formula mass', definition: 'Sum of the relative atomic masses of all atoms in a chemical formula (Mr).' },
+      { term: 'Avogadro constant', definition: 'Number of atoms, molecules, or ions in one mole: 6.02 × 10²³.' },
+      { term: 'Atom economy', definition: 'Measure of the proportion of reactant atoms that end up in the desired useful product.' },
+      { term: 'Percentage yield', definition: 'Actual product mass collected divided by theoretical maximum mass, multiplied by 100.' },
+    ],
+    checklistPoints: [
+      'Explain apparent mass increases or decreases in open flasks when gases enter or escape.',
+      'Calculate Mr, moles (n = m ÷ Mr), reacting masses, and limiting reactants.',
+      'Calculate concentration (g/dm³ and mol/dm³), percentage yield, atom economy, and gas volumes (24 dm³/mol).',
+    ],
+  },
+  'chem-4-1': {
+    subtopicId: 'chem-4-1',
+    subtopicCode: '4.1',
+    subtopicTitle: 'Reactivity Series, Acids & Electrolysis',
+    readingMinutes: 10,
+    videoTitle: 'Electrolysis Part 1/3 - Basics and Molten Compounds',
+    youtubeId: 'RAEm-kJ_QkU',
+    videoChannel: 'Cognito',
+    videoDuration: '4:19',
+    timestamps: [
+      { time: '0:00', seconds: 0, label: 'Intro to Electrolysis', cardId: 'chem-4-1-c3' },
+      { time: '1:19', seconds: 79, label: 'Electrodes and Power Supply', cardId: 'chem-4-1-c3' },
+      { time: '2:04', seconds: 124, label: 'Example: Electrolysis of Molten Lead Bromide', cardId: 'chem-4-1-c3' },
+      { time: '3:24', seconds: 204, label: 'Summary of Oxidation & Reduction', cardId: 'chem-4-1-c1' },
+    ],
+    cards: [
+      {
+        id: 'chem-4-1-c1',
+        title: 'Reactivity Series, Extraction & Redox (OIL RIG)',
+        summary: 'Metal reactivity order, carbon reduction extraction, and OIL RIG electron redox.',
+        bullets: [
+          'Metals form positive ions when reacting: reactivity increases the easier a metal loses outer **electrons** (K > Na > Li > Ca > Mg > Al > [C] > Zn > Fe > [H] > Cu > Ag > Au).',
+          'Metals LESS reactive than carbon (e.g., iron, zinc) are extracted from oxides by reduction with carbon; metals MORE reactive than carbon (e.g., aluminium) require electrolysis.',
+          'Oxidation Is Loss of **electrons** (or gain of oxygen); Reduction Is Gain of electrons (or loss of oxygen) — OIL RIG. In displacement (Mg + Cu²⁺ → Mg²⁺ + Cu), Mg is oxidised and Cu²⁺ is reduced.',
+        ],
+        glossaryPills: [
+          { term: 'reduction', definition: 'Gain of electrons by a species (or loss of oxygen from a compound).' },
+        ],
+      },
+      {
+        id: 'chem-4-1-c2',
+        title: 'Acids, Neutralisation, Strong vs Weak & Making Pure Salts',
+        summary: 'Strong vs weak acids, 10× pH steps, and preparing pure dry CuSO₄ crystals.',
+        bullets: [
+          'Acids release H⁺(aq) ions; alkalis release OH⁻(aq) ions. Neutralisation: H⁺(aq) + OH⁻(aq) → H₂O(l). Every decrease of 1 on the pH scale corresponds to a 10× INCREASE in H⁺ ion concentration!',
+          '**Strong acids** (HCl, H₂SO₄, HNO₃) completely ionise in water; **weak acids** (ethanoic, citric, carbonic) only partially ionise.',
+          'Required Practical — Making pure dry copper(II) sulfate crystals: gently warm dilute H₂SO₄ → stir in EXCESS insoluble CuO powder until solid remains → filter off unreacted excess CuO → gently evaporate half the water on a water bath → leave to crystallise, pat dry with filter paper.',
+        ],
+      },
+      {
+        id: 'chem-4-1-c3',
+        title: 'Electrolysis of Molten & Aqueous Ionic Compounds',
+        summary: 'Molten electrolysis, aluminium extraction with cryolite, and aqueous electrode rules.',
+        bullets: [
+          'PANIC: Positive Anode (anions lose electrons — Oxidation), Negative Is Cathode (cations gain electrons — Reduction).',
+          'Aluminium extraction: Al₂O₃ dissolved in molten CRYOLITE lowers melting point to save energy. Cathode: Al³⁺ + 3e⁻ → Al. Anode: 2O²⁻ → O₂ + 4e⁻ (oxygen reacts with carbon anodes forming CO₂ so anodes wear away).',
+          'Aqueous solution rules: At **CATHODE** (−), hydrogen gas forms IF metal is MORE reactive than hydrogen (otherwise the metal deposits). At **ANODE** (+), halogen gas (Cl₂, Br₂, I₂) forms IF a halide ion is present; otherwise oxygen forms (4OH⁻ → O₂ + 2H₂O + 4e⁻).',
+        ],
+        commonMistake: 'When making CuSO₄ crystals, NEVER boil the filtrate completely dry over a strong flame — heating gently until crystals appear and letting it cool produces pure hydrated crystals without decomposing or spitting!',
+      },
+    ],
+    keyTerms: [
+      { term: 'Redox reaction', definition: 'Reaction in which one species is oxidised (loses electrons) while another is simultaneously reduced (gains electrons).' },
+      { term: 'Strong acid', definition: 'Acid that completely ionises into H⁺ ions in aqueous solution.' },
+      { term: 'Electrolyte', definition: 'Molten or dissolved ionic substance broken down by passing an electric current through it.' },
+      { term: 'Cryolite', definition: 'Compound mixed with aluminium oxide to lower its melting point during electrolysis.' },
+    ],
+    checklistPoints: [
+      'Apply OIL RIG to write half-equations for displacement and electrolysis.',
+      'Explain the 10× H⁺ change per pH unit and contrast strong vs weak acids.',
+      'Outline the Required Practical steps to prepare pure dry soluble salt crystals from an insoluble base.',
+      'Predict cathode and anode products for molten and aqueous electrolysis.',
+    ],
+  },
+  'chem-5-1': {
+    subtopicId: 'chem-5-1',
+    subtopicCode: '5.1',
+    subtopicTitle: 'Exothermic & Endothermic Reactions',
+    readingMinutes: 8,
+    videoTitle: 'GCSE Chemistry - Exothermic & Endothermic Reactions - Reaction Profiles | Activation Energy',
+    youtubeId: 'hNNvIsQLSV8',
+    videoChannel: 'Cognito',
+    videoDuration: '5:47',
+    timestamps: [
+      { time: '0:00', seconds: 0, label: 'Introduction to Energy Changes', cardId: 'chem-5-1-c1' },
+      { time: '1:04', seconds: 64, label: 'Exothermic Reactions', cardId: 'chem-5-1-c1' },
+      { time: '2:35', seconds: 155, label: 'Endothermic Reactions', cardId: 'chem-5-1-c1' },
+      { time: '5:00', seconds: 300, label: 'Labelling Reaction Profiles & Activation Energy', cardId: 'chem-5-1-c1' },
+    ],
+    cards: [
+      {
+        id: 'chem-5-1-c1',
+        title: 'Exothermic & Endothermic Reactions + Reaction Profiles',
+        summary: 'Exothermic vs endothermic temperature changes, uses, and labelled reaction profiles.',
+        diagram: 'exothermic-endothermic',
+        bullets: [
+          'Exothermic reactions transfer energy TO the surroundings so the surroundings get HOTTER (combustion, oxidation, neutralisation; used in hand warmers and self-heating cans).',
+          'Endothermic reactions absorb energy FROM the surroundings so the surroundings get COLDER (thermal decomposition, citric acid + sodium hydrogencarbonate; used in sports injury ice packs).',
+          '**Reaction profiles** plot energy vs reaction progress: activation energy (Ea) is the upward energy hump from reactants to peak. Exothermic products lie LOWER than reactants; **endothermic** products lie HIGHER than reactants.',
+        ],
+      },
+      {
+        id: 'chem-5-1-c2',
+        title: 'Bond Energy Calculations (Higher)',
+        summary: 'Computing overall enthalpy change from bond-breaking and bond-forming energies.',
+        bullets: [
+          'Breaking chemical bonds requires energy (ENDOTHERMIC); forming new chemical bonds releases energy (EXOTHERMIC).',
+          'Overall energy change = Σ(Energy to break reactant bonds) − Σ(Energy released making product bonds).',
+          'A negative answer means MORE energy was released forming bonds than taken in breaking bonds → EXOTHERMIC; a positive answer means ENDOTHERMIC.',
+        ],
+        memoryAid: 'BENDO / MEXO: Breaking = ENDOthermic, Making = EXOthermic!',
+      },
+      {
+        id: 'chem-5-1-c3',
+        title: 'Temperature Change Practical & Hydrogen Fuel Cells',
+        summary: 'Insulated polystyrene cup calorimetry, metal-electrolyte cells, and hydrogen fuel cells.',
+        bullets: [
+          'Required Practical (neutralisation HCl + NaOH): react in an insulated polystyrene cup sitting in a beaker with a lid to minimise heat loss to the surroundings; stir gently and record highest temperature reached.',
+          'Chemical cells generate voltage from two different metals in an electrolyte (bigger reactivity difference = larger voltage); non-rechargeable cells stop when reactants run out, whereas rechargeable batteries reverse reactions with external current.',
+          '**Hydrogen** fuel cells oxidise H₂ electrochemically (2H₂ + O₂ → 2H₂O): zero pollutant exhaust, continuous operation while supplied with fuel, though H₂ is explosive and bulky to store.',
+        ],
+        glossaryPills: [
+          { term: 'polystyrene cup', definition: 'Low-thermal-conductivity insulated reaction vessel used in school calorimetry to minimise heat loss.' },
+        ],
+      },
+    ],
+    keyTerms: [
+      { term: 'Exothermic', definition: 'Reaction transferring energy to the surroundings, causing temperature to rise.' },
+      { term: 'Endothermic', definition: 'Reaction taking energy in from the surroundings, causing temperature to fall.' },
+      { term: 'Reaction profile', definition: 'Diagram showing relative energies of reactants, products, activation energy, and overall energy change.' },
+      { term: 'Fuel cell', definition: 'Electrochemical cell supplied externally with fuel (e.g. H₂) and oxygen to produce electricity continuously.' },
+    ],
+    checklistPoints: [
+      'Draw and interpret exothermic and endothermic reaction profiles including activation energy.',
+      'Calculate overall energy change from bond energy tables and explain its sign.',
+      'Minimise heat loss in the polystyrene cup Required Practical and evaluate hydrogen fuel cells.',
+    ],
+  },
+  'chem-6-1': {
+    subtopicId: 'chem-6-1',
+    subtopicCode: '6.1',
+    subtopicTitle: 'Collision Theory & Rates of Reaction',
+    readingMinutes: 9,
+    videoTitle: 'GCSE Chemistry - Factors Affecting Rate of Reaction & Collision Theory',
+    youtubeId: 'JK7yPzO9POU',
+    videoChannel: 'Cognito',
+    videoDuration: '5:37',
+    timestamps: [
+      { time: '0:00', seconds: 0, label: 'Introduction to Collision Theory', cardId: 'chem-6-1-c1' },
+      { time: '2:00', seconds: 120, label: 'Factor 1: Temperature', cardId: 'chem-6-1-c1' },
+      { time: '3:01', seconds: 181, label: 'Factor 3: Surface Area', cardId: 'chem-6-1-c1' },
+      { time: '4:04', seconds: 244, label: 'How Catalysts Work (Reaction Profiles)', cardId: 'chem-6-1-c2' },
+    ],
+    cards: [
+      {
+        id: 'chem-6-1-c1',
+        title: 'Measuring Reaction Rates & Collision Theory',
+        summary: 'Mean and tangent rates plus collision theory factors speeding up chemical reactions.',
+        bullets: [
+          'Mean rate of reaction = quantity of reactant used (or product formed) ÷ time taken. Instantaneous rate at a given time equals the gradient of a TANGENT drawn to the curve.',
+          '**Collision theory**: chemical reactions occur only when reacting particles collide with energy greater than or equal to the **activation energy**.',
+          'Higher concentration, higher gas pressure, or larger solid surface area (smaller lumps/powder) increase collision FREQUENCY per second.',
+          'Higher temperature increases **kinetic energy** → MORE FREQUENT collisions AND a higher proportion of collisions exceeding **activation energy**.',
+        ],
+      },
+      {
+        id: 'chem-6-1-c2',
+        title: 'Catalysts & Required Practical (Disappearing Cross)',
+        summary: 'Lower-activation-energy catalysts and the sodium thiosulfate disappearing-cross practical.',
+        bullets: [
+          'A **catalyst** increases reaction rate without being used up by providing an alternative reaction pathway with a LOWER **activation energy**.',
+          'Required Practical: mix sodium thiosulfate and dilute HCl in a conical flask placed over a drawn black cross; time until opaque sulfur precipitate obscures the cross (repeat across concentrations or temperatures).',
+        ],
+        commonMistake: 'Never write that a catalyst "gives particles more energy" — a catalyst LOWERS THE ACTIVATION ENERGY barrier instead!',
+      },
+      {
+        id: 'chem-6-1-c3',
+        title: 'Reversible Reactions & Le Chatelier’s Principle (Higher)',
+        summary: 'Closed-system reversible equilibrium and predicting shifts with Le Chatelier’s principle.',
+        bullets: [
+          'In a reversible reaction (A + B ⇌ C + D), if the forward reaction is **exothermic** then the reverse reaction is **endothermic** by the exact same energy magnitude.',
+          'In a closed system, equilibrium is reached when forward and reverse rates are EQUAL.',
+          '**Le Chatelier’s principle**: raising temperature favours the ENDOTHERMIC direction; raising gas pressure favours the side with FEWER gas molecules; increasing reactant concentration shifts right to produce more product.',
+        ],
+        glossaryPills: [
+          { term: 'equilibrium', definition: 'Dynamic balance in a closed reversible system where forward and reverse reaction rates are equal.' },
+        ],
+      },
+    ],
+    keyTerms: [
+      { term: 'Activation energy', definition: 'Minimum energy that colliding particles must possess in order to react.' },
+      { term: 'Catalyst', definition: 'Substance that speeds up a chemical reaction by providing an alternative pathway with lower activation energy.' },
+      { term: 'Le Chatelier’s principle', definition: 'Rule stating that an equilibrium system shifts to counteract any imposed change in temperature, pressure, or concentration.' },
+    ],
+    checklistPoints: [
+      'Calculate mean rates and draw tangents for instantaneous reaction rates.',
+      'Explain temperature, concentration, pressure, surface area, and catalysts using collision frequency and activation energy.',
+      'Apply Le Chatelier’s principle to predict equilibrium shifts.',
+    ],
+  },
+  'chem-7-1': {
+    subtopicId: 'chem-7-1',
+    subtopicCode: '7.1',
+    subtopicTitle: 'Crude Oil, Fractional Distillation & Alkanes',
+    readingMinutes: 9,
+    videoTitle: 'GCSE Chemistry - Fractional Distillation - Crude Oil | Hydrocarbons',
+    youtubeId: '-qxeVFJh4e4',
+    videoChannel: 'Cognito',
+    videoDuration: '5:34',
+    timestamps: [
+      { time: '0:00', seconds: 0, label: 'Introduction to Organic Chemistry', cardId: 'chem-7-1-c1' },
+      { time: '0:19', seconds: 19, label: 'What is Crude Oil?', cardId: 'chem-7-1-c1' },
+      { time: '2:25', seconds: 145, label: 'The Process of Fractional Distillation', cardId: 'chem-7-1-c1' },
+      { time: '4:05', seconds: 245, label: 'Properties and Uses of Fractions', cardId: 'chem-7-1-c1' },
+    ],
+    cards: [
+      {
+        id: 'chem-7-1-c1',
+        title: 'Crude Oil, Alkanes & Fractional Distillation',
+        summary: 'Crude oil alkanes (CₙH₂ₙ₊₂) separated by boiling point in fractional distillation.',
+        bullets: [
+          '**Crude oil** is a finite mixture of hydrocarbons (compounds of hydrogen and carbon only) formed from ancient marine plankton buried in mud.',
+          '**Alkanes** are saturated hydrocarbons with general formula CₙH₂ₙ₊₂: methane (CH₄), ethane (C₂H₆), propane (C₃H₈), butane (C₄H₁₀).',
+          'Fractional distillation heats crude oil to vapour and passes it into a fractionating column cooler at the top and hotter at the bottom: vapours rise and condense at their distinct boiling points into fractions (LPG, petrol, kerosene, diesel, heavy fuel oil).',
+          'Shorter hydrocarbon chains have weaker **intermolecular forces** → LOWER boiling points, LOWER viscosity (runnier), and HIGHER flammability.',
+        ],
+        memoryAid: 'First 4 alkanes: Monkeys Eat Peanut Butter (Methane, Ethane, Propane, Butane)!',
+      },
+      {
+        id: 'chem-7-1-c2',
+        title: 'Combustion & Cracking of Hydrocarbons',
+        summary: 'Complete combustion and catalytic or steam cracking of long-chain hydrocarbons.',
+        bullets: [
+          'Complete combustion in plentiful oxygen oxidises carbon and hydrogen to carbon dioxide and water, releasing abundant energy (e.g., CH₄ + 2O₂ → CO₂ + 2H₂O).',
+          '**Cracking** thermally decomposes less useful long-chain alkanes into high-demand shorter alkanes (fuels) PLUS reactive alkenes (starting feedstock for polymers).',
+          'Two industrial methods: Catalytic cracking (vaporised alkane passed over a hot zeolite catalyst at ~550 °C) and Steam cracking (mixed with steam at very high temperature ~800 °C).',
+        ],
+      },
+      {
+        id: 'chem-7-1-c3',
+        title: 'Alkenes & Test for Unsaturation',
+        summary: 'Reactive C=C alkenes, orange-to-colourless bromine water test, and addition polymers.',
+        bullets: [
+          '**Alkenes** (CₙH₂ₙ: ethene, propene, butene) are unsaturated hydrocarbons containing a C=C double covalent bond, making them far more reactive than alkanes.',
+          'Bromine water test: alkenes turn ORANGE bromine water COLOURLESS immediately; alkanes cause no colour change.',
+          '**Alkenes** are monomers for addition polymerisation (e.g., ethene → poly(ethene)).',
+        ],
+        glossaryPills: [
+          { term: 'unsaturated', definition: 'Organic molecule containing one or more carbon-carbon double (C=C) bonds capable of undergoing addition reactions.' },
+        ],
+        commonMistake: 'Always describe the bromine water result for alkenes as "orange to COLOURLESS", never "clear"!',
+      },
+    ],
+    keyTerms: [
+      { term: 'Hydrocarbon', definition: 'Molecule composed exclusively of carbon and hydrogen atoms.' },
+      { term: 'Alkane', definition: 'Saturated hydrocarbon with only single C–C bonds and general formula CₙH₂ₙ₊₂.' },
+      { term: 'Fractional distillation', definition: 'Separation of crude oil hydrocarbons into fractions according to boiling point inside a temperature-gradient column.' },
+      { term: 'Cracking', definition: 'Thermal breakdown of long-chain hydrocarbons into shorter alkanes and alkenes.' },
+    ],
+    checklistPoints: [
+      'Write formulae for methane, ethane, propane, and butane and describe trends in boiling point, viscosity, and flammability.',
+      'Explain how fractional distillation separates crude oil based on boiling points.',
+      'Balance cracking equations and state the bromine water colour change distinguishing alkenes from alkanes.',
+    ],
+  },
+  'chem-8-1': {
+    subtopicId: 'chem-8-1',
+    subtopicCode: '8.1',
+    subtopicTitle: 'Purity, Chromatography & Gas Tests',
+    readingMinutes: 8,
+    videoTitle: 'GCSE Chemistry - Paper Chromatography',
+    youtubeId: 'TdJ57SQ6GAQ',
+    videoChannel: 'Cognito',
+    videoDuration: '6:32',
+    timestamps: [
+      { time: '0:00', seconds: 0, label: 'What Is Paper Chromatography?', cardId: 'chem-8-1-c2' },
+      { time: '1:20', seconds: 80, label: 'Mobile Phase vs Stationary Phase', cardId: 'chem-8-1-c2' },
+      { time: '3:10', seconds: 190, label: 'Setting Up the Practical', cardId: 'chem-8-1-c2' },
+      { time: '4:55', seconds: 295, label: 'Calculating Rf Values & Interpreting Spots', cardId: 'chem-8-1-c2' },
+    ],
+    cards: [
+      {
+        id: 'chem-8-1-c1',
+        title: 'Pure Substances & Formulations',
+        summary: 'Sharp melting/boiling purity checks and precisely engineered commercial formulations.',
+        bullets: [
+          'In chemistry, a **pure substance** is a single element or single compound not mixed with any other substance — identified experimentally by a SHARP, specific melting and boiling point (mixtures melt and boil over a range).',
+          'A formulation is a carefully designed mixture made to a precise measured recipe so each component provides a specific useful property — examples include fuels, paints, medicines, alloys, fertilisers, and cleaning agents.',
+        ],
+        glossaryPills: [
+          { term: 'formulation', definition: 'A useful mixture engineered with carefully measured quantities of ingredients to perform a specific function.' },
+        ],
+      },
+      {
+        id: 'chem-8-1-c2',
+        title: 'Paper Chromatography & Rf Calculations',
+        summary: 'Mobile vs stationary phases in paper chromatography and Rf calculations.',
+        bullets: [
+          'Chromatography separates soluble substances between a stationary phase (chromatography paper) and a mobile phase (solvent such as water or ethanol).',
+          'Substances more soluble in the mobile phase and less attracted to the paper travel further up the sheet. A **pure substance** gives ONE spot; a mixture gives multiple spots.',
+          'Rf = distance moved by substance ÷ distance moved by solvent front (both measured from the pencil baseline; draw baseline in pencil because graphite is insoluble).',
+        ],
+        commonMistake: 'Ensure the solvent level in the beaker sits BELOW the pencil baseline, otherwise the ink samples dissolve straight into the solvent reservoir!',
+      },
+      {
+        id: 'chem-8-1-c3',
+        title: 'Four Core AQA Gas Tests & Ion Tests (Separate Chemistry)',
+        summary: 'Laboratory gas tests for H₂, O₂, CO₂, and Cl₂ plus flame and precipitate ion tests.',
+        bullets: [
+          '**Hydrogen** (H₂): burning splint gives a squeaky "pop".',
+          '**Oxygen** (O₂): relights a glowing wooden splint.',
+          '**Carbon dioxide** (CO₂): bubbles through limewater (aqueous Ca(OH)₂), turning it cloudy/milky white.',
+          '**Chlorine** (Cl₂): bleaches damp blue litmus paper white.',
+          'Separate Chemistry highlights: flame colours (Li⁺ crimson, Na⁺ yellow, K⁺ lilac, Ca²⁺ orange-red, Cu²⁺ green), NaOH precipitates (Cu²⁺ blue, Fe²⁺ green, Fe³⁺ brown), and flame emission spectroscopy for fast, accurate, sensitive instrumental analysis.',
+        ],
+      },
+    ],
+    keyTerms: [
+      { term: 'Formulation', definition: 'Mixture specifically designed as a useful product with measured proportions of components.' },
+      { term: 'Mobile phase', definition: 'Solvent that moves through the stationary paper carrying dissolved substances.' },
+      { term: 'Rf value', definition: 'Ratio of distance moved by a spot to distance moved by the solvent front from the baseline.' },
+    ],
+    checklistPoints: [
+      'Distinguish chemical purity from everyday usage and give examples of formulations.',
+      'Carry out paper chromatography properly and calculate Rf values accurately.',
+      'Recall all four standard gas tests (H₂, O₂, CO₂, Cl₂) cleanly.',
+    ],
+  },
+  'chem-9-1': {
+    subtopicId: 'chem-9-1',
+    subtopicCode: '9.1',
+    subtopicTitle: 'Earth’s Early Atmosphere & Greenhouse Effect',
+    readingMinutes: 9,
+    videoTitle: 'GCSE Chemistry - Evolution of the Atmosphere | How the Atmosphere Changed Over Time',
+    youtubeId: 'DnFcyhsSVGg',
+    videoChannel: 'Cognito',
+    videoDuration: '5:11',
+    timestamps: [
+      { time: '0:00', seconds: 0, label: 'Introduction to the Evolution of the Atmosphere', cardId: 'chem-9-1-c1' },
+      { time: '1:02', seconds: 62, label: 'The Early Atmosphere & Volcanic Activity', cardId: 'chem-9-1-c1' },
+      { time: '2:37', seconds: 157, label: 'Formation of Sedimentary Rocks & Fossil Fuels', cardId: 'chem-9-1-c1' },
+      { time: '3:43', seconds: 223, label: 'Recap & Modern Atmosphere', cardId: 'chem-9-1-c1' },
+    ],
+    cards: [
+      {
+        id: 'chem-9-1-c1',
+        title: 'Evolution of Earth’s Atmosphere',
+        summary: 'Volcanic early atmosphere, ocean condensation, limestone formation, and algal oxygen rise.',
+        bullets: [
+          'Modern atmosphere (~200 million years stable): ~80% nitrogen (78%), ~20% oxygen (21%), and <1% other gases (argon, water vapour, ~0.04% CO₂).',
+          '4.6 billion years ago, intense volcanic activity released mostly CO₂, water vapour, nitrogen, and small amounts of methane and ammonia — little or no oxygen (like Mars/Venus today).',
+          'As Earth cooled, water vapour condensed to form oceans; CO₂ dissolved in oceans forming carbonate precipitates locked into sedimentary limestone rock.',
+          'Around 2.7 billion years ago, algae and later plants evolved photosynthesis (6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂), steadily raising atmospheric O₂ and locking more carbon away into fossil fuels (coal, crude oil, natural gas).',
+        ],
+      },
+      {
+        id: 'chem-9-1-c2',
+        title: 'The Greenhouse Effect & Carbon Footprints',
+        summary: 'Short-wavelength solar vs long-wavelength infrared greenhouse warming and carbon footprints.',
+        bullets: [
+          'Greenhouse gases (CO₂, CH₄, H₂O vapour) let short-wavelength solar radiation pass through to warm Earth, then absorb longer-wavelength infrared radiation emitted back from Earth’s surface, warming the lower atmosphere.',
+          'Human activities increasing CO₂ (burning fossil fuels, deforestation) and methane (cattle farming, landfill decomposition) enhance warming, causing global climate change (rising sea levels, extreme weather, glacier retreat, altered crop/species ranges).',
+          'A carbon footprint is the total amount of CO₂ and other **greenhouse gases** emitted over the full life cycle of a product, service, or event — cut via renewable power, insulation, carbon capture, and tax/lifestyle shifts.',
+        ],
+        glossaryPills: [
+          { term: 'carbon footprint', definition: 'Total quantity of carbon dioxide and other greenhouse gases released across the full life cycle of a product, event, or service.' },
+        ],
+      },
+      {
+        id: 'chem-9-1-c3',
+        title: 'Common Atmospheric Pollutants from Fuels',
+        summary: 'Incomplete combustion CO and soot particulates plus acid-rain-causing SO₂ and NOₓ.',
+        bullets: [
+          '**Carbon monoxide** (CO — incomplete combustion): colourless, odourless toxic gas that binds to haemoglobin and starves tissues of oxygen.',
+          'Particulates (soot / unburned carbon — incomplete combustion): cause global dimming and respiratory/lung damage.',
+          '**Sulfur dioxide** (SO₂ — sulfur impurities in coal/diesel) and Oxides of nitrogen (NOₓ — N₂ + O₂ reacting in hot car engines): cause respiratory problems and dissolve in rain to create ACID RAIN.',
+        ],
+        commonMistake: 'Always specify that greenhouse gases let SHORT-wavelength light IN and absorb LONG-wavelength (infrared) radiation radiated OUT from Earth!',
+      },
+    ],
+    keyTerms: [
+      { term: 'Greenhouse gas', definition: 'Gas such as CO₂, CH₄, or H₂O vapour that absorbs long-wavelength infrared radiation emitted by Earth.' },
+      { term: 'Carbon footprint', definition: 'Total greenhouse gas emissions generated over the full life cycle of a product or activity.' },
+      { term: 'Global dimming', definition: 'Reduction in sunlight reaching Earth’s surface caused by airborne carbon particulates.' },
+    ],
+    checklistPoints: [
+      'Explain how oceans, sedimentary carbonates, fossil fuels, and algal photosynthesis transformed Earth’s early CO₂ atmosphere into today’s N₂/O₂ mix.',
+      'Explain the greenhouse effect mechanism via short-wavelength solar vs long-wavelength infrared radiation.',
+      'State the causes and health/environmental effects of CO, particulates, SO₂, and NOₓ.',
+    ],
+  },
+  'chem-10-1': {
+    subtopicId: 'chem-10-1',
+    subtopicCode: '10.1',
+    subtopicTitle: 'Potable Water & Life Cycle Assessments',
+    readingMinutes: 8,
+    videoTitle: 'GCSE Chemistry - Potable Water - Treating Freshwater | Desalinating Seawater',
+    youtubeId: 'td8WR_FOQc0',
+    videoChannel: 'Cognito',
+    videoDuration: '5:14',
+    timestamps: [
+      { time: '0:00', seconds: 0, label: 'Introduction to Potable Water', cardId: 'chem-10-1-c1' },
+      { time: '1:16', seconds: 76, label: 'Sources of Fresh Water', cardId: 'chem-10-1-c1' },
+      { time: '2:56', seconds: 176, label: 'Sterilisation of Fresh Water', cardId: 'chem-10-1-c1' },
+      { time: '4:20', seconds: 260, label: 'Desalination by Reverse Osmosis', cardId: 'chem-10-1-c1' },
+    ],
+    cards: [
+      {
+        id: 'chem-10-1-c1',
+        title: 'Potable Water, Desalination & Waste Water Treatment',
+        summary: 'Freshwater filtration and sterilisation, energy-intensive desalination, and sewage treatment.',
+        bullets: [
+          '**Potable water** is water SAFE TO DRINK (low dissolved salts and microbes) — it is NOT chemically pure H₂O because it still contains harmless dissolved minerals.',
+          'UK freshwater (rainwater in lakes/aquifers): (1) Filter through mesh screens and sand/gravel beds to remove insoluble solids; (2) Sterilise using chlorine, ozone, or UV light to kill microbes.',
+          'In dry regions, salty seawater undergoes DESALINATION via distillation or reverse osmosis — both require HUGE energy input and are expensive.',
+          'Urban sewage treatment: screening & grit removal → sedimentation (separates liquid effluent from solid sewage sludge) → anaerobic digestion of sludge (produces biogas + fertiliser) and aerobic biological treatment of effluent before river release.',
+        ],
+        glossaryPills: [
+          { term: 'desalination', definition: 'Removal of dissolved salts from seawater by distillation or reverse osmosis to produce potable water.' },
+        ],
+      },
+      {
+        id: 'chem-10-1-c2',
+        title: 'Alternative Metal Extraction (Higher): Phytomining & Bioleaching',
+        summary: 'Extracting copper from low-grade ores sustainably via phytomining and bioleaching.',
+        bullets: [
+          'High-grade copper ores are becoming scarce; two low-impact biological methods extract copper from low-grade ores without traditional open-cast mining:',
+          'Phytomining: plants grown on copper-rich soil absorb copper compounds into their tissues → plants are harvested and burned to produce ash containing copper compounds.',
+          'Bioleaching: bacteria feed on low-grade ores to produce leachate solutions containing dissolved copper ions. Copper is recovered from both methods by displacement with scrap iron or electrolysis.',
+        ],
+        glossaryPills: [
+          { term: 'phytomining', definition: 'Growing plants on low-grade ore soil to absorb metal ions, then burning the harvested plants to recover metal compounds from the ash.' },
+          { term: 'bioleaching', definition: 'Using bacteria to extract soluble metal ions into a leachate solution from low-grade ores.' },
+        ],
+      },
+      {
+        id: 'chem-10-1-c3',
+        title: 'Life Cycle Assessments (LCAs) & Reduce, Reuse, Recycle',
+        summary: 'Evaluating raw materials, manufacture, use, and disposal in Life Cycle Assessments.',
+        bullets: [
+          'An LCA evaluates environmental impact across FOUR stages of a product’s life: (1) Extracting and processing raw materials; (2) Manufacturing and packaging; (3) Use and operation during lifetime; (4) Disposal at end of life (plus transport/distribution at every stage).',
+          'While energy and water usage are easily quantified, judging pollutant severity involves subjective value judgements — so biased "selective LCAs" can be misused for greenwashing advertisements.',
+          'Reducing, reusing (e.g., glass bottles), and recycling metals/glass conserves finite raw materials, cuts landfill, and saves huge energy compared with smelting ores from scratch.',
+        ],
+        commonMistake: 'Remember potable water is NOT "pure water" in GCSE Chemistry — pure water contains ONLY H₂O molecules, whereas safe potable tap water contains dissolved mineral ions!',
+      },
+    ],
+    keyTerms: [
+      { term: 'Potable water', definition: 'Water containing low levels of dissolved salts and microbes so that it is safe to drink.' },
+      { term: 'Phytomining', definition: 'Extracting metals from low-grade soil ores by growing and harvesting metal-absorbing plants.' },
+      { term: 'Bioleaching', definition: 'Using bacteria to produce a metal-rich leachate solution from low-grade ores.' },
+      { term: 'Life Cycle Assessment', definition: 'Evaluation of a product’s environmental impact across raw material extraction, manufacture, use, and disposal.' },
+    ],
+    checklistPoints: [
+      'Distinguish potable water from chemically pure water and describe filtration, sterilisation, and desalination.',
+      'Outline the four stages of urban sewage waste water treatment.',
+      'Explain phytomining and bioleaching and how copper is recovered using scrap iron or electrolysis.',
+      'Evaluate products using all four LCA stages and recognise limitations of subjective LCAs.',
+    ],
+  },
+};
+
+export const CHEMISTRY_QUIZZES: QuizQuestion[] = [
+  {
+    id: 'chem-q1',
+    subtopicId: 'chem-1-1',
+    type: 'mcq',
+    marks: 1,
+    prompt: 'What is the relative mass and relative charge of a neutron?',
+    options: ['Mass 1, Charge +1', 'Mass 1, Charge 0', 'Mass 0, Charge −1', 'Mass 1, Charge −1'],
+    correctIndex: 1,
+    explanation: 'Neutrons sit in the nucleus with a relative mass of 1 and zero electrical charge.',
+  },
+  {
+    id: 'chem-q2',
+    subtopicId: 'chem-1-1',
+    type: 'fill-blank',
+    marks: 2,
+    prompt: 'Complete the definition of isotopes.',
+    segments: ['Isotopes are atoms of the same element with the same number of ', ' but different numbers of ', '.'],
+    wordBank: ['protons', 'neutrons', 'electrons', 'shells'],
+    answers: ['protons', 'neutrons'],
+    explanation: 'Isotopes share identical atomic (proton) number and differ only in neutron count.',
+  },
+  {
+    id: 'chem-q3',
+    subtopicId: 'chem-1-2',
+    type: 'short-answer',
+    marks: 3,
+    prompt: 'Explain why potassium (Group 1) is more reactive than lithium (Group 1).',
+    rubric: {
+      maxMarks: 3,
+      modelAnswer: 'Potassium has more electron shells so its outer electron is further from the nucleus with more shielding. The electrostatic attraction is weaker, so the outer electron is lost more easily.',
+      markPoints: [
+        { id: 'mp1', markDescription: 'Outer electron is further from the nucleus / atom is larger', requiredKeywordGroups: [['further', 'larger', 'distance', 'more shells']] },
+        { id: 'mp2', markDescription: 'Greater shielding / weaker nuclear attraction on outer electron', requiredKeywordGroups: [['shielding', 'weaker', 'less attraction']] },
+        { id: 'mp3', markDescription: 'Outer electron is lost more easily', requiredKeywordGroups: [['lost', 'lose'], ['more easily', 'easier']] },
+      ],
+    },
+    explanation: 'Down Group 1, extra shells increase radius and shielding, weakening attraction to the outer electron.',
+  },
+  {
+    id: 'chem-q4',
+    subtopicId: 'chem-2-1',
+    type: 'multi-select',
+    marks: 2,
+    selectCount: 2,
+    prompt: 'Select TWO properties of sodium chloride (a giant ionic lattice).',
+    options: [
+      'Conducts electricity when solid',
+      'Conducts electricity when molten or dissolved in water',
+      'Low melting point due to weak intermolecular forces',
+      'High melting point due to strong electrostatic forces between ions',
+    ],
+    correctIndices: [1, 3],
+    explanation: 'Giant ionic lattices have high melting points and conduct only when molten/dissolved so ions are free to move.',
+  },
+  {
+    id: 'chem-q5',
+    subtopicId: 'chem-2-1',
+    type: 'matching',
+    marks: 3,
+    prompt: 'Match each bonding model to its particle description.',
+    pairs: [
+      { left: 'Ionic bonding', right: 'Electrostatic attraction between oppositely charged ions' },
+      { left: 'Covalent bonding', right: 'Shared pairs of electrons between non-metal atoms' },
+      { left: 'Metallic bonding', right: 'Positive metal ions in a sea of delocalised electrons' },
+    ],
+    explanation: 'Ionic transfers electrons to make ions; covalent shares pairs; metallic has delocalised electrons.',
+  },
+  {
+    id: 'chem-q6',
+    subtopicId: 'chem-6-1',
+    type: 'mcq',
+    marks: 1,
+    prompt: 'How does adding a catalyst increase the rate of a reaction?',
+    options: [
+      'It increases the kinetic energy of all reactant particles',
+      'It lowers the activation energy via an alternative pathway',
+      'It increases the concentration of products',
+      'It gets permanently used up to donate extra atoms',
+    ],
+    correctIndex: 1,
+    explanation: 'A catalyst lowers activation energy so a greater proportion of collisions are successful.',
+  },
+  {
+    id: 'chem-q7',
+    subtopicId: 'chem-2-2',
+    type: 'mcq',
+    marks: 1,
+    prompt: 'Why is graphite soft and able to conduct electricity?',
+    options: [
+      'Each carbon forms 4 strong covalent bonds with no free electrons',
+      'Layers are held by weak intermolecular forces and each carbon has 1 delocalised electron',
+      'It contains mobile positive and negative ions',
+      'It consists of individual spherical C₆₀ molecules',
+    ],
+    correctIndex: 1,
+    explanation: 'In graphite each carbon forms 3 bonds, leaving 1 delocalised electron per atom and weak forces between hexagonal layers.',
+  },
+  {
+    id: 'chem-q8',
+    subtopicId: 'chem-3-1',
+    type: 'short-answer',
+    marks: 2,
+    prompt: 'Calculate the number of moles in 25 g of calcium carbonate (CaCO₃, Mr = 100).',
+    rubric: {
+      maxMarks: 2,
+      modelAnswer: 'Moles = 25 ÷ 100 = 0.25 mol.',
+      markPoints: [
+        { id: 'mp1', markDescription: 'Correct formula / substitution 25 ÷ 100', requiredKeywordGroups: [['25'], ['100']] },
+        { id: 'mp2', markDescription: 'Correct answer 0.25', numericMatch: { value: 0.25, tolerance: 0.01 } },
+      ],
+    },
+    explanation: 'n = m ÷ Mr = 25 ÷ 100 = 0.25 mol.',
+  },
+  {
+    id: 'chem-q9',
+    subtopicId: 'chem-4-1',
+    type: 'mcq',
+    marks: 1,
+    prompt: 'If an acidic solution’s pH decreases from pH 4 to pH 2, how does its H⁺ ion concentration change?',
+    options: [
+      'Increases by a factor of 2',
+      'Increases by a factor of 20',
+      'Increases by a factor of 100',
+      'Decreases by a factor of 100',
+    ],
+    correctIndex: 2,
+    explanation: 'Each 1-unit drop in pH is a ×10 increase in H⁺ concentration; a 2-unit drop is 10 × 10 = ×100.',
+  },
+  {
+    id: 'chem-q10',
+    subtopicId: 'chem-5-1',
+    type: 'mcq',
+    marks: 1,
+    prompt: 'During a neutralisation reaction inside a polystyrene cup, the thermometer temperature rises by 9 °C. What type of reaction is this?',
+    options: ['Endothermic', 'Exothermic', 'Thermal decomposition', 'Electrolysis'],
+    correctIndex: 1,
+    explanation: 'Energy is transferred to the surroundings causing their temperature to rise — exothermic.',
+  },
+  {
+    id: 'chem-q11',
+    subtopicId: 'chem-7-1',
+    type: 'mcq',
+    marks: 1,
+    prompt: 'Which reagent distinguishes an alkene from an alkane by changing from orange to colourless?',
+    options: ['Limewater', 'Bromine water', 'Iodine solution', 'Silver nitrate'],
+    correctIndex: 1,
+    explanation: 'Alkenes rapidly decolourise orange bromine water to colourless across their C=C bond.',
+  },
+  {
+    id: 'chem-q12',
+    subtopicId: 'chem-8-1',
+    type: 'mcq',
+    marks: 1,
+    prompt: 'Which gas bleaches damp blue litmus paper white?',
+    options: ['Hydrogen', 'Oxygen', 'Carbon dioxide', 'Chlorine'],
+    correctIndex: 3,
+    explanation: 'Chlorine gas bleaches damp litmus paper white.',
+  },
+  {
+    id: 'chem-q13',
+    subtopicId: 'chem-9-1',
+    type: 'mcq',
+    marks: 1,
+    prompt: 'Which two processes were primarily responsible for decreasing CO₂ levels in Earth’s early atmosphere?',
+    options: [
+      'Volcanic eruptions and burning fossil fuels',
+      'Dissolving in oceans (carbonate rocks) and photosynthesis by early algae/plants',
+      'Rusting of iron and nitrogen fixation',
+      'Acid rain and global dimming',
+    ],
+    correctIndex: 1,
+    explanation: 'CO₂ dissolved in newly formed oceans to form sedimentary carbonates and was absorbed by photosynthesising algae and plants.',
+  },
+  {
+    id: 'chem-q14',
+    subtopicId: 'chem-10-1',
+    type: 'mcq',
+    marks: 1,
+    prompt: 'Which method uses plants grown on low-grade ore soil to absorb copper compounds before harvesting and burning them?',
+    options: ['Bioleaching', 'Phytomining', 'Desalination', 'Fractional distillation'],
+    correctIndex: 1,
+    explanation: 'Phytomining uses plants to absorb metal compounds from low-grade ores; bioleaching uses bacteria.',
+  },
+];
+
+export const CHEMISTRY_FLASHCARDS: FlashcardItem[] = [
+  { id: 'chem-fc-1', subtopicId: 'chem-1-1', front: 'Give the relative mass and charge of protons, neutrons, and electrons.', backBullets: ['Proton: mass 1, charge +1', 'Neutron: mass 1, charge 0', 'Electron: mass ~0 (1/1836), charge −1'] },
+  { id: 'chem-fc-2', subtopicId: 'chem-1-1', front: 'Define an isotope.', backBullets: ['Atoms of the same element (same protons)', 'With different numbers of neutrons (different mass number)'] },
+  { id: 'chem-fc-3', subtopicId: 'chem-1-2', front: 'Why does reactivity decrease down Group 7 (Halogens)?', backBullets: ['Atom radius increases and more inner shells shield the nucleus', 'Harder to attract an incoming electron into the outer shell'] },
+  { id: 'chem-fc-4', subtopicId: 'chem-2-1', front: 'Why do ionic compounds NOT conduct electricity when solid?', backBullets: ['Ions are fixed in a rigid lattice and cannot move to carry charge', 'They conduct when molten or dissolved because ions are free to move'] },
+  { id: 'chem-fc-5', subtopicId: 'chem-2-1', front: 'Why do simple molecular substances (like CO₂) have low boiling points?', backBullets: ['Only weak intermolecular forces between molecules need to be overcome, NOT the strong covalent bonds'] },
+  { id: 'chem-fc-6', subtopicId: 'chem-6-1', front: 'What two things happen when temperature is increased in a reaction?', backBullets: ['Particles move faster so collide more frequently', 'More particles exceed the activation energy so a higher proportion of collisions succeed'] },
+  { id: 'chem-fc-7', subtopicId: 'chem-2-2', front: 'Contrast diamond and graphite bonding.', backBullets: ['Diamond: 4 covalent bonds per carbon (hard, no free electrons)', 'Graphite: 3 bonds per carbon in layers + 1 delocalised electron (soft conductor)'] },
+  { id: 'chem-fc-8', subtopicId: 'chem-3-1', front: 'Write the equations for moles and atom economy.', backBullets: ['Moles = mass (g) ÷ Mr', 'Atom economy = (Mr of desired product ÷ sum of Mr of all reactants) × 100'] },
+  { id: 'chem-fc-9', subtopicId: 'chem-4-1', front: 'What is PANIC + OIL RIG in electrolysis?', backBullets: ['Positive Anode (Oxidation Is Loss of electrons)', 'Negative Is Cathode (Reduction Is Gain of electrons)'] },
+  { id: 'chem-fc-10', subtopicId: 'chem-5-1', front: 'How do bond energies determine whether a reaction is exothermic?', backBullets: ['Energy change = Σ(bonds broken) − Σ(bonds formed)', 'Exothermic when more energy is released making bonds than absorbed breaking bonds (negative value)'] },
+  { id: 'chem-fc-11', subtopicId: 'chem-7-1', front: 'Why is long-chain crude oil cracked industrially?', backBullets: ['Breaks less useful long alkanes into high-demand shorter fuels + alkenes for making polymers'] },
+  { id: 'chem-fc-12', subtopicId: 'chem-8-1', front: 'State the four AQA gas tests (H₂, O₂, CO₂, Cl₂).', backBullets: ['H₂: burning splint squeaky pop; O₂: relights glowing splint', 'CO₂: turns limewater cloudy; Cl₂: bleaches damp litmus paper white'] },
+  { id: 'chem-fc-13', subtopicId: 'chem-9-1', front: 'How do greenhouse gases warm the Earth?', backBullets: ['Short-wavelength solar radiation passes through atmosphere to warm Earth', 'Greenhouse gases absorb longer-wavelength infrared radiation re-emitted by Earth'] },
+  { id: 'chem-fc-14', subtopicId: 'chem-10-1', front: 'Name the four stages of a Life Cycle Assessment (LCA).', backBullets: ['1. Extracting & processing raw materials; 2. Manufacturing & packaging', '3. Use & operation during lifetime; 4. Disposal at end of life'] },
+];
+
+export const CHEMISTRY_CHEAT_SHEETS: CheatSheetItem[] = [
+  {
+    id: 'cs-chem-atomic',
+    slug: 'atomic-structure-and-isotopes',
+    title: 'Atomic Structure & Isotopes',
+    topicNumber: 1,
+    topicName: 'Atomic Structure & the Periodic Table',
+    summary: 'Protons, neutrons, electrons, relative atomic mass Ar calculations, and 2,8,8 electron shells.',
+    accentColor: '#2ea582',
+    sections: [
+      {
+        heading: 'Subatomic Particles',
+        points: ['Proton (+1, mass 1)', 'Neutron (0, mass 1)', 'Electron (−1, negligible mass)'],
+      },
+      {
+        heading: 'Relative Atomic Mass (Ar)',
+        formula: 'Ar = Σ(% abundance × isotope mass) ÷ 100',
+        points: ['Weighted average of all naturally occurring isotopes of an element.'],
+      },
+    ],
+  },
+  {
+    id: 'cs-chem-bonding',
+    slug: 'ionic-covalent-metallic-bonding',
+    title: 'Bonding & Properties Summary',
+    topicNumber: 2,
+    topicName: 'Bonding, Structure & Properties',
+    summary: 'Ionic lattices, simple vs giant covalent structures (diamond & graphite), and metals.',
+    accentColor: '#1a96f3',
+    sections: [
+      {
+        heading: 'Structure Comparison',
+        points: [
+          'Giant Ionic: High MP, conducts molten/aqueous.',
+          'Simple Covalent: Low MP, never conducts.',
+          'Graphite: 3 bonds per carbon, 1 delocalised electron per carbon → conducts!',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'cs-chem-rates',
+    slug: 'rates-of-reaction-collision-theory',
+    title: 'Collision Theory & Rates',
+    topicNumber: 6,
+    topicName: 'Rate & Extent of Chemical Change',
+    summary: 'Surface area, temperature, concentration, catalysts, and reversible equilibrium shifts.',
+    accentColor: '#8d22cc',
+    sections: [
+      {
+        heading: 'Rate Equation',
+        formula: 'Mean rate = Quantity of reactant used ÷ Time taken',
+        points: ['Steeper initial gradient = faster initial rate; plateau height = total product yield.'],
+      },
+    ],
+  },
+];
+
+export const CHEMISTRY_EXAM_PRACTICE: ExamQuestionItem[] = [
+  {
+    id: 'chem-exam-1',
+    subtopicId: 'chem-1-1',
+    number: 1,
+    stimulus: 'The diagram represents a neutral atom of Carbon-12.',
+    diagram: 'atomic-structure',
+    parts: [
+      {
+        id: 'chem-exam-1a',
+        label: 'a)',
+        prompt: 'Explain why a Carbon-12 atom has no overall electrical charge.',
+        kind: 'short-answer',
+        marks: 2,
+        rubric: {
+          maxMarks: 2,
+          modelAnswer: 'It contains equal numbers of positively charged protons (6) and negatively charged electrons (6), so the charges cancel out.',
+          markPoints: [
+            { id: 'mp1', markDescription: 'Equal number of protons and electrons', requiredKeywordGroups: [['equal', 'same'], ['proton'], ['electron']] },
+            { id: 'mp2', markDescription: 'Opposite charges (+1 and −1) cancel out', requiredKeywordGroups: [['positive', 'negative', 'cancel']] },
+          ],
+        },
+      },
+    ],
+  },
+];
+
+export const CHEMISTRY_PAST_PAPERS: PastPaperDoc[] = [
+  {
+    id: 'chem-pp-2024-p1',
+    specEra: 'new-9-1',
+    year: '2024',
+    title: 'Paper 1 (8462/1H)',
+    tier: 'Higher',
+    series: 'June 2024',
+    paperCode: '8462/1H',
+    durationMinutes: 105,
+    totalMarks: 100,
+    insertNote: 'Includes Official AQA Periodic Table of Elements Insert.',
+    sampleQuestions: [
+      { number: '01.1', question: 'Explain why graphite conducts electricity whereas diamond does not.', marks: 3, markScheme: ['In graphite each carbon forms 3 covalent bonds leaving 1 delocalised electron per atom free to move and carry charge; in diamond each carbon forms 4 covalent bonds so no delocalised electrons exist.'] },
+    ],
+  },
+];
+
+export const CHEMISTRY_KEY_TERMS: KeyTermEntry[] = [
+  { id: 'ckt-1', term: 'Activation energy', definition: 'Minimum kinetic energy required when particles collide for a chemical reaction to occur.', topicNumber: 6, subtopicId: 'chem-6-1', subtopicCode: '6.1' },
+  { id: 'ckt-2', term: 'Alkali metal', definition: 'Reactive Group 1 element that loses one outer electron to form a +1 ion.', topicNumber: 1, subtopicId: 'chem-1-2', subtopicCode: '1.2' },
+  { id: 'ckt-3', term: 'Catalyst', definition: 'Substance that speeds up a reaction by lowering activation energy without being used up.', topicNumber: 6, subtopicId: 'chem-6-1', subtopicCode: '6.1' },
+  { id: 'ckt-4', term: 'Covalent bond', definition: 'Strong electrostatic attraction for a shared pair of electrons between two non-metal nuclei.', topicNumber: 2, subtopicId: 'chem-2-1', subtopicCode: '2.1' },
+  { id: 'ckt-5', term: 'Delocalised electron', definition: 'Free-moving outer electron not bound to any single atom, found in metals and graphite.', topicNumber: 2, subtopicId: 'chem-2-1', subtopicCode: '2.1' },
+  { id: 'ckt-6', term: 'Ionic lattice', definition: 'Giant 3D regular arrangement of alternating positive and negative ions.', topicNumber: 2, subtopicId: 'chem-2-1', subtopicCode: '2.1' },
+  { id: 'ckt-7', term: 'Isotope', definition: 'Atoms of the same element having equal proton counts but different neutron numbers.', topicNumber: 1, subtopicId: 'chem-1-1', subtopicCode: '1.1' },
+  { id: 'ckt-8', term: 'Noble gases', definition: 'Unreactive Group 0 elements possessing stable, full outer electron shells.', topicNumber: 1, subtopicId: 'chem-1-2', subtopicCode: '1.2' },
+];
