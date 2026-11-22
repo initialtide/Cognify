@@ -6,18 +6,18 @@
 
 | Metric | Current | Target |
 | --- | --- | --- |
-| **Overall Learning Depth Score** | **80 / 100** | 95+ / 100 |
+| **Overall Learning Depth Score** | **87 / 100** | 95+ / 100 |
 | **Active Deep Courses Audited** | 15 | 31+ |
 | **Total Subtopic Lessons** | 219 | Growing |
 | **IGCSE Unlocked Subjects** | 5 / 13 (3 stubs) | 13 / 13 |
 | **A-Level Unlocked Subjects** | 5 / 14 (0 stubs) | 14 / 14 |
-| **Explicit Authored Quizzes / Subtopic** | 3.1 | 5.0+ |
-| **Explicit Authored Flashcards / Subtopic** | 3.1 | 5.0+ |
-| **Explicit Authored Exam Practice / Subtopic** | 0.6 | 1.0+ |
-| **Explicit Authored Cheat Sheets / Topic** | 0.8 | 1.0 |
+| **Explicit Authored Quizzes / Subtopic** | 3.8 | 5.0+ |
+| **Explicit Authored Flashcards / Subtopic** | 3.7 | 5.0+ |
+| **Explicit Authored Exam Practice / Subtopic** | 0.8 | 1.0+ |
+| **Explicit Authored Cheat Sheets / Topic** | 1 | 1.0 |
 | **Baked `-extra-` / Template Items** | 0 | 0 |
-| **Runtime `-syn-` Fallback Items** | 949 | 0 |
-| **Gradable Short-Answer MarkPoints** | **100%** (1264 / 1264, 0 ungradable) | 100% |
+| **Runtime `-syn-` Fallback Items** | 614 | 0 |
+| **Gradable Short-Answer MarkPoints** | **100%** (1270 / 1270, 0 ungradable) | 100% |
 
 ## Top Next Learning Upgrades (Auto-Prioritized)
 
@@ -26,15 +26,15 @@
 | **P1** | Unlock Stub Subject | IGCSE computer-science | Currently shown in catalog as pastPapersOnly without interactive notes, videos, or active recall. |
 | **P1** | Unlock Stub Subject | IGCSE economics | Currently shown in catalog as pastPapersOnly without interactive notes, videos, or active recall. |
 | **P1** | Unlock Stub Subject | IGCSE english-language | Currently shown in catalog as pastPapersOnly without interactive notes, videos, or active recall. |
-| **P2** | Deepen Existing Notes | IGCSE Chemistry (56/100) | subsections on 0% of subtopics; worked/concrete examples on 0% |
 | **P2** | Deepen Existing Notes | A-LEVEL Maths (59/100) | subsections on 7% of subtopics; worked/concrete examples on 7% |
 | **P2** | Deepen Existing Notes | A-LEVEL Physics (61/100) | 16/16 subtopics have <3 cards; subsections on 25% of subtopics; worked/concrete examples on 25% |
 | **P2** | Deepen Existing Notes | A-LEVEL Chemistry (64/100) | 12/16 subtopics have <3 cards; subsections on 25% of subtopics; worked/concrete examples on 25% |
 | **P2** | Deepen Existing Notes | A-LEVEL Psychology (64/100) | subsections on 17% of subtopics; worked/concrete examples on 17% |
-| **P2** | Deepen Existing Notes | IGCSE Biology (64/100) | subsections on 5% of subtopics; worked/concrete examples on 5% |
+| **P2** | Deepen Existing Notes | A-LEVEL Biology (72/100) | subsections on 25% of subtopics; worked/concrete examples on 25% |
 | **P3** | Add Roadmap Subject | IGCSE english-literature | Planned in PLAN.md Phase 3 (target: 13 unlocked IGCSE subjects). |
 | **P3** | Add Roadmap Subject | IGCSE geography | Planned in PLAN.md Phase 3 (target: 13 unlocked IGCSE subjects). |
 | **P3** | Add Roadmap Subject | IGCSE history | Planned in PLAN.md Phase 3 (target: 13 unlocked IGCSE subjects). |
+| **P3** | Add Roadmap Subject | A-Level further-maths | Planned in PLAN.md Phase 4 (target: 14 unlocked A-Level subjects). |
 
 ## Course Pedagogical Depth Breakdown
 
@@ -50,9 +50,9 @@
 | `gcse-combined-aqa-higher` | 14 | **100/100** | 100% | 100% | 100% | 100% | 9 |
 | `gcse-maths-aqa-higher` | 8 | **100/100** | 100% | 100% | 100% | 100% | 2 |
 | `gcse-physics-aqa-higher` | 9 | **100/100** | 100% | 100% | 100% | 100% | 4 |
-| `igcse-biology-cie` | 20 | **64/100** | 5% | 5% | 100% | 95% | 7 |
+| `igcse-biology-cie` | 20 | **100/100** | 100% | 100% | 100% | 100% | 7 |
 | `igcse-business-cie` | 12 | **100/100** | 100% | 100% | 100% | 100% | 2 |
-| `igcse-chemistry-cie` | 16 | **56/100** | 0% | 0% | 94% | 75% | 3 |
+| `igcse-chemistry-cie` | 16 | **100/100** | 100% | 100% | 100% | 100% | 3 |
 | `igcse-maths-cie` | 15 | **100/100** | 100% | 100% | 100% | 100% | 2 |
 | `igcse-physics-cie` | 16 | **100/100** | 100% | 100% | 100% | 100% | 4 |
 
@@ -70,9 +70,9 @@
 | `gcse-combined-aqa-higher` | 3.1 | 3.1 | 0.4 | 0.3 | 0 | 67 | 100% (94/94) |
 | `gcse-maths-aqa-higher` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (46/46) |
 | `gcse-physics-aqa-higher` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (65/65) |
-| `igcse-biology-cie` | 1 | 1.1 | 0.1 | 0.3 | 0 | 183 | 100% (108/108) |
+| `igcse-biology-cie` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (102/102) |
 | `igcse-business-cie` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (60/60) |
-| `igcse-chemistry-cie` | 0.9 | 0.9 | 0.1 | 0.3 | 0 | 152 | 100% (86/86) |
+| `igcse-chemistry-cie` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (98/98) |
 | `igcse-maths-cie` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (98/98) |
 | `igcse-physics-cie` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (99/99) |
 
@@ -80,11 +80,7 @@
 
 | Course | Subtopic | Score | Missing Learning Elements |
 | --- | --- | ---: | --- |
-| `igcse-chemistry-cie` | `igchem-8-1` — Periodic Table: Groups I, VII, VIII & Transition Metals | 39/100 | no subsections, no worked/concrete examples, no commonMistake, no memoryAid |
 | `a-level-maths-cie` | `al-maths-4-1` — Differentiation — First Principles, Chain, Product & Quotient Rules | 49/100 | no subsections, no worked/concrete examples, no memoryAid |
-| `igcse-chemistry-cie` | `igchem-10-1` — Water Treatment, Air Pollutants & Climate Change | 49/100 | no subsections, no worked/concrete examples, no memoryAid |
-| `igcse-chemistry-cie` | `igchem-6-1` — Collision Theory, Rates of Reaction & Catalysts | 49/100 | no subsections, no worked/concrete examples, no memoryAid |
-| `igcse-chemistry-cie` | `igchem-9-1` — Crude Oil, Fractional Distillation, Alkanes & Alkenes | 49/100 | no subsections, no worked/concrete examples, no memoryAid |
 | `a-level-maths-cie` | `al-maths-3-2` — Trigonometric Identities, Addition Formulae & R-Formula | 50/100 | no subsections, no worked/concrete examples, no glossaryPills |
 | `a-level-chemistry-aqa` | `al-chem-1-1` — Atomic Orbitals, Sub-Shells & Electronic Configuration | 51/100 | only 2 cards (target >=3), no subsections, no worked/concrete examples |
 | `a-level-chemistry-aqa` | `al-chem-1-2` — TOF Mass Spectrometry & Ionisation Energy Trends | 51/100 | only 2 cards (target >=3), no subsections, no worked/concrete examples |
@@ -92,6 +88,10 @@
 | `a-level-chemistry-aqa` | `al-chem-4-1` — Enthalpy Changes, Calorimetry & Hess’s Law Cycles | 51/100 | only 2 cards (target >=3), no subsections, no worked/concrete examples |
 | `a-level-chemistry-aqa` | `al-chem-6-1` — Dynamic Equilibria, Equilibrium Constants Kc & Kp | 51/100 | only 2 cards (target >=3), no subsections, no worked/concrete examples |
 | `a-level-chemistry-aqa` | `al-chem-7-1` — Period 3 Oxides, Group 2 & Group 7 Halogens/Halides | 51/100 | only 2 cards (target >=3), no subsections, no worked/concrete examples |
+| `a-level-chemistry-aqa` | `al-chem-8-2` — Alcohols, Carbonyls, Carboxylic Acids & Acyl Chlorides | 51/100 | only 2 cards (target >=3), no subsections, no worked/concrete examples |
+| `a-level-physics-aqa` | `al-phys-1-1` — SI Base Units, Uncertainty Propagation & Graph Analysis | 51/100 | only 2 cards (target >=3), no subsections, no worked/concrete examples |
+| `a-level-physics-aqa` | `al-phys-2-1` — Particles, Quarks, Antiparticles & Conservation Laws | 51/100 | only 2 cards (target >=3), no subsections, no worked/concrete examples |
+| `a-level-physics-aqa` | `al-phys-3-1` — Progressive Waves, Polarisation & Stationary Waves | 51/100 | only 2 cards (target >=3), no subsections, no worked/concrete examples |
 
 ## Roadmap Coverage Status
 
