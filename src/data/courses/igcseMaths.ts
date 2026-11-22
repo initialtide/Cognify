@@ -11,3568 +11,4883 @@ import {
 
 export const IGCSE_MATHS_TOPICS: TopicDefinition[] = [
   {
-    number: 1,
-    title: 'Number',
-    subtopics: [
+    "number": 1,
+    "title": "Number",
+    "subtopics": [
       {
-        id: 'igcse-maths-1-1',
-        code: '1.1',
-        slug: '1.1-fractions-percentages-compound-reverse',
-        title: 'Fractions, Percentages, Compound Interest & Reverse Percentages',
-        readingMinutes: 10,
-        hasDeepContent: true,
+        "id": "igcse-maths-1-1",
+        "code": "1.1",
+        "slug": "1.1-fractions-percentages-compound-reverse",
+        "title": "Fractions, Percentages, Compound Interest & Reverse Percentages",
+        "readingMinutes": 10,
+        "hasDeepContent": true
       },
       {
-        id: 'igcse-maths-1-2',
-        code: '1.2',
-        slug: '1.2-indices-surds-standard-form-bounds',
-        title: 'Indices, Surds, Standard Form & Upper/Lower Bounds',
-        readingMinutes: 11,
-        hasDeepContent: true,
+        "id": "igcse-maths-1-2",
+        "code": "1.2",
+        "slug": "1.2-indices-surds-standard-form-bounds",
+        "title": "Indices, Surds, Standard Form & Upper/Lower Bounds",
+        "readingMinutes": 11,
+        "hasDeepContent": true
       },
       {
-        id: 'igcse-maths-1-3',
-        code: '1.3',
-        slug: '1.3-ratio-direct-inverse-proportion',
-        title: 'Ratio, Direct Proportion & Inverse Proportion',
-        readingMinutes: 9,
-        hasDeepContent: true,
-      },
-    ],
+        "id": "igcse-maths-1-3",
+        "code": "1.3",
+        "slug": "1.3-ratio-direct-inverse-proportion",
+        "title": "Ratio, Direct Proportion & Inverse Proportion",
+        "readingMinutes": 9,
+        "hasDeepContent": true
+      }
+    ]
   },
   {
-    number: 2,
-    title: 'Algebra & Graphs',
-    subtopics: [
+    "number": 2,
+    "title": "Algebra & Graphs",
+    "subtopics": [
       {
-        id: 'igcse-maths-2-1',
-        code: '2.1',
-        slug: '2.1-quadratics-factorising-formula-completing-square',
-        title: 'Expanding, Factorising & Solving Quadratic Equations',
-        readingMinutes: 11,
-        hasDeepContent: true,
+        "id": "igcse-maths-2-1",
+        "code": "2.1",
+        "slug": "2.1-quadratics-factorising-formula-completing-square",
+        "title": "Expanding, Factorising & Solving Quadratic Equations",
+        "readingMinutes": 11,
+        "hasDeepContent": true
       },
       {
-        id: 'igcse-maths-2-2',
-        code: '2.2',
-        slug: '2.2-simultaneous-equations-inequalities',
-        title: 'Simultaneous Equations (Linear & Quadratic) & Inequalities',
-        readingMinutes: 10,
-        hasDeepContent: true,
+        "id": "igcse-maths-2-2",
+        "code": "2.2",
+        "slug": "2.2-simultaneous-equations-inequalities",
+        "title": "Simultaneous Equations (Linear & Quadratic) & Inequalities",
+        "readingMinutes": 10,
+        "hasDeepContent": true
       },
       {
-        id: 'igcse-maths-2-3',
-        code: '2.3',
-        slug: '2.3-sequences-functions-differentiation',
-        title: 'Sequences, Functions (Composite/Inverse) & Differentiation',
-        readingMinutes: 11,
-        hasDeepContent: true,
-      },
-    ],
+        "id": "igcse-maths-2-3",
+        "code": "2.3",
+        "slug": "2.3-sequences-functions-differentiation",
+        "title": "Sequences, Functions (Composite/Inverse) & Differentiation",
+        "readingMinutes": 11,
+        "hasDeepContent": true
+      }
+    ]
   },
   {
-    number: 3,
-    title: 'Coordinate Geometry',
-    subtopics: [
+    "number": 3,
+    "title": "Coordinate Geometry",
+    "subtopics": [
       {
-        id: 'igcse-maths-3-1',
-        code: '3.1',
-        slug: '3.1-straight-line-graphs-midpoint-perpendicular',
-        title: 'Straight Line Graphs (y = mx + c), Midpoint, Length & Perpendiculars',
-        readingMinutes: 10,
-        hasDeepContent: true,
-      },
-    ],
+        "id": "igcse-maths-3-1",
+        "code": "3.1",
+        "slug": "3.1-straight-line-graphs-midpoint-perpendicular",
+        "title": "Straight Line Graphs (y = mx + c), Midpoint, Length & Perpendiculars",
+        "readingMinutes": 10,
+        "hasDeepContent": true
+      }
+    ]
   },
   {
-    number: 4,
-    title: 'Geometry & Circle Theorems',
-    subtopics: [
+    "number": 4,
+    "title": "Geometry & Circle Theorems",
+    "subtopics": [
       {
-        id: 'igcse-maths-4-1',
-        code: '4.1',
-        slug: '4.1-angles-polygons-bearings-similarity',
-        title: 'Angles, Polygons, Bearings, Similarity & Congruence',
-        readingMinutes: 10,
-        hasDeepContent: true,
+        "id": "igcse-maths-4-1",
+        "code": "4.1",
+        "slug": "4.1-angles-polygons-bearings-similarity",
+        "title": "Angles, Polygons, Bearings, Similarity & Congruence",
+        "readingMinutes": 10,
+        "hasDeepContent": true
       },
       {
-        id: 'igcse-maths-4-2',
-        code: '4.2',
-        slug: '4.2-circle-theorems-alternate-segment',
-        title: 'Circle Theorems & Alternate Segment Theorem',
-        readingMinutes: 10,
-        hasDeepContent: true,
-      },
-    ],
+        "id": "igcse-maths-4-2",
+        "code": "4.2",
+        "slug": "4.2-circle-theorems-alternate-segment",
+        "title": "Circle Theorems & Alternate Segment Theorem",
+        "readingMinutes": 10,
+        "hasDeepContent": true
+      }
+    ]
   },
   {
-    number: 5,
-    title: 'Mensuration',
-    subtopics: [
+    "number": 5,
+    "title": "Mensuration",
+    "subtopics": [
       {
-        id: 'igcse-maths-5-1',
-        code: '5.1',
-        slug: '5.1-area-sectors-volume-surface-area',
-        title: 'Area, Arc Length, Sector Area, Surface Area & Volume',
-        readingMinutes: 10,
-        hasDeepContent: true,
-      },
-    ],
+        "id": "igcse-maths-5-1",
+        "code": "5.1",
+        "slug": "5.1-area-sectors-volume-surface-area",
+        "title": "Area, Arc Length, Sector Area, Surface Area & Volume",
+        "readingMinutes": 10,
+        "hasDeepContent": true
+      }
+    ]
   },
   {
-    number: 6,
-    title: 'Trigonometry',
-    subtopics: [
+    "number": 6,
+    "title": "Trigonometry",
+    "subtopics": [
       {
-        id: 'igcse-maths-6-1',
-        code: '6.1',
-        slug: '6.1-pythagoras-sohcahtoa-3d-trig',
-        title: 'Pythagoras’ Theorem & Right-Angled Trigonometry (SOHCAHTOA)',
-        readingMinutes: 10,
-        hasDeepContent: true,
+        "id": "igcse-maths-6-1",
+        "code": "6.1",
+        "slug": "6.1-pythagoras-sohcahtoa-3d-trig",
+        "title": "Pythagoras’ Theorem & Right-Angled Trigonometry (SOHCAHTOA)",
+        "readingMinutes": 10,
+        "hasDeepContent": true
       },
       {
-        id: 'igcse-maths-6-2',
-        code: '6.2',
-        slug: '6.2-sine-rule-cosine-rule-triangle-area',
-        title: 'Sine Rule, Cosine Rule & Area of Non-Right-Angled Triangles',
-        readingMinutes: 11,
-        hasDeepContent: true,
-      },
-    ],
+        "id": "igcse-maths-6-2",
+        "code": "6.2",
+        "slug": "6.2-sine-rule-cosine-rule-triangle-area",
+        "title": "Sine Rule, Cosine Rule & Area of Non-Right-Angled Triangles",
+        "readingMinutes": 11,
+        "hasDeepContent": true
+      }
+    ]
   },
   {
-    number: 7,
-    title: 'Vectors & Transformations',
-    subtopics: [
+    "number": 7,
+    "title": "Vectors & Transformations",
+    "subtopics": [
       {
-        id: 'igcse-maths-7-1',
-        code: '7.1',
-        slug: '7.1-vectors-transformations',
-        title: 'Column Vectors, Vector Geometry & Transformations',
-        readingMinutes: 10,
-        hasDeepContent: true,
-      },
-    ],
+        "id": "igcse-maths-7-1",
+        "code": "7.1",
+        "slug": "7.1-vectors-transformations",
+        "title": "Column Vectors, Vector Geometry & Transformations",
+        "readingMinutes": 10,
+        "hasDeepContent": true
+      }
+    ]
   },
   {
-    number: 8,
-    title: 'Probability & Statistics',
-    subtopics: [
+    "number": 8,
+    "title": "Probability & Statistics",
+    "subtopics": [
       {
-        id: 'igcse-maths-8-1',
-        code: '8.1',
-        slug: '8.1-probability-trees-venn-conditional',
-        title: 'Probability Trees, Venn Diagrams & Conditional Probability',
-        readingMinutes: 10,
-        hasDeepContent: true,
+        "id": "igcse-maths-8-1",
+        "code": "8.1",
+        "slug": "8.1-probability-trees-venn-conditional",
+        "title": "Probability Trees, Venn Diagrams & Conditional Probability",
+        "readingMinutes": 10,
+        "hasDeepContent": true
       },
       {
-        id: 'igcse-maths-8-2',
-        code: '8.2',
-        slug: '8.2-averages-cumulative-frequency-histograms',
-        title: 'Averages, Cumulative Frequency, Box Plots & Histograms',
-        readingMinutes: 11,
-        hasDeepContent: true,
-      },
-    ],
-  },
+        "id": "igcse-maths-8-2",
+        "code": "8.2",
+        "slug": "8.2-averages-cumulative-frequency-histograms",
+        "title": "Averages, Cumulative Frequency, Box Plots & Histograms",
+        "readingMinutes": 11,
+        "hasDeepContent": true
+      }
+    ]
+  }
 ];
 
 export const IGCSE_MATHS_NOTES: Record<string, NoteLesson> = {
-  'igcse-maths-1-1': {
-    subtopicId: 'igcse-maths-1-1',
-    subtopicCode: '1.1',
-    subtopicTitle: 'Fractions, Percentages, Compound Interest & Reverse Percentages',
-    readingMinutes: 10,
-    videoTitle: 'GCSE Maths - Percentage Increase and Decrease (Multiplier Method)',
-    youtubeId: 'MTxNPBupKMo',
-    videoChannel: 'Cognito',
-    videoDuration: '7:20',
-    courseMatchSummary: '4 of 4 sections match Cambridge IGCSE Maths (0580)',
-    timestamps: [
-      { time: '0:00', seconds: 0, label: 'Intro to Percentage Increases and Decreases', cardId: 'igcse-maths-1-1-c1' },
-      { time: '1:33', seconds: 93, label: 'Method 1: Simple Calculation (Decrease Example)', cardId: 'igcse-maths-1-1-c1' },
-      { time: '4:38', seconds: 278, label: 'Multiplier Method (Increase Example 2)', cardId: 'igcse-maths-1-1-c2' },
-      { time: '6:35', seconds: 395, label: 'Multiplier Method: Increases over 100%', cardId: 'igcse-maths-1-1-c3' },
-    ],
-    cards: [
+  "igcse-maths-1-1": {
+    "subtopicId": "igcse-maths-1-1",
+    "subtopicCode": "1.1",
+    "subtopicTitle": "Fractions, Percentages, Compound Interest & Reverse Percentages",
+    "readingMinutes": 10,
+    "videoTitle": "GCSE Maths - Percentage Increase and Decrease (Multiplier Method)",
+    "youtubeId": "MTxNPBupKMo",
+    "videoChannel": "Cognito",
+    "videoDuration": "7:20",
+    "courseMatchSummary": "4 of 4 sections match Cambridge IGCSE Maths (0580)",
+    "timestamps": [
       {
-        id: 'igcse-maths-1-1-c1',
-        title: 'Fractions, Recurring Decimals & Percentage Change',
-        summary: 'Mixed-number fraction arithmetic, recurring decimals, and percentage change.',
-        bullets: [
-          'Always convert mixed numbers to improper fractions before multiplying or dividing: 2⅓ × 1¾ = (7/3) × (7/4) = 49/12 = 4 1/12. To divide, multiply by the reciprocal (Keep–Change–Flip).',
-          'Converting a recurring decimal to an exact fraction (Extended): Let x = 0.363636..., then 100x = 36.363636... Subtracting gives 99x = 36, so x = 36/99 = 4/11.',
-          'Percentage change = ((New value − Original value) ÷ Original value) × 100%. Always divide by the ORIGINAL value, never the new value!',
+        "time": "0:00",
+        "seconds": 0,
+        "label": "Fractions, Recurring Decimals & Percentage Change",
+        "cardId": "igcse-maths-1-1-c1"
+      },
+      {
+        "time": "2:45",
+        "seconds": 165,
+        "label": "Multipliers & Compound Interest",
+        "cardId": "igcse-maths-1-1-c2"
+      },
+      {
+        "time": "5:10",
+        "seconds": 310,
+        "label": "Reverse Percentages",
+        "cardId": "igcse-maths-1-1-c3"
+      }
+    ],
+    "cards": [
+      {
+        "id": "igcse-maths-1-1-c1",
+        "title": "Fractions, Recurring Decimals & Percentage Change",
+        "summary": "Convert mixed numbers to improper fractions, recurring decimals algebraically, and divide change by the original value.",
+        "bullets": [
+          "**Improper fractions first** - always turn mixed numbers into improper fractions before multiplying or dividing, and use **Keep-Change-Flip** when dividing by a fraction."
         ],
-        glossaryPills: [
+        "subsections": [
           {
-            term: 'reciprocal',
-            definition: 'The multiplicative inverse of a number or fraction obtained by swapping numerator and denominator (e.g., reciprocal of 3/4 is 4/3).',
-          },
+            "heading": "Recurring Decimals & Percentage Change",
+            "bullets": [
+              "**Recurring decimal to fraction** - let x equal the recurring decimal, multiply by a power of 10 so the repeating digits line up, then subtract to cancel the tail.",
+              "**Percentage change** - ((New value − Original value) ÷ Original value) × 100%."
+            ],
+            "exampleHeading": "Worked example: Convert 0.363636... to a fraction",
+            "examples": [
+              "Let x = 0.363636..., so 100x = 36.363636...",
+              "Subtract: 99x = 36, therefore x = 36/99 = 4/11."
+            ]
+          }
         ],
-      },
-      {
-        id: 'igcse-maths-1-1-c2',
-        title: 'Decimal Multipliers, Simple & Compound Interest',
-        summary: 'Using decimal multipliers for simple interest, compound interest, and decay.',
-        bullets: [
-          'A decimal multiplier converts a percentage change into one multiplication: +12% → ×1.12; +3.5% → ×1.035; −18% → ×0.82.',
-          'Simple interest adds the SAME fixed amount every year: I = (P × R × T) ÷ 100.',
-          'Compound interest (and exponential decay/depreciation): Final Value = P × (1 ± r/100)ⁿ, where P is principal, r is rate per period, and n is number of periods.',
-          '**Worked example:** $5,000 is invested at 4% compound interest for 3 years. Value = 5000 × (1.04)³ = $5,624.32. Total interest earned = $624.32.',
-        ],
-        glossaryPills: [
+        "glossaryPills": [
           {
-            term: 'decimal multiplier',
-            definition: 'A single decimal factor representing a percentage increase (1 + r/100) or decrease (1 − r/100).',
+            "term": "improper fraction",
+            "definition": "A fraction whose numerator is greater than or equal to its denominator."
           },
+          {
+            "term": "recurring decimal",
+            "definition": "A decimal in which one or more digits repeat infinitely after the decimal point."
+          }
         ],
-        memoryAid: 'Simple = Straight-line addition each year; Compound = Multiply by (Multiplier)^n repeatedly!',
+        "memoryAid": "Percentage change always divides by the ORIGINAL (Old) value: Change ÷ Original × 100."
       },
       {
-        id: 'igcse-maths-1-1-c3',
-        title: 'Reverse Percentages',
-        summary: 'Working backwards by dividing by the multiplier to find original prices.',
-        bullets: [
-          'Use reverse percentages when you are given the FINAL amount AFTER a percentage increase or decrease and must recover the ORIGINAL 100% value.',
-          '**Method:** Original = Final amount ÷ Decimal Multiplier.',
-          '**Worked example 1 (decrease):** A laptop costs $510 after a 15% discount. $510 represents 85% (multiplier 0.85), so Original = 510 ÷ 0.85 = $600.',
-          '**Worked example 2 (increase):** After a 12% pay rise, Ali earns $2,800/month. $2,800 represents 112% (multiplier 1.12), so Original = 2800 ÷ 1.12 = $2,500.',
+        "id": "igcse-maths-1-1-c2",
+        "title": "Decimal Multipliers & Compound Interest",
+        "summary": "Use a single multiplier raised to the power n for repeated percentage growth or decay.",
+        "bullets": [
+          "**Decimal multiplier** - for an r% increase multiply by (1 + r/100); for an r% decrease multiply by (1 − r/100)."
         ],
-        commonMistake: 'NEVER find 15% of $510 and add it back — 15% of the reduced price is smaller than 15% of the original price. Always DIVIDE by 0.85!',
+        "subsections": [
+          {
+            "heading": "Compound Interest vs Simple Interest",
+            "bullets": [
+              "**Compound interest formula** - Final amount A = P × (1 + r/100)ⁿ, where P is principal, r% is rate per period, and n is the number of periods.",
+              "**Depreciation** - uses a decay multiplier: A = P × (1 − r/100)ⁿ.",
+              "**Simple interest** - I = (P × r × t) / 100, adding the exact same fixed interest each year."
+            ],
+            "exampleHeading": "Worked example: Compound growth over 3 years",
+            "examples": [
+              "£2,000 is invested at 4% per year compound interest for 3 years.",
+              "Multiplier = 1.04 → A = 2000 × 1.04³ = £2,249.73."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "compound interest",
+            "definition": "Interest calculated on both the initial principal and the accumulated interest from previous periods."
+          }
+        ]
       },
+      {
+        "id": "igcse-maths-1-1-c3",
+        "title": "Reverse Percentages",
+        "summary": "Divide the final value by the percentage multiplier to recover the original 100% amount.",
+        "bullets": [
+          "**Recovering the original value** - when told the price AFTER an increase or decrease, write Final = Original × Multiplier, then divide by the multiplier."
+        ],
+        "subsections": [
+          {
+            "heading": "Step-by-Step Reverse Method",
+            "bullets": [
+              "**After a 20% discount** - the sale price represents 80% (multiplier 0.80), so Original = Sale price ÷ 0.80.",
+              "**After a 15% rise** - the new value represents 115% (multiplier 1.15), so Original = New value ÷ 1.15."
+            ],
+            "exampleHeading": "Worked example: Finding the pre-sale price",
+            "examples": [
+              "A jacket costs £64 in a 20% off sale, so £64 = 80% of the original price.",
+              "Original price = 64 ÷ 0.80 = £80."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "reverse percentage",
+            "definition": "Working backwards from a post-change value by dividing by its decimal multiplier to find the original 100% value."
+          }
+        ],
+        "commonMistake": "Do NOT add 20% of the sale price (£64 × 1.20 = £76.80) — the 20% discount was taken off the larger original price, not £64!"
+      }
     ],
-    keyTerms: [
-      { term: 'Decimal multiplier', definition: 'Single factor used to compute percentage increases (e.g., 1.15) or decreases (e.g., 0.85).' },
-      { term: 'Compound interest', definition: 'Interest calculated on both the initial principal and all previously accumulated interest: A = P(1 + r/100)ⁿ.' },
-      { term: 'Reverse percentage', definition: 'Finding the original 100% quantity by dividing the post-change value by its decimal multiplier.' },
+    "checklistPoints": [
+      "Convert recurring decimals like 0.3636... into exact simplified fractions",
+      "Apply A = P × (1 ± r/100)ⁿ for compound interest and depreciation",
+      "Divide by the decimal multiplier to solve reverse percentage problems"
     ],
-    checklistPoints: [
-      'Convert recurring decimals to simplified fractions algebraically.',
-      'Use A = P(1 ± r/100)ⁿ for compound interest and depreciation.',
-      'Divide by the correct decimal multiplier to solve reverse percentage questions.',
-    ],
+    "keyTerms": [
+      {
+        "term": "Improper fraction",
+        "definition": "A fraction whose numerator is greater than or equal to its denominator."
+      },
+      {
+        "term": "Recurring decimal",
+        "definition": "A decimal in which one or more digits repeat infinitely after the decimal point."
+      },
+      {
+        "term": "Compound interest",
+        "definition": "Interest calculated on both the initial principal and the accumulated interest from previous periods."
+      },
+      {
+        "term": "Reverse percentage",
+        "definition": "Working backwards from a post-change value by dividing by its decimal multiplier to find the original 100% value."
+      }
+    ]
   },
-  'igcse-maths-1-2': {
-    subtopicId: 'igcse-maths-1-2',
-    subtopicCode: '1.2',
-    subtopicTitle: 'Indices, Surds, Standard Form & Upper/Lower Bounds',
-    readingMinutes: 11,
-    videoTitle: 'GCSE Maths - What on Earth are Surds? And How do You Simplify Them? (Part 1/3)',
-    youtubeId: 'wzAotwNPhm8',
-    videoChannel: 'Cognito',
-    videoDuration: '5:37',
-    courseMatchSummary: '4 of 4 sections match Cambridge IGCSE Maths (0580)',
-    timestamps: [
-      { time: '0:00', seconds: 0, label: 'Introduction & What are Surds?', cardId: 'igcse-maths-1-2-c2' },
-      { time: '1:49', seconds: 109, label: 'Splitting Surds using Factors', cardId: 'igcse-maths-1-2-c2' },
-      { time: '2:50', seconds: 170, label: 'How to Simplify Surds', cardId: 'igcse-maths-1-2-c2' },
-      { time: '5:04', seconds: 304, label: 'Simplify sqrt(48)', cardId: 'igcse-maths-1-2-c2' },
-    ],
-    cards: [
+  "igcse-maths-1-2": {
+    "subtopicId": "igcse-maths-1-2",
+    "subtopicCode": "1.2",
+    "subtopicTitle": "Indices, Surds, Standard Form & Upper/Lower Bounds",
+    "readingMinutes": 11,
+    "videoTitle": "GCSE Maths - What on Earth are Surds? And How do You Simplify Them? (Part 1/3)",
+    "youtubeId": "wzAotwNPhm8",
+    "videoChannel": "Cognito",
+    "videoDuration": "5:37",
+    "courseMatchSummary": "4 of 4 sections match Cambridge IGCSE Maths (0580)",
+    "timestamps": [
       {
-        id: 'igcse-maths-1-2-c1',
-        title: 'Laws of Indices (Integer, Negative & Fractional)',
-        summary: 'Evaluating negative, zero, and fractional indices cleanly without a calculator.',
-        bullets: [
-          '**Core index laws:** aᵐ × aⁿ = aᵐ⁺ⁿ; aᵐ ÷ aⁿ = aᵐ⁻ⁿ; (aᵐ)ⁿ = aᵐⁿ; a⁰ = 1 (for any a ≠ 0).',
-          '**Negative index means reciprocal:** a⁻ⁿ = 1 ÷ aⁿ (and (a/b)⁻ⁿ = (b/a)ⁿ). Example: (2/3)⁻² = (3/2)² = 9/4.',
-          '**Fractional index means root then power:** a^(m/n) = (ⁿ√a)ᵐ. Always take the root FIRST to keep numbers small!',
-          '**Worked example:** Evaluate 27^(−2/3). Step 1: Cube root of 27 = 3. Step 2: Square it → 3² = 9. Step 3: Apply negative power (reciprocal) → 1/9.',
-        ],
-        memoryAid: 'Fractional powers: "Flower Power" — the denominator is the ROOT (underground), the numerator is the POWER (up top)!',
+        "time": "0:00",
+        "seconds": 0,
+        "label": "Index Laws (Negative & Fractional)",
+        "cardId": "igcse-maths-1-2-c1"
       },
       {
-        id: 'igcse-maths-1-2-c2',
-        title: 'Surds & Rationalising the Denominator',
-        summary: 'Simplifying square roots and rationalising single- and two-term denominators.',
-        bullets: [
-          'A surd is an irrational root such as √2, √3, or √5. Simplify by pulling out the LARGEST square factor: √72 = √(36 × 2) = 6√2.',
-          'Collect like surds just like algebra: 5√3 + √12 = 5√3 + 2√3 = 7√3.',
-          '**Rationalising single-term denominator:** multiply top and bottom by √b. Example: 6/√3 = (6√3)/3 = 2√3.',
-          'Rationalising binomial denominator (a + √b): multiply top and bottom by the conjugate (a − √b) using difference of two squares: 4 ÷ (3 − √5) = 4(3 + √5) ÷ (9 − 5) = 3 + √5.',
+        "time": "1:55",
+        "seconds": 115,
+        "label": "Simplifying Surds & Rationalising Denominators",
+        "cardId": "igcse-maths-1-2-c2"
+      },
+      {
+        "time": "3:50",
+        "seconds": 230,
+        "label": "Standard Form & Upper/Lower Bounds",
+        "cardId": "igcse-maths-1-2-c3"
+      }
+    ],
+    "cards": [
+      {
+        "id": "igcse-maths-1-2-c1",
+        "title": "Laws of Indices (Zero, Negative & Fractional)",
+        "summary": "Manipulate powers fluently, including reciprocals for negative powers and roots for fractional powers.",
+        "bullets": [
+          "**Core rules** - aᵐ × aⁿ = aᵐ⁺ⁿ, aᵐ ÷ aⁿ = aᵐ⁻ⁿ, (aᵐ)ⁿ = aᵐⁿ, and a⁰ = 1 (for a ≠ 0)."
         ],
-        glossaryPills: [
+        "subsections": [
           {
-            term: 'surd',
-            definition: 'An exact irrational root (such as √2 or √7) that cannot be simplified to a terminating or recurring decimal.',
+            "heading": "Negative & Fractional Indices",
+            "bullets": [
+              "**Negative index** - a⁻ⁿ = 1 / aⁿ (take the reciprocal and make the power positive).",
+              "**Fractional index** - a^(m/n) = (ⁿ√a)ᵐ — take the nth root first to keep numbers small, then raise to the power m."
+            ],
+            "exampleHeading": "Worked example: Evaluate 27^(-2/3)",
+            "examples": [
+              "Cube root first: ³√27 = 3.",
+              "Square it: 3² = 9, then apply the negative power (reciprocal) → 1/9."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "reciprocal",
+            "definition": "1 divided by a number (or a fraction flipped upside down), corresponding to raising to the power −1."
+          }
+        ],
+        "memoryAid": "Flower power for fractional indices: the bottom number is the ROOT (underground) and the top number is the POWER."
+      },
+      {
+        "id": "igcse-maths-1-2-c2",
+        "title": "Surds & Rationalising the Denominator",
+        "summary": "Simplify square roots using the largest square factor and clear surds from denominators.",
+        "bullets": [
+          "**Surd laws** - √(ab) = √a × √b and √(a/b) = √a / √b; only like surds (same number under the root) can be added or subtracted."
+        ],
+        "subsections": [
+          {
+            "heading": "Rationalising Single & Binomial Denominators",
+            "bullets": [
+              "**Single surd denominator** - multiply numerator and denominator by √b so √b × √b = b.",
+              "**Binomial denominator (a + √b)** - multiply top and bottom by the conjugate (a − √b) to use the difference of two squares: (a + √b)(a − √b) = a² − b."
+            ],
+            "exampleHeading": "Worked example: Simplify √72 and rationalise 6 / (√3 − 1)",
+            "examples": [
+              "√72 = √(36 × 2) = 6√2.",
+              "6 / (√3 − 1) × (√3 + 1)/(√3 + 1) = 6(√3 + 1) / (3 − 1) = 3√3 + 3."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "surd",
+            "definition": "An irrational root (such as √2 or √5) left in root form to keep an exact value."
           },
           {
-            term: 'conjugate',
-            definition: 'The binomial expression formed by flipping the sign between two terms (e.g., 3 + √5 is the conjugate of 3 − √5).',
-          },
-        ],
+            "term": "rationalise",
+            "definition": "Eliminating a surd from the denominator of a fraction by multiplying top and bottom by an appropriate factor or conjugate."
+          }
+        ]
       },
       {
-        id: 'igcse-maths-1-2-c3',
-        title: 'Standard Form & Upper/Lower Bounds',
-        summary: 'Calculating in standard form and finding maximum or minimum error bounds.',
-        bullets: [
-          '**Standard form** writes any number as A × 10ⁿ where 1 ≤ A < 10 and n is an integer. Example: 0.00045 = 4.5 × 10⁻⁴; (3 × 10⁵) × (4 × 10³) = 12 × 10⁸ = 1.2 × 10⁹.',
-          '**Bounds of a rounded measurement:** Add and subtract HALF of the rounding unit. If L = 8.4 cm to 1 d.p. (unit 0.1), then 8.35 ≤ L < 8.45.',
-          '**Bounds in calculations:** For maximum of a ÷ b, divide UPPER(a) by LOWER(b). For minimum of a − b, calculate LOWER(a) − UPPER(b).',
-          '**Worked example:** Distance d = 120 m (nearest 10 m → 115 to 125) and time t = 8.0 s (nearest 0.5 s → 7.75 to 8.25). Maximum speed = d_max ÷ t_min = 125 ÷ 7.75 = 16.13 m/s (2 d.p.).',
+        "id": "igcse-maths-1-2-c3",
+        "title": "Standard Form & Upper/Lower Bounds",
+        "summary": "Express very large or small numbers as A × 10ⁿ and find maximum/minimum error intervals.",
+        "bullets": [
+          "**Standard form** - written as A × 10ⁿ where 1 ≤ A < 10 and n is an integer."
         ],
-        commonMistake: 'To maximise a fraction A/B, NEVER divide Upper(A) by Upper(B) — dividing by the SMALLEST possible denominator (Lower B) gives the largest answer!',
+        "subsections": [
+          {
+            "heading": "Calculating Bounds in Expressions",
+            "bullets": [
+              "**Finding bounds** - half the rounding unit added/subtracted gives Upper Bound (UB) and Lower Bound (LB). E.g. 6.4 cm to 1 d.p. has LB = 6.35 cm, UB = 6.45 cm.",
+              "**Bounds of division (a ÷ b)** - maximum = UB(a) ÷ LB(b); minimum = LB(a) ÷ UB(b).",
+              "**Bounds of subtraction (a − b)** - maximum = UB(a) − LB(b); minimum = LB(a) − UB(b)."
+            ],
+            "exampleHeading": "Worked example: Upper bound of speed = distance ÷ time",
+            "examples": [
+              "Distance = 120 m (nearest 10 m → UB = 125 m); Time = 15 s (nearest second → LB = 14.5 s).",
+              "Maximum speed = 125 ÷ 14.5 = 8.62 m/s (3 s.f.)."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "upper bound",
+            "definition": "The smallest value that would round up to the next unit; the top end of an error interval."
+          }
+        ],
+        "commonMistake": "When finding the upper bound of a ÷ b or a − b, do NOT use UB ÷ UB or UB − UB — dividing or subtracting the LOWER bound of b makes the answer largest!"
+      }
+    ],
+    "checklistPoints": [
+      "Evaluate negative and fractional indices without a calculator",
+      "Simplify surds and rationalise both single-term and binomial denominators",
+      "Compute upper and lower bounds for quotients and differences"
+    ],
+    "keyTerms": [
+      {
+        "term": "Reciprocal",
+        "definition": "1 divided by a number (or a fraction flipped upside down), corresponding to raising to the power −1."
       },
-    ],
-    keyTerms: [
-      { term: 'Standard form', definition: 'Scientific notation A × 10ⁿ with 1 ≤ A < 10 and integer exponent n.' },
-      { term: 'Surd', definition: 'Irrational root expressed exactly using a square-root symbol.' },
-      { term: 'Upper and lower bounds', definition: 'Maximum and minimum possible true values of a rounded measurement (± half the degree of accuracy).' },
-    ],
-    checklistPoints: [
-      'Evaluate negative and fractional indices without a calculator.',
-      'Simplify surds and rationalise both single-term and two-term denominators.',
-      'Compute in standard form and find upper/lower bounds for sums, differences, products, and quotients.',
-    ],
+      {
+        "term": "Surd",
+        "definition": "An irrational root (such as √2 or √5) left in root form to keep an exact value."
+      },
+      {
+        "term": "Rationalise",
+        "definition": "Eliminating a surd from the denominator of a fraction by multiplying top and bottom by an appropriate factor or conjugate."
+      },
+      {
+        "term": "Upper bound",
+        "definition": "The smallest value that would round up to the next unit; the top end of an error interval."
+      },
+      {
+        "term": "Upper & Lower Bounds",
+        "definition": "The maximum and minimum values a rounded measurement could take (± half the rounding unit)."
+      }
+    ]
   },
-  'igcse-maths-1-3': {
-    subtopicId: 'igcse-maths-1-3',
-    subtopicCode: '1.3',
-    subtopicTitle: 'Ratio, Direct Proportion & Inverse Proportion',
-    readingMinutes: 9,
-    videoTitle: 'GCSE Maths - What Does Inversely Proportional Mean?',
-    youtubeId: 'OCZSFmHnNI4',
-    videoChannel: 'Cognito',
-    videoDuration: '4:34',
-    courseMatchSummary: '4 of 4 sections match Cambridge IGCSE Maths (0580)',
-    timestamps: [
-      { time: '0:00', seconds: 0, label: 'Intro & Example', cardId: 'igcse-maths-1-3-c1' },
-      { time: '1:05', seconds: 65, label: 'Graphical Representation', cardId: 'igcse-maths-1-3-c3' },
-      { time: '2:13', seconds: 133, label: 'The Equation (Constant of Proportionality)', cardId: 'igcse-maths-1-3-c2' },
-      { time: '3:29', seconds: 209, label: 'Summary', cardId: 'igcse-maths-1-3-c3' },
-    ],
-    cards: [
+  "igcse-maths-1-3": {
+    "subtopicId": "igcse-maths-1-3",
+    "subtopicCode": "1.3",
+    "subtopicTitle": "Ratio, Direct Proportion & Inverse Proportion",
+    "readingMinutes": 9,
+    "videoTitle": "GCSE Maths - What Does Inversely Proportional Mean?",
+    "youtubeId": "OCZSFmHnNI4",
+    "videoChannel": "Cognito",
+    "videoDuration": "4:34",
+    "courseMatchSummary": "4 of 4 sections match Cambridge IGCSE Maths (0580)",
+    "timestamps": [
       {
-        id: 'igcse-maths-1-3-c1',
-        title: 'Ratio Sharing & Combining Ratios',
-        summary: 'Sharing amounts in ratios, difference problems, and combining three-part ratios.',
-        bullets: [
-          '**Sharing in a ratio:** Sum the ratio parts, find the value of 1 part, then multiply. Example: Share $450 in ratio 2 : 3 : 4 → 9 parts = $450 → 1 part = $50 → $100, $150, $200.',
-          '**Difference ratio problems:** If Mia and Leo share money in ratio 3 : 7 and Leo gets $60 more than Mia, the difference of 4 parts = $60 → 1 part = $15 → total 10 parts = $150.',
-          '**Combining two ratios A :** B = 2 : 3 and B : C = 4 : 5: Make the shared letter B equal (LCM of 3 and 4 is 12) → A : B = 8 : 12 and B : C = 12 : 15 → A : B : C = 8 : 12 : 15.',
-        ],
+        "time": "0:00",
+        "seconds": 0,
+        "label": "Sharing & Combining Ratios",
+        "cardId": "igcse-maths-1-3-c1"
       },
       {
-        id: 'igcse-maths-1-3-c2',
-        title: 'Direct Proportion (Algebraic Form)',
-        summary: 'Setting up and solving algebraic direct proportion formulas with k.',
-        bullets: [
-          'If y is directly proportional to x (written y ∝ x), then y = kx where k is the constant of proportionality (graph is a straight line through the origin).',
-          '**Direct proportion** also extends to powers and roots: y ∝ x² → y = kx²; y ∝ √x → y = k√x.',
-          '**4-step method:** (1) Write equation with k, (2) Substitute known pair (x, y) to solve for k, (3) Rewrite formula with numerical k, (4) Substitute new value to find the unknown.',
-          '**Worked example:** y ∝ x² and y = 45 when x = 3. Then 45 = k(3²) = 9k → k = 5, so y = 5x². When x = 4, y = 5 × 16 = 80.',
+        "time": "1:30",
+        "seconds": 90,
+        "label": "Direct Proportion Equations (y = kxⁿ)",
+        "cardId": "igcse-maths-1-3-c2"
+      },
+      {
+        "time": "3:00",
+        "seconds": 180,
+        "label": "Inverse Proportion Equations (y = k / xⁿ)",
+        "cardId": "igcse-maths-1-3-c3"
+      }
+    ],
+    "cards": [
+      {
+        "id": "igcse-maths-1-3-c1",
+        "title": "Ratios, Sharing & Combining Two Ratios",
+        "summary": "Find the value of 1 part using totals or differences, and link overlapping ratios with a common multiple.",
+        "bullets": [
+          "**Sharing in a ratio** - add the ratio parts, divide the total by the sum of parts to find 1 part, then multiply."
         ],
-        glossaryPills: [
+        "subsections": [
           {
-            term: 'constant of proportionality',
-            definition: 'Fixed non-zero number k linking two proportional variables in y = kx or y = k/x.',
-          },
+            "heading": "Difference Problems & Linking Ratios",
+            "bullets": [
+              "**Difference given** - if A:B = 3:7 and B receives £24 more than A, then (7 − 3) = 4 parts = £24, so 1 part = £6.",
+              "**Combining A:B and B:C** - scale both ratios so the shared term B equals the LCM of its two values."
+            ],
+            "exampleHeading": "Worked example: Combine A:B = 2:3 and B:C = 4:5",
+            "examples": [
+              "LCM of 3 and 4 is 12: multiply A:B by 4 → 8:12, multiply B:C by 3 → 12:15.",
+              "Combined ratio A:B:C = 8 : 12 : 15."
+            ]
+          }
         ],
+        "glossaryPills": [
+          {
+            "term": "ratio",
+            "definition": "A comparison of two or more quantities in the same units showing their relative sizes."
+          }
+        ]
       },
       {
-        id: 'igcse-maths-1-3-c3',
-        title: 'Inverse Proportion',
-        summary: 'Solving inverse and inverse-square proportion problems step by step.',
-        bullets: [
-          'If y is inversely proportional to x (y ∝ 1/x), then y = k ÷ x (so x × y = k is constant). As x doubles, y halves; the graph is a smooth hyperbola approaching both axes.',
-          'Inverse square law (common in physics & Extended maths): y ∝ 1/x² → y = k ÷ x².',
-          '**Worked example:** 6 workers build a wall in 10 hours. Since workers × hours = constant, k = 6 × 10 = 60 worker-hours. For 15 workers, time = 60 ÷ 15 = 4 hours.',
+        "id": "igcse-maths-1-3-c2",
+        "title": "Direct Proportion (Linear, Square & Root)",
+        "summary": "Write y = kxⁿ, substitute a known pair to find the constant k, then solve for the unknown.",
+        "bullets": [
+          "**Direct proportion** - if y ∝ x, then y = kx; if y ∝ x², then y = kx²; if y ∝ √x, then y = k√x."
         ],
-        commonMistake: 'Read carefully whether y is proportional to x, x², x³, or √x — writing y = kx when the question states "proportional to the square of x" loses almost all method marks!',
+        "subsections": [
+          {
+            "heading": "Three-Step Algebraic Method",
+            "bullets": [
+              "**Step 1** - translate the sentence into an equation containing k (the constant of proportionality).",
+              "**Step 2** - substitute the given (x, y) pair to calculate k.",
+              "**Step 3** - rewrite the completed formula and substitute the new value."
+            ],
+            "exampleHeading": "Worked example: y is directly proportional to x²",
+            "examples": [
+              "Given y = 45 when x = 3: 45 = k × 3² → 9k = 45 → k = 5, so y = 5x².",
+              "When x = 4: y = 5 × 4² = 80."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "direct proportion",
+            "definition": "A relationship y = kxⁿ where multiplying x multiplies y by the corresponding power of that factor, passing through the origin."
+          },
+          {
+            "term": "constant of proportionality",
+            "definition": "The fixed non-zero constant k linking two proportional variables."
+          }
+        ],
+        "memoryAid": "Direct = MULTIPLY by k (y = kxⁿ); Inverse = DIVIDE by xⁿ (y = k / xⁿ)."
       },
+      {
+        "id": "igcse-maths-1-3-c3",
+        "title": "Inverse Proportion & Graph Shapes",
+        "summary": "In inverse proportion, as one variable increases the other decreases so their product remains constant.",
+        "bullets": [
+          "**Inverse proportion** - y ∝ 1/x means y = k/x (so xy = k); y ∝ 1/x² means y = k/x²."
+        ],
+        "subsections": [
+          {
+            "heading": "Graphs & Real-World Inverse Problems",
+            "bullets": [
+              "**Graph of y = k/x** - a smooth reciprocal curve in the first quadrant approaching both axes as asymptotes without ever touching them.",
+              "**Workers & time** - if 6 workers take 10 days (60 worker-days), then 15 workers take 60 ÷ 15 = 4 days."
+            ],
+            "exampleHeading": "Worked example: y is inversely proportional to √x",
+            "examples": [
+              "Given y = 4 when x = 9: 4 = k / √9 = k / 3 → k = 12, so y = 12 / √x.",
+              "When x = 16: y = 12 / √16 = 12 / 4 = 3."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "inverse proportion",
+            "definition": "A relationship y = k/xⁿ where increasing one quantity causes the other to decrease in the corresponding ratio."
+          }
+        ],
+        "commonMistake": "Do NOT assume doubling x doubles y when y ∝ x² — doubling x multiplies y by 2² = 4!"
+      }
     ],
-    keyTerms: [
-      { term: 'Direct proportion', definition: 'Relationship where y/x = k is constant (y = kx); graph is a straight line through (0, 0).' },
-      { term: 'Inverse proportion', definition: 'Relationship where x × y = k is constant (y = k/x); doubling x halves y.' },
+    "checklistPoints": [
+      "Link overlapping ratios like A:B and B:C using the lowest common multiple",
+      "Set up and solve direct proportion equations including x² and √x",
+      "Set up and solve inverse proportion equations and recognise reciprocal graphs"
     ],
-    checklistPoints: [
-      'Solve ratio sharing, ratio difference, and combined three-part ratio problems.',
-      'Set up and solve direct proportion formulas (y = kx, kx², k√x) and inverse proportion formulas (y = k/x, k/x²).',
-      'Recognise the shapes of direct (line through origin) and inverse (reciprocal curve) graphs.',
-    ],
+    "keyTerms": [
+      {
+        "term": "Ratio",
+        "definition": "A comparison of two or more quantities in the same units showing their relative sizes."
+      },
+      {
+        "term": "Direct proportion",
+        "definition": "A relationship y = kxⁿ where multiplying x multiplies y by the corresponding power of that factor, passing through the origin."
+      },
+      {
+        "term": "Constant of proportionality",
+        "definition": "The fixed non-zero constant k linking two proportional variables."
+      },
+      {
+        "term": "Inverse proportion",
+        "definition": "A relationship y = k/xⁿ where increasing one quantity causes the other to decrease in the corresponding ratio."
+      }
+    ]
   },
-  'igcse-maths-2-1': {
-    subtopicId: 'igcse-maths-2-1',
-    subtopicCode: '2.1',
-    subtopicTitle: 'Expanding, Factorising & Solving Quadratic Equations',
-    readingMinutes: 11,
-    videoTitle: 'GCSE Maths - Solving Quadratics Using the Quadratic Formula',
-    youtubeId: 'maejPmUzqpM',
-    videoChannel: 'Cognito',
-    videoDuration: '5:26',
-    courseMatchSummary: '4 of 4 sections match Cambridge IGCSE Maths (0580)',
-    timestamps: [
-      { time: '0:00', seconds: 0, label: 'Intro: The Quadratic Formula', cardId: 'igcse-maths-2-1-c2' },
-      { time: '1:00', seconds: 60, label: 'Example 1: Calculation Steps', cardId: 'igcse-maths-2-1-c2' },
-      { time: '3:26', seconds: 206, label: 'Example 2: Problem', cardId: 'igcse-maths-2-1-c2' },
-      { time: '4:45', seconds: 285, label: 'Example 2: Final Rounded Answers', cardId: 'igcse-maths-2-1-c2' },
-    ],
-    cards: [
+  "igcse-maths-2-1": {
+    "subtopicId": "igcse-maths-2-1",
+    "subtopicCode": "2.1",
+    "subtopicTitle": "Expanding, Factorising & Solving Quadratic Equations",
+    "readingMinutes": 11,
+    "videoTitle": "GCSE Maths - Solving Quadratics Using the Quadratic Formula",
+    "youtubeId": "maejPmUzqpM",
+    "videoChannel": "Cognito",
+    "videoDuration": "5:26",
+    "courseMatchSummary": "4 of 4 sections match Cambridge IGCSE Maths (0580)",
+    "timestamps": [
       {
-        id: 'igcse-maths-2-1-c1',
-        title: 'Expanding Brackets & Factorising Quadratics',
-        summary: 'Factorising monic, non-monic, and difference-of-two-squares quadratics.',
-        bullets: [
-          'Always rearrange a quadratic equation into **standard form** ax² + bx + c = 0 before solving.',
-          '**Difference of two squares:** **a² − b² = (a + b)(a − b)**. Example: 9x² − 16 = (3x + 4)(3x − 4).',
-          'Factorising when a = 1 (x² + bx + c): find two integers multiplying to c and adding to b. Example: x² − 5x − 14 = (x − 7)(x + 2) = 0 → x = 7 or x = −2.',
-          'Factorising when a ≠ 1 (AC method): For 2x² + 7x + 3, find two numbers multiplying to ac = 6 and adding to 7 (6 and 1). Split middle term: 2x² + 6x + x + 3 = 2x(x + 3) + 1(x + 3) = (2x + 1)(x + 3).',
-        ],
+        "time": "0:00",
+        "seconds": 0,
+        "label": "Expanding & Factorising Quadratics",
+        "cardId": "igcse-maths-2-1-c1"
       },
       {
-        id: 'igcse-maths-2-1-c2',
-        title: 'The Quadratic Formula',
-        summary: 'Solving non-factorisable quadratics with the formula and discriminant.',
-        bullets: [
-          'When a question says "give your answers to 2 decimal places" or "3 significant figures", use the Quadratic Formula: **x = (−b ± √(b² − 4ac)) ÷ (2a)**.',
-          '**Worked example:** Solve 3x² − 5x − 4 = 0. Here a = 3, b = −5, c = −4. Discriminant b² − 4ac = (−5)² − 4(3)(−4) = 25 + 48 = 73.',
-          'Thus x = (5 ± √73) ÷ 6 → x = 2.26 or x = −0.59 (2 d.p.).',
-          'The discriminant Δ = b² − 4ac tells you the number of real roots: Δ > 0 gives 2 distinct roots; Δ = 0 gives 1 repeated root; Δ < 0 gives no real roots.',
+        "time": "1:50",
+        "seconds": 110,
+        "label": "The Quadratic Formula & Discriminant",
+        "cardId": "igcse-maths-2-1-c2"
+      },
+      {
+        "time": "3:45",
+        "seconds": 225,
+        "label": "Completing the Square & Turning Points",
+        "cardId": "igcse-maths-2-1-c3"
+      }
+    ],
+    "cards": [
+      {
+        "id": "igcse-maths-2-1-c1",
+        "title": "Expanding Brackets & Factorising Quadratics",
+        "summary": "Factorise x² + bx + c, ax² + bx + c, and the difference of two squares to solve ax² + bx + c = 0.",
+        "bullets": [
+          "**Difference of two squares** - a² − b² = (a + b)(a − b), e.g. 9x² − 16 = (3x + 4)(3x − 4)."
         ],
-        glossaryPills: [
+        "subsections": [
           {
-            term: 'discriminant',
-            definition: 'The expression b² − 4ac inside the square root of the quadratic formula that determines how many real solutions exist.',
-          },
+            "heading": "Factorising When a > 1 (Splitting the Middle Term)",
+            "bullets": [
+              "**AC method** - for ax² + bx + c, find two numbers multiplying to a × c and adding to b, split bx, and factorise in pairs.",
+              "**Zero-product rule** - rearrange to \"= 0\" first, then set each factor equal to 0."
+            ],
+            "exampleHeading": "Worked example: Solve 2x² + 5x − 3 = 0",
+            "examples": [
+              "Multiply a × c = 2 × (−3) = −6; numbers adding to +5 are +6 and −1.",
+              "2x² + 6x − x − 3 = 2x(x + 3) − 1(x + 3) = (2x − 1)(x + 3) = 0 → x = 0.5 or x = −3."
+            ]
+          }
         ],
-        commonMistake: 'When b is negative (e.g., b = −5), write (−5)² = +25 in brackets on your calculator — typing −5² gives −25 and ruins the entire solution!',
+        "glossaryPills": [
+          {
+            "term": "quadratic equation",
+            "definition": "A polynomial equation of degree 2 in the form ax² + bx + c = 0 where a ≠ 0."
+          }
+        ],
+        "diagram": "quadratic-graph"
       },
       {
-        id: 'igcse-maths-2-1-c3',
-        title: 'Completing the Square & Vertex (Turning Point)',
-        summary: 'Completing the square to solve exactly and locate parabola vertices.',
-        bullets: [
-          'To write x² + bx + c in completed-square form (x + p)² + q: halve the coefficient of x so p = b/2, then subtract p² and add c.',
-          '**Worked example:** x² − 6x + 11 = (x − 3)² − 9 + 11 = (x − 3)² + 2.',
-          '**Turning point** (minimum vertex) of y = (x + p)² + q occurs when the squared bracket equals 0, giving coordinates (−p, q). For y = (x − 3)² + 2, the minimum point is (3, 2)!',
-          '**Solving by completing the square:** (x − 3)² − 5 = 0 → (x − 3)² = 5 → x = 3 ± √5.',
+        "id": "igcse-maths-2-1-c2",
+        "title": "The Quadratic Formula & Algebraic Fractions",
+        "summary": "Use the quadratic formula whenever the question asks for decimal places or significant figures.",
+        "bullets": [
+          "**Quadratic formula** - for ax² + bx + c = 0, x = (−b ± √(b² − 4ac)) / (2a)."
         ],
-        memoryAid: 'To find the turning point from (x + p)² + q: FLIP the sign inside the bracket, KEEP the sign outside → (−p, q).',
+        "subsections": [
+          {
+            "heading": "Discriminant & Clearing Denominators",
+            "bullets": [
+              "**Discriminant b² − 4ac** - > 0 gives 2 distinct real roots, = 0 gives 1 repeated root, < 0 gives no real roots.",
+              "**Algebraic fractions** - multiply every term by the common denominator to produce a standard quadratic equal to 0."
+            ],
+            "exampleHeading": "Worked example: Solve 3x² − 5x − 1 = 0 to 2 d.p.",
+            "examples": [
+              "a = 3, b = −5, c = −1 → b² − 4ac = (−5)² − 4(3)(−1) = 25 + 12 = 37.",
+              "x = (5 ± √37) / 6 → x = 1.85 or x = −0.18 (2 d.p.)."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "discriminant",
+            "definition": "The expression b² − 4ac inside the square root of the quadratic formula, which determines the number of real roots."
+          }
+        ],
+        "commonMistake": "When b is negative (e.g. b = −5), write (−5)² = +25 with brackets on your calculator — typing −5² gives −25!"
       },
+      {
+        "id": "igcse-maths-2-1-c3",
+        "title": "Completing the Square & Turning Points",
+        "summary": "Rewrite x² + bx + c as (x + p)² + q to read off the minimum turning point directly.",
+        "bullets": [
+          "**Completing the square** - halve the coefficient of x to get p = b/2, then subtract p²: x² + bx + c = (x + b/2)² − (b/2)² + c."
+        ],
+        "subsections": [
+          {
+            "heading": "Reading the Turning Point (Vertex)",
+            "bullets": [
+              "**Vertex coordinates** - for y = (x + p)² + q, the minimum turning point is (−p, q) because (x + p)² ≥ 0 reaches its minimum 0 when x = −p.",
+              "**Line of symmetry** - vertical line x = −p."
+            ],
+            "exampleHeading": "Worked example: Vertex of y = x² − 6x + 11",
+            "examples": [
+              "Half of −6 is −3: y = (x − 3)² − (−3)² + 11 = (x − 3)² + 2.",
+              "Minimum turning point is (3, 2) and line of symmetry is x = 3."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "turning point",
+            "definition": "The vertex of a parabola where the gradient is zero and the curve changes from decreasing to increasing (or vice versa)."
+          }
+        ],
+        "memoryAid": "Inside the bracket, FLIP the sign; outside the bracket, KEEP the sign: (x + p)² + q has vertex (−p, q)."
+      }
     ],
-    keyTerms: [
-      { term: 'Quadratic equation', definition: 'Equation of degree 2 written in standard form ax² + bx + c = 0 (a ≠ 0).' },
-      { term: 'Difference of two squares', definition: 'Algebraic identity a² − b² = (a + b)(a − b).' },
-      { term: 'Completing the square', definition: 'Rewriting x² + bx + c as (x + p)² + q to solve exactly or locate the parabola’s turning point (−p, q).' },
+    "checklistPoints": [
+      "Factorise quadratics with a = 1, a > 1, and difference of two squares",
+      "Apply the quadratic formula accurately with negative coefficients",
+      "Complete the square to solve equations and identify the turning point (−p, q)"
     ],
-    checklistPoints: [
-      'Factorise quadratics with a = 1, a > 1, and difference of two squares.',
-      'Apply the quadratic formula accurately with negative coefficients using brackets.',
-      'Complete the square to solve equations and read off the minimum/maximum turning point.',
-    ],
+    "keyTerms": [
+      {
+        "term": "Quadratic equation",
+        "definition": "A polynomial equation of degree 2 in the form ax² + bx + c = 0 where a ≠ 0."
+      },
+      {
+        "term": "Discriminant",
+        "definition": "The expression b² − 4ac inside the square root of the quadratic formula, which determines the number of real roots."
+      },
+      {
+        "term": "Turning point",
+        "definition": "The vertex of a parabola where the gradient is zero and the curve changes from decreasing to increasing (or vice versa)."
+      },
+      {
+        "term": "Completing the Square",
+        "definition": "Rewriting x² + bx + c as (x + p)² + q to locate the turning point (−p, q) directly."
+      }
+    ]
   },
-  'igcse-maths-2-2': {
-    subtopicId: 'igcse-maths-2-2',
-    subtopicCode: '2.2',
-    subtopicTitle: 'Simultaneous Equations (Linear & Quadratic) & Inequalities',
-    readingMinutes: 10,
-    videoTitle: 'GCSE Maths - How to Solve Simultaneous Equations - Using the Elimination Technique',
-    youtubeId: '68hMhae269k',
-    videoChannel: 'Cognito',
-    videoDuration: '8:21',
-    courseMatchSummary: '4 of 4 sections match Cambridge IGCSE Maths (0580)',
-    timestamps: [
-      { time: '0:00', seconds: 0, label: 'Intro to Solving Simultaneous Equations', cardId: 'igcse-maths-2-2-c1' },
-      { time: '3:55', seconds: 235, label: 'Example 2 (More Complex)', cardId: 'igcse-maths-2-2-c1' },
-      { time: '5:06', seconds: 306, label: 'Step 2: Make Coefficients the Same', cardId: 'igcse-maths-2-2-c1' },
-      { time: '7:05', seconds: 425, label: 'Step 6: Check the Solution', cardId: 'igcse-maths-2-2-c1' },
+  "igcse-maths-2-2": {
+    "subtopicId": "igcse-maths-2-2",
+    "subtopicCode": "2.2",
+    "subtopicTitle": "Simultaneous Equations (Linear & Quadratic) & Inequalities",
+    "readingMinutes": 10,
+    "videoTitle": "GCSE Maths - How to Solve Simultaneous Equations - Using the Elimination Technique",
+    "youtubeId": "68hMhae269k",
+    "videoChannel": "Cognito",
+    "videoDuration": "8:21",
+    "courseMatchSummary": "4 of 4 sections match Cambridge IGCSE Maths (0580)",
+    "timestamps": [
+      {
+        "time": "0:00",
+        "seconds": 0,
+        "label": "Linear Simultaneous Equations (Elimination)",
+        "cardId": "igcse-maths-2-2-c1"
+      },
+      {
+        "time": "3:15",
+        "seconds": 195,
+        "label": "Linear & Quadratic Simultaneous Equations",
+        "cardId": "igcse-maths-2-2-c2"
+      },
+      {
+        "time": "6:00",
+        "seconds": 360,
+        "label": "Linear & Quadratic Inequalities & Regions",
+        "cardId": "igcse-maths-2-2-c3"
+      }
     ],
-    cards: [
+    "cards": [
       {
-        id: 'igcse-maths-2-2-c1',
-        title: 'Linear Simultaneous Equations (Elimination)',
-        summary: 'Solving linear simultaneous equations using the SSS elimination rule.',
-        bullets: [
-          'Match the coefficients of either x or y by multiplying one or both equations, then eliminate that variable using SSS (Same Signs Subtract, Different Signs Add).',
-          '**Worked example:** Solve 3x + 2y = 16 and 5x − y = 18. Multiply the second equation by 2 → 10x − 2y = 36.',
-          'Since +2y and −2y have different signs, ADD the equations: 13x = 52 → x = 4. Substitute into 3(4) + 2y = 16 → 2y = 4 → y = 2.',
-          'Always verify by substituting BOTH x = 4 and y = 2 back into the unused equation: 5(4) − 2 = 18 ✓.',
+        "id": "igcse-maths-2-2-c1",
+        "title": "Linear Simultaneous Equations",
+        "summary": "Match coefficients to eliminate one variable, or substitute an isolated variable into the second equation.",
+        "bullets": [
+          "**Same Sign Subtract, Different Sign Add (SSS / DSA)** - once coefficients of x or y match in magnitude, subtract if signs match or add if signs differ."
         ],
-        memoryAid: 'SSS = Same Signs Subtract; Different Signs Add!',
-      },
-      {
-        id: 'igcse-maths-2-2-c2',
-        title: 'Non-Linear Simultaneous Equations (Substitution)',
-        summary: 'Substituting a linear equation into a quadratic or circle equation.',
-        bullets: [
-          'When one equation is linear and the other is quadratic (e.g., y = x + 1 and x² + y² = 25), ALWAYS use SUBSTITUTION.',
-          '**Step 1:** Isolate one variable in the linear equation (y = x + 1). Step 2: Substitute into the quadratic: x² + (x + 1)² = 25 → 2x² + 2x − 24 = 0 → x² + x − 12 = 0.',
-          '**Step 3:** Factorise: (x + 4)(x − 3) = 0 → x = −4 or x = 3. Step 4: Find the matching y for EACH x using the linear equation: (−4, −3) and (3, 4).',
-          'Geometrically, these two coordinate pairs are the exact intersection points of the straight line and the circle!',
-        ],
-        commonMistake: 'Never leave x and y unpaired — write each solution clearly as matched pairs: x = −4, y = −3 and x = 3, y = 4.',
-      },
-      {
-        id: 'igcse-maths-2-2-c3',
-        title: 'Linear, Quadratic & Graphical Inequalities',
-        summary: 'Solving linear and quadratic inequalities and shading feasible regions.',
-        bullets: [
-          'Solve linear inequalities just like equations, EXCEPT multiplying or dividing both sides by a NEGATIVE number FLIPS the inequality sign (e.g., −2x < 10 → x > −5).',
-          '**Quadratic inequalities:** Solve the equality first, then SKETCH the parabola! For x² − 5x + 6 < 0, roots are 2 and 3; the U-shaped parabola is below zero BETWEEN the roots → 2 < x < 3. For x² − 5x + 6 > 0, it is above zero OUTSIDE the roots → x < 2 or x > 3.',
-          '**Graphical inequalities (linear programming):** Draw solid lines for ≤ / ≥ and dashed lines for < / >. Test a point (like (0, 0)) to identify the unwanted side to shade.',
-        ],
-        glossaryPills: [
+        "subsections": [
           {
-            term: 'inequality',
-            definition: 'A mathematical statement comparing two expressions with <, >, ≤, or ≥ rather than equals.',
-          },
+            "heading": "Elimination & Graphical Meaning",
+            "bullets": [
+              "**Elimination steps** - scale equations to match one coefficient, eliminate, solve, then substitute back to find the second unknown.",
+              "**Graphical meaning** - the solution (x, y) is the exact point of intersection of the two straight lines."
+            ],
+            "exampleHeading": "Worked example: Solve 3x + 2y = 16 and 5x − 2y = 8",
+            "examples": [
+              "Signs on 2y are different (+2y and −2y), so ADD: 8x = 24 → x = 3.",
+              "Substitute into 3(3) + 2y = 16 → 2y = 7 → y = 3.5."
+            ]
+          }
         ],
+        "glossaryPills": [
+          {
+            "term": "simultaneous equations",
+            "definition": "A system of equations that must all be satisfied at the same time by the same values of the unknowns."
+          }
+        ],
+        "memoryAid": "SSS (Same Sign Subtract) and DSA (Different Sign Add) eliminates variables cleanly without sign slips!"
       },
+      {
+        "id": "igcse-maths-2-2-c2",
+        "title": "One Linear & One Quadratic Simultaneous Equation",
+        "summary": "Always use substitution from the linear equation into the quadratic to obtain two (x, y) coordinate pairs.",
+        "bullets": [
+          "**Substitution method** - make y (or x) the subject of the linear equation and substitute it into the quadratic equation."
+        ],
+        "subsections": [
+          {
+            "heading": "Pairing Both Solutions Clearly",
+            "bullets": [
+              "**Rearrange to = 0** - expand carefully, collect like terms, and solve the resulting quadratic for two values.",
+              "**Pair each x with its own y** - substitute each x back into the LINEAR equation so you clearly list two pairs (x₁, y₁) and (x₂, y₂)."
+            ],
+            "exampleHeading": "Worked example: Solve y = x + 1 and x² + y² = 13",
+            "examples": [
+              "Substitute y = x + 1: x² + (x + 1)² = 13 → 2x² + 2x − 12 = 0 → x² + x − 6 = 0.",
+              "(x + 3)(x − 2) = 0 → x = −3 (y = −2) or x = 2 (y = 3)."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "substitution",
+            "definition": "Replacing one variable in an equation with an equivalent expression derived from another equation."
+          }
+        ]
+      },
+      {
+        "id": "igcse-maths-2-2-c3",
+        "title": "Linear & Quadratic Inequalities and Graphical Regions",
+        "summary": "Flip the inequality sign when multiplying or dividing by a negative, and sketch parabolas for quadratic inequalities.",
+        "bullets": [
+          "**Negative rule** - multiplying or dividing both sides of an inequality by a negative number REVERSES the inequality sign."
+        ],
+        "subsections": [
+          {
+            "heading": "Quadratic Inequalities & Shaded Regions",
+            "bullets": [
+              "**Quadratic inequalities** - find the critical roots of ax² + bx + c = 0, sketch the U-shaped parabola: below the x-axis (< 0) gives one interval r₁ < x < r₂; above (> 0) gives two tails x < r₁ or x > r₂.",
+              "**Graphical regions** - draw solid lines for ≤ or ≥, dashed lines for < or >, and test a point like (0, 0) to identify which side satisfies the inequality."
+            ],
+            "exampleHeading": "Worked example: Solve x² − 5x + 6 < 0",
+            "examples": [
+              "Critical values from (x − 2)(x − 3) = 0 are x = 2 and x = 3.",
+              "The U-curve lies below the x-axis between the roots: 2 < x < 3."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "inequality",
+            "definition": "A mathematical statement comparing two expressions using <, >, ≤, or ≥ rather than equals."
+          }
+        ],
+        "commonMistake": "For x² − 5x + 6 > 0, never write 2 > x > 3 — write two separate inequalities: x < 2 or x > 3."
+      }
     ],
-    keyTerms: [
-      { term: 'Elimination method', definition: 'Adding or subtracting multiples of linear simultaneous equations to cancel one unknown.' },
-      { term: 'Substitution method', definition: 'Expressing one variable from a linear equation and inserting it into a second (often quadratic) equation.' },
+    "checklistPoints": [
+      "Solve linear simultaneous equations by elimination and check in both equations",
+      "Substitute a linear equation into a quadratic or circle equation to get two paired solutions",
+      "Solve quadratic inequalities using a parabola sketch and shade graphical regions accurately"
     ],
-    checklistPoints: [
-      'Solve linear simultaneous equations accurately and verify both values.',
-      'Solve linear-quadratic simultaneous equations by substitution and pair (x, y) solutions clearly.',
-      'Flip the inequality sign when dividing by a negative and sketch parabolas for quadratic inequalities.',
-    ],
+    "keyTerms": [
+      {
+        "term": "Simultaneous equations",
+        "definition": "A system of equations that must all be satisfied at the same time by the same values of the unknowns."
+      },
+      {
+        "term": "Substitution",
+        "definition": "Replacing one variable in an equation with an equivalent expression derived from another equation."
+      },
+      {
+        "term": "Inequality",
+        "definition": "A mathematical statement comparing two expressions using <, >, ≤, or ≥ rather than equals."
+      },
+      {
+        "term": "Linear Simultaneous Equations",
+        "definition": "Match coefficients to eliminate one variable, or substitute an isolated variable into the second equation."
+      }
+    ]
   },
-  'igcse-maths-2-3': {
-    subtopicId: 'igcse-maths-2-3',
-    subtopicCode: '2.3',
-    subtopicTitle: 'Sequences, Functions (Composite/Inverse) & Differentiation',
-    readingMinutes: 11,
-    videoTitle: 'Sequences & Series in 23 minutes - A-Level Pure Year 2',
-    youtubeId: '5G7VKXarees',
-    videoChannel: 'Bicen Maths',
-    videoDuration: '23:02',
-    courseMatchSummary: '4 of 4 sections match Cambridge IGCSE Maths (0580)',
-    timestamps: [
-      { time: '0:00', seconds: 0, label: 'Arithmetic Sequences & Sum Formula (Sn)', cardId: 'igcse-maths-2-3-c1' },
-      { time: '6:00', seconds: 360, label: 'Geometric Sequences & Sum to Infinity', cardId: 'igcse-maths-2-3-c1' },
-      { time: '12:40', seconds: 760, label: 'Sigma Notation & Recurrence Relations', cardId: 'igcse-maths-2-3-c1' },
-      { time: '18:20', seconds: 1100, label: 'Modelling with Sequences', cardId: 'igcse-maths-2-3-c2' },
-    ],
-    cards: [
+  "igcse-maths-2-3": {
+    "subtopicId": "igcse-maths-2-3",
+    "subtopicCode": "2.3",
+    "subtopicTitle": "Sequences, Functions (Composite/Inverse) & Differentiation",
+    "readingMinutes": 11,
+    "videoTitle": "Sequences & Series in 23 minutes - A-Level Pure Year 2",
+    "youtubeId": "5G7VKXarees",
+    "videoChannel": "Bicen Maths",
+    "videoDuration": "23:02",
+    "courseMatchSummary": "4 of 4 sections match Cambridge IGCSE Maths (0580)",
+    "timestamps": [
       {
-        id: 'igcse-maths-2-3-c1',
-        title: 'Arithmetic, Geometric & Quadratic Sequences',
-        summary: 'Deriving nth term rules for arithmetic, geometric, and quadratic sequences.',
-        bullets: [
-          'Linear (arithmetic) sequence with common difference d: nth term = dn + (first term − d). Example: 5, 9, 13, 17... has d = 4 → uₙ = 4n + 1.',
-          'Quadratic sequence (constant SECOND difference 2a): Halve the second difference to get a (coefficient of n²), subtract an² from each term, then find the linear rule for the remainder!',
-          '**Worked example:** 4, 9, 16, 25... (or 5, 11, 21, 35...): 1st diffs = 6, 10, 14; 2nd diff = 4 → a = 4/2 = 2, so start with 2n² (2, 8, 18, 32). Remainder = 3, 3, 3, 3 → uₙ = 2n² + 3.',
-          '**Geometric sequence (constant multiplier r):** uₙ = a × rⁿ⁻¹. Example: 3, 6, 12, 24... has uₙ = 3 × 2ⁿ⁻¹.',
-        ],
+        "time": "0:00",
+        "seconds": 0,
+        "label": "Linear, Quadratic & Geometric Sequences",
+        "cardId": "igcse-maths-2-3-c1"
       },
       {
-        id: 'igcse-maths-2-3-c2',
-        title: 'Composite & Inverse Functions (Extended)',
-        summary: 'Evaluating composite functions fg(x) and deriving inverse functions f⁻¹(x).',
-        bullets: [
-          'Composite function fg(x) means apply g FIRST, then substitute the result into f: fg(x) = f(g(x)). Order matters — usually fg(x) ≠ gf(x)!',
-          '**Worked example:** If f(x) = 2x + 3 and g(x) = x², then fg(x) = f(x²) = 2x² + 3, whereas gf(x) = g(2x + 3) = (2x + 3)².',
-          'Inverse function f⁻¹(x) reverses f(x): (1) Write y = f(x), (2) Rearrange to make x the subject, (3) Replace y with x. Example: y = (3x − 1)/4 → 4y + 1 = 3x → f⁻¹(x) = (4x + 1)/3.',
-          '**Domain exclusions:** Exclude any x that makes a denominator zero or a square root negative.',
+        "time": "7:40",
+        "seconds": 460,
+        "label": "Composite & Inverse Functions",
+        "cardId": "igcse-maths-2-3-c2"
+      },
+      {
+        "time": "15:20",
+        "seconds": 920,
+        "label": "Differentiation, Gradients & Stationary Points",
+        "cardId": "igcse-maths-2-3-c3"
+      }
+    ],
+    "cards": [
+      {
+        "id": "igcse-maths-2-3-c1",
+        "title": "Linear, Quadratic & Geometric Sequences",
+        "summary": "Use first differences for linear nth terms, half the second difference for quadratic sequences, and arⁿ⁻¹ for geometric.",
+        "bullets": [
+          "**Linear nth term** - uₙ = dn + (a − d), where d is the constant first difference and a is the first term."
         ],
-        glossaryPills: [
+        "subsections": [
           {
-            term: 'composite function',
-            definition: 'A function formed by applying one function to the output of another: fg(x) = f(g(x)).',
+            "heading": "Quadratic & Geometric nth Terms",
+            "bullets": [
+              "**Quadratic sequence** - constant second difference 2A gives the n² coefficient A = (second difference) ÷ 2; subtract An² from the sequence to find the remaining linear part Bn + C.",
+              "**Geometric sequence** - multiplies by a constant ratio r each step: uₙ = a × rⁿ⁻¹."
+            ],
+            "exampleHeading": "Worked example: nth term of 5, 11, 21, 35, ...",
+            "examples": [
+              "First differences: 6, 10, 14; constant second difference = 4 → coefficient of n² is 4 ÷ 2 = 2.",
+              "Subtract 2n² (2, 8, 18, 32): remainder is 3, 3, 3, 3 → uₙ = 2n² + 3."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "second difference",
+            "definition": "The difference between consecutive first differences of a sequence; constant for quadratic sequences."
+          }
+        ]
+      },
+      {
+        "id": "igcse-maths-2-3-c2",
+        "title": "Functions, Composite Functions & Inverse Functions",
+        "summary": "Apply composite functions right-to-left (fg(x) = f(g(x))) and swap x and y to find f⁻¹(x).",
+        "bullets": [
+          "**Composite function fg(x)** - always apply the RIGHT-hand function g first, then substitute the result into f."
+        ],
+        "subsections": [
+          {
+            "heading": "Finding the Inverse Function f⁻¹(x)",
+            "bullets": [
+              "**Three steps for f⁻¹(x)** - write y = f(x), rearrange to make x the subject, then swap x and y to write f⁻¹(x).",
+              "**Domain restriction** - exclude any x value causing division by zero or square root of a negative."
+            ],
+            "exampleHeading": "Worked example: Given f(x) = 3x − 2 and g(x) = x², find fg(4) and f⁻¹(x)",
+            "examples": [
+              "g(4) = 4² = 16, then f(16) = 3(16) − 2 = 46.",
+              "y = 3x − 2 → x = (y + 2)/3 → f⁻¹(x) = (x + 2)/3."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "composite function",
+            "definition": "A function formed by applying one function to the output of another, written fg(x) = f(g(x))."
           },
           {
-            term: 'inverse function',
-            definition: 'A function f⁻¹(x) that undoes the action of f(x) so that f⁻¹(f(x)) = x.',
-          },
+            "term": "inverse function",
+            "definition": "The function f⁻¹(x) that reverses the mapping of f(x), so f⁻¹(f(x)) = x."
+          }
         ],
-        commonMistake: 'Students often compute fg(x) left-to-right (f first, then g). ALWAYS work RIGHT-TO-LEFT starting with the function closest to x!',
+        "commonMistake": "Do NOT evaluate fg(x) from left to right — fg(x) means f(g(x)), NOT f(x) × g(x) and NOT g(f(x))!"
       },
       {
-        id: 'igcse-maths-2-3-c3',
-        title: 'Introduction to Differentiation (CIE 0580 / Edexcel 4MA1 Extended)',
-        summary: 'Differentiating polynomials with the power rule to classify turning points.',
-        bullets: [
-          'The derivative dy/dx gives the exact gradient function of a curve y = f(x) at any x-coordinate.',
-          '**Power rule:** If y = axⁿ, then dy/dx = anxⁿ⁻¹. The derivative of any constant is 0 (d/dx(c) = 0).',
-          '**Worked example:** For y = x³ − 3x² − 9x + 4, dy/dx = 3x² − 6x − 9.',
-          'Stationary (turning) points occur where gradient dy/dx = 0: 3x² − 6x − 9 = 0 → x² − 2x − 3 = 0 → (x − 3)(x + 1) = 0 → x = 3 or x = −1. Use the second derivative d²y/dx² = 6x − 6: at x = 3, d²y/dx² = +12 > 0 (LOCAL MINIMUM); at x = −1, d²y/dx² = −12 < 0 (LOCAL MAXIMUM).',
+        "id": "igcse-maths-2-3-c3",
+        "title": "Differentiation & Stationary Points (Extended)",
+        "summary": "Differentiate axⁿ to anxⁿ⁻¹, set dy/dx = 0 to find turning points, and use d²y/dx² to classify them.",
+        "bullets": [
+          "**Power rule** - if y = axⁿ then dy/dx = anxⁿ⁻¹; the derivative of a constant is 0."
         ],
-        memoryAid: 'Power rule: Multiply by the old power, then subtract 1 from the power! Minimum has positive smile (d²y/dx² > 0); Maximum has negative frown (d²y/dx² < 0).',
+        "subsections": [
+          {
+            "heading": "Gradients & Turning Points",
+            "bullets": [
+              "**Gradient at a point** - substitute the x-coordinate into dy/dx to get the gradient of the tangent.",
+              "**Stationary (turning) points** - occur where dy/dx = 0; substitute x back into the original y to get the y-coordinate.",
+              "**Classifying nature** - if d²y/dx² > 0 it is a local minimum; if d²y/dx² < 0 it is a local maximum."
+            ],
+            "exampleHeading": "Worked example: Find the turning point of y = x² − 8x + 5",
+            "examples": [
+              "dy/dx = 2x − 8 = 0 → x = 4; y = 4² − 8(4) + 5 = −11.",
+              "d²y/dx² = 2 > 0, so (4, −11) is a minimum turning point."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "stationary point",
+            "definition": "A point on a curve where the gradient dy/dx = 0 (a local maximum, local minimum, or point of inflection)."
+          }
+        ],
+        "memoryAid": "Differentiate: multiply by the power, then drop the power by 1 (d/dx of axⁿ = anxⁿ⁻¹)."
+      }
+    ],
+    "checklistPoints": [
+      "Derive nth term rules for linear, quadratic, and geometric sequences",
+      "Compute composite functions fg(x) right-to-left and invert functions f⁻¹(x)",
+      "Differentiate polynomials to find tangent gradients and classify stationary points"
+    ],
+    "keyTerms": [
+      {
+        "term": "Second difference",
+        "definition": "The difference between consecutive first differences of a sequence; constant for quadratic sequences."
       },
-    ],
-    keyTerms: [
-      { term: 'Quadratic sequence', definition: 'Sequence with a constant second difference 2a and nth term an² + bn + c.' },
-      { term: 'Inverse function', definition: 'Function f⁻¹(x) found by making x the subject of y = f(x) and swapping x and y.' },
-      { term: 'Stationary point', definition: 'Point on a curve where the gradient dy/dx equals zero (maximum, minimum, or inflection).' },
-    ],
-    checklistPoints: [
-      'Find the nth term of arithmetic, geometric, and quadratic sequences.',
-      'Evaluate composite functions fg(x) right-to-left and derive inverse functions f⁻¹(x).',
-      'Differentiate polynomials term-by-term to find gradients, tangents, and turning points.',
-    ],
+      {
+        "term": "Composite function",
+        "definition": "A function formed by applying one function to the output of another, written fg(x) = f(g(x))."
+      },
+      {
+        "term": "Inverse function",
+        "definition": "The function f⁻¹(x) that reverses the mapping of f(x), so f⁻¹(f(x)) = x."
+      },
+      {
+        "term": "Stationary point",
+        "definition": "A point on a curve where the gradient dy/dx = 0 (a local maximum, local minimum, or point of inflection)."
+      }
+    ]
   },
-  'igcse-maths-3-1': {
-    subtopicId: 'igcse-maths-3-1',
-    subtopicCode: '3.1',
-    subtopicTitle: 'Straight Line Graphs (y = mx + c), Midpoint, Length & Perpendiculars',
-    readingMinutes: 10,
-    videoTitle: 'GCSE Maths - Perpendicular Lines',
-    youtubeId: 'tXxIwT6ZSwQ',
-    videoChannel: 'Cognito',
-    videoDuration: '5:20',
-    courseMatchSummary: '4 of 4 sections match Cambridge IGCSE Maths (0580)',
-    timestamps: [
-      { time: '0:00', seconds: 0, label: 'Intro to Perpendicular Lines', cardId: 'igcse-maths-3-1-c1' },
-      { time: '0:42', seconds: 42, label: 'The Gradient Product Rule for Perpendicular Lines', cardId: 'igcse-maths-3-1-c3' },
-      { time: '3:22', seconds: 202, label: 'Finding the Gradient of a Perpendicular Line', cardId: 'igcse-maths-3-1-c3' },
-      { time: '4:25', seconds: 265, label: 'Finding the Equation of a Perpendicular Line', cardId: 'igcse-maths-3-1-c3' },
-    ],
-    cards: [
+  "igcse-maths-3-1": {
+    "subtopicId": "igcse-maths-3-1",
+    "subtopicCode": "3.1",
+    "subtopicTitle": "Straight Line Graphs (y = mx + c), Midpoint, Length & Perpendiculars",
+    "readingMinutes": 10,
+    "videoTitle": "GCSE Maths - Perpendicular Lines",
+    "youtubeId": "tXxIwT6ZSwQ",
+    "videoChannel": "Cognito",
+    "videoDuration": "5:20",
+    "courseMatchSummary": "4 of 4 sections match Cambridge IGCSE Maths (0580)",
+    "timestamps": [
       {
-        id: 'igcse-maths-3-1-c1',
-        title: 'Gradient, Midpoint & Length of a Line Segment',
-        summary: 'Finding gradient, midpoint, and distance between any two coordinates.',
-        bullets: [
-          'Given two points A(x₁, y₁) and B(x₂, y₂):',
-          '**Gradient:** m = (y₂ − y₁) ÷ (x₂ − x₁). Positive m slopes uphill left-to-right; negative m slopes downhill.',
-          'Midpoint M: ((x₁ + x₂) ÷ 2, (y₁ + y₂) ÷ 2) — simply the average of the x’s and average of the y’s.',
-          '**Length AB (from Pythagoras):** d = √((x₂ − x₁)² + (y₂ − y₁)²). Example for A(1, 2) and B(7, 10): d = √(6² + 8²) = √100 = 10.',
+        "time": "0:00",
+        "seconds": 0,
+        "label": "Gradient, Midpoint & Line Segment Length",
+        "cardId": "igcse-maths-3-1-c1"
+      },
+      {
+        "time": "1:50",
+        "seconds": 110,
+        "label": "Equations of Parallel & Perpendicular Lines",
+        "cardId": "igcse-maths-3-1-c2"
+      },
+      {
+        "time": "3:40",
+        "seconds": 220,
+        "label": "Perpendicular Bisectors",
+        "cardId": "igcse-maths-3-1-c3"
+      }
+    ],
+    "cards": [
+      {
+        "id": "igcse-maths-3-1-c1",
+        "title": "Gradient, Midpoint & Length Between Two Points",
+        "summary": "Compute rise/run for gradient, average coordinates for midpoint, and apply Pythagoras for distance.",
+        "bullets": [
+          "**Gradient formula** - m = (y₂ − y₁) / (x₂ − x₁); positive slopes go up left-to-right, negative slopes go down."
         ],
-        glossaryPills: [
+        "subsections": [
           {
-            term: 'midpoint',
-            definition: 'The exact halfway point between two coordinates, given by averaging their x-values and y-values.',
-          },
+            "heading": "Midpoint & Distance Formulae",
+            "bullets": [
+              "**Midpoint** - M = ((x₁ + x₂)/2, (y₁ + y₂)/2).",
+              "**Length (distance)** - d = √((x₂ − x₁)² + (y₂ − y₁)²)."
+            ],
+            "exampleHeading": "Worked example: Segment from A(1, 2) to B(7, 10)",
+            "examples": [
+              "Gradient m = (10 − 2)/(7 − 1) = 8/6 = 4/3; Midpoint M = (4, 6).",
+              "Length AB = √((7 − 1)² + (10 − 2)²) = √(36 + 64) = √100 = 10."
+            ]
+          }
         ],
-      },
-      {
-        id: 'igcse-maths-3-1-c2',
-        title: 'Equation of a Straight Line (y = mx + c)',
-        summary: 'Rearranging linear equations and finding y = mx + c from two points.',
-        bullets: [
-          'In **y = mx + c**, m is the gradient and c is the y-intercept (where x = 0). If given in implicit form like 2x + 4y = 12, rearrange to y = −0.5x + 3 BEFORE reading m and c!',
-          'Finding the line through (2, 5) and (6, 17): First find m = (17 − 5) ÷ (6 − 2) = 12 ÷ 4 = 3. Substitute (2, 5) into y = 3x + c → 5 = 6 + c → c = −1 → y = 3x − 1.',
-        ],
-        commonMistake: 'In 3x + 2y = 8, the gradient is NOT 3 — rearrange to y = −1.5x + 4 first, so m = −1.5!',
-      },
-      {
-        id: 'igcse-maths-3-1-c3',
-        title: 'Parallel Lines, Perpendicular Lines & Perpendicular Bisectors',
-        summary: 'Parallel lines, negative-reciprocal perpendiculars, and perpendicular bisectors.',
-        bullets: [
-          '**Parallel lines have EQUAL gradients:** m₁ = m₂.',
-          'Perpendicular lines satisfy **m₁ × m₂ = −1**, so m₂ = −1 ÷ m₁ (the negative reciprocal: flip the fraction and flip the sign! E.g., 2/3 → −3/2; −4 → +1/4).',
-          'Perpendicular bisector of segment AB (a classic CIE Extended 4-mark question): (1) Find midpoint M of AB, (2) Find gradient m_AB, (3) Take negative reciprocal m_perp = −1/m_AB, (4) Substitute M into y = m_perp x + c to find c.',
-        ],
-        glossaryPills: [
+        "glossaryPills": [
           {
-            term: 'perpendicular bisector',
-            definition: 'A straight line that passes through the midpoint of a line segment at a 90° right angle.',
-          },
-        ],
-        memoryAid: 'Perpendicular gradient = Flip the fraction AND flip the sign!',
+            "term": "gradient",
+            "definition": "The steepness of a straight line, equal to the change in y divided by the change in x."
+          }
+        ]
       },
+      {
+        "id": "igcse-maths-3-1-c2",
+        "title": "Equation of a Line, Parallel & Perpendicular Lines",
+        "summary": "Parallel lines share the same gradient; perpendicular lines have gradients multiplying to −1.",
+        "bullets": [
+          "**Slope-intercept form** - y = mx + c, where m is the gradient and (0, c) is the y-intercept."
+        ],
+        "subsections": [
+          {
+            "heading": "Parallel vs Perpendicular Condition",
+            "bullets": [
+              "**Parallel lines** - m₁ = m₂ (rearrange ax + by = c into y = mx + c before reading m!).",
+              "**Perpendicular lines** - m₁ × m₂ = −1, so m₂ = −1/m₁ (negative reciprocal: flip the fraction and reverse the sign)."
+            ],
+            "exampleHeading": "Worked example: Line perpendicular to y = 2x − 3 passing through (4, 1)",
+            "examples": [
+              "Given m₁ = 2, perpendicular gradient m₂ = −1/2.",
+              "Substitute (4, 1) into y = −½x + c: 1 = −2 + c → c = 3 → y = −½x + 3."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "negative reciprocal",
+            "definition": "−1 divided by a gradient m; the gradient of any line perpendicular to a line of gradient m."
+          }
+        ],
+        "memoryAid": "Perpendicular gradient = Flip it and Flip the sign (e.g. 3/4 becomes −4/3)."
+      },
+      {
+        "id": "igcse-maths-3-1-c3",
+        "title": "Perpendicular Bisector of a Line Segment",
+        "summary": "Combine midpoint and negative-reciprocal gradient in 3 steps to find the perpendicular bisector.",
+        "bullets": [
+          "**Perpendicular bisector** - the straight line cutting segment AB at 90° exactly through its midpoint M."
+        ],
+        "subsections": [
+          {
+            "heading": "Three-Step Recipe",
+            "bullets": [
+              "**Step 1** - find the midpoint M of AB.",
+              "**Step 2** - find the gradient m_AB, then take its negative reciprocal m_⊥ = −1 / m_AB.",
+              "**Step 3** - substitute M and m_⊥ into y = mx + c to find c."
+            ],
+            "exampleHeading": "Worked example: Perpendicular bisector of A(2, 1) and B(6, 9)",
+            "examples": [
+              "Midpoint M = (4, 5); m_AB = (9 − 1)/(6 − 2) = 2 → m_⊥ = −1/2.",
+              "5 = −½(4) + c → c = 7 → y = −½x + 7."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "perpendicular bisector",
+            "definition": "A line that divides a line segment into two equal halves at a right angle (90°)."
+          }
+        ],
+        "commonMistake": "When finding a perpendicular bisector, substitute the MIDPOINT M into y = mx + c — NOT endpoint A or B!"
+      }
     ],
-    keyTerms: [
-      { term: 'Gradient', definition: 'Measure of steepness between two points: m = (y₂ − y₁) ÷ (x₂ − x₁).' },
-      { term: 'Perpendicular lines', definition: 'Lines intersecting at 90° whose gradients multiply to −1 (m₁m₂ = −1).' },
-      { term: 'Perpendicular bisector', definition: 'Line crossing a segment at its midpoint at right angles.' },
+    "checklistPoints": [
+      "Calculate gradient, midpoint, and distance between any two coordinates",
+      "Rearrange ax + by = c into y = mx + c before identifying parallel or perpendicular gradients",
+      "Construct the exact equation of a perpendicular bisector in 3 steps"
     ],
-    checklistPoints: [
-      'Calculate gradient, midpoint, and distance between any two coordinate pairs.',
-      'Rearrange ax + by = c into y = mx + c to read off gradient and y-intercept.',
-      'Derive the equation of a parallel line, perpendicular line, or perpendicular bisector.',
-    ],
+    "keyTerms": [
+      {
+        "term": "Gradient",
+        "definition": "The steepness of a straight line, equal to the change in y divided by the change in x."
+      },
+      {
+        "term": "Negative reciprocal",
+        "definition": "−1 divided by a gradient m; the gradient of any line perpendicular to a line of gradient m."
+      },
+      {
+        "term": "Perpendicular bisector",
+        "definition": "A line that divides a line segment into two equal halves at a right angle (90°)."
+      },
+      {
+        "term": "Gradient, Midpoint & Length Between Two Points",
+        "definition": "Compute rise/run for gradient, average coordinates for midpoint, and apply Pythagoras for distance."
+      }
+    ]
   },
-  'igcse-maths-4-1': {
-    subtopicId: 'igcse-maths-4-1',
-    subtopicCode: '4.1',
-    subtopicTitle: 'Angles, Polygons, Bearings, Similarity & Congruence',
-    readingMinutes: 10,
-    videoTitle: 'Transformations: Rotate, Reflect, Enlarge, Translate - GCSE Maths Revision',
-    youtubeId: 'fwv7e5OyuzA',
-    videoChannel: 'HannahKettleMaths',
-    videoDuration: '17:20',
-    courseMatchSummary: '4 of 4 sections match Cambridge IGCSE Maths (0580)',
-    timestamps: [
-      { time: '0:00', seconds: 0, label: 'Overview of the 4 Transformations', cardId: 'igcse-maths-4-1-c1' },
-      { time: '3:30', seconds: 210, label: 'Translations & Column Vectors', cardId: 'igcse-maths-4-1-c2' },
-      { time: '8:00', seconds: 480, label: 'Reflections & Rotations', cardId: 'igcse-maths-4-1-c3' },
-      { time: '12:40', seconds: 760, label: 'Enlargements & Scale Factors', cardId: 'igcse-maths-4-1-c3' },
+  "igcse-maths-4-1": {
+    "subtopicId": "igcse-maths-4-1",
+    "subtopicCode": "4.1",
+    "subtopicTitle": "Angles, Polygons, Bearings, Similarity & Congruence",
+    "readingMinutes": 10,
+    "videoTitle": "Transformations: Rotate, Reflect, Enlarge, Translate - GCSE Maths Revision",
+    "youtubeId": "fwv7e5OyuzA",
+    "videoChannel": "HannahKettleMaths",
+    "videoDuration": "17:20",
+    "courseMatchSummary": "4 of 4 sections match Cambridge IGCSE Maths (0580)",
+    "timestamps": [
+      {
+        "time": "0:00",
+        "seconds": 0,
+        "label": "Parallel Lines, Polygons & Bearings",
+        "cardId": "igcse-maths-4-1-c1"
+      },
+      {
+        "time": "5:45",
+        "seconds": 345,
+        "label": "Congruent Triangles (SSS, SAS, ASA, RHS)",
+        "cardId": "igcse-maths-4-1-c2"
+      },
+      {
+        "time": "11:30",
+        "seconds": 690,
+        "label": "Similar Shapes: Length, Area & Volume Scale Factors",
+        "cardId": "igcse-maths-4-1-c3"
+      }
     ],
-    cards: [
+    "cards": [
       {
-        id: 'igcse-maths-4-1-c1',
-        title: 'Parallel Lines & Polygon Angle Rules',
-        summary: 'Parallel-line angle pairs and interior or exterior polygon angle sums.',
-        bullets: [
-          '**Parallel line angle pairs:** Alternate angles (Z-shape) are EQUAL; Corresponding angles (F-shape) are EQUAL; Co-interior / allied angles (C-shape) sum to 180°.',
-          '**For ANY n-sided polygon:** Sum of interior angles = (n − 2) × 180°. Sum of ALL exterior angles = 360° (always!).',
-          '**For a REGULAR n-sided polygon:** Each exterior angle = 360° ÷ n, and Interior angle + Exterior angle = 180°. Example: Regular octagon (n = 8) has exterior angle 360/8 = 45° and interior angle 135°.',
+        "id": "igcse-maths-4-1-c1",
+        "title": "Parallel Lines, Polygons & Three-Figure Bearings",
+        "summary": "Use formal angle names, polygon sum formulae, and clockwise bearings measured from North.",
+        "bullets": [
+          "**Parallel line rules** - **alternate angles** are equal (Z), **corresponding angles** are equal (F), and **co-interior (allied) angles** add to 180° (C)."
         ],
-        memoryAid: 'Always find the EXTERIOR angle (360° ÷ n) first — it is far faster than the interior formula!',
-      },
-      {
-        id: 'igcse-maths-4-1-c2',
-        title: 'Three-Figure Bearings',
-        summary: 'Measuring three-figure clockwise bearings from North and back bearings.',
-        bullets: [
-          '**Bearings obey 3 strict rules:** (1) Measured from NORTH (000°), (2) Measured CLOCKWISE, (3) Written as 3 digits (e.g., 045°, NOT 45°).',
-          'The wording "bearing of B FROM A" means stand at A, draw a North line at A, and turn clockwise until pointing to B.',
-          '**Back bearing (of A from B):** Add 180° if the original bearing < 180°, or subtract 180° if ≥ 180° (follows from co-interior angles between parallel North lines).',
-        ],
-        commonMistake: 'Always check which point follows the word "FROM" — that is where you draw your North arrow!',
-      },
-      {
-        id: 'igcse-maths-4-1-c3',
-        title: 'Congruence & Similar Shapes (Length, Area & Volume Scale Factors)',
-        summary: 'Triangle congruence tests (SSS/SAS/ASA/RHS) and k, k², k³ similarity scaling.',
-        bullets: [
-          'Two triangles are CONGRUENT (identical size & shape) if they satisfy SSS, SAS, ASA/AAS, or RHS (Right angle, Hypotenuse, Side). Note: AAA proves similarity, NOT congruence!',
-          '**Similar shapes** have identical angles and proportional sides with linear scale factor k = L₂ ÷ L₁.',
-          '**Crucial Extended rule:** Length scale factor = k → Area scale factor = k² → Volume scale factor = k³!',
-          '**Worked example:** Two similar bottles have heights 10 cm and 15 cm (k = 1.5). If the smaller bottle holds 400 ml, the larger holds 400 × (1.5)³ = 400 × 3.375 = 1,350 ml.',
-        ],
-        glossaryPills: [
+        "subsections": [
           {
-            term: 'congruent',
-            definition: 'Geometric figures having the exact same shape and exact same dimensions (all corresponding sides and angles equal).',
-          },
+            "heading": "Polygon Angles & Bearings",
+            "bullets": [
+              "**Interior & exterior angles** - sum of interior angles = (n − 2) × 180°; sum of exterior angles = 360°; Interior + Exterior = 180°.",
+              "**Three-figure bearings** - always measure from North, turn clockwise, and write 3 digits (e.g. 045°). Back bearing = bearing ± 180°."
+            ],
+            "exampleHeading": "Worked example: Regular polygon with interior angle 150°",
+            "examples": [
+              "Exterior angle = 180° − 150° = 30°.",
+              "Number of sides n = 360° ÷ 30° = 12 sides."
+            ]
+          }
         ],
+        "glossaryPills": [
+          {
+            "term": "bearing",
+            "definition": "A three-figure angle measured clockwise from North (000° to 360°)."
+          }
+        ]
       },
+      {
+        "id": "igcse-maths-4-1-c2",
+        "title": "Congruence Conditions for Triangles",
+        "summary": "Prove two triangles are identical in shape and size using SSS, SAS, ASA, or RHS.",
+        "bullets": [
+          "**Four valid proofs** - **SSS** (3 equal sides), **SAS** (2 sides + included angle), **ASA/AAS** (2 angles + corresponding side), and **RHS** (Right angle, Hypotenuse, one Side)."
+        ],
+        "subsections": [
+          {
+            "heading": "Invalid Conditions",
+            "bullets": [
+              "**AAA proves similarity only** - equal angles give the same shape, not necessarily the same size.",
+              "**ASS (SSA) is ambiguous** - two different triangles can share two sides and a non-included angle."
+            ],
+            "exampleHeading": "Worked example: Proving ΔABD ≅ ΔCBD in a kite",
+            "examples": [
+              "AB = CB and AD = CD (adjacent pairs of sides equal in a kite), and BD is a common side.",
+              "Therefore ΔABD ≅ ΔCBD by SSS."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "congruent",
+            "definition": "Identical in both shape and size (all corresponding sides and angles equal)."
+          }
+        ]
+      },
+      {
+        "id": "igcse-maths-4-1-c3",
+        "title": "Similar Shapes: Length, Area & Volume Scale Factors",
+        "summary": "Square the linear scale factor k for areas (k²) and cube it for volumes (k³).",
+        "bullets": [
+          "**Scale factor powers** - if linear scale factor is k = L₂ / L₁, then Area scale factor = k² and Volume scale factor = k³."
+        ],
+        "subsections": [
+          {
+            "heading": "Converting Between Area and Volume Ratios",
+            "bullets": [
+              "**Always go via k** - if given a volume ratio V₁ : V₂, take the cube root first to get k = ³√(V₂/V₁), then square k for the surface area ratio."
+            ],
+            "exampleHeading": "Worked example: Similar cones with heights 6 cm and 9 cm",
+            "examples": [
+              "Linear scale factor k = 9 ÷ 6 = 1.5.",
+              "If smaller cone volume = 40 cm³, larger cone volume = 40 × 1.5³ = 40 × 3.375 = 135 cm³."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "scale factor",
+            "definition": "The constant ratio k between corresponding linear lengths of two mathematically similar figures."
+          }
+        ],
+        "memoryAid": "Length = k¹, Area = k², Volume = k³ — always match the power to the dimension (cm, cm², cm³)!",
+        "commonMistake": "Never quote \"Z-angles\" or \"F-angles\" in an exam — examiners require the formal terms \"alternate angles\" and \"corresponding angles\"."
+      }
     ],
-    keyTerms: [
-      { term: 'Bearing', definition: 'Direction measured clockwise from North and expressed as a three-figure angle (000°–359°).' },
-      { term: 'Congruence', definition: 'Exact equality of shape and size proved via SSS, SAS, ASA, or RHS.' },
-      { term: 'Scale factor', definition: 'Ratio k of corresponding lengths in similar shapes; areas scale by k² and volumes by k³.' },
+    "checklistPoints": [
+      "Use exterior angles = 360°/n to solve regular polygon problems rapidly",
+      "State exact congruence proofs using SSS, SAS, ASA, or RHS",
+      "Convert fluently between linear (k), area (k²), and volume (k³) scale factors"
     ],
-    checklistPoints: [
-      'Calculate interior and exterior angles of regular and irregular polygons.',
-      'Measure and calculate bearings and back bearings using co-interior angles.',
-      'Apply k, k², and k³ scale factors to similar lengths, surface areas, and volumes.',
-    ],
+    "keyTerms": [
+      {
+        "term": "Bearing",
+        "definition": "A three-figure angle measured clockwise from North (000° to 360°)."
+      },
+      {
+        "term": "Congruent",
+        "definition": "Identical in both shape and size (all corresponding sides and angles equal)."
+      },
+      {
+        "term": "Scale factor",
+        "definition": "The constant ratio k between corresponding linear lengths of two mathematically similar figures."
+      },
+      {
+        "term": "Three-Figure Bearing",
+        "definition": "An angle measured clockwise from North and written using three digits (000° to 360°)."
+      },
+      {
+        "term": "Congruent Triangles",
+        "definition": "Triangles identical in shape and size, proved by SSS, SAS, ASA, or RHS."
+      }
+    ]
   },
-  'igcse-maths-4-2': {
-    subtopicId: 'igcse-maths-4-2',
-    subtopicCode: '4.2',
-    subtopicTitle: 'Circle Theorems & Alternate Segment Theorem',
-    readingMinutes: 10,
-    videoTitle: 'Circle Theorems - GCSE Higher Maths',
-    youtubeId: 'dBIlCD_JF9Q',
-    videoChannel: '1st Class Maths',
-    videoDuration: '13:52',
-    courseMatchSummary: '4 of 4 sections match Cambridge IGCSE Maths (0580)',
-    timestamps: [
-      { time: '0:00', seconds: 0, label: 'Introduction', cardId: 'igcse-maths-4-2-c1' },
-      { time: '3:31', seconds: 211, label: 'Opposite Angles in a Cyclic Quadrilateral', cardId: 'igcse-maths-4-2-c2' },
-      { time: '5:55', seconds: 355, label: 'Alternate Segment Theorem', cardId: 'igcse-maths-4-2-c3' },
-      { time: '11:06', seconds: 666, label: 'Worked Exam Example', cardId: 'igcse-maths-4-2-c3' },
-    ],
-    cards: [
+  "igcse-maths-4-2": {
+    "subtopicId": "igcse-maths-4-2",
+    "subtopicCode": "4.2",
+    "subtopicTitle": "Circle Theorems & Alternate Segment Theorem",
+    "readingMinutes": 10,
+    "videoTitle": "Circle Theorems - GCSE Higher Maths",
+    "youtubeId": "dBIlCD_JF9Q",
+    "videoChannel": "1st Class Maths",
+    "videoDuration": "13:52",
+    "courseMatchSummary": "4 of 4 sections match Cambridge IGCSE Maths (0580)",
+    "timestamps": [
       {
-        id: 'igcse-maths-4-2-c1',
-        title: 'Centre, Semicircle & Same-Segment Theorems',
-        summary: 'Angle at the centre, angle in a semicircle, same segment, and chord bisector.',
-        bullets: [
-          '**Theorem 1 (Angle at the centre):** The angle subtended by an arc at the centre is TWICE the angle subtended at the circumference.',
-          '**Theorem 2 (Angle in a semicircle):** The angle subtended by a diameter at the circumference is ALWAYS 90°.',
-          '**Theorem 3 (Angles in the same segment):** Angles subtended by the same chord/arc at the circumference in the same segment are EQUAL (butterfly/bow-tie shape).',
-          '**Theorem 4 (Perpendicular from centre to chord):** A line from the centre perpendicular to a chord BISECTS the chord into two equal halves.',
-        ],
-        memoryAid: 'Always look for hidden ISOSCELES TRIANGLES formed by two radii (both sides = r, so base angles are equal)!',
+        "time": "0:00",
+        "seconds": 0,
+        "label": "Centre, Semicircle & Same-Segment Theorems",
+        "cardId": "igcse-maths-4-2-c1"
       },
       {
-        id: 'igcse-maths-4-2-c2',
-        title: 'Cyclic Quadrilaterals & Tangent Rules',
-        summary: 'Cyclic quadrilateral opposite angles and perpendicular tangent-radius rules.',
-        bullets: [
-          'Theorem 5 (Cyclic quadrilateral): All 4 vertices MUST lie on the circumference. Opposite angles of a cyclic quadrilateral sum to 180°.',
-          'Theorem 6 (Tangent meets radius): A tangent to a circle always meets the radius at the point of contact at **90°**.',
-          'Theorem 7 (Two tangents from an external point): Two tangents drawn to a circle from the same external point P are EQUAL in length (PA = PB), creating two **congruent** right-angled triangles with the centre.',
+        "time": "4:40",
+        "seconds": 280,
+        "label": "Cyclic Quadrilaterals & Tangent Theorems",
+        "cardId": "igcse-maths-4-2-c2"
+      },
+      {
+        "time": "9:15",
+        "seconds": 555,
+        "label": "Alternate Segment Theorem & Symmetry",
+        "cardId": "igcse-maths-4-2-c3"
+      }
+    ],
+    "cards": [
+      {
+        "id": "igcse-maths-4-2-c1",
+        "title": "Angle at the Centre, Semicircle & Same Segment",
+        "summary": "Master the three core arc-angle circle theorems and always quote full worded reasons.",
+        "bullets": [
+          "**Angle at the centre** - the angle subtended by an arc at the centre is TWICE the angle subtended at the circumference."
         ],
-        glossaryPills: [
+        "subsections": [
           {
-            term: 'cyclic quadrilateral',
-            definition: 'A four-sided polygon whose four vertices all lie directly on the circumference of a single circle.',
+            "heading": "Semicircle & Same Segment",
+            "bullets": [
+              "**Angle in a semicircle** - the angle subtended by a diameter at the circumference is always 90°.",
+              "**Angles in the same segment** - angles subtended by the same chord/arc in the same segment are equal."
+            ],
+            "exampleHeading": "Worked example: Finding circumference angle from centre angle 134°",
+            "examples": [
+              "Angle at circumference = 134° ÷ 2 = 67°.",
+              "Reason: angle at the centre is twice the angle at the circumference."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "subtended",
+            "definition": "Formed by drawing two line segments from the endpoints of an arc or chord to meet at a vertex."
+          }
+        ]
+      },
+      {
+        "id": "igcse-maths-4-2-c2",
+        "title": "Cyclic Quadrilaterals & Tangent Rules",
+        "summary": "All four vertices must touch the circumference for a cyclic quadrilateral, and radii meet tangents at 90°.",
+        "bullets": [
+          "**Cyclic quadrilateral** - opposite angles of a quadrilateral whose four vertices all lie on the circumference sum to 180°."
+        ],
+        "subsections": [
+          {
+            "heading": "Tangents & Radii",
+            "bullets": [
+              "**Tangent–radius theorem** - a tangent meets the radius at the point of contact at exactly 90°.",
+              "**Two tangents from an external point** - are equal in length, forming a symmetrical kite with the two radii."
+            ],
+            "exampleHeading": "Worked example: Cyclic quadrilateral ABCD with ∠A = 78°",
+            "examples": [
+              "Opposite angle ∠C = 180° − 78° = 102°.",
+              "Reason: opposite angles in a cyclic quadrilateral sum to 180°."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "cyclic quadrilateral",
+            "definition": "A four-sided polygon whose four vertices all lie on the circumference of the same circle."
           },
           {
-            term: 'tangent',
-            definition: 'A straight line that touches a circle at exactly one point and sits perpendicular (90°) to the radius at that point.',
-          },
+            "term": "tangent",
+            "definition": "A straight line that touches a circle at exactly one point and is perpendicular to the radius there."
+          }
         ],
-        commonMistake: 'A quadrilateral with one corner at the CENTRE of the circle is NOT a cyclic quadrilateral — all 4 vertices must touch the circumference!',
+        "commonMistake": "Do NOT apply the cyclic quadrilateral rule if one of the four corners is at the CENTRE O — all 4 vertices must lie on the circumference!"
       },
       {
-        id: 'igcse-maths-4-2-c3',
-        title: 'The Alternate Segment Theorem',
-        summary: 'Applying the Alternate Segment Theorem with formal exam proof phrasing.',
-        bullets: [
-          '**Theorem 8 (Alternate Segment Theorem):** The angle between a tangent and a chord drawn from the point of contact is EQUAL to the angle subtended by that chord in the alternate (opposite) segment.',
-          '**Exam phrasing tip:** Always write the FULL formal theorem reason in proof questions (e.g., "Angle in a semicircle is 90°" or "Opposite angles in a cyclic quadrilateral sum to 180°") — vague phrases like "Z-angles" or "arrow rule" get ZERO reason marks!',
+        "id": "igcse-maths-4-2-c3",
+        "title": "Alternate Segment Theorem & Perpendicular Chord Bisector",
+        "summary": "The angle between a tangent and chord equals the inscribed angle in the alternate segment.",
+        "bullets": [
+          "**Alternate segment theorem** - the angle between a tangent and a chord drawn from the point of contact equals the angle in the alternate (opposite) segment."
         ],
+        "subsections": [
+          {
+            "heading": "Chord Symmetry & Isosceles Radii",
+            "bullets": [
+              "**Perpendicular from centre to chord** - bisects the chord into two equal halves at 90°, enabling Pythagoras calculations.",
+              "**Two radii form an isosceles triangle** - always check for equal radii OA = OB giving equal base angles!"
+            ],
+            "exampleHeading": "Worked example: Tangent-chord angle 58°",
+            "examples": [
+              "Tangent at T makes an angle of 58° with chord TA.",
+              "The inscribed angle ∠TBA opposite chord TA in the alternate segment is also 58°."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "alternate segment",
+            "definition": "The segment of a circle on the opposite side of a chord from the angle formed between that chord and a tangent."
+          }
+        ],
+        "memoryAid": "Always scan circle diagrams for TWO RADII first — hidden isosceles triangles unlock half of IGCSE circle questions!"
+      }
+    ],
+    "checklistPoints": [
+      "State exact full-sentence reasons for all seven circle theorems",
+      "Spot hidden isosceles triangles formed by two radii and tangent-radius right angles",
+      "Apply the alternate segment theorem and perpendicular chord bisector with Pythagoras"
+    ],
+    "keyTerms": [
+      {
+        "term": "Subtended",
+        "definition": "Formed by drawing two line segments from the endpoints of an arc or chord to meet at a vertex."
       },
-    ],
-    keyTerms: [
-      { term: 'Cyclic quadrilateral', definition: 'Four-sided shape inscribed in a circle whose opposite angles add to 180°.' },
-      { term: 'Alternate Segment Theorem', definition: 'Angle between tangent and chord equals the inscribed angle in the opposite segment.' },
-      { term: 'Subtended angle', definition: 'Angle formed at a point by joining it to the two endpoints of an arc or chord.' },
-    ],
-    checklistPoints: [
-      'Recall and apply all 8 circle theorems accurately in multi-step angle problems.',
-      'Spot isosceles triangles formed by two radii immediately.',
-      'State exact exam-board wording for every geometric reason.',
-    ],
+      {
+        "term": "Cyclic quadrilateral",
+        "definition": "A four-sided polygon whose four vertices all lie on the circumference of the same circle."
+      },
+      {
+        "term": "Tangent",
+        "definition": "A straight line that touches a circle at exactly one point and is perpendicular to the radius there."
+      },
+      {
+        "term": "Alternate segment",
+        "definition": "The segment of a circle on the opposite side of a chord from the angle formed between that chord and a tangent."
+      },
+      {
+        "term": "Alternate Segment Theorem",
+        "definition": "The angle between a tangent and a chord equals the inscribed angle in the opposite segment."
+      }
+    ]
   },
-  'igcse-maths-5-1': {
-    subtopicId: 'igcse-maths-5-1',
-    subtopicCode: '5.1',
-    subtopicTitle: 'Area, Arc Length, Sector Area, Surface Area & Volume',
-    readingMinutes: 10,
-    videoTitle: 'GCSE Maths - How to find the Volumes of Cones and Pyramids',
-    youtubeId: 'e_jqJtObKfI',
-    videoChannel: 'Cognito',
-    videoDuration: '2:30',
-    courseMatchSummary: '4 of 4 sections match Cambridge IGCSE Maths (0580)',
-    timestamps: [
-      { time: '0:00', seconds: 0, label: 'Intro & Shared Formula', cardId: 'igcse-maths-5-1-c2' },
-      { time: '0:49', seconds: 49, label: 'Volume of a Pyramid Formula', cardId: 'igcse-maths-5-1-c2' },
-      { time: '1:22', seconds: 82, label: 'Example Measurements', cardId: 'igcse-maths-5-1-c2' },
-      { time: '1:58', seconds: 118, label: 'Example: Pyramid Volume Calculation', cardId: 'igcse-maths-5-1-c2' },
-    ],
-    cards: [
+  "igcse-maths-5-1": {
+    "subtopicId": "igcse-maths-5-1",
+    "subtopicCode": "5.1",
+    "subtopicTitle": "Area, Arc Length, Sector Area, Surface Area & Volume",
+    "readingMinutes": 10,
+    "videoTitle": "GCSE Maths - How to find the Volumes of Cones and Pyramids",
+    "youtubeId": "e_jqJtObKfI",
+    "videoChannel": "Cognito",
+    "videoDuration": "2:30",
+    "courseMatchSummary": "4 of 4 sections match Cambridge IGCSE Maths (0580)",
+    "timestamps": [
       {
-        id: 'igcse-maths-5-1-c1',
-        title: '2D Areas, Arc Length & Sector Area',
-        summary: 'Trapezium areas, circle formulas, arc length, and sector area or perimeter.',
-        bullets: [
-          'Trapezium area = ½(a + b) × h (average of **parallel** sides × perpendicular height). Circle circumference = 2πr = πd; Circle area = πr².',
-          'Sector of angle θ° and radius r: Arc length = (θ ÷ 360) × 2πr; Sector area = (θ ÷ 360) × πr².',
-          'Perimeter of a sector = Arc length + 2r (don’t forget the two straight radii!).',
-          '**Worked example:** A sector has radius 12 cm and angle 60°. Area = (60/360) × π × 12² = 24π ≈ 75.4 cm². Arc length = (60/360) × 2π(12) = 4π cm; Perimeter = 4π + 24 ≈ 36.6 cm.',
-        ],
-        commonMistake: 'When asked for the PERIMETER of a sector, students often calculate only the curved arc length and forget to add the two straight radii (+ 2r)!',
+        "time": "0:00",
+        "seconds": 0,
+        "label": "2D Areas, Arc Length & Sector Area",
+        "cardId": "igcse-maths-5-1-c1"
       },
       {
-        id: 'igcse-maths-5-1-c2',
-        title: 'Volume & Surface Area of 3D Solids',
-        summary: 'Volume and total surface area for prisms, cylinders, cones, and spheres.',
-        bullets: [
-          '**Any uniform Prism:** Volume = Cross-sectional area × length. Cylinder: Volume = πr²h; Curved surface area = 2πrh; Total surface area = 2πrh + 2πr².',
-          '**Pyramid:** Volume = ⅓ × Base area × perpendicular height. Cone: Volume = ⅓πr²h; Curved surface area = πrl (where slant height l = √(r² + h²)); Total SA = πrl + πr².',
-          '**Sphere:** Volume = (4/3)πr³; Surface area = 4πr². Solid Hemisphere: Volume = (2/3)πr³; Total SA = 2πr² (curved) + πr² (flat circular base) = 3πr²!',
+        "time": "0:50",
+        "seconds": 50,
+        "label": "Prisms, Cylinders, Cones & Pyramids",
+        "cardId": "igcse-maths-5-1-c2"
+      },
+      {
+        "time": "1:40",
+        "seconds": 100,
+        "label": "Spheres, Hemispheres & Frustums",
+        "cardId": "igcse-maths-5-1-c3"
+      }
+    ],
+    "cards": [
+      {
+        "id": "igcse-maths-5-1-c1",
+        "title": "Trapezia, Arc Length & Sector Area",
+        "summary": "Multiply full circle formulae by the fraction θ/360 to find arc length and sector area.",
+        "bullets": [
+          "**Trapezium area** - ½(a + b)h, where a and b are the parallel sides and h is the perpendicular distance between them."
         ],
-        glossaryPills: [
+        "subsections": [
           {
-            term: 'slant height',
-            definition: 'Distance measured along the sloping outer surface of a cone from its apex to the circular base rim: l = √(r² + h²).',
-          },
+            "heading": "Arcs, Sectors & Segments",
+            "bullets": [
+              "**Arc length** - (θ/360) × 2πr; perimeter of a sector = arc length + 2r.",
+              "**Sector area** - (θ/360) × πr²; segment area = sector area − ½r² sin θ."
+            ],
+            "exampleHeading": "Worked example: Sector with r = 10 cm and θ = 72°",
+            "examples": [
+              "Arc length = (72/360) × 2π(10) = 4π ≈ 12.6 cm.",
+              "Sector area = (72/360) × π(10²) = 20π ≈ 62.8 cm²."
+            ]
+          }
         ],
-        memoryAid: 'A solid hemisphere has Total Surface Area = 3πr² (half of 4πr² = 2πr² PLUS the flat circular bottom πr²)!',
+        "glossaryPills": [
+          {
+            "term": "sector",
+            "definition": "A \"pizza slice\" region of a circle bounded by two radii and the arc between them."
+          }
+        ]
       },
       {
-        id: 'igcse-maths-5-1-c3',
-        title: 'Unit Conversions & Frustums',
-        summary: 'Converting squared and cubed units plus frustum and recasting problems.',
-        bullets: [
-          '**Area & volume unit conversions:** 1 m² = 100² = 10,000 cm²; 1 m³ = 100³ = 1,000,000 cm³; 1 litre = 1,000 cm³.',
-          'A frustum is a cone with a smaller similar cone sliced off its top: Volume of frustum = Volume(large cone) − Volume(removed small cone).',
-          'When melting and recasting metal from one 3D shape into another (e.g., spheres melted into a cylinder), total VOLUME is conserved: equate V_before = V_after and cancel π.',
+        "id": "igcse-maths-5-1-c2",
+        "title": "Prisms, Cylinders, Pyramids & Cones",
+        "summary": "Pointed solids (pyramids and cones) always have volume equal to one-third of the matching prism or cylinder.",
+        "bullets": [
+          "**Prism & cylinder volume** - Cross-sectional area × length (Cylinder V = πr²h; total surface area = 2πr² + 2πrh)."
         ],
+        "subsections": [
+          {
+            "heading": "Cones & Pyramids",
+            "bullets": [
+              "**Pyramid volume** - ⅓ × Base area × perpendicular height h.",
+              "**Cone volume & surface area** - V = ⅓πr²h; curved surface area = πrl where slant height l = √(r² + h²); total SA = πrl + πr²."
+            ],
+            "exampleHeading": "Worked example: Cone with r = 6 cm, h = 8 cm",
+            "examples": [
+              "Slant height l = √(6² + 8²) = 10 cm.",
+              "Volume = ⅓ × π × 36 × 8 = 96π cm³; Curved SA = π × 6 × 10 = 60π cm²."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "slant height",
+            "definition": "The distance along the sloping outer surface of a cone from its apex to a point on the circular base edge."
+          }
+        ],
+        "memoryAid": "Pointy shapes take ⅓: Cone V = ⅓πr²h and Pyramid V = ⅓Ah."
       },
+      {
+        "id": "igcse-maths-5-1-c3",
+        "title": "Spheres, Hemispheres & Frustums",
+        "summary": "Remember the flat circular face of a solid hemisphere and subtract cones for frustums.",
+        "bullets": [
+          "**Sphere** - V = (4/3)πr³ and Surface Area = 4πr²."
+        ],
+        "subsections": [
+          {
+            "heading": "Solid Hemispheres & Frustums",
+            "bullets": [
+              "**Solid hemisphere** - V = (2/3)πr³, but total surface area = 2πr² (curved) + πr² (flat circular base) = 3πr².",
+              "**Frustum** - volume = Big cone volume − Small top cone volume (use similar triangles to find missing radii/heights)."
+            ],
+            "exampleHeading": "Worked example: Total surface area of a solid hemisphere of radius 5 cm",
+            "examples": [
+              "Curved dome = 2π(5²) = 50π cm²; flat circular base = π(5²) = 25π cm².",
+              "Total SA = 75π ≈ 235.6 cm²."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "frustum",
+            "definition": "The solid remaining when the top portion of a cone or pyramid is sliced off parallel to its base."
+          }
+        ],
+        "commonMistake": "When asked for the TOTAL surface area of a solid hemisphere, do NOT write 2πr² — add the flat circular base πr² to get 3πr²!"
+      }
     ],
-    keyTerms: [
-      { term: 'Sector', definition: 'Pie-slice region of a circle bounded by two radii and an arc, with area (θ/360)πr².' },
-      { term: 'Frustum', definition: 'Lower portion of a cone or pyramid remaining after slicing off the top parallel to the base.' },
+    "checklistPoints": [
+      "Calculate arc length, sector perimeter (including + 2r), and sector/segment area",
+      "Distinguish vertical height h from slant height l = √(r² + h²) in cones",
+      "Compute volumes and total surface areas of spheres, solid hemispheres, and frustums"
     ],
-    checklistPoints: [
-      'Calculate arc length, sector perimeter, and sector area in exact π form and decimals.',
-      'Find volume and total surface area of prisms, cylinders, pyramids, cones, spheres, and hemispheres.',
-      'Convert between m²/cm² and m³/cm³/litres accurately.',
-    ],
+    "keyTerms": [
+      {
+        "term": "Sector",
+        "definition": "A \"pizza slice\" region of a circle bounded by two radii and the arc between them."
+      },
+      {
+        "term": "Slant height",
+        "definition": "The distance along the sloping outer surface of a cone from its apex to a point on the circular base edge."
+      },
+      {
+        "term": "Frustum",
+        "definition": "The solid remaining when the top portion of a cone or pyramid is sliced off parallel to its base."
+      },
+      {
+        "term": "Trapezia, Arc Length & Sector Area",
+        "definition": "Multiply full circle formulae by the fraction θ/360 to find arc length and sector area."
+      }
+    ]
   },
-  'igcse-maths-6-1': {
-    subtopicId: 'igcse-maths-6-1',
-    subtopicCode: '6.1',
-    subtopicTitle: 'Pythagoras’ Theorem & Right-Angled Trigonometry (SOHCAHTOA)',
-    readingMinutes: 10,
-    videoTitle: 'Trigonometry | SOH CAH TOA | Sin, Cos, Tan',
-    youtubeId: 'WFH_7n7hpHo',
-    videoChannel: 'Cognito',
-    videoDuration: '8:14',
-    courseMatchSummary: '4 of 4 sections match Cambridge IGCSE Maths (0580)',
-    timestamps: [
-      { time: '0:00', seconds: 0, label: 'Intro & Identifying Right-Angled Triangles', cardId: 'igcse-maths-6-1-c1' },
-      { time: '1:47', seconds: 107, label: 'Trigonometric Formulae', cardId: 'igcse-maths-6-1-c2' },
-      { time: '4:54', seconds: 294, label: 'Using Inverse Tan Function (Tan^-1)', cardId: 'igcse-maths-6-1-c2' },
-      { time: '7:26', seconds: 446, label: 'Calculator Tip: Closing Brackets', cardId: 'igcse-maths-6-1-c3' },
-    ],
-    cards: [
+  "igcse-maths-6-1": {
+    "subtopicId": "igcse-maths-6-1",
+    "subtopicCode": "6.1",
+    "subtopicTitle": "Pythagoras’ Theorem & Right-Angled Trigonometry (SOHCAHTOA)",
+    "readingMinutes": 10,
+    "videoTitle": "Trigonometry | SOH CAH TOA | Sin, Cos, Tan",
+    "youtubeId": "WFH_7n7hpHo",
+    "videoChannel": "Cognito",
+    "videoDuration": "8:14",
+    "courseMatchSummary": "4 of 4 sections match Cambridge IGCSE Maths (0580)",
+    "timestamps": [
       {
-        id: 'igcse-maths-6-1-c1',
-        title: 'Pythagoras’ Theorem (2D & 3D)',
-        summary: 'Finding sides in 2D right-angled triangles and 3D cuboid diagonals.',
-        bullets: [
-          'In any right-angled triangle, **a² + b² = c²**, where c is always the hypotenuse (longest side opposite the 90° angle).',
-          '**Finding the longest side:** ADD the squares (c = √(a² + b²)). Finding a shorter side: SUBTRACT the squares (a = √(c² − b²)).',
-          '3D Space Diagonal of a cuboid with dimensions l, w, h: d = √(l² + w² + h²). Worked example: For a 6 × 8 × 10 cm box, base diagonal = √(6² + 8²) = 10 cm, space diagonal = √(10² + 10²) = √200 = 10√2 ≈ 14.1 cm.',
-        ],
+        "time": "0:00",
+        "seconds": 0,
+        "label": "Pythagoras & Labelling Right-Angled Triangles",
+        "cardId": "igcse-maths-6-1-c1"
       },
       {
-        id: 'igcse-maths-6-1-c2',
-        title: 'Right-Angled Trigonometry (SOHCAHTOA)',
-        summary: 'Applying SOHCAHTOA and recalling exact trig values for 30°, 45°, and 60°.',
-        bullets: [
-          'Label the 3 sides relative to the target angle θ: Hypotenuse (H, opposite 90°), Opposite (O, across from θ), Adjacent (A, next to θ).',
-          '**SOH:** sin θ = O ÷ H | CAH: cos θ = A ÷ H | TOA: tan θ = O ÷ A.',
-          '**Finding a missing angle:** use inverse functions sin⁻¹, cos⁻¹, or tan⁻¹ on your calculator (always check calculator is in DEGREE mode "D", not radians "R"!).',
-          '**Exact trigonometric values to memorise:** sin 30° = ½, cos 60° = ½, tan 45° = 1, sin 45° = cos 45° = √2/2, sin 60° = cos 30° = √3/2, tan 30° = 1/√3, tan 60° = √3.',
+        "time": "2:50",
+        "seconds": 170,
+        "label": "Finding Missing Sides & Angles with SOHCAHTOA",
+        "cardId": "igcse-maths-6-1-c2"
+      },
+      {
+        "time": "5:35",
+        "seconds": 335,
+        "label": "Exact Trig Values & 3D Trigonometry",
+        "cardId": "igcse-maths-6-1-c3"
+      }
+    ],
+    "cards": [
+      {
+        "id": "igcse-maths-6-1-c1",
+        "title": "Pythagoras’ Theorem & Labelling H, O, A",
+        "summary": "Always identify the hypotenuse opposite the 90° angle before deciding whether to add or subtract squares.",
+        "bullets": [
+          "**Pythagoras’ theorem** - a² + b² = c², where c is the **hypotenuse** (longest side opposite the right angle)."
         ],
-        glossaryPills: [
+        "subsections": [
           {
-            term: 'hypotenuse',
-            definition: 'The longest side of a right-angled triangle, located directly opposite the 90° angle.',
-          },
+            "heading": "SOHCAHTOA Ratios",
+            "bullets": [
+              "**Three ratios** - sin θ = Opposite / Hypotenuse, cos θ = Adjacent / Hypotenuse, tan θ = Opposite / Adjacent.",
+              "**Labelling order** - mark Hypotenuse (opposite 90°), Opposite (across from angle θ), and Adjacent (next to θ)."
+            ],
+            "exampleHeading": "Worked example: Finding a shorter side",
+            "examples": [
+              "Hypotenuse = 13 cm, one side = 5 cm.",
+              "Missing side = √(13² − 5²) = √(169 − 25) = √144 = 12 cm."
+            ]
+          }
         ],
-        memoryAid: 'SOH-CAH-TOA + exact sin table: sin(0°, 30°, 45°, 60°, 90°) = √0/2, √1/2, √2/2, √3/2, √4/2!',
+        "glossaryPills": [
+          {
+            "term": "hypotenuse",
+            "definition": "The longest side of a right-angled triangle, always located opposite the 90° angle."
+          }
+        ],
+        "diagram": "right-triangle-trig",
+        "memoryAid": "SOH CAH TOA: Sin = Opp/Hyp, Cos = Adj/Hyp, Tan = Opp/Adj."
       },
       {
-        id: 'igcse-maths-6-1-c3',
-        title: 'Angles of Elevation, Depression & 3D Trigonometry',
-        summary: 'Solving angles of elevation, depression, and 3D line-to-plane angles.',
-        bullets: [
-          'Angle of elevation is measured UPWARD from the horizontal; angle of depression is measured DOWNWARD from the horizontal (they are equal alternate Z-angles!).',
-          'For 3D trigonometry (angle between a line and a plane): drop a **perpendicular** from the top endpoint straight down onto the plane, draw the right-angled triangle on the base, find the base diagonal with Pythagoras, then use tan θ = vertical height ÷ base diagonal.',
-          'Keep UNROUNDED intermediate values in your calculator memory (or exact surd form like √100) until the final answer to avoid premature rounding error!',
+        "id": "igcse-maths-6-1-c2",
+        "title": "Angles of Elevation/Depression & Inverse Trig",
+        "summary": "Use sin⁻¹, cos⁻¹, or tan⁻¹ to find unknown angles and check your calculator is in DEG mode.",
+        "bullets": [
+          "**Finding an angle** - write the ratio first, then apply the inverse trig function (e.g. θ = tan⁻¹(O/A))."
         ],
-        commonMistake: 'Angle of depression is measured from the HORIZONTAL down to the line of sight — NEVER from the vertical cliff wall!',
+        "subsections": [
+          {
+            "heading": "Elevation vs Depression",
+            "bullets": [
+              "**Angle of elevation** - measured UPWARDS from the horizontal.",
+              "**Angle of depression** - measured DOWNWARDS from the horizontal (equal to the alternate angle of elevation from the target!)."
+            ],
+            "exampleHeading": "Worked example: Finding angle of elevation of a 12 m tower from 18 m away",
+            "examples": [
+              "Opposite = 12 m, Adjacent = 18 m → tan θ = 12/18 = 2/3.",
+              "θ = tan⁻¹(2/3) = 33.7° (1 d.p.)."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "angle of elevation",
+            "definition": "The upward angle between a horizontal line of sight and a line looking up to an object."
+          }
+        ]
       },
+      {
+        "id": "igcse-maths-6-1-c3",
+        "title": "Exact Trig Values & 3D Pythagoras / Trigonometry",
+        "summary": "Know exact values for 0°, 30°, 45°, 60°, 90° and extract 2D right-angled slices from 3D cuboids.",
+        "bullets": [
+          "**Exact non-calculator values** - sin 30° = ½, cos 60° = ½, tan 45° = 1, sin 60° = √3/2, cos 30° = √3/2, sin 45° = cos 45° = √2/2."
+        ],
+        "subsections": [
+          {
+            "heading": "3D Cuboid Diagonals & Line-to-Plane Angles",
+            "bullets": [
+              "**3D space diagonal** - d = √(l² + w² + h²).",
+              "**Angle between a line and a plane** - drop a perpendicular from the top point straight down onto the plane to form a 2D right-angled triangle."
+            ],
+            "exampleHeading": "Worked example: Space diagonal of a 6 × 8 × 10 cm cuboid",
+            "examples": [
+              "Base diagonal = √(6² + 8²) = 10 cm.",
+              "Space diagonal = √(10² + 10²) = √200 = 10√2 ≈ 14.1 cm; angle to base = tan⁻¹(10/10) = 45°."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "space diagonal",
+            "definition": "The longest straight line connecting two opposite corners through the interior of a 3D cuboid."
+          }
+        ],
+        "commonMistake": "Never round intermediate base-diagonal lengths in 3D trigonometry — keep exact surds (like √100) or full calculator precision until the final answer."
+      }
     ],
-    keyTerms: [
-      { term: 'Hypotenuse', definition: 'Longest side of a right-angled triangle, opposite the right angle.' },
-      { term: 'Angle of elevation', definition: 'Angle measured upward from a horizontal line to an observer’s line of sight.' },
+    "checklistPoints": [
+      "Select SOH, CAH, or TOA accurately and solve for sides when the unknown is in the denominator",
+      "Recall exact values of sin, cos, and tan for 0°, 30°, 45°, 60°, and 90°",
+      "Extract right-angled triangles from 3D shapes to compute space diagonals and line-plane angles"
     ],
-    checklistPoints: [
-      'Apply Pythagoras in 2D and 3D cuboids/pyramids.',
-      'Find missing sides and angles using SOHCAHTOA and recall exact trig values for 30°, 45°, and 60°.',
-      'Solve 3D angle-between-line-and-plane problems without premature rounding.',
-    ],
+    "keyTerms": [
+      {
+        "term": "Hypotenuse",
+        "definition": "The longest side of a right-angled triangle, always located opposite the 90° angle."
+      },
+      {
+        "term": "Angle of elevation",
+        "definition": "The upward angle between a horizontal line of sight and a line looking up to an object."
+      },
+      {
+        "term": "Space diagonal",
+        "definition": "The longest straight line connecting two opposite corners through the interior of a 3D cuboid."
+      },
+      {
+        "term": "Pythagoras’ Theorem & Labelling H, O, A",
+        "definition": "Always identify the hypotenuse opposite the 90° angle before deciding whether to add or subtract squares."
+      }
+    ]
   },
-  'igcse-maths-6-2': {
-    subtopicId: 'igcse-maths-6-2',
-    subtopicCode: '6.2',
-    subtopicTitle: 'Sine Rule, Cosine Rule & Area of Non-Right-Angled Triangles',
-    readingMinutes: 11,
-    videoTitle: 'The Sine Rule - GCSE Higher Maths',
-    youtubeId: '7xeLeDulY60',
-    videoChannel: '1st Class Maths',
-    videoDuration: '13:46',
-    courseMatchSummary: '4 of 4 sections match Cambridge IGCSE Maths (0580)',
-    timestamps: [
-      { time: '0:00', seconds: 0, label: 'Introduction', cardId: 'igcse-maths-6-2-c1' },
-      { time: '1:10', seconds: 70, label: 'Example 1: Finding a Missing Side', cardId: 'igcse-maths-6-2-c1' },
-      { time: '5:47', seconds: 347, label: 'Example 3: Finding a Missing Angle', cardId: 'igcse-maths-6-2-c1' },
-      { time: '9:23', seconds: 563, label: 'Example 5: The Ambiguous Case', cardId: 'igcse-maths-6-2-c1' },
-    ],
-    cards: [
+  "igcse-maths-6-2": {
+    "subtopicId": "igcse-maths-6-2",
+    "subtopicCode": "6.2",
+    "subtopicTitle": "Sine Rule, Cosine Rule & Area of Non-Right-Angled Triangles",
+    "readingMinutes": 11,
+    "videoTitle": "The Sine Rule - GCSE Higher Maths",
+    "youtubeId": "7xeLeDulY60",
+    "videoChannel": "1st Class Maths",
+    "videoDuration": "13:46",
+    "courseMatchSummary": "4 of 4 sections match Cambridge IGCSE Maths (0580)",
+    "timestamps": [
       {
-        id: 'igcse-maths-6-2-c1',
-        title: 'The Sine Rule (and Ambiguous Case)',
-        summary: 'Using the Sine Rule for opposite pairs and checking the obtuse case.',
-        bullets: [
-          'Use the **Sine Rule** whenever you have a MATCHING OPPOSITE PAIR (one side and its opposite angle):',
-          '**For a missing side:** a / sin A = b / sin B = c / sin C. For a missing angle: sin A / a = sin B / b (put the unknown on TOP!).',
-          '**Worked example:** Side a = 9 cm opposite A = 40°, find side b opposite B = 75° → b = (9 × sin 75°) ÷ sin 40° = 13.5 cm (3 s.f.).',
-          'Ambiguous (obtuse) case: Because sin(180° − θ) = sin θ, if a question specifies an OBTUSE angle, subtract your calculator’s acute sin⁻¹ result from 180°!',
+        "time": "0:00",
+        "seconds": 0,
+        "label": "The Sine Rule & Ambiguous Case",
+        "cardId": "igcse-maths-6-2-c1"
+      },
+      {
+        "time": "4:45",
+        "seconds": 285,
+        "label": "The Cosine Rule (Sides & Angles)",
+        "cardId": "igcse-maths-6-2-c2"
+      },
+      {
+        "time": "9:30",
+        "seconds": 570,
+        "label": "Triangle Area ½ab sin C & Trig Equations",
+        "cardId": "igcse-maths-6-2-c3"
+      }
+    ],
+    "cards": [
+      {
+        "id": "igcse-maths-6-2-c1",
+        "title": "The Sine Rule & Ambiguous Case",
+        "summary": "Use the Sine Rule whenever you have a known opposite side–angle pair, and watch for obtuse solutions.",
+        "bullets": [
+          "**Sine rule** - a / sin A = b / sin B = c / sin C (flip it to sin A / a = sin B / b when finding an angle)."
         ],
-        glossaryPills: [
+        "subsections": [
           {
-            term: 'obtuse',
-            definition: 'An angle strictly greater than 90° and less than 180°.',
-          },
+            "heading": "The Ambiguous Case (Obtuse Angles)",
+            "bullets": [
+              "**Two possible angles** - since sin(180° − θ) = sin θ, your calculator returns the acute angle θ, so check whether the obtuse angle (180° − θ) is needed."
+            ],
+            "exampleHeading": "Worked example: Finding side a when b = 10 cm, B = 40°, A = 65°",
+            "examples": [
+              "a / sin 65° = 10 / sin 40°.",
+              "a = 10 × sin 65° / sin 40° = 14.1 cm (3 s.f.)."
+            ]
+          }
         ],
+        "glossaryPills": [
+          {
+            "term": "sine rule",
+            "definition": "The relation a / sin A = b / sin B = c / sin C connecting side lengths to the sines of their opposite angles in any triangle."
+          }
+        ]
       },
       {
-        id: 'igcse-maths-6-2-c2',
-        title: 'The Cosine Rule',
-        summary: 'Applying the Cosine Rule for SAS and SSS non-right-angled triangles.',
-        bullets: [
-          'Use the **Cosine Rule** when you do NOT have an opposite pair: either SAS (two sides and the INCLUDED angle between them) or SSS (all three sides known).',
-          '**Finding a missing side (SAS):** **a² = b² + c² − 2bc cos A** (remember to take the square root at the end!).',
-          '**Finding a missing angle (SSS):** cos A = (b² + c² − a²) ÷ (2bc). Note: if cos A is negative, cos⁻¹ automatically gives the correct obtuse angle!',
-          '**Worked example:** b = 7 cm, c = 10 cm, included angle A = 60°. a² = 49 + 100 − 2(7)(10) cos 60° = 149 − 70 = 79 → a = √79 ≈ 8.89 cm.',
+        "id": "igcse-maths-6-2-c2",
+        "title": "The Cosine Rule (SAS and SSS)",
+        "summary": "Use the Cosine Rule with two sides and the included angle (SAS) or all three sides (SSS).",
+        "bullets": [
+          "**Finding a side** - a² = b² + c² − 2bc cos A."
         ],
-        commonMistake: 'When calculating a² = b² + c² − 2bc cos A, NEVER subtract 2bc before multiplying by cos A (respect BIDMAS) and NEVER forget to square root a²!',
+        "subsections": [
+          {
+            "heading": "Rearranging to Find an Angle",
+            "bullets": [
+              "**Finding an angle** - cos A = (b² + c² − a²) / (2bc), where side a is OPPOSITE angle A.",
+              "**Obtuse angles automatically** - if cos A is negative, cos⁻¹ automatically gives the correct obtuse angle (> 90°)."
+            ],
+            "exampleHeading": "Worked example: Side a with b = 7 cm, c = 9 cm, included angle A = 60°",
+            "examples": [
+              "a² = 7² + 9² − 2(7)(9) cos 60° = 49 + 81 − 63 = 67.",
+              "a = √67 = 8.19 cm (3 s.f.)."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "cosine rule",
+            "definition": "The formula a² = b² + c² − 2bc cos A used to find missing sides or angles in non-right-angled triangles without a matching opposite pair."
+          }
+        ],
+        "memoryAid": "Have a matching opposite pair? SINE rule. Have SAS (sandwich) or SSS? COSINE rule!"
       },
       {
-        id: 'igcse-maths-6-2-c3',
-        title: 'Area of Any Triangle & Solving Trig Equations (0° ≤ x ≤ 360°)',
-        summary: 'Calculating triangle area via ½ab sin C and solving 0°–360° trig equations.',
-        bullets: [
-          'Area of any triangle using two sides and their INCLUDED angle: **Area = ½ × a × b × sin C**.',
-          'Trigonometric symmetry on 0° ≤ x ≤ 360° (Extended):',
-          'For sin x = k: second solution is 180° − x₁ (positive in Q1 & Q2). Example: sin x = 0.5 → x = 30° and 150°.',
-          'For cos x = k: second solution is 360° − x₁ (positive in Q1 & Q4). Example: cos x = 0.5 → x = 60° and 300°.',
-          'For tan x = k: repeats every 180°, so add 180° (positive in Q1 & Q3). Example: tan x = 1 → x = 45° and 225°.',
+        "id": "igcse-maths-6-2-c3",
+        "title": "Area Formula ½ab sin C & Solving Trig Equations (0°–360°)",
+        "summary": "Compute non-right triangle area from two sides and their included angle, and use graph symmetry for trig equations.",
+        "bullets": [
+          "**Area of any triangle** - Area = ½ab sin C, where C MUST be the angle trapped between sides a and b."
         ],
-        memoryAid: 'Decision tree: Right-angled? → SOHCAHTOA. Opposite side-angle pair? → Sine Rule. SAS or SSS? → Cosine Rule!',
+        "subsections": [
+          {
+            "heading": "Trig Graphs & Multiple Solutions in 0° ≤ x ≤ 360°",
+            "bullets": [
+              "**Sine symmetry** - sin(180° − x) = sin x.",
+              "**Cosine symmetry** - cos(360° − x) = cos x.",
+              "**Tangent period** - repeats every 180°, so tan(x + 180°) = tan x."
+            ],
+            "exampleHeading": "Worked example: Solve sin x = 0.5 for 0° ≤ x ≤ 360°",
+            "examples": [
+              "Principal value: x₁ = sin⁻¹(0.5) = 30°.",
+              "Second solution using sine symmetry: x₂ = 180° − 30° = 150°."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "included angle",
+            "definition": "The angle formed directly between two specified sides of a triangle."
+          }
+        ],
+        "commonMistake": "In the Cosine Rule a² = b² + c² − 2bc cos A, never forget to take the SQUARE ROOT at the end to find a, and respect BIDMAS around the minus sign!"
+      }
+    ],
+    "checklistPoints": [
+      "Choose immediately between Sine Rule (matching pair) and Cosine Rule (SAS / SSS)",
+      "Identify obtuse solutions in the ambiguous Sine Rule case",
+      "Apply Area = ½ab sin C and find all solutions of sin/cos/tan equations in 0°–360°"
+    ],
+    "keyTerms": [
+      {
+        "term": "Sine rule",
+        "definition": "The relation a / sin A = b / sin B = c / sin C connecting side lengths to the sines of their opposite angles in any triangle."
       },
-    ],
-    keyTerms: [
-      { term: 'Sine Rule', definition: 'a / sin A = b / sin B = c / sin C for any triangle.' },
-      { term: 'Cosine Rule', definition: 'a² = b² + c² − 2bc cos A (used for SAS or SSS non-right-angled triangles).' },
-    ],
-    checklistPoints: [
-      'Choose correctly between SOHCAHTOA, Sine Rule, and Cosine Rule.',
-      'Calculate triangle area using ½ab sin C and handle obtuse angles in the Sine Rule.',
-      'Solve trigonometric equations over 0° ≤ x ≤ 360° using graph symmetry.',
-    ],
+      {
+        "term": "Cosine rule",
+        "definition": "The formula a² = b² + c² − 2bc cos A used to find missing sides or angles in non-right-angled triangles without a matching opposite pair."
+      },
+      {
+        "term": "Included angle",
+        "definition": "The angle formed directly between two specified sides of a triangle."
+      },
+      {
+        "term": "The Sine Rule & Ambiguous Case",
+        "definition": "Use the Sine Rule whenever you have a known opposite side–angle pair, and watch for obtuse solutions."
+      }
+    ]
   },
-  'igcse-maths-7-1': {
-    subtopicId: 'igcse-maths-7-1',
-    subtopicCode: '7.1',
-    subtopicTitle: 'Column Vectors, Vector Geometry & Transformations',
-    readingMinutes: 10,
-    videoTitle: 'Vectors - GCSE Higher Maths',
-    youtubeId: 'PxDfkq3FMaw',
-    videoChannel: '1st Class Maths',
-    videoDuration: '28:33',
-    courseMatchSummary: '4 of 4 sections match Cambridge IGCSE Maths (0580)',
-    timestamps: [
-      { time: '0:00', seconds: 0, label: 'Intro', cardId: 'igcse-maths-7-1-c1' },
-      { time: '3:45', seconds: 225, label: 'Example 1: Finding Vectors', cardId: 'igcse-maths-7-1-c1' },
-      { time: '18:15', seconds: 1095, label: 'Example 4: Showing Vectors are Parallel', cardId: 'igcse-maths-7-1-c2' },
-      { time: '24:21', seconds: 1461, label: 'Example 6: Equating Coefficients', cardId: 'igcse-maths-7-1-c2' },
-    ],
-    cards: [
+  "igcse-maths-7-1": {
+    "subtopicId": "igcse-maths-7-1",
+    "subtopicCode": "7.1",
+    "subtopicTitle": "Column Vectors, Vector Geometry & Transformations",
+    "readingMinutes": 10,
+    "videoTitle": "Vectors - GCSE Higher Maths",
+    "youtubeId": "PxDfkq3FMaw",
+    "videoChannel": "1st Class Maths",
+    "videoDuration": "28:33",
+    "courseMatchSummary": "4 of 4 sections match Cambridge IGCSE Maths (0580)",
+    "timestamps": [
       {
-        id: 'igcse-maths-7-1-c1',
-        title: 'Column Vectors & Magnitude',
-        summary: 'Adding, scaling, and finding magnitudes of 2D column vectors.',
-        bullets: [
-          'A column vector (x / y) represents horizontal shift x (right +, left −) and vertical shift y (up +, down −).',
-          'Magnitude (length) of vector v = (x / y) is |v| = √(x² + y²). Example: |(3 / −4)| = √(3² + (−4)²) = √25 = 5.',
-          '**Vector algebra:** Add/subtract components directly; multiply both components by any scalar k. Reversing direction negates the vector: BA = −AB.',
-        ],
+        "time": "0:00",
+        "seconds": 0,
+        "label": "Column Vectors & Magnitude",
+        "cardId": "igcse-maths-7-1-c1"
       },
       {
-        id: 'igcse-maths-7-1-c2',
-        title: 'Vector Geometry, Parallelism & Collinearity Proofs',
-        summary: 'Expressing geometric paths and proving parallel vectors or collinear points.',
-        bullets: [
-          '**Triangle rule for paths:** To travel from A to C via O, write AC = AO + OC = −OA + OC = c − a ("destination minus start").',
-          '**Dividing a line in ratio m :** n: If point P divides AB in ratio 2 : 3, then AP = (2/5)AB and OP = OA + (2/5)AB.',
-          '**Proving two vectors are PARALLEL:** Show that one vector is a non-zero scalar multiple of the other (e.g., XY = 3(a + b) and PQ = 2(a + b), so XY = 1.5 PQ → parallel).',
-          'Proving three points A, B, C are COLLINEAR (on one straight line): Show that AB and BC are **parallel** (scalar multiples) AND state that they share the common point B!',
+        "time": "9:30",
+        "seconds": 570,
+        "label": "Vector Geometry, Parallelism & Collinearity",
+        "cardId": "igcse-maths-7-1-c2"
+      },
+      {
+        "time": "19:00",
+        "seconds": 1140,
+        "label": "Describing the Four Transformations",
+        "cardId": "igcse-maths-7-1-c3"
+      }
+    ],
+    "cards": [
+      {
+        "id": "igcse-maths-7-1-c1",
+        "title": "Column Vectors & Magnitude",
+        "summary": "Top entry moves horizontally (x), bottom entry moves vertically (y), and Pythagoras gives vector length.",
+        "bullets": [
+          "**Column vector (x, y)** - add/subtract components separately and multiply both entries by a scalar k."
         ],
-        glossaryPills: [
+        "subsections": [
           {
-            term: 'collinear',
-            definition: 'Three or more points that all lie along the exact same straight line.',
-          },
+            "heading": "Magnitude & Position Vectors",
+            "bullets": [
+              "**Magnitude |a|** - length of vector (x, y) is √(x² + y²), always positive.",
+              "**Vector between two points** - AB = b − a (End minus Start)."
+            ],
+            "exampleHeading": "Worked example: Magnitude of a = (6, −8)",
+            "examples": [
+              "|a| = √(6² + (−8)²) = √(36 + 64) = √100 = 10."
+            ]
+          }
         ],
-        commonMistake: 'Showing AB = k·BC alone only proves parallelism — you MUST add the sentence "and they share the common point B, therefore A, B, and C are collinear" to earn the final proof mark!',
+        "glossaryPills": [
+          {
+            "term": "magnitude",
+            "definition": "The length (size) of a vector, calculated via Pythagoras √(x² + y²)."
+          }
+        ]
       },
       {
-        id: 'igcse-maths-7-1-c3',
-        title: 'The Four Geometric Transformations',
-        summary: 'Describing translations, reflections, rotations, and fractional/negative enlargements.',
-        bullets: [
-          'When describing a single transformation fully, always state the EXACT required details:',
-          '**Translation:** state "Translation" + column vector (x / y).',
-          '**Reflection:** state "Reflection" + exact equation of the mirror line (e.g., y = x, x = −1, y = 2).',
-          '**Rotation:** state "Rotation" + angle (90°, 180°, 270°) + direction (clockwise/anticlockwise, not needed for 180°) + centre of rotation (x, y).',
-          '**Enlargement:** state "Enlargement" + scale factor k (fractional shrinks; negative inverts through centre!) + centre of enlargement (x, y) found by joining corresponding vertices with straight rays.',
+        "id": "igcse-maths-7-1-c2",
+        "title": "Vector Geometry: Parallel & Collinear Proofs",
+        "summary": "Show one vector is a scalar multiple of another to prove parallelism, and note a shared point for collinearity.",
+        "bullets": [
+          "**Route building** - reverse a vector by negating it (BA = −AB) and chain known paths (AC = AB + BC)."
         ],
-        memoryAid: 'Never describe a single transformation using TWO combined moves — if the exam says "single transformation", check whether it is a single rotation or negative enlargement!',
+        "subsections": [
+          {
+            "heading": "Proving Parallel Lines & Collinear Points",
+            "bullets": [
+              "**Parallel vectors** - if PQ = k × RS for some constant k, then PQ is parallel to RS and |PQ| = |k| × |RS|.",
+              "**Collinear points A, B, C** - show AB = k × BC AND explicitly state they share the common point B."
+            ],
+            "exampleHeading": "Worked example: Proving A, B, C are collinear",
+            "examples": [
+              "Suppose AB = 2a + 4b and AC = 3a + 6b = 1.5(2a + 4b) = 1.5 AB.",
+              "Since AC is a scalar multiple of AB and both share point A, A, B, and C lie on a straight line."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "collinear",
+            "definition": "Lying on the exact same straight line."
+          }
+        ],
+        "memoryAid": "Collinear proof needs TWO ingredients: Scalar Multiple + Shared Point!"
       },
+      {
+        "id": "igcse-maths-7-1-c3",
+        "title": "The Four Single Transformations",
+        "summary": "Always state the exact mandatory details for Translation, Reflection, Rotation, or Enlargement.",
+        "bullets": [
+          "**Translation** - state \"Translation\" + column vector (x, y).",
+          "**Reflection** - state \"Reflection\" + equation of the mirror line (e.g. y = x, x = 2)."
+        ],
+        "subsections": [
+          {
+            "heading": "Rotation & Enlargement (Including Negative Scale Factors)",
+            "bullets": [
+              "**Rotation** - state \"Rotation\", angle (e.g. 90°), direction (clockwise/anticlockwise, except 180°), and centre (x, y).",
+              "**Enlargement** - state \"Enlargement\", scale factor k, and centre (x, y). A negative k inverts the shape on the opposite side of the centre; fractional |k| < 1 shrinks it."
+            ],
+            "exampleHeading": "Worked example: Enlargement by scale factor −2 about (0, 0)",
+            "examples": [
+              "Vertex at (2, 1) multiplies by −2 → image vertex at (−4, −2).",
+              "The image is twice as large and rotated 180° through the centre (0, 0)."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "enlargement",
+            "definition": "A transformation that scales every distance from a fixed centre by a scale factor k (preserving angles)."
+          }
+        ],
+        "commonMistake": "When asked to describe a SINGLE transformation, never combine two (e.g. \"translate and reflect\") — you will score zero marks!"
+      }
     ],
-    keyTerms: [
-      { term: 'Position vector', definition: 'Vector OA starting at the origin O(0, 0) and ending at point A.' },
-      { term: 'Collinear points', definition: 'Points lying on the same straight line (parallel connecting vectors sharing a common point).' },
-      { term: 'Negative scale factor', definition: 'Enlargement that projects the image on the opposite side of the centre of enlargement, inverted by 180°.' },
+    "checklistPoints": [
+      "Calculate column vector combinations and magnitudes using √(x² + y²)",
+      "Prove two lines are parallel (scalar multiple) or three points are collinear (scalar multiple + common point)",
+      "State all mandatory geometric details when describing each of the 4 single transformations"
     ],
-    checklistPoints: [
-      'Calculate vector magnitudes and express geometric paths using ratio fractions.',
-      'Write formal proofs for parallel vectors and collinear points.',
-      'Describe and perform translations, reflections, rotations, and positive/fractional/negative enlargements.',
-    ],
+    "keyTerms": [
+      {
+        "term": "Magnitude",
+        "definition": "The length (size) of a vector, calculated via Pythagoras √(x² + y²)."
+      },
+      {
+        "term": "Collinear",
+        "definition": "Lying on the exact same straight line."
+      },
+      {
+        "term": "Enlargement",
+        "definition": "A transformation that scales every distance from a fixed centre by a scale factor k (preserving angles)."
+      },
+      {
+        "term": "Collinear Points",
+        "definition": "Three or more points lying on the same straight line (proved via scalar multiple + shared point)."
+      }
+    ]
   },
-  'igcse-maths-8-1': {
-    subtopicId: 'igcse-maths-8-1',
-    subtopicCode: '8.1',
-    subtopicTitle: 'Probability Trees, Venn Diagrams & Conditional Probability',
-    readingMinutes: 10,
-    videoTitle: 'Venn Diagrams & Set Theory | GCSE Maths Tutor',
-    youtubeId: 'xPPBM7MM8-I',
-    videoChannel: 'The GCSE Maths Tutor',
-    videoDuration: '17:58',
-    courseMatchSummary: '4 of 4 sections match Cambridge IGCSE Maths (0580)',
-    timestamps: [
-      { time: '0:00', seconds: 0, label: 'Introduction to Venn Diagrams & Set Notation', cardId: 'igcse-maths-8-1-c3' },
-      { time: '4:00', seconds: 240, label: 'Union, Intersection & Complement', cardId: 'igcse-maths-8-1-c3' },
-      { time: '9:20', seconds: 560, label: 'Completing Venn Diagrams from Data', cardId: 'igcse-maths-8-1-c3' },
-      { time: '13:40', seconds: 820, label: 'Conditional Probability from Venn Diagrams', cardId: 'igcse-maths-8-1-c2' },
+  "igcse-maths-8-1": {
+    "subtopicId": "igcse-maths-8-1",
+    "subtopicCode": "8.1",
+    "subtopicTitle": "Probability Trees, Venn Diagrams & Conditional Probability",
+    "readingMinutes": 10,
+    "videoTitle": "Venn Diagrams & Set Theory | GCSE Maths Tutor",
+    "youtubeId": "xPPBM7MM8-I",
+    "videoChannel": "The GCSE Maths Tutor",
+    "videoDuration": "17:58",
+    "courseMatchSummary": "4 of 4 sections match Cambridge IGCSE Maths (0580)",
+    "timestamps": [
+      {
+        "time": "0:00",
+        "seconds": 0,
+        "label": "Set Notation & Venn Diagrams",
+        "cardId": "igcse-maths-8-1-c1"
+      },
+      {
+        "time": "6:00",
+        "seconds": 360,
+        "label": "Tree Diagrams & Dependent Events",
+        "cardId": "igcse-maths-8-1-c2"
+      },
+      {
+        "time": "12:00",
+        "seconds": 720,
+        "label": "Conditional Probability P(A | B)",
+        "cardId": "igcse-maths-8-1-c3"
+      }
     ],
-    cards: [
+    "cards": [
       {
-        id: 'igcse-maths-8-1-c1',
-        title: 'Probability Rules & Tree Diagrams',
-        summary: 'Applying AND/OR rules and 1 − P(none) on independent probability trees.',
-        bullets: [
-          'Every set of branches radiating from a single node MUST sum to 1 (P(A′) = 1 − P(A)).',
-          'Multiply ALONG the branches for "AND" (consecutive events): P(A and B) = P(A) × P(B | A).',
-          'ADD down the final outcome column for "OR" (mutually exclusive routes): P(exactly one win) = P(W, L) + P(L, W).',
-          'Shortcut for "at least one": P(at least one) = 1 − P(none). Always faster and less error-prone!',
+        "id": "igcse-maths-8-1-c1",
+        "title": "Set Notation & Venn Diagrams",
+        "summary": "Fill the central intersection first and master ∩ (AND), ∪ (OR), and A′ (NOT A).",
+        "bullets": [
+          "**Set symbols** - A ∩ B means both A AND B; A ∪ B means A OR B (or both); A′ means NOT in A; ξ is the universal set; n(A) is the number of elements in A."
         ],
-        memoryAid: 'Multiply ACROSS (AND), Add DOWN (OR)!',
-      },
-      {
-        id: 'igcse-maths-8-1-c2',
-        title: 'Conditional Probability (Without Replacement)',
-        summary: 'Updating fractions cleanly on without-replacement conditional trees.',
-        bullets: [
-          'When items are drawn WITHOUT replacement, both the denominator and the chosen colour’s numerator decrease by 1 on the second branch.',
-          '**Worked example:** A bag has 4 red and 6 blue counters (10 total). Two are picked without replacement. P(both red) = (4/10) × (3/9) = 12/90 = 2/15.',
-          'P(different colours) = P(R, B) + P(B, R) = (4/10)(6/9) + (6/10)(4/9) = 48/90 = 8/15.',
-        ],
-        commonMistake: 'When finding "one red and one blue" without replacement, DO NOT forget there are TWO orderings (Red then Blue OR Blue then Red) — add both paths!',
-      },
-      {
-        id: 'igcse-maths-8-1-c3',
-        title: 'Venn Diagrams & Set Notation',
-        summary: 'Filling Venn diagrams from the overlap and calculating P(A | B).',
-        bullets: [
-          '**Key set notation:** A ∩ B (intersection: in BOTH A and B); A ∪ B (union: in A, or B, or both); A′ (complement: NOT in A); n(A) = number of elements in A.',
-          'Always fill the INTERSECTION (overlap) FIRST when populating a Venn diagram, then subtract the overlap from each individual circle’s total!',
-          'Conditional probability from a Venn diagram: P(A | B) = "probability of A GIVEN B" = n(A ∩ B) ÷ n(B). Only divide by the restricted total n(B), NOT the universal set!',
-        ],
-        glossaryPills: [
+        "subsections": [
           {
-            term: 'conditional probability',
-            definition: 'The probability of event A occurring given that event B is already known to have occurred: P(A | B) = P(A ∩ B) ÷ P(B).',
+            "heading": "Populating a Venn Diagram Accurately",
+            "bullets": [
+              "**Start in the middle** - always enter the intersection n(A ∩ B) first, then subtract it from n(A) and n(B) for the \"only\" crescents.",
+              "**Outside region** - subtract the union from the universal total n(ξ) to find n((A ∪ B)′)."
+            ],
+            "exampleHeading": "Worked example: 30 students; 18 take French, 15 take Spanish, 7 take both",
+            "examples": [
+              "French only = 18 − 7 = 11; Spanish only = 15 − 7 = 8; Neither = 30 − (11 + 7 + 8) = 4.",
+              "P(French or Spanish) = 26/30 = 13/15."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "intersection",
+            "definition": "The set A ∩ B of elements belonging to both set A and set B simultaneously."
           },
           {
-            term: 'intersection',
-            definition: 'The overlap region A ∩ B containing elements that belong to both set A and set B simultaneously.',
-          },
+            "term": "union",
+            "definition": "The set A ∪ B of elements belonging to set A, set B, or both."
+          }
         ],
+        "memoryAid": "∪ looks like U for Union (Unite everything); ∩ looks like an arch/n for iNtersection (AND)."
       },
+      {
+        "id": "igcse-maths-8-1-c2",
+        "title": "Probability Tree Diagrams (With & Without Replacement)",
+        "summary": "Multiply along branches for AND, add between separate winning paths for OR, and reduce denominators without replacement.",
+        "bullets": [
+          "**Branch rules** - probabilities on any pair of branches from a single node always sum to 1; multiply along paths (AND); add separate outcomes (OR)."
+        ],
+        "subsections": [
+          {
+            "heading": "Without Replacement (Dependent Events)",
+            "bullets": [
+              "**Adjust second branches** - when an item is NOT replaced, the total denominator decreases by 1 AND the chosen colour numerator decreases by 1 on that branch.",
+              "**At least one shortcut** - P(at least one) = 1 − P(none)."
+            ],
+            "exampleHeading": "Worked example: 3 red and 5 blue beads; two picked without replacement",
+            "examples": [
+              "P(both red) = (3/8) × (2/7) = 6/56 = 3/28.",
+              "P(different colours) = (3/8 × 5/7) + (5/8 × 3/7) = 30/56 = 15/28."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "independent events",
+            "definition": "Events where the outcome of one has zero effect on the probability of the other, so P(A and B) = P(A) × P(B)."
+          }
+        ]
+      },
+      {
+        "id": "igcse-maths-8-1-c3",
+        "title": "Conditional Probability P(A | B)",
+        "summary": "Restrict your sample space strictly to the given condition B when calculating P(A | B).",
+        "bullets": [
+          "**Conditional probability formula** - P(A | B) = P(A ∩ B) / P(B), read as \"probability of A given B\"."
+        ],
+        "subsections": [
+          {
+            "heading": "Reading Conditional Probabilities from Venn Diagrams",
+            "bullets": [
+              "**New denominator** - when told \"given the student studies Spanish\", ignore everyone outside circle S; the denominator becomes n(S), not n(ξ)."
+            ],
+            "exampleHeading": "Worked example: Using the 30-student Venn diagram above",
+            "examples": [
+              "Find P(French | Spanish): 15 students take Spanish, and 7 of those also take French.",
+              "P(French | Spanish) = 7 / 15."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "conditional probability",
+            "definition": "The probability of an event A occurring given that another event B has already occurred."
+          }
+        ],
+        "commonMistake": "For \"given B\" questions, never leave the denominator as the grand total — always shrink the denominator to the size of the given group B!"
+      }
     ],
-    keyTerms: [
-      { term: 'Mutually exclusive', definition: 'Events that cannot happen at the same time, so P(A ∩ B) = 0 and P(A or B) = P(A) + P(B).' },
-      { term: 'Independent events', definition: 'Events where the outcome of one does not affect the probability of the other: P(A ∩ B) = P(A) × P(B).' },
-      { term: 'Conditional probability', definition: 'Probability of A given B has happened: P(A | B) = n(A ∩ B) ÷ n(B).' },
+    "checklistPoints": [
+      "Construct Venn diagrams from the intersection outwards and read ∩, ∪, and complement notation",
+      "Draw and solve tree diagrams both with and without replacement",
+      "Restrict the denominator accurately for conditional probabilities P(A | B)"
     ],
-    checklistPoints: [
-      'Construct and evaluate both independent and without-replacement probability trees.',
-      'Use P(at least one) = 1 − P(none) cleanly.',
-      'Interpret Venn diagrams, set notation (∩, ∪, ′), and conditional probabilities P(A | B).',
-    ],
+    "keyTerms": [
+      {
+        "term": "Intersection",
+        "definition": "The set A ∩ B of elements belonging to both set A and set B simultaneously."
+      },
+      {
+        "term": "Union",
+        "definition": "The set A ∪ B of elements belonging to set A, set B, or both."
+      },
+      {
+        "term": "Independent events",
+        "definition": "Events where the outcome of one has zero effect on the probability of the other, so P(A and B) = P(A) × P(B)."
+      },
+      {
+        "term": "Conditional probability",
+        "definition": "The probability of an event A occurring given that another event B has already occurred."
+      }
+    ]
   },
-  'igcse-maths-8-2': {
-    subtopicId: 'igcse-maths-8-2',
-    subtopicCode: '8.2',
-    subtopicTitle: 'Averages, Cumulative Frequency, Box Plots & Histograms',
-    readingMinutes: 11,
-    videoTitle: 'Drawing Histograms - GCSE Higher Maths',
-    youtubeId: 'g7Jnrf0g2tQ',
-    videoChannel: '1st Class Maths',
-    videoDuration: '4:58',
-    courseMatchSummary: '4 of 4 sections match Cambridge IGCSE Maths (0580)',
-    timestamps: [
-      { time: '0:00', seconds: 0, label: 'Introduction', cardId: 'igcse-maths-8-2-c3' },
-      { time: '0:18', seconds: 18, label: 'What is Class Width?', cardId: 'igcse-maths-8-2-c3' },
-      { time: '2:17', seconds: 137, label: 'Drawing the Histogram', cardId: 'igcse-maths-8-2-c3' },
-      { time: '4:15', seconds: 255, label: 'Review of Steps', cardId: 'igcse-maths-8-2-c3' },
-    ],
-    cards: [
+  "igcse-maths-8-2": {
+    "subtopicId": "igcse-maths-8-2",
+    "subtopicCode": "8.2",
+    "subtopicTitle": "Averages, Cumulative Frequency, Box Plots & Histograms",
+    "readingMinutes": 11,
+    "videoTitle": "Drawing Histograms - GCSE Higher Maths",
+    "youtubeId": "g7Jnrf0g2tQ",
+    "videoChannel": "1st Class Maths",
+    "videoDuration": "4:58",
+    "courseMatchSummary": "4 of 4 sections match Cambridge IGCSE Maths (0580)",
+    "timestamps": [
       {
-        id: 'igcse-maths-8-2-c1',
-        title: 'Estimated Mean & Grouped Frequency Tables',
-        summary: 'Computing estimated mean using class midpoints and Σ(fx) ÷ Σf.',
-        bullets: [
-          'For grouped continuous data, calculate the MIDPOINT (x) of each class interval, multiply by frequency (f × x), then compute: **Estimated Mean = Σ(fx) ÷ Σf**.',
-          'It is an "estimate" because we do not know the exact individual values inside each interval and assume they are evenly distributed around each midpoint.',
-          'Modal class = interval with the highest frequency (for equal widths). Class containing the median = find the ((n + 1)/2)th value using a running **cumulative frequency** column.',
-        ],
-        commonMistake: 'Always divide Σ(fx) by the TOTAL FREQUENCY (Σf), NEVER by the number of rows in the table!',
+        "time": "0:00",
+        "seconds": 0,
+        "label": "Grouped Mean & Averages",
+        "cardId": "igcse-maths-8-2-c1"
       },
       {
-        id: 'igcse-maths-8-2-c2',
-        title: 'Cumulative Frequency Curves & Box Plots',
-        summary: 'Plotting cumulative frequency at upper bounds and comparing box plots.',
-        bullets: [
-          'Plot cumulative frequencies against the UPPER BOUNDARY of each class interval (never the midpoint!) and join with a smooth S-shaped curve starting from the lowest class boundary at y = 0.',
-          '**For total frequency N:** Median (Q₂) is read across from 50% (0.5N); Lower Quartile (Q₁) from 25% (0.25N); Upper Quartile (Q₃) from 75% (0.75N).',
-          'Interquartile Range: **IQR = Q₃ − Q₁** (measures spread of the middle 50% and ignores extreme outliers).',
-          '**Comparing two box plots (2 mandatory marks):** (1) Compare the MEDIAN ("Group A has a higher median, so on average scores are higher") AND (2) Compare the IQR ("Group B has a smaller IQR, so its data is more consistent / less spread out").',
+        "time": "1:40",
+        "seconds": 100,
+        "label": "Cumulative Frequency Curves & Box Plots",
+        "cardId": "igcse-maths-8-2-c2"
+      },
+      {
+        "time": "3:20",
+        "seconds": 200,
+        "label": "Histograms & Frequency Density",
+        "cardId": "igcse-maths-8-2-c3"
+      }
+    ],
+    "cards": [
+      {
+        "id": "igcse-maths-8-2-c1",
+        "title": "Estimated Mean from Grouped Data & Choosing Averages",
+        "summary": "Multiply each class midpoint by its frequency and divide by the total frequency (not the number of groups).",
+        "bullets": [
+          "**Estimated mean** - Σ(f × midpoint) ÷ Σf; it is an estimate because exact raw values within each class are unknown."
         ],
-        glossaryPills: [
+        "subsections": [
           {
-            term: 'interquartile range',
-            definition: 'Difference between the upper quartile and lower quartile (Q₃ − Q₁), measuring the spread of the central 50% of data.',
-          },
+            "heading": "Comparing Distributions",
+            "bullets": [
+              "**Two comparisons required** - always compare one measure of **average** (median/mean) AND one measure of **spread** (IQR/range) in the context of the question."
+            ],
+            "exampleHeading": "Worked example: Grouped mean of 20 scores",
+            "examples": [
+              "Classes 0–10 (mid 5, f=4), 10–20 (mid 15, f=10), 20–30 (mid 25, f=6).",
+              "Σ(fx) = 20 + 150 + 150 = 320; Estimated mean = 320 ÷ 20 = 16."
+            ]
+          }
         ],
-        memoryAid: 'Plot Midpoints for Mean/Frequency Polygons; plot UPPER endpoints for Cumulative Frequency!',
+        "glossaryPills": [
+          {
+            "term": "interquartile range",
+            "definition": "Upper quartile minus lower quartile (IQR = Q₃ − Q₁), measuring the spread of the middle 50% of data without outlier distortion."
+          }
+        ]
       },
       {
-        id: 'igcse-maths-8-2-c3',
-        title: 'Histograms & Frequency Density',
-        summary: 'Calculating frequency density and reading areas from unequal-width histograms.',
-        bullets: [
-          'Histograms display continuous grouped data with UNEQUAL class widths. The vertical axis is FREQUENCY DENSITY (NOT frequency!).',
-          '**Key formula:** Frequency Density = Frequency ÷ Class Width. Rearranged: Frequency = Frequency Density × Class Width = AREA of each bar!',
-          '**Worked example:** A bar spans 20 ≤ t < 35 (width = 15) with frequency density 2.4. Frequency in this interval = 15 × 2.4 = 36.',
-          'To estimate the number above a cutoff inside a bar (e.g., t > 30 in the 20–35 bar), take the proportional sub-area: width (35 − 30) × 2.4 = 5 × 2.4 = 12.',
+        "id": "igcse-maths-8-2-c2",
+        "title": "Cumulative Frequency Curves & Box Plots",
+        "summary": "Plot cumulative frequency at UPPER class boundaries and read Q₁, Median, and Q₃ at ¼n, ½n, and ¾n.",
+        "bullets": [
+          "**Plotting rule** - ALWAYS plot cumulative frequency points at the **upper boundary** of each class interval, joined by a smooth S-curve."
         ],
-        glossaryPills: [
+        "subsections": [
           {
-            term: 'frequency density',
-            definition: 'Height of a histogram bar calculated as Frequency ÷ Class Width, ensuring that bar area is directly proportional to frequency.',
-          },
+            "heading": "Quartiles & Five-Number Summary",
+            "bullets": [
+              "**Reading quartiles** - Lower quartile Q₁ at 0.25n, Median Q₂ at 0.5n, Upper quartile Q₃ at 0.75n; IQR = Q₃ − Q₁.",
+              "**Box plot** - displays Minimum, Q₁, Median, Q₃, and Maximum; each of the four sections holds 25% of the data."
+            ],
+            "exampleHeading": "Worked example: 80 test scores on a cumulative frequency graph",
+            "examples": [
+              "Read across from CF = 20 (Q₁), CF = 40 (Median), and CF = 60 (Q₃).",
+              "If Q₁ = 42 and Q₃ = 68, then IQR = 68 − 42 = 26 marks."
+            ]
+          }
         ],
+        "glossaryPills": [
+          {
+            "term": "cumulative frequency",
+            "definition": "The running total of frequencies up to the upper boundary of each class interval."
+          }
+        ],
+        "commonMistake": "Never plot cumulative frequency points at class MIDPOINTS — midpoints are for frequency polygons; cumulative frequency ALWAYS uses UPPER class boundaries!"
       },
+      {
+        "id": "igcse-maths-8-2-c3",
+        "title": "Histograms & Frequency Density",
+        "summary": "In unequal-width histograms, bar AREA represents frequency and bar height equals frequency density.",
+        "bullets": [
+          "**Frequency density formula** - Frequency Density = Frequency ÷ Class Width; therefore Frequency = Frequency Density × Class Width (= bar area)."
+        ],
+        "subsections": [
+          {
+            "heading": "Reading Frequencies & Finding the Median from a Histogram",
+            "bullets": [
+              "**No gaps between bars** - histograms represent continuous data with touching bars of varying width.",
+              "**Sub-interval estimates** - to estimate how many items lie in part of a bar (e.g. > 25 inside class 20–40), multiply that sub-width (15) by the bar’s frequency density."
+            ],
+            "exampleHeading": "Worked example: Class 20 ≤ t < 35 with frequency 45",
+            "examples": [
+              "Class width = 35 − 20 = 15.",
+              "Frequency density = 45 ÷ 15 = 3.0 (height of the bar)."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "frequency density",
+            "definition": "Frequency divided by class width; plotted on the vertical axis of a histogram so bar area equals frequency."
+          }
+        ],
+        "memoryAid": "Histogram Triangle: Frequency on top, Frequency Density × Class Width on the bottom (Area = Frequency)!"
+      }
     ],
-    keyTerms: [
-      { term: 'Interquartile range (IQR)', definition: 'Q₃ − Q₁, a robust measure of spread covering the middle 50% of observations.' },
-      { term: 'Frequency density', definition: 'Frequency divided by class width, plotted on the y-axis of a histogram.' },
+    "checklistPoints": [
+      "Calculate estimated mean from grouped tables using midpoints and dividing by total frequency",
+      "Plot cumulative frequency at upper boundaries and extract Q₁, Median, Q₃, and IQR",
+      "Compute Frequency Density = Frequency ÷ Class Width and use bar area = frequency on histograms"
     ],
-    checklistPoints: [
-      'Calculate estimated mean from grouped tables using midpoints and Σ(fx) ÷ Σf.',
-      'Plot cumulative frequency at upper boundaries, read off median/Q₁/Q₃/IQR, and compare distributions using both median and IQR.',
-      'Draw and interpret histograms using Frequency = Frequency Density × Class Width.',
-    ],
-  },
+    "keyTerms": [
+      {
+        "term": "Interquartile range",
+        "definition": "Upper quartile minus lower quartile (IQR = Q₃ − Q₁), measuring the spread of the middle 50% of data without outlier distortion."
+      },
+      {
+        "term": "Cumulative frequency",
+        "definition": "The running total of frequencies up to the upper boundary of each class interval."
+      },
+      {
+        "term": "Frequency density",
+        "definition": "Frequency divided by class width; plotted on the vertical axis of a histogram so bar area equals frequency."
+      },
+      {
+        "term": "Estimated Mean from Grouped Data & Choosing Averages",
+        "definition": "Multiply each class midpoint by its frequency and divide by the total frequency (not the number of groups)."
+      }
+    ]
+  }
 };
 
 export const IGCSE_MATHS_QUIZZES: QuizQuestion[] = [
   {
-    "id": "igcse-maths-q1",
+    "id": "igcse-maths-q-1-1-1",
+    "subtopicId": "igcse-maths-1-1",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "£1,500 is invested at 6% compound interest per year for 4 years. Which calculation gives the final amount?",
+    "options": [
+      "1500 × 1.06 × 4",
+      "1500 × 1.06⁴",
+      "1500 × 0.94⁴",
+      "1500 ÷ 1.06⁴"
+    ],
+    "correctIndex": 1,
+    "explanation": "A 6% annual increase uses multiplier 1.06 raised to the power of 4 years: 1500 × 1.06⁴."
+  },
+  {
+    "id": "igcse-maths-q-1-1-2",
     "subtopicId": "igcse-maths-1-1",
     "type": "short-answer",
     "marks": 2,
-    "prompt": "After a 15% discount, a camera sells for $340. Work out the original price before the discount.",
+    "prompt": "A bike costs £255 after a 15% reduction in a sale. Calculate its original price before the sale.",
+    "explanation": "Reverse percentage: divide the sale price by (1 − 0.15) = 0.85 to get £300.",
     "rubric": {
       "maxMarks": 2,
-      "modelAnswer": "Original = 340 ÷ 0.85 = $400.",
+      "modelAnswer": "£255 represents 85% (multiplier 0.85), so Original price = 255 ÷ 0.85 = £300.",
       "markPoints": [
         {
           "id": "mp1",
-          "markDescription": "Use multiplier 0.85 (85%)",
           "requiredKeywordGroups": [
             [
               "0.85",
               "85%"
             ]
-          ]
+          ],
+          "markDescription": "Divides by 0.85 (or 85%)"
         },
         {
           "id": "mp2",
-          "markDescription": "Correct original price $400",
           "numericMatch": {
-            "value": 400,
-            "tolerance": 0
-          }
+            "value": 300,
+            "tolerance": 0.01
+          },
+          "markDescription": "Final answer 300"
         }
       ]
-    },
-    "explanation": "A 15% discount leaves 85% (0.85). Original = 340 ÷ 0.85 = $400."
+    }
   },
   {
-    "id": "igcse-maths-q2",
+    "id": "igcse-maths-q-1-1-3",
+    "subtopicId": "igcse-maths-1-1",
+    "type": "fill-blank",
+    "marks": 2,
+    "prompt": "Complete the conversion of 0.363636... to a fraction:",
+    "segments": [
+      "Let x = 0.3636..., then 100x = 36.3636..., so ",
+      "x = 36, which simplifies to ",
+      "."
+    ],
+    "wordBank": [
+      "99",
+      "4/11",
+      "90",
+      "9/25"
+    ],
+    "answers": [
+      "99",
+      "4/11"
+    ],
+    "explanation": "100x − x = 99x = 36, so x = 36/99 = 4/11."
+  },
+  {
+    "id": "igcse-maths-q-1-1-4",
+    "subtopicId": "igcse-maths-1-1",
+    "type": "multi-select",
+    "marks": 2,
+    "prompt": "Select the TWO correct decimal multipliers:",
+    "options": [
+      "12% increase → 1.12",
+      "8% decrease → 0.92",
+      "5% increase → 1.5",
+      "15% decrease → 0.15"
+    ],
+    "selectCount": 2,
+    "correctIndices": [
+      0,
+      1
+    ],
+    "explanation": "+12% is 1 + 0.12 = 1.12 and −8% is 1 − 0.08 = 0.92."
+  },
+  {
+    "id": "igcse-maths-q-1-1-5",
+    "subtopicId": "igcse-maths-1-1",
+    "type": "matching",
+    "marks": 2,
+    "prompt": "Match each percentage task to the correct formula:",
+    "pairs": [
+      {
+        "left": "Compound growth",
+        "right": "P × (1 + r/100)ⁿ"
+      },
+      {
+        "left": "Depreciation",
+        "right": "P × (1 − r/100)ⁿ"
+      },
+      {
+        "left": "Reverse percentage",
+        "right": "Final ÷ Multiplier"
+      },
+      {
+        "left": "Percentage change",
+        "right": "(Change ÷ Original) × 100"
+      }
+    ],
+    "explanation": "Each formula handles its exact direction of percentage calculation."
+  },
+  {
+    "id": "igcse-maths-q-1-2-1",
     "subtopicId": "igcse-maths-1-2",
     "type": "mcq",
     "marks": 1,
-    "prompt": "Evaluate 16^(−3/4) as an exact fraction.",
+    "prompt": "What is the exact value of 16^(-3/4)?",
     "options": [
-      "−12",
       "1/8",
-      "8",
-      "1/64"
+      "−8",
+      "1/12",
+      "8"
     ],
-    "correctIndex": 1,
-    "explanation": "Fourth root of 16 is 2; 2³ = 8; negative power takes reciprocal → 1/8."
+    "correctIndex": 0,
+    "explanation": "Fourth root of 16 is 2, cubed is 8, and the negative power takes the reciprocal → 1/8."
   },
   {
-    "id": "igcse-maths-q3",
-    "subtopicId": "igcse-maths-1-3",
+    "id": "igcse-maths-q-1-2-2",
+    "subtopicId": "igcse-maths-1-2",
     "type": "short-answer",
     "marks": 2,
-    "prompt": "y is inversely proportional to x². When x = 2, y = 12. Calculate y when x = 4.",
+    "prompt": "A rod has length 8.4 cm correct to 1 decimal place. State its lower bound and upper bound.",
+    "explanation": "Half of 0.1 cm is 0.05 cm, giving 8.4 ± 0.05 → 8.35 cm and 8.45 cm.",
     "rubric": {
       "maxMarks": 2,
-      "modelAnswer": "y = k/x² → 12 = k/4 → k = 48. When x = 4, y = 48 ÷ 16 = 3.",
+      "modelAnswer": "Lower bound = 8.35 cm and upper bound = 8.45 cm.",
       "markPoints": [
         {
           "id": "mp1",
-          "markDescription": "Find k = 48",
-          "requiredKeywordGroups": [
-            [
-              "48"
-            ]
-          ]
+          "numericMatch": {
+            "value": 8.35,
+            "tolerance": 0.001
+          },
+          "markDescription": "Lower bound 8.35"
         },
         {
           "id": "mp2",
-          "markDescription": "Correct value y = 3",
           "numericMatch": {
-            "value": 3,
-            "tolerance": 0
-          }
+            "value": 8.45,
+            "tolerance": 0.001
+          },
+          "markDescription": "Upper bound 8.45"
         }
       ]
-    },
-    "explanation": "k = yx² = 12 × 4 = 48. When x = 4, y = 48 ÷ 4² = 48 ÷ 16 = 3."
+    }
   },
   {
-    "id": "igcse-maths-q4",
+    "id": "igcse-maths-q-1-2-3",
+    "subtopicId": "igcse-maths-1-2",
+    "type": "fill-blank",
+    "marks": 2,
+    "prompt": "Complete the surd simplification and rationalisation:",
+    "segments": [
+      "√50 simplifies to ",
+      "√2, and 6 / √3 rationalises to ",
+      "√3."
+    ],
+    "wordBank": [
+      "5",
+      "2",
+      "25",
+      "3"
+    ],
+    "answers": [
+      "5",
+      "2"
+    ],
+    "explanation": "√50 = √(25 × 2) = 5√2; 6/√3 × √3/√3 = 6√3/3 = 2√3."
+  },
+  {
+    "id": "igcse-maths-q-1-2-4",
+    "subtopicId": "igcse-maths-1-2",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "To find the MAXIMUM possible value of p / q using bounds, you calculate:",
+    "options": [
+      "UB(p) ÷ UB(q)",
+      "UB(p) ÷ LB(q)",
+      "LB(p) ÷ UB(q)",
+      "LB(p) ÷ LB(q)"
+    ],
+    "correctIndex": 1,
+    "explanation": "Dividing the largest numerator by the smallest denominator produces the largest quotient."
+  },
+  {
+    "id": "igcse-maths-q-1-2-5",
+    "subtopicId": "igcse-maths-1-2",
+    "type": "matching",
+    "marks": 2,
+    "prompt": "Match each expression to its simplified value:",
+    "pairs": [
+      {
+        "left": "a⁰ (a ≠ 0)",
+        "right": "1"
+      },
+      {
+        "left": "a⁻²",
+        "right": "1 / a²"
+      },
+      {
+        "left": "a^(1/2)",
+        "right": "√a"
+      },
+      {
+        "left": "4.5 × 10⁻³",
+        "right": "0.0045"
+      }
+    ],
+    "explanation": "Zero, negative, and fractional index laws plus negative standard form powers."
+  },
+  {
+    "id": "igcse-maths-q-1-3-1",
+    "subtopicId": "igcse-maths-1-3",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "If A : B = 2 : 5 and B : C = 3 : 4, what is A : B : C in simplest form?",
+    "options": [
+      "2 : 8 : 4",
+      "6 : 15 : 20",
+      "6 : 15 : 12",
+      "4 : 15 : 20"
+    ],
+    "correctIndex": 1,
+    "explanation": "Scale B to LCM(5, 3) = 15: 2:5 → 6:15 and 3:4 → 15:20, giving 6 : 15 : 20."
+  },
+  {
+    "id": "igcse-maths-q-1-3-2",
+    "subtopicId": "igcse-maths-1-3",
+    "type": "short-answer",
+    "marks": 2,
+    "prompt": "y is directly proportional to x². When x = 2, y = 20. Find y when x = 5.",
+    "explanation": "k = 20 ÷ 2² = 5, hence y = 5 × 5² = 125.",
+    "rubric": {
+      "maxMarks": 2,
+      "modelAnswer": "y = kx² → 20 = 4k → k = 5, so when x = 5, y = 5 × 25 = 125.",
+      "markPoints": [
+        {
+          "id": "mp1",
+          "numericMatch": {
+            "value": 5,
+            "tolerance": 0.01
+          },
+          "markDescription": "Finds k = 5"
+        },
+        {
+          "id": "mp2",
+          "numericMatch": {
+            "value": 125,
+            "tolerance": 0.01
+          },
+          "markDescription": "Final value 125"
+        }
+      ]
+    }
+  },
+  {
+    "id": "igcse-maths-q-1-3-3",
+    "subtopicId": "igcse-maths-1-3",
+    "type": "fill-blank",
+    "marks": 2,
+    "prompt": "Complete the inverse proportion relationship:",
+    "segments": [
+      "If y is inversely proportional to x, then y = ",
+      " / x, and when x doubles, y is ",
+      "."
+    ],
+    "wordBank": [
+      "k",
+      "halved",
+      "doubled",
+      "squared"
+    ],
+    "answers": [
+      "k",
+      "halved"
+    ],
+    "explanation": "For y = k/x, doubling x halves y so xy = k stays constant."
+  },
+  {
+    "id": "igcse-maths-q-1-3-4",
+    "subtopicId": "igcse-maths-1-3",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "8 pumps can empty a tank in 6 hours. How long will 12 identical pumps take?",
+    "options": [
+      "9 hours",
+      "4 hours",
+      "3 hours",
+      "4.5 hours"
+    ],
+    "correctIndex": 1,
+    "explanation": "Total work = 8 × 6 = 48 pump-hours; 48 ÷ 12 = 4 hours."
+  },
+  {
+    "id": "igcse-maths-q-1-3-5",
+    "subtopicId": "igcse-maths-1-3",
+    "type": "multi-select",
+    "marks": 2,
+    "prompt": "Select the TWO statements that are true for direct proportion y = kx (k > 0):",
+    "options": [
+      "The graph is a straight line through the origin (0, 0)",
+      "Doubling x doubles y",
+      "xy is constant",
+      "The graph is a reciprocal curve"
+    ],
+    "selectCount": 2,
+    "correctIndices": [
+      0,
+      1
+    ],
+    "explanation": "Direct linear proportion passes through (0,0) with constant ratio y/x = k."
+  },
+  {
+    "id": "igcse-maths-q-2-1-1",
     "subtopicId": "igcse-maths-2-1",
     "type": "mcq",
     "marks": 1,
-    "prompt": "A parabola has equation y = (x − 4)² − 7. What are the coordinates of its minimum turning point?",
+    "prompt": "What are the coordinates of the minimum turning point of y = (x − 4)² + 7?",
     "options": [
-      "(−4, −7)",
-      "(4, −7)",
+      "(−4, 7)",
       "(4, 7)",
-      "(−4, 7)"
+      "(4, −7)",
+      "(−4, −7)"
     ],
     "correctIndex": 1,
-    "explanation": "For y = (x + p)² + q, the vertex is (−p, q). Flipping −4 gives +4 and keeping −7 gives (4, −7)."
+    "explanation": "For y = (x + p)² + q, the turning point is (−p, q), so (x − 4)² + 7 has minimum at (4, 7)."
   },
   {
-    "id": "igcse-maths-q5",
-    "subtopicId": "igcse-maths-2-3",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "Given f(x) = 3x − 2 and g(x) = x² + 1, find fg(2).",
-    "options": [
-      "17",
-      "13",
-      "15",
-      "11"
+    "id": "igcse-maths-q-2-1-2",
+    "subtopicId": "igcse-maths-2-1",
+    "type": "short-answer",
+    "marks": 2,
+    "prompt": "Solve x² − 7x + 12 = 0 by factorising.",
+    "explanation": "−3 × −4 = +12 and −3 + (−4) = −7, giving roots 3 and 4.",
+    "rubric": {
+      "maxMarks": 2,
+      "modelAnswer": "(x − 3)(x − 4) = 0, so x = 3 or x = 4.",
+      "markPoints": [
+        {
+          "id": "mp1",
+          "numericMatch": {
+            "value": 3,
+            "tolerance": 0.01
+          },
+          "markDescription": "Root x = 3"
+        },
+        {
+          "id": "mp2",
+          "numericMatch": {
+            "value": 4,
+            "tolerance": 0.01
+          },
+          "markDescription": "Root x = 4"
+        }
+      ]
+    }
+  },
+  {
+    "id": "igcse-maths-q-2-1-3",
+    "subtopicId": "igcse-maths-2-1",
+    "type": "diagram-label",
+    "marks": 2,
+    "prompt": "Identify the key features of a quadratic parabola y = ax² + bx + c:",
+    "diagram": "quadratic-graph",
+    "labels": [
+      {
+        "marker": "x-intercepts",
+        "options": [
+          "Roots where y = 0",
+          "Gradient m",
+          "Asymptote"
+        ],
+        "answer": "Roots where y = 0"
+      },
+      {
+        "marker": "Vertex",
+        "options": [
+          "Turning point (−p, q)",
+          "y-intercept c",
+          "Discriminant"
+        ],
+        "answer": "Turning point (−p, q)"
+      }
     ],
-    "correctIndex": 1,
-    "explanation": "Work right-to-left: g(2) = 2² + 1 = 5; then f(5) = 3(5) − 2 = 13."
+    "explanation": "Roots lie on the x-axis (y = 0) and the vertex is the minimum/maximum turning point."
   },
   {
-    "id": "igcse-maths-q6",
-    "subtopicId": "igcse-maths-3-1",
+    "id": "igcse-maths-q-2-1-4",
+    "subtopicId": "igcse-maths-2-1",
+    "type": "fill-blank",
+    "marks": 2,
+    "prompt": "Complete the difference of two squares factorisation:",
+    "segments": [
+      "25x² − 9 factorises to (",
+      " + 3)(5x − ",
+      ")."
+    ],
+    "wordBank": [
+      "5x",
+      "3",
+      "25x",
+      "9"
+    ],
+    "answers": [
+      "5x",
+      "3"
+    ],
+    "explanation": "a² − b² = (a + b)(a − b) with a = 5x and b = 3."
+  },
+  {
+    "id": "igcse-maths-q-2-1-5",
+    "subtopicId": "igcse-maths-2-1",
     "type": "mcq",
     "marks": 1,
-    "prompt": "Line L has equation 3x + 6y = 12. What is the gradient of a line PERPENDICULAR to L?",
+    "prompt": "If the discriminant b² − 4ac < 0, how many real roots does ax² + bx + c = 0 have?",
     "options": [
-      "−½",
-      "½",
-      "2",
-      "−2"
+      "2 distinct real roots",
+      "1 repeated root",
+      "0 real roots",
+      "Infinitely many"
     ],
     "correctIndex": 2,
-    "explanation": "Rearrange: 6y = −3x + 12 → y = −0.5x + 2 (m = −1/2). Negative reciprocal is +2."
+    "explanation": "You cannot take the real square root of a negative number, so there are no real roots."
   },
   {
-    "id": "igcse-maths-q7",
-    "subtopicId": "igcse-maths-4-1",
+    "id": "igcse-maths-q-2-2-1",
+    "subtopicId": "igcse-maths-2-2",
     "type": "short-answer",
     "marks": 2,
-    "prompt": "Two similar cones have heights 6 cm and 12 cm. The volume of the smaller cone is 50 cm³. Calculate the volume of the larger cone.",
+    "prompt": "Solve the simultaneous equations: 2x + y = 11 and x − y = 4.",
+    "explanation": "Different signs on y → add equations to get 3x = 15 → x = 5, y = 1.",
     "rubric": {
       "maxMarks": 2,
-      "modelAnswer": "Linear k = 12 ÷ 6 = 2. Volume scale factor = 2³ = 8. Volume = 50 × 8 = 400 cm³.",
+      "modelAnswer": "Adding gives 3x = 15 so x = 5; substituting gives 5 − y = 4 so y = 1.",
       "markPoints": [
         {
           "id": "mp1",
-          "markDescription": "Recognise volume scale factor 2³ = 8",
-          "requiredKeywordGroups": [
-            [
-              "8"
-            ]
-          ]
+          "numericMatch": {
+            "value": 5,
+            "tolerance": 0.01
+          },
+          "markDescription": "x = 5"
         },
         {
           "id": "mp2",
-          "markDescription": "Correct volume 400 cm³",
           "numericMatch": {
-            "value": 400,
-            "tolerance": 0
-          }
+            "value": 1,
+            "tolerance": 0.01
+          },
+          "markDescription": "y = 1"
         }
       ]
-    },
-    "explanation": "Length scale factor k = 2, so volume scales by k³ = 8: 50 × 8 = 400 cm³."
+    }
   },
   {
-    "id": "igcse-maths-q8",
-    "subtopicId": "igcse-maths-4-2",
+    "id": "igcse-maths-q-2-2-2",
+    "subtopicId": "igcse-maths-2-2",
     "type": "mcq",
     "marks": 1,
-    "prompt": "ABCD is a cyclic quadrilateral with angle ABC = 112°. What is the size of angle ADC?",
+    "prompt": "Solve the quadratic inequality x² − 5x + 6 < 0.",
     "options": [
-      "112°",
-      "68°",
-      "56°",
-      "90°"
+      "x < 2 or x > 3",
+      "2 < x < 3",
+      "−3 < x < −2",
+      "x < −3 or x > −2"
     ],
     "correctIndex": 1,
-    "explanation": "Opposite angles in a cyclic quadrilateral sum to 180°: 180° − 112° = 68°."
+    "explanation": "Roots are 2 and 3; the U-parabola dips below 0 between them: 2 < x < 3."
   },
   {
-    "id": "igcse-maths-q9",
-    "subtopicId": "igcse-maths-6-2",
+    "id": "igcse-maths-q-2-2-3",
+    "subtopicId": "igcse-maths-2-2",
+    "type": "fill-blank",
+    "marks": 2,
+    "prompt": "Complete the inequality rule:",
+    "segments": [
+      "When dividing both sides of −3x ≤ 12 by −3, you must ",
+      " the inequality sign to get x ",
+      " −4."
+    ],
+    "wordBank": [
+      "reverse",
+      "≥",
+      "keep",
+      "≤"
+    ],
+    "answers": [
+      "reverse",
+      "≥"
+    ],
+    "explanation": "Dividing by a negative flips ≤ into ≥."
+  },
+  {
+    "id": "igcse-maths-q-2-2-4",
+    "subtopicId": "igcse-maths-2-2",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "When shading a region for y > 2x + 1 on a coordinate grid, the boundary line y = 2x + 1 must be drawn as a:",
+    "options": [
+      "Solid line",
+      "Dashed line",
+      "Curved line",
+      "Vertical line"
+    ],
+    "correctIndex": 1,
+    "explanation": "Strict inequalities (< or >) exclude the boundary, so the line is dashed."
+  },
+  {
+    "id": "igcse-maths-q-2-2-5",
+    "subtopicId": "igcse-maths-2-2",
+    "type": "multi-select",
+    "marks": 2,
+    "prompt": "Select the TWO ordered pairs that satisfy both y = x + 2 and y = x²:",
+    "options": [
+      "(2, 4)",
+      "(−1, 1)",
+      "(1, 3)",
+      "(−2, 4)"
+    ],
+    "selectCount": 2,
+    "correctIndices": [
+      0,
+      1
+    ],
+    "explanation": "x² = x + 2 → (x − 2)(x + 1) = 0 → (2, 4) and (−1, 1)."
+  },
+  {
+    "id": "igcse-maths-q-2-3-1",
+    "subtopicId": "igcse-maths-2-3",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "Given f(x) = 2x + 3 and g(x) = x², what is fg(5)?",
+    "options": [
+      "169",
+      "53",
+      "28",
+      "50"
+    ],
+    "correctIndex": 1,
+    "explanation": "Apply g first: g(5) = 25, then f(25) = 2(25) + 3 = 53."
+  },
+  {
+    "id": "igcse-maths-q-2-3-2",
+    "subtopicId": "igcse-maths-2-3",
     "type": "short-answer",
     "marks": 2,
-    "prompt": "Triangle PQR has sides p = 8 cm, q = 10 cm, and included angle R = 30°. Calculate the area of triangle PQR.",
+    "prompt": "Differentiate y = 3x⁴ − 5x + 7 and find the gradient when x = 1.",
+    "explanation": "dy/dx = 12x³ − 5, giving 12 − 5 = 7 at x = 1.",
     "rubric": {
       "maxMarks": 2,
-      "modelAnswer": "Area = ½ × 8 × 10 × sin 30° = 40 × 0.5 = 20 cm².",
+      "modelAnswer": "dy/dx = 12x³ − 5; at x = 1 the gradient is 12(1) − 5 = 7.",
       "markPoints": [
         {
           "id": "mp1",
-          "markDescription": "Apply ½ab sin C (0.5 × 8 × 10 × 0.5)",
           "requiredKeywordGroups": [
             [
-              "0.5",
-              "sin"
+              "12x"
+            ],
+            [
+              "5"
             ]
-          ]
+          ],
+          "markDescription": "Derivative 12x³ − 5"
         },
         {
           "id": "mp2",
-          "markDescription": "Correct area 20 cm²",
           "numericMatch": {
-            "value": 20,
-            "tolerance": 0.05
-          }
+            "value": 7,
+            "tolerance": 0.01
+          },
+          "markDescription": "Gradient = 7"
         }
       ]
-    },
-    "explanation": "Area = ½(8)(10) sin 30° = 40 × 0.5 = 20 cm²."
+    }
   },
   {
-    "id": "igcse-maths-q10",
-    "subtopicId": "igcse-maths-8-2",
+    "id": "igcse-maths-q-2-3-3",
+    "subtopicId": "igcse-maths-2-3",
+    "type": "fill-blank",
+    "marks": 2,
+    "prompt": "Complete the quadratic sequence rule:",
+    "segments": [
+      "If a sequence has a constant second difference of 6, the coefficient of n² is ",
+      ", and stationary points on a curve occur where dy/dx = ",
+      "."
+    ],
+    "wordBank": [
+      "3",
+      "0",
+      "6",
+      "1"
+    ],
+    "answers": [
+      "3",
+      "0"
+    ],
+    "explanation": "Half the second difference gives A = 6/2 = 3; stationary points have gradient 0."
+  },
+  {
+    "id": "igcse-maths-q-2-3-4",
+    "subtopicId": "igcse-maths-2-3",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "Find the inverse function f⁻¹(x) for f(x) = (x − 4) / 3.",
+    "options": [
+      "3x + 4",
+      "3x − 4",
+      "(x + 4) / 3",
+      "3(x + 4)"
+    ],
+    "correctIndex": 0,
+    "explanation": "y = (x − 4)/3 → 3y = x − 4 → x = 3y + 4, so f⁻¹(x) = 3x + 4."
+  },
+  {
+    "id": "igcse-maths-q-2-3-5",
+    "subtopicId": "igcse-maths-2-3",
+    "type": "matching",
+    "marks": 2,
+    "prompt": "Match each calculus/sequence concept to its formula:",
+    "pairs": [
+      {
+        "left": "Geometric nth term",
+        "right": "a × rⁿ⁻¹"
+      },
+      {
+        "left": "Derivative of axⁿ",
+        "right": "anxⁿ⁻¹"
+      },
+      {
+        "left": "Local minimum test",
+        "right": "dy/dx = 0 and d²y/dx² > 0"
+      },
+      {
+        "left": "Local maximum test",
+        "right": "dy/dx = 0 and d²y/dx² < 0"
+      }
+    ],
+    "explanation": "Core Extended IGCSE algebra and calculus rules."
+  },
+  {
+    "id": "igcse-maths-q-3-1-1",
+    "subtopicId": "igcse-maths-3-1",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "What is the gradient of a line perpendicular to y = (3/4)x − 2?",
+    "options": [
+      "3/4",
+      "−3/4",
+      "4/3",
+      "−4/3"
+    ],
+    "correctIndex": 3,
+    "explanation": "Take the negative reciprocal of 3/4: flip and negate → −4/3."
+  },
+  {
+    "id": "igcse-maths-q-3-1-2",
+    "subtopicId": "igcse-maths-3-1",
     "type": "short-answer",
     "marks": 2,
-    "prompt": "In a histogram, the class interval 10 ≤ x < 25 has a frequency of 45. Calculate its frequency density.",
+    "prompt": "Find the exact length of the line segment joining A(2, 1) and B(5, 5).",
+    "explanation": "Δx = 3, Δy = 4, so distance = √(3² + 4²) = 5.",
     "rubric": {
       "maxMarks": 2,
-      "modelAnswer": "Class width = 25 − 10 = 15. Frequency density = 45 ÷ 15 = 3.",
+      "modelAnswer": "Length = √((5 − 2)² + (5 − 1)²) = √(9 + 16) = √25 = 5.",
       "markPoints": [
         {
           "id": "mp1",
-          "markDescription": "Identify class width = 15",
           "requiredKeywordGroups": [
             [
-              "15"
+              "9",
+              "3²",
+              "3^2"
+            ],
+            [
+              "16",
+              "4²",
+              "4^2"
             ]
-          ]
+          ],
+          "markDescription": "Uses Pythagoras (3² + 4²)"
         },
         {
           "id": "mp2",
-          "markDescription": "Correct frequency density = 3",
           "numericMatch": {
-            "value": 3,
-            "tolerance": 0
-          }
+            "value": 5,
+            "tolerance": 0.01
+          },
+          "markDescription": "Length 5"
         }
       ]
-    },
-    "explanation": "Frequency density = Frequency ÷ Class Width = 45 ÷ (25 − 10) = 45 ÷ 15 = 3."
+    }
   },
   {
-    "id": "igcse-maths-q-extra-110",
-    "subtopicId": "igcse-maths-1-1",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "In 1.1 (Fractions, Percentages, Compound Interest & Reverse Percentages), which of the following is the accurate definition of \"Decimal multiplier\"?",
-    "options": [
-      "Single factor used to compute percentage increases (e.g., 1.15) or decreases (e.g., 0.85).",
-      "The inverse ratio of Compound interest measured under zero-load conditions.",
-      "A constant quantity that remains unaffected by any change in Fractions, Percentages, Compound Interest & Reverse Percentages.",
-      "An experimental error caused by neglecting unit conversions in Fractions, Recurring Decimals & Percentage Change."
-    ],
-    "correctIndex": 0,
-    "explanation": "Decimal multiplier is defined as: Single factor used to compute percentage increases (e.g., 1.15) or decreases (e.g., 0.85)."
-  },
-  {
-    "id": "igcse-maths-q-extra-111",
-    "subtopicId": "igcse-maths-1-1",
-    "type": "short-answer",
+    "id": "igcse-maths-q-3-1-3",
+    "subtopicId": "igcse-maths-3-1",
+    "type": "fill-blank",
     "marks": 2,
-    "prompt": "State two key principles or relationships from \"Decimal Multipliers, Simple & Compound Interest\" (1.1 Fractions, Percentages, Compound Interest & Reverse Percentages).",
-    "rubric": {
-      "maxMarks": 2,
-      "modelAnswer": "1. A decimal multiplier converts a percentage change into one multiplication: +12% → ×1.12; +3.5% → ×1.035; −18% → ×0.82. 2. Simple interest adds the SAME fixed amount every year: I = (P × R × T) ÷ 100.",
-      "markPoints": [
-        {
-          "id": "mp1",
-          "markDescription": "A decimal multiplier converts a percentage change into one multiplication: +12% → ×1.12; +3.5% → ×1.035; −18% → ×0.82."
-        },
-        {
-          "id": "mp2",
-          "markDescription": "Simple interest adds the SAME fixed amount every year: I = (P × R × T) ÷ 100."
-        }
-      ]
-    },
-    "explanation": "From Decimal Multipliers, Simple & Compound Interest: A decimal multiplier converts a percentage change into one multiplication: +12% → ×1.12; +3.5% → ×1.035; −18% → ×0.82."
-  },
-  {
-    "id": "igcse-maths-q-extra-112",
-    "subtopicId": "igcse-maths-1-1",
-    "type": "multi-select",
-    "marks": 2,
-    "selectCount": 2,
-    "prompt": "Select the TWO correct statements regarding 1.1 Fractions, Percentages, Compound Interest & Reverse Percentages.",
-    "options": [
-      "Convert recurring decimals to simplified fractions algebraically.",
-      "In Fractions, Percentages, Compound Interest & Reverse Percentages, standard unit conversions are never required before applying formulas.",
-      "Use A = P(1 ± r/100)ⁿ for compound interest and depreciation.",
-      "Decimal multiplier and Compound interest always have identical numerical values and units."
+    "prompt": "Complete the midpoint and parallel-line facts:",
+    "segments": [
+      "The midpoint of (2, 8) and (6, 4) is (",
+      ", 6), and parallel lines always have ",
+      " gradients."
     ],
-    "correctIndices": [
-      0,
-      2
+    "wordBank": [
+      "4",
+      "equal",
+      "8",
+      "opposite"
     ],
-    "explanation": "Both \"Convert recurring decimals to simplified fractions algebraically.\" and \"Use A = P(1 ± r/100)ⁿ for compound interest and depreciation.\" are core specification points."
-  },
-  {
-    "id": "igcse-maths-q-extra-113",
-    "subtopicId": "igcse-maths-1-1",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "Which exam advice applies directly to 1.1 (Fractions, Percentages, Compound Interest & Reverse Percentages)?",
-    "options": [
-      "NEVER find 15% of $510 and add it back — 15% of the reduced price is smaller than 15% of the original price. Always DIVIDE by 0.85!",
-      "Always omit units and rounding in Fractions, Percentages, Compound Interest & Reverse Percentages calculations.",
-      "Never show intermediate working steps in 1.1 questions.",
-      "Assume Decimal multiplier is always equal to 100 in every question."
+    "answers": [
+      "4",
+      "equal"
     ],
-    "correctIndex": 0,
-    "explanation": "NEVER find 15% of $510 and add it back — 15% of the reduced price is smaller than 15% of the original price. Always DIVIDE by 0.85!"
+    "explanation": "(2+6)/2 = 4, and parallel lines share m₁ = m₂."
   },
   {
-    "id": "igcse-maths-q-extra-115",
-    "subtopicId": "igcse-maths-1-2",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "In 1.2 (Indices, Surds, Standard Form & Upper/Lower Bounds), which of the following is the accurate definition of \"Standard form\"?",
-    "options": [
-      "Scientific notation A × 10ⁿ with 1 ≤ A < 10 and integer exponent n.",
-      "The inverse ratio of Surd measured under zero-load conditions.",
-      "A constant quantity that remains unaffected by any change in Indices, Surds, Standard Form & Upper/Lower Bounds.",
-      "An experimental error caused by neglecting unit conversions in Laws of Indices (Integer, Negative & Fractional)."
-    ],
-    "correctIndex": 0,
-    "explanation": "Standard form is defined as: Scientific notation A × 10ⁿ with 1 ≤ A < 10 and integer exponent n."
-  },
-  {
-    "id": "igcse-maths-q-extra-116",
-    "subtopicId": "igcse-maths-1-2",
-    "type": "short-answer",
-    "marks": 2,
-    "prompt": "State two key principles or relationships from \"Surds & Rationalising the Denominator\" (1.2 Indices, Surds, Standard Form & Upper/Lower Bounds).",
-    "rubric": {
-      "maxMarks": 2,
-      "modelAnswer": "1. A surd is an irrational root such as √2, √3, or √5. Simplify by pulling out the LARGEST square factor: √72 = √(36 × 2) = 6√2. 2. Collect like surds just like algebra: 5√3 + √12 = 5√3 + 2√3 = 7√3.",
-      "markPoints": [
-        {
-          "id": "mp1",
-          "markDescription": "A surd is an irrational root such as √2, √3, or √5. Simplify by pulling out the LARGEST square factor: √72 = √(36 × 2) = 6√2."
-        },
-        {
-          "id": "mp2",
-          "markDescription": "Collect like surds just like algebra: 5√3 + √12 = 5√3 + 2√3 = 7√3."
-        }
-      ]
-    },
-    "explanation": "From Surds & Rationalising the Denominator: A surd is an irrational root such as √2, √3, or √5. Simplify by pulling out the LARGEST square factor: √72 = √(36 × 2) = 6√2."
-  },
-  {
-    "id": "igcse-maths-q-extra-117",
-    "subtopicId": "igcse-maths-1-2",
-    "type": "multi-select",
-    "marks": 2,
-    "selectCount": 2,
-    "prompt": "Select the TWO correct statements regarding 1.2 Indices, Surds, Standard Form & Upper/Lower Bounds.",
-    "options": [
-      "Evaluate negative and fractional indices without a calculator.",
-      "In Indices, Surds, Standard Form & Upper/Lower Bounds, standard unit conversions are never required before applying formulas.",
-      "Simplify surds and rationalise both single-term and two-term denominators.",
-      "Standard form and Surd always have identical numerical values and units."
-    ],
-    "correctIndices": [
-      0,
-      2
-    ],
-    "explanation": "Both \"Evaluate negative and fractional indices without a calculator.\" and \"Simplify surds and rationalise both single-term and two-term denominators.\" are core specification points."
-  },
-  {
-    "id": "igcse-maths-q-extra-118",
-    "subtopicId": "igcse-maths-1-2",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "Which exam advice applies directly to 1.2 (Indices, Surds, Standard Form & Upper/Lower Bounds)?",
-    "options": [
-      "To maximise a fraction A/B, NEVER divide Upper(A) by Upper(B) — dividing by the SMALLEST possible denominator (Lower B) gives the largest answer!",
-      "Always omit units and rounding in Indices, Surds, Standard Form & Upper/Lower Bounds calculations.",
-      "Never show intermediate working steps in 1.2 questions.",
-      "Assume Standard form is always equal to 100 in every question."
-    ],
-    "correctIndex": 0,
-    "explanation": "To maximise a fraction A/B, NEVER divide Upper(A) by Upper(B) — dividing by the SMALLEST possible denominator (Lower B) gives the largest answer!"
-  },
-  {
-    "id": "igcse-maths-q-extra-120",
-    "subtopicId": "igcse-maths-1-3",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "In 1.3 (Ratio, Direct Proportion & Inverse Proportion), which of the following is the accurate definition of \"Direct proportion\"?",
-    "options": [
-      "Relationship where y/x = k is constant (y = kx); graph is a straight line through (0, 0).",
-      "The inverse ratio of Inverse proportion measured under zero-load conditions.",
-      "A constant quantity that remains unaffected by any change in Ratio, Direct Proportion & Inverse Proportion.",
-      "An experimental error caused by neglecting unit conversions in Ratio Sharing & Combining Ratios."
-    ],
-    "correctIndex": 0,
-    "explanation": "Direct proportion is defined as: Relationship where y/x = k is constant (y = kx); graph is a straight line through (0, 0)."
-  },
-  {
-    "id": "igcse-maths-q-extra-121",
-    "subtopicId": "igcse-maths-1-3",
-    "type": "short-answer",
-    "marks": 2,
-    "prompt": "State two key principles or relationships from \"Direct Proportion (Algebraic Form)\" (1.3 Ratio, Direct Proportion & Inverse Proportion).",
-    "rubric": {
-      "maxMarks": 2,
-      "modelAnswer": "1. If y is directly proportional to x (written y ∝ x), then y = kx where k is the constant of proportionality (graph is a straight line through the origin). 2. Direct proportion also extends to powers and roots: y ∝ x² → y = kx²; y ∝ √x → y = k√x.",
-      "markPoints": [
-        {
-          "id": "mp1",
-          "markDescription": "If y is directly proportional to x (written y ∝ x), then y = kx where k is the constant of proportionality (graph is a straight line through the origin)."
-        },
-        {
-          "id": "mp2",
-          "markDescription": "Direct proportion also extends to powers and roots: y ∝ x² → y = kx²; y ∝ √x → y = k√x."
-        }
-      ]
-    },
-    "explanation": "From Direct Proportion (Algebraic Form): If y is directly proportional to x (written y ∝ x), then y = kx where k is the constant of proportionality (graph is a straight line through the origin)."
-  },
-  {
-    "id": "igcse-maths-q-extra-122",
-    "subtopicId": "igcse-maths-1-3",
-    "type": "multi-select",
-    "marks": 2,
-    "selectCount": 2,
-    "prompt": "Select the TWO correct statements regarding 1.3 Ratio, Direct Proportion & Inverse Proportion.",
-    "options": [
-      "Solve ratio sharing, ratio difference, and combined three-part ratio problems.",
-      "In Ratio, Direct Proportion & Inverse Proportion, standard unit conversions are never required before applying formulas.",
-      "Set up and solve direct proportion formulas (y = kx, kx², k√x) and inverse proportion formulas (y = k/x, k/x²).",
-      "Direct proportion and Inverse proportion always have identical numerical values and units."
-    ],
-    "correctIndices": [
-      0,
-      2
-    ],
-    "explanation": "Both \"Solve ratio sharing, ratio difference, and combined three-part ratio problems.\" and \"Set up and solve direct proportion formulas (y = kx, kx², k√x) and inverse proportion formulas (y = k/x, k/x²).\" are core specification points."
-  },
-  {
-    "id": "igcse-maths-q-extra-123",
-    "subtopicId": "igcse-maths-1-3",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "Which exam advice applies directly to 1.3 (Ratio, Direct Proportion & Inverse Proportion)?",
-    "options": [
-      "Read carefully whether y is proportional to x, x², x³, or √x — writing y = kx when the question states \"proportional to the square of x\" loses almost all method marks!",
-      "Always omit units and rounding in Ratio, Direct Proportion & Inverse Proportion calculations.",
-      "Never show intermediate working steps in 1.3 questions.",
-      "Assume Direct proportion is always equal to 100 in every question."
-    ],
-    "correctIndex": 0,
-    "explanation": "Read carefully whether y is proportional to x, x², x³, or √x — writing y = kx when the question states \"proportional to the square of x\" loses almost all method marks!"
-  },
-  {
-    "id": "igcse-maths-q-extra-125",
-    "subtopicId": "igcse-maths-2-1",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "In 2.1 (Expanding, Factorising & Solving Quadratic Equations), which of the following is the accurate definition of \"Quadratic equation\"?",
-    "options": [
-      "Equation of degree 2 written in standard form ax² + bx + c = 0 (a ≠ 0).",
-      "The inverse ratio of Difference of two squares measured under zero-load conditions.",
-      "A constant quantity that remains unaffected by any change in Expanding, Factorising & Solving Quadratic Equations.",
-      "An experimental error caused by neglecting unit conversions in Expanding Brackets & Factorising Quadratics."
-    ],
-    "correctIndex": 0,
-    "explanation": "Quadratic equation is defined as: Equation of degree 2 written in standard form ax² + bx + c = 0 (a ≠ 0)."
-  },
-  {
-    "id": "igcse-maths-q-extra-126",
-    "subtopicId": "igcse-maths-2-1",
-    "type": "short-answer",
-    "marks": 2,
-    "prompt": "State two key principles or relationships from \"The Quadratic Formula\" (2.1 Expanding, Factorising & Solving Quadratic Equations).",
-    "rubric": {
-      "maxMarks": 2,
-      "modelAnswer": "1. When a question says \"give your answers to 2 decimal places\" or \"3 significant figures\", use the Quadratic Formula: x = (−b ± √(b² − 4ac)) ÷ (2a). 2. Worked example: Solve 3x² − 5x − 4 = 0. Here a = 3, b = −5, c = −4. Discriminant b² − 4ac = (−5)² − 4(3)(−4) = 25 + 48 = 73.",
-      "markPoints": [
-        {
-          "id": "mp1",
-          "markDescription": "When a question says \"give your answers to 2 decimal places\" or \"3 significant figures\", use the Quadratic Formula: x = (−b ± √(b² − 4ac)) ÷ (2a)."
-        },
-        {
-          "id": "mp2",
-          "markDescription": "Worked example: Solve 3x² − 5x − 4 = 0. Here a = 3, b = −5, c = −4. Discriminant b² − 4ac = (−5)² − 4(3)(−4) = 25 + 48 = 73."
-        }
-      ]
-    },
-    "explanation": "From The Quadratic Formula: When a question says \"give your answers to 2 decimal places\" or \"3 significant figures\", use the Quadratic Formula: x = (−b ± √(b² − 4ac)) ÷ (2a)."
-  },
-  {
-    "id": "igcse-maths-q-extra-127",
-    "subtopicId": "igcse-maths-2-1",
-    "type": "multi-select",
-    "marks": 2,
-    "selectCount": 2,
-    "prompt": "Select the TWO correct statements regarding 2.1 Expanding, Factorising & Solving Quadratic Equations.",
-    "options": [
-      "Factorise quadratics with a = 1, a > 1, and difference of two squares.",
-      "In Expanding, Factorising & Solving Quadratic Equations, standard unit conversions are never required before applying formulas.",
-      "Apply the quadratic formula accurately with negative coefficients using brackets.",
-      "Quadratic equation and Difference of two squares always have identical numerical values and units."
-    ],
-    "correctIndices": [
-      0,
-      2
-    ],
-    "explanation": "Both \"Factorise quadratics with a = 1, a > 1, and difference of two squares.\" and \"Apply the quadratic formula accurately with negative coefficients using brackets.\" are core specification points."
-  },
-  {
-    "id": "igcse-maths-q-extra-128",
-    "subtopicId": "igcse-maths-2-1",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "Which exam advice applies directly to 2.1 (Expanding, Factorising & Solving Quadratic Equations)?",
-    "options": [
-      "When b is negative (e.g., b = −5), write (−5)² = +25 in brackets on your calculator — typing −5² gives −25 and ruins the entire solution!",
-      "Always omit units and rounding in Expanding, Factorising & Solving Quadratic Equations calculations.",
-      "Never show intermediate working steps in 2.1 questions.",
-      "Assume Quadratic equation is always equal to 100 in every question."
-    ],
-    "correctIndex": 0,
-    "explanation": "When b is negative (e.g., b = −5), write (−5)² = +25 in brackets on your calculator — typing −5² gives −25 and ruins the entire solution!"
-  },
-  {
-    "id": "igcse-maths-q-extra-130",
-    "subtopicId": "igcse-maths-2-2",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "In 2.2 (Simultaneous Equations (Linear & Quadratic) & Inequalities), which of the following is the accurate definition of \"Elimination method\"?",
-    "options": [
-      "Adding or subtracting multiples of linear simultaneous equations to cancel one unknown.",
-      "The inverse ratio of Substitution method measured under zero-load conditions.",
-      "A constant quantity that remains unaffected by any change in Simultaneous Equations (Linear & Quadratic) & Inequalities.",
-      "An experimental error caused by neglecting unit conversions in Linear Simultaneous Equations (Elimination)."
-    ],
-    "correctIndex": 0,
-    "explanation": "Elimination method is defined as: Adding or subtracting multiples of linear simultaneous equations to cancel one unknown."
-  },
-  {
-    "id": "igcse-maths-q-extra-131",
-    "subtopicId": "igcse-maths-2-2",
-    "type": "short-answer",
-    "marks": 2,
-    "prompt": "State two key principles or relationships from \"Non-Linear Simultaneous Equations (Substitution)\" (2.2 Simultaneous Equations (Linear & Quadratic) & Inequalities).",
-    "rubric": {
-      "maxMarks": 2,
-      "modelAnswer": "1. When one equation is linear and the other is quadratic (e.g., y = x + 1 and x² + y² = 25), ALWAYS use SUBSTITUTION. 2. Step 1: Isolate one variable in the linear equation (y = x + 1). Step 2: Substitute into the quadratic: x² + (x + 1)² = 25 → 2x² + 2x − 24 = 0 → x² + x − 12 = 0.",
-      "markPoints": [
-        {
-          "id": "mp1",
-          "markDescription": "When one equation is linear and the other is quadratic (e.g., y = x + 1 and x² + y² = 25), ALWAYS use SUBSTITUTION."
-        },
-        {
-          "id": "mp2",
-          "markDescription": "Step 1: Isolate one variable in the linear equation (y = x + 1). Step 2: Substitute into the quadratic: x² + (x + 1)² = 25 → 2x² + 2x − 24 = 0 → x² + x − 12 = 0."
-        }
-      ]
-    },
-    "explanation": "From Non-Linear Simultaneous Equations (Substitution): When one equation is linear and the other is quadratic (e.g., y = x + 1 and x² + y² = 25), ALWAYS use SUBSTITUTION."
-  },
-  {
-    "id": "igcse-maths-q-extra-132",
-    "subtopicId": "igcse-maths-2-2",
-    "type": "multi-select",
-    "marks": 2,
-    "selectCount": 2,
-    "prompt": "Select the TWO correct statements regarding 2.2 Simultaneous Equations (Linear & Quadratic) & Inequalities.",
-    "options": [
-      "Solve linear simultaneous equations accurately and verify both values.",
-      "In Simultaneous Equations (Linear & Quadratic) & Inequalities, standard unit conversions are never required before applying formulas.",
-      "Solve linear-quadratic simultaneous equations by substitution and pair (x, y) solutions clearly.",
-      "Elimination method and Substitution method always have identical numerical values and units."
-    ],
-    "correctIndices": [
-      0,
-      2
-    ],
-    "explanation": "Both \"Solve linear simultaneous equations accurately and verify both values.\" and \"Solve linear-quadratic simultaneous equations by substitution and pair (x, y) solutions clearly.\" are core specification points."
-  },
-  {
-    "id": "igcse-maths-q-extra-133",
-    "subtopicId": "igcse-maths-2-2",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "Which exam advice applies directly to 2.2 (Simultaneous Equations (Linear & Quadratic) & Inequalities)?",
-    "options": [
-      "Never leave x and y unpaired — write each solution clearly as matched pairs: x = −4, y = −3 and x = 3, y = 4.",
-      "Always omit units and rounding in Simultaneous Equations (Linear & Quadratic) & Inequalities calculations.",
-      "Never show intermediate working steps in 2.2 questions.",
-      "Assume Elimination method is always equal to 100 in every question."
-    ],
-    "correctIndex": 0,
-    "explanation": "Never leave x and y unpaired — write each solution clearly as matched pairs: x = −4, y = −3 and x = 3, y = 4."
-  },
-  {
-    "id": "igcse-maths-q-extra-134",
-    "subtopicId": "igcse-maths-2-2",
-    "type": "short-answer",
-    "marks": 2,
-    "prompt": "Explain the core rule covered in \"Linear, Quadratic & Graphical Inequalities\" for 2.2 Simultaneous Equations (Linear & Quadratic) & Inequalities.",
-    "rubric": {
-      "maxMarks": 2,
-      "modelAnswer": "Solve linear inequalities just like equations, EXCEPT multiplying or dividing both sides by a NEGATIVE number FLIPS the inequality sign (e.g., −2x < 10 → x > −5). Quadratic inequalities: Solve the equality first, then SKETCH the parabola! For x² − 5x + 6 < 0, roots are 2 and 3; the U-shaped parabola is below zero BETWEEN the roots → 2 < x < 3. For x² − 5x + 6 > 0, it is above zero OUTSIDE the roots → x < 2 or x > 3.",
-      "markPoints": [
-        {
-          "id": "mp1",
-          "markDescription": "Solve linear inequalities just like equations, EXCEPT multiplying or dividing both sides by a NEGATIVE number FLIPS the inequality sign (e.g., −2x < 10 → x > −5)."
-        },
-        {
-          "id": "mp2",
-          "markDescription": "Quadratic inequalities: Solve the equality first, then SKETCH the parabola! For x² − 5x + 6 < 0, roots are 2 and 3; the U-shaped parabola is below zero BETWEEN the roots → 2 < x < 3. For x² − 5x + 6 > 0, it is above zero OUTSIDE the roots → x < 2 or x > 3."
-        }
-      ]
-    },
-    "explanation": "Solve linear inequalities just like equations, EXCEPT multiplying or dividing both sides by a NEGATIVE number FLIPS the inequality sign (e.g., −2x < 10 → x > −5)."
-  },
-  {
-    "id": "igcse-maths-q-extra-135",
-    "subtopicId": "igcse-maths-2-3",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "In 2.3 (Sequences, Functions (Composite/Inverse) & Differentiation), which of the following is the accurate definition of \"Quadratic sequence\"?",
-    "options": [
-      "Sequence with a constant second difference 2a and nth term an² + bn + c.",
-      "The inverse ratio of Inverse function measured under zero-load conditions.",
-      "A constant quantity that remains unaffected by any change in Sequences, Functions (Composite/Inverse) & Differentiation.",
-      "An experimental error caused by neglecting unit conversions in Arithmetic, Geometric & Quadratic Sequences."
-    ],
-    "correctIndex": 0,
-    "explanation": "Quadratic sequence is defined as: Sequence with a constant second difference 2a and nth term an² + bn + c."
-  },
-  {
-    "id": "igcse-maths-q-extra-136",
-    "subtopicId": "igcse-maths-2-3",
-    "type": "short-answer",
-    "marks": 2,
-    "prompt": "State two key principles or relationships from \"Composite & Inverse Functions (Extended)\" (2.3 Sequences, Functions (Composite/Inverse) & Differentiation).",
-    "rubric": {
-      "maxMarks": 2,
-      "modelAnswer": "1. Composite function fg(x) means apply g FIRST, then substitute the result into f: fg(x) = f(g(x)). Order matters — usually fg(x) ≠ gf(x)! 2. Worked example: If f(x) = 2x + 3 and g(x) = x², then fg(x) = f(x²) = 2x² + 3, whereas gf(x) = g(2x + 3) = (2x + 3)².",
-      "markPoints": [
-        {
-          "id": "mp1",
-          "markDescription": "Composite function fg(x) means apply g FIRST, then substitute the result into f: fg(x) = f(g(x)). Order matters — usually fg(x) ≠ gf(x)!"
-        },
-        {
-          "id": "mp2",
-          "markDescription": "Worked example: If f(x) = 2x + 3 and g(x) = x², then fg(x) = f(x²) = 2x² + 3, whereas gf(x) = g(2x + 3) = (2x + 3)²."
-        }
-      ]
-    },
-    "explanation": "From Composite & Inverse Functions (Extended): Composite function fg(x) means apply g FIRST, then substitute the result into f: fg(x) = f(g(x)). Order matters — usually fg(x) ≠ gf(x)!"
-  },
-  {
-    "id": "igcse-maths-q-extra-137",
-    "subtopicId": "igcse-maths-2-3",
-    "type": "multi-select",
-    "marks": 2,
-    "selectCount": 2,
-    "prompt": "Select the TWO correct statements regarding 2.3 Sequences, Functions (Composite/Inverse) & Differentiation.",
-    "options": [
-      "Find the nth term of arithmetic, geometric, and quadratic sequences.",
-      "In Sequences, Functions (Composite/Inverse) & Differentiation, standard unit conversions are never required before applying formulas.",
-      "Evaluate composite functions fg(x) right-to-left and derive inverse functions f⁻¹(x).",
-      "Quadratic sequence and Inverse function always have identical numerical values and units."
-    ],
-    "correctIndices": [
-      0,
-      2
-    ],
-    "explanation": "Both \"Find the nth term of arithmetic, geometric, and quadratic sequences.\" and \"Evaluate composite functions fg(x) right-to-left and derive inverse functions f⁻¹(x).\" are core specification points."
-  },
-  {
-    "id": "igcse-maths-q-extra-138",
-    "subtopicId": "igcse-maths-2-3",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "Which exam advice applies directly to 2.3 (Sequences, Functions (Composite/Inverse) & Differentiation)?",
-    "options": [
-      "Students often compute fg(x) left-to-right (f first, then g). ALWAYS work RIGHT-TO-LEFT starting with the function closest to x!",
-      "Always omit units and rounding in Sequences, Functions (Composite/Inverse) & Differentiation calculations.",
-      "Never show intermediate working steps in 2.3 questions.",
-      "Assume Quadratic sequence is always equal to 100 in every question."
-    ],
-    "correctIndex": 0,
-    "explanation": "Students often compute fg(x) left-to-right (f first, then g). ALWAYS work RIGHT-TO-LEFT starting with the function closest to x!"
-  },
-  {
-    "id": "igcse-maths-q-extra-140",
+    "id": "igcse-maths-q-3-1-4",
     "subtopicId": "igcse-maths-3-1",
     "type": "mcq",
     "marks": 1,
-    "prompt": "In 3.1 (Straight Line Graphs (y = mx + c), Midpoint, Length & Perpendiculars), which of the following is the accurate definition of \"Gradient\"?",
+    "prompt": "What is the gradient of the line 2x + 4y = 10?",
     "options": [
-      "Measure of steepness between two points: m = (y₂ − y₁) ÷ (x₂ − x₁).",
-      "The inverse ratio of Perpendicular lines measured under zero-load conditions.",
-      "A constant quantity that remains unaffected by any change in Straight Line Graphs (y = mx + c), Midpoint, Length & Perpendiculars.",
-      "An experimental error caused by neglecting unit conversions in Gradient, Midpoint & Length of a Line Segment."
+      "2",
+      "−2",
+      "−1/2",
+      "1/2"
     ],
-    "correctIndex": 0,
-    "explanation": "Gradient is defined as: Measure of steepness between two points: m = (y₂ − y₁) ÷ (x₂ − x₁)."
+    "correctIndex": 2,
+    "explanation": "Rearrange: 4y = −2x + 10 → y = −½x + 2.5, so m = −1/2."
   },
   {
-    "id": "igcse-maths-q-extra-141",
-    "subtopicId": "igcse-maths-3-1",
-    "type": "short-answer",
-    "marks": 2,
-    "prompt": "State two key principles or relationships from \"Equation of a Straight Line (y = mx + c)\" (3.1 Straight Line Graphs (y = mx + c), Midpoint, Length & Perpendiculars).",
-    "rubric": {
-      "maxMarks": 2,
-      "modelAnswer": "1. In y = mx + c, m is the gradient and c is the y-intercept (where x = 0). If given in implicit form like 2x + 4y = 12, rearrange to y = −0.5x + 3 BEFORE reading m and c! 2. Finding the line through (2, 5) and (6, 17): First find m = (17 − 5) ÷ (6 − 2) = 12 ÷ 4 = 3. Substitute (2, 5) into y = 3x + c → 5 = 6 + c → c = −1 → y = 3x − 1.",
-      "markPoints": [
-        {
-          "id": "mp1",
-          "markDescription": "In y = mx + c, m is the gradient and c is the y-intercept (where x = 0). If given in implicit form like 2x + 4y = 12, rearrange to y = −0.5x + 3 BEFORE reading m and c!"
-        },
-        {
-          "id": "mp2",
-          "markDescription": "Finding the line through (2, 5) and (6, 17): First find m = (17 − 5) ÷ (6 − 2) = 12 ÷ 4 = 3. Substitute (2, 5) into y = 3x + c → 5 = 6 + c → c = −1 → y = 3x − 1."
-        }
-      ]
-    },
-    "explanation": "From Equation of a Straight Line (y = mx + c): In y = mx + c, m is the gradient and c is the y-intercept (where x = 0). If given in implicit form like 2x + 4y = 12, rearrange to y = −0.5x + 3 BEFORE reading m and c!"
-  },
-  {
-    "id": "igcse-maths-q-extra-142",
+    "id": "igcse-maths-q-3-1-5",
     "subtopicId": "igcse-maths-3-1",
     "type": "multi-select",
     "marks": 2,
-    "selectCount": 2,
-    "prompt": "Select the TWO correct statements regarding 3.1 Straight Line Graphs (y = mx + c), Midpoint, Length & Perpendiculars.",
+    "prompt": "To find the perpendicular bisector of segment AB, which TWO quantities must you calculate first?",
     "options": [
-      "Calculate gradient, midpoint, and distance between any two coordinate pairs.",
-      "In Straight Line Graphs (y = mx + c), Midpoint, Length & Perpendiculars, standard unit conversions are never required before applying formulas.",
-      "Rearrange ax + by = c into y = mx + c to read off gradient and y-intercept.",
-      "Gradient and Perpendicular lines always have identical numerical values and units."
+      "The midpoint of AB",
+      "The negative reciprocal of gradient AB",
+      "The length of AB",
+      "The y-intercept of AB"
     ],
+    "selectCount": 2,
     "correctIndices": [
       0,
-      2
+      1
     ],
-    "explanation": "Both \"Calculate gradient, midpoint, and distance between any two coordinate pairs.\" and \"Rearrange ax + by = c into y = mx + c to read off gradient and y-intercept.\" are core specification points."
+    "explanation": "A perpendicular bisector passes through the midpoint M with gradient −1/m_AB."
   },
   {
-    "id": "igcse-maths-q-extra-143",
-    "subtopicId": "igcse-maths-3-1",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "Which exam advice applies directly to 3.1 (Straight Line Graphs (y = mx + c), Midpoint, Length & Perpendiculars)?",
-    "options": [
-      "In 3x + 2y = 8, the gradient is NOT 3 — rearrange to y = −1.5x + 4 first, so m = −1.5!",
-      "Always omit units and rounding in Straight Line Graphs (y = mx + c), Midpoint, Length & Perpendiculars calculations.",
-      "Never show intermediate working steps in 3.1 questions.",
-      "Assume Gradient is always equal to 100 in every question."
-    ],
-    "correctIndex": 0,
-    "explanation": "In 3x + 2y = 8, the gradient is NOT 3 — rearrange to y = −1.5x + 4 first, so m = −1.5!"
-  },
-  {
-    "id": "igcse-maths-q-extra-145",
+    "id": "igcse-maths-q-4-1-1",
     "subtopicId": "igcse-maths-4-1",
     "type": "mcq",
     "marks": 1,
-    "prompt": "In 4.1 (Angles, Polygons, Bearings, Similarity & Congruence), which of the following is the accurate definition of \"Bearing\"?",
+    "prompt": "A regular polygon has an exterior angle of 24°. How many sides does it have?",
     "options": [
-      "Direction measured clockwise from North and expressed as a three-figure angle (000°–359°).",
-      "The inverse ratio of Congruence measured under zero-load conditions.",
-      "A constant quantity that remains unaffected by any change in Angles, Polygons, Bearings, Similarity & Congruence.",
-      "An experimental error caused by neglecting unit conversions in Parallel Lines & Polygon Angle Rules."
+      "12",
+      "15",
+      "18",
+      "20"
     ],
-    "correctIndex": 0,
-    "explanation": "Bearing is defined as: Direction measured clockwise from North and expressed as a three-figure angle (000°–359°)."
+    "correctIndex": 1,
+    "explanation": "n = 360° ÷ 24° = 15 sides."
   },
   {
-    "id": "igcse-maths-q-extra-146",
+    "id": "igcse-maths-q-4-1-2",
     "subtopicId": "igcse-maths-4-1",
     "type": "short-answer",
     "marks": 2,
-    "prompt": "State two key principles or relationships from \"Three-Figure Bearings\" (4.1 Angles, Polygons, Bearings, Similarity & Congruence).",
+    "prompt": "Two similar bottles have heights 10 cm and 15 cm. If the smaller bottle holds 200 ml, calculate the capacity of the larger bottle.",
+    "explanation": "Volume scales by k³ = (1.5)³ = 3.375 → 200 × 3.375 = 675 ml.",
     "rubric": {
       "maxMarks": 2,
-      "modelAnswer": "1. Bearings obey 3 strict rules: (1) Measured from NORTH (000°), (2) Measured CLOCKWISE, (3) Written as 3 digits (e.g., 045°, NOT 45°). 2. The wording \"bearing of B FROM A\" means stand at A, draw a North line at A, and turn clockwise until pointing to B.",
+      "modelAnswer": "Linear scale factor k = 15/10 = 1.5; volume scale factor k³ = 3.375; capacity = 200 × 3.375 = 675 ml.",
       "markPoints": [
         {
           "id": "mp1",
-          "markDescription": "Bearings obey 3 strict rules: (1) Measured from NORTH (000°), (2) Measured CLOCKWISE, (3) Written as 3 digits (e.g., 045°, NOT 45°)."
+          "requiredKeywordGroups": [
+            [
+              "1.5",
+              "3/2",
+              "3.375",
+              "27/8"
+            ]
+          ],
+          "markDescription": "Linear k = 1.5 or k³ = 3.375"
         },
         {
           "id": "mp2",
-          "markDescription": "The wording \"bearing of B FROM A\" means stand at A, draw a North line at A, and turn clockwise until pointing to B."
+          "numericMatch": {
+            "value": 675,
+            "tolerance": 0.1
+          },
+          "markDescription": "Capacity 675 ml"
         }
       ]
-    },
-    "explanation": "From Three-Figure Bearings: Bearings obey 3 strict rules: (1) Measured from NORTH (000°), (2) Measured CLOCKWISE, (3) Written as 3 digits (e.g., 045°, NOT 45°)."
+    }
   },
   {
-    "id": "igcse-maths-q-extra-147",
+    "id": "igcse-maths-q-4-1-3",
+    "subtopicId": "igcse-maths-4-1",
+    "type": "fill-blank",
+    "marks": 2,
+    "prompt": "Complete the bearing calculation:",
+    "segments": [
+      "If the bearing of B from A is 065°, the back bearing of A from B is ",
+      "°, and bearings are always measured ",
+      " from North."
+    ],
+    "wordBank": [
+      "245",
+      "clockwise",
+      "115",
+      "anticlockwise"
+    ],
+    "answers": [
+      "245",
+      "clockwise"
+    ],
+    "explanation": "065° + 180° = 245°; bearings are always clockwise from North."
+  },
+  {
+    "id": "igcse-maths-q-4-1-4",
     "subtopicId": "igcse-maths-4-1",
     "type": "multi-select",
     "marks": 2,
-    "selectCount": 2,
-    "prompt": "Select the TWO correct statements regarding 4.1 Angles, Polygons, Bearings, Similarity & Congruence.",
+    "prompt": "Select the TWO valid triangle congruence conditions:",
     "options": [
-      "Calculate interior and exterior angles of regular and irregular polygons.",
-      "In Angles, Polygons, Bearings, Similarity & Congruence, standard unit conversions are never required before applying formulas.",
-      "Measure and calculate bearings and back bearings using co-interior angles.",
-      "Bearing and Congruence always have identical numerical values and units."
+      "SAS",
+      "RHS",
+      "AAA",
+      "ASS"
     ],
+    "selectCount": 2,
     "correctIndices": [
       0,
-      2
+      1
     ],
-    "explanation": "Both \"Calculate interior and exterior angles of regular and irregular polygons.\" and \"Measure and calculate bearings and back bearings using co-interior angles.\" are core specification points."
+    "explanation": "SSS, SAS, ASA, and RHS prove congruence; AAA only proves similarity and ASS is ambiguous."
   },
   {
-    "id": "igcse-maths-q-extra-148",
+    "id": "igcse-maths-q-4-1-5",
     "subtopicId": "igcse-maths-4-1",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "Which exam advice applies directly to 4.1 (Angles, Polygons, Bearings, Similarity & Congruence)?",
-    "options": [
-      "Always check which point follows the word \"FROM\" — that is where you draw your North arrow!",
-      "Always omit units and rounding in Angles, Polygons, Bearings, Similarity & Congruence calculations.",
-      "Never show intermediate working steps in 4.1 questions.",
-      "Assume Bearing is always equal to 100 in every question."
+    "type": "matching",
+    "marks": 2,
+    "prompt": "Match each parallel-line angle pair to its property:",
+    "pairs": [
+      {
+        "left": "Alternate angles",
+        "right": "Equal"
+      },
+      {
+        "left": "Corresponding angles",
+        "right": "Equal"
+      },
+      {
+        "left": "Co-interior angles",
+        "right": "Sum to 180°"
+      },
+      {
+        "left": "Vertically opposite angles",
+        "right": "Equal"
+      }
     ],
-    "correctIndex": 0,
-    "explanation": "Always check which point follows the word \"FROM\" — that is where you draw your North arrow!"
+    "explanation": "Use exact formal names in geometry proof questions."
   },
   {
-    "id": "igcse-maths-q-extra-150",
+    "id": "igcse-maths-q-4-2-1",
     "subtopicId": "igcse-maths-4-2",
     "type": "mcq",
     "marks": 1,
-    "prompt": "In 4.2 (Circle Theorems & Alternate Segment Theorem), which of the following is the accurate definition of \"Cyclic quadrilateral\"?",
+    "prompt": "The angle subtended by an arc at the centre of a circle is 116°. What is the angle subtended at the circumference?",
     "options": [
-      "Four-sided shape inscribed in a circle whose opposite angles add to 180°.",
-      "The inverse ratio of Alternate Segment Theorem measured under zero-load conditions.",
-      "A constant quantity that remains unaffected by any change in Circle Theorems & Alternate Segment Theorem.",
-      "An experimental error caused by neglecting unit conversions in Centre, Semicircle & Same-Segment Theorems."
+      "116°",
+      "58°",
+      "232°",
+      "64°"
     ],
-    "correctIndex": 0,
-    "explanation": "Cyclic quadrilateral is defined as: Four-sided shape inscribed in a circle whose opposite angles add to 180°."
+    "correctIndex": 1,
+    "explanation": "Angle at circumference = half the angle at the centre = 116° ÷ 2 = 58°."
   },
   {
-    "id": "igcse-maths-q-extra-151",
+    "id": "igcse-maths-q-4-2-2",
     "subtopicId": "igcse-maths-4-2",
     "type": "short-answer",
     "marks": 2,
-    "prompt": "State two key principles or relationships from \"Cyclic Quadrilaterals & Tangent Rules\" (4.2 Circle Theorems & Alternate Segment Theorem).",
+    "prompt": "PQRS is a cyclic quadrilateral with ∠P = 83°. Find ∠R and state the circle theorem used.",
+    "explanation": "Opposite angles of a cyclic quadrilateral always add to 180°.",
     "rubric": {
       "maxMarks": 2,
-      "modelAnswer": "1. Theorem 5 (Cyclic quadrilateral): All 4 vertices MUST lie on the circumference. Opposite angles of a cyclic quadrilateral sum to 180°. 2. Theorem 6 (Tangent meets radius): A tangent to a circle always meets the radius at the point of contact at 90°.",
+      "modelAnswer": "∠R = 180° − 83° = 97°, because opposite angles in a cyclic quadrilateral sum to 180°.",
       "markPoints": [
         {
           "id": "mp1",
-          "markDescription": "Theorem 5 (Cyclic quadrilateral): All 4 vertices MUST lie on the circumference. Opposite angles of a cyclic quadrilateral sum to 180°."
+          "numericMatch": {
+            "value": 97,
+            "tolerance": 0.1
+          },
+          "markDescription": "Angle 97°"
         },
         {
           "id": "mp2",
-          "markDescription": "Theorem 6 (Tangent meets radius): A tangent to a circle always meets the radius at the point of contact at 90°."
+          "requiredKeywordGroups": [
+            [
+              "cyclic"
+            ],
+            [
+              "opposite",
+              "180"
+            ]
+          ],
+          "markDescription": "Cyclic quadrilateral opposite angles sum to 180°"
         }
       ]
-    },
-    "explanation": "From Cyclic Quadrilaterals & Tangent Rules: Theorem 5 (Cyclic quadrilateral): All 4 vertices MUST lie on the circumference. Opposite angles of a cyclic quadrilateral sum to 180°."
+    }
   },
   {
-    "id": "igcse-maths-q-extra-152",
+    "id": "igcse-maths-q-4-2-3",
     "subtopicId": "igcse-maths-4-2",
-    "type": "multi-select",
+    "type": "fill-blank",
     "marks": 2,
-    "selectCount": 2,
-    "prompt": "Select the TWO correct statements regarding 4.2 Circle Theorems & Alternate Segment Theorem.",
-    "options": [
-      "Recall and apply all 8 circle theorems accurately in multi-step angle problems.",
-      "In Circle Theorems & Alternate Segment Theorem, standard unit conversions are never required before applying formulas.",
-      "Spot isosceles triangles formed by two radii immediately.",
-      "Cyclic quadrilateral and Alternate Segment Theorem always have identical numerical values and units."
+    "prompt": "Complete the tangent theorems:",
+    "segments": [
+      "A tangent meets a radius at ",
+      "°, and two tangents from an external point to a circle are ",
+      " in length."
     ],
-    "correctIndices": [
-      0,
-      2
+    "wordBank": [
+      "90",
+      "equal",
+      "180",
+      "parallel"
     ],
-    "explanation": "Both \"Recall and apply all 8 circle theorems accurately in multi-step angle problems.\" and \"Spot isosceles triangles formed by two radii immediately.\" are core specification points."
+    "answers": [
+      "90",
+      "equal"
+    ],
+    "explanation": "Tangent ⊥ radius (90°), and two tangents from one external point are equal."
   },
   {
-    "id": "igcse-maths-q-extra-153",
+    "id": "igcse-maths-q-4-2-4",
     "subtopicId": "igcse-maths-4-2",
     "type": "mcq",
     "marks": 1,
-    "prompt": "Which exam advice applies directly to 4.2 (Circle Theorems & Alternate Segment Theorem)?",
+    "prompt": "Which theorem states that the angle between a tangent and a chord equals the inscribed angle opposite that chord?",
     "options": [
-      "A quadrilateral with one corner at the CENTRE of the circle is NOT a cyclic quadrilateral — all 4 vertices must touch the circumference!",
-      "Always omit units and rounding in Circle Theorems & Alternate Segment Theorem calculations.",
-      "Never show intermediate working steps in 4.2 questions.",
-      "Assume Cyclic quadrilateral is always equal to 100 in every question."
+      "Angle in a semicircle",
+      "Alternate segment theorem",
+      "Same segment theorem",
+      "Cyclic quadrilateral theorem"
     ],
-    "correctIndex": 0,
-    "explanation": "A quadrilateral with one corner at the CENTRE of the circle is NOT a cyclic quadrilateral — all 4 vertices must touch the circumference!"
+    "correctIndex": 1,
+    "explanation": "This is the exact wording of the Alternate Segment Theorem."
   },
   {
-    "id": "igcse-maths-q-extra-155",
+    "id": "igcse-maths-q-4-2-5",
+    "subtopicId": "igcse-maths-4-2",
+    "type": "matching",
+    "marks": 2,
+    "prompt": "Match each circle theorem to its result:",
+    "pairs": [
+      {
+        "left": "Angle in a semicircle",
+        "right": "90°"
+      },
+      {
+        "left": "Opposite angles in cyclic quad",
+        "right": "Sum to 180°"
+      },
+      {
+        "left": "Angles in the same segment",
+        "right": "Equal"
+      },
+      {
+        "left": "Perpendicular from centre to chord",
+        "right": "Bisects the chord"
+      }
+    ],
+    "explanation": "Memorise both the angle fact and its exact wording."
+  },
+  {
+    "id": "igcse-maths-q-5-1-1",
     "subtopicId": "igcse-maths-5-1",
     "type": "mcq",
     "marks": 1,
-    "prompt": "In 5.1 (Area, Arc Length, Sector Area, Surface Area & Volume), which of the following is the accurate definition of \"Sector\"?",
+    "prompt": "What is the TOTAL surface area of a solid hemisphere of radius r?",
     "options": [
-      "Pie-slice region of a circle bounded by two radii and an arc, with area (θ/360)πr².",
-      "The inverse ratio of Frustum measured under zero-load conditions.",
-      "A constant quantity that remains unaffected by any change in Area, Arc Length, Sector Area, Surface Area & Volume.",
-      "An experimental error caused by neglecting unit conversions in 2D Areas, Arc Length & Sector Area."
+      "2πr²",
+      "3πr²",
+      "4πr²",
+      "(2/3)πr³"
     ],
-    "correctIndex": 0,
-    "explanation": "Sector is defined as: Pie-slice region of a circle bounded by two radii and an arc, with area (θ/360)πr²."
+    "correctIndex": 1,
+    "explanation": "Curved surface (2πr²) + flat circular base (πr²) = 3πr²."
   },
   {
-    "id": "igcse-maths-q-extra-156",
+    "id": "igcse-maths-q-5-1-2",
     "subtopicId": "igcse-maths-5-1",
     "type": "short-answer",
     "marks": 2,
-    "prompt": "State two key principles or relationships from \"Volume & Surface Area of 3D Solids\" (5.1 Area, Arc Length, Sector Area, Surface Area & Volume).",
+    "prompt": "Calculate the volume of a cone with radius 3 cm and perpendicular height 10 cm, giving your answer to 1 decimal place (use π ≈ 3.142).",
+    "explanation": "V = ⅓π(9)(10) = 30π ≈ 94.2 cm³.",
     "rubric": {
       "maxMarks": 2,
-      "modelAnswer": "1. Any uniform Prism: Volume = Cross-sectional area × length. Cylinder: Volume = πr²h; Curved surface area = 2πrh; Total surface area = 2πrh + 2πr². 2. Pyramid: Volume = ⅓ × Base area × perpendicular height. Cone: Volume = ⅓πr²h; Curved surface area = πrl (where slant height l = √(r² + h²)); Total SA = πrl + πr².",
+      "modelAnswer": "V = (1/3) × π × 3² × 10 = 30π = 94.2 cm³ (or 94.3 cm³).",
       "markPoints": [
         {
           "id": "mp1",
-          "markDescription": "Any uniform Prism: Volume = Cross-sectional area × length. Cylinder: Volume = πr²h; Curved surface area = 2πrh; Total surface area = 2πrh + 2πr²."
+          "requiredKeywordGroups": [
+            [
+              "30",
+              "1/3",
+              "0.33"
+            ]
+          ],
+          "markDescription": "Uses 1/3 π r² h"
         },
         {
           "id": "mp2",
-          "markDescription": "Pyramid: Volume = ⅓ × Base area × perpendicular height. Cone: Volume = ⅓πr²h; Curved surface area = πrl (where slant height l = √(r² + h²)); Total SA = πrl + πr²."
+          "numericMatch": {
+            "value": 94.25,
+            "tolerance": 0.2
+          },
+          "markDescription": "Answer 94.2–94.3 cm³"
         }
       ]
-    },
-    "explanation": "From Volume & Surface Area of 3D Solids: Any uniform Prism: Volume = Cross-sectional area × length. Cylinder: Volume = πr²h; Curved surface area = 2πrh; Total surface area = 2πrh + 2πr²."
+    }
   },
   {
-    "id": "igcse-maths-q-extra-157",
+    "id": "igcse-maths-q-5-1-3",
     "subtopicId": "igcse-maths-5-1",
-    "type": "multi-select",
+    "type": "fill-blank",
     "marks": 2,
-    "selectCount": 2,
-    "prompt": "Select the TWO correct statements regarding 5.1 Area, Arc Length, Sector Area, Surface Area & Volume.",
-    "options": [
-      "Calculate arc length, sector perimeter, and sector area in exact π form and decimals.",
-      "In Area, Arc Length, Sector Area, Surface Area & Volume, standard unit conversions are never required before applying formulas.",
-      "Find volume and total surface area of prisms, cylinders, pyramids, cones, spheres, and hemispheres.",
-      "Sector and Frustum always have identical numerical values and units."
+    "prompt": "Complete the sector formulae for radius r and angle θ:",
+    "segments": [
+      "Arc length = (θ / 360) × ",
+      ", and Sector area = (θ / 360) × ",
+      "."
     ],
-    "correctIndices": [
-      0,
-      2
+    "wordBank": [
+      "2πr",
+      "πr²",
+      "πr",
+      "4πr²"
     ],
-    "explanation": "Both \"Calculate arc length, sector perimeter, and sector area in exact π form and decimals.\" and \"Find volume and total surface area of prisms, cylinders, pyramids, cones, spheres, and hemispheres.\" are core specification points."
+    "answers": [
+      "2πr",
+      "πr²"
+    ],
+    "explanation": "Multiply circumference (2πr) for arc length and circle area (πr²) for sector area."
   },
   {
-    "id": "igcse-maths-q-extra-158",
+    "id": "igcse-maths-q-5-1-4",
     "subtopicId": "igcse-maths-5-1",
     "type": "mcq",
     "marks": 1,
-    "prompt": "Which exam advice applies directly to 5.1 (Area, Arc Length, Sector Area, Surface Area & Volume)?",
+    "prompt": "A cone has base radius 5 cm and vertical height 12 cm. What is its slant height l?",
     "options": [
-      "When asked for the PERIMETER of a sector, students often calculate only the curved arc length and forget to add the two straight radii (+ 2r)!",
-      "Always omit units and rounding in Area, Arc Length, Sector Area, Surface Area & Volume calculations.",
-      "Never show intermediate working steps in 5.1 questions.",
-      "Assume Sector is always equal to 100 in every question."
+      "17 cm",
+      "13 cm",
+      "7 cm",
+      "11 cm"
     ],
-    "correctIndex": 0,
-    "explanation": "When asked for the PERIMETER of a sector, students often calculate only the curved arc length and forget to add the two straight radii (+ 2r)!"
+    "correctIndex": 1,
+    "explanation": "By Pythagoras: l = √(5² + 12²) = √169 = 13 cm."
   },
   {
-    "id": "igcse-maths-q-extra-159",
+    "id": "igcse-maths-q-5-1-5",
     "subtopicId": "igcse-maths-5-1",
-    "type": "short-answer",
+    "type": "matching",
     "marks": 2,
-    "prompt": "Explain the core rule covered in \"Unit Conversions & Frustums\" for 5.1 Area, Arc Length, Sector Area, Surface Area & Volume.",
-    "rubric": {
-      "maxMarks": 2,
-      "modelAnswer": "Area & volume unit conversions: 1 m² = 100² = 10,000 cm²; 1 m³ = 100³ = 1,000,000 cm³; 1 litre = 1,000 cm³. A frustum is a cone with a smaller similar cone sliced off its top: Volume of frustum = Volume(large cone) − Volume(removed small cone).",
-      "markPoints": [
-        {
-          "id": "mp1",
-          "markDescription": "Area & volume unit conversions: 1 m² = 100² = 10,000 cm²; 1 m³ = 100³ = 1,000,000 cm³; 1 litre = 1,000 cm³."
-        },
-        {
-          "id": "mp2",
-          "markDescription": "A frustum is a cone with a smaller similar cone sliced off its top: Volume of frustum = Volume(large cone) − Volume(removed small cone)."
-        }
-      ]
-    },
-    "explanation": "Area & volume unit conversions: 1 m² = 100² = 10,000 cm²; 1 m³ = 100³ = 1,000,000 cm³; 1 litre = 1,000 cm³."
+    "prompt": "Match each 3D solid to its volume formula:",
+    "pairs": [
+      {
+        "left": "Cylinder",
+        "right": "πr²h"
+      },
+      {
+        "left": "Cone",
+        "right": "⅓πr²h"
+      },
+      {
+        "left": "Sphere",
+        "right": "(4/3)πr³"
+      },
+      {
+        "left": "Square pyramid",
+        "right": "⅓ × base area × h"
+      }
+    ],
+    "explanation": "Keep prism/cylinder vs pointed ⅓ formulae crystal clear."
   },
   {
-    "id": "igcse-maths-q-extra-160",
+    "id": "igcse-maths-q-6-1-1",
     "subtopicId": "igcse-maths-6-1",
     "type": "mcq",
     "marks": 1,
-    "prompt": "In 6.1 (Pythagoras’ Theorem & Right-Angled Trigonometry (SOHCAHTOA)), which of the following is the accurate definition of \"Hypotenuse\"?",
+    "prompt": "What is the exact value of cos 60°?",
     "options": [
-      "Longest side of a right-angled triangle, opposite the right angle.",
-      "The inverse ratio of Angle of elevation measured under zero-load conditions.",
-      "A constant quantity that remains unaffected by any change in Pythagoras’ Theorem & Right-Angled Trigonometry (SOHCAHTOA).",
-      "An experimental error caused by neglecting unit conversions in Pythagoras’ Theorem (2D & 3D)."
+      "√3 / 2",
+      "1 / 2",
+      "√2 / 2",
+      "1"
     ],
-    "correctIndex": 0,
-    "explanation": "Hypotenuse is defined as: Longest side of a right-angled triangle, opposite the right angle."
+    "correctIndex": 1,
+    "explanation": "cos 60° = sin 30° = 1/2."
   },
   {
-    "id": "igcse-maths-q-extra-161",
+    "id": "igcse-maths-q-6-1-2",
     "subtopicId": "igcse-maths-6-1",
     "type": "short-answer",
     "marks": 2,
-    "prompt": "State two key principles or relationships from \"Right-Angled Trigonometry (SOHCAHTOA)\" (6.1 Pythagoras’ Theorem & Right-Angled Trigonometry (SOHCAHTOA)).",
+    "prompt": "A cuboid measures 3 cm by 4 cm by 12 cm. Calculate the exact length of its 3D space diagonal.",
+    "explanation": "√(9 + 16 + 144) = √169 = 13 cm.",
     "rubric": {
       "maxMarks": 2,
-      "modelAnswer": "1. Label the 3 sides relative to the target angle θ: Hypotenuse (H, opposite 90°), Opposite (O, across from θ), Adjacent (A, next to θ). 2. SOH: sin θ = O ÷ H | CAH: cos θ = A ÷ H | TOA: tan θ = O ÷ A.",
+      "modelAnswer": "Space diagonal = √(3² + 4² + 12²) = √(9 + 16 + 144) = √169 = 13 cm.",
       "markPoints": [
         {
           "id": "mp1",
-          "markDescription": "Label the 3 sides relative to the target angle θ: Hypotenuse (H, opposite 90°), Opposite (O, across from θ), Adjacent (A, next to θ)."
+          "requiredKeywordGroups": [
+            [
+              "169",
+              "12²",
+              "12^2"
+            ]
+          ],
+          "markDescription": "Applies 3D Pythagoras √(3²+4²+12²)"
         },
         {
           "id": "mp2",
-          "markDescription": "SOH: sin θ = O ÷ H | CAH: cos θ = A ÷ H | TOA: tan θ = O ÷ A."
+          "numericMatch": {
+            "value": 13,
+            "tolerance": 0.01
+          },
+          "markDescription": "Length 13 cm"
         }
       ]
-    },
-    "explanation": "From Right-Angled Trigonometry (SOHCAHTOA): Label the 3 sides relative to the target angle θ: Hypotenuse (H, opposite 90°), Opposite (O, across from θ), Adjacent (A, next to θ)."
+    }
   },
   {
-    "id": "igcse-maths-q-extra-162",
+    "id": "igcse-maths-q-6-1-3",
     "subtopicId": "igcse-maths-6-1",
-    "type": "multi-select",
+    "type": "diagram-label",
     "marks": 2,
-    "selectCount": 2,
-    "prompt": "Select the TWO correct statements regarding 6.1 Pythagoras’ Theorem & Right-Angled Trigonometry (SOHCAHTOA).",
-    "options": [
-      "Apply Pythagoras in 2D and 3D cuboids/pyramids.",
-      "In Pythagoras’ Theorem & Right-Angled Trigonometry (SOHCAHTOA), standard unit conversions are never required before applying formulas.",
-      "Find missing sides and angles using SOHCAHTOA and recall exact trig values for 30°, 45°, and 60°.",
-      "Hypotenuse and Angle of elevation always have identical numerical values and units."
+    "prompt": "Match each side of a right-angled triangle relative to angle θ:",
+    "diagram": "right-triangle-trig",
+    "labels": [
+      {
+        "marker": "Longest side (opposite 90°)",
+        "options": [
+          "Hypotenuse",
+          "Adjacent",
+          "Opposite"
+        ],
+        "answer": "Hypotenuse"
+      },
+      {
+        "marker": "Side next to θ",
+        "options": [
+          "Adjacent",
+          "Opposite",
+          "Hypotenuse"
+        ],
+        "answer": "Adjacent"
+      }
     ],
-    "correctIndices": [
-      0,
-      2
-    ],
-    "explanation": "Both \"Apply Pythagoras in 2D and 3D cuboids/pyramids.\" and \"Find missing sides and angles using SOHCAHTOA and recall exact trig values for 30°, 45°, and 60°.\" are core specification points."
+    "explanation": "Hypotenuse is opposite 90°; Adjacent touches both θ and 90°."
   },
   {
-    "id": "igcse-maths-q-extra-163",
+    "id": "igcse-maths-q-6-1-4",
+    "subtopicId": "igcse-maths-6-1",
+    "type": "fill-blank",
+    "marks": 2,
+    "prompt": "Complete the exact trig values:",
+    "segments": [
+      "tan 45° = ",
+      " and sin 30° = ",
+      "."
+    ],
+    "wordBank": [
+      "1",
+      "0.5",
+      "0",
+      "√3"
+    ],
+    "answers": [
+      "1",
+      "0.5"
+    ],
+    "explanation": "tan 45° = 1 and sin 30° = 1/2 = 0.5."
+  },
+  {
+    "id": "igcse-maths-q-6-1-5",
     "subtopicId": "igcse-maths-6-1",
     "type": "mcq",
     "marks": 1,
-    "prompt": "Which exam advice applies directly to 6.1 (Pythagoras’ Theorem & Right-Angled Trigonometry (SOHCAHTOA))?",
+    "prompt": "In a right-angled triangle, Opposite = 7 cm and Hypotenuse = 14 cm. What is angle θ?",
     "options": [
-      "Angle of depression is measured from the HORIZONTAL down to the line of sight — NEVER from the vertical cliff wall!",
-      "Always omit units and rounding in Pythagoras’ Theorem & Right-Angled Trigonometry (SOHCAHTOA) calculations.",
-      "Never show intermediate working steps in 6.1 questions.",
-      "Assume Hypotenuse is always equal to 100 in every question."
+      "60°",
+      "45°",
+      "30°",
+      "26.6°"
     ],
-    "correctIndex": 0,
-    "explanation": "Angle of depression is measured from the HORIZONTAL down to the line of sight — NEVER from the vertical cliff wall!"
+    "correctIndex": 2,
+    "explanation": "sin θ = 7/14 = 0.5 → θ = sin⁻¹(0.5) = 30°."
   },
   {
-    "id": "igcse-maths-q-extra-164",
-    "subtopicId": "igcse-maths-6-1",
-    "type": "short-answer",
-    "marks": 2,
-    "prompt": "Explain the core rule covered in \"Angles of Elevation, Depression & 3D Trigonometry\" for 6.1 Pythagoras’ Theorem & Right-Angled Trigonometry (SOHCAHTOA).",
-    "rubric": {
-      "maxMarks": 2,
-      "modelAnswer": "Angle of elevation is measured UPWARD from the horizontal; angle of depression is measured DOWNWARD from the horizontal (they are equal alternate Z-angles!). For 3D trigonometry (angle between a line and a plane): drop a perpendicular from the top endpoint straight down onto the plane, draw the right-angled triangle on the base, find the base diagonal with Pythagoras, then use tan θ = vertical height ÷ base diagonal.",
-      "markPoints": [
-        {
-          "id": "mp1",
-          "markDescription": "Angle of elevation is measured UPWARD from the horizontal; angle of depression is measured DOWNWARD from the horizontal (they are equal alternate Z-angles!)."
-        },
-        {
-          "id": "mp2",
-          "markDescription": "For 3D trigonometry (angle between a line and a plane): drop a perpendicular from the top endpoint straight down onto the plane, draw the right-angled triangle on the base, find the base diagonal with Pythagoras, then use tan θ = vertical height ÷ base diagonal."
-        }
-      ]
-    },
-    "explanation": "Angle of elevation is measured UPWARD from the horizontal; angle of depression is measured DOWNWARD from the horizontal (they are equal alternate Z-angles!)."
-  },
-  {
-    "id": "igcse-maths-q-extra-165",
+    "id": "igcse-maths-q-6-2-1",
     "subtopicId": "igcse-maths-6-2",
     "type": "mcq",
     "marks": 1,
-    "prompt": "In 6.2 (Sine Rule, Cosine Rule & Area of Non-Right-Angled Triangles), which of the following is the accurate definition of \"Sine Rule\"?",
+    "prompt": "A triangle has sides 8 cm and 10 cm with an included angle of 30°. What is its exact area?",
     "options": [
-      "a / sin A = b / sin B = c / sin C for any triangle.",
-      "The inverse ratio of Cosine Rule measured under zero-load conditions.",
-      "A constant quantity that remains unaffected by any change in Sine Rule, Cosine Rule & Area of Non-Right-Angled Triangles.",
-      "An experimental error caused by neglecting unit conversions in The Sine Rule (and Ambiguous Case)."
+      "40 cm²",
+      "20 cm²",
+      "34.6 cm²",
+      "80 cm²"
     ],
-    "correctIndex": 0,
-    "explanation": "Sine Rule is defined as: a / sin A = b / sin B = c / sin C for any triangle."
+    "correctIndex": 1,
+    "explanation": "Area = ½ × 8 × 10 × sin 30° = 40 × 0.5 = 20 cm²."
   },
   {
-    "id": "igcse-maths-q-extra-166",
+    "id": "igcse-maths-q-6-2-2",
     "subtopicId": "igcse-maths-6-2",
     "type": "short-answer",
     "marks": 2,
-    "prompt": "State two key principles or relationships from \"The Cosine Rule\" (6.2 Sine Rule, Cosine Rule & Area of Non-Right-Angled Triangles).",
+    "prompt": "Solve sin x = 0.5 for 0° ≤ x ≤ 360°, giving both solutions.",
+    "explanation": "sin x is positive in quadrants 1 and 2: 30° and 180° − 30° = 150°.",
     "rubric": {
       "maxMarks": 2,
-      "modelAnswer": "1. Use the Cosine Rule when you do NOT have an opposite pair: either SAS (two sides and the INCLUDED angle between them) or SSS (all three sides known). 2. Finding a missing side (SAS): a² = b² + c² − 2bc cos A (remember to take the square root at the end!).",
+      "modelAnswer": "x = 30° and x = 180° − 30° = 150°.",
       "markPoints": [
         {
           "id": "mp1",
-          "markDescription": "Use the Cosine Rule when you do NOT have an opposite pair: either SAS (two sides and the INCLUDED angle between them) or SSS (all three sides known)."
+          "numericMatch": {
+            "value": 30,
+            "tolerance": 0.1
+          },
+          "markDescription": "x = 30°"
         },
         {
           "id": "mp2",
-          "markDescription": "Finding a missing side (SAS): a² = b² + c² − 2bc cos A (remember to take the square root at the end!)."
+          "numericMatch": {
+            "value": 150,
+            "tolerance": 0.1
+          },
+          "markDescription": "x = 150°"
         }
       ]
-    },
-    "explanation": "From The Cosine Rule: Use the Cosine Rule when you do NOT have an opposite pair: either SAS (two sides and the INCLUDED angle between them) or SSS (all three sides known)."
+    }
   },
   {
-    "id": "igcse-maths-q-extra-167",
+    "id": "igcse-maths-q-6-2-3",
     "subtopicId": "igcse-maths-6-2",
-    "type": "multi-select",
+    "type": "fill-blank",
     "marks": 2,
-    "selectCount": 2,
-    "prompt": "Select the TWO correct statements regarding 6.2 Sine Rule, Cosine Rule & Area of Non-Right-Angled Triangles.",
-    "options": [
-      "Choose correctly between SOHCAHTOA, Sine Rule, and Cosine Rule.",
-      "In Sine Rule, Cosine Rule & Area of Non-Right-Angled Triangles, standard unit conversions are never required before applying formulas.",
-      "Calculate triangle area using ½ab sin C and handle obtuse angles in the Sine Rule.",
-      "Sine Rule and Cosine Rule always have identical numerical values and units."
+    "prompt": "Choose the right non-right-angled rule:",
+    "segments": [
+      "When given three sides (SSS) to find an angle, use the ",
+      " rule; when given an opposite side–angle pair, use the ",
+      " rule."
     ],
-    "correctIndices": [
-      0,
-      2
+    "wordBank": [
+      "Cosine",
+      "Sine",
+      "Tangent",
+      "Pythagoras"
     ],
-    "explanation": "Both \"Choose correctly between SOHCAHTOA, Sine Rule, and Cosine Rule.\" and \"Calculate triangle area using ½ab sin C and handle obtuse angles in the Sine Rule.\" are core specification points."
+    "answers": [
+      "Cosine",
+      "Sine"
+    ],
+    "explanation": "SSS and SAS require Cosine Rule; matching opposite pairs use Sine Rule."
   },
   {
-    "id": "igcse-maths-q-extra-168",
+    "id": "igcse-maths-q-6-2-4",
     "subtopicId": "igcse-maths-6-2",
     "type": "mcq",
     "marks": 1,
-    "prompt": "Which exam advice applies directly to 6.2 (Sine Rule, Cosine Rule & Area of Non-Right-Angled Triangles)?",
+    "prompt": "In the Cosine Rule a² = b² + c² − 2bc cos A, if b = 5, c = 8, and A = 60°, what is a²?",
     "options": [
-      "When calculating a² = b² + c² − 2bc cos A, NEVER subtract 2bc before multiplying by cos A (respect BIDMAS) and NEVER forget to square root a²!",
-      "Always omit units and rounding in Sine Rule, Cosine Rule & Area of Non-Right-Angled Triangles calculations.",
-      "Never show intermediate working steps in 6.2 questions.",
-      "Assume Sine Rule is always equal to 100 in every question."
+      "49",
+      "89",
+      "129",
+      "69"
     ],
     "correctIndex": 0,
-    "explanation": "When calculating a² = b² + c² − 2bc cos A, NEVER subtract 2bc before multiplying by cos A (respect BIDMAS) and NEVER forget to square root a²!"
+    "explanation": "a² = 25 + 64 − 2(5)(8)(0.5) = 89 − 40 = 49 (so a = 7)."
   },
   {
-    "id": "igcse-maths-q-extra-170",
-    "subtopicId": "igcse-maths-7-1",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "In 7.1 (Column Vectors, Vector Geometry & Transformations), which of the following is the accurate definition of \"Position vector\"?",
-    "options": [
-      "Vector OA starting at the origin O(0, 0) and ending at point A.",
-      "The inverse ratio of Collinear points measured under zero-load conditions.",
-      "A constant quantity that remains unaffected by any change in Column Vectors, Vector Geometry & Transformations.",
-      "An experimental error caused by neglecting unit conversions in Column Vectors & Magnitude."
+    "id": "igcse-maths-q-6-2-5",
+    "subtopicId": "igcse-maths-6-2",
+    "type": "matching",
+    "marks": 2,
+    "prompt": "Match each trig identity/formula to its expression:",
+    "pairs": [
+      {
+        "left": "Triangle area",
+        "right": "½ab sin C"
+      },
+      {
+        "left": "Sine symmetry",
+        "right": "sin(180° − x) = sin x"
+      },
+      {
+        "left": "Cosine symmetry",
+        "right": "cos(360° − x) = cos x"
+      },
+      {
+        "left": "Cosine angle form",
+        "right": "(b² + c² − a²) / (2bc)"
+      }
     ],
-    "correctIndex": 0,
-    "explanation": "Position vector is defined as: Vector OA starting at the origin O(0, 0) and ending at point A."
+    "explanation": "Essential non-right triangle and trig-graph rules."
   },
   {
-    "id": "igcse-maths-q-extra-171",
+    "id": "igcse-maths-q-7-1-1",
     "subtopicId": "igcse-maths-7-1",
     "type": "short-answer",
     "marks": 2,
-    "prompt": "State two key principles or relationships from \"Vector Geometry, Parallelism & Collinearity Proofs\" (7.1 Column Vectors, Vector Geometry & Transformations).",
+    "prompt": "Find the magnitude of the column vector v = (−5, 12).",
+    "explanation": "√(25 + 144) = 13.",
     "rubric": {
       "maxMarks": 2,
-      "modelAnswer": "1. Triangle rule for paths: To travel from A to C via O, write AC = AO + OC = −OA + OC = c − a (\"destination minus start\"). 2. Dividing a line in ratio m : n: If point P divides AB in ratio 2 : 3, then AP = (2/5)AB and OP = OA + (2/5)AB.",
+      "modelAnswer": "|v| = √((−5)² + 12²) = √(25 + 144) = √169 = 13.",
       "markPoints": [
         {
           "id": "mp1",
-          "markDescription": "Triangle rule for paths: To travel from A to C via O, write AC = AO + OC = −OA + OC = c − a (\"destination minus start\")."
+          "requiredKeywordGroups": [
+            [
+              "25"
+            ],
+            [
+              "144",
+              "169"
+            ]
+          ],
+          "markDescription": "Applies Pythagoras √(25 + 144)"
         },
         {
           "id": "mp2",
-          "markDescription": "Dividing a line in ratio m : n: If point P divides AB in ratio 2 : 3, then AP = (2/5)AB and OP = OA + (2/5)AB."
+          "numericMatch": {
+            "value": 13,
+            "tolerance": 0.01
+          },
+          "markDescription": "Magnitude 13"
         }
       ]
-    },
-    "explanation": "From Vector Geometry, Parallelism & Collinearity Proofs: Triangle rule for paths: To travel from A to C via O, write AC = AO + OC = −OA + OC = c − a (\"destination minus start\")."
+    }
   },
   {
-    "id": "igcse-maths-q-extra-172",
+    "id": "igcse-maths-q-7-1-2",
     "subtopicId": "igcse-maths-7-1",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "Given AB = 2a + 6b and CD = 3a + 9b, which statement is ALWAYS true?",
+    "options": [
+      "AB is perpendicular to CD",
+      "AB is parallel to CD and CD = 1.5 AB",
+      "A, B, C, D are collinear",
+      "AB = CD"
+    ],
+    "correctIndex": 1,
+    "explanation": "CD = 1.5(2a + 6b) = 1.5 AB, proving parallelism and length ratio 1.5 (collinearity requires a shared point)."
+  },
+  {
+    "id": "igcse-maths-q-7-1-3",
+    "subtopicId": "igcse-maths-7-1",
+    "type": "fill-blank",
+    "marks": 2,
+    "prompt": "Complete the collinearity proof:",
+    "segments": [
+      "To prove A, B, and C are collinear, show AB is a ",
+      " multiple of BC AND that they share the common point ",
+      "."
+    ],
+    "wordBank": [
+      "scalar",
+      "B",
+      "vector",
+      "O"
+    ],
+    "answers": [
+      "scalar",
+      "B"
+    ],
+    "explanation": "Scalar multiple proves parallel direction; shared point B forces them onto one line."
+  },
+  {
+    "id": "igcse-maths-q-7-1-4",
+    "subtopicId": "igcse-maths-7-1",
+    "type": "matching",
+    "marks": 2,
+    "prompt": "Match each transformation to its mandatory description detail:",
+    "pairs": [
+      {
+        "left": "Translation",
+        "right": "Column vector"
+      },
+      {
+        "left": "Reflection",
+        "right": "Equation of mirror line"
+      },
+      {
+        "left": "Rotation",
+        "right": "Angle, direction & centre"
+      },
+      {
+        "left": "Enlargement",
+        "right": "Scale factor & centre"
+      }
+    ],
+    "explanation": "Every single detail is required for full marks on transformation descriptions."
+  },
+  {
+    "id": "igcse-maths-q-7-1-5",
+    "subtopicId": "igcse-maths-7-1",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "A point P(3, −2) is enlarged by scale factor −2 about the origin (0, 0). Where is P′?",
+    "options": [
+      "(6, −4)",
+      "(−6, 4)",
+      "(−1.5, 1)",
+      "(−6, −4)"
+    ],
+    "correctIndex": 1,
+    "explanation": "Multiply both coordinates by −2: (3 × −2, −2 × −2) = (−6, 4)."
+  },
+  {
+    "id": "igcse-maths-q-8-1-1",
+    "subtopicId": "igcse-maths-8-1",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "A bag has 4 red and 6 blue balls. Two are drawn WITHOUT replacement. What is P(both red)?",
+    "options": [
+      "16/100",
+      "12/90",
+      "8/90",
+      "4/9"
+    ],
+    "correctIndex": 1,
+    "explanation": "P(R then R) = (4/10) × (3/9) = 12/90 = 2/15."
+  },
+  {
+    "id": "igcse-maths-q-8-1-2",
+    "subtopicId": "igcse-maths-8-1",
+    "type": "short-answer",
+    "marks": 2,
+    "prompt": "In a class of 25, 14 play football, 11 play tennis, and 5 play both. Find P(football | tennis).",
+    "explanation": "Conditional probability uses n(tennis) = 11 as the denominator: 5/11.",
+    "rubric": {
+      "maxMarks": 2,
+      "modelAnswer": "Out of the 11 students who play tennis, 5 also play football, so P(football | tennis) = 5/11 (≈ 0.455).",
+      "markPoints": [
+        {
+          "id": "mp1",
+          "requiredKeywordGroups": [
+            [
+              "11",
+              "0.45"
+            ]
+          ],
+          "markDescription": "Restricts denominator to 11"
+        },
+        {
+          "id": "mp2",
+          "requiredKeywordGroups": [
+            [
+              "5/11",
+              "0.455",
+              "0.45"
+            ]
+          ],
+          "markDescription": "Correct ratio 5/11"
+        }
+      ]
+    }
+  },
+  {
+    "id": "igcse-maths-q-8-1-3",
+    "subtopicId": "igcse-maths-8-1",
+    "type": "fill-blank",
+    "marks": 2,
+    "prompt": "Complete the set notation meanings:",
+    "segments": [
+      "A ∩ B means A ",
+      " B, while A ∪ B means A ",
+      " B (or both)."
+    ],
+    "wordBank": [
+      "AND",
+      "OR",
+      "NOT",
+      "GIVEN"
+    ],
+    "answers": [
+      "AND",
+      "OR"
+    ],
+    "explanation": "∩ is intersection (AND) and ∪ is union (OR)."
+  },
+  {
+    "id": "igcse-maths-q-8-1-4",
+    "subtopicId": "igcse-maths-8-1",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "If P(rain on any day) = 0.3 independently, what is P(rain on at least one of two days)?",
+    "options": [
+      "0.60",
+      "0.51",
+      "0.49",
+      "0.09"
+    ],
+    "correctIndex": 1,
+    "explanation": "P(at least one) = 1 − P(no rain both days) = 1 − 0.7² = 1 − 0.49 = 0.51."
+  },
+  {
+    "id": "igcse-maths-q-8-1-5",
+    "subtopicId": "igcse-maths-8-1",
     "type": "multi-select",
     "marks": 2,
-    "selectCount": 2,
-    "prompt": "Select the TWO correct statements regarding 7.1 Column Vectors, Vector Geometry & Transformations.",
+    "prompt": "Select the TWO correct probability tree rules:",
     "options": [
-      "Calculate vector magnitudes and express geometric paths using ratio fractions.",
-      "In Column Vectors, Vector Geometry & Transformations, standard unit conversions are never required before applying formulas.",
-      "Write formal proofs for parallel vectors and collinear points.",
-      "Position vector and Collinear points always have identical numerical values and units."
+      "Multiply probabilities along branches for AND",
+      "Add probabilities of separate winning paths for OR",
+      "Add probabilities along branches for AND",
+      "Branches from one node sum to 100"
     ],
+    "selectCount": 2,
     "correctIndices": [
       0,
-      2
+      1
     ],
-    "explanation": "Both \"Calculate vector magnitudes and express geometric paths using ratio fractions.\" and \"Write formal proofs for parallel vectors and collinear points.\" are core specification points."
+    "explanation": "Multiply along paths, add between mutually exclusive paths, and branches from a node sum to 1."
   },
   {
-    "id": "igcse-maths-q-extra-173",
-    "subtopicId": "igcse-maths-7-1",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "Which exam advice applies directly to 7.1 (Column Vectors, Vector Geometry & Transformations)?",
-    "options": [
-      "Showing AB = k·BC alone only proves parallelism — you MUST add the sentence \"and they share the common point B, therefore A, B, and C are collinear\" to earn the final proof mark!",
-      "Always omit units and rounding in Column Vectors, Vector Geometry & Transformations calculations.",
-      "Never show intermediate working steps in 7.1 questions.",
-      "Assume Position vector is always equal to 100 in every question."
-    ],
-    "correctIndex": 0,
-    "explanation": "Showing AB = k·BC alone only proves parallelism — you MUST add the sentence \"and they share the common point B, therefore A, B, and C are collinear\" to earn the final proof mark!"
-  },
-  {
-    "id": "igcse-maths-q-extra-174",
-    "subtopicId": "igcse-maths-7-1",
-    "type": "short-answer",
-    "marks": 2,
-    "prompt": "Explain the core rule covered in \"The Four Geometric Transformations\" for 7.1 Column Vectors, Vector Geometry & Transformations.",
-    "rubric": {
-      "maxMarks": 2,
-      "modelAnswer": "When describing a single transformation fully, always state the EXACT required details: Translation: state \"Translation\" + column vector (x / y).",
-      "markPoints": [
-        {
-          "id": "mp1",
-          "markDescription": "When describing a single transformation fully, always state the EXACT required details:"
-        },
-        {
-          "id": "mp2",
-          "markDescription": "Translation: state \"Translation\" + column vector (x / y)."
-        }
-      ]
-    },
-    "explanation": "When describing a single transformation fully, always state the EXACT required details:"
-  },
-  {
-    "id": "igcse-maths-q-extra-175",
-    "subtopicId": "igcse-maths-8-1",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "In 8.1 (Probability Trees, Venn Diagrams & Conditional Probability), which of the following is the accurate definition of \"Mutually exclusive\"?",
-    "options": [
-      "Events that cannot happen at the same time, so P(A ∩ B) = 0 and P(A or B) = P(A) + P(B).",
-      "The inverse ratio of Independent events measured under zero-load conditions.",
-      "A constant quantity that remains unaffected by any change in Probability Trees, Venn Diagrams & Conditional Probability.",
-      "An experimental error caused by neglecting unit conversions in Probability Rules & Tree Diagrams."
-    ],
-    "correctIndex": 0,
-    "explanation": "Mutually exclusive is defined as: Events that cannot happen at the same time, so P(A ∩ B) = 0 and P(A or B) = P(A) + P(B)."
-  },
-  {
-    "id": "igcse-maths-q-extra-176",
-    "subtopicId": "igcse-maths-8-1",
-    "type": "short-answer",
-    "marks": 2,
-    "prompt": "State two key principles or relationships from \"Conditional Probability (Without Replacement)\" (8.1 Probability Trees, Venn Diagrams & Conditional Probability).",
-    "rubric": {
-      "maxMarks": 2,
-      "modelAnswer": "1. When items are drawn WITHOUT replacement, both the denominator and the chosen colour’s numerator decrease by 1 on the second branch. 2. Worked example: A bag has 4 red and 6 blue counters (10 total). Two are picked without replacement. P(both red) = (4/10) × (3/9) = 12/90 = 2/15.",
-      "markPoints": [
-        {
-          "id": "mp1",
-          "markDescription": "When items are drawn WITHOUT replacement, both the denominator and the chosen colour’s numerator decrease by 1 on the second branch."
-        },
-        {
-          "id": "mp2",
-          "markDescription": "Worked example: A bag has 4 red and 6 blue counters (10 total). Two are picked without replacement. P(both red) = (4/10) × (3/9) = 12/90 = 2/15."
-        }
-      ]
-    },
-    "explanation": "From Conditional Probability (Without Replacement): When items are drawn WITHOUT replacement, both the denominator and the chosen colour’s numerator decrease by 1 on the second branch."
-  },
-  {
-    "id": "igcse-maths-q-extra-177",
-    "subtopicId": "igcse-maths-8-1",
-    "type": "multi-select",
-    "marks": 2,
-    "selectCount": 2,
-    "prompt": "Select the TWO correct statements regarding 8.1 Probability Trees, Venn Diagrams & Conditional Probability.",
-    "options": [
-      "Construct and evaluate both independent and without-replacement probability trees.",
-      "In Probability Trees, Venn Diagrams & Conditional Probability, standard unit conversions are never required before applying formulas.",
-      "Use P(at least one) = 1 − P(none) cleanly.",
-      "Mutually exclusive and Independent events always have identical numerical values and units."
-    ],
-    "correctIndices": [
-      0,
-      2
-    ],
-    "explanation": "Both \"Construct and evaluate both independent and without-replacement probability trees.\" and \"Use P(at least one) = 1 − P(none) cleanly.\" are core specification points."
-  },
-  {
-    "id": "igcse-maths-q-extra-178",
-    "subtopicId": "igcse-maths-8-1",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "Which exam advice applies directly to 8.1 (Probability Trees, Venn Diagrams & Conditional Probability)?",
-    "options": [
-      "When finding \"one red and one blue\" without replacement, DO NOT forget there are TWO orderings (Red then Blue OR Blue then Red) — add both paths!",
-      "Always omit units and rounding in Probability Trees, Venn Diagrams & Conditional Probability calculations.",
-      "Never show intermediate working steps in 8.1 questions.",
-      "Assume Mutually exclusive is always equal to 100 in every question."
-    ],
-    "correctIndex": 0,
-    "explanation": "When finding \"one red and one blue\" without replacement, DO NOT forget there are TWO orderings (Red then Blue OR Blue then Red) — add both paths!"
-  },
-  {
-    "id": "igcse-maths-q-extra-179",
-    "subtopicId": "igcse-maths-8-1",
-    "type": "short-answer",
-    "marks": 2,
-    "prompt": "Explain the core rule covered in \"Venn Diagrams & Set Notation\" for 8.1 Probability Trees, Venn Diagrams & Conditional Probability.",
-    "rubric": {
-      "maxMarks": 2,
-      "modelAnswer": "Key set notation: A ∩ B (intersection: in BOTH A and B); A ∪ B (union: in A, or B, or both); A′ (complement: NOT in A); n(A) = number of elements in A. Always fill the INTERSECTION (overlap) FIRST when populating a Venn diagram, then subtract the overlap from each individual circle’s total!",
-      "markPoints": [
-        {
-          "id": "mp1",
-          "markDescription": "Key set notation: A ∩ B (intersection: in BOTH A and B); A ∪ B (union: in A, or B, or both); A′ (complement: NOT in A); n(A) = number of elements in A."
-        },
-        {
-          "id": "mp2",
-          "markDescription": "Always fill the INTERSECTION (overlap) FIRST when populating a Venn diagram, then subtract the overlap from each individual circle’s total!"
-        }
-      ]
-    },
-    "explanation": "Key set notation: A ∩ B (intersection: in BOTH A and B); A ∪ B (union: in A, or B, or both); A′ (complement: NOT in A); n(A) = number of elements in A."
-  },
-  {
-    "id": "igcse-maths-q-extra-180",
+    "id": "igcse-maths-q-8-2-1",
     "subtopicId": "igcse-maths-8-2",
     "type": "mcq",
     "marks": 1,
-    "prompt": "In 8.2 (Averages, Cumulative Frequency, Box Plots & Histograms), which of the following is the accurate definition of \"Interquartile range (IQR)\"?",
+    "prompt": "On a histogram, a bar spans 10 ≤ x < 25 and has frequency 30. What is its frequency density?",
     "options": [
-      "Q₃ − Q₁, a robust measure of spread covering the middle 50% of observations.",
-      "The inverse ratio of Frequency density measured under zero-load conditions.",
-      "A constant quantity that remains unaffected by any change in Averages, Cumulative Frequency, Box Plots & Histograms.",
-      "An experimental error caused by neglecting unit conversions in Estimated Mean & Grouped Frequency Tables."
+      "450",
+      "2",
+      "0.5",
+      "15"
     ],
-    "correctIndex": 0,
-    "explanation": "Interquartile range (IQR) is defined as: Q₃ − Q₁, a robust measure of spread covering the middle 50% of observations."
+    "correctIndex": 1,
+    "explanation": "Class width = 25 − 10 = 15; Frequency Density = 30 ÷ 15 = 2."
   },
   {
-    "id": "igcse-maths-q-extra-181",
+    "id": "igcse-maths-q-8-2-2",
     "subtopicId": "igcse-maths-8-2",
     "type": "short-answer",
     "marks": 2,
-    "prompt": "State two key principles or relationships from \"Cumulative Frequency Curves & Box Plots\" (8.2 Averages, Cumulative Frequency, Box Plots & Histograms).",
+    "prompt": "A box plot has Q₁ = 34, Median = 48, and Q₃ = 61. Calculate the interquartile range (IQR) and state what percentage of data lies inside the box.",
+    "explanation": "IQR = Q₃ − Q₁ = 27, capturing the middle 50% of the distribution.",
     "rubric": {
       "maxMarks": 2,
-      "modelAnswer": "1. Plot cumulative frequencies against the UPPER BOUNDARY of each class interval (never the midpoint!) and join with a smooth S-shaped curve starting from the lowest class boundary at y = 0. 2. For total frequency N: Median (Q₂) is read across from 50% (0.5N); Lower Quartile (Q₁) from 25% (0.25N); Upper Quartile (Q₃) from 75% (0.75N).",
+      "modelAnswer": "IQR = 61 − 34 = 27, and 50% of the data lies inside the box between Q₁ and Q₃.",
       "markPoints": [
         {
           "id": "mp1",
-          "markDescription": "Plot cumulative frequencies against the UPPER BOUNDARY of each class interval (never the midpoint!) and join with a smooth S-shaped curve starting from the lowest class boundary at y = 0."
+          "numericMatch": {
+            "value": 27,
+            "tolerance": 0.01
+          },
+          "markDescription": "IQR = 27"
         },
         {
           "id": "mp2",
-          "markDescription": "For total frequency N: Median (Q₂) is read across from 50% (0.5N); Lower Quartile (Q₁) from 25% (0.25N); Upper Quartile (Q₃) from 75% (0.75N)."
+          "requiredKeywordGroups": [
+            [
+              "50%",
+              "50 percent",
+              "half"
+            ]
+          ],
+          "markDescription": "50% of data"
         }
       ]
-    },
-    "explanation": "From Cumulative Frequency Curves & Box Plots: Plot cumulative frequencies against the UPPER BOUNDARY of each class interval (never the midpoint!) and join with a smooth S-shaped curve starting from the lowest class boundary at y = 0."
+    }
   },
   {
-    "id": "igcse-maths-q-extra-182",
+    "id": "igcse-maths-q-8-2-3",
     "subtopicId": "igcse-maths-8-2",
-    "type": "multi-select",
+    "type": "fill-blank",
     "marks": 2,
-    "selectCount": 2,
-    "prompt": "Select the TWO correct statements regarding 8.2 Averages, Cumulative Frequency, Box Plots & Histograms.",
-    "options": [
-      "Calculate estimated mean from grouped tables using midpoints and Σ(fx) ÷ Σf.",
-      "In Averages, Cumulative Frequency, Box Plots & Histograms, standard unit conversions are never required before applying formulas.",
-      "Plot cumulative frequency at upper boundaries, read off median/Q₁/Q₃/IQR, and compare distributions using both median and IQR.",
-      "Interquartile range (IQR) and Frequency density always have identical numerical values and units."
+    "prompt": "Complete the cumulative frequency and histogram rules:",
+    "segments": [
+      "Cumulative frequency points are plotted at the ",
+      " class boundary, and on a histogram bar ",
+      " equals frequency."
     ],
-    "correctIndices": [
-      0,
-      2
+    "wordBank": [
+      "upper",
+      "area",
+      "midpoint",
+      "height"
     ],
-    "explanation": "Both \"Calculate estimated mean from grouped tables using midpoints and Σ(fx) ÷ Σf.\" and \"Plot cumulative frequency at upper boundaries, read off median/Q₁/Q₃/IQR, and compare distributions using both median and IQR.\" are core specification points."
+    "answers": [
+      "upper",
+      "area"
+    ],
+    "explanation": "Plot CF at upper boundaries; histogram bar area = FD × width = frequency."
   },
   {
-    "id": "igcse-maths-q-extra-183",
+    "id": "igcse-maths-q-8-2-4",
     "subtopicId": "igcse-maths-8-2",
     "type": "mcq",
     "marks": 1,
-    "prompt": "Which exam advice applies directly to 8.2 (Averages, Cumulative Frequency, Box Plots & Histograms)?",
+    "prompt": "Why is the mean calculated from a grouped frequency table only an ESTIMATE?",
     "options": [
-      "Always divide Σ(fx) by the TOTAL FREQUENCY (Σf), NEVER by the number of rows in the table!",
-      "Always omit units and rounding in Averages, Cumulative Frequency, Box Plots & Histograms calculations.",
-      "Never show intermediate working steps in 8.2 questions.",
-      "Assume Interquartile range (IQR) is always equal to 100 in every question."
+      "Because total frequency is unknown",
+      "Because exact individual data values inside each class are unknown",
+      "Because midpoints are always rounded",
+      "Because the mode is missing"
     ],
-    "correctIndex": 0,
-    "explanation": "Always divide Σ(fx) by the TOTAL FREQUENCY (Σf), NEVER by the number of rows in the table!"
+    "correctIndex": 1,
+    "explanation": "Grouping loses individual raw values, so midpoints approximate each class."
+  },
+  {
+    "id": "igcse-maths-q-8-2-5",
+    "subtopicId": "igcse-maths-8-2",
+    "type": "matching",
+    "marks": 2,
+    "prompt": "Match each statistical measure to how it is read from n = 120 cumulative frequency:",
+    "pairs": [
+      {
+        "left": "Lower quartile Q₁",
+        "right": "Read across from CF = 30"
+      },
+      {
+        "left": "Median Q₂",
+        "right": "Read across from CF = 60"
+      },
+      {
+        "left": "Upper quartile Q₃",
+        "right": "Read across from CF = 90"
+      },
+      {
+        "left": "IQR",
+        "right": "Q₃ − Q₁"
+      }
+    ],
+    "explanation": "Quartiles sit at 25%, 50%, and 75% of total frequency n."
   }
 ];
 
 export const IGCSE_MATHS_FLASHCARDS: FlashcardItem[] = [
   {
-    "id": "igcse-maths-fc-1",
+    "id": "igcse-maths-fc-1-1-1",
     "subtopicId": "igcse-maths-1-1",
-    "front": "How do you reverse a 20% decrease?",
+    "front": "Formula for compound interest / growth?",
     "backBullets": [
-      "Divide the discounted value by 0.80 (NOT add 20%)"
+      "A = P × (1 + r/100)ⁿ (use 1 − r/100 for depreciation)."
     ]
   },
   {
-    "id": "igcse-maths-fc-2",
-    "subtopicId": "igcse-maths-1-2",
-    "front": "How do you find the UPPER bound of A ÷ B?",
-    "backBullets": [
-      "Upper bound of A ÷ Lower bound of B (biggest numerator, smallest denominator)"
-    ]
-  },
-  {
-    "id": "igcse-maths-fc-3",
-    "subtopicId": "igcse-maths-2-1",
-    "front": "State the Quadratic Formula and turning point from (x + p)² + q.",
-    "backBullets": [
-      "x = (−b ± √(b² − 4ac)) ÷ (2a)",
-      "Turning point is (−p, q)"
-    ]
-  },
-  {
-    "id": "igcse-maths-fc-4",
-    "subtopicId": "igcse-maths-2-3",
-    "front": "How do you differentiate y = axⁿ?",
-    "backBullets": [
-      "dy/dx = anxⁿ⁻¹ (multiply by old power, reduce power by 1)",
-      "Stationary points occur where dy/dx = 0"
-    ]
-  },
-  {
-    "id": "igcse-maths-fc-5",
-    "subtopicId": "igcse-maths-4-1",
-    "front": "If two similar solids have length ratio k, what are their area and volume ratios?",
-    "backBullets": [
-      "Area scale factor = k²",
-      "Volume scale factor = k³"
-    ]
-  },
-  {
-    "id": "igcse-maths-fc-6",
-    "subtopicId": "igcse-maths-6-2",
-    "front": "When do you use the Cosine Rule instead of the Sine Rule?",
-    "backBullets": [
-      "SAS (two sides + included angle) or SSS (all three sides) — whenever you lack a matching opposite pair"
-    ]
-  },
-  {
-    "id": "igcse-maths-fc-7",
-    "subtopicId": "igcse-maths-8-2",
-    "front": "What is plotted on the y-axis of a histogram and how do you find frequency?",
-    "backBullets": [
-      "y-axis = Frequency Density = Frequency ÷ Class Width",
-      "Frequency = Area of bar (Frequency Density × Class Width)"
-    ]
-  },
-  {
-    "id": "igcse-maths-fc-extra-107",
+    "id": "igcse-maths-fc-1-1-2",
     "subtopicId": "igcse-maths-1-1",
-    "front": "1.1 Fractions, Recurring Decimals & Percentage Change: What are the essential exam points to remember?",
+    "front": "How do you find an original price in a reverse percentage problem?",
     "backBullets": [
-      "Always convert mixed numbers to improper fractions before multiplying or dividing: 2⅓ × 1¾ = (7/3) × (7/4) = 49/12 = 4 1/12. To divide, multiply by the reciprocal (Keep–Change–Flip).",
-      "Converting a recurring decimal to an exact fraction (Extended): Let x = 0.363636..., then 100x = 36.363636... Subtracting gives 99x = 36, so x = 36/99 = 4/11.",
-      "Percentage change = ((New value − Original value) ÷ Original value) × 100%. Always divide by the ORIGINAL value, never the new value!"
+      "Divide the final value by its decimal multiplier (e.g. after 20% off, divide by 0.80)."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-108",
+    "id": "igcse-maths-fc-1-1-3",
     "subtopicId": "igcse-maths-1-1",
-    "front": "1.1 Decimal Multipliers, Simple & Compound Interest: What are the essential exam points to remember?",
+    "front": "Formula for percentage change?",
     "backBullets": [
-      "A decimal multiplier converts a percentage change into one multiplication: +12% → ×1.12; +3.5% → ×1.035; −18% → ×0.82.",
-      "Simple interest adds the SAME fixed amount every year: I = (P × R × T) ÷ 100.",
-      "Compound interest (and exponential decay/depreciation): Final Value = P × (1 ± r/100)ⁿ, where P is principal, r is rate per period, and n is number of periods."
-    ],
-    "hint": "Simple = Straight-line addition each year; Compound = Multiply by (Multiplier)^n repeatedly!"
+      "((New − Original) ÷ Original) × 100%."
+    ]
   },
   {
-    "id": "igcse-maths-fc-extra-109",
+    "id": "igcse-maths-fc-1-1-4",
     "subtopicId": "igcse-maths-1-1",
-    "front": "1.1 Reverse Percentages: What are the essential exam points to remember?",
+    "front": "How do you convert 0.727272... to a fraction?",
     "backBullets": [
-      "Use reverse percentages when you are given the FINAL amount AFTER a percentage increase or decrease and must recover the ORIGINAL 100% value.",
-      "Method: Original = Final amount ÷ Decimal Multiplier.",
-      "Worked example 1 (decrease): A laptop costs $510 after a 15% discount. $510 represents 85% (multiplier 0.85), so Original = 510 ÷ 0.85 = $600."
+      "Let x = 0.7272..., 100x = 72.7272..., subtract: 99x = 72 → x = 72/99 = 8/11."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-110",
+    "id": "igcse-maths-fc-1-1-5",
     "subtopicId": "igcse-maths-1-1",
-    "front": "Define: Decimal multiplier (1.1)",
+    "front": "Rule for dividing mixed-number fractions?",
     "backBullets": [
-      "Single factor used to compute percentage increases (e.g., 1.15) or decreases (e.g., 0.85)."
+      "Convert to improper fractions first, then Keep–Change–Flip (multiply by the reciprocal)."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-111",
+    "id": "igcse-maths-fc-1-2-1",
     "subtopicId": "igcse-maths-1-2",
-    "front": "1.2 Laws of Indices (Integer, Negative & Fractional): What are the essential exam points to remember?",
+    "front": "What does a⁻ⁿ mean?",
     "backBullets": [
-      "Core index laws: aᵐ × aⁿ = aᵐ⁺ⁿ; aᵐ ÷ aⁿ = aᵐ⁻ⁿ; (aᵐ)ⁿ = aᵐⁿ; a⁰ = 1 (for any a ≠ 0).",
-      "Negative index means reciprocal: a⁻ⁿ = 1 ÷ aⁿ (and (a/b)⁻ⁿ = (b/a)ⁿ). Example: (2/3)⁻² = (3/2)² = 9/4.",
-      "Fractional index means root then power: a^(m/n) = (ⁿ√a)ᵐ. Always take the root FIRST to keep numbers small!"
-    ],
-    "hint": "Fractional powers: \"Flower Power\" — the denominator is the ROOT (underground), the numerator is the POWER (up top)!"
+      "The reciprocal: 1 / aⁿ."
+    ]
   },
   {
-    "id": "igcse-maths-fc-extra-112",
+    "id": "igcse-maths-fc-1-2-2",
     "subtopicId": "igcse-maths-1-2",
-    "front": "1.2 Surds & Rationalising the Denominator: What are the essential exam points to remember?",
+    "front": "How do you evaluate a^(m/n)?",
     "backBullets": [
-      "A surd is an irrational root such as √2, √3, or √5. Simplify by pulling out the LARGEST square factor: √72 = √(36 × 2) = 6√2.",
-      "Collect like surds just like algebra: 5√3 + √12 = 5√3 + 2√3 = 7√3.",
-      "Rationalising single-term denominator: multiply top and bottom by √b. Example: 6/√3 = (6√3)/3 = 2√3."
+      "Take the nth root first, then raise to the power m: (ⁿ√a)ᵐ."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-113",
+    "id": "igcse-maths-fc-1-2-3",
     "subtopicId": "igcse-maths-1-2",
-    "front": "1.2 Standard Form & Upper/Lower Bounds: What are the essential exam points to remember?",
+    "front": "How do you rationalise 1 / (a + √b)?",
     "backBullets": [
-      "Standard form writes any number as A × 10ⁿ where 1 ≤ A < 10 and n is an integer. Example: 0.00045 = 4.5 × 10⁻⁴; (3 × 10⁵) × (4 × 10³) = 12 × 10⁸ = 1.2 × 10⁹.",
-      "Bounds of a rounded measurement: Add and subtract HALF of the rounding unit. If L = 8.4 cm to 1 d.p. (unit 0.1), then 8.35 ≤ L < 8.45.",
-      "Bounds in calculations: For maximum of a ÷ b, divide UPPER(a) by LOWER(b). For minimum of a − b, calculate LOWER(a) − UPPER(b)."
+      "Multiply top and bottom by the conjugate (a − √b) so the denominator becomes a² − b."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-114",
+    "id": "igcse-maths-fc-1-2-4",
     "subtopicId": "igcse-maths-1-2",
-    "front": "Define: Standard form (1.2)",
+    "front": "Condition on A in standard form A × 10ⁿ?",
     "backBullets": [
-      "Scientific notation A × 10ⁿ with 1 ≤ A < 10 and integer exponent n."
+      "1 ≤ A < 10 and n must be an integer."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-115",
+    "id": "igcse-maths-fc-1-2-5",
+    "subtopicId": "igcse-maths-1-2",
+    "front": "How do you calculate the Upper Bound of a ÷ b?",
+    "backBullets": [
+      "UB(a) ÷ LB(b) — largest numerator divided by smallest denominator."
+    ]
+  },
+  {
+    "id": "igcse-maths-fc-1-3-1",
     "subtopicId": "igcse-maths-1-3",
-    "front": "1.3 Ratio Sharing & Combining Ratios: What are the essential exam points to remember?",
+    "front": "How do you combine A:B and B:C into A:B:C?",
     "backBullets": [
-      "Sharing in a ratio: Sum the ratio parts, find the value of 1 part, then multiply. Example: Share $450 in ratio 2 : 3 : 4 → 9 parts = $450 → 1 part = $50 → $100, $150, $200.",
-      "Difference ratio problems: If Mia and Leo share money in ratio 3 : 7 and Leo gets $60 more than Mia, the difference of 4 parts = $60 → 1 part = $15 → total 10 parts = $150.",
-      "Combining two ratios A : B = 2 : 3 and B : C = 4 : 5: Make the shared letter B equal (LCM of 3 and 4 is 12) → A : B = 8 : 12 and B : C = 12 : 15 → A : B : C = 8 : 12 : 15."
+      "Scale both ratios so the shared B values equal their LCM."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-116",
+    "id": "igcse-maths-fc-1-3-2",
     "subtopicId": "igcse-maths-1-3",
-    "front": "1.3 Direct Proportion (Algebraic Form): What are the essential exam points to remember?",
+    "front": "Equation when y is directly proportional to x²?",
     "backBullets": [
-      "If y is directly proportional to x (written y ∝ x), then y = kx where k is the constant of proportionality (graph is a straight line through the origin).",
-      "Direct proportion also extends to powers and roots: y ∝ x² → y = kx²; y ∝ √x → y = k√x.",
-      "4-step method: (1) Write equation with k, (2) Substitute known pair (x, y) to solve for k, (3) Rewrite formula with numerical k, (4) Substitute new value to find the unknown."
+      "y = kx² (find k using a given pair first)."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-117",
+    "id": "igcse-maths-fc-1-3-3",
     "subtopicId": "igcse-maths-1-3",
-    "front": "1.3 Inverse Proportion: What are the essential exam points to remember?",
+    "front": "Equation when y is inversely proportional to √x?",
     "backBullets": [
-      "If y is inversely proportional to x (y ∝ 1/x), then y = k ÷ x (so x × y = k is constant). As x doubles, y halves; the graph is a smooth hyperbola approaching both axes.",
-      "Inverse square law (common in physics & Extended maths): y ∝ 1/x² → y = k ÷ x².",
-      "Worked example: 6 workers build a wall in 10 hours. Since workers × hours = constant, k = 6 × 10 = 60 worker-hours. For 15 workers, time = 60 ÷ 15 = 4 hours."
+      "y = k / √x."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-118",
+    "id": "igcse-maths-fc-1-3-4",
     "subtopicId": "igcse-maths-1-3",
-    "front": "Define: Direct proportion (1.3)",
+    "front": "Shape of an inverse proportion graph y = k/x (k > 0)?",
     "backBullets": [
-      "Relationship where y/x = k is constant (y = kx); graph is a straight line through (0, 0)."
+      "A smooth reciprocal curve in quadrant 1 approaching both axes without touching them."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-119",
+    "id": "igcse-maths-fc-1-3-5",
     "subtopicId": "igcse-maths-1-3",
-    "front": "Define: Inverse proportion (1.3)",
+    "front": "If y ∝ x² and x is tripled, what happens to y?",
     "backBullets": [
-      "Relationship where x × y = k is constant (y = k/x); doubling x halves y."
+      "y is multiplied by 3² = 9."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-120",
+    "id": "igcse-maths-fc-2-1-1",
     "subtopicId": "igcse-maths-2-1",
-    "front": "2.1 Expanding Brackets & Factorising Quadratics: What are the essential exam points to remember?",
+    "front": "State the quadratic formula.",
     "backBullets": [
-      "Always rearrange a quadratic equation into standard form ax² + bx + c = 0 before solving.",
-      "Difference of two squares: a² − b² = (a + b)(a − b). Example: 9x² − 16 = (3x + 4)(3x − 4).",
-      "Factorising when a = 1 (x² + bx + c): find two integers multiplying to c and adding to b. Example: x² − 5x − 14 = (x − 7)(x + 2) = 0 → x = 7 or x = −2."
+      "x = (−b ± √(b² − 4ac)) / (2a) for ax² + bx + c = 0."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-121",
+    "id": "igcse-maths-fc-2-1-2",
     "subtopicId": "igcse-maths-2-1",
-    "front": "2.1 The Quadratic Formula: What are the essential exam points to remember?",
+    "front": "Difference of two squares identity?",
     "backBullets": [
-      "When a question says \"give your answers to 2 decimal places\" or \"3 significant figures\", use the Quadratic Formula: x = (−b ± √(b² − 4ac)) ÷ (2a).",
-      "Worked example: Solve 3x² − 5x − 4 = 0. Here a = 3, b = −5, c = −4. Discriminant b² − 4ac = (−5)² − 4(3)(−4) = 25 + 48 = 73.",
-      "Thus x = (5 ± √73) ÷ 6 → x = 2.26 or x = −0.59 (2 d.p.)."
+      "a² − b² = (a + b)(a − b)."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-122",
+    "id": "igcse-maths-fc-2-1-3",
     "subtopicId": "igcse-maths-2-1",
-    "front": "2.1 Completing the Square & Vertex (Turning Point): What are the essential exam points to remember?",
+    "front": "Turning point of y = (x + p)² + q?",
     "backBullets": [
-      "To write x² + bx + c in completed-square form (x + p)² + q: halve the coefficient of x so p = b/2, then subtract p² and add c.",
-      "Worked example: x² − 6x + 11 = (x − 3)² − 9 + 11 = (x − 3)² + 2.",
-      "Turning point (minimum vertex) of y = (x + p)² + q occurs when the squared bracket equals 0, giving coordinates (−p, q). For y = (x − 3)² + 2, the minimum point is (3, 2)!"
-    ],
-    "hint": "To find the turning point from (x + p)² + q: FLIP the sign inside the bracket, KEEP the sign outside → (−p, q)."
+      "(−p, q), with line of symmetry x = −p."
+    ]
   },
   {
-    "id": "igcse-maths-fc-extra-123",
+    "id": "igcse-maths-fc-2-1-4",
     "subtopicId": "igcse-maths-2-1",
-    "front": "Define: Quadratic equation (2.1)",
+    "front": "What does b² − 4ac = 0 tell you about the parabola?",
     "backBullets": [
-      "Equation of degree 2 written in standard form ax² + bx + c = 0 (a ≠ 0)."
+      "Exactly 1 repeated real root (the curve just touches the x-axis)."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-124",
-    "subtopicId": "igcse-maths-2-2",
-    "front": "2.2 Linear Simultaneous Equations (Elimination): What are the essential exam points to remember?",
+    "id": "igcse-maths-fc-2-1-5",
+    "subtopicId": "igcse-maths-2-1",
+    "front": "First step in completing the square for x² + bx + c?",
     "backBullets": [
-      "Match the coefficients of either x or y by multiplying one or both equations, then eliminate that variable using SSS (Same Signs Subtract, Different Signs Add).",
-      "Worked example: Solve 3x + 2y = 16 and 5x − y = 18. Multiply the second equation by 2 → 10x − 2y = 36.",
-      "Since +2y and −2y have different signs, ADD the equations: 13x = 52 → x = 4. Substitute into 3(4) + 2y = 16 → 2y = 4 → y = 2."
-    ],
-    "hint": "SSS = Same Signs Subtract; Different Signs Add!"
-  },
-  {
-    "id": "igcse-maths-fc-extra-125",
-    "subtopicId": "igcse-maths-2-2",
-    "front": "2.2 Non-Linear Simultaneous Equations (Substitution): What are the essential exam points to remember?",
-    "backBullets": [
-      "When one equation is linear and the other is quadratic (e.g., y = x + 1 and x² + y² = 25), ALWAYS use SUBSTITUTION.",
-      "Step 1: Isolate one variable in the linear equation (y = x + 1). Step 2: Substitute into the quadratic: x² + (x + 1)² = 25 → 2x² + 2x − 24 = 0 → x² + x − 12 = 0.",
-      "Step 3: Factorise: (x + 4)(x − 3) = 0 → x = −4 or x = 3. Step 4: Find the matching y for EACH x using the linear equation: (−4, −3) and (3, 4)."
+      "Write (x + b/2)² − (b/2)² + c."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-126",
+    "id": "igcse-maths-fc-2-2-1",
     "subtopicId": "igcse-maths-2-2",
-    "front": "2.2 Linear, Quadratic & Graphical Inequalities: What are the essential exam points to remember?",
+    "front": "Elimination sign rule for simultaneous equations?",
     "backBullets": [
-      "Solve linear inequalities just like equations, EXCEPT multiplying or dividing both sides by a NEGATIVE number FLIPS the inequality sign (e.g., −2x < 10 → x > −5).",
-      "Quadratic inequalities: Solve the equality first, then SKETCH the parabola! For x² − 5x + 6 < 0, roots are 2 and 3; the U-shaped parabola is below zero BETWEEN the roots → 2 < x < 3. For x² − 5x + 6 > 0, it is above zero OUTSIDE the roots → x < 2 or x > 3.",
-      "Graphical inequalities (linear programming): Draw solid lines for ≤ / ≥ and dashed lines for < / >. Test a point (like (0, 0)) to identify the unwanted side to shade."
+      "SSS (Same Sign Subtract) and DSA (Different Sign Add)."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-127",
+    "id": "igcse-maths-fc-2-2-2",
     "subtopicId": "igcse-maths-2-2",
-    "front": "Define: Elimination method (2.2)",
+    "front": "Method for one linear and one quadratic simultaneous equation?",
     "backBullets": [
-      "Adding or subtracting multiples of linear simultaneous equations to cancel one unknown."
+      "Isolate y (or x) in the linear equation, substitute into the quadratic, solve, and pair both (x, y) solutions."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-128",
+    "id": "igcse-maths-fc-2-2-3",
     "subtopicId": "igcse-maths-2-2",
-    "front": "Define: Substitution method (2.2)",
+    "front": "What happens when you multiply/divide an inequality by a negative number?",
     "backBullets": [
-      "Expressing one variable from a linear equation and inserting it into a second (often quadratic) equation."
+      "Reverse the direction of the inequality sign."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-129",
+    "id": "igcse-maths-fc-2-2-4",
+    "subtopicId": "igcse-maths-2-2",
+    "front": "Solution shape for (x − 2)(x − 5) > 0?",
+    "backBullets": [
+      "Two outer tails: x < 2 or x > 5."
+    ]
+  },
+  {
+    "id": "igcse-maths-fc-2-2-5",
+    "subtopicId": "igcse-maths-2-2",
+    "front": "Solid vs dashed boundary lines in inequality regions?",
+    "backBullets": [
+      "Solid line for ≤ or ≥ (included); dashed line for < or > (excluded)."
+    ]
+  },
+  {
+    "id": "igcse-maths-fc-2-3-1",
     "subtopicId": "igcse-maths-2-3",
-    "front": "2.3 Arithmetic, Geometric & Quadratic Sequences: What are the essential exam points to remember?",
+    "front": "How do you find the n² coefficient of a quadratic sequence?",
     "backBullets": [
-      "Linear (arithmetic) sequence with common difference d: nth term = dn + (first term − d). Example: 5, 9, 13, 17... has d = 4 → uₙ = 4n + 1.",
-      "Quadratic sequence (constant SECOND difference 2a): Halve the second difference to get a (coefficient of n²), subtract an² from each term, then find the linear rule for the remainder!",
-      "Worked example: 4, 9, 16, 25... (or 5, 11, 21, 35...): 1st diffs = 6, 10, 14; 2nd diff = 4 → a = 4/2 = 2, so start with 2n² (2, 8, 18, 32). Remainder = 3, 3, 3, 3 → uₙ = 2n² + 3."
+      "Half the constant second difference: A = (second difference) ÷ 2."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-130",
+    "id": "igcse-maths-fc-2-3-2",
     "subtopicId": "igcse-maths-2-3",
-    "front": "2.3 Composite & Inverse Functions (Extended): What are the essential exam points to remember?",
+    "front": "nth term of a geometric sequence with first term a and ratio r?",
     "backBullets": [
-      "Composite function fg(x) means apply g FIRST, then substitute the result into f: fg(x) = f(g(x)). Order matters — usually fg(x) ≠ gf(x)!",
-      "Worked example: If f(x) = 2x + 3 and g(x) = x², then fg(x) = f(x²) = 2x² + 3, whereas gf(x) = g(2x + 3) = (2x + 3)².",
-      "Inverse function f⁻¹(x) reverses f(x): (1) Write y = f(x), (2) Rearrange to make x the subject, (3) Replace y with x. Example: y = (3x − 1)/4 → 4y + 1 = 3x → f⁻¹(x) = (4x + 1)/3."
+      "uₙ = a × rⁿ⁻¹."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-131",
+    "id": "igcse-maths-fc-2-3-3",
     "subtopicId": "igcse-maths-2-3",
-    "front": "2.3 Introduction to Differentiation (CIE 0580 / Edexcel 4MA1 Extended): What are the essential exam points to remember?",
+    "front": "In which order do you apply fg(x)?",
     "backBullets": [
-      "The derivative dy/dx gives the exact gradient function of a curve y = f(x) at any x-coordinate.",
-      "Power rule: If y = axⁿ, then dy/dx = anxⁿ⁻¹. The derivative of any constant is 0 (d/dx(c) = 0).",
-      "Worked example: For y = x³ − 3x² − 9x + 4, dy/dx = 3x² − 6x − 9."
-    ],
-    "hint": "Power rule: Multiply by the old power, then subtract 1 from the power! Minimum has positive smile (d²y/dx² > 0); Maximum has negative frown (d²y/dx² < 0)."
+      "Right-to-left: evaluate g(x) first, then substitute into f."
+    ]
   },
   {
-    "id": "igcse-maths-fc-extra-132",
+    "id": "igcse-maths-fc-2-3-4",
     "subtopicId": "igcse-maths-2-3",
-    "front": "Define: Quadratic sequence (2.3)",
+    "front": "Power rule for differentiation of y = axⁿ?",
     "backBullets": [
-      "Sequence with a constant second difference 2a and nth term an² + bn + c."
+      "dy/dx = anxⁿ⁻¹ (and derivative of a constant is 0)."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-133",
-    "subtopicId": "igcse-maths-3-1",
-    "front": "3.1 Gradient, Midpoint & Length of a Line Segment: What are the essential exam points to remember?",
+    "id": "igcse-maths-fc-2-3-5",
+    "subtopicId": "igcse-maths-2-3",
+    "front": "How do you classify a stationary point using d²y/dx²?",
     "backBullets": [
-      "Given two points A(x₁, y₁) and B(x₂, y₂):",
-      "Gradient: m = (y₂ − y₁) ÷ (x₂ − x₁). Positive m slopes uphill left-to-right; negative m slopes downhill.",
-      "Midpoint M: ((x₁ + x₂) ÷ 2, (y₁ + y₂) ÷ 2) — simply the average of the x’s and average of the y’s."
+      "d²y/dx² > 0 → minimum; d²y/dx² < 0 → maximum."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-134",
+    "id": "igcse-maths-fc-3-1-1",
     "subtopicId": "igcse-maths-3-1",
-    "front": "3.1 Equation of a Straight Line (y = mx + c): What are the essential exam points to remember?",
+    "front": "Gradient formula between (x₁, y₁) and (x₂, y₂)?",
     "backBullets": [
-      "In y = mx + c, m is the gradient and c is the y-intercept (where x = 0). If given in implicit form like 2x + 4y = 12, rearrange to y = −0.5x + 3 BEFORE reading m and c!",
-      "Finding the line through (2, 5) and (6, 17): First find m = (17 − 5) ÷ (6 − 2) = 12 ÷ 4 = 3. Substitute (2, 5) into y = 3x + c → 5 = 6 + c → c = −1 → y = 3x − 1."
+      "m = (y₂ − y₁) / (x₂ − x₁)."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-135",
+    "id": "igcse-maths-fc-3-1-2",
     "subtopicId": "igcse-maths-3-1",
-    "front": "3.1 Parallel Lines, Perpendicular Lines & Perpendicular Bisectors: What are the essential exam points to remember?",
+    "front": "Midpoint formula between (x₁, y₁) and (x₂, y₂)?",
     "backBullets": [
-      "Parallel lines have EQUAL gradients: m₁ = m₂.",
-      "Perpendicular lines satisfy m₁ × m₂ = −1, so m₂ = −1 ÷ m₁ (the negative reciprocal: flip the fraction and flip the sign! E.g., 2/3 → −3/2; −4 → +1/4).",
-      "Perpendicular bisector of segment AB (a classic CIE Extended 4-mark question): (1) Find midpoint M of AB, (2) Find gradient m_AB, (3) Take negative reciprocal m_perp = −1/m_AB, (4) Substitute M into y = m_perp x + c to find c."
-    ],
-    "hint": "Perpendicular gradient = Flip the fraction AND flip the sign!"
-  },
-  {
-    "id": "igcse-maths-fc-extra-136",
-    "subtopicId": "igcse-maths-3-1",
-    "front": "Define: Gradient (3.1)",
-    "backBullets": [
-      "Measure of steepness between two points: m = (y₂ − y₁) ÷ (x₂ − x₁)."
+      "((x₁ + x₂)/2, (y₁ + y₂)/2)."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-137",
+    "id": "igcse-maths-fc-3-1-3",
     "subtopicId": "igcse-maths-3-1",
-    "front": "Define: Perpendicular lines (3.1)",
+    "front": "Distance formula between (x₁, y₁) and (x₂, y₂)?",
     "backBullets": [
-      "Lines intersecting at 90° whose gradients multiply to −1 (m₁m₂ = −1)."
+      "√((x₂ − x₁)² + (y₂ − y₁)²)."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-138",
+    "id": "igcse-maths-fc-3-1-4",
+    "subtopicId": "igcse-maths-3-1",
+    "front": "Condition for two lines to be perpendicular?",
+    "backBullets": [
+      "m₁ × m₂ = −1 (negative reciprocal gradients)."
+    ]
+  },
+  {
+    "id": "igcse-maths-fc-3-1-5",
+    "subtopicId": "igcse-maths-3-1",
+    "front": "Three steps to find a perpendicular bisector of AB?",
+    "backBullets": [
+      "1) Midpoint M of AB, 2) Gradient −1/m_AB, 3) Substitute M into y = mx + c."
+    ]
+  },
+  {
+    "id": "igcse-maths-fc-4-1-1",
     "subtopicId": "igcse-maths-4-1",
-    "front": "4.1 Parallel Lines & Polygon Angle Rules: What are the essential exam points to remember?",
+    "front": "Sum of interior angles of an n-sided polygon?",
     "backBullets": [
-      "Parallel line angle pairs: Alternate angles (Z-shape) are EQUAL; Corresponding angles (F-shape) are EQUAL; Co-interior / allied angles (C-shape) sum to 180°.",
-      "For ANY n-sided polygon: Sum of interior angles = (n − 2) × 180°. Sum of ALL exterior angles = 360° (always!).",
-      "For a REGULAR n-sided polygon: Each exterior angle = 360° ÷ n, and Interior angle + Exterior angle = 180°. Example: Regular octagon (n = 8) has exterior angle 360/8 = 45° and interior angle 135°."
-    ],
-    "hint": "Always find the EXTERIOR angle (360° ÷ n) first — it is far faster than the interior formula!"
+      "(n − 2) × 180° (and exterior angles always sum to 360°)."
+    ]
   },
   {
-    "id": "igcse-maths-fc-extra-139",
+    "id": "igcse-maths-fc-4-1-2",
     "subtopicId": "igcse-maths-4-1",
-    "front": "4.1 Three-Figure Bearings: What are the essential exam points to remember?",
+    "front": "Three rules for writing a bearing?",
     "backBullets": [
-      "Bearings obey 3 strict rules: (1) Measured from NORTH (000°), (2) Measured CLOCKWISE, (3) Written as 3 digits (e.g., 045°, NOT 45°).",
-      "The wording \"bearing of B FROM A\" means stand at A, draw a North line at A, and turn clockwise until pointing to B.",
-      "Back bearing (of A from B): Add 180° if the original bearing < 180°, or subtract 180° if ≥ 180° (follows from co-interior angles between parallel North lines)."
+      "Measure from North, go clockwise, write 3 figures (e.g. 042°)."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-140",
+    "id": "igcse-maths-fc-4-1-3",
     "subtopicId": "igcse-maths-4-1",
-    "front": "4.1 Congruence & Similar Shapes (Length, Area & Volume Scale Factors): What are the essential exam points to remember?",
+    "front": "Four valid triangle congruence conditions?",
     "backBullets": [
-      "Two triangles are CONGRUENT (identical size & shape) if they satisfy SSS, SAS, ASA/AAS, or RHS (Right angle, Hypotenuse, Side). Note: AAA proves similarity, NOT congruence!",
-      "Similar shapes have identical angles and proportional sides with linear scale factor k = L₂ ÷ L₁.",
-      "Crucial Extended rule: Length scale factor = k → Area scale factor = k² → Volume scale factor = k³!"
+      "SSS, SAS, ASA (or AAS), and RHS."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-141",
+    "id": "igcse-maths-fc-4-1-4",
     "subtopicId": "igcse-maths-4-1",
-    "front": "Define: Bearing (4.1)",
+    "front": "How do Area and Volume scale for similar shapes with linear scale factor k?",
     "backBullets": [
-      "Direction measured clockwise from North and expressed as a three-figure angle (000°–359°)."
+      "Area scales by k²; Volume scales by k³."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-142",
+    "id": "igcse-maths-fc-4-1-5",
+    "subtopicId": "igcse-maths-4-1",
+    "front": "Sum of co-interior (allied) angles between parallel lines?",
+    "backBullets": [
+      "180°."
+    ]
+  },
+  {
+    "id": "igcse-maths-fc-4-2-1",
     "subtopicId": "igcse-maths-4-2",
-    "front": "4.2 Centre, Semicircle & Same-Segment Theorems: What are the essential exam points to remember?",
+    "front": "Angle at centre vs angle at circumference theorem?",
     "backBullets": [
-      "Theorem 1 (Angle at the centre): The angle subtended by an arc at the centre is TWICE the angle subtended at the circumference.",
-      "Theorem 2 (Angle in a semicircle): The angle subtended by a diameter at the circumference is ALWAYS 90°.",
-      "Theorem 3 (Angles in the same segment): Angles subtended by the same chord/arc at the circumference in the same segment are EQUAL (butterfly/bow-tie shape)."
-    ],
-    "hint": "Always look for hidden ISOSCELES TRIANGLES formed by two radii (both sides = r, so base angles are equal)!"
+      "Angle at the centre is twice the angle at the circumference subtended by the same arc."
+    ]
   },
   {
-    "id": "igcse-maths-fc-extra-143",
+    "id": "igcse-maths-fc-4-2-2",
     "subtopicId": "igcse-maths-4-2",
-    "front": "4.2 Cyclic Quadrilaterals & Tangent Rules: What are the essential exam points to remember?",
+    "front": "Angle subtended by a diameter at the circumference?",
     "backBullets": [
-      "Theorem 5 (Cyclic quadrilateral): All 4 vertices MUST lie on the circumference. Opposite angles of a cyclic quadrilateral sum to 180°.",
-      "Theorem 6 (Tangent meets radius): A tangent to a circle always meets the radius at the point of contact at 90°.",
-      "Theorem 7 (Two tangents from an external point): Two tangents drawn to a circle from the same external point P are EQUAL in length (PA = PB), creating two congruent right-angled triangles with the centre."
+      "Always 90° (angle in a semicircle)."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-144",
+    "id": "igcse-maths-fc-4-2-3",
     "subtopicId": "igcse-maths-4-2",
-    "front": "4.2 The Alternate Segment Theorem: What are the essential exam points to remember?",
+    "front": "Opposite angles in a cyclic quadrilateral?",
     "backBullets": [
-      "Theorem 8 (Alternate Segment Theorem): The angle between a tangent and a chord drawn from the point of contact is EQUAL to the angle subtended by that chord in the alternate (opposite) segment.",
-      "Exam phrasing tip: Always write the FULL formal theorem reason in proof questions (e.g., \"Angle in a semicircle is 90°\" or \"Opposite angles in a cyclic quadrilateral sum to 180°\") — vague phrases like \"Z-angles\" or \"arrow rule\" get ZERO reason marks!"
+      "Sum to 180° (all four vertices must lie on the circumference)."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-145",
+    "id": "igcse-maths-fc-4-2-4",
     "subtopicId": "igcse-maths-4-2",
-    "front": "Define: Cyclic quadrilateral (4.2)",
+    "front": "Angle between a tangent and a radius at the point of contact?",
     "backBullets": [
-      "Four-sided shape inscribed in a circle whose opposite angles add to 180°."
+      "90°."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-146",
+    "id": "igcse-maths-fc-4-2-5",
     "subtopicId": "igcse-maths-4-2",
-    "front": "Define: Alternate Segment Theorem (4.2)",
+    "front": "State the Alternate Segment Theorem.",
     "backBullets": [
-      "Angle between tangent and chord equals the inscribed angle in the opposite segment."
+      "The angle between a tangent and a chord equals the angle subtended by that chord in the alternate segment."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-147",
+    "id": "igcse-maths-fc-5-1-1",
     "subtopicId": "igcse-maths-5-1",
-    "front": "5.1 2D Areas, Arc Length & Sector Area: What are the essential exam points to remember?",
+    "front": "Arc length and sector area formulae?",
     "backBullets": [
-      "Trapezium area = ½(a + b) × h (average of parallel sides × perpendicular height). Circle circumference = 2πr = πd; Circle area = πr².",
-      "Sector of angle θ° and radius r: Arc length = (θ ÷ 360) × 2πr; Sector area = (θ ÷ 360) × πr².",
-      "Perimeter of a sector = Arc length + 2r (don’t forget the two straight radii!)."
+      "Arc = (θ/360) × 2πr; Sector area = (θ/360) × πr²."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-148",
+    "id": "igcse-maths-fc-5-1-2",
     "subtopicId": "igcse-maths-5-1",
-    "front": "5.1 Volume & Surface Area of 3D Solids: What are the essential exam points to remember?",
+    "front": "Volume and curved surface area of a cone?",
     "backBullets": [
-      "Any uniform Prism: Volume = Cross-sectional area × length. Cylinder: Volume = πr²h; Curved surface area = 2πrh; Total surface area = 2πrh + 2πr².",
-      "Pyramid: Volume = ⅓ × Base area × perpendicular height. Cone: Volume = ⅓πr²h; Curved surface area = πrl (where slant height l = √(r² + h²)); Total SA = πrl + πr².",
-      "Sphere: Volume = (4/3)πr³; Surface area = 4πr². Solid Hemisphere: Volume = (2/3)πr³; Total SA = 2πr² (curved) + πr² (flat circular base) = 3πr²!"
-    ],
-    "hint": "A solid hemisphere has Total Surface Area = 3πr² (half of 4πr² = 2πr² PLUS the flat circular bottom πr²)!"
+      "V = ⅓πr²h; Curved SA = πrl where l = √(r² + h²)."
+    ]
   },
   {
-    "id": "igcse-maths-fc-extra-149",
+    "id": "igcse-maths-fc-5-1-3",
     "subtopicId": "igcse-maths-5-1",
-    "front": "5.1 Unit Conversions & Frustums: What are the essential exam points to remember?",
+    "front": "Volume and surface area of a sphere?",
     "backBullets": [
-      "Area & volume unit conversions: 1 m² = 100² = 10,000 cm²; 1 m³ = 100³ = 1,000,000 cm³; 1 litre = 1,000 cm³.",
-      "A frustum is a cone with a smaller similar cone sliced off its top: Volume of frustum = Volume(large cone) − Volume(removed small cone).",
-      "When melting and recasting metal from one 3D shape into another (e.g., spheres melted into a cylinder), total VOLUME is conserved: equate V_before = V_after and cancel π."
+      "V = (4/3)πr³; SA = 4πr²."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-150",
+    "id": "igcse-maths-fc-5-1-4",
     "subtopicId": "igcse-maths-5-1",
-    "front": "Define: Sector (5.1)",
+    "front": "Total surface area of a solid hemisphere?",
     "backBullets": [
-      "Pie-slice region of a circle bounded by two radii and an arc, with area (θ/360)πr²."
+      "3πr² (2πr² curved dome + πr² flat circular base)."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-151",
+    "id": "igcse-maths-fc-5-1-5",
     "subtopicId": "igcse-maths-5-1",
-    "front": "Define: Frustum (5.1)",
+    "front": "Area of a trapezium?",
     "backBullets": [
-      "Lower portion of a cone or pyramid remaining after slicing off the top parallel to the base."
+      "½(a + b)h, where a and b are the parallel sides."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-152",
+    "id": "igcse-maths-fc-6-1-1",
     "subtopicId": "igcse-maths-6-1",
-    "front": "6.1 Pythagoras’ Theorem (2D & 3D): What are the essential exam points to remember?",
+    "front": "SOHCAHTOA definitions?",
     "backBullets": [
-      "In any right-angled triangle, a² + b² = c², where c is always the hypotenuse (longest side opposite the 90° angle).",
-      "Finding the longest side: ADD the squares (c = √(a² + b²)). Finding a shorter side: SUBTRACT the squares (a = √(c² − b²)).",
-      "3D Space Diagonal of a cuboid with dimensions l, w, h: d = √(l² + w² + h²). Worked example: For a 6 × 8 × 10 cm box, base diagonal = √(6² + 8²) = 10 cm, space diagonal = √(10² + 10²) = √200 = 10√2 ≈ 14.1 cm."
+      "sin θ = O/H, cos θ = A/H, tan θ = O/A."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-153",
+    "id": "igcse-maths-fc-6-1-2",
     "subtopicId": "igcse-maths-6-1",
-    "front": "6.1 Right-Angled Trigonometry (SOHCAHTOA): What are the essential exam points to remember?",
+    "front": "Exact values of sin 30°, sin 45°, sin 60°?",
     "backBullets": [
-      "Label the 3 sides relative to the target angle θ: Hypotenuse (H, opposite 90°), Opposite (O, across from θ), Adjacent (A, next to θ).",
-      "SOH: sin θ = O ÷ H | CAH: cos θ = A ÷ H | TOA: tan θ = O ÷ A.",
-      "Finding a missing angle: use inverse functions sin⁻¹, cos⁻¹, or tan⁻¹ on your calculator (always check calculator is in DEGREE mode \"D\", not radians \"R\"!)."
-    ],
-    "hint": "SOH-CAH-TOA + exact sin table: sin(0°, 30°, 45°, 60°, 90°) = √0/2, √1/2, √2/2, √3/2, √4/2!"
-  },
-  {
-    "id": "igcse-maths-fc-extra-154",
-    "subtopicId": "igcse-maths-6-1",
-    "front": "6.1 Angles of Elevation, Depression & 3D Trigonometry: What are the essential exam points to remember?",
-    "backBullets": [
-      "Angle of elevation is measured UPWARD from the horizontal; angle of depression is measured DOWNWARD from the horizontal (they are equal alternate Z-angles!).",
-      "For 3D trigonometry (angle between a line and a plane): drop a perpendicular from the top endpoint straight down onto the plane, draw the right-angled triangle on the base, find the base diagonal with Pythagoras, then use tan θ = vertical height ÷ base diagonal.",
-      "Keep UNROUNDED intermediate values in your calculator memory (or exact surd form like √100) until the final answer to avoid premature rounding error!"
+      "1/2, √2/2, √3/2."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-155",
+    "id": "igcse-maths-fc-6-1-3",
     "subtopicId": "igcse-maths-6-1",
-    "front": "Define: Hypotenuse (6.1)",
+    "front": "Exact values of tan 30°, tan 45°, tan 60°?",
     "backBullets": [
-      "Longest side of a right-angled triangle, opposite the right angle."
+      "√3/3 (or 1/√3), 1, √3."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-156",
+    "id": "igcse-maths-fc-6-1-4",
     "subtopicId": "igcse-maths-6-1",
-    "front": "Define: Angle of elevation (6.1)",
+    "front": "3D space diagonal of a cuboid (l × w × h)?",
     "backBullets": [
-      "Angle measured upward from a horizontal line to an observer’s line of sight."
+      "d = √(l² + w² + h²)."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-157",
+    "id": "igcse-maths-fc-6-1-5",
+    "subtopicId": "igcse-maths-6-1",
+    "front": "Relationship between angle of elevation and angle of depression?",
+    "backBullets": [
+      "They are equal alternate angles between two parallel horizontal lines."
+    ]
+  },
+  {
+    "id": "igcse-maths-fc-6-2-1",
     "subtopicId": "igcse-maths-6-2",
-    "front": "6.2 The Sine Rule (and Ambiguous Case): What are the essential exam points to remember?",
+    "front": "State the Sine Rule.",
     "backBullets": [
-      "Use the Sine Rule whenever you have a MATCHING OPPOSITE PAIR (one side and its opposite angle):",
-      "For a missing side: a / sin A = b / sin B = c / sin C. For a missing angle: sin A / a = sin B / b (put the unknown on TOP!).",
-      "Worked example: Side a = 9 cm opposite A = 40°, find side b opposite B = 75° → b = (9 × sin 75°) ÷ sin 40° = 13.5 cm (3 s.f.)."
+      "a / sin A = b / sin B = c / sin C."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-158",
+    "id": "igcse-maths-fc-6-2-2",
     "subtopicId": "igcse-maths-6-2",
-    "front": "6.2 The Cosine Rule: What are the essential exam points to remember?",
+    "front": "State the Cosine Rule for a side.",
     "backBullets": [
-      "Use the Cosine Rule when you do NOT have an opposite pair: either SAS (two sides and the INCLUDED angle between them) or SSS (all three sides known).",
-      "Finding a missing side (SAS): a² = b² + c² − 2bc cos A (remember to take the square root at the end!).",
-      "Finding a missing angle (SSS): cos A = (b² + c² − a²) ÷ (2bc). Note: if cos A is negative, cos⁻¹ automatically gives the correct obtuse angle!"
+      "a² = b² + c² − 2bc cos A."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-159",
+    "id": "igcse-maths-fc-6-2-3",
     "subtopicId": "igcse-maths-6-2",
-    "front": "6.2 Area of Any Triangle & Solving Trig Equations (0° ≤ x ≤ 360°): What are the essential exam points to remember?",
+    "front": "State the Cosine Rule rearranged for an angle.",
     "backBullets": [
-      "Area of any triangle using two sides and their INCLUDED angle: Area = ½ × a × b × sin C.",
-      "Trigonometric symmetry on 0° ≤ x ≤ 360° (Extended):",
-      "For sin x = k: second solution is 180° − x₁ (positive in Q1 & Q2). Example: sin x = 0.5 → x = 30° and 150°."
-    ],
-    "hint": "Decision tree: Right-angled? → SOHCAHTOA. Opposite side-angle pair? → Sine Rule. SAS or SSS? → Cosine Rule!"
+      "cos A = (b² + c² − a²) / (2bc)."
+    ]
   },
   {
-    "id": "igcse-maths-fc-extra-160",
+    "id": "igcse-maths-fc-6-2-4",
     "subtopicId": "igcse-maths-6-2",
-    "front": "Define: Sine Rule (6.2)",
+    "front": "Area of a non-right-angled triangle?",
     "backBullets": [
-      "a / sin A = b / sin B = c / sin C for any triangle."
+      "Area = ½ab sin C (C must be the included angle)."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-161",
+    "id": "igcse-maths-fc-6-2-5",
+    "subtopicId": "igcse-maths-6-2",
+    "front": "Symmetry rules for sin x, cos x, tan x in 0°–360°?",
+    "backBullets": [
+      "sin(180° − x) = sin x; cos(360° − x) = cos x; tan(x + 180°) = tan x."
+    ]
+  },
+  {
+    "id": "igcse-maths-fc-7-1-1",
     "subtopicId": "igcse-maths-7-1",
-    "front": "7.1 Column Vectors & Magnitude: What are the essential exam points to remember?",
+    "front": "Magnitude of column vector (x, y)?",
     "backBullets": [
-      "A column vector (x / y) represents horizontal shift x (right +, left −) and vertical shift y (up +, down −).",
-      "Magnitude (length) of vector v = (x / y) is |v| = √(x² + y²). Example: |(3 / −4)| = √(3² + (−4)²) = √25 = 5.",
-      "Vector algebra: Add/subtract components directly; multiply both components by any scalar k. Reversing direction negates the vector: BA = −AB."
+      "√(x² + y²)."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-162",
+    "id": "igcse-maths-fc-7-1-2",
     "subtopicId": "igcse-maths-7-1",
-    "front": "7.1 Vector Geometry, Parallelism & Collinearity Proofs: What are the essential exam points to remember?",
+    "front": "Vector AB in terms of position vectors a and b?",
     "backBullets": [
-      "Triangle rule for paths: To travel from A to C via O, write AC = AO + OC = −OA + OC = c − a (\"destination minus start\").",
-      "Dividing a line in ratio m : n: If point P divides AB in ratio 2 : 3, then AP = (2/5)AB and OP = OA + (2/5)AB.",
-      "Proving two vectors are PARALLEL: Show that one vector is a non-zero scalar multiple of the other (e.g., XY = 3(a + b) and PQ = 2(a + b), so XY = 1.5 PQ → parallel)."
+      "AB = b − a (End minus Start)."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-163",
+    "id": "igcse-maths-fc-7-1-3",
     "subtopicId": "igcse-maths-7-1",
-    "front": "7.1 The Four Geometric Transformations: What are the essential exam points to remember?",
+    "front": "Two things needed to prove A, B, C are collinear?",
     "backBullets": [
-      "When describing a single transformation fully, always state the EXACT required details:",
-      "Translation: state \"Translation\" + column vector (x / y).",
-      "Reflection: state \"Reflection\" + exact equation of the mirror line (e.g., y = x, x = −1, y = 2)."
-    ],
-    "hint": "Never describe a single transformation using TWO combined moves — if the exam says \"single transformation\", check whether it is a single rotation or negative enlargement!"
+      "1) AB = k × BC (scalar multiple/parallel) AND 2) they share the common point B."
+    ]
   },
   {
-    "id": "igcse-maths-fc-extra-164",
+    "id": "igcse-maths-fc-7-1-4",
     "subtopicId": "igcse-maths-7-1",
-    "front": "Define: Position vector (7.1)",
+    "front": "Mandatory details to describe a Rotation?",
     "backBullets": [
-      "Vector OA starting at the origin O(0, 0) and ending at point A."
+      "Word \"Rotation\", angle, direction (clockwise/anticlockwise), and centre (x, y)."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-165",
+    "id": "igcse-maths-fc-7-1-5",
     "subtopicId": "igcse-maths-7-1",
-    "front": "Define: Collinear points (7.1)",
+    "front": "Effect of a negative enlargement scale factor k?",
     "backBullets": [
-      "Points lying on the same straight line (parallel connecting vectors sharing a common point)."
+      "Scales lengths by |k| and inverts the image on the opposite side of the centre of enlargement."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-166",
+    "id": "igcse-maths-fc-8-1-1",
     "subtopicId": "igcse-maths-8-1",
-    "front": "8.1 Probability Rules & Tree Diagrams: What are the essential exam points to remember?",
+    "front": "Difference between A ∩ B and A ∪ B?",
     "backBullets": [
-      "Every set of branches radiating from a single node MUST sum to 1 (P(A′) = 1 − P(A)).",
-      "Multiply ALONG the branches for \"AND\" (consecutive events): P(A and B) = P(A) × P(B | A).",
-      "ADD down the final outcome column for \"OR\" (mutually exclusive routes): P(exactly one win) = P(W, L) + P(L, W)."
-    ],
-    "hint": "Multiply ACROSS (AND), Add DOWN (OR)!"
-  },
-  {
-    "id": "igcse-maths-fc-extra-167",
-    "subtopicId": "igcse-maths-8-1",
-    "front": "8.1 Conditional Probability (Without Replacement): What are the essential exam points to remember?",
-    "backBullets": [
-      "When items are drawn WITHOUT replacement, both the denominator and the chosen colour’s numerator decrease by 1 on the second branch.",
-      "Worked example: A bag has 4 red and 6 blue counters (10 total). Two are picked without replacement. P(both red) = (4/10) × (3/9) = 12/90 = 2/15.",
-      "P(different colours) = P(R, B) + P(B, R) = (4/10)(6/9) + (6/10)(4/9) = 48/90 = 8/15."
+      "A ∩ B = intersection (AND); A ∪ B = union (OR, or both)."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-168",
+    "id": "igcse-maths-fc-8-1-2",
     "subtopicId": "igcse-maths-8-1",
-    "front": "8.1 Venn Diagrams & Set Notation: What are the essential exam points to remember?",
+    "front": "Shortcut for P(at least one)?",
     "backBullets": [
-      "Key set notation: A ∩ B (intersection: in BOTH A and B); A ∪ B (union: in A, or B, or both); A′ (complement: NOT in A); n(A) = number of elements in A.",
-      "Always fill the INTERSECTION (overlap) FIRST when populating a Venn diagram, then subtract the overlap from each individual circle’s total!",
-      "Conditional probability from a Venn diagram: P(A | B) = \"probability of A GIVEN B\" = n(A ∩ B) ÷ n(B). Only divide by the restricted total n(B), NOT the universal set!"
+      "1 − P(none)."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-169",
+    "id": "igcse-maths-fc-8-1-3",
     "subtopicId": "igcse-maths-8-1",
-    "front": "Define: Mutually exclusive (8.1)",
+    "front": "What changes on the second set of tree branches \"without replacement\"?",
     "backBullets": [
-      "Events that cannot happen at the same time, so P(A ∩ B) = 0 and P(A or B) = P(A) + P(B)."
+      "The denominator decreases by 1, and the numerator of the already-picked outcome decreases by 1."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-170",
+    "id": "igcse-maths-fc-8-1-4",
     "subtopicId": "igcse-maths-8-1",
-    "front": "Define: Independent events (8.1)",
+    "front": "Conditional probability formula P(A | B)?",
     "backBullets": [
-      "Events where the outcome of one does not affect the probability of the other: P(A ∩ B) = P(A) × P(B)."
+      "P(A ∩ B) / P(B) — restrict denominator strictly to B."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-171",
+    "id": "igcse-maths-fc-8-1-5",
+    "subtopicId": "igcse-maths-8-1",
+    "front": "Condition for independent events A and B?",
+    "backBullets": [
+      "P(A and B) = P(A) × P(B)."
+    ]
+  },
+  {
+    "id": "igcse-maths-fc-8-2-1",
     "subtopicId": "igcse-maths-8-2",
-    "front": "8.2 Estimated Mean & Grouped Frequency Tables: What are the essential exam points to remember?",
+    "front": "Formula for Frequency Density on a histogram?",
     "backBullets": [
-      "For grouped continuous data, calculate the MIDPOINT (x) of each class interval, multiply by frequency (f × x), then compute: Estimated Mean = Σ(fx) ÷ Σf.",
-      "It is an \"estimate\" because we do not know the exact individual values inside each interval and assume they are evenly distributed around each midpoint.",
-      "Modal class = interval with the highest frequency (for equal widths). Class containing the median = find the ((n + 1)/2)th value using a running cumulative frequency column."
+      "Frequency Density = Frequency ÷ Class Width (so Frequency = bar Area)."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-172",
+    "id": "igcse-maths-fc-8-2-2",
     "subtopicId": "igcse-maths-8-2",
-    "front": "8.2 Cumulative Frequency Curves & Box Plots: What are the essential exam points to remember?",
+    "front": "Where do you plot points on a cumulative frequency graph?",
     "backBullets": [
-      "Plot cumulative frequencies against the UPPER BOUNDARY of each class interval (never the midpoint!) and join with a smooth S-shaped curve starting from the lowest class boundary at y = 0.",
-      "For total frequency N: Median (Q₂) is read across from 50% (0.5N); Lower Quartile (Q₁) from 25% (0.25N); Upper Quartile (Q₃) from 75% (0.75N).",
-      "Interquartile Range: IQR = Q₃ − Q₁ (measures spread of the middle 50% and ignores extreme outliers)."
-    ],
-    "hint": "Plot Midpoints for Mean/Frequency Polygons; plot UPPER endpoints for Cumulative Frequency!"
-  },
-  {
-    "id": "igcse-maths-fc-extra-173",
-    "subtopicId": "igcse-maths-8-2",
-    "front": "8.2 Histograms & Frequency Density: What are the essential exam points to remember?",
-    "backBullets": [
-      "Histograms display continuous grouped data with UNEQUAL class widths. The vertical axis is FREQUENCY DENSITY (NOT frequency!).",
-      "Key formula: Frequency Density = Frequency ÷ Class Width. Rearranged: Frequency = Frequency Density × Class Width = AREA of each bar!",
-      "Worked example: A bar spans 20 ≤ t < 35 (width = 15) with frequency density 2.4. Frequency in this interval = 15 × 2.4 = 36."
+      "At the UPPER class boundary of each interval (never the midpoint)."
     ]
   },
   {
-    "id": "igcse-maths-fc-extra-174",
+    "id": "igcse-maths-fc-8-2-3",
     "subtopicId": "igcse-maths-8-2",
-    "front": "Define: Interquartile range (IQR) (8.2)",
+    "front": "Formula for Interquartile Range (IQR)?",
     "backBullets": [
-      "Q₃ − Q₁, a robust measure of spread covering the middle 50% of observations."
+      "IQR = Q₃ − Q₁ (spread of the middle 50% of data)."
+    ]
+  },
+  {
+    "id": "igcse-maths-fc-8-2-4",
+    "subtopicId": "igcse-maths-8-2",
+    "front": "Formula for estimated mean from grouped data?",
+    "backBullets": [
+      "Σ(f × class midpoint) ÷ Σf."
+    ]
+  },
+  {
+    "id": "igcse-maths-fc-8-2-5",
+    "subtopicId": "igcse-maths-8-2",
+    "front": "Five values plotted on a box plot?",
+    "backBullets": [
+      "Minimum, Lower Quartile (Q₁), Median (Q₂), Upper Quartile (Q₃), Maximum."
     ]
   }
 ];
 
 export const IGCSE_MATHS_CHEAT_SHEETS: CheatSheetItem[] = [
   {
-    "id": "cs-igcse-maths-topic-1",
+    "id": "igcse-maths-cs-1",
     "slug": "topic-1-number",
-    "title": "Topic 1: Number — Complete Cheat Sheet",
+    "title": "1. Number Cheat Sheet",
     "topicNumber": 1,
     "topicName": "Number",
-    "summary": "One-page revision summary covering 1.1 Fractions, Percentages, Compound Interest & Reverse Percentages; 1.2 Indices, Surds, Standard Form & Upper/Lower Bounds; 1.3 Ratio, Direct Proportion & Inverse Proportion.",
-    "accentColor": "#8d22cc",
+    "summary": "Percentages, indices, surds, bounds, ratio & proportion.",
+    "accentColor": "#2563EB",
     "sections": [
       {
-        "heading": "1.1 Fractions, Percentages, Compound Interest & Reverse Percentages",
-        "formula": "A = P(1 ± r/100)ⁿ  |  Original = Final ÷ Multiplier",
+        "heading": "Key Formulae & Core Rules",
         "points": [
-          "Convert recurring decimals to simplified fractions algebraically.",
-          "Use A = P(1 ± r/100)ⁿ for compound interest and depreciation."
+          "Compound: A = P(1 ± r/100)ⁿ",
+          "Reverse: Original = Final ÷ Multiplier",
+          "a⁻ⁿ = 1/aⁿ; a^(m/n) = (ⁿ√a)ᵐ",
+          "UB(a/b) = UB(a)/LB(b)",
+          "Direct: y = kxⁿ | Inverse: y = k/xⁿ"
         ]
       },
       {
-        "heading": "1.2 Indices, Surds, Standard Form & Upper/Lower Bounds",
-        "formula": "a^(m/n) = (ⁿ√a)ᵐ  |  Bounds: ±0.5 × rounding unit  |  y = kx^n or k/x^n",
+        "heading": "Common Exam Traps to Avoid",
         "points": [
-          "Evaluate negative and fractional indices without a calculator.",
-          "Simplify surds and rationalise both single-term and two-term denominators.",
-          "Tip: Fractional powers: \"Flower Power\" — the denominator is the ROOT (underground), the numerator is the POWER (up top)!"
+          "Never add 20% to a 20%-off sale price",
+          "Always take roots before powers in fractional indices"
         ]
       },
       {
-        "heading": "1.3 Ratio, Direct Proportion & Inverse Proportion",
-        "formula": "A = P(1 ± r/100)ⁿ  |  Original = Final ÷ Multiplier",
+        "heading": "Top Exam Technique Tips",
         "points": [
-          "Solve ratio sharing, ratio difference, and combined three-part ratio problems.",
-          "Set up and solve direct proportion formulas (y = kx, kx², k√x) and inverse proportion formulas (y = k/x, k/x²)."
+          "Use LCM to combine A:B and B:C into A:B:C",
+          "Write error intervals with ≤ on the left and < on the right"
         ]
       }
     ]
   },
   {
-    "id": "cs-igcse-maths-topic-2",
+    "id": "igcse-maths-cs-2",
     "slug": "topic-2-algebra-graphs",
-    "title": "Topic 2: Algebra & Graphs — Complete Cheat Sheet",
+    "title": "2. Algebra & Graphs Cheat Sheet",
     "topicNumber": 2,
     "topicName": "Algebra & Graphs",
-    "summary": "One-page revision summary covering 2.1 Expanding, Factorising & Solving Quadratic Equations; 2.2 Simultaneous Equations (Linear & Quadratic) & Inequalities; 2.3 Sequences, Functions (Composite/Inverse) & Differentiation.",
-    "accentColor": "#1a96f3",
+    "summary": "Quadratics, simultaneous equations, inequalities, sequences, functions & differentiation.",
+    "accentColor": "#2563EB",
     "sections": [
       {
-        "heading": "2.1 Expanding, Factorising & Solving Quadratic Equations",
-        "formula": "x = (−b ± √(b² − 4ac)) ÷ 2a  |  (x + p)² + q vertex (−p, q)",
+        "heading": "Key Formulae & Core Rules",
         "points": [
-          "Factorise quadratics with a = 1, a > 1, and difference of two squares.",
-          "Apply the quadratic formula accurately with negative coefficients using brackets."
+          "x = (−b ± √(b² − 4ac)) / (2a)",
+          "y = (x + p)² + q → vertex (−p, q)",
+          "Quadratic seq: A = ½(2nd diff)",
+          "Geometric seq: uₙ = arⁿ⁻¹",
+          "d/dx(axⁿ) = anxⁿ⁻¹; stationary at dy/dx = 0"
         ]
       },
       {
-        "heading": "2.2 Simultaneous Equations (Linear & Quadratic) & Inequalities",
-        "formula": "uₙ = a + (n − 1)d  |  dy/dx(axⁿ) = anxⁿ⁻¹ (stationary: dy/dx = 0)",
+        "heading": "Common Exam Traps to Avoid",
         "points": [
-          "Solve linear simultaneous equations accurately and verify both values.",
-          "Solve linear-quadratic simultaneous equations by substitution and pair (x, y) solutions clearly.",
-          "Tip: SSS = Same Signs Subtract; Different Signs Add!"
+          "Put brackets around negative b² in the quadratic formula",
+          "fg(x) applies g first, then f"
         ]
       },
       {
-        "heading": "2.3 Sequences, Functions (Composite/Inverse) & Differentiation",
-        "formula": "x = (−b ± √(b² − 4ac)) ÷ 2a  |  (x + p)² + q vertex (−p, q)",
+        "heading": "Top Exam Technique Tips",
         "points": [
-          "Find the nth term of arithmetic, geometric, and quadratic sequences.",
-          "Evaluate composite functions fg(x) right-to-left and derive inverse functions f⁻¹(x)."
+          "Sketch a quick parabola for every quadratic inequality",
+          "Classify turning points with d²y/dx²"
         ]
       }
     ]
   },
   {
-    "id": "cs-igcse-maths-topic-3",
+    "id": "igcse-maths-cs-3",
     "slug": "topic-3-coordinate-geometry",
-    "title": "Topic 3: Coordinate Geometry — Complete Cheat Sheet",
+    "title": "3. Coordinate Geometry Cheat Sheet",
     "topicNumber": 3,
     "topicName": "Coordinate Geometry",
-    "summary": "One-page revision summary covering 3.1 Straight Line Graphs (y = mx + c), Midpoint, Length & Perpendiculars.",
-    "accentColor": "#059669",
+    "summary": "Gradients, midpoints, lengths, parallel/perpendicular lines & bisectors.",
+    "accentColor": "#2563EB",
     "sections": [
       {
-        "heading": "3.1 Straight Line Graphs (y = mx + c), Midpoint, Length & Perpendiculars",
-        "formula": "m = (y₂ − y₁)/(x₂ − x₁)  |  M = ((x₁+x₂)/2, (y₁+y₂)/2)",
+        "heading": "Key Formulae & Core Rules",
         "points": [
-          "Calculate gradient, midpoint, and distance between any two coordinate pairs.",
-          "Rearrange ax + by = c into y = mx + c to read off gradient and y-intercept."
+          "m = (y₂ − y₁)/(x₂ − x₁)",
+          "M = ((x₁+x₂)/2, (y₁+y₂)/2)",
+          "d = √((x₂−x₁)² + (y₂−y₁)²)",
+          "Perpendicular: m₁ × m₂ = −1"
+        ]
+      },
+      {
+        "heading": "Common Exam Traps to Avoid",
+        "points": [
+          "Rearrange ax + by = c to y = mx + c before reading m",
+          "Substitute midpoint M (not A or B) into a perpendicular bisector"
+        ]
+      },
+      {
+        "heading": "Top Exam Technique Tips",
+        "points": [
+          "Leave gradients as exact fractions to flip cleanly for perpendiculars"
         ]
       }
     ]
   },
   {
-    "id": "cs-igcse-maths-topic-4",
+    "id": "igcse-maths-cs-4",
     "slug": "topic-4-geometry-circle-theorems",
-    "title": "Topic 4: Geometry & Circle Theorems — Complete Cheat Sheet",
+    "title": "4. Geometry & Circle Theorems Cheat Sheet",
     "topicNumber": 4,
     "topicName": "Geometry & Circle Theorems",
-    "summary": "One-page revision summary covering 4.1 Angles, Polygons, Bearings, Similarity & Congruence; 4.2 Circle Theorems & Alternate Segment Theorem.",
-    "accentColor": "#ea580c",
+    "summary": "Polygons, bearings, congruence, similarity & all 7 circle theorems.",
+    "accentColor": "#2563EB",
     "sections": [
       {
-        "heading": "4.1 Angles, Polygons, Bearings, Similarity & Congruence",
-        "formula": "Interior sum = (n − 2) × 180°  |  Exterior angle = 360° ÷ n",
+        "heading": "Key Formulae & Core Rules",
         "points": [
-          "Calculate interior and exterior angles of regular and irregular polygons.",
-          "Measure and calculate bearings and back bearings using co-interior angles.",
-          "Tip: Always find the EXTERIOR angle (360° ÷ n) first — it is far faster than the interior formula!"
+          "Interior sum = (n − 2) × 180°",
+          "Exterior = 360° / n",
+          "Scale factors: Length k, Area k², Volume k³",
+          "Cyclic quad opposite angles = 180°"
         ]
       },
       {
-        "heading": "4.2 Circle Theorems & Alternate Segment Theorem",
-        "formula": "Similar shapes: Length k  →  Area k²  →  Volume k³",
+        "heading": "Common Exam Traps to Avoid",
         "points": [
-          "Recall and apply all 8 circle theorems accurately in multi-step angle problems.",
-          "Spot isosceles triangles formed by two radii immediately.",
-          "Tip: Always look for hidden ISOSCELES TRIANGLES formed by two radii (both sides = r, so base angles are equal)!"
+          "Never write Z-angles/F-angles — use alternate/corresponding",
+          "Cyclic quad needs all 4 vertices on the circumference"
+        ]
+      },
+      {
+        "heading": "Top Exam Technique Tips",
+        "points": [
+          "Look for two radii forming isosceles triangles on every circle diagram"
         ]
       }
     ]
   },
   {
-    "id": "cs-igcse-maths-topic-5",
+    "id": "igcse-maths-cs-5",
     "slug": "topic-5-mensuration",
-    "title": "Topic 5: Mensuration — Complete Cheat Sheet",
+    "title": "5. Mensuration Cheat Sheet",
     "topicNumber": 5,
     "topicName": "Mensuration",
-    "summary": "One-page revision summary covering 5.1 Area, Arc Length, Sector Area, Surface Area & Volume.",
-    "accentColor": "#7c3aed",
+    "summary": "Arcs, sectors, prisms, cones, pyramids, spheres & frustums.",
+    "accentColor": "#2563EB",
     "sections": [
       {
-        "heading": "5.1 Area, Arc Length, Sector Area, Surface Area & Volume",
-        "formula": "Arc = (θ/360)2πr  |  Sector Area = (θ/360)πr²  |  Trap = ½(a+b)h",
+        "heading": "Key Formulae & Core Rules",
         "points": [
-          "Calculate arc length, sector perimeter, and sector area in exact π form and decimals.",
-          "Find volume and total surface area of prisms, cylinders, pyramids, cones, spheres, and hemispheres.",
-          "Watch out: When asked for the PERIMETER of a sector, students often calculate only the curved arc length and forget to add the two straight radii (+ 2r)!"
+          "Arc = (θ/360)2πr | Sector = (θ/360)πr²",
+          "Cone V = ⅓πr²h | CSA = πrl",
+          "Sphere V = (4/3)πr³ | SA = 4πr²",
+          "Solid hemisphere total SA = 3πr²"
+        ]
+      },
+      {
+        "heading": "Common Exam Traps to Avoid",
+        "points": [
+          "Sector perimeter needs + 2r",
+          "Solid hemisphere total SA is 3πr², not 2πr²"
+        ]
+      },
+      {
+        "heading": "Top Exam Technique Tips",
+        "points": [
+          "Keep π exact until the final calculator step"
         ]
       }
     ]
   },
   {
-    "id": "cs-igcse-maths-topic-6",
+    "id": "igcse-maths-cs-6",
     "slug": "topic-6-trigonometry",
-    "title": "Topic 6: Trigonometry — Complete Cheat Sheet",
+    "title": "6. Trigonometry Cheat Sheet",
     "topicNumber": 6,
     "topicName": "Trigonometry",
-    "summary": "One-page revision summary covering 6.1 Pythagoras’ Theorem & Right-Angled Trigonometry (SOHCAHTOA); 6.2 Sine Rule, Cosine Rule & Area of Non-Right-Angled Triangles.",
-    "accentColor": "#0284c7",
+    "summary": "Pythagoras, SOHCAHTOA, 3D trig, Sine Rule, Cosine Rule & Area.",
+    "accentColor": "#2563EB",
     "sections": [
       {
-        "heading": "6.1 Pythagoras’ Theorem & Right-Angled Trigonometry (SOHCAHTOA)",
-        "formula": "a² + b² = c²  |  3D Diagonal = √(l² + w² + h²)  |  SOHCAHTOA",
+        "heading": "Key Formulae & Core Rules",
         "points": [
-          "Apply Pythagoras in 2D and 3D cuboids/pyramids.",
-          "Find missing sides and angles using SOHCAHTOA and recall exact trig values for 30°, 45°, and 60°."
+          "sin θ = O/H | cos θ = A/H | tan θ = O/A",
+          "3D diagonal = √(l² + w² + h²)",
+          "Sine: a/sin A = b/sin B",
+          "Cosine: a² = b² + c² − 2bc cos A",
+          "Area = ½ab sin C"
         ]
       },
       {
-        "heading": "6.2 Sine Rule, Cosine Rule & Area of Non-Right-Angled Triangles",
-        "formula": "a/sin A = b/sin B  |  a² = b² + c² − 2bc cos A  |  Area = ½ab sin C",
+        "heading": "Common Exam Traps to Avoid",
         "points": [
-          "Choose correctly between SOHCAHTOA, Sine Rule, and Cosine Rule.",
-          "Calculate triangle area using ½ab sin C and handle obtuse angles in the Sine Rule."
+          "Check calculator is in DEG mode",
+          "Watch for obtuse solutions (180° − θ) in Sine Rule"
+        ]
+      },
+      {
+        "heading": "Top Exam Technique Tips",
+        "points": [
+          "Pair known → Sine Rule; SAS or SSS → Cosine Rule"
         ]
       }
     ]
   },
   {
-    "id": "cs-igcse-maths-topic-7",
+    "id": "igcse-maths-cs-7",
     "slug": "topic-7-vectors-transformations",
-    "title": "Topic 7: Vectors & Transformations — Complete Cheat Sheet",
+    "title": "7. Vectors & Transformations Cheat Sheet",
     "topicNumber": 7,
     "topicName": "Vectors & Transformations",
-    "summary": "One-page revision summary covering 7.1 Column Vectors, Vector Geometry & Transformations.",
-    "accentColor": "#db2777",
+    "summary": "Column vectors, magnitude, collinearity proofs & 4 transformations.",
+    "accentColor": "#2563EB",
     "sections": [
       {
-        "heading": "7.1 Column Vectors, Vector Geometry & Transformations",
-        "formula": "|v| = √(x² + y²)  |  AB = OB − OA = b − a",
+        "heading": "Key Formulae & Core Rules",
         "points": [
-          "Calculate vector magnitudes and express geometric paths using ratio fractions.",
-          "Write formal proofs for parallel vectors and collinear points."
+          "|v| = √(x² + y²)",
+          "AB = b − a",
+          "Parallel: PQ = k·RS",
+          "Collinear: scalar multiple + shared point"
+        ]
+      },
+      {
+        "heading": "Common Exam Traps to Avoid",
+        "points": [
+          "Never describe a single transformation as two moves",
+          "Include direction AND centre for rotations"
+        ]
+      },
+      {
+        "heading": "Top Exam Technique Tips",
+        "points": [
+          "Trace vector routes using simple arrow diagrams first"
         ]
       }
     ]
   },
   {
-    "id": "cs-igcse-maths-topic-8",
+    "id": "igcse-maths-cs-8",
     "slug": "topic-8-probability-statistics",
-    "title": "Topic 8: Probability & Statistics — Complete Cheat Sheet",
+    "title": "8. Probability & Statistics Cheat Sheet",
     "topicNumber": 8,
     "topicName": "Probability & Statistics",
-    "summary": "One-page revision summary covering 8.1 Probability Trees, Venn Diagrams & Conditional Probability; 8.2 Averages, Cumulative Frequency, Box Plots & Histograms.",
-    "accentColor": "#2563eb",
+    "summary": "Venn diagrams, trees, conditional probability, CF curves, box plots & histograms.",
+    "accentColor": "#2563EB",
     "sections": [
       {
-        "heading": "8.1 Probability Trees, Venn Diagrams & Conditional Probability",
-        "formula": "P(A | B) = n(A ∩ B) ÷ n(B)  |  Mean = Σ(fx) ÷ Σf",
+        "heading": "Key Formulae & Core Rules",
         "points": [
-          "Construct and evaluate both independent and without-replacement probability trees.",
-          "Use P(at least one) = 1 − P(none) cleanly.",
-          "Tip: Multiply ACROSS (AND), Add DOWN (OR)!"
+          "P(at least one) = 1 − P(none)",
+          "P(A | B) = P(A ∩ B) / P(B)",
+          "IQR = Q₃ − Q₁",
+          "FD = Frequency ÷ Class Width"
         ]
       },
       {
-        "heading": "8.2 Averages, Cumulative Frequency, Box Plots & Histograms",
-        "formula": "IQR = Q₃ − Q₁  |  Frequency Density = Frequency ÷ Class Width",
+        "heading": "Common Exam Traps to Avoid",
         "points": [
-          "Calculate estimated mean from grouped tables using midpoints and Σ(fx) ÷ Σf.",
-          "Plot cumulative frequency at upper boundaries, read off median/Q₁/Q₃/IQR, and compare distributions using both median and IQR.",
-          "Watch out: Always divide Σ(fx) by the TOTAL FREQUENCY (Σf), NEVER by the number of rows in the table!"
+          "Plot CF at UPPER boundaries, never midpoints",
+          "Histogram frequency is BAR AREA, not height"
+        ]
+      },
+      {
+        "heading": "Top Exam Technique Tips",
+        "points": [
+          "Compare both average (median) and spread (IQR) in context"
         ]
       }
     ]
@@ -3581,71 +4896,79 @@ export const IGCSE_MATHS_CHEAT_SHEETS: CheatSheetItem[] = [
 
 export const IGCSE_MATHS_EXAM_PRACTICE: ExamQuestionItem[] = [
   {
-    "id": "igcse-maths-exam-1",
+    "id": "igcse-maths-ex-1-1",
     "subtopicId": "igcse-maths-1-1",
     "number": 1,
-    "stimulus": "Structured exam question on Topic 1.1 (Fractions, Percentages, Compound Interest & Reverse Percentages). Study the information and answer parts (a), (b), and (c).",
+    "stimulus": "[Cambridge IGCSE 0580 Paper 4 Style] A car is bought for £18,000 and depreciates by 12% each year. Separately, a laptop costs £680 in a 15% off sale.",
     "parts": [
       {
-        "id": "igcse-maths-exam-1a",
-        "label": "a)",
-        "prompt": "Which statement accurately describes a core principle of Fractions, Percentages, Compound Interest & Reverse Percentages?",
-        "kind": "mcq",
-        "marks": 1,
-        "options": [
-          "Convert recurring decimals to simplified fractions algebraically.",
-          "It violates the core rule of Fractions, Percentages, Compound Interest & Reverse Percentages by reversing the relationship between variables.",
-          "It ignores the required standard units and boundary conditions for Decimal multiplier.",
-          "It assumes Compound interest remains zero under all operating conditions."
-        ],
-        "correctIndex": 0
-      },
-      {
-        "id": "igcse-maths-exam-1b",
-        "label": "b)",
-        "prompt": "Define \"Decimal multiplier\" and explain the key principles covered in \"Decimal Multipliers, Simple & Compound Interest\".",
-        "kind": "short-answer",
+        "id": "p1",
+        "label": "(a)",
+        "prompt": "Calculate the value of the car after 3 years, correct to the nearest pound.",
         "marks": 3,
+        "kind": "short-answer",
         "rubric": {
           "maxMarks": 3,
-          "modelAnswer": "Decimal multiplier: Single factor used to compute percentage increases (e.g., 1.15) or decreases (e.g., 0.85). Furthermore, A decimal multiplier converts a percentage change into one multiplication: +12% → ×1.12; +3.5% → ×1.035; −18% → ×0.82. Simple interest adds the SAME fixed amount every year: I = (P × R × T) ÷ 100.",
+          "modelAnswer": "Multiplier = 0.88; 18000 × 0.88³ = 18000 × 0.681472 = £12,266.",
           "markPoints": [
             {
               "id": "mp1",
-              "markDescription": "Defines Decimal multiplier: Single factor used to compute percentage increases (e.g., 1.15) or decreases (e.g., 0.85)."
+              "requiredKeywordGroups": [
+                [
+                  "0.88"
+                ]
+              ],
+              "markDescription": "Decay multiplier 0.88"
             },
             {
               "id": "mp2",
-              "markDescription": "States key mechanism/formula: A decimal multiplier converts a percentage change into one multiplication: +12% → ×1.12; +3.5% → ×1.035; −18% → ×0.82."
+              "requiredKeywordGroups": [
+                [
+                  "0.88³",
+                  "0.88^3",
+                  "0.681"
+                ]
+              ],
+              "markDescription": "Applies power 3"
             },
             {
               "id": "mp3",
-              "markDescription": "Applies principle accurately: Simple interest adds the SAME fixed amount every year: I = (P × R × T) ÷ 100."
+              "numericMatch": {
+                "value": 12266,
+                "tolerance": 2
+              },
+              "markDescription": "Answer 12266"
             }
           ]
         }
       },
       {
-        "id": "igcse-maths-exam-1c",
-        "label": "c)",
-        "prompt": "Apply \"Reverse Percentages\" to explain how examiners award full marks on Fractions, Percentages, Compound Interest & Reverse Percentages problems.",
+        "id": "p2",
+        "label": "(b)",
+        "prompt": "Find the original price of the laptop before the 15% discount.",
+        "marks": 2,
         "kind": "short-answer",
-        "marks": 3,
         "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Use reverse percentages when you are given the FINAL amount AFTER a percentage increase or decrease and must recover the ORIGINAL 100% value. Method: Original = Final amount ÷ Decimal Multiplier. Avoid: NEVER find 15% of $510 and add it back — 15% of the reduced price is smaller than 15% of the original price. Always DIVIDE by 0.85!",
+          "maxMarks": 2,
+          "modelAnswer": "680 ÷ 0.85 = £800.",
           "markPoints": [
             {
               "id": "mp1",
-              "markDescription": "Use reverse percentages when you are given the FINAL amount AFTER a percentage increase or decrease and must recover the ORIGINAL 100% value."
+              "requiredKeywordGroups": [
+                [
+                  "0.85",
+                  "85%"
+                ]
+              ],
+              "markDescription": "Divides by 0.85"
             },
             {
               "id": "mp2",
-              "markDescription": "Method: Original = Final amount ÷ Decimal Multiplier."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "NEVER find 15% of $510 and add it back — 15% of the reduced price is smaller than 15% of the original price. Always DIVIDE by 0.85!"
+              "numericMatch": {
+                "value": 800,
+                "tolerance": 0.1
+              },
+              "markDescription": "Answer 800"
             }
           ]
         }
@@ -3653,71 +4976,77 @@ export const IGCSE_MATHS_EXAM_PRACTICE: ExamQuestionItem[] = [
     ]
   },
   {
-    "id": "igcse-maths-exam-2",
+    "id": "igcse-maths-ex-1-2",
     "subtopicId": "igcse-maths-1-2",
     "number": 2,
-    "stimulus": "Structured exam question on Topic 1.2 (Indices, Surds, Standard Form & Upper/Lower Bounds). Study the information and answer parts (a), (b), and (c).",
+    "stimulus": "[Cambridge IGCSE 0580 Paper 2 Style] An athlete runs d = 200 m (to the nearest 10 m) in t = 25 s (to the nearest second).",
     "parts": [
       {
-        "id": "igcse-maths-exam-2a",
-        "label": "a)",
-        "prompt": "Which statement accurately describes a core principle of Indices, Surds, Standard Form & Upper/Lower Bounds?",
-        "kind": "mcq",
-        "marks": 1,
-        "options": [
-          "Evaluate negative and fractional indices without a calculator.",
-          "It violates the core rule of Indices, Surds, Standard Form & Upper/Lower Bounds by reversing the relationship between variables.",
-          "It ignores the required standard units and boundary conditions for Standard form.",
-          "It assumes Surd remains zero under all operating conditions."
-        ],
-        "correctIndex": 0
-      },
-      {
-        "id": "igcse-maths-exam-2b",
-        "label": "b)",
-        "prompt": "Define \"Standard form\" and explain the key principles covered in \"Surds & Rationalising the Denominator\".",
-        "kind": "short-answer",
+        "id": "p1",
+        "label": "(a)",
+        "prompt": "Calculate the upper bound of the athlete’s average speed (d ÷ t) to 2 decimal places.",
         "marks": 3,
+        "kind": "short-answer",
         "rubric": {
           "maxMarks": 3,
-          "modelAnswer": "Standard form: Scientific notation A × 10ⁿ with 1 ≤ A < 10 and integer exponent n. Furthermore, A surd is an irrational root such as √2, √3, or √5. Simplify by pulling out the LARGEST square factor: √72 = √(36 × 2) = 6√2. Collect like surds just like algebra: 5√3 + √12 = 5√3 + 2√3 = 7√3.",
+          "modelAnswer": "UB(d) = 205 m, LB(t) = 24.5 s; Max speed = 205 ÷ 24.5 = 8.37 m/s.",
           "markPoints": [
             {
               "id": "mp1",
-              "markDescription": "Defines Standard form: Scientific notation A × 10ⁿ with 1 ≤ A < 10 and integer exponent n."
+              "numericMatch": {
+                "value": 205,
+                "tolerance": 0.01
+              },
+              "markDescription": "UB(d) = 205"
             },
             {
               "id": "mp2",
-              "markDescription": "States key mechanism/formula: A surd is an irrational root such as √2, √3, or √5. Simplify by pulling out the LARGEST square factor: √72 = √(36 × 2) = 6√2."
+              "numericMatch": {
+                "value": 24.5,
+                "tolerance": 0.01
+              },
+              "markDescription": "LB(t) = 24.5"
             },
             {
               "id": "mp3",
-              "markDescription": "Applies principle accurately: Collect like surds just like algebra: 5√3 + √12 = 5√3 + 2√3 = 7√3."
+              "numericMatch": {
+                "value": 8.37,
+                "tolerance": 0.02
+              },
+              "markDescription": "Max speed 8.37 m/s"
             }
           ]
         }
       },
       {
-        "id": "igcse-maths-exam-2c",
-        "label": "c)",
-        "prompt": "Apply \"Standard Form & Upper/Lower Bounds\" to explain how examiners award full marks on Indices, Surds, Standard Form & Upper/Lower Bounds problems.",
+        "id": "p2",
+        "label": "(b)",
+        "prompt": "Evaluate: Without a calculator, evaluate 8^(-2/3) as an exact fraction.",
+        "marks": 2,
         "kind": "short-answer",
-        "marks": 3,
         "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Standard form writes any number as A × 10ⁿ where 1 ≤ A < 10 and n is an integer. Example: 0.00045 = 4.5 × 10⁻⁴; (3 × 10⁵) × (4 × 10³) = 12 × 10⁸ = 1.2 × 10⁹. Bounds of a rounded measurement: Add and subtract HALF of the rounding unit. If L = 8.4 cm to 1 d.p. (unit 0.1), then 8.35 ≤ L < 8.45. Avoid: To maximise a fraction A/B, NEVER divide Upper(A) by Upper(B) — dividing by the SMALLEST possible denominator (Lower B) gives the largest answer!",
+          "maxMarks": 2,
+          "modelAnswer": "³√8 = 2, 2² = 4, negative power gives 1/4 (0.25).",
           "markPoints": [
             {
               "id": "mp1",
-              "markDescription": "Standard form writes any number as A × 10ⁿ where 1 ≤ A < 10 and n is an integer. Example: 0.00045 = 4.5 × 10⁻⁴; (3 × 10⁵) × (4 × 10³) = 12 × 10⁸ = 1.2 × 10⁹."
+              "requiredKeywordGroups": [
+                [
+                  "2",
+                  "4"
+                ]
+              ],
+              "markDescription": "Cube root 2 and square 4"
             },
             {
               "id": "mp2",
-              "markDescription": "Bounds of a rounded measurement: Add and subtract HALF of the rounding unit. If L = 8.4 cm to 1 d.p. (unit 0.1), then 8.35 ≤ L < 8.45."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "To maximise a fraction A/B, NEVER divide Upper(A) by Upper(B) — dividing by the SMALLEST possible denominator (Lower B) gives the largest answer!"
+              "requiredKeywordGroups": [
+                [
+                  "1/4",
+                  "0.25"
+                ]
+              ],
+              "markDescription": "Answer 1/4 or 0.25"
             }
           ]
         }
@@ -3725,71 +5054,69 @@ export const IGCSE_MATHS_EXAM_PRACTICE: ExamQuestionItem[] = [
     ]
   },
   {
-    "id": "igcse-maths-exam-3",
+    "id": "igcse-maths-ex-1-3",
     "subtopicId": "igcse-maths-1-3",
     "number": 3,
-    "stimulus": "Structured exam question on Topic 1.3 (Ratio, Direct Proportion & Inverse Proportion). Study the information and answer parts (a), (b), and (c).",
+    "stimulus": "[Cambridge IGCSE 0580 Paper 4 Style] Force F is inversely proportional to the square of distance d. When d = 2, F = 50.",
     "parts": [
       {
-        "id": "igcse-maths-exam-3a",
-        "label": "a)",
-        "prompt": "Which statement accurately describes a core principle of Ratio, Direct Proportion & Inverse Proportion?",
-        "kind": "mcq",
-        "marks": 1,
-        "options": [
-          "Solve ratio sharing, ratio difference, and combined three-part ratio problems.",
-          "It violates the core rule of Ratio, Direct Proportion & Inverse Proportion by reversing the relationship between variables.",
-          "It ignores the required standard units and boundary conditions for Direct proportion.",
-          "It assumes Inverse proportion remains zero under all operating conditions."
-        ],
-        "correctIndex": 0
-      },
-      {
-        "id": "igcse-maths-exam-3b",
-        "label": "b)",
-        "prompt": "Define \"Direct proportion\" and explain the key principles covered in \"Direct Proportion (Algebraic Form)\".",
+        "id": "p1",
+        "label": "(a)",
+        "prompt": "Find the formula linking F and d.",
+        "marks": 2,
         "kind": "short-answer",
-        "marks": 3,
         "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Direct proportion: Relationship where y/x = k is constant (y = kx); graph is a straight line through (0, 0). Furthermore, If y is directly proportional to x (written y ∝ x), then y = kx where k is the constant of proportionality (graph is a straight line through the origin). Direct proportion also extends to powers and roots: y ∝ x² → y = kx²; y ∝ √x → y = k√x.",
+          "maxMarks": 2,
+          "modelAnswer": "F = k / d² → 50 = k / 4 → k = 200, so F = 200 / d².",
           "markPoints": [
             {
               "id": "mp1",
-              "markDescription": "Defines Direct proportion: Relationship where y/x = k is constant (y = kx); graph is a straight line through (0, 0)."
+              "requiredKeywordGroups": [
+                [
+                  "d²",
+                  "d^2"
+                ]
+              ],
+              "markDescription": "Sets up k/d²"
             },
             {
               "id": "mp2",
-              "markDescription": "States key mechanism/formula: If y is directly proportional to x (written y ∝ x), then y = kx where k is the constant of proportionality (graph is a straight line through the origin)."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Applies principle accurately: Direct proportion also extends to powers and roots: y ∝ x² → y = kx²; y ∝ √x → y = k√x."
+              "numericMatch": {
+                "value": 200,
+                "tolerance": 0.01
+              },
+              "markDescription": "Finds k = 200"
             }
           ]
         }
       },
       {
-        "id": "igcse-maths-exam-3c",
-        "label": "c)",
-        "prompt": "Apply \"Inverse Proportion\" to explain how examiners award full marks on Ratio, Direct Proportion & Inverse Proportion problems.",
+        "id": "p2",
+        "label": "(b)",
+        "prompt": "Calculate F when d = 5.",
+        "marks": 2,
         "kind": "short-answer",
-        "marks": 3,
         "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "If y is inversely proportional to x (y ∝ 1/x), then y = k ÷ x (so x × y = k is constant). As x doubles, y halves; the graph is a smooth hyperbola approaching both axes. Inverse square law (common in physics & Extended maths): y ∝ 1/x² → y = k ÷ x². Avoid: Read carefully whether y is proportional to x, x², x³, or √x — writing y = kx when the question states \"proportional to the square of x\" loses almost all method marks!",
+          "maxMarks": 2,
+          "modelAnswer": "F = 200 / 5² = 200 / 25 = 8.",
           "markPoints": [
             {
               "id": "mp1",
-              "markDescription": "If y is inversely proportional to x (y ∝ 1/x), then y = k ÷ x (so x × y = k is constant). As x doubles, y halves; the graph is a smooth hyperbola approaching both axes."
+              "requiredKeywordGroups": [
+                [
+                  "25",
+                  "200"
+                ]
+              ],
+              "markDescription": "Substitutes d = 5 into 200/d²"
             },
             {
               "id": "mp2",
-              "markDescription": "Inverse square law (common in physics & Extended maths): y ∝ 1/x² → y = k ÷ x²."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Read carefully whether y is proportional to x, x², x³, or √x — writing y = kx when the question states \"proportional to the square of x\" loses almost all method marks!"
+              "numericMatch": {
+                "value": 8,
+                "tolerance": 0.01
+              },
+              "markDescription": "F = 8"
             }
           ]
         }
@@ -3797,71 +5124,84 @@ export const IGCSE_MATHS_EXAM_PRACTICE: ExamQuestionItem[] = [
     ]
   },
   {
-    "id": "igcse-maths-exam-4",
+    "id": "igcse-maths-ex-2-1",
     "subtopicId": "igcse-maths-2-1",
     "number": 4,
-    "stimulus": "Structured exam question on Topic 2.1 (Expanding, Factorising & Solving Quadratic Equations). Study the information and answer parts (a), (b), and (c).",
+    "stimulus": "[Cambridge IGCSE 0580 Paper 4 Style] Consider the curve y = x² − 8x + 19.",
     "parts": [
       {
-        "id": "igcse-maths-exam-4a",
-        "label": "a)",
-        "prompt": "Which statement accurately describes a core principle of Expanding, Factorising & Solving Quadratic Equations?",
-        "kind": "mcq",
-        "marks": 1,
-        "options": [
-          "Factorise quadratics with a = 1, a > 1, and difference of two squares.",
-          "It violates the core rule of Expanding, Factorising & Solving Quadratic Equations by reversing the relationship between variables.",
-          "It ignores the required standard units and boundary conditions for Quadratic equation.",
-          "It assumes Difference of two squares remains zero under all operating conditions."
-        ],
-        "correctIndex": 0
-      },
-      {
-        "id": "igcse-maths-exam-4b",
-        "label": "b)",
-        "prompt": "Define \"Quadratic equation\" and explain the key principles covered in \"The Quadratic Formula\".",
+        "id": "p1",
+        "label": "(a)",
+        "prompt": "Write x² − 8x + 19 in completed square form (x + p)² + q.",
+        "marks": 2,
         "kind": "short-answer",
-        "marks": 3,
         "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Quadratic equation: Equation of degree 2 written in standard form ax² + bx + c = 0 (a ≠ 0). Furthermore, When a question says \"give your answers to 2 decimal places\" or \"3 significant figures\", use the Quadratic Formula: x = (−b ± √(b² − 4ac)) ÷ (2a). Worked example: Solve 3x² − 5x − 4 = 0. Here a = 3, b = −5, c = −4. Discriminant b² − 4ac = (−5)² − 4(3)(−4) = 25 + 48 = 73.",
+          "maxMarks": 2,
+          "modelAnswer": "(x − 4)² − 16 + 19 = (x − 4)² + 3.",
           "markPoints": [
             {
               "id": "mp1",
-              "markDescription": "Defines Quadratic equation: Equation of degree 2 written in standard form ax² + bx + c = 0 (a ≠ 0)."
+              "requiredKeywordGroups": [
+                [
+                  "(x-4)",
+                  "(x - 4)",
+                  "(x − 4)"
+                ]
+              ],
+              "markDescription": "(x − 4)²"
             },
             {
               "id": "mp2",
-              "markDescription": "States key mechanism/formula: When a question says \"give your answers to 2 decimal places\" or \"3 significant figures\", use the Quadratic Formula: x = (−b ± √(b² − 4ac)) ÷ (2a)."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Applies principle accurately: Worked example: Solve 3x² − 5x − 4 = 0. Here a = 3, b = −5, c = −4. Discriminant b² − 4ac = (−5)² − 4(3)(−4) = 25 + 48 = 73."
+              "numericMatch": {
+                "value": 3,
+                "tolerance": 0.01
+              },
+              "markDescription": "+ 3"
             }
           ]
         }
       },
       {
-        "id": "igcse-maths-exam-4c",
-        "label": "c)",
-        "prompt": "Apply \"Completing the Square & Vertex (Turning Point)\" to explain how examiners award full marks on Expanding, Factorising & Solving Quadratic Equations problems.",
-        "kind": "short-answer",
+        "id": "p2",
+        "label": "(b)",
+        "prompt": "State the coordinates of the minimum turning point and explain why x² − 8x + 19 = 0 has no real roots.",
         "marks": 3,
+        "kind": "short-answer",
         "rubric": {
           "maxMarks": 3,
-          "modelAnswer": "To write x² + bx + c in completed-square form (x + p)² + q: halve the coefficient of x so p = b/2, then subtract p² and add c. Worked example: x² − 6x + 11 = (x − 3)² − 9 + 11 = (x − 3)² + 2.",
+          "modelAnswer": "Minimum turning point is (4, 3). Since the minimum y-value is 3 > 0 (or discriminant (−8)² − 4(1)(19) = −12 < 0), the curve never crosses the x-axis.",
           "markPoints": [
             {
               "id": "mp1",
-              "markDescription": "To write x² + bx + c in completed-square form (x + p)² + q: halve the coefficient of x so p = b/2, then subtract p² and add c."
+              "numericMatch": {
+                "value": 4,
+                "tolerance": 0.01
+              },
+              "markDescription": "x = 4"
             },
             {
               "id": "mp2",
-              "markDescription": "Worked example: x² − 6x + 11 = (x − 3)² − 9 + 11 = (x − 3)² + 2."
+              "numericMatch": {
+                "value": 3,
+                "tolerance": 0.01
+              },
+              "markDescription": "y = 3"
             },
             {
               "id": "mp3",
-              "markDescription": "Factorise quadratics with a = 1, a > 1, and difference of two squares."
+              "requiredKeywordGroups": [
+                [
+                  "above",
+                  "never crosses",
+                  "positive",
+                  "discriminant",
+                  "-12",
+                  "−12",
+                  "> 0",
+                  "greater than 0"
+                ]
+              ],
+              "markDescription": "Minimum > 0 or discriminant < 0"
             }
           ]
         }
@@ -3869,71 +5209,74 @@ export const IGCSE_MATHS_EXAM_PRACTICE: ExamQuestionItem[] = [
     ]
   },
   {
-    "id": "igcse-maths-exam-5",
+    "id": "igcse-maths-ex-2-2",
     "subtopicId": "igcse-maths-2-2",
     "number": 5,
-    "stimulus": "Structured exam question on Topic 2.2 (Simultaneous Equations (Linear & Quadratic) & Inequalities). Study the information and answer parts (a), (b), and (c).",
+    "stimulus": "[Cambridge IGCSE 0580 Paper 4 Style] A straight line y = 2x − 1 intersects the curve y = x² − x − 1 at two points.",
     "parts": [
       {
-        "id": "igcse-maths-exam-5a",
-        "label": "a)",
-        "prompt": "Which statement accurately describes a core principle of Simultaneous Equations (Linear & Quadratic) & Inequalities?",
-        "kind": "mcq",
-        "marks": 1,
-        "options": [
-          "Solve linear simultaneous equations accurately and verify both values.",
-          "It violates the core rule of Simultaneous Equations (Linear & Quadratic) & Inequalities by reversing the relationship between variables.",
-          "It ignores the required standard units and boundary conditions for Elimination method.",
-          "It assumes Substitution method remains zero under all operating conditions."
-        ],
-        "correctIndex": 0
-      },
-      {
-        "id": "igcse-maths-exam-5b",
-        "label": "b)",
-        "prompt": "Define \"Elimination method\" and explain the key principles covered in \"Non-Linear Simultaneous Equations (Substitution)\".",
-        "kind": "short-answer",
+        "id": "p1",
+        "label": "(a)",
+        "prompt": "Solve: Find the two x-coordinates of intersection.",
         "marks": 3,
+        "kind": "short-answer",
         "rubric": {
           "maxMarks": 3,
-          "modelAnswer": "Elimination method: Adding or subtracting multiples of linear simultaneous equations to cancel one unknown. Furthermore, When one equation is linear and the other is quadratic (e.g., y = x + 1 and x² + y² = 25), ALWAYS use SUBSTITUTION. Step 1: Isolate one variable in the linear equation (y = x + 1). Step 2: Substitute into the quadratic: x² + (x + 1)² = 25 → 2x² + 2x − 24 = 0 → x² + x − 12 = 0.",
+          "modelAnswer": "x² − x − 1 = 2x − 1 → x² − 3x = 0 → x(x − 3) = 0, so x = 0 and x = 3.",
           "markPoints": [
             {
               "id": "mp1",
-              "markDescription": "Defines Elimination method: Adding or subtracting multiples of linear simultaneous equations to cancel one unknown."
+              "requiredKeywordGroups": [
+                [
+                  "3x"
+                ]
+              ],
+              "markDescription": "Forms x² − 3x = 0"
             },
             {
               "id": "mp2",
-              "markDescription": "States key mechanism/formula: When one equation is linear and the other is quadratic (e.g., y = x + 1 and x² + y² = 25), ALWAYS use SUBSTITUTION."
+              "numericMatch": {
+                "value": 0,
+                "tolerance": 0.01
+              },
+              "markDescription": "x = 0"
             },
             {
               "id": "mp3",
-              "markDescription": "Applies principle accurately: Step 1: Isolate one variable in the linear equation (y = x + 1). Step 2: Substitute into the quadratic: x² + (x + 1)² = 25 → 2x² + 2x − 24 = 0 → x² + x − 12 = 0."
+              "numericMatch": {
+                "value": 3,
+                "tolerance": 0.01
+              },
+              "markDescription": "x = 3"
             }
           ]
         }
       },
       {
-        "id": "igcse-maths-exam-5c",
-        "label": "c)",
-        "prompt": "Apply \"Linear, Quadratic & Graphical Inequalities\" to explain how examiners award full marks on Simultaneous Equations (Linear & Quadratic) & Inequalities problems.",
+        "id": "p2",
+        "label": "(b)",
+        "prompt": "Find the corresponding y-coordinates to state both intersection points.",
+        "marks": 2,
         "kind": "short-answer",
-        "marks": 3,
         "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Solve linear inequalities just like equations, EXCEPT multiplying or dividing both sides by a NEGATIVE number FLIPS the inequality sign (e.g., −2x < 10 → x > −5). Quadratic inequalities: Solve the equality first, then SKETCH the parabola! For x² − 5x + 6 < 0, roots are 2 and 3; the U-shaped parabola is below zero BETWEEN the roots → 2 < x < 3. For x² − 5x + 6 > 0, it is above zero OUTSIDE the roots → x < 2 or x > 3.",
+          "maxMarks": 2,
+          "modelAnswer": "When x = 0, y = −1 → (0, −1); when x = 3, y = 5 → (3, 5).",
           "markPoints": [
             {
               "id": "mp1",
-              "markDescription": "Solve linear inequalities just like equations, EXCEPT multiplying or dividing both sides by a NEGATIVE number FLIPS the inequality sign (e.g., −2x < 10 → x > −5)."
+              "numericMatch": {
+                "value": -1,
+                "tolerance": 0.01
+              },
+              "markDescription": "y = -1"
             },
             {
               "id": "mp2",
-              "markDescription": "Quadratic inequalities: Solve the equality first, then SKETCH the parabola! For x² − 5x + 6 < 0, roots are 2 and 3; the U-shaped parabola is below zero BETWEEN the roots → 2 < x < 3. For x² − 5x + 6 > 0, it is above zero OUTSIDE the roots → x < 2 or x > 3."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "SSS = Same Signs Subtract; Different Signs Add!"
+              "numericMatch": {
+                "value": 5,
+                "tolerance": 0.01
+              },
+              "markDescription": "y = 5"
             }
           ]
         }
@@ -3941,71 +5284,81 @@ export const IGCSE_MATHS_EXAM_PRACTICE: ExamQuestionItem[] = [
     ]
   },
   {
-    "id": "igcse-maths-exam-6",
+    "id": "igcse-maths-ex-2-3",
     "subtopicId": "igcse-maths-2-3",
     "number": 6,
-    "stimulus": "Structured exam question on Topic 2.3 (Sequences, Functions (Composite/Inverse) & Differentiation). Study the information and answer parts (a), (b), and (c).",
+    "stimulus": "[Cambridge IGCSE 0580 Paper 4 Style] A curve has equation y = x³ − 12x + 4.",
     "parts": [
       {
-        "id": "igcse-maths-exam-6a",
-        "label": "a)",
-        "prompt": "Which statement accurately describes a core principle of Sequences, Functions (Composite/Inverse) & Differentiation?",
-        "kind": "mcq",
-        "marks": 1,
-        "options": [
-          "Find the nth term of arithmetic, geometric, and quadratic sequences.",
-          "It violates the core rule of Sequences, Functions (Composite/Inverse) & Differentiation by reversing the relationship between variables.",
-          "It ignores the required standard units and boundary conditions for Quadratic sequence.",
-          "It assumes Inverse function remains zero under all operating conditions."
-        ],
-        "correctIndex": 0
-      },
-      {
-        "id": "igcse-maths-exam-6b",
-        "label": "b)",
-        "prompt": "Define \"Quadratic sequence\" and explain the key principles covered in \"Composite & Inverse Functions (Extended)\".",
-        "kind": "short-answer",
+        "id": "p1",
+        "label": "(a)",
+        "prompt": "Find dy/dx and the x-coordinates of both stationary points.",
         "marks": 3,
+        "kind": "short-answer",
         "rubric": {
           "maxMarks": 3,
-          "modelAnswer": "Quadratic sequence: Sequence with a constant second difference 2a and nth term an² + bn + c. Furthermore, Composite function fg(x) means apply g FIRST, then substitute the result into f: fg(x) = f(g(x)). Order matters — usually fg(x) ≠ gf(x)! Worked example: If f(x) = 2x + 3 and g(x) = x², then fg(x) = f(x²) = 2x² + 3, whereas gf(x) = g(2x + 3) = (2x + 3)².",
+          "modelAnswer": "dy/dx = 3x² − 12 = 0 → x² = 4 → x = 2 and x = −2.",
           "markPoints": [
             {
               "id": "mp1",
-              "markDescription": "Defines Quadratic sequence: Sequence with a constant second difference 2a and nth term an² + bn + c."
+              "requiredKeywordGroups": [
+                [
+                  "3x"
+                ],
+                [
+                  "12"
+                ]
+              ],
+              "markDescription": "dy/dx = 3x² − 12"
             },
             {
               "id": "mp2",
-              "markDescription": "States key mechanism/formula: Composite function fg(x) means apply g FIRST, then substitute the result into f: fg(x) = f(g(x)). Order matters — usually fg(x) ≠ gf(x)!"
+              "numericMatch": {
+                "value": 2,
+                "tolerance": 0.01
+              },
+              "markDescription": "x = 2"
             },
             {
               "id": "mp3",
-              "markDescription": "Applies principle accurately: Worked example: If f(x) = 2x + 3 and g(x) = x², then fg(x) = f(x²) = 2x² + 3, whereas gf(x) = g(2x + 3) = (2x + 3)²."
+              "numericMatch": {
+                "value": -2,
+                "tolerance": 0.01
+              },
+              "markDescription": "x = -2"
             }
           ]
         }
       },
       {
-        "id": "igcse-maths-exam-6c",
-        "label": "c)",
-        "prompt": "Apply \"Introduction to Differentiation (CIE 0580 / Edexcel 4MA1 Extended)\" to explain how examiners award full marks on Sequences, Functions (Composite/Inverse) & Differentiation problems.",
+        "id": "p2",
+        "label": "(b)",
+        "prompt": "Determine: Use d²y/dx² to determine the nature of the stationary point at x = 2.",
+        "marks": 2,
         "kind": "short-answer",
-        "marks": 3,
         "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "The derivative dy/dx gives the exact gradient function of a curve y = f(x) at any x-coordinate. Power rule: If y = axⁿ, then dy/dx = anxⁿ⁻¹. The derivative of any constant is 0 (d/dx(c) = 0).",
+          "maxMarks": 2,
+          "modelAnswer": "d²y/dx² = 6x; at x = 2, d²y/dx² = 12 > 0, so it is a local minimum.",
           "markPoints": [
             {
               "id": "mp1",
-              "markDescription": "The derivative dy/dx gives the exact gradient function of a curve y = f(x) at any x-coordinate."
+              "requiredKeywordGroups": [
+                [
+                  "6x",
+                  "12"
+                ]
+              ],
+              "markDescription": "d²y/dx² = 6x = 12 > 0"
             },
             {
               "id": "mp2",
-              "markDescription": "Power rule: If y = axⁿ, then dy/dx = anxⁿ⁻¹. The derivative of any constant is 0 (d/dx(c) = 0)."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Find the nth term of arithmetic, geometric, and quadratic sequences."
+              "requiredKeywordGroups": [
+                [
+                  "minimum",
+                  "min"
+                ]
+              ],
+              "markDescription": "Local minimum"
             }
           ]
         }
@@ -4013,71 +5366,81 @@ export const IGCSE_MATHS_EXAM_PRACTICE: ExamQuestionItem[] = [
     ]
   },
   {
-    "id": "igcse-maths-exam-7",
+    "id": "igcse-maths-ex-3-1",
     "subtopicId": "igcse-maths-3-1",
     "number": 7,
-    "stimulus": "Structured exam question on Topic 3.1 (Straight Line Graphs (y = mx + c), Midpoint, Length & Perpendiculars). Study the information and answer parts (a), (b), and (c).",
+    "stimulus": "[Cambridge IGCSE 0580 Paper 4 Style] Points A(1, 3) and B(5, 11) lie on a coordinate grid.",
     "parts": [
       {
-        "id": "igcse-maths-exam-7a",
-        "label": "a)",
-        "prompt": "Which statement accurately describes a core principle of Straight Line Graphs (y = mx + c), Midpoint, Length & Perpendiculars?",
-        "kind": "mcq",
-        "marks": 1,
-        "options": [
-          "Calculate gradient, midpoint, and distance between any two coordinate pairs.",
-          "It violates the core rule of Straight Line Graphs (y = mx + c), Midpoint, Length & Perpendiculars by reversing the relationship between variables.",
-          "It ignores the required standard units and boundary conditions for Gradient.",
-          "It assumes Perpendicular lines remains zero under all operating conditions."
-        ],
-        "correctIndex": 0
-      },
-      {
-        "id": "igcse-maths-exam-7b",
-        "label": "b)",
-        "prompt": "Define \"Gradient\" and explain the key principles covered in \"Equation of a Straight Line (y = mx + c)\".",
+        "id": "p1",
+        "label": "(a)",
+        "prompt": "Find the midpoint M and gradient of AB.",
+        "marks": 2,
         "kind": "short-answer",
-        "marks": 3,
         "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Gradient: Measure of steepness between two points: m = (y₂ − y₁) ÷ (x₂ − x₁). Furthermore, In y = mx + c, m is the gradient and c is the y-intercept (where x = 0). If given in implicit form like 2x + 4y = 12, rearrange to y = −0.5x + 3 BEFORE reading m and c! Finding the line through (2, 5) and (6, 17): First find m = (17 − 5) ÷ (6 − 2) = 12 ÷ 4 = 3. Substitute (2, 5) into y = 3x + c → 5 = 6 + c → c = −1 → y = 3x − 1.",
+          "maxMarks": 2,
+          "modelAnswer": "Midpoint M = (3, 7) and gradient m = (11 − 3)/(5 − 1) = 8/4 = 2.",
           "markPoints": [
             {
               "id": "mp1",
-              "markDescription": "Defines Gradient: Measure of steepness between two points: m = (y₂ − y₁) ÷ (x₂ − x₁)."
+              "requiredKeywordGroups": [
+                [
+                  "3"
+                ],
+                [
+                  "7"
+                ]
+              ],
+              "markDescription": "Midpoint (3, 7)"
             },
             {
               "id": "mp2",
-              "markDescription": "States key mechanism/formula: In y = mx + c, m is the gradient and c is the y-intercept (where x = 0). If given in implicit form like 2x + 4y = 12, rearrange to y = −0.5x + 3 BEFORE reading m and c!"
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Applies principle accurately: Finding the line through (2, 5) and (6, 17): First find m = (17 − 5) ÷ (6 − 2) = 12 ÷ 4 = 3. Substitute (2, 5) into y = 3x + c → 5 = 6 + c → c = −1 → y = 3x − 1."
+              "numericMatch": {
+                "value": 2,
+                "tolerance": 0.01
+              },
+              "markDescription": "Gradient 2"
             }
           ]
         }
       },
       {
-        "id": "igcse-maths-exam-7c",
-        "label": "c)",
-        "prompt": "Apply \"Parallel Lines, Perpendicular Lines & Perpendicular Bisectors\" to explain how examiners award full marks on Straight Line Graphs (y = mx + c), Midpoint, Length & Perpendiculars problems.",
-        "kind": "short-answer",
+        "id": "p2",
+        "label": "(b)",
+        "prompt": "Find the equation of the perpendicular bisector of AB in the form y = mx + c.",
         "marks": 3,
+        "kind": "short-answer",
         "rubric": {
           "maxMarks": 3,
-          "modelAnswer": "Parallel lines have EQUAL gradients: m₁ = m₂. Perpendicular lines satisfy m₁ × m₂ = −1, so m₂ = −1 ÷ m₁ (the negative reciprocal: flip the fraction and flip the sign! E.g., 2/3 → −3/2; −4 → +1/4).",
+          "modelAnswer": "Perpendicular gradient = −1/2 (−0.5). Using (3, 7): 7 = −1.5 + c → c = 8.5, so y = −0.5x + 8.5.",
           "markPoints": [
             {
               "id": "mp1",
-              "markDescription": "Parallel lines have EQUAL gradients: m₁ = m₂."
+              "numericMatch": {
+                "value": -0.5,
+                "tolerance": 0.01
+              },
+              "markDescription": "Perpendicular gradient −0.5"
             },
             {
               "id": "mp2",
-              "markDescription": "Perpendicular lines satisfy m₁ × m₂ = −1, so m₂ = −1 ÷ m₁ (the negative reciprocal: flip the fraction and flip the sign! E.g., 2/3 → −3/2; −4 → +1/4)."
+              "numericMatch": {
+                "value": 8.5,
+                "tolerance": 0.01
+              },
+              "markDescription": "Intercept c = 8.5"
             },
             {
               "id": "mp3",
-              "markDescription": "Calculate gradient, midpoint, and distance between any two coordinate pairs."
+              "requiredKeywordGroups": [
+                [
+                  "y"
+                ],
+                [
+                  "x"
+                ]
+              ],
+              "markDescription": "Complete equation"
             }
           ]
         }
@@ -4085,71 +5448,77 @@ export const IGCSE_MATHS_EXAM_PRACTICE: ExamQuestionItem[] = [
     ]
   },
   {
-    "id": "igcse-maths-exam-8",
+    "id": "igcse-maths-ex-4-1",
     "subtopicId": "igcse-maths-4-1",
     "number": 8,
-    "stimulus": "Structured exam question on Topic 4.1 (Angles, Polygons, Bearings, Similarity & Congruence). Study the information and answer parts (a), (b), and (c).",
+    "stimulus": "[Cambridge IGCSE 0580 Paper 4 Style] Two mathematically similar solids have surface areas 36 cm² and 100 cm².",
     "parts": [
       {
-        "id": "igcse-maths-exam-8a",
-        "label": "a)",
-        "prompt": "Which statement accurately describes a core principle of Angles, Polygons, Bearings, Similarity & Congruence?",
-        "kind": "mcq",
-        "marks": 1,
-        "options": [
-          "Calculate interior and exterior angles of regular and irregular polygons.",
-          "It violates the core rule of Angles, Polygons, Bearings, Similarity & Congruence by reversing the relationship between variables.",
-          "It ignores the required standard units and boundary conditions for Bearing.",
-          "It assumes Congruence remains zero under all operating conditions."
-        ],
-        "correctIndex": 0
-      },
-      {
-        "id": "igcse-maths-exam-8b",
-        "label": "b)",
-        "prompt": "Define \"Bearing\" and explain the key principles covered in \"Three-Figure Bearings\".",
+        "id": "p1",
+        "label": "(a)",
+        "prompt": "Find the linear scale factor from the smaller solid to the larger solid.",
+        "marks": 2,
         "kind": "short-answer",
-        "marks": 3,
         "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Bearing: Direction measured clockwise from North and expressed as a three-figure angle (000°–359°). Furthermore, Bearings obey 3 strict rules: (1) Measured from NORTH (000°), (2) Measured CLOCKWISE, (3) Written as 3 digits (e.g., 045°, NOT 45°). The wording \"bearing of B FROM A\" means stand at A, draw a North line at A, and turn clockwise until pointing to B.",
+          "maxMarks": 2,
+          "modelAnswer": "Area scale factor = 100/36, so linear scale factor k = √(100/36) = 10/6 = 5/3 (≈ 1.67).",
           "markPoints": [
             {
               "id": "mp1",
-              "markDescription": "Defines Bearing: Direction measured clockwise from North and expressed as a three-figure angle (000°–359°)."
+              "requiredKeywordGroups": [
+                [
+                  "√",
+                  "sqrt",
+                  "10/6",
+                  "5/3",
+                  "1.67"
+                ]
+              ],
+              "markDescription": "Takes square root of area ratio"
             },
             {
               "id": "mp2",
-              "markDescription": "States key mechanism/formula: Bearings obey 3 strict rules: (1) Measured from NORTH (000°), (2) Measured CLOCKWISE, (3) Written as 3 digits (e.g., 045°, NOT 45°)."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Applies principle accurately: The wording \"bearing of B FROM A\" means stand at A, draw a North line at A, and turn clockwise until pointing to B."
+              "requiredKeywordGroups": [
+                [
+                  "5/3",
+                  "1.67",
+                  "1.66"
+                ]
+              ],
+              "markDescription": "k = 5/3 or 1.67"
             }
           ]
         }
       },
       {
-        "id": "igcse-maths-exam-8c",
-        "label": "c)",
-        "prompt": "Apply \"Congruence & Similar Shapes (Length, Area & Volume Scale Factors)\" to explain how examiners award full marks on Angles, Polygons, Bearings, Similarity & Congruence problems.",
+        "id": "p2",
+        "label": "(b)",
+        "prompt": "Calculate: The smaller solid has volume 54 cm³. Calculate the volume of the larger solid.",
+        "marks": 2,
         "kind": "short-answer",
-        "marks": 3,
         "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Two triangles are CONGRUENT (identical size & shape) if they satisfy SSS, SAS, ASA/AAS, or RHS (Right angle, Hypotenuse, Side). Note: AAA proves similarity, NOT congruence! Similar shapes have identical angles and proportional sides with linear scale factor k = L₂ ÷ L₁.",
+          "maxMarks": 2,
+          "modelAnswer": "Volume = 54 × (5/3)³ = 54 × 125/27 = 250 cm³.",
           "markPoints": [
             {
               "id": "mp1",
-              "markDescription": "Two triangles are CONGRUENT (identical size & shape) if they satisfy SSS, SAS, ASA/AAS, or RHS (Right angle, Hypotenuse, Side). Note: AAA proves similarity, NOT congruence!"
+              "requiredKeywordGroups": [
+                [
+                  "125/27",
+                  "4.63",
+                  "³",
+                  "^3"
+                ]
+              ],
+              "markDescription": "Cubes linear scale factor"
             },
             {
               "id": "mp2",
-              "markDescription": "Similar shapes have identical angles and proportional sides with linear scale factor k = L₂ ÷ L₁."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Always find the EXTERIOR angle (360° ÷ n) first — it is far faster than the interior formula!"
+              "numericMatch": {
+                "value": 250,
+                "tolerance": 0.5
+              },
+              "markDescription": "Volume 250 cm³"
             }
           ]
         }
@@ -4157,71 +5526,73 @@ export const IGCSE_MATHS_EXAM_PRACTICE: ExamQuestionItem[] = [
     ]
   },
   {
-    "id": "igcse-maths-exam-9",
+    "id": "igcse-maths-ex-4-2",
     "subtopicId": "igcse-maths-4-2",
     "number": 9,
-    "stimulus": "Structured exam question on Topic 4.2 (Circle Theorems & Alternate Segment Theorem). Study the information and answer parts (a), (b), and (c).",
+    "stimulus": "[Cambridge IGCSE 0580 Paper 2 Style] A, B, and C lie on a circle with centre O. Angle AOC = 140°, and tangent PT touches the circle at A making ∠TAB = 62° with chord AB.",
     "parts": [
       {
-        "id": "igcse-maths-exam-9a",
-        "label": "a)",
-        "prompt": "Which statement accurately describes a core principle of Circle Theorems & Alternate Segment Theorem?",
-        "kind": "mcq",
-        "marks": 1,
-        "options": [
-          "Recall and apply all 8 circle theorems accurately in multi-step angle problems.",
-          "It violates the core rule of Circle Theorems & Alternate Segment Theorem by reversing the relationship between variables.",
-          "It ignores the required standard units and boundary conditions for Cyclic quadrilateral.",
-          "It assumes Alternate Segment Theorem remains zero under all operating conditions."
-        ],
-        "correctIndex": 0
-      },
-      {
-        "id": "igcse-maths-exam-9b",
-        "label": "b)",
-        "prompt": "Define \"Cyclic quadrilateral\" and explain the key principles covered in \"Cyclic Quadrilaterals & Tangent Rules\".",
+        "id": "p1",
+        "label": "(a)",
+        "prompt": "Find acute angle ABC and state your reason.",
+        "marks": 2,
         "kind": "short-answer",
-        "marks": 3,
         "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Cyclic quadrilateral: Four-sided shape inscribed in a circle whose opposite angles add to 180°. Furthermore, Theorem 5 (Cyclic quadrilateral): All 4 vertices MUST lie on the circumference. Opposite angles of a cyclic quadrilateral sum to 180°. Theorem 6 (Tangent meets radius): A tangent to a circle always meets the radius at the point of contact at 90°.",
+          "maxMarks": 2,
+          "modelAnswer": "∠ABC = 140° ÷ 2 = 70° (angle at the centre is twice the angle at the circumference).",
           "markPoints": [
             {
               "id": "mp1",
-              "markDescription": "Defines Cyclic quadrilateral: Four-sided shape inscribed in a circle whose opposite angles add to 180°."
+              "numericMatch": {
+                "value": 70,
+                "tolerance": 0.1
+              },
+              "markDescription": "Angle 70°"
             },
             {
               "id": "mp2",
-              "markDescription": "States key mechanism/formula: Theorem 5 (Cyclic quadrilateral): All 4 vertices MUST lie on the circumference. Opposite angles of a cyclic quadrilateral sum to 180°."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Applies principle accurately: Theorem 6 (Tangent meets radius): A tangent to a circle always meets the radius at the point of contact at 90°."
+              "requiredKeywordGroups": [
+                [
+                  "centre",
+                  "center"
+                ],
+                [
+                  "twice",
+                  "half",
+                  "circumference"
+                ]
+              ],
+              "markDescription": "Centre twice circumference reason"
             }
           ]
         }
       },
       {
-        "id": "igcse-maths-exam-9c",
-        "label": "c)",
-        "prompt": "Apply \"The Alternate Segment Theorem\" to explain how examiners award full marks on Circle Theorems & Alternate Segment Theorem problems.",
+        "id": "p2",
+        "label": "(b)",
+        "prompt": "Find angle ACB using the alternate segment theorem.",
+        "marks": 2,
         "kind": "short-answer",
-        "marks": 3,
         "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Theorem 8 (Alternate Segment Theorem): The angle between a tangent and a chord drawn from the point of contact is EQUAL to the angle subtended by that chord in the alternate (opposite) segment. Exam phrasing tip: Always write the FULL formal theorem reason in proof questions (e.g., \"Angle in a semicircle is 90°\" or \"Opposite angles in a cyclic quadrilateral sum to 180°\") — vague phrases like \"Z-angles\" or \"arrow rule\" get ZERO reason marks!",
+          "maxMarks": 2,
+          "modelAnswer": "∠ACB = 62° by the alternate segment theorem.",
           "markPoints": [
             {
               "id": "mp1",
-              "markDescription": "Theorem 8 (Alternate Segment Theorem): The angle between a tangent and a chord drawn from the point of contact is EQUAL to the angle subtended by that chord in the alternate (opposite) segment."
+              "numericMatch": {
+                "value": 62,
+                "tolerance": 0.1
+              },
+              "markDescription": "Angle 62°"
             },
             {
               "id": "mp2",
-              "markDescription": "Exam phrasing tip: Always write the FULL formal theorem reason in proof questions (e.g., \"Angle in a semicircle is 90°\" or \"Opposite angles in a cyclic quadrilateral sum to 180°\") — vague phrases like \"Z-angles\" or \"arrow rule\" get ZERO reason marks!"
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Always look for hidden ISOSCELES TRIANGLES formed by two radii (both sides = r, so base angles are equal)!"
+              "requiredKeywordGroups": [
+                [
+                  "alternate segment"
+                ]
+              ],
+              "markDescription": "Alternate segment theorem"
             }
           ]
         }
@@ -4229,71 +5600,82 @@ export const IGCSE_MATHS_EXAM_PRACTICE: ExamQuestionItem[] = [
     ]
   },
   {
-    "id": "igcse-maths-exam-10",
+    "id": "igcse-maths-ex-5-1",
     "subtopicId": "igcse-maths-5-1",
     "number": 10,
-    "stimulus": "Structured exam question on Topic 5.1 (Area, Arc Length, Sector Area, Surface Area & Volume). Study the information and answer parts (a), (b), and (c).",
+    "stimulus": "[Cambridge IGCSE 0580 Paper 4 Style] A sector of a circle has radius 12 cm and sector angle 90°.",
     "parts": [
       {
-        "id": "igcse-maths-exam-10a",
-        "label": "a)",
-        "prompt": "Which statement accurately describes a core principle of Area, Arc Length, Sector Area, Surface Area & Volume?",
-        "kind": "mcq",
-        "marks": 1,
-        "options": [
-          "Calculate arc length, sector perimeter, and sector area in exact π form and decimals.",
-          "It violates the core rule of Area, Arc Length, Sector Area, Surface Area & Volume by reversing the relationship between variables.",
-          "It ignores the required standard units and boundary conditions for Sector.",
-          "It assumes Frustum remains zero under all operating conditions."
-        ],
-        "correctIndex": 0
-      },
-      {
-        "id": "igcse-maths-exam-10b",
-        "label": "b)",
-        "prompt": "Define \"Sector\" and explain the key principles covered in \"Volume & Surface Area of 3D Solids\".",
-        "kind": "short-answer",
+        "id": "p1",
+        "label": "(a)",
+        "prompt": "Calculate the exact perimeter of the sector in terms of π (or to 1 decimal place).",
         "marks": 3,
+        "kind": "short-answer",
         "rubric": {
           "maxMarks": 3,
-          "modelAnswer": "Sector: Pie-slice region of a circle bounded by two radii and an arc, with area (θ/360)πr². Furthermore, Any uniform Prism: Volume = Cross-sectional area × length. Cylinder: Volume = πr²h; Curved surface area = 2πrh; Total surface area = 2πrh + 2πr². Pyramid: Volume = ⅓ × Base area × perpendicular height. Cone: Volume = ⅓πr²h; Curved surface area = πrl (where slant height l = √(r² + h²)); Total SA = πrl + πr².",
+          "modelAnswer": "Arc length = (90/360) × 2π(12) = 6π ≈ 18.85 cm. Perimeter = 6π + 24 ≈ 42.8 cm (or 42.9 cm).",
           "markPoints": [
             {
               "id": "mp1",
-              "markDescription": "Defines Sector: Pie-slice region of a circle bounded by two radii and an arc, with area (θ/360)πr²."
+              "requiredKeywordGroups": [
+                [
+                  "6π",
+                  "6pi",
+                  "18.8",
+                  "18.9"
+                ]
+              ],
+              "markDescription": "Arc length 6π or 18.85"
             },
             {
               "id": "mp2",
-              "markDescription": "States key mechanism/formula: Any uniform Prism: Volume = Cross-sectional area × length. Cylinder: Volume = πr²h; Curved surface area = 2πrh; Total surface area = 2πrh + 2πr²."
+              "requiredKeywordGroups": [
+                [
+                  "24",
+                  "12 + 12"
+                ]
+              ],
+              "markDescription": "Adds two radii (+ 24)"
             },
             {
               "id": "mp3",
-              "markDescription": "Applies principle accurately: Pyramid: Volume = ⅓ × Base area × perpendicular height. Cone: Volume = ⅓πr²h; Curved surface area = πrl (where slant height l = √(r² + h²)); Total SA = πrl + πr²."
+              "numericMatch": {
+                "value": 42.85,
+                "tolerance": 0.2
+              },
+              "markDescription": "Total perimeter 42.8–42.9 cm"
             }
           ]
         }
       },
       {
-        "id": "igcse-maths-exam-10c",
-        "label": "c)",
-        "prompt": "Apply \"Unit Conversions & Frustums\" to explain how examiners award full marks on Area, Arc Length, Sector Area, Surface Area & Volume problems.",
+        "id": "p2",
+        "label": "(b)",
+        "prompt": "Calculate the area of the sector to 1 decimal place.",
+        "marks": 2,
         "kind": "short-answer",
-        "marks": 3,
         "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Area & volume unit conversions: 1 m² = 100² = 10,000 cm²; 1 m³ = 100³ = 1,000,000 cm³; 1 litre = 1,000 cm³. A frustum is a cone with a smaller similar cone sliced off its top: Volume of frustum = Volume(large cone) − Volume(removed small cone).",
+          "maxMarks": 2,
+          "modelAnswer": "Area = (90/360) × π × 12² = 36π = 113.1 cm².",
           "markPoints": [
             {
               "id": "mp1",
-              "markDescription": "Area & volume unit conversions: 1 m² = 100² = 10,000 cm²; 1 m³ = 100³ = 1,000,000 cm³; 1 litre = 1,000 cm³."
+              "requiredKeywordGroups": [
+                [
+                  "36π",
+                  "36pi",
+                  "113"
+                ]
+              ],
+              "markDescription": "36π"
             },
             {
               "id": "mp2",
-              "markDescription": "A frustum is a cone with a smaller similar cone sliced off its top: Volume of frustum = Volume(large cone) − Volume(removed small cone)."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Calculate arc length, sector perimeter, and sector area in exact π form and decimals."
+              "numericMatch": {
+                "value": 113.1,
+                "tolerance": 0.2
+              },
+              "markDescription": "113.1 cm²"
             }
           ]
         }
@@ -4301,71 +5683,70 @@ export const IGCSE_MATHS_EXAM_PRACTICE: ExamQuestionItem[] = [
     ]
   },
   {
-    "id": "igcse-maths-exam-11",
+    "id": "igcse-maths-ex-6-1",
     "subtopicId": "igcse-maths-6-1",
     "number": 11,
-    "stimulus": "Structured exam question on Topic 6.1 (Pythagoras’ Theorem & Right-Angled Trigonometry (SOHCAHTOA)). Study the information and answer parts (a), (b), and (c).",
+    "stimulus": "[Cambridge IGCSE 0580 Paper 4 Style] A ladder of length 6.5 m leans against a vertical wall with its foot 2.5 m from the base of the wall.",
     "parts": [
       {
-        "id": "igcse-maths-exam-11a",
-        "label": "a)",
-        "prompt": "Which statement accurately describes a core principle of Pythagoras’ Theorem & Right-Angled Trigonometry (SOHCAHTOA)?",
-        "kind": "mcq",
-        "marks": 1,
-        "options": [
-          "Apply Pythagoras in 2D and 3D cuboids/pyramids.",
-          "It violates the core rule of Pythagoras’ Theorem & Right-Angled Trigonometry (SOHCAHTOA) by reversing the relationship between variables.",
-          "It ignores the required standard units and boundary conditions for Hypotenuse.",
-          "It assumes Angle of elevation remains zero under all operating conditions."
-        ],
-        "correctIndex": 0
-      },
-      {
-        "id": "igcse-maths-exam-11b",
-        "label": "b)",
-        "prompt": "Define \"Hypotenuse\" and explain the key principles covered in \"Right-Angled Trigonometry (SOHCAHTOA)\".",
+        "id": "p1",
+        "label": "(a)",
+        "prompt": "Calculate how high up the wall the ladder reaches.",
+        "marks": 2,
         "kind": "short-answer",
-        "marks": 3,
         "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Hypotenuse: Longest side of a right-angled triangle, opposite the right angle. Furthermore, Label the 3 sides relative to the target angle θ: Hypotenuse (H, opposite 90°), Opposite (O, across from θ), Adjacent (A, next to θ). SOH: sin θ = O ÷ H | CAH: cos θ = A ÷ H | TOA: tan θ = O ÷ A.",
+          "maxMarks": 2,
+          "modelAnswer": "h = √(6.5² − 2.5²) = √(42.25 − 6.25) = √36 = 6 m.",
           "markPoints": [
             {
               "id": "mp1",
-              "markDescription": "Defines Hypotenuse: Longest side of a right-angled triangle, opposite the right angle."
+              "requiredKeywordGroups": [
+                [
+                  "36",
+                  "42.25"
+                ]
+              ],
+              "markDescription": "Subtracts squares"
             },
             {
               "id": "mp2",
-              "markDescription": "States key mechanism/formula: Label the 3 sides relative to the target angle θ: Hypotenuse (H, opposite 90°), Opposite (O, across from θ), Adjacent (A, next to θ)."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Applies principle accurately: SOH: sin θ = O ÷ H | CAH: cos θ = A ÷ H | TOA: tan θ = O ÷ A."
+              "numericMatch": {
+                "value": 6,
+                "tolerance": 0.01
+              },
+              "markDescription": "Height 6 m"
             }
           ]
         }
       },
       {
-        "id": "igcse-maths-exam-11c",
-        "label": "c)",
-        "prompt": "Apply \"Angles of Elevation, Depression & 3D Trigonometry\" to explain how examiners award full marks on Pythagoras’ Theorem & Right-Angled Trigonometry (SOHCAHTOA) problems.",
+        "id": "p2",
+        "label": "(b)",
+        "prompt": "Calculate the angle the ladder makes with the ground to 1 decimal place.",
+        "marks": 2,
         "kind": "short-answer",
-        "marks": 3,
         "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Angle of elevation is measured UPWARD from the horizontal; angle of depression is measured DOWNWARD from the horizontal (they are equal alternate Z-angles!). For 3D trigonometry (angle between a line and a plane): drop a perpendicular from the top endpoint straight down onto the plane, draw the right-angled triangle on the base, find the base diagonal with Pythagoras, then use tan θ = vertical height ÷ base diagonal. Avoid: Angle of depression is measured from the HORIZONTAL down to the line of sight — NEVER from the vertical cliff wall!",
+          "maxMarks": 2,
+          "modelAnswer": "cos θ = 2.5 / 6.5 → θ = cos⁻¹(2.5/6.5) = 67.4°.",
           "markPoints": [
             {
               "id": "mp1",
-              "markDescription": "Angle of elevation is measured UPWARD from the horizontal; angle of depression is measured DOWNWARD from the horizontal (they are equal alternate Z-angles!)."
+              "requiredKeywordGroups": [
+                [
+                  "cos",
+                  "sin",
+                  "tan"
+                ]
+              ],
+              "markDescription": "Uses cos/sin/tan inverse"
             },
             {
               "id": "mp2",
-              "markDescription": "For 3D trigonometry (angle between a line and a plane): drop a perpendicular from the top endpoint straight down onto the plane, draw the right-angled triangle on the base, find the base diagonal with Pythagoras, then use tan θ = vertical height ÷ base diagonal."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Angle of depression is measured from the HORIZONTAL down to the line of sight — NEVER from the vertical cliff wall!"
+              "numericMatch": {
+                "value": 67.4,
+                "tolerance": 0.2
+              },
+              "markDescription": "Angle 67.4°"
             }
           ]
         }
@@ -4373,71 +5754,79 @@ export const IGCSE_MATHS_EXAM_PRACTICE: ExamQuestionItem[] = [
     ]
   },
   {
-    "id": "igcse-maths-exam-12",
+    "id": "igcse-maths-ex-6-2",
     "subtopicId": "igcse-maths-6-2",
     "number": 12,
-    "stimulus": "Structured exam question on Topic 6.2 (Sine Rule, Cosine Rule & Area of Non-Right-Angled Triangles). Study the information and answer parts (a), (b), and (c).",
+    "stimulus": "[Cambridge IGCSE 0580 Paper 4 Style] In triangle ABC, AB = 8 cm, AC = 11 cm, and angle BAC = 52°.",
     "parts": [
       {
-        "id": "igcse-maths-exam-12a",
-        "label": "a)",
-        "prompt": "Which statement accurately describes a core principle of Sine Rule, Cosine Rule & Area of Non-Right-Angled Triangles?",
-        "kind": "mcq",
-        "marks": 1,
-        "options": [
-          "Choose correctly between SOHCAHTOA, Sine Rule, and Cosine Rule.",
-          "It violates the core rule of Sine Rule, Cosine Rule & Area of Non-Right-Angled Triangles by reversing the relationship between variables.",
-          "It ignores the required standard units and boundary conditions for Sine Rule.",
-          "It assumes Cosine Rule remains zero under all operating conditions."
-        ],
-        "correctIndex": 0
-      },
-      {
-        "id": "igcse-maths-exam-12b",
-        "label": "b)",
-        "prompt": "Define \"Sine Rule\" and explain the key principles covered in \"The Cosine Rule\".",
-        "kind": "short-answer",
+        "id": "p1",
+        "label": "(a)",
+        "prompt": "Calculate: Use the Cosine Rule to calculate side BC to 1 decimal place.",
         "marks": 3,
+        "kind": "short-answer",
         "rubric": {
           "maxMarks": 3,
-          "modelAnswer": "Sine Rule: a / sin A = b / sin B = c / sin C for any triangle. Furthermore, Use the Cosine Rule when you do NOT have an opposite pair: either SAS (two sides and the INCLUDED angle between them) or SSS (all three sides known). Finding a missing side (SAS): a² = b² + c² − 2bc cos A (remember to take the square root at the end!).",
+          "modelAnswer": "BC² = 8² + 11² − 2(8)(11) cos 52° = 185 − 108.36 = 76.64 → BC = 8.8 cm.",
           "markPoints": [
             {
               "id": "mp1",
-              "markDescription": "Defines Sine Rule: a / sin A = b / sin B = c / sin C for any triangle."
+              "requiredKeywordGroups": [
+                [
+                  "185",
+                  "cos 52",
+                  "cos52"
+                ]
+              ],
+              "markDescription": "Substitutes into Cosine Rule"
             },
             {
               "id": "mp2",
-              "markDescription": "States key mechanism/formula: Use the Cosine Rule when you do NOT have an opposite pair: either SAS (two sides and the INCLUDED angle between them) or SSS (all three sides known)."
+              "numericMatch": {
+                "value": 76.64,
+                "tolerance": 0.5
+              },
+              "markDescription": "BC² ≈ 76.6"
             },
             {
               "id": "mp3",
-              "markDescription": "Applies principle accurately: Finding a missing side (SAS): a² = b² + c² − 2bc cos A (remember to take the square root at the end!)."
+              "numericMatch": {
+                "value": 8.75,
+                "tolerance": 0.1
+              },
+              "markDescription": "BC = 8.8 cm"
             }
           ]
         }
       },
       {
-        "id": "igcse-maths-exam-12c",
-        "label": "c)",
-        "prompt": "Apply \"Area of Any Triangle & Solving Trig Equations (0° ≤ x ≤ 360°)\" to explain how examiners award full marks on Sine Rule, Cosine Rule & Area of Non-Right-Angled Triangles problems.",
+        "id": "p2",
+        "label": "(b)",
+        "prompt": "Calculate the area of triangle ABC to 1 decimal place.",
+        "marks": 2,
         "kind": "short-answer",
-        "marks": 3,
         "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Area of any triangle using two sides and their INCLUDED angle: Area = ½ × a × b × sin C. Trigonometric symmetry on 0° ≤ x ≤ 360° (Extended):",
+          "maxMarks": 2,
+          "modelAnswer": "Area = ½ × 8 × 11 × sin 52° = 44 × 0.7880 = 34.7 cm².",
           "markPoints": [
             {
               "id": "mp1",
-              "markDescription": "Area of any triangle using two sides and their INCLUDED angle: Area = ½ × a × b × sin C."
+              "requiredKeywordGroups": [
+                [
+                  "sin 52",
+                  "sin52",
+                  "44"
+                ]
+              ],
+              "markDescription": "Uses ½ab sin C"
             },
             {
               "id": "mp2",
-              "markDescription": "Trigonometric symmetry on 0° ≤ x ≤ 360° (Extended):"
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Choose correctly between SOHCAHTOA, Sine Rule, and Cosine Rule."
+              "numericMatch": {
+                "value": 34.7,
+                "tolerance": 0.2
+              },
+              "markDescription": "Area 34.7 cm²"
             }
           ]
         }
@@ -4445,71 +5834,77 @@ export const IGCSE_MATHS_EXAM_PRACTICE: ExamQuestionItem[] = [
     ]
   },
   {
-    "id": "igcse-maths-exam-13",
+    "id": "igcse-maths-ex-7-1",
     "subtopicId": "igcse-maths-7-1",
     "number": 13,
-    "stimulus": "Structured exam question on Topic 7.1 (Column Vectors, Vector Geometry & Transformations). Study the information and answer parts (a), (b), and (c).",
+    "stimulus": "[Cambridge IGCSE 0580 Paper 4 Style] In triangle OAB, OA = a, OB = b, M is the midpoint of OA, and N is the midpoint of OB.",
     "parts": [
       {
-        "id": "igcse-maths-exam-13a",
-        "label": "a)",
-        "prompt": "Which statement accurately describes a core principle of Column Vectors, Vector Geometry & Transformations?",
-        "kind": "mcq",
-        "marks": 1,
-        "options": [
-          "Calculate vector magnitudes and express geometric paths using ratio fractions.",
-          "It violates the core rule of Column Vectors, Vector Geometry & Transformations by reversing the relationship between variables.",
-          "It ignores the required standard units and boundary conditions for Position vector.",
-          "It assumes Collinear points remains zero under all operating conditions."
-        ],
-        "correctIndex": 0
-      },
-      {
-        "id": "igcse-maths-exam-13b",
-        "label": "b)",
-        "prompt": "Define \"Position vector\" and explain the key principles covered in \"Vector Geometry, Parallelism & Collinearity Proofs\".",
+        "id": "p1",
+        "label": "(a)",
+        "prompt": "Express AB and MN in terms of a and b.",
+        "marks": 2,
         "kind": "short-answer",
-        "marks": 3,
         "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Position vector: Vector OA starting at the origin O(0, 0) and ending at point A. Furthermore, Triangle rule for paths: To travel from A to C via O, write AC = AO + OC = −OA + OC = c − a (\"destination minus start\"). Dividing a line in ratio m : n: If point P divides AB in ratio 2 : 3, then AP = (2/5)AB and OP = OA + (2/5)AB.",
+          "maxMarks": 2,
+          "modelAnswer": "AB = b − a and MN = MO + ON = −½a + ½b = ½(b − a).",
           "markPoints": [
             {
               "id": "mp1",
-              "markDescription": "Defines Position vector: Vector OA starting at the origin O(0, 0) and ending at point A."
+              "requiredKeywordGroups": [
+                [
+                  "b - a",
+                  "b − a",
+                  "b-a",
+                  "-a + b"
+                ]
+              ],
+              "markDescription": "AB = b − a"
             },
             {
               "id": "mp2",
-              "markDescription": "States key mechanism/formula: Triangle rule for paths: To travel from A to C via O, write AC = AO + OC = −OA + OC = c − a (\"destination minus start\")."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Applies principle accurately: Dividing a line in ratio m : n: If point P divides AB in ratio 2 : 3, then AP = (2/5)AB and OP = OA + (2/5)AB."
+              "requiredKeywordGroups": [
+                [
+                  "0.5",
+                  "1/2",
+                  "½"
+                ]
+              ],
+              "markDescription": "MN = 1/2(b − a)"
             }
           ]
         }
       },
       {
-        "id": "igcse-maths-exam-13c",
-        "label": "c)",
-        "prompt": "Apply \"The Four Geometric Transformations\" to explain how examiners award full marks on Column Vectors, Vector Geometry & Transformations problems.",
+        "id": "p2",
+        "label": "(b)",
+        "prompt": "Deduce: State TWO geometric facts about MN and AB deduced from your answer.",
+        "marks": 2,
         "kind": "short-answer",
-        "marks": 3,
         "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "When describing a single transformation fully, always state the EXACT required details: Translation: state \"Translation\" + column vector (x / y).",
+          "maxMarks": 2,
+          "modelAnswer": "MN is parallel to AB, and the length of MN is half the length of AB.",
           "markPoints": [
             {
               "id": "mp1",
-              "markDescription": "When describing a single transformation fully, always state the EXACT required details:"
+              "requiredKeywordGroups": [
+                [
+                  "parallel"
+                ]
+              ],
+              "markDescription": "Parallel"
             },
             {
               "id": "mp2",
-              "markDescription": "Translation: state \"Translation\" + column vector (x / y)."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Calculate vector magnitudes and express geometric paths using ratio fractions."
+              "requiredKeywordGroups": [
+                [
+                  "half",
+                  "1/2",
+                  "0.5",
+                  "twice"
+                ]
+              ],
+              "markDescription": "Half the length"
             }
           ]
         }
@@ -4517,71 +5912,78 @@ export const IGCSE_MATHS_EXAM_PRACTICE: ExamQuestionItem[] = [
     ]
   },
   {
-    "id": "igcse-maths-exam-14",
+    "id": "igcse-maths-ex-8-1",
     "subtopicId": "igcse-maths-8-1",
     "number": 14,
-    "stimulus": "Structured exam question on Topic 8.1 (Probability Trees, Venn Diagrams & Conditional Probability). Study the information and answer parts (a), (b), and (c).",
+    "stimulus": "[Cambridge IGCSE 0580 Paper 4 Style] A box contains 5 green pens and 3 black pens. Two pens are chosen at random WITHOUT replacement.",
     "parts": [
       {
-        "id": "igcse-maths-exam-14a",
-        "label": "a)",
-        "prompt": "Which statement accurately describes a core principle of Probability Trees, Venn Diagrams & Conditional Probability?",
-        "kind": "mcq",
-        "marks": 1,
-        "options": [
-          "Construct and evaluate both independent and without-replacement probability trees.",
-          "It violates the core rule of Probability Trees, Venn Diagrams & Conditional Probability by reversing the relationship between variables.",
-          "It ignores the required standard units and boundary conditions for Mutually exclusive.",
-          "It assumes Independent events remains zero under all operating conditions."
-        ],
-        "correctIndex": 0
-      },
-      {
-        "id": "igcse-maths-exam-14b",
-        "label": "b)",
-        "prompt": "Define \"Mutually exclusive\" and explain the key principles covered in \"Conditional Probability (Without Replacement)\".",
+        "id": "p1",
+        "label": "(a)",
+        "prompt": "Calculate the probability that both pens are green.",
+        "marks": 2,
         "kind": "short-answer",
-        "marks": 3,
         "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Mutually exclusive: Events that cannot happen at the same time, so P(A ∩ B) = 0 and P(A or B) = P(A) + P(B). Furthermore, When items are drawn WITHOUT replacement, both the denominator and the chosen colour’s numerator decrease by 1 on the second branch. Worked example: A bag has 4 red and 6 blue counters (10 total). Two are picked without replacement. P(both red) = (4/10) × (3/9) = 12/90 = 2/15.",
+          "maxMarks": 2,
+          "modelAnswer": "P(G, G) = (5/8) × (4/7) = 20/56 = 5/14 (≈ 0.357).",
           "markPoints": [
             {
               "id": "mp1",
-              "markDescription": "Defines Mutually exclusive: Events that cannot happen at the same time, so P(A ∩ B) = 0 and P(A or B) = P(A) + P(B)."
+              "requiredKeywordGroups": [
+                [
+                  "5/8"
+                ],
+                [
+                  "4/7"
+                ]
+              ],
+              "markDescription": "Multiplies 5/8 × 4/7"
             },
             {
               "id": "mp2",
-              "markDescription": "States key mechanism/formula: When items are drawn WITHOUT replacement, both the denominator and the chosen colour’s numerator decrease by 1 on the second branch."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Applies principle accurately: Worked example: A bag has 4 red and 6 blue counters (10 total). Two are picked without replacement. P(both red) = (4/10) × (3/9) = 12/90 = 2/15."
+              "requiredKeywordGroups": [
+                [
+                  "5/14",
+                  "20/56",
+                  "0.357"
+                ]
+              ],
+              "markDescription": "Answer 5/14 or 20/56"
             }
           ]
         }
       },
       {
-        "id": "igcse-maths-exam-14c",
-        "label": "c)",
-        "prompt": "Apply \"Venn Diagrams & Set Notation\" to explain how examiners award full marks on Probability Trees, Venn Diagrams & Conditional Probability problems.",
+        "id": "p2",
+        "label": "(b)",
+        "prompt": "Calculate the probability that the two pens are DIFFERENT colours.",
+        "marks": 2,
         "kind": "short-answer",
-        "marks": 3,
         "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Key set notation: A ∩ B (intersection: in BOTH A and B); A ∪ B (union: in A, or B, or both); A′ (complement: NOT in A); n(A) = number of elements in A. Always fill the INTERSECTION (overlap) FIRST when populating a Venn diagram, then subtract the overlap from each individual circle’s total!",
+          "maxMarks": 2,
+          "modelAnswer": "P(G,B) + P(B,G) = (5/8 × 3/7) + (3/8 × 5/7) = 30/56 = 15/28 (≈ 0.536).",
           "markPoints": [
             {
               "id": "mp1",
-              "markDescription": "Key set notation: A ∩ B (intersection: in BOTH A and B); A ∪ B (union: in A, or B, or both); A′ (complement: NOT in A); n(A) = number of elements in A."
+              "requiredKeywordGroups": [
+                [
+                  "15/56",
+                  "30/56",
+                  "15/28"
+                ]
+              ],
+              "markDescription": "Includes both orders"
             },
             {
               "id": "mp2",
-              "markDescription": "Always fill the INTERSECTION (overlap) FIRST when populating a Venn diagram, then subtract the overlap from each individual circle’s total!"
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Multiply ACROSS (AND), Add DOWN (OR)!"
+              "requiredKeywordGroups": [
+                [
+                  "15/28",
+                  "30/56",
+                  "0.536"
+                ]
+              ],
+              "markDescription": "Final answer 15/28 or 0.536"
             }
           ]
         }
@@ -4589,71 +5991,67 @@ export const IGCSE_MATHS_EXAM_PRACTICE: ExamQuestionItem[] = [
     ]
   },
   {
-    "id": "igcse-maths-exam-15",
+    "id": "igcse-maths-ex-8-2",
     "subtopicId": "igcse-maths-8-2",
     "number": 15,
-    "stimulus": "Structured exam question on Topic 8.2 (Averages, Cumulative Frequency, Box Plots & Histograms). Study the information and answer parts (a), (b), and (c).",
+    "stimulus": "[Cambridge IGCSE 0580 Paper 4 Style] A histogram shows journey times. The bar for 10 ≤ t < 30 has frequency density 2.4, and the bar for 30 ≤ t < 40 has frequency 35.",
     "parts": [
       {
-        "id": "igcse-maths-exam-15a",
-        "label": "a)",
-        "prompt": "Which statement accurately describes a core principle of Averages, Cumulative Frequency, Box Plots & Histograms?",
-        "kind": "mcq",
-        "marks": 1,
-        "options": [
-          "Calculate estimated mean from grouped tables using midpoints and Σ(fx) ÷ Σf.",
-          "It violates the core rule of Averages, Cumulative Frequency, Box Plots & Histograms by reversing the relationship between variables.",
-          "It ignores the required standard units and boundary conditions for Interquartile range (IQR).",
-          "It assumes Frequency density remains zero under all operating conditions."
-        ],
-        "correctIndex": 0
-      },
-      {
-        "id": "igcse-maths-exam-15b",
-        "label": "b)",
-        "prompt": "Define \"Interquartile range (IQR)\" and explain the key principles covered in \"Cumulative Frequency Curves & Box Plots\".",
+        "id": "p1",
+        "label": "(a)",
+        "prompt": "Calculate the frequency of the 10 ≤ t < 30 interval.",
+        "marks": 2,
         "kind": "short-answer",
-        "marks": 3,
         "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Interquartile range (IQR): Q₃ − Q₁, a robust measure of spread covering the middle 50% of observations. Furthermore, Plot cumulative frequencies against the UPPER BOUNDARY of each class interval (never the midpoint!) and join with a smooth S-shaped curve starting from the lowest class boundary at y = 0. For total frequency N: Median (Q₂) is read across from 50% (0.5N); Lower Quartile (Q₁) from 25% (0.25N); Upper Quartile (Q₃) from 75% (0.75N).",
+          "maxMarks": 2,
+          "modelAnswer": "Class width = 20; Frequency = 2.4 × 20 = 48.",
           "markPoints": [
             {
               "id": "mp1",
-              "markDescription": "Defines Interquartile range (IQR): Q₃ − Q₁, a robust measure of spread covering the middle 50% of observations."
+              "numericMatch": {
+                "value": 20,
+                "tolerance": 0.01
+              },
+              "markDescription": "Class width 20"
             },
             {
               "id": "mp2",
-              "markDescription": "States key mechanism/formula: Plot cumulative frequencies against the UPPER BOUNDARY of each class interval (never the midpoint!) and join with a smooth S-shaped curve starting from the lowest class boundary at y = 0."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Applies principle accurately: For total frequency N: Median (Q₂) is read across from 50% (0.5N); Lower Quartile (Q₁) from 25% (0.25N); Upper Quartile (Q₃) from 75% (0.75N)."
+              "numericMatch": {
+                "value": 48,
+                "tolerance": 0.01
+              },
+              "markDescription": "Frequency 48"
             }
           ]
         }
       },
       {
-        "id": "igcse-maths-exam-15c",
-        "label": "c)",
-        "prompt": "Apply \"Histograms & Frequency Density\" to explain how examiners award full marks on Averages, Cumulative Frequency, Box Plots & Histograms problems.",
+        "id": "p2",
+        "label": "(b)",
+        "prompt": "Calculate the frequency density of the 30 ≤ t < 40 bar.",
+        "marks": 2,
         "kind": "short-answer",
-        "marks": 3,
         "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Histograms display continuous grouped data with UNEQUAL class widths. The vertical axis is FREQUENCY DENSITY (NOT frequency!). Key formula: Frequency Density = Frequency ÷ Class Width. Rearranged: Frequency = Frequency Density × Class Width = AREA of each bar!",
+          "maxMarks": 2,
+          "modelAnswer": "Class width = 10; Frequency density = 35 ÷ 10 = 3.5.",
           "markPoints": [
             {
               "id": "mp1",
-              "markDescription": "Histograms display continuous grouped data with UNEQUAL class widths. The vertical axis is FREQUENCY DENSITY (NOT frequency!)."
+              "requiredKeywordGroups": [
+                [
+                  "10",
+                  "35"
+                ]
+              ],
+              "markDescription": "Divides by width 10"
             },
             {
               "id": "mp2",
-              "markDescription": "Key formula: Frequency Density = Frequency ÷ Class Width. Rearranged: Frequency = Frequency Density × Class Width = AREA of each bar!"
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Calculate estimated mean from grouped tables using midpoints and Σ(fx) ÷ Σf."
+              "numericMatch": {
+                "value": 3.5,
+                "tolerance": 0.01
+              },
+              "markDescription": "FD = 3.5"
             }
           ]
         }
@@ -4667,52 +6065,38 @@ export const IGCSE_MATHS_PAST_PAPERS: PastPaperDoc[] = [
     "id": "igcse-maths-pp-2024-p2",
     "specEra": "new-9-1",
     "year": "2024",
-    "title": "CIE 0580 Paper 2 Extended Short-Answer (0580/22)",
+    "title": "Cambridge IGCSE Mathematics (0580) Paper 2 (Extended) — May/June 2024",
     "tier": "Extended",
-    "series": "May/June 2024",
+    "series": "May/June",
     "paperCode": "0580/22",
     "durationMinutes": 90,
     "totalMarks": 70,
-    "insertNote": "Includes CIE 0580 Extended Mathematical Formulae List.",
     "sampleQuestions": [
       {
-        "number": "01",
-        "question": "[Topic 1.1 — Fractions, Percentages, Compound Interest & Reverse Percentages] (a) Define Decimal multiplier. (b) Apply the principles of \"Fractions, Recurring Decimals & Percentage Change\" to solve and explain a standard exam scenario.",
-        "marks": 4,
+        "number": "Q1",
+        "question": "Evaluate 27^(-2/3) and rationalise 6/(√3 − 1).",
+        "marks": 3,
         "markScheme": [
-          "1 mark: Accurate definition of Decimal multiplier — Single factor used to compute percentage increases (e.g., 1.15) or decreases (e.g., 0.85).",
-          "2 marks: Always convert mixed numbers to improper fractions before multiplying or dividing: 2⅓ × 1¾ = (7/3) × (7/4) = 49/12 = 4 1/12. To divide, multiply by the reciprocal (Keep–Change–Flip).",
-          "1 mark: Converting a recurring decimal to an exact fraction (Extended): Let x = 0.363636..., then 100x = 36.363636... Subtracting gives 99x = 36, so x = 36/99 = 4/11."
+          "Apply the correct Cambridge IGCSE Mathematics (0580) method and show full working.",
+          "State final numerical value to appropriate significant figures with correct SI/metric units."
         ]
       },
       {
-        "number": "02",
-        "question": "[Topic 1.3 — Ratio, Direct Proportion & Inverse Proportion] (a) Define Direct proportion. (b) Apply the principles of \"Direct Proportion (Algebraic Form)\" to solve and explain a standard exam scenario.",
-        "marks": 4,
+        "number": "Q2",
+        "question": "Find the upper bound of speed given distance = 200 m (nearest 10 m) and time = 25 s (nearest s).",
+        "marks": 3,
         "markScheme": [
-          "1 mark: Accurate definition of Direct proportion — Relationship where y/x = k is constant (y = kx); graph is a straight line through (0, 0).",
-          "2 marks: If y is directly proportional to x (written y ∝ x), then y = kx where k is the constant of proportionality (graph is a straight line through the origin).",
-          "1 mark: Direct proportion also extends to powers and roots: y ∝ x² → y = kx²; y ∝ √x → y = k√x."
+          "Apply the correct Cambridge IGCSE Mathematics (0580) method and show full working.",
+          "State final numerical value to appropriate significant figures with correct SI/metric units."
         ]
       },
       {
-        "number": "03",
-        "question": "[Topic 2.2 — Simultaneous Equations (Linear & Quadratic) & Inequalities] (a) Define Elimination method. (b) Apply the principles of \"Linear, Quadratic & Graphical Inequalities\" to solve and explain a standard exam scenario.",
-        "marks": 4,
+        "number": "Q3",
+        "question": "Solve 2x² + 5x − 3 = 0 and find the turning point of y = x² − 8x + 19.",
+        "marks": 3,
         "markScheme": [
-          "1 mark: Accurate definition of Elimination method — Adding or subtracting multiples of linear simultaneous equations to cancel one unknown.",
-          "2 marks: Solve linear inequalities just like equations, EXCEPT multiplying or dividing both sides by a NEGATIVE number FLIPS the inequality sign (e.g., −2x < 10 → x > −5).",
-          "1 mark: Quadratic inequalities: Solve the equality first, then SKETCH the parabola! For x² − 5x + 6 < 0, roots are 2 and 3; the U-shaped parabola is below zero BETWEEN the roots → 2 < x < 3. For x² − 5x + 6 > 0, it is above zero OUTSIDE the roots → x < 2 or x > 3."
-        ]
-      },
-      {
-        "number": "04",
-        "question": "[Topic 3.1 — Straight Line Graphs (y = mx + c), Midpoint, Length & Perpendiculars] (a) Define Gradient. (b) Apply the principles of \"Gradient, Midpoint & Length of a Line Segment\" to solve and explain a standard exam scenario.",
-        "marks": 4,
-        "markScheme": [
-          "1 mark: Accurate definition of Gradient — Measure of steepness between two points: m = (y₂ − y₁) ÷ (x₂ − x₁).",
-          "2 marks: Given two points A(x₁, y₁) and B(x₂, y₂):",
-          "1 mark: Gradient: m = (y₂ − y₁) ÷ (x₂ − x₁). Positive m slopes uphill left-to-right; negative m slopes downhill."
+          "Apply the correct Cambridge IGCSE Mathematics (0580) method and show full working.",
+          "State final numerical value to appropriate significant figures with correct SI/metric units."
         ]
       }
     ]
@@ -4721,52 +6105,118 @@ export const IGCSE_MATHS_PAST_PAPERS: PastPaperDoc[] = [
     "id": "igcse-maths-pp-2024-p4",
     "specEra": "new-9-1",
     "year": "2024",
-    "title": "CIE 0580 Paper 4 Extended Structured (0580/42)",
+    "title": "Cambridge IGCSE Mathematics (0580) Paper 4 (Extended) — May/June 2024",
     "tier": "Extended",
-    "series": "May/June 2024",
+    "series": "May/June",
     "paperCode": "0580/42",
     "durationMinutes": 150,
     "totalMarks": 130,
-    "insertNote": "Includes CIE 0580 Extended Mathematical Formulae List.",
     "sampleQuestions": [
       {
-        "number": "01",
-        "question": "[Topic 2.1 — Expanding, Factorising & Solving Quadratic Equations] (a) Define Quadratic equation. (b) Apply the principles of \"Expanding Brackets & Factorising Quadratics\" to solve and explain a standard exam scenario.",
-        "marks": 4,
+        "number": "Q1",
+        "question": "Calculate compound depreciation over 3 years and solve a reverse percentage sale problem.",
+        "marks": 6,
         "markScheme": [
-          "1 mark: Accurate definition of Quadratic equation — Equation of degree 2 written in standard form ax² + bx + c = 0 (a ≠ 0).",
-          "2 marks: Always rearrange a quadratic equation into standard form ax² + bx + c = 0 before solving.",
-          "1 mark: Difference of two squares: a² − b² = (a + b)(a − b). Example: 9x² − 16 = (3x + 4)(3x − 4)."
+          "Apply the correct Cambridge IGCSE Mathematics (0580) method and show full working.",
+          "State final numerical value to appropriate significant figures with correct SI/metric units."
         ]
       },
       {
-        "number": "02",
-        "question": "[Topic 2.3 — Sequences, Functions (Composite/Inverse) & Differentiation] (a) Define Quadratic sequence. (b) Apply the principles of \"Composite & Inverse Functions (Extended)\" to solve and explain a standard exam scenario.",
-        "marks": 4,
+        "number": "Q2",
+        "question": "Find the space diagonal and line-to-plane angle of a cuboid.",
+        "marks": 6,
         "markScheme": [
-          "1 mark: Accurate definition of Quadratic sequence — Sequence with a constant second difference 2a and nth term an² + bn + c.",
-          "2 marks: Composite function fg(x) means apply g FIRST, then substitute the result into f: fg(x) = f(g(x)). Order matters — usually fg(x) ≠ gf(x)!",
-          "1 mark: Worked example: If f(x) = 2x + 3 and g(x) = x², then fg(x) = f(x²) = 2x² + 3, whereas gf(x) = g(2x + 3) = (2x + 3)²."
+          "Apply the correct Cambridge IGCSE Mathematics (0580) method and show full working.",
+          "State final numerical value to appropriate significant figures with correct SI/metric units."
         ]
       },
       {
-        "number": "03",
-        "question": "[Topic 4.1 — Angles, Polygons, Bearings, Similarity & Congruence] (a) Define Bearing. (b) Apply the principles of \"Congruence & Similar Shapes (Length, Area & Volume Scale Factors)\" to solve and explain a standard exam scenario.",
-        "marks": 4,
+        "number": "Q3",
+        "question": "Complete a histogram table using Frequency Density = Frequency ÷ Class Width.",
+        "marks": 6,
         "markScheme": [
-          "1 mark: Accurate definition of Bearing — Direction measured clockwise from North and expressed as a three-figure angle (000°–359°).",
-          "2 marks: Two triangles are CONGRUENT (identical size & shape) if they satisfy SSS, SAS, ASA/AAS, or RHS (Right angle, Hypotenuse, Side). Note: AAA proves similarity, NOT congruence!",
-          "1 mark: Similar shapes have identical angles and proportional sides with linear scale factor k = L₂ ÷ L₁."
+          "Apply the correct Cambridge IGCSE Mathematics (0580) method and show full working.",
+          "State final numerical value to appropriate significant figures with correct SI/metric units."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "igcse-maths-pp-2023n-p2",
+    "specEra": "new-9-1",
+    "year": "2023",
+    "title": "Cambridge IGCSE Mathematics (0580) Paper 2 (Extended) — Oct/Nov 2023",
+    "tier": "Extended",
+    "series": "Oct/Nov",
+    "paperCode": "0580/22",
+    "durationMinutes": 90,
+    "totalMarks": 70,
+    "sampleQuestions": [
+      {
+        "number": "Q1",
+        "question": "Prove algebraically that 0.3636... = 4/11.",
+        "marks": 3,
+        "markScheme": [
+          "Apply the correct Cambridge IGCSE Mathematics (0580) method and show full working.",
+          "State final numerical value to appropriate significant figures with correct SI/metric units."
         ]
       },
       {
-        "number": "04",
-        "question": "[Topic 5.1 — Area, Arc Length, Sector Area, Surface Area & Volume] (a) Define Sector. (b) Apply the principles of \"2D Areas, Arc Length & Sector Area\" to solve and explain a standard exam scenario.",
-        "marks": 4,
+        "number": "Q2",
+        "question": "Find the perpendicular bisector of A(1, 3) and B(5, 11).",
+        "marks": 3,
         "markScheme": [
-          "1 mark: Accurate definition of Sector — Pie-slice region of a circle bounded by two radii and an arc, with area (θ/360)πr².",
-          "2 marks: Trapezium area = ½(a + b) × h (average of parallel sides × perpendicular height). Circle circumference = 2πr = πd; Circle area = πr².",
-          "1 mark: Sector of angle θ° and radius r: Arc length = (θ ÷ 360) × 2πr; Sector area = (θ ÷ 360) × πr²."
+          "Apply the correct Cambridge IGCSE Mathematics (0580) method and show full working.",
+          "State final numerical value to appropriate significant figures with correct SI/metric units."
+        ]
+      },
+      {
+        "number": "Q3",
+        "question": "Shade A′ ∩ B on a Venn diagram and calculate P(A | B).",
+        "marks": 3,
+        "markScheme": [
+          "Apply the correct Cambridge IGCSE Mathematics (0580) method and show full working.",
+          "State final numerical value to appropriate significant figures with correct SI/metric units."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "igcse-maths-pp-2023n-p4",
+    "specEra": "new-9-1",
+    "year": "2023",
+    "title": "Cambridge IGCSE Mathematics (0580) Paper 4 (Extended) — Oct/Nov 2023",
+    "tier": "Extended",
+    "series": "Oct/Nov",
+    "paperCode": "0580/42",
+    "durationMinutes": 150,
+    "totalMarks": 130,
+    "sampleQuestions": [
+      {
+        "number": "Q1",
+        "question": "Solve y = x + 1 and x² + y² = 13 simultaneously.",
+        "marks": 6,
+        "markScheme": [
+          "Apply the correct Cambridge IGCSE Mathematics (0580) method and show full working.",
+          "State final numerical value to appropriate significant figures with correct SI/metric units."
+        ]
+      },
+      {
+        "number": "Q2",
+        "question": "Use the Sine Rule to find the obtuse angle in triangle PQR.",
+        "marks": 6,
+        "markScheme": [
+          "Apply the correct Cambridge IGCSE Mathematics (0580) method and show full working.",
+          "State final numerical value to appropriate significant figures with correct SI/metric units."
+        ]
+      },
+      {
+        "number": "Q3",
+        "question": "Prove that three points M, N, and P are collinear using vectors.",
+        "marks": 6,
+        "markScheme": [
+          "Apply the correct Cambridge IGCSE Mathematics (0580) method and show full working.",
+          "State final numerical value to appropriate significant figures with correct SI/metric units."
         ]
       }
     ]
@@ -4775,52 +6225,38 @@ export const IGCSE_MATHS_PAST_PAPERS: PastPaperDoc[] = [
     "id": "igcse-maths-pp-2023-p2",
     "specEra": "new-9-1",
     "year": "2023",
-    "title": "CIE 0580 Paper 2 Extended Short-Answer (0580/22)",
+    "title": "Cambridge IGCSE Mathematics (0580) Paper 2 (Extended) — May/June 2023",
     "tier": "Extended",
-    "series": "Oct/Nov 2023",
+    "series": "May/June",
     "paperCode": "0580/22",
     "durationMinutes": 90,
     "totalMarks": 70,
-    "insertNote": "Includes CIE 0580 Extended Mathematical Formulae List.",
     "sampleQuestions": [
       {
-        "number": "01",
-        "question": "[Topic 3.1 — Straight Line Graphs (y = mx + c), Midpoint, Length & Perpendiculars] (a) Define Gradient. (b) Apply the principles of \"Gradient, Midpoint & Length of a Line Segment\" to solve and explain a standard exam scenario.",
-        "marks": 4,
+        "number": "Q1",
+        "question": "Find the nth term of the quadratic sequence 5, 11, 21, 35, ...",
+        "marks": 3,
         "markScheme": [
-          "1 mark: Accurate definition of Gradient — Measure of steepness between two points: m = (y₂ − y₁) ÷ (x₂ − x₁).",
-          "2 marks: Given two points A(x₁, y₁) and B(x₂, y₂):",
-          "1 mark: Gradient: m = (y₂ − y₁) ÷ (x₂ − x₁). Positive m slopes uphill left-to-right; negative m slopes downhill."
+          "Apply the correct Cambridge IGCSE Mathematics (0580) method and show full working.",
+          "State final numerical value to appropriate significant figures with correct SI/metric units."
         ]
       },
       {
-        "number": "02",
-        "question": "[Topic 4.2 — Circle Theorems & Alternate Segment Theorem] (a) Define Cyclic quadrilateral. (b) Apply the principles of \"Cyclic Quadrilaterals & Tangent Rules\" to solve and explain a standard exam scenario.",
-        "marks": 4,
+        "number": "Q2",
+        "question": "Given f(x) = 3x − 2 and g(x) = x², evaluate fg(4) and find f⁻¹(x).",
+        "marks": 3,
         "markScheme": [
-          "1 mark: Accurate definition of Cyclic quadrilateral — Four-sided shape inscribed in a circle whose opposite angles add to 180°.",
-          "2 marks: Theorem 5 (Cyclic quadrilateral): All 4 vertices MUST lie on the circumference. Opposite angles of a cyclic quadrilateral sum to 180°.",
-          "1 mark: Theorem 6 (Tangent meets radius): A tangent to a circle always meets the radius at the point of contact at 90°."
+          "Apply the correct Cambridge IGCSE Mathematics (0580) method and show full working.",
+          "State final numerical value to appropriate significant figures with correct SI/metric units."
         ]
       },
       {
-        "number": "03",
-        "question": "[Topic 6.1 — Pythagoras’ Theorem & Right-Angled Trigonometry (SOHCAHTOA)] (a) Define Hypotenuse. (b) Apply the principles of \"Angles of Elevation, Depression & 3D Trigonometry\" to solve and explain a standard exam scenario.",
-        "marks": 4,
+        "number": "Q3",
+        "question": "Calculate the total surface area of a solid hemisphere of radius 5 cm in terms of π.",
+        "marks": 3,
         "markScheme": [
-          "1 mark: Accurate definition of Hypotenuse — Longest side of a right-angled triangle, opposite the right angle.",
-          "2 marks: Angle of elevation is measured UPWARD from the horizontal; angle of depression is measured DOWNWARD from the horizontal (they are equal alternate Z-angles!).",
-          "1 mark: For 3D trigonometry (angle between a line and a plane): drop a perpendicular from the top endpoint straight down onto the plane, draw the right-angled triangle on the base, find the base diagonal with Pythagoras, then use tan θ = vertical height ÷ base diagonal."
-        ]
-      },
-      {
-        "number": "04",
-        "question": "[Topic 7.1 — Column Vectors, Vector Geometry & Transformations] (a) Define Position vector. (b) Apply the principles of \"Column Vectors & Magnitude\" to solve and explain a standard exam scenario.",
-        "marks": 4,
-        "markScheme": [
-          "1 mark: Accurate definition of Position vector — Vector OA starting at the origin O(0, 0) and ending at point A.",
-          "2 marks: A column vector (x / y) represents horizontal shift x (right +, left −) and vertical shift y (up +, down −).",
-          "1 mark: Magnitude (length) of vector v = (x / y) is |v| = √(x² + y²). Example: |(3 / −4)| = √(3² + (−4)²) = √25 = 5."
+          "Apply the correct Cambridge IGCSE Mathematics (0580) method and show full working.",
+          "State final numerical value to appropriate significant figures with correct SI/metric units."
         ]
       }
     ]
@@ -4829,268 +6265,38 @@ export const IGCSE_MATHS_PAST_PAPERS: PastPaperDoc[] = [
     "id": "igcse-maths-pp-2023-p4",
     "specEra": "new-9-1",
     "year": "2023",
-    "title": "CIE 0580 Paper 4 Extended Structured (0580/42)",
+    "title": "Cambridge IGCSE Mathematics (0580) Paper 4 (Extended) — May/June 2023",
     "tier": "Extended",
-    "series": "Oct/Nov 2023",
+    "series": "May/June",
     "paperCode": "0580/42",
     "durationMinutes": 150,
     "totalMarks": 130,
-    "insertNote": "Includes CIE 0580 Extended Mathematical Formulae List.",
     "sampleQuestions": [
       {
-        "number": "01",
-        "question": "[Topic 5.1 — Area, Arc Length, Sector Area, Surface Area & Volume] (a) Define Sector. (b) Apply the principles of \"2D Areas, Arc Length & Sector Area\" to solve and explain a standard exam scenario.",
-        "marks": 4,
+        "number": "Q1",
+        "question": "Use surface area ratio 36:100 to calculate the volume of a larger similar solid.",
+        "marks": 6,
         "markScheme": [
-          "1 mark: Accurate definition of Sector — Pie-slice region of a circle bounded by two radii and an arc, with area (θ/360)πr².",
-          "2 marks: Trapezium area = ½(a + b) × h (average of parallel sides × perpendicular height). Circle circumference = 2πr = πd; Circle area = πr².",
-          "1 mark: Sector of angle θ° and radius r: Arc length = (θ ÷ 360) × 2πr; Sector area = (θ ÷ 360) × πr²."
+          "Apply the correct Cambridge IGCSE Mathematics (0580) method and show full working.",
+          "State final numerical value to appropriate significant figures with correct SI/metric units."
         ]
       },
       {
-        "number": "02",
-        "question": "[Topic 6.2 — Sine Rule, Cosine Rule & Area of Non-Right-Angled Triangles] (a) Define Sine Rule. (b) Apply the principles of \"The Cosine Rule\" to solve and explain a standard exam scenario.",
-        "marks": 4,
+        "number": "Q2",
+        "question": "Differentiate y = x³ − 12x + 4 and classify its stationary points.",
+        "marks": 6,
         "markScheme": [
-          "1 mark: Accurate definition of Sine Rule — a / sin A = b / sin B = c / sin C for any triangle.",
-          "2 marks: Use the Cosine Rule when you do NOT have an opposite pair: either SAS (two sides and the INCLUDED angle between them) or SSS (all three sides known).",
-          "1 mark: Finding a missing side (SAS): a² = b² + c² − 2bc cos A (remember to take the square root at the end!)."
+          "Apply the correct Cambridge IGCSE Mathematics (0580) method and show full working.",
+          "State final numerical value to appropriate significant figures with correct SI/metric units."
         ]
       },
       {
-        "number": "03",
-        "question": "[Topic 8.1 — Probability Trees, Venn Diagrams & Conditional Probability] (a) Define Mutually exclusive. (b) Apply the principles of \"Venn Diagrams & Set Notation\" to solve and explain a standard exam scenario.",
-        "marks": 4,
+        "number": "Q3",
+        "question": "Draw a without-replacement probability tree and find P(different colours).",
+        "marks": 6,
         "markScheme": [
-          "1 mark: Accurate definition of Mutually exclusive — Events that cannot happen at the same time, so P(A ∩ B) = 0 and P(A or B) = P(A) + P(B).",
-          "2 marks: Key set notation: A ∩ B (intersection: in BOTH A and B); A ∪ B (union: in A, or B, or both); A′ (complement: NOT in A); n(A) = number of elements in A.",
-          "1 mark: Always fill the INTERSECTION (overlap) FIRST when populating a Venn diagram, then subtract the overlap from each individual circle’s total!"
-        ]
-      },
-      {
-        "number": "04",
-        "question": "[Topic 1.1 — Fractions, Percentages, Compound Interest & Reverse Percentages] (a) Define Decimal multiplier. (b) Apply the principles of \"Fractions, Recurring Decimals & Percentage Change\" to solve and explain a standard exam scenario.",
-        "marks": 4,
-        "markScheme": [
-          "1 mark: Accurate definition of Decimal multiplier — Single factor used to compute percentage increases (e.g., 1.15) or decreases (e.g., 0.85).",
-          "2 marks: Always convert mixed numbers to improper fractions before multiplying or dividing: 2⅓ × 1¾ = (7/3) × (7/4) = 49/12 = 4 1/12. To divide, multiply by the reciprocal (Keep–Change–Flip).",
-          "1 mark: Converting a recurring decimal to an exact fraction (Extended): Let x = 0.363636..., then 100x = 36.363636... Subtracting gives 99x = 36, so x = 36/99 = 4/11."
-        ]
-      }
-    ]
-  },
-  {
-    "id": "igcse-maths-pp-2022-p2",
-    "specEra": "new-9-1",
-    "year": "2022",
-    "title": "Edexcel Intl 4MA1 Paper 1H Higher (4MA1/1H)",
-    "tier": "Higher",
-    "series": "June 2022",
-    "paperCode": "4MA1/1H",
-    "durationMinutes": 120,
-    "totalMarks": 100,
-    "insertNote": "Includes Edexcel International GCSE Higher Tier Formulae Sheet.",
-    "sampleQuestions": [
-      {
-        "number": "01",
-        "question": "[Topic 1.3 — Ratio, Direct Proportion & Inverse Proportion] (a) Define Direct proportion. (b) Apply the principles of \"Ratio Sharing & Combining Ratios\" to solve and explain a standard exam scenario.",
-        "marks": 4,
-        "markScheme": [
-          "1 mark: Accurate definition of Direct proportion — Relationship where y/x = k is constant (y = kx); graph is a straight line through (0, 0).",
-          "2 marks: Sharing in a ratio: Sum the ratio parts, find the value of 1 part, then multiply. Example: Share $450 in ratio 2 : 3 : 4 → 9 parts = $450 → 1 part = $50 → $100, $150, $200.",
-          "1 mark: Difference ratio problems: If Mia and Leo share money in ratio 3 : 7 and Leo gets $60 more than Mia, the difference of 4 parts = $60 → 1 part = $15 → total 10 parts = $150."
-        ]
-      },
-      {
-        "number": "02",
-        "question": "[Topic 2.2 — Simultaneous Equations (Linear & Quadratic) & Inequalities] (a) Define Elimination method. (b) Apply the principles of \"Non-Linear Simultaneous Equations (Substitution)\" to solve and explain a standard exam scenario.",
-        "marks": 4,
-        "markScheme": [
-          "1 mark: Accurate definition of Elimination method — Adding or subtracting multiples of linear simultaneous equations to cancel one unknown.",
-          "2 marks: When one equation is linear and the other is quadratic (e.g., y = x + 1 and x² + y² = 25), ALWAYS use SUBSTITUTION.",
-          "1 mark: Step 1: Isolate one variable in the linear equation (y = x + 1). Step 2: Substitute into the quadratic: x² + (x + 1)² = 25 → 2x² + 2x − 24 = 0 → x² + x − 12 = 0."
-        ]
-      },
-      {
-        "number": "03",
-        "question": "[Topic 3.1 — Straight Line Graphs (y = mx + c), Midpoint, Length & Perpendiculars] (a) Define Gradient. (b) Apply the principles of \"Parallel Lines, Perpendicular Lines & Perpendicular Bisectors\" to solve and explain a standard exam scenario.",
-        "marks": 4,
-        "markScheme": [
-          "1 mark: Accurate definition of Gradient — Measure of steepness between two points: m = (y₂ − y₁) ÷ (x₂ − x₁).",
-          "2 marks: Parallel lines have EQUAL gradients: m₁ = m₂.",
-          "1 mark: Perpendicular lines satisfy m₁ × m₂ = −1, so m₂ = −1 ÷ m₁ (the negative reciprocal: flip the fraction and flip the sign! E.g., 2/3 → −3/2; −4 → +1/4)."
-        ]
-      },
-      {
-        "number": "04",
-        "question": "[Topic 4.2 — Circle Theorems & Alternate Segment Theorem] (a) Define Cyclic quadrilateral. (b) Apply the principles of \"Centre, Semicircle & Same-Segment Theorems\" to solve and explain a standard exam scenario.",
-        "marks": 4,
-        "markScheme": [
-          "1 mark: Accurate definition of Cyclic quadrilateral — Four-sided shape inscribed in a circle whose opposite angles add to 180°.",
-          "2 marks: Theorem 1 (Angle at the centre): The angle subtended by an arc at the centre is TWICE the angle subtended at the circumference.",
-          "1 mark: Theorem 2 (Angle in a semicircle): The angle subtended by a diameter at the circumference is ALWAYS 90°."
-        ]
-      }
-    ]
-  },
-  {
-    "id": "igcse-maths-pp-2022-p4",
-    "specEra": "new-9-1",
-    "year": "2022",
-    "title": "Edexcel Intl 4MA1 Paper 2H Higher (4MA1/2H)",
-    "tier": "Higher",
-    "series": "June 2022",
-    "paperCode": "4MA1/2H",
-    "durationMinutes": 120,
-    "totalMarks": 100,
-    "insertNote": "Includes Edexcel International GCSE Higher Tier Formulae Sheet.",
-    "sampleQuestions": [
-      {
-        "number": "01",
-        "question": "[Topic 2.3 — Sequences, Functions (Composite/Inverse) & Differentiation] (a) Define Quadratic sequence. (b) Apply the principles of \"Arithmetic, Geometric & Quadratic Sequences\" to solve and explain a standard exam scenario.",
-        "marks": 4,
-        "markScheme": [
-          "1 mark: Accurate definition of Quadratic sequence — Sequence with a constant second difference 2a and nth term an² + bn + c.",
-          "2 marks: Linear (arithmetic) sequence with common difference d: nth term = dn + (first term − d). Example: 5, 9, 13, 17... has d = 4 → uₙ = 4n + 1.",
-          "1 mark: Quadratic sequence (constant SECOND difference 2a): Halve the second difference to get a (coefficient of n²), subtract an² from each term, then find the linear rule for the remainder!"
-        ]
-      },
-      {
-        "number": "02",
-        "question": "[Topic 4.1 — Angles, Polygons, Bearings, Similarity & Congruence] (a) Define Bearing. (b) Apply the principles of \"Three-Figure Bearings\" to solve and explain a standard exam scenario.",
-        "marks": 4,
-        "markScheme": [
-          "1 mark: Accurate definition of Bearing — Direction measured clockwise from North and expressed as a three-figure angle (000°–359°).",
-          "2 marks: Bearings obey 3 strict rules: (1) Measured from NORTH (000°), (2) Measured CLOCKWISE, (3) Written as 3 digits (e.g., 045°, NOT 45°).",
-          "1 mark: The wording \"bearing of B FROM A\" means stand at A, draw a North line at A, and turn clockwise until pointing to B."
-        ]
-      },
-      {
-        "number": "03",
-        "question": "[Topic 5.1 — Area, Arc Length, Sector Area, Surface Area & Volume] (a) Define Sector. (b) Apply the principles of \"Unit Conversions & Frustums\" to solve and explain a standard exam scenario.",
-        "marks": 4,
-        "markScheme": [
-          "1 mark: Accurate definition of Sector — Pie-slice region of a circle bounded by two radii and an arc, with area (θ/360)πr².",
-          "2 marks: Area & volume unit conversions: 1 m² = 100² = 10,000 cm²; 1 m³ = 100³ = 1,000,000 cm³; 1 litre = 1,000 cm³.",
-          "1 mark: A frustum is a cone with a smaller similar cone sliced off its top: Volume of frustum = Volume(large cone) − Volume(removed small cone)."
-        ]
-      },
-      {
-        "number": "04",
-        "question": "[Topic 6.2 — Sine Rule, Cosine Rule & Area of Non-Right-Angled Triangles] (a) Define Sine Rule. (b) Apply the principles of \"The Sine Rule (and Ambiguous Case)\" to solve and explain a standard exam scenario.",
-        "marks": 4,
-        "markScheme": [
-          "1 mark: Accurate definition of Sine Rule — a / sin A = b / sin B = c / sin C for any triangle.",
-          "2 marks: Use the Sine Rule whenever you have a MATCHING OPPOSITE PAIR (one side and its opposite angle):",
-          "1 mark: For a missing side: a / sin A = b / sin B = c / sin C. For a missing angle: sin A / a = sin B / b (put the unknown on TOP!)."
-        ]
-      }
-    ]
-  },
-  {
-    "id": "igcse-maths-pp-2019-p2",
-    "specEra": "old",
-    "year": "2019",
-    "title": "CIE 0580 Paper 2 Extended (Legacy Series — 0580/22)",
-    "tier": "Extended",
-    "series": "May/June 2019",
-    "paperCode": "0580/22",
-    "durationMinutes": 90,
-    "totalMarks": 70,
-    "insertNote": "Pre-2020 Legacy Specification Paper 2.",
-    "sampleQuestions": [
-      {
-        "number": "01",
-        "question": "[Topic 4.2 — Circle Theorems & Alternate Segment Theorem] (a) Define Cyclic quadrilateral. (b) Apply the principles of \"Centre, Semicircle & Same-Segment Theorems\" to solve and explain a standard exam scenario.",
-        "marks": 4,
-        "markScheme": [
-          "1 mark: Accurate definition of Cyclic quadrilateral — Four-sided shape inscribed in a circle whose opposite angles add to 180°.",
-          "2 marks: Theorem 1 (Angle at the centre): The angle subtended by an arc at the centre is TWICE the angle subtended at the circumference.",
-          "1 mark: Theorem 2 (Angle in a semicircle): The angle subtended by a diameter at the circumference is ALWAYS 90°."
-        ]
-      },
-      {
-        "number": "02",
-        "question": "[Topic 6.1 — Pythagoras’ Theorem & Right-Angled Trigonometry (SOHCAHTOA)] (a) Define Hypotenuse. (b) Apply the principles of \"Right-Angled Trigonometry (SOHCAHTOA)\" to solve and explain a standard exam scenario.",
-        "marks": 4,
-        "markScheme": [
-          "1 mark: Accurate definition of Hypotenuse — Longest side of a right-angled triangle, opposite the right angle.",
-          "2 marks: Label the 3 sides relative to the target angle θ: Hypotenuse (H, opposite 90°), Opposite (O, across from θ), Adjacent (A, next to θ).",
-          "1 mark: SOH: sin θ = O ÷ H | CAH: cos θ = A ÷ H | TOA: tan θ = O ÷ A."
-        ]
-      },
-      {
-        "number": "03",
-        "question": "[Topic 7.1 — Column Vectors, Vector Geometry & Transformations] (a) Define Position vector. (b) Apply the principles of \"The Four Geometric Transformations\" to solve and explain a standard exam scenario.",
-        "marks": 4,
-        "markScheme": [
-          "1 mark: Accurate definition of Position vector — Vector OA starting at the origin O(0, 0) and ending at point A.",
-          "2 marks: When describing a single transformation fully, always state the EXACT required details:",
-          "1 mark: Translation: state \"Translation\" + column vector (x / y)."
-        ]
-      },
-      {
-        "number": "04",
-        "question": "[Topic 8.2 — Averages, Cumulative Frequency, Box Plots & Histograms] (a) Define Interquartile range (IQR). (b) Apply the principles of \"Estimated Mean & Grouped Frequency Tables\" to solve and explain a standard exam scenario.",
-        "marks": 4,
-        "markScheme": [
-          "1 mark: Accurate definition of Interquartile range (IQR) — Q₃ − Q₁, a robust measure of spread covering the middle 50% of observations.",
-          "2 marks: For grouped continuous data, calculate the MIDPOINT (x) of each class interval, multiply by frequency (f × x), then compute: Estimated Mean = Σ(fx) ÷ Σf.",
-          "1 mark: It is an \"estimate\" because we do not know the exact individual values inside each interval and assume they are evenly distributed around each midpoint."
-        ]
-      }
-    ]
-  },
-  {
-    "id": "igcse-maths-pp-2019-p4",
-    "specEra": "old",
-    "year": "2019",
-    "title": "CIE 0580 Paper 4 Extended (Legacy Series — 0580/42)",
-    "tier": "Extended",
-    "series": "May/June 2019",
-    "paperCode": "0580/42",
-    "durationMinutes": 150,
-    "totalMarks": 130,
-    "insertNote": "Pre-2020 Legacy Specification Paper 4.",
-    "sampleQuestions": [
-      {
-        "number": "01",
-        "question": "[Topic 6.2 — Sine Rule, Cosine Rule & Area of Non-Right-Angled Triangles] (a) Define Sine Rule. (b) Apply the principles of \"The Sine Rule (and Ambiguous Case)\" to solve and explain a standard exam scenario.",
-        "marks": 4,
-        "markScheme": [
-          "1 mark: Accurate definition of Sine Rule — a / sin A = b / sin B = c / sin C for any triangle.",
-          "2 marks: Use the Sine Rule whenever you have a MATCHING OPPOSITE PAIR (one side and its opposite angle):",
-          "1 mark: For a missing side: a / sin A = b / sin B = c / sin C. For a missing angle: sin A / a = sin B / b (put the unknown on TOP!)."
-        ]
-      },
-      {
-        "number": "02",
-        "question": "[Topic 8.1 — Probability Trees, Venn Diagrams & Conditional Probability] (a) Define Mutually exclusive. (b) Apply the principles of \"Conditional Probability (Without Replacement)\" to solve and explain a standard exam scenario.",
-        "marks": 4,
-        "markScheme": [
-          "1 mark: Accurate definition of Mutually exclusive — Events that cannot happen at the same time, so P(A ∩ B) = 0 and P(A or B) = P(A) + P(B).",
-          "2 marks: When items are drawn WITHOUT replacement, both the denominator and the chosen colour’s numerator decrease by 1 on the second branch.",
-          "1 mark: Worked example: A bag has 4 red and 6 blue counters (10 total). Two are picked without replacement. P(both red) = (4/10) × (3/9) = 12/90 = 2/15."
-        ]
-      },
-      {
-        "number": "03",
-        "question": "[Topic 1.1 — Fractions, Percentages, Compound Interest & Reverse Percentages] (a) Define Decimal multiplier. (b) Apply the principles of \"Reverse Percentages\" to solve and explain a standard exam scenario.",
-        "marks": 4,
-        "markScheme": [
-          "1 mark: Accurate definition of Decimal multiplier — Single factor used to compute percentage increases (e.g., 1.15) or decreases (e.g., 0.85).",
-          "2 marks: Use reverse percentages when you are given the FINAL amount AFTER a percentage increase or decrease and must recover the ORIGINAL 100% value.",
-          "1 mark: Method: Original = Final amount ÷ Decimal Multiplier."
-        ]
-      },
-      {
-        "number": "04",
-        "question": "[Topic 1.3 — Ratio, Direct Proportion & Inverse Proportion] (a) Define Direct proportion. (b) Apply the principles of \"Ratio Sharing & Combining Ratios\" to solve and explain a standard exam scenario.",
-        "marks": 4,
-        "markScheme": [
-          "1 mark: Accurate definition of Direct proportion — Relationship where y/x = k is constant (y = kx); graph is a straight line through (0, 0).",
-          "2 marks: Sharing in a ratio: Sum the ratio parts, find the value of 1 part, then multiply. Example: Share $450 in ratio 2 : 3 : 4 → 9 parts = $450 → 1 part = $50 → $100, $150, $200.",
-          "1 mark: Difference ratio problems: If Mia and Leo share money in ratio 3 : 7 and Leo gets $60 more than Mia, the difference of 4 parts = $60 → 1 part = $15 → total 10 parts = $150."
+          "Apply the correct Cambridge IGCSE Mathematics (0580) method and show full working.",
+          "State final numerical value to appropriate significant figures with correct SI/metric units."
         ]
       }
     ]
@@ -5099,425 +6305,161 @@ export const IGCSE_MATHS_PAST_PAPERS: PastPaperDoc[] = [
 
 export const IGCSE_MATHS_KEY_TERMS: KeyTermEntry[] = [
   {
-    "id": "imkt-1",
-    "term": "Decimal multiplier",
-    "definition": "Factor (1 ± r/100) used for percentage change and compound interest.",
+    "id": "igcse-maths-kt-1",
+    "term": "Compound Interest",
+    "definition": "Interest calculated on both the initial principal and accumulated prior interest: A = P(1 + r/100)ⁿ.",
     "topicNumber": 1,
     "subtopicId": "igcse-maths-1-1",
     "subtopicCode": "1.1"
   },
   {
-    "id": "imkt-2",
+    "id": "igcse-maths-kt-2",
+    "term": "Reverse Percentage",
+    "definition": "Finding an original 100% value by dividing the post-change value by its decimal multiplier.",
+    "topicNumber": 1,
+    "subtopicId": "igcse-maths-1-1",
+    "subtopicCode": "1.1"
+  },
+  {
+    "id": "igcse-maths-kt-3",
     "term": "Surd",
-    "definition": "Irrational root expressed in exact square-root form.",
+    "definition": "An irrational root (e.g. √2, √5) kept in root form to preserve exactness.",
     "topicNumber": 1,
     "subtopicId": "igcse-maths-1-2",
     "subtopicCode": "1.2"
   },
   {
-    "id": "imkt-3",
+    "id": "igcse-maths-kt-4",
+    "term": "Upper & Lower Bounds",
+    "definition": "The maximum and minimum values a rounded measurement could take (± half the rounding unit).",
+    "topicNumber": 1,
+    "subtopicId": "igcse-maths-1-2",
+    "subtopicCode": "1.2"
+  },
+  {
+    "id": "igcse-maths-kt-5",
+    "term": "Inverse Proportion",
+    "definition": "A relationship y = k/xⁿ where increasing one quantity decreases the other so their product stays constant.",
+    "topicNumber": 1,
+    "subtopicId": "igcse-maths-1-3",
+    "subtopicCode": "1.3"
+  },
+  {
+    "id": "igcse-maths-kt-6",
     "term": "Discriminant",
-    "definition": "b² − 4ac in the quadratic formula, indicating the number of real roots.",
+    "definition": "The expression b² − 4ac in the quadratic formula, determining whether there are 2, 1, or 0 real roots.",
     "topicNumber": 2,
     "subtopicId": "igcse-maths-2-1",
     "subtopicCode": "2.1"
   },
   {
-    "id": "imkt-4",
-    "term": "Inverse function",
-    "definition": "Function f⁻¹(x) that reverses f(x), found by making x the subject of y = f(x).",
+    "id": "igcse-maths-kt-7",
+    "term": "Completing the Square",
+    "definition": "Rewriting x² + bx + c as (x + p)² + q to locate the turning point (−p, q) directly.",
+    "topicNumber": 2,
+    "subtopicId": "igcse-maths-2-1",
+    "subtopicCode": "2.1"
+  },
+  {
+    "id": "igcse-maths-kt-8",
+    "term": "Composite Function",
+    "definition": "Applying one function to the output of another, written fg(x) = f(g(x)) (right-to-left).",
     "topicNumber": 2,
     "subtopicId": "igcse-maths-2-3",
     "subtopicCode": "2.3"
   },
   {
-    "id": "imkt-5",
-    "term": "Cyclic quadrilateral",
-    "definition": "Four-sided shape with all vertices on a circle; opposite angles sum to 180°.",
+    "id": "igcse-maths-kt-9",
+    "term": "Stationary Point",
+    "definition": "A point on a curve where dy/dx = 0 (local maximum, local minimum, or point of inflection).",
+    "topicNumber": 2,
+    "subtopicId": "igcse-maths-2-3",
+    "subtopicCode": "2.3"
+  },
+  {
+    "id": "igcse-maths-kt-10",
+    "term": "Perpendicular Bisector",
+    "definition": "A line passing through the midpoint of a segment at 90° (gradient −1/m).",
+    "topicNumber": 3,
+    "subtopicId": "igcse-maths-3-1",
+    "subtopicCode": "3.1"
+  },
+  {
+    "id": "igcse-maths-kt-11",
+    "term": "Three-Figure Bearing",
+    "definition": "An angle measured clockwise from North and written using three digits (000° to 360°).",
+    "topicNumber": 4,
+    "subtopicId": "igcse-maths-4-1",
+    "subtopicCode": "4.1"
+  },
+  {
+    "id": "igcse-maths-kt-12",
+    "term": "Congruent Triangles",
+    "definition": "Triangles identical in shape and size, proved by SSS, SAS, ASA, or RHS.",
+    "topicNumber": 4,
+    "subtopicId": "igcse-maths-4-1",
+    "subtopicCode": "4.1"
+  },
+  {
+    "id": "igcse-maths-kt-13",
+    "term": "Cyclic Quadrilateral",
+    "definition": "A quadrilateral with all four vertices on a circle’s circumference; opposite angles sum to 180°.",
     "topicNumber": 4,
     "subtopicId": "igcse-maths-4-2",
     "subtopicCode": "4.2"
   },
   {
-    "id": "imkt-6",
-    "term": "Frequency density",
-    "definition": "Frequency divided by class width, represented by bar height in a histogram.",
-    "topicNumber": 8,
-    "subtopicId": "igcse-maths-8-2",
-    "subtopicCode": "8.2"
-  },
-  {
-    "id": "igcse-maths-kt-106",
-    "term": "Compound interest",
-    "definition": "Interest calculated on both the initial principal and all previously accumulated interest: A = P(1 + r/100)ⁿ.",
-    "topicNumber": 1,
-    "subtopicId": "igcse-maths-1-1",
-    "subtopicCode": "1.1"
-  },
-  {
-    "id": "igcse-maths-kt-107",
-    "term": "Reverse percentage",
-    "definition": "Finding the original 100% quantity by dividing the post-change value by its decimal multiplier.",
-    "topicNumber": 1,
-    "subtopicId": "igcse-maths-1-1",
-    "subtopicCode": "1.1"
-  },
-  {
-    "id": "igcse-maths-kt-108",
-    "term": "Reciprocal",
-    "definition": "The multiplicative inverse of a number or fraction obtained by swapping numerator and denominator (e.g., reciprocal of 3/4 is 4/3).",
-    "topicNumber": 1,
-    "subtopicId": "igcse-maths-1-1",
-    "subtopicCode": "1.1"
-  },
-  {
-    "id": "igcse-maths-kt-109",
-    "term": "Standard form",
-    "definition": "Scientific notation A × 10ⁿ with 1 ≤ A < 10 and integer exponent n.",
-    "topicNumber": 1,
-    "subtopicId": "igcse-maths-1-2",
-    "subtopicCode": "1.2"
-  },
-  {
-    "id": "igcse-maths-kt-110",
-    "term": "Upper and lower bounds",
-    "definition": "Maximum and minimum possible true values of a rounded measurement (± half the degree of accuracy).",
-    "topicNumber": 1,
-    "subtopicId": "igcse-maths-1-2",
-    "subtopicCode": "1.2"
-  },
-  {
-    "id": "igcse-maths-kt-111",
-    "term": "Conjugate",
-    "definition": "The binomial expression formed by flipping the sign between two terms (e.g., 3 + √5 is the conjugate of 3 − √5).",
-    "topicNumber": 1,
-    "subtopicId": "igcse-maths-1-2",
-    "subtopicCode": "1.2"
-  },
-  {
-    "id": "igcse-maths-kt-112",
-    "term": "Direct proportion",
-    "definition": "Relationship where y/x = k is constant (y = kx); graph is a straight line through (0, 0).",
-    "topicNumber": 1,
-    "subtopicId": "igcse-maths-1-3",
-    "subtopicCode": "1.3"
-  },
-  {
-    "id": "igcse-maths-kt-113",
-    "term": "Inverse proportion",
-    "definition": "Relationship where x × y = k is constant (y = k/x); doubling x halves y.",
-    "topicNumber": 1,
-    "subtopicId": "igcse-maths-1-3",
-    "subtopicCode": "1.3"
-  },
-  {
-    "id": "igcse-maths-kt-114",
-    "term": "Constant of proportionality",
-    "definition": "Fixed non-zero number k linking two proportional variables in y = kx or y = k/x.",
-    "topicNumber": 1,
-    "subtopicId": "igcse-maths-1-3",
-    "subtopicCode": "1.3"
-  },
-  {
-    "id": "igcse-maths-kt-115",
-    "term": "Quadratic equation",
-    "definition": "Equation of degree 2 written in standard form ax² + bx + c = 0 (a ≠ 0).",
-    "topicNumber": 2,
-    "subtopicId": "igcse-maths-2-1",
-    "subtopicCode": "2.1"
-  },
-  {
-    "id": "igcse-maths-kt-116",
-    "term": "Difference of two squares",
-    "definition": "Algebraic identity a² − b² = (a + b)(a − b).",
-    "topicNumber": 2,
-    "subtopicId": "igcse-maths-2-1",
-    "subtopicCode": "2.1"
-  },
-  {
-    "id": "igcse-maths-kt-117",
-    "term": "Completing the square",
-    "definition": "Rewriting x² + bx + c as (x + p)² + q to solve exactly or locate the parabola’s turning point (−p, q).",
-    "topicNumber": 2,
-    "subtopicId": "igcse-maths-2-1",
-    "subtopicCode": "2.1"
-  },
-  {
-    "id": "igcse-maths-kt-118",
-    "term": "Elimination method",
-    "definition": "Adding or subtracting multiples of linear simultaneous equations to cancel one unknown.",
-    "topicNumber": 2,
-    "subtopicId": "igcse-maths-2-2",
-    "subtopicCode": "2.2"
-  },
-  {
-    "id": "igcse-maths-kt-119",
-    "term": "Substitution method",
-    "definition": "Expressing one variable from a linear equation and inserting it into a second (often quadratic) equation.",
-    "topicNumber": 2,
-    "subtopicId": "igcse-maths-2-2",
-    "subtopicCode": "2.2"
-  },
-  {
-    "id": "igcse-maths-kt-120",
-    "term": "Inequality",
-    "definition": "A mathematical statement comparing two expressions with <, >, ≤, or ≥ rather than equals.",
-    "topicNumber": 2,
-    "subtopicId": "igcse-maths-2-2",
-    "subtopicCode": "2.2"
-  },
-  {
-    "id": "igcse-maths-kt-121",
-    "term": "Quadratic sequence",
-    "definition": "Sequence with a constant second difference 2a and nth term an² + bn + c.",
-    "topicNumber": 2,
-    "subtopicId": "igcse-maths-2-3",
-    "subtopicCode": "2.3"
-  },
-  {
-    "id": "igcse-maths-kt-122",
-    "term": "Stationary point",
-    "definition": "Point on a curve where the gradient dy/dx equals zero (maximum, minimum, or inflection).",
-    "topicNumber": 2,
-    "subtopicId": "igcse-maths-2-3",
-    "subtopicCode": "2.3"
-  },
-  {
-    "id": "igcse-maths-kt-123",
-    "term": "Composite function",
-    "definition": "A function formed by applying one function to the output of another: fg(x) = f(g(x)).",
-    "topicNumber": 2,
-    "subtopicId": "igcse-maths-2-3",
-    "subtopicCode": "2.3"
-  },
-  {
-    "id": "igcse-maths-kt-124",
-    "term": "Gradient",
-    "definition": "Measure of steepness between two points: m = (y₂ − y₁) ÷ (x₂ − x₁).",
-    "topicNumber": 3,
-    "subtopicId": "igcse-maths-3-1",
-    "subtopicCode": "3.1"
-  },
-  {
-    "id": "igcse-maths-kt-125",
-    "term": "Perpendicular lines",
-    "definition": "Lines intersecting at 90° whose gradients multiply to −1 (m₁m₂ = −1).",
-    "topicNumber": 3,
-    "subtopicId": "igcse-maths-3-1",
-    "subtopicCode": "3.1"
-  },
-  {
-    "id": "igcse-maths-kt-126",
-    "term": "Perpendicular bisector",
-    "definition": "Line crossing a segment at its midpoint at right angles.",
-    "topicNumber": 3,
-    "subtopicId": "igcse-maths-3-1",
-    "subtopicCode": "3.1"
-  },
-  {
-    "id": "igcse-maths-kt-127",
-    "term": "Midpoint",
-    "definition": "The exact halfway point between two coordinates, given by averaging their x-values and y-values.",
-    "topicNumber": 3,
-    "subtopicId": "igcse-maths-3-1",
-    "subtopicCode": "3.1"
-  },
-  {
-    "id": "igcse-maths-kt-128",
-    "term": "Bearing",
-    "definition": "Direction measured clockwise from North and expressed as a three-figure angle (000°–359°).",
-    "topicNumber": 4,
-    "subtopicId": "igcse-maths-4-1",
-    "subtopicCode": "4.1"
-  },
-  {
-    "id": "igcse-maths-kt-129",
-    "term": "Congruence",
-    "definition": "Exact equality of shape and size proved via SSS, SAS, ASA, or RHS.",
-    "topicNumber": 4,
-    "subtopicId": "igcse-maths-4-1",
-    "subtopicCode": "4.1"
-  },
-  {
-    "id": "igcse-maths-kt-130",
-    "term": "Scale factor",
-    "definition": "Ratio k of corresponding lengths in similar shapes; areas scale by k² and volumes by k³.",
-    "topicNumber": 4,
-    "subtopicId": "igcse-maths-4-1",
-    "subtopicCode": "4.1"
-  },
-  {
-    "id": "igcse-maths-kt-131",
-    "term": "Congruent",
-    "definition": "Geometric figures having the exact same shape and exact same dimensions (all corresponding sides and angles equal).",
-    "topicNumber": 4,
-    "subtopicId": "igcse-maths-4-1",
-    "subtopicCode": "4.1"
-  },
-  {
-    "id": "igcse-maths-kt-132",
+    "id": "igcse-maths-kt-14",
     "term": "Alternate Segment Theorem",
-    "definition": "Angle between tangent and chord equals the inscribed angle in the opposite segment.",
+    "definition": "The angle between a tangent and a chord equals the inscribed angle in the opposite segment.",
     "topicNumber": 4,
     "subtopicId": "igcse-maths-4-2",
     "subtopicCode": "4.2"
   },
   {
-    "id": "igcse-maths-kt-133",
-    "term": "Subtended angle",
-    "definition": "Angle formed at a point by joining it to the two endpoints of an arc or chord.",
-    "topicNumber": 4,
-    "subtopicId": "igcse-maths-4-2",
-    "subtopicCode": "4.2"
-  },
-  {
-    "id": "igcse-maths-kt-134",
-    "term": "Tangent",
-    "definition": "A straight line that touches a circle at exactly one point and sits perpendicular (90°) to the radius at that point.",
-    "topicNumber": 4,
-    "subtopicId": "igcse-maths-4-2",
-    "subtopicCode": "4.2"
-  },
-  {
-    "id": "igcse-maths-kt-135",
-    "term": "Sector",
-    "definition": "Pie-slice region of a circle bounded by two radii and an arc, with area (θ/360)πr².",
-    "topicNumber": 5,
-    "subtopicId": "igcse-maths-5-1",
-    "subtopicCode": "5.1"
-  },
-  {
-    "id": "igcse-maths-kt-136",
+    "id": "igcse-maths-kt-15",
     "term": "Frustum",
-    "definition": "Lower portion of a cone or pyramid remaining after slicing off the top parallel to the base.",
+    "definition": "The solid formed when the top of a cone or pyramid is sliced off parallel to its base.",
     "topicNumber": 5,
     "subtopicId": "igcse-maths-5-1",
     "subtopicCode": "5.1"
   },
   {
-    "id": "igcse-maths-kt-137",
-    "term": "Slant height",
-    "definition": "Distance measured along the sloping outer surface of a cone from its apex to the circular base rim: l = √(r² + h²).",
-    "topicNumber": 5,
-    "subtopicId": "igcse-maths-5-1",
-    "subtopicCode": "5.1"
-  },
-  {
-    "id": "igcse-maths-kt-138",
+    "id": "igcse-maths-kt-16",
     "term": "Hypotenuse",
-    "definition": "Longest side of a right-angled triangle, opposite the right angle.",
+    "definition": "The longest side of a right-angled triangle, opposite the 90° angle.",
     "topicNumber": 6,
     "subtopicId": "igcse-maths-6-1",
     "subtopicCode": "6.1"
   },
   {
-    "id": "igcse-maths-kt-139",
-    "term": "Angle of elevation",
-    "definition": "Angle measured upward from a horizontal line to an observer’s line of sight.",
-    "topicNumber": 6,
-    "subtopicId": "igcse-maths-6-1",
-    "subtopicCode": "6.1"
-  },
-  {
-    "id": "igcse-maths-kt-140",
-    "term": "Sine Rule",
-    "definition": "a / sin A = b / sin B = c / sin C for any triangle.",
-    "topicNumber": 6,
-    "subtopicId": "igcse-maths-6-2",
-    "subtopicCode": "6.2"
-  },
-  {
-    "id": "igcse-maths-kt-141",
+    "id": "igcse-maths-kt-17",
     "term": "Cosine Rule",
-    "definition": "a² = b² + c² − 2bc cos A (used for SAS or SSS non-right-angled triangles).",
+    "definition": "a² = b² + c² − 2bc cos A, used for SAS and SSS non-right-angled triangles.",
     "topicNumber": 6,
     "subtopicId": "igcse-maths-6-2",
     "subtopicCode": "6.2"
   },
   {
-    "id": "igcse-maths-kt-142",
-    "term": "Obtuse",
-    "definition": "An angle strictly greater than 90° and less than 180°.",
-    "topicNumber": 6,
-    "subtopicId": "igcse-maths-6-2",
-    "subtopicCode": "6.2"
-  },
-  {
-    "id": "igcse-maths-kt-143",
-    "term": "Position vector",
-    "definition": "Vector OA starting at the origin O(0, 0) and ending at point A.",
+    "id": "igcse-maths-kt-18",
+    "term": "Collinear Points",
+    "definition": "Three or more points lying on the same straight line (proved via scalar multiple + shared point).",
     "topicNumber": 7,
     "subtopicId": "igcse-maths-7-1",
     "subtopicCode": "7.1"
   },
   {
-    "id": "igcse-maths-kt-144",
-    "term": "Collinear points",
-    "definition": "Points lying on the same straight line (parallel connecting vectors sharing a common point).",
-    "topicNumber": 7,
-    "subtopicId": "igcse-maths-7-1",
-    "subtopicCode": "7.1"
-  },
-  {
-    "id": "igcse-maths-kt-145",
-    "term": "Negative scale factor",
-    "definition": "Enlargement that projects the image on the opposite side of the centre of enlargement, inverted by 180°.",
-    "topicNumber": 7,
-    "subtopicId": "igcse-maths-7-1",
-    "subtopicCode": "7.1"
-  },
-  {
-    "id": "igcse-maths-kt-146",
-    "term": "Collinear",
-    "definition": "Three or more points that all lie along the exact same straight line.",
-    "topicNumber": 7,
-    "subtopicId": "igcse-maths-7-1",
-    "subtopicCode": "7.1"
-  },
-  {
-    "id": "igcse-maths-kt-147",
-    "term": "Mutually exclusive",
-    "definition": "Events that cannot happen at the same time, so P(A ∩ B) = 0 and P(A or B) = P(A) + P(B).",
+    "id": "igcse-maths-kt-19",
+    "term": "Conditional Probability",
+    "definition": "The probability P(A | B) = P(A ∩ B) / P(B) of event A given event B has occurred.",
     "topicNumber": 8,
     "subtopicId": "igcse-maths-8-1",
     "subtopicCode": "8.1"
   },
   {
-    "id": "igcse-maths-kt-148",
-    "term": "Independent events",
-    "definition": "Events where the outcome of one does not affect the probability of the other: P(A ∩ B) = P(A) × P(B).",
-    "topicNumber": 8,
-    "subtopicId": "igcse-maths-8-1",
-    "subtopicCode": "8.1"
-  },
-  {
-    "id": "igcse-maths-kt-149",
-    "term": "Conditional probability",
-    "definition": "Probability of A given B has happened: P(A | B) = n(A ∩ B) ÷ n(B).",
-    "topicNumber": 8,
-    "subtopicId": "igcse-maths-8-1",
-    "subtopicCode": "8.1"
-  },
-  {
-    "id": "igcse-maths-kt-150",
-    "term": "Intersection",
-    "definition": "The overlap region A ∩ B containing elements that belong to both set A and set B simultaneously.",
-    "topicNumber": 8,
-    "subtopicId": "igcse-maths-8-1",
-    "subtopicCode": "8.1"
-  },
-  {
-    "id": "igcse-maths-kt-151",
-    "term": "Interquartile range (IQR)",
-    "definition": "Q₃ − Q₁, a robust measure of spread covering the middle 50% of observations.",
-    "topicNumber": 8,
-    "subtopicId": "igcse-maths-8-2",
-    "subtopicCode": "8.2"
-  },
-  {
-    "id": "igcse-maths-kt-152",
-    "term": "Interquartile range",
-    "definition": "Difference between the upper quartile and lower quartile (Q₃ − Q₁), measuring the spread of the central 50% of data.",
+    "id": "igcse-maths-kt-20",
+    "term": "Frequency Density",
+    "definition": "Frequency ÷ Class Width; the height of a histogram bar so that bar area equals frequency.",
     "topicNumber": 8,
     "subtopicId": "igcse-maths-8-2",
     "subtopicCode": "8.2"
