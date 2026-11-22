@@ -182,6 +182,9 @@ export const AccountMenu: React.FC<AccountMenuProps> = ({
         <Link to="/courses" onClick={onClose} style={linkRowStyle}>
           <BookOpen size={17} /> Browse all courses
         </Link>
+        <Link to="/onboarding" onClick={onClose} style={linkRowStyle}>
+          <Sparkles size={17} /> Guided setup
+        </Link>
       </div>
 
       {/* Navigation Links */}

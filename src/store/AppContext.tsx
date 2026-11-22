@@ -21,6 +21,7 @@ import {
   AuthActionResult,
   CloudSyncConfig,
   CourseProgress,
+  OnboardingCompletionInput,
   RegisterAccountInput,
   SignInAccountInput,
   UserPreferences,
@@ -91,6 +92,8 @@ export function createDefaultProfile(overrides?: Partial<UserProfile>): UserProf
     name: overrides?.name ?? 'Alex',
     email: overrides?.email,
     isGuest: overrides?.isGuest ?? !overrides?.email,
+    onboardingCompleted: overrides?.onboardingCompleted ?? false,
+    selectedQualification: overrides?.selectedQualification,
     lastSavedAt: overrides?.lastSavedAt ?? today.toISOString(),
     yearGroup: overrides?.yearGroup ?? 'YEAR 11',
     avatarId: overrides?.avatarId ?? 'snorkel',
@@ -463,6 +466,7 @@ interface AppContextValue {
   updateCloudSyncConfig: (patch: Partial<CloudSyncConfig>) => void;
   pushCloudSync: () => Promise<AuthActionResult>;
   pullCloudSync: () => Promise<AuthActionResult>;
+  completeOnboarding: (input: OnboardingCompletionInput) => Promise<AuthActionResult>;
 }
 
 const AppContext = createContext<AppContextValue | null>(null);
@@ -852,6 +856,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       name: cleanName,
       email,
       isGuest: false,
+      onboardingCompleted: true,
       lastSavedAt: nowIso,
       yearGroup: input.yearGroup.trim().toUpperCase() || 'YEAR 11',
       avatarId: input.avatarId,
@@ -1069,6 +1074,109 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     return { ok: true };
   };
 
+  const completeOnboarding = async (
+    input: OnboardingCompletionInput
+  ): Promise<AuthActionResult> => {
+    const cleanName = input.name.trim() || profile.name || 'Student';
+    const cleanYear = input.yearGroup.trim().toUpperCase() || 'YEAR 11';
+    const enrolled = Array.from(new Set(input.enrolledCourseIds)).filter(Boolean);
+    const savedBySubject: Record<string, string> = {};
+    for (const cid of enrolled) {
+      const course = getCourseById(cid);
+      if (course && !savedBySubject[course.subjectSlug]) {
+        savedBySubject[course.subjectSlug] = course.id;
+      }
+    }
+    const now = new Date();
+    const nowIso = now.toISOString();
+
+    if (input.account) {
+      const emailErr = validateEmail(input.account.email);
+      if (emailErr) return { ok: false, error: emailErr };
+      const pwErr = validatePassword(input.account.password);
+      if (pwErr) return { ok: false, error: pwErr };
+
+      const email = normalizeEmail(input.account.email);
+      const existingAccounts = state.accounts ?? [];
+      if (existingAccounts.some((a) => normalizeEmail(a.email) === email)) {
+        return {
+          ok: false,
+          error: 'An account with this email already exists. Try signing in instead.',
+        };
+      }
+
+      const salt = generateSalt();
+      const passwordHash = await hashPassword(input.account.password, salt);
+      const joinedDate = now.toLocaleDateString('en-GB', { month: 'short', year: 'numeric' });
+      const profileId = `profile-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
+      const accountId = `acct-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
+
+      const newProfile = createDefaultProfile({
+        id: profileId,
+        name: cleanName,
+        email,
+        isGuest: false,
+        onboardingCompleted: true,
+        selectedQualification: input.selectedQualification,
+        lastSavedAt: nowIso,
+        yearGroup: cleanYear,
+        avatarId: input.avatarId,
+        joinedDate,
+        dailyXpGoal: input.dailyXpGoal,
+        enrolledCourseIds: enrolled.length > 0 ? enrolled : profile.enrolledCourseIds,
+        savedCourseBySubject:
+          Object.keys(savedBySubject).length > 0 ? savedBySubject : profile.savedCourseBySubject,
+        preferences: profile.preferences,
+        progressByCourse: {},
+        activityLog: [],
+      });
+
+      const newAccount: AuthAccount = {
+        id: accountId,
+        email,
+        passwordHash,
+        passwordSalt: salt,
+        createdAt: nowIso,
+        lastSignedInAt: nowIso,
+        profileId,
+      };
+
+      setState((prev) => ({
+        ...prev,
+        activeProfileId: profileId,
+        profiles: [...prev.profiles, newProfile],
+        accounts: [...(prev.accounts ?? []), newAccount],
+        sessionAccountId: accountId,
+      }));
+      return { ok: true };
+    }
+
+    // Guest or already-signed-in user updating their setup
+    setState((prev) => ({
+      ...prev,
+      profiles: prev.profiles.map((p) =>
+        p.id === prev.activeProfileId
+          ? {
+              ...p,
+              name: cleanName,
+              yearGroup: cleanYear,
+              avatarId: input.avatarId,
+              dailyXpGoal: input.dailyXpGoal,
+              selectedQualification: input.selectedQualification,
+              onboardingCompleted: true,
+              enrolledCourseIds: enrolled.length > 0 ? enrolled : p.enrolledCourseIds,
+              savedCourseBySubject:
+                Object.keys(savedBySubject).length > 0
+                  ? { ...p.savedCourseBySubject, ...savedBySubject }
+                  : p.savedCourseBySubject,
+              lastSavedAt: nowIso,
+            }
+          : p
+      ),
+    }));
+    return { ok: true };
+  };
+
   const streakStats = computeStreakStats(profile.activityLog, profile.streakFreezes);
 
   return (
@@ -1107,6 +1215,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         updateCloudSyncConfig,
         pushCloudSync,
         pullCloudSync,
+        completeOnboarding,
       }}
     >
       {children}

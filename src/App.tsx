@@ -16,6 +16,7 @@ import { CoursesCatalogPage } from './pages/CoursesCatalogPage';
 import { CourseWorkspacePage } from './pages/CourseWorkspacePage';
 import { DashboardPage } from './pages/DashboardPage';
 import { HelpFaqPage } from './pages/HelpFaqPage';
+import { OnboardingPage } from './pages/OnboardingPage';
 import { RevisionSessionBuilderPage } from './pages/RevisionSessionBuilderPage';
 import { CheatSheetDetailPage } from './pages/study/CheatSheetsPage';
 import { ExamPracticePage } from './pages/study/ExamPracticePage';
@@ -55,13 +56,14 @@ const AppShell: React.FC = () => {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  // Study players have their own sticky StudyTopBar
-  const isStudyPlayer =
+  // Study players and Onboarding have their own focused sticky top bar
+  const hideTopNav =
+    location.pathname === '/onboarding' ||
     /\/course\/[^/]+\/(notes|quiz|flashcards|exam-practice)\/[^/]+/.test(location.pathname);
 
   return (
     <>
-      {!isStudyPlayer && (
+      {!hideTopNav && (
         <TopNav
           onOpenStreakModal={() => setStreakOpen(true)}
           onOpenDailyGoalModal={() => setDailyGoalOpen(true)}
@@ -85,7 +87,8 @@ const AppShell: React.FC = () => {
           }
         />
 
-        {/* Authentication & Account Sync */}
+        {/* Onboarding & Authentication */}
+        <Route path="/onboarding" element={<OnboardingPage onOpenAuthModal={openAuthModal} />} />
         <Route path="/auth" element={<AuthPage initialMode="signin" />} />
         <Route path="/login" element={<AuthPage initialMode="signin" />} />
         <Route path="/register" element={<AuthPage initialMode="register" />} />
