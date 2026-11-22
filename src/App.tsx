@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Send } from 'lucide-react';
 import { BrowserRouter, Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import { TopNav } from './components/layout/TopNav';
+import { AuthMode } from './components/auth/AuthFormCard';
+import { AuthModal } from './components/modals/AuthModal';
 import { AvatarModal } from './components/modals/AvatarModal';
 import { DailyGoalModal } from './components/modals/DailyGoalModal';
 import { FeedbackModal } from './components/modals/FeedbackModal';
@@ -9,6 +11,7 @@ import { ManageCoursesModal } from './components/modals/ManageCoursesModal';
 import { QuickSearchModal } from './components/modals/QuickSearchModal';
 import { StreakModal } from './components/modals/StreakModal';
 import { AccountLayout } from './pages/account/AccountLayout';
+import { AuthPage } from './pages/AuthPage';
 import { CoursesCatalogPage } from './pages/CoursesCatalogPage';
 import { CourseWorkspacePage } from './pages/CourseWorkspacePage';
 import { DashboardPage } from './pages/DashboardPage';
@@ -32,6 +35,13 @@ const AppShell: React.FC = () => {
   const [manageCoursesOpen, setManageCoursesOpen] = useState(false);
   const [feedbackOpen, setFeedbackOpen] = useState(false);
   const [quickSearchOpen, setQuickSearchOpen] = useState(false);
+  const [authModalState, setAuthModalState] = useState<{ open: boolean; mode: AuthMode }>({
+    open: false,
+    mode: 'signin',
+  });
+
+  const openAuthModal = (mode: AuthMode = 'signin') =>
+    setAuthModalState({ open: true, mode });
 
   // Global Ctrl+K / Cmd+K Quick Search shortcut
   useEffect(() => {
@@ -57,6 +67,7 @@ const AppShell: React.FC = () => {
           onOpenDailyGoalModal={() => setDailyGoalOpen(true)}
           onOpenManageCourses={() => setManageCoursesOpen(true)}
           onOpenQuickSearch={() => setQuickSearchOpen(true)}
+          onOpenAuthModal={openAuthModal}
         />
       )}
 
@@ -69,9 +80,15 @@ const AppShell: React.FC = () => {
               onOpenAvatarModal={() => setAvatarOpen(true)}
               onOpenStreakModal={() => setStreakOpen(true)}
               onOpenManageCourses={() => setManageCoursesOpen(true)}
+              onOpenAuthModal={openAuthModal}
             />
           }
         />
+
+        {/* Authentication & Account Sync */}
+        <Route path="/auth" element={<AuthPage initialMode="signin" />} />
+        <Route path="/login" element={<AuthPage initialMode="signin" />} />
+        <Route path="/register" element={<AuthPage initialMode="register" />} />
 
         {/* Course Catalog Hierarchy */}
         <Route path="/courses" element={<CoursesCatalogPage />} />
@@ -100,6 +117,7 @@ const AppShell: React.FC = () => {
             <AccountLayout
               onOpenAvatarModal={() => setAvatarOpen(true)}
               onOpenDailyGoalModal={() => setDailyGoalOpen(true)}
+              onOpenAuthModal={openAuthModal}
             />
           }
         />
@@ -126,6 +144,11 @@ const AppShell: React.FC = () => {
       <ManageCoursesModal open={manageCoursesOpen} onClose={() => setManageCoursesOpen(false)} />
       <FeedbackModal open={feedbackOpen} onClose={() => setFeedbackOpen(false)} />
       <QuickSearchModal open={quickSearchOpen} onClose={() => setQuickSearchOpen(false)} />
+      <AuthModal
+        open={authModalState.open}
+        initialMode={authModalState.mode}
+        onClose={() => setAuthModalState((s) => ({ ...s, open: false }))}
+      />
     </>
   );
 };

@@ -7,11 +7,16 @@ import {
   FileText,
   HelpCircle,
   Info,
+  LogIn,
+  ShieldCheck,
+  UserPlus,
+  X,
 } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FlameMascot, FreezeCubeIcon, MonsterAvatar } from '../components/artwork/Avatars';
 import { StreakFlameTickIcon } from '../components/artwork/CognitoIcons';
 import { SubjectIcon } from '../components/artwork/SubjectIcons';
+import { AuthMode } from '../components/auth/AuthFormCard';
 import { formatWeekRangeLabel, getWeekDays } from '../components/modals/StreakModal';
 import { getCourseById } from '../data/catalog';
 import { getCourseStats, useApp } from '../store/AppContext';
@@ -24,6 +29,7 @@ interface DashboardPageProps {
   onOpenAvatarModal: () => void;
   onOpenStreakModal: () => void;
   onOpenManageCourses: () => void;
+  onOpenAuthModal?: (mode: AuthMode) => void;
 }
 
 const collator = new Intl.Collator(undefined, { numeric: true, sensitivity: 'base' });
@@ -32,13 +38,15 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
   onOpenAvatarModal,
   onOpenStreakModal,
   onOpenManageCourses,
+  onOpenAuthModal,
 }) => {
-  const { profile, streakStats } = useApp();
+  const { profile, isAuthenticated, streakStats } = useApp();
   const navigate = useNavigate();
   const [weekOffset, setWeekOffset] = useState(0);
   const [sortCol, setSortCol] = useState<SortCol | null>(null);
   const [sortDir, setSortDir] = useState<SortDir>('ascending');
   const [infoTip, setInfoTip] = useState<'questions' | 'flashcards' | null>(null);
+  const [dismissedSaveTip, setDismissedSaveTip] = useState(false);
 
   const days = getWeekDays(weekOffset);
   const rangeLabel = formatWeekRangeLabel(weekOffset);
@@ -256,6 +264,80 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
           <Link to={resumeTarget.to} className="dashboard-resume-cta">
             Resume <ArrowRight size={14} />
           </Link>
+        </section>
+      )}
+
+      {/* Free Account Save Strip for Guests */}
+      {!isAuthenticated && !dismissedSaveTip && (
+        <section
+          className="cognito-card"
+          style={{
+            marginTop: 14,
+            padding: '14px 18px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            gap: 14,
+            flexWrap: 'wrap',
+            backgroundColor: 'var(--bg-card)',
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', gap: 11, minWidth: 0 }}>
+            <div
+              style={{
+                width: 36,
+                height: 36,
+                borderRadius: 10,
+                backgroundColor: 'var(--color-blue-50)',
+                color: 'var(--color-blue-600)',
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                flexShrink: 0,
+              }}
+            >
+              <ShieldCheck size={19} />
+            </div>
+            <div style={{ minWidth: 0 }}>
+              <div style={{ fontWeight: 800, fontSize: '0.93rem', color: 'var(--text-heading)' }}>
+                Save your revision progress
+              </div>
+              <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)' }}>
+                Create a free account or sign in to keep your XP, streaks, quiz scores, and flashcards protected.
+              </div>
+            </div>
+          </div>
+
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
+            <button
+              type="button"
+              className="tactile-btn tactile-btn--sm tactile-btn--solid-blue"
+              onClick={() => (onOpenAuthModal ? onOpenAuthModal('register') : navigate('/register'))}
+            >
+              <UserPlus size={14} /> Create account
+            </button>
+            <button
+              type="button"
+              className="tactile-btn tactile-btn--sm"
+              onClick={() => (onOpenAuthModal ? onOpenAuthModal('signin') : navigate('/login'))}
+            >
+              <LogIn size={14} /> Sign in
+            </button>
+            <button
+              type="button"
+              aria-label="Dismiss save progress reminder"
+              onClick={() => setDismissedSaveTip(true)}
+              style={{
+                border: 0,
+                background: 'transparent',
+                color: 'var(--text-muted)',
+                padding: 6,
+                display: 'inline-flex',
+              }}
+            >
+              <X size={16} />
+            </button>
+          </div>
         </section>
       )}
 

@@ -54,9 +54,49 @@ export interface ActivityEvent {
   scorePercent?: number;
 }
 
+export interface AuthAccount {
+  id: string;
+  email: string;
+  passwordHash: string;
+  passwordSalt: string;
+  createdAt: string;
+  lastSignedInAt: string;
+  lastSyncedAt?: string;
+  profileId: string;
+}
+
+export interface CloudSyncConfig {
+  provider: 'local' | 'supabase';
+  supabaseUrl: string;
+  supabaseAnonKey: string;
+  lastCloudSyncAt?: string;
+}
+
+export interface RegisterAccountInput {
+  name: string;
+  email: string;
+  password: string;
+  yearGroup: string;
+  avatarId: AvatarId;
+  keepGuestProgress: boolean;
+}
+
+export interface SignInAccountInput {
+  email: string;
+  password: string;
+}
+
+export interface AuthActionResult {
+  ok: boolean;
+  error?: string;
+}
+
 export interface UserProfile {
   id: string;
   name: string;
+  email?: string;
+  isGuest?: boolean;
+  lastSavedAt?: string;
   yearGroup: string;
   avatarId: AvatarId;
   joinedDate: string;
@@ -73,4 +113,7 @@ export interface AppStoreState {
   version: 1;
   activeProfileId: string;
   profiles: UserProfile[];
+  accounts?: AuthAccount[];
+  sessionAccountId?: string | null;
+  cloudSync?: CloudSyncConfig;
 }

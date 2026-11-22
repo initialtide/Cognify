@@ -4,6 +4,7 @@ import {
   Check,
   ChevronDown,
   ChevronRight,
+  LogIn,
   Search,
   SlidersHorizontal,
 } from 'lucide-react';
@@ -18,6 +19,7 @@ import {
 } from '../artwork/CognitoIcons';
 import { CognitoLogo } from '../artwork/CognitoLogo';
 import { SubjectIcon } from '../artwork/SubjectIcons';
+import { AuthMode } from '../auth/AuthFormCard';
 import { AccountMenu } from '../modals/AccountMenu';
 import { XpHistoryPopover } from '../modals/XpHistoryPopover';
 
@@ -26,6 +28,7 @@ interface TopNavProps {
   onOpenDailyGoalModal: () => void;
   onOpenManageCourses: () => void;
   onOpenQuickSearch: () => void;
+  onOpenAuthModal?: (mode: AuthMode) => void;
 }
 
 export const TopNav: React.FC<TopNavProps> = ({
@@ -33,8 +36,9 @@ export const TopNav: React.FC<TopNavProps> = ({
   onOpenDailyGoalModal,
   onOpenManageCourses,
   onOpenQuickSearch,
+  onOpenAuthModal,
 }) => {
-  const { profile, streakStats } = useApp();
+  const { profile, isAuthenticated, streakStats } = useApp();
   const location = useLocation();
   const isDashboard = location.pathname === '/dashboard' || location.pathname === '/';
 
@@ -281,6 +285,21 @@ export const TopNav: React.FC<TopNavProps> = ({
             )}
           </div>
 
+          {!isAuthenticated && onOpenAuthModal && (
+            <button
+              type="button"
+              className="tactile-btn tactile-btn--sm tactile-btn--solid-blue"
+              style={{ minHeight: 36, padding: '6px 12px', fontSize: '0.84rem' }}
+              onClick={() => {
+                setOpenMenu(null);
+                onOpenAuthModal('signin');
+              }}
+            >
+              <LogIn size={14} />
+              <span className="hide-mobile">Sign in</span>
+            </button>
+          )}
+
           <div className="nav-pill-group" style={{ position: 'relative' }}>
             <button
               type="button"
@@ -288,6 +307,19 @@ export const TopNav: React.FC<TopNavProps> = ({
               onClick={() => setOpenMenu((m) => (m === 'account' ? null : 'account'))}
               aria-expanded={openMenu === 'account'}
             >
+              {isAuthenticated && (
+                <span
+                  aria-label="Signed in and saved"
+                  title="Signed in — progress auto-saves"
+                  style={{
+                    width: 8,
+                    height: 8,
+                    borderRadius: '999px',
+                    backgroundColor: 'var(--color-green-600)',
+                    display: 'inline-block',
+                  }}
+                />
+              )}
               <span>{profile.name}</span>
               <ChevronDown size={15} />
             </button>
@@ -296,6 +328,7 @@ export const TopNav: React.FC<TopNavProps> = ({
               <AccountMenu
                 onClose={() => setOpenMenu(null)}
                 onOpenManageCourses={onOpenManageCourses}
+                onOpenAuthModal={onOpenAuthModal}
               />
             )}
           </div>

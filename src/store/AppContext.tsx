@@ -1,11 +1,28 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { AvatarId } from '../components/artwork/Avatars';
 import { ALL_COURSES, getCourseById } from '../data/catalog';
+import {
+  decodeSyncCode,
+  generateSalt,
+  getDefaultCloudSyncConfig,
+  hashPassword,
+  normalizeEmail,
+  pullProfileFromSupabase,
+  pushProfileToSupabase,
+  validateEmail,
+  validatePassword,
+  verifyPassword,
+} from '../services/authService';
 import { CourseDefinition, ProfileCreationInput, QuizQuestion } from '../types/curriculum';
 import {
   ActivityEvent,
   AppStoreState,
+  AuthAccount,
+  AuthActionResult,
+  CloudSyncConfig,
   CourseProgress,
+  RegisterAccountInput,
+  SignInAccountInput,
   UserPreferences,
   UserProfile,
 } from '../types/user';
@@ -72,6 +89,9 @@ export function createDefaultProfile(overrides?: Partial<UserProfile>): UserProf
   return {
     id: overrides?.id ?? 'profile-default',
     name: overrides?.name ?? 'Alex',
+    email: overrides?.email,
+    isGuest: overrides?.isGuest ?? !overrides?.email,
+    lastSavedAt: overrides?.lastSavedAt ?? today.toISOString(),
     yearGroup: overrides?.yearGroup ?? 'YEAR 11',
     avatarId: overrides?.avatarId ?? 'snorkel',
     joinedDate: overrides?.joinedDate ?? 'Sep 2026',
@@ -155,11 +175,14 @@ export function createDefaultProfile(overrides?: Partial<UserProfile>): UserProf
 }
 
 export function createInitialStoreState(): AppStoreState {
-  const initialProfile = createDefaultProfile();
+  const initialProfile = createDefaultProfile({ isGuest: true });
   return {
     version: 1,
     activeProfileId: initialProfile.id,
     profiles: [initialProfile],
+    accounts: [],
+    sessionAccountId: null,
+    cloudSync: getDefaultCloudSyncConfig(),
   };
 }
 
@@ -368,7 +391,12 @@ function loadStoreState(): AppStoreState {
     if (!parsed || !Array.isArray(parsed.profiles) || parsed.profiles.length === 0) {
       return createInitialStoreState();
     }
-    return parsed;
+    return {
+      ...parsed,
+      accounts: Array.isArray(parsed.accounts) ? parsed.accounts : [],
+      sessionAccountId: parsed.sessionAccountId ?? null,
+      cloudSync: parsed.cloudSync ?? getDefaultCloudSyncConfig(),
+    };
   } catch {
     return createInitialStoreState();
   }
@@ -377,6 +405,11 @@ function loadStoreState(): AppStoreState {
 interface AppContextValue {
   state: AppStoreState;
   profile: UserProfile;
+  currentAccount: AuthAccount | null;
+  isAuthenticated: boolean;
+  accounts: AuthAccount[];
+  cloudSync: CloudSyncConfig;
+  lastSavedAt: string | null;
   streakStats: ReturnType<typeof computeStreakStats>;
   updateProfile: (updater: (prev: UserProfile) => UserProfile) => void;
   updatePreferences: (patch: Partial<UserPreferences>) => void;
@@ -419,6 +452,17 @@ interface AppContextValue {
   createProfile: (input: ProfileCreationInput) => void;
   importProfile: (rawJson: string) => boolean;
   resetActiveProfile: () => void;
+  registerAccount: (input: RegisterAccountInput) => Promise<AuthActionResult>;
+  signInAccount: (input: SignInAccountInput) => Promise<AuthActionResult>;
+  signOutAccount: () => void;
+  changeAccountPassword: (
+    currentPassword: string,
+    newPassword: string
+  ) => Promise<AuthActionResult>;
+  applySyncCode: (rawCode: string) => AuthActionResult;
+  updateCloudSyncConfig: (patch: Partial<CloudSyncConfig>) => void;
+  pushCloudSync: () => Promise<AuthActionResult>;
+  pullCloudSync: () => Promise<AuthActionResult>;
 }
 
 const AppContext = createContext<AppContextValue | null>(null);
@@ -426,8 +470,18 @@ const AppContext = createContext<AppContextValue | null>(null);
 export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [state, setState] = useState<AppStoreState>(() => loadStoreState());
 
+  const accounts = state.accounts ?? [];
+  const currentAccount =
+    state.sessionAccountId
+      ? accounts.find((a) => a.id === state.sessionAccountId) ?? null
+      : null;
+  const isAuthenticated = Boolean(currentAccount);
+  const cloudSync = state.cloudSync ?? getDefaultCloudSyncConfig();
+
   const profile =
     state.profiles.find((p) => p.id === state.activeProfileId) ?? state.profiles[0];
+
+  const lastSavedAt = profile.lastSavedAt ?? null;
 
   useEffect(() => {
     try {
@@ -443,10 +497,11 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   }, [state, profile.preferences.darkMode]);
 
   const updateProfile = (updater: (prev: UserProfile) => UserProfile) => {
+    const savedAt = new Date().toISOString();
     setState((prev) => ({
       ...prev,
       profiles: prev.profiles.map((p) =>
-        p.id === prev.activeProfileId ? updater(p) : p
+        p.id === prev.activeProfileId ? { ...updater(p), lastSavedAt: savedAt } : p
       ),
     }));
   };
@@ -747,11 +802,271 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   };
 
   const resetActiveProfile = () => {
-    const fresh = createDefaultProfile({ id: profile.id, name: profile.name });
+    const fresh = createDefaultProfile({
+      id: profile.id,
+      name: profile.name,
+      email: profile.email,
+      isGuest: profile.isGuest,
+      yearGroup: profile.yearGroup,
+      avatarId: profile.avatarId,
+      progressByCourse: {},
+      activityLog: [],
+    });
     setState((prev) => ({
       ...prev,
       profiles: prev.profiles.map((p) => (p.id === prev.activeProfileId ? fresh : p)),
     }));
+  };
+
+  const registerAccount = async (input: RegisterAccountInput): Promise<AuthActionResult> => {
+    const emailErr = validateEmail(input.email);
+    if (emailErr) return { ok: false, error: emailErr };
+    const pwErr = validatePassword(input.password);
+    if (pwErr) return { ok: false, error: pwErr };
+
+    const cleanName = input.name.trim();
+    if (cleanName.length < 2) {
+      return { ok: false, error: 'Please enter a display name (at least 2 characters).' };
+    }
+
+    const email = normalizeEmail(input.email);
+    const existingAccounts = state.accounts ?? [];
+    if (existingAccounts.some((a) => normalizeEmail(a.email) === email)) {
+      return {
+        ok: false,
+        error: 'An account with this email already exists. Try signing in instead.',
+      };
+    }
+
+    const salt = generateSalt();
+    const passwordHash = await hashPassword(input.password, salt);
+    const now = new Date();
+    const nowIso = now.toISOString();
+    const joinedDate = now.toLocaleDateString('en-GB', { month: 'short', year: 'numeric' });
+    const profileId = `profile-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
+    const accountId = `acct-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
+
+    const guestSource = input.keepGuestProgress ? profile : null;
+    const newProfile = createDefaultProfile({
+      id: profileId,
+      name: cleanName,
+      email,
+      isGuest: false,
+      lastSavedAt: nowIso,
+      yearGroup: input.yearGroup.trim().toUpperCase() || 'YEAR 11',
+      avatarId: input.avatarId,
+      joinedDate,
+      dailyXpGoal: guestSource?.dailyXpGoal ?? 150,
+      streakFreezes: guestSource?.streakFreezes ?? 2,
+      enrolledCourseIds: guestSource?.enrolledCourseIds,
+      savedCourseBySubject: guestSource?.savedCourseBySubject,
+      preferences: guestSource?.preferences,
+      progressByCourse: guestSource
+        ? JSON.parse(JSON.stringify(guestSource.progressByCourse))
+        : {},
+      activityLog: guestSource
+        ? JSON.parse(JSON.stringify(guestSource.activityLog))
+        : [],
+    });
+
+    const newAccount: AuthAccount = {
+      id: accountId,
+      email,
+      passwordHash,
+      passwordSalt: salt,
+      createdAt: nowIso,
+      lastSignedInAt: nowIso,
+      profileId,
+    };
+
+    setState((prev) => ({
+      ...prev,
+      activeProfileId: profileId,
+      profiles: [...prev.profiles, newProfile],
+      accounts: [...(prev.accounts ?? []), newAccount],
+      sessionAccountId: accountId,
+    }));
+
+    return { ok: true };
+  };
+
+  const signInAccount = async (input: SignInAccountInput): Promise<AuthActionResult> => {
+    const emailErr = validateEmail(input.email);
+    if (emailErr) return { ok: false, error: emailErr };
+    if (!input.password) return { ok: false, error: 'Please enter your password.' };
+
+    const email = normalizeEmail(input.email);
+    const existingAccounts = state.accounts ?? [];
+    const account = existingAccounts.find((a) => normalizeEmail(a.email) === email);
+    if (!account) {
+      return {
+        ok: false,
+        error: 'No account found with that email on this browser. Register a new account or restore using a Sync Code.',
+      };
+    }
+
+    const valid = await verifyPassword(input.password, account.passwordSalt, account.passwordHash);
+    if (!valid) {
+      return { ok: false, error: 'Incorrect password. Please try again.' };
+    }
+
+    const nowIso = new Date().toISOString();
+    setState((prev) => {
+      const hasProfile = prev.profiles.some((p) => p.id === account.profileId);
+      const nextProfiles = hasProfile
+        ? prev.profiles
+        : [
+            ...prev.profiles,
+            createDefaultProfile({
+              id: account.profileId,
+              name: email.split('@')[0] || 'Student',
+              email,
+              isGuest: false,
+              lastSavedAt: nowIso,
+              progressByCourse: {},
+              activityLog: [],
+            }),
+          ];
+      return {
+        ...prev,
+        activeProfileId: account.profileId,
+        profiles: nextProfiles,
+        sessionAccountId: account.id,
+        accounts: (prev.accounts ?? []).map((a) =>
+          a.id === account.id ? { ...a, lastSignedInAt: nowIso } : a
+        ),
+      };
+    });
+
+    return { ok: true };
+  };
+
+  const signOutAccount = () => {
+    setState((prev) => {
+      const guestProfile =
+        prev.profiles.find((p) => p.id === 'profile-default' || p.isGuest) ??
+        createDefaultProfile({ id: 'profile-default', isGuest: true });
+      const hasGuest = prev.profiles.some((p) => p.id === guestProfile.id);
+      return {
+        ...prev,
+        sessionAccountId: null,
+        activeProfileId: guestProfile.id,
+        profiles: hasGuest ? prev.profiles : [guestProfile, ...prev.profiles],
+      };
+    });
+  };
+
+  const changeAccountPassword = async (
+    currentPassword: string,
+    newPassword: string
+  ): Promise<AuthActionResult> => {
+    if (!currentAccount) {
+      return { ok: false, error: 'You must be signed in to change your password.' };
+    }
+    const valid = await verifyPassword(
+      currentPassword,
+      currentAccount.passwordSalt,
+      currentAccount.passwordHash
+    );
+    if (!valid) {
+      return { ok: false, error: 'Current password is incorrect.' };
+    }
+    const pwErr = validatePassword(newPassword);
+    if (pwErr) return { ok: false, error: pwErr };
+
+    const newSalt = generateSalt();
+    const newHash = await hashPassword(newPassword, newSalt);
+    setState((prev) => ({
+      ...prev,
+      accounts: (prev.accounts ?? []).map((a) =>
+        a.id === currentAccount.id
+          ? { ...a, passwordSalt: newSalt, passwordHash: newHash }
+          : a
+      ),
+    }));
+    return { ok: true };
+  };
+
+  const applySyncCode = (rawCode: string): AuthActionResult => {
+    const decoded = decodeSyncCode(rawCode);
+    if (!decoded) {
+      return {
+        ok: false,
+        error: 'Invalid Cognify Sync Code. Make sure you pasted the complete COGNIFY-SAVE-V1:... code.',
+      };
+    }
+    const nowIso = new Date().toISOString();
+    setState((prev) => {
+      // Merge restored study progress into the active profile while preserving active id & login email
+      const updated = prev.profiles.map((p) =>
+        p.id === prev.activeProfileId
+          ? createDefaultProfile({
+              ...decoded,
+              id: p.id,
+              email: p.email ?? decoded.email,
+              isGuest: p.isGuest,
+              lastSavedAt: nowIso,
+            })
+          : p
+      );
+      return { ...prev, profiles: updated };
+    });
+    return { ok: true };
+  };
+
+  const updateCloudSyncConfig = (patch: Partial<CloudSyncConfig>) => {
+    setState((prev) => ({
+      ...prev,
+      cloudSync: {
+        ...(prev.cloudSync ?? getDefaultCloudSyncConfig()),
+        ...patch,
+      },
+    }));
+  };
+
+  const pushCloudSync = async (): Promise<AuthActionResult> => {
+    const email = currentAccount?.email ?? profile.email;
+    if (!email) {
+      return { ok: false, error: 'Sign in with an email account first to use Cloud Sync.' };
+    }
+    const res = await pushProfileToSupabase(cloudSync, email, profile);
+    if (res.ok) {
+      const nowIso = new Date().toISOString();
+      updateCloudSyncConfig({ lastCloudSyncAt: nowIso });
+    }
+    return res;
+  };
+
+  const pullCloudSync = async (): Promise<AuthActionResult> => {
+    const email = currentAccount?.email ?? profile.email;
+    if (!email) {
+      return { ok: false, error: 'Sign in with an email account first to pull from Cloud Sync.' };
+    }
+    const res = await pullProfileFromSupabase(cloudSync, email);
+    if (!res.ok || !res.profile) {
+      return { ok: false, error: res.error ?? 'Could not restore cloud backup.' };
+    }
+    const restored = res.profile;
+    const nowIso = new Date().toISOString();
+    setState((prev) => ({
+      ...prev,
+      profiles: prev.profiles.map((p) =>
+        p.id === prev.activeProfileId
+          ? createDefaultProfile({
+              ...restored,
+              id: p.id,
+              email: p.email ?? email,
+              isGuest: false,
+              lastSavedAt: nowIso,
+            })
+          : p
+      ),
+      cloudSync: {
+        ...(prev.cloudSync ?? getDefaultCloudSyncConfig()),
+        lastCloudSyncAt: nowIso,
+      },
+    }));
+    return { ok: true };
   };
 
   const streakStats = computeStreakStats(profile.activityLog, profile.streakFreezes);
@@ -761,6 +1076,11 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       value={{
         state,
         profile,
+        currentAccount,
+        isAuthenticated,
+        accounts,
+        cloudSync,
+        lastSavedAt,
         streakStats,
         updateProfile,
         updatePreferences,
@@ -779,6 +1099,14 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         createProfile,
         importProfile,
         resetActiveProfile,
+        registerAccount,
+        signInAccount,
+        signOutAccount,
+        changeAccountPassword,
+        applySyncCode,
+        updateCloudSyncConfig,
+        pushCloudSync,
+        pullCloudSync,
       }}
     >
       {children}
