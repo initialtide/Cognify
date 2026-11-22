@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
   AlertTriangle,
   ArrowLeft,
@@ -21,8 +21,9 @@ import { StudyTopBar } from '../../components/layout/StudyTopBar';
 import { ALL_COURSES, getCourseById } from '../../data/catalog';
 import { useApp } from '../../store/AppContext';
 import { ExamQuestionItem, ExamSubPart } from '../../types/curriculum';
-import { gradeShortAnswer, GradeResult } from '../../utils/grader';
+import { gradeShortAnswer, gradeShortAnswerLocal, GradeResult } from '../../utils/grader';
 import { playSound } from '../../utils/soundEffects';
+import { renderInlineMarkdown } from './NotesViewerPage';
 
 interface PartState {
   selectedOption?: number;
@@ -30,6 +31,53 @@ interface PartState {
   graded?: boolean;
   earnedMarks: number;
   gradeResult?: GradeResult;
+}
+
+type SavedExamScores = Record<
+  string,
+  { earnedMarks: number; maxMarks: number; answerText: string }
+>;
+
+function buildInitialPartStates(
+  questions: ExamQuestionItem[],
+  savedScores?: SavedExamScores
+): Record<string, PartState> {
+  if (!savedScores) return {};
+  const hydrated: Record<string, PartState> = {};
+  for (const q of questions) {
+    for (const part of q.parts) {
+      const saved = savedScores[part.id];
+      if (!saved) continue;
+      const clampedEarned = Math.min(part.marks, Math.max(0, saved.earnedMarks));
+      if (part.kind === 'mcq') {
+        const parsed = Number.parseInt(saved.answerText, 10);
+        hydrated[part.id] = {
+          selectedOption: Number.isFinite(parsed) ? parsed : undefined,
+          graded: true,
+          earnedMarks: clampedEarned,
+        };
+      } else {
+        const answerText = saved.answerText ?? '';
+        let gradeResult: GradeResult | undefined;
+        if (part.rubric) {
+          const localRes = gradeShortAnswerLocal(answerText, part.rubric);
+          gradeResult = {
+            ...localRes,
+            earnedMarks: clampedEarned,
+            maxMarks: part.marks,
+            percent: part.marks > 0 ? Math.round((clampedEarned / part.marks) * 100) : 0,
+          };
+        }
+        hydrated[part.id] = {
+          textAnswer: answerText,
+          graded: true,
+          earnedMarks: clampedEarned,
+          gradeResult,
+        };
+      }
+    }
+  }
+  return hydrated;
 }
 
 export const ExamPracticePage: React.FC = () => {
@@ -54,18 +102,24 @@ export const ExamPracticePage: React.FC = () => {
     course.topics.flatMap((t) => t.subtopics).find((s) => s.id === subtopicId)?.title ??
     `${course.subjectName} Exam Practice`;
 
+  const savedExamScores = profile.progressByCourse[course.id]?.examPartScores;
+  const savedExamScoresRef = useRef(savedExamScores);
+  savedExamScoresRef.current = savedExamScores;
+
   const [activeQIndex, setActiveQIndex] = useState(0);
   const [navExpanded, setNavExpanded] = useState(true);
   const [copiedLink, setCopiedLink] = useState(false);
-  const [partStates, setPartStates] = useState<Record<string, PartState>>({});
+  const [partStates, setPartStates] = useState<Record<string, PartState>>(() =>
+    buildInitialPartStates(questions, savedExamScores)
+  );
   const [markingId, setMarkingId] = useState<string | null>(null);
   const [qFeedback, setQFeedback] = useState<Record<string, 'up' | 'down' | 'flag' | null>>({});
 
   useEffect(() => {
     setActiveQIndex(0);
-    setPartStates({});
+    setPartStates(buildInitialPartStates(questions, savedExamScoresRef.current));
     setMarkingId(null);
-  }, [questions]);
+  }, [questions, course.id]);
 
   const currentQ = questions[activeQIndex] ?? questions[0];
 
@@ -361,7 +415,7 @@ export const ExamPracticePage: React.FC = () => {
               color: 'var(--text-primary)',
             }}
           >
-            {currentQ.stimulus}
+            {renderInlineMarkdown(currentQ.stimulus)}
           </p>
 
           {currentQ.diagram && (
@@ -387,7 +441,7 @@ export const ExamPracticePage: React.FC = () => {
                   <div className="sp-exam-part__head">
                     <div className="sp-exam-part__prompt">
                       <span className="sp-exam-part__label">{part.label}</span>
-                      <span>{part.prompt}</span>
+                      <span>{renderInlineMarkdown(part.prompt)}</span>
                     </div>
                     <span className="sp-mark-badge">
                       [{part.marks} {part.marks === 1 ? 'mark' : 'marks'}]
@@ -424,7 +478,7 @@ export const ExamPracticePage: React.FC = () => {
                           >
                             <span className="sp-choice-btn__left">
                               <span className="sp-choice-key">{oIdx + 1}</span>
-                              <span>{opt}</span>
+                              <span>{renderInlineMarkdown(opt)}</span>
                             </span>
                             {st.graded && isRight && <Check size={17} strokeWidth={2.8} />}
                             {st.graded && isSel && !isRight && <X size={17} strokeWidth={2.8} />}
@@ -497,7 +551,7 @@ export const ExamPracticePage: React.FC = () => {
                             <>
                               <XCircle size={17} /> Incorrect — correct answer:{' '}
                               {typeof part.correctIndex === 'number'
-                                ? part.options[part.correctIndex]
+                                ? renderInlineMarkdown(part.options[part.correctIndex] ?? '')
                                 : ''}
                             </>
                           )}
@@ -510,19 +564,19 @@ export const ExamPracticePage: React.FC = () => {
                   {st.graded && st.gradeResult && (
                     <div className="sp-rubric-box">
                       <div style={{ fontWeight: 800, color: 'var(--text-heading)' }}>
-                        {st.gradeResult.feedback}
+                        {renderInlineMarkdown(st.gradeResult.feedback)}
                         {st.gradeResult.usedAi && ' (AI-assisted feedback)'}
                       </div>
                       {st.gradeResult.hitPoints.map((hp) => (
                         <div key={hp} className="sp-rubric-hit">
                           <Check size={15} style={{ flexShrink: 0, marginTop: 2 }} />
-                          <span>{hp}</span>
+                          <span>{renderInlineMarkdown(hp)}</span>
                         </div>
                       ))}
                       {st.gradeResult.missedPoints.map((mp) => (
                         <div key={mp} className="sp-rubric-miss">
                           <X size={15} style={{ flexShrink: 0, marginTop: 2 }} />
-                          <span>Missed: {mp}</span>
+                          <span>Missed: {renderInlineMarkdown(mp)}</span>
                         </div>
                       ))}
                       <div
@@ -532,7 +586,8 @@ export const ExamPracticePage: React.FC = () => {
                           color: 'var(--text-primary)',
                         }}
                       >
-                        <strong>Mark scheme model answer:</strong> {st.gradeResult.modelAnswer}
+                        <strong>Mark scheme model answer:</strong>{' '}
+                        {renderInlineMarkdown(st.gradeResult.modelAnswer)}
                       </div>
                     </div>
                   )}

@@ -13,8 +13,9 @@ import { FlameMascot, FreezeCubeIcon, MonsterAvatar } from '../components/artwor
 import { StreakFlameTickIcon } from '../components/artwork/CognitoIcons';
 import { SubjectIcon } from '../components/artwork/SubjectIcons';
 import { formatWeekRangeLabel, getWeekDays } from '../components/modals/StreakModal';
-import { ALL_COURSES, getCourseById } from '../data/catalog';
+import { getCourseById } from '../data/catalog';
 import { getCourseStats, useApp } from '../store/AppContext';
+import { CourseDefinition } from '../types/curriculum';
 
 type SortCol = 'subject' | 'questions' | 'flashcards';
 type SortDir = 'ascending' | 'descending';
@@ -43,7 +44,17 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
   const rangeLabel = formatWeekRangeLabel(weekOffset);
 
   const enrolledRows = useMemo(() => {
-    return ALL_COURSES.filter((c) => profile.enrolledCourseIds.includes(c.id)).map((course) => {
+    const seen = new Set<string>();
+    const resolvedCourses: CourseDefinition[] = [];
+    for (const id of profile.enrolledCourseIds) {
+      if (!id || seen.has(id)) continue;
+      const course = getCourseById(id);
+      if (!course || seen.has(course.id)) continue;
+      seen.add(id);
+      seen.add(course.id);
+      resolvedCourses.push(course);
+    }
+    return resolvedCourses.map((course) => {
       const stats = getCourseStats(course, profile.progressByCourse[course.id]);
       return { course, stats };
     });

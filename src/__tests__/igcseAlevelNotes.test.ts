@@ -44,6 +44,14 @@ const VALID_DIAGRAM_KINDS = new Set<DiagramKind>([
   'multi-store-memory',
   'synaptic-transmission',
   'photosynthesis-chloroplast',
+  'quadratic-graph',
+  'right-triangle-trig',
+  'supply-demand-equilibrium',
+  'production-possibility-curve',
+  'cpu-fde-architecture',
+  'logic-gates-truth',
+  'tectonic-plate-margins',
+  'break-even-chart',
 ]);
 
 function assertCourseHasCompleteNotes(course: CourseDefinition) {

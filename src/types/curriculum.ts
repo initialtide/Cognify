@@ -40,7 +40,12 @@ export type SubjectIconId =
   | 'german'
   | 'spanish'
   | 'rs'
-  | 'languages';
+  | 'languages'
+  | 'sociology'
+  | 'further-maths'
+  | 'pe'
+  | 'design-technology'
+  | 'food-nutrition';
 
 export type DiagramKind =
   | 'eukaryotic-vs-prokaryotic'
@@ -60,7 +65,15 @@ export type DiagramKind =
   | 'forces-free-body'
   | 'multi-store-memory'
   | 'synaptic-transmission'
-  | 'photosynthesis-chloroplast';
+  | 'photosynthesis-chloroplast'
+  | 'quadratic-graph'
+  | 'right-triangle-trig'
+  | 'supply-demand-equilibrium'
+  | 'production-possibility-curve'
+  | 'cpu-fde-architecture'
+  | 'logic-gates-truth'
+  | 'tectonic-plate-margins'
+  | 'break-even-chart';
 
 export interface GlossaryPill {
   term: string;
@@ -197,6 +210,7 @@ export interface FlashcardItem {
   front: string;
   backBullets: string[];
   hint?: string;
+  diagram?: DiagramKind;
 }
 
 export interface CheatSheetSection {

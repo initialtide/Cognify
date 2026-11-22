@@ -3,6 +3,56 @@ import { ArrowLeft, ArrowRight, Download, Expand, Printer, Search } from 'lucide
 import { Link, useParams } from 'react-router-dom';
 import { CognitoDialog } from '../../components/modals/CognitoDialog';
 import { ALL_COURSES, getCourseById } from '../../data/catalog';
+import { CheatSheetSection } from '../../types/curriculum';
+import { renderInlineMarkdown, stripInlineMarkdown } from './NotesViewerPage';
+
+function wrapSvgLines(rawText: string, maxChars: number): string[] {
+  const clean = stripInlineMarkdown(rawText).replace(/\s+/g, ' ').trim();
+  if (!clean) return [];
+  const words = clean.split(' ');
+  const lines: string[] = [];
+  let current = '';
+
+  for (const word of words) {
+    if (!current) {
+      if (word.length <= maxChars) {
+        current = word;
+      } else {
+        for (let i = 0; i < word.length; i += maxChars) {
+          lines.push(word.slice(i, i + maxChars));
+        }
+      }
+    } else if (current.length + 1 + word.length <= maxChars) {
+      current = `${current} ${word}`;
+    } else {
+      lines.push(current);
+      if (word.length <= maxChars) {
+        current = word;
+      } else {
+        current = '';
+        for (let i = 0; i < word.length; i += maxChars) {
+          const chunk = word.slice(i, i + maxChars);
+          if (i + maxChars < word.length) {
+            lines.push(chunk);
+          } else {
+            current = chunk;
+          }
+        }
+      }
+    }
+  }
+  if (current) lines.push(current);
+  return lines;
+}
+
+interface ComputedSectionLayout {
+  sec: CheatSheetSection;
+  y: number;
+  boxHeight: number;
+  formulaLines: string[];
+  formulaStartY: number;
+  bulletBlocks: { startY: number; lines: string[] }[];
+}
 
 export const CheatSheetDetailPage: React.FC = () => {
   const { courseId, slug } = useParams<{ courseId: string; slug: string }>();
@@ -29,6 +79,44 @@ export const CheatSheetDetailPage: React.FC = () => {
     );
   }, [sheet, searchText]);
 
+  const posterLayout = useMemo(() => {
+    if (!sheet) return { sections: [] as ComputedSectionLayout[], posterHeight: 560 };
+    const sectionGap = 24;
+    let cursorY = 104;
+    const computed: ComputedSectionLayout[] = [];
+
+    for (const sec of sheet.sections) {
+      let innerY = 30;
+      const formulaLines = sec.formula ? wrapSvgLines(sec.formula, 84) : [];
+      const formulaStartY = innerY;
+      if (formulaLines.length > 0) {
+        innerY += formulaLines.length * 18 + 10;
+      }
+
+      const bulletBlocks: { startY: number; lines: string[] }[] = [];
+      for (const pt of sec.points) {
+        const lines = wrapSvgLines(pt, 86);
+        if (lines.length === 0) continue;
+        bulletBlocks.push({ startY: innerY, lines });
+        innerY += lines.length * 20 + 4;
+      }
+
+      const boxHeight = Math.max(108, innerY + 14);
+      computed.push({
+        sec,
+        y: cursorY,
+        boxHeight,
+        formulaLines,
+        formulaStartY,
+        bulletBlocks,
+      });
+      cursorY += boxHeight + sectionGap;
+    }
+
+    const posterHeight = Math.max(560, cursorY + 8);
+    return { sections: computed, posterHeight };
+  }, [sheet]);
+
   if (!sheet) {
     return (
       <main className="page-container">
@@ -46,9 +134,10 @@ export const CheatSheetDetailPage: React.FC = () => {
     const url = URL.createObjectURL(blob);
     const img = new Image();
     img.onload = () => {
+      const scale = 1.5;
       const canvas = document.createElement('canvas');
-      canvas.width = 1200;
-      canvas.height = 840;
+      canvas.width = Math.round(800 * scale);
+      canvas.height = Math.round(posterLayout.posterHeight * scale);
       const ctx = canvas.getContext('2d');
       if (ctx) {
         ctx.fillStyle = '#ffffff';
@@ -67,11 +156,11 @@ export const CheatSheetDetailPage: React.FC = () => {
   const renderPosterSvg = (refProp?: React.RefObject<SVGSVGElement | null>) => (
     <svg
       ref={refProp}
-      viewBox="0 0 800 560"
+      viewBox={`0 0 800 ${posterLayout.posterHeight}`}
       style={{ width: '100%', height: 'auto', display: 'block', borderRadius: 12, border: '1.5px solid var(--border-card)', backgroundColor: '#ffffff' }}
       aria-label={`${sheet.title} printable poster`}
     >
-      <rect width="800" height="560" fill="#fdfdfc" />
+      <rect width="800" height={posterLayout.posterHeight} fill="#fdfdfc" />
       <rect x="0" y="0" width="800" height="74" fill={sheet.accentColor} />
       <text x="28" y="34" fontSize="14" fontWeight="800" fill="#ffffff" opacity="0.92">
         {course.qualificationLabel.toUpperCase()} · {course.subjectName.toUpperCase()} · TOPIC {sheet.topicNumber}
@@ -80,25 +169,65 @@ export const CheatSheetDetailPage: React.FC = () => {
         {sheet.title}
       </text>
 
-      {sheet.sections.map((sec, sIdx) => {
-        const yBase = 104 + sIdx * 145;
+      {posterLayout.sections.map((item, sIdx) => {
+        const cleanHeading = stripInlineMarkdown(item.sec.heading).toUpperCase();
+        const badgeWidth = Math.min(716, Math.max(140, cleanHeading.length * 8.4 + 28));
         return (
-          <g key={sec.heading} transform={`translate(28 ${yBase})`}>
-            <rect x="0" y="0" width="744" height="128" rx="12" fill="#f8fafc" stroke="#e2e8f0" strokeWidth="1.5" />
-            <rect x="14" y="-11" width={Math.min(360, sec.heading.length * 9.5 + 28)} height="24" rx="7" fill="#0b3c61" />
+          <g key={`${item.sec.heading}-${sIdx}`} transform={`translate(28 ${item.y})`}>
+            <rect
+              x="0"
+              y="0"
+              width="744"
+              height={item.boxHeight}
+              rx="12"
+              fill="#f8fafc"
+              stroke="#e2e8f0"
+              strokeWidth="1.5"
+            />
+            <rect x="14" y="-11" width={badgeWidth} height="24" rx="7" fill="#0b3c61" />
             <text x="26" y="5" fontSize="12" fontWeight="800" fill="#ffffff">
-              {sec.heading.toUpperCase()}
+              {cleanHeading}
             </text>
-            {sec.formula && (
-              <text x="724" y="27" textAnchor="end" fontSize="13" fontWeight="800" fill={sheet.accentColor}>
-                {sec.formula}
-              </text>
+            {item.formulaLines.length > 0 && (
+              <g>
+                <rect
+                  x="16"
+                  y={item.formulaStartY - 14}
+                  width="712"
+                  height={item.formulaLines.length * 18 + 8}
+                  rx="7"
+                  fill="#eef6ff"
+                  stroke="#cfe3fb"
+                  strokeWidth="1"
+                />
+                {item.formulaLines.map((line, fIdx) => (
+                  <text
+                    key={`f-${fIdx}`}
+                    x="24"
+                    y={item.formulaStartY + fIdx * 18}
+                    fontSize="12.5"
+                    fontWeight="800"
+                    fill={sheet.accentColor}
+                  >
+                    {line}
+                  </text>
+                ))}
+              </g>
             )}
-            {sec.points.slice(0, 3).map((pt, pIdx) => (
-              <text key={pIdx} x="20" y={46 + pIdx * 24} fontSize="13.5" fontWeight="600" fill="#1d2939">
-                • {pt.length > 94 ? `${pt.slice(0, 91)}...` : pt}
-              </text>
-            ))}
+            {item.bulletBlocks.map((block, bIdx) =>
+              block.lines.map((line, lIdx) => (
+                <text
+                  key={`b-${bIdx}-${lIdx}`}
+                  x={lIdx === 0 ? 20 : 32}
+                  y={block.startY + lIdx * 20}
+                  fontSize="13.5"
+                  fontWeight="600"
+                  fill="#1d2939"
+                >
+                  {lIdx === 0 ? `• ${line}` : line}
+                </text>
+              ))
+            )}
           </g>
         );
       })}
@@ -150,7 +279,7 @@ export const CheatSheetDetailPage: React.FC = () => {
               {sheet.title}
             </h1>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.98rem', lineHeight: 1.55, marginBottom: 18 }}>
-              {sheet.summary}
+              {renderInlineMarkdown(sheet.summary)}
             </p>
             <div style={{ fontSize: '0.84rem', color: 'var(--text-muted)', marginBottom: 20 }}>
               Topic {sheet.topicNumber}: {sheet.topicName} · Fully Unlocked
@@ -188,16 +317,20 @@ export const CheatSheetDetailPage: React.FC = () => {
         </div>
 
         <div style={{ display: 'grid', gap: 18 }}>
-          {filteredSections.map((sec) => (
-            <div key={sec.heading}>
-              <h2 className="font-heading" style={{ fontSize: '1.3rem', marginBottom: 6 }}>{sec.heading}</h2>
+          {filteredSections.map((sec, sIdx) => (
+            <div key={`${sec.heading}-${sIdx}`}>
+              <h2 className="font-heading" style={{ fontSize: '1.3rem', marginBottom: 6 }}>
+                {renderInlineMarkdown(sec.heading)}
+              </h2>
               {sec.formula && (
                 <div style={{ display: 'inline-block', padding: '5px 12px', borderRadius: 8, backgroundColor: 'var(--color-blue-50)', color: '#0b3c61', fontFamily: 'var(--font-mono)', fontWeight: 700, fontSize: '0.9rem', marginBottom: 8 }}>
-                  {sec.formula}
+                  {renderInlineMarkdown(sec.formula)}
                 </div>
               )}
               <ul style={{ margin: 0, paddingLeft: 20, display: 'grid', gap: 6 }}>
-                {sec.points.map((pt, i) => <li key={i}>{pt}</li>)}
+                {sec.points.map((pt, i) => (
+                  <li key={i}>{renderInlineMarkdown(pt)}</li>
+                ))}
               </ul>
             </div>
           ))}

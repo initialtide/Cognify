@@ -65,20 +65,14 @@ export const CourseWorkspacePage: React.FC = () => {
 
   const tabs: { id: CourseTabId; label: string }[] = course.pastPapersOnly
     ? [{ id: 'past-papers', label: 'Past Papers' }]
-    : course.isMaths
-      ? [
-          { id: 'lessons', label: 'Lessons' },
-          { id: 'quiz', label: 'Quiz' },
-          { id: 'past-papers', label: 'Past Papers' },
-        ]
-      : [
-          { id: 'notes', label: 'Notes' },
-          { id: 'quiz', label: 'Quiz' },
-          { id: 'flashcards', label: 'Flashcards' },
-          { id: 'cheat-sheets', label: 'Cheat Sheets' },
-          { id: 'exam-practice', label: 'Exam Practice' },
-          { id: 'past-papers', label: 'Past Papers' },
-        ];
+    : [
+        { id: course.isMaths ? 'lessons' : 'notes', label: course.isMaths ? 'Lessons' : 'Notes' },
+        { id: 'quiz', label: 'Quiz' },
+        { id: 'flashcards', label: 'Flashcards' },
+        { id: 'cheat-sheets', label: 'Cheat Sheets' },
+        { id: 'exam-practice', label: 'Exam Practice' },
+        { id: 'past-papers', label: 'Past Papers' },
+      ];
 
   const allSubtopics = useMemo(
     () => course.topics.flatMap((t) => t.subtopics),
@@ -467,7 +461,7 @@ export const CourseWorkspacePage: React.FC = () => {
                 <div style={{ fontSize: '0.72rem', fontWeight: 800, color: 'var(--text-muted)', padding: '4px 10px' }}>
                   STUDY TOOLS
                 </div>
-                {!course.isMaths && (
+                {course.keyTerms.length > 0 && (
                   <Link
                     to={`/course/${course.id}/key-terms`}
                     onClick={() => setShowMoreMenu(false)}

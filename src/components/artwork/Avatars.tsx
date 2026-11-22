@@ -19,14 +19,16 @@ export const AVATAR_OPTIONS: { id: AvatarId; label: string }[] = [
   { id: 'pirate', label: 'Pirate' },
 ];
 
+const BASE = import.meta.env.BASE_URL;
+
 const AVATAR_SRC: Record<AvatarId, string> = {
-  snorkel: '/assets/cognito/avatars/scuba.svg',
-  ukulele: '/assets/cognito/avatars/guitar.svg',
-  dj: '/assets/cognito/avatars/headphones.svg',
-  wizard: '/assets/cognito/avatars/druid.svg',
-  beekeeper: '/assets/cognito/avatars/honey.svg',
-  knight: '/assets/cognito/avatars/knight.svg',
-  pirate: '/assets/cognito/avatars/pirate.svg',
+  snorkel: `${BASE}assets/cognito/avatars/scuba.svg`,
+  ukulele: `${BASE}assets/cognito/avatars/guitar.svg`,
+  dj: `${BASE}assets/cognito/avatars/headphones.svg`,
+  wizard: `${BASE}assets/cognito/avatars/druid.svg`,
+  beekeeper: `${BASE}assets/cognito/avatars/honey.svg`,
+  knight: `${BASE}assets/cognito/avatars/knight.svg`,
+  pirate: `${BASE}assets/cognito/avatars/pirate.svg`,
 };
 
 export const MonsterAvatar: React.FC<{

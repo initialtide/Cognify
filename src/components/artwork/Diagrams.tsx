@@ -2548,6 +2548,1260 @@ export const EducationalDiagram: React.FC<{ kind: DiagramKind; compact?: boolean
             </CLabel>
           </svg>
         );
+
+      /* =====================================================================
+       * 19. QUADRATIC GRAPH (Parabola, vertex, roots, y-intercept, symmetry)
+       * ===================================================================*/
+      case 'quadratic-graph':
+        return (
+          <svg
+            viewBox="0 0 640 246"
+            preserveAspectRatio="xMidYMid meet"
+            aria-label="Quadratic graph showing a parabola, turning point vertex, x-intercept roots, y-intercept, and dashed axis of symmetry"
+          >
+            <ArrowMarkerDefs
+              prefix={uid}
+              colors={{
+                slate: '#556478',
+                purple: '#7d3ec4',
+                coral: '#d95378',
+                teal: '#229680',
+              }}
+            />
+
+            {/* Subtle coordinate grid */}
+            <g stroke="#e6edf5" strokeWidth="1">
+              {[100, 140, 180, 220, 260, 300, 340].map((gx) => (
+                <line key={`qx-${gx}`} x1={gx} y1={34} x2={gx} y2={220} />
+              ))}
+              {[68, 100, 132, 164, 196].map((gy) => (
+                <line key={`qy-${gy}`} x1={74} y1={gy} x2={382} y2={gy} />
+              ))}
+            </g>
+
+            {/* Coordinate axes */}
+            <line
+              x1="68"
+              y1="164"
+              x2="388"
+              y2="164"
+              stroke="#556478"
+              strokeWidth="2.3"
+              strokeLinecap="round"
+              markerEnd={`url(#${uid}-slate)`}
+            />
+            <line
+              x1="140"
+              y1="224"
+              x2="140"
+              y2="28"
+              stroke="#556478"
+              strokeWidth="2.3"
+              strokeLinecap="round"
+              markerEnd={`url(#${uid}-slate)`}
+            />
+            <CLabel x={398} y={168} fill="#4f5b6b" size={12}>
+              x
+            </CLabel>
+            <CLabel x={140} y={19} fill="#4f5b6b" size={12}>
+              y
+            </CLabel>
+
+            {/* Dashed Axis of Symmetry */}
+            <line
+              x1="240"
+              y1="42"
+              x2="240"
+              y2="224"
+              stroke="#9a6ce0"
+              strokeWidth="1.8"
+              strokeDasharray="5 4"
+            />
+            <CLabel x={240} y={34} fill="#682eb0" size={9.5}>
+              AXIS OF SYMMETRY
+            </CLabel>
+
+            {/* Exact Parabola passing through (140,100), (180,164), (240,200), (300,164) */}
+            <path
+              d="M 120 56 Q 240 344 360 56"
+              fill="none"
+              stroke="#2282d4"
+              strokeWidth="3.2"
+              strokeLinecap="round"
+            />
+
+            {/* Key Feature Points */}
+            <circle cx="140" cy="100" r="5.5" fill="#229680" stroke="#ffffff" strokeWidth="2" />
+            <CLabel x={128} y={96} anchor="end" fill="#1a7d69" size={9.5}>
+              y-INTERCEPT
+            </CLabel>
+            <CLabel x={128} y={108} anchor="end" fill="#1a7d69" size={8.5} weight={700}>
+              (0, c)
+            </CLabel>
+
+            <circle cx="180" cy="164" r="5.5" fill="#d95378" stroke="#ffffff" strokeWidth="2" />
+            <circle cx="300" cy="164" r="5.5" fill="#d95378" stroke="#ffffff" strokeWidth="2" />
+            <CLabel x={180} y={150} fill="#b5375d" size={9.5}>
+              ROOT
+            </CLabel>
+            <CLabel x={300} y={150} fill="#b5375d" size={9.5}>
+              ROOT
+            </CLabel>
+
+            <circle cx="240" cy="200" r="6" fill="#7d3ec4" stroke="#ffffff" strokeWidth="2" />
+            <CLabel x={240} y={238} fill="#5c289c" size={9.5}>
+              VERTEX (TURNING POINT)
+            </CLabel>
+
+            {/* Right-side summary panel */}
+            <rect
+              x="420"
+              y="26"
+              width="200"
+              height="194"
+              rx="14"
+              fill="#f8fbff"
+              stroke="#c4ddf7"
+              strokeWidth="1.8"
+            />
+            <PillHeader
+              cx={520}
+              cy={50}
+              width={162}
+              text="y = ax² + bx + c"
+              bg="#e4f3ff"
+              stroke="#7bc0f7"
+              color="#145a99"
+            />
+
+            <rect x="436" y="76" width="168" height="36" rx="10" fill="#fdebf0" stroke="#f0a8bc" strokeWidth="1.4" />
+            <CLabel x={520} y={92} fill="#b5375d" size={9.5}>
+              ROOTS (x-INTERCEPTS)
+            </CLabel>
+            <CLabel x={520} y={105} fill="#5b687a" size={8.5} weight={700}>
+              Solve ax² + bx + c = 0
+            </CLabel>
+
+            <rect x="436" y="122" width="168" height="36" rx="10" fill="#effcf8" stroke="#7bdcc1" strokeWidth="1.4" />
+            <CLabel x={520} y={138} fill="#1a7d69" size={9.5}>
+              y-INTERCEPT
+            </CLabel>
+            <CLabel x={520} y={151} fill="#5b687a" size={8.5} weight={700}>
+              Set x = 0 → y = c
+            </CLabel>
+
+            <rect x="436" y="168" width="168" height="36" rx="10" fill="#f3eafd" stroke="#c59ef0" strokeWidth="1.4" />
+            <CLabel x={520} y={184} fill="#5c289c" size={9.5}>
+              TURNING POINT
+            </CLabel>
+            <CLabel x={520} y={197} fill="#5b687a" size={8.5} weight={700}>
+              a(x + p)² + q → (−p, q)
+            </CLabel>
+          </svg>
+        );
+
+      /* =====================================================================
+       * 20. RIGHT-ANGLED TRIANGLE TRIGONOMETRY (SOHCAHTOA & Pythagoras)
+       * ===================================================================*/
+      case 'right-triangle-trig':
+        return (
+          <svg
+            viewBox="0 0 640 246"
+            preserveAspectRatio="xMidYMid meet"
+            aria-label="Right-angled triangle showing Opposite, Adjacent, and Hypotenuse sides relative to angle theta, with SOHCAHTOA and Pythagoras formulas"
+          >
+            {/* Triangle Fill */}
+            <polygon points="74,200 300,200 300,52" fill="#f8fbff" stroke="none" />
+
+            {/* Right-angle marker */}
+            <path
+              d="M 280 200 L 280 180 L 300 180"
+              fill="#e4f3ff"
+              stroke="#556478"
+              strokeWidth="2"
+              strokeLinejoin="round"
+            />
+
+            {/* Angle theta arc */}
+            <path
+              d="M 118 200 A 44 44 0 0 0 110 176"
+              fill="none"
+              stroke="#7d3ec4"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+            />
+            <CLabel x={132} y={188} fill="#5c289c" size={14}>
+              θ
+            </CLabel>
+
+            {/* Colour-coded sides */}
+            <line
+              x1="74"
+              y1="200"
+              x2="300"
+              y2="52"
+              stroke="#d95378"
+              strokeWidth="3.4"
+              strokeLinecap="round"
+            />
+            <line
+              x1="300"
+              y1="52"
+              x2="300"
+              y2="200"
+              stroke="#229680"
+              strokeWidth="3.4"
+              strokeLinecap="round"
+            />
+            <line
+              x1="74"
+              y1="200"
+              x2="300"
+              y2="200"
+              stroke="#2282d4"
+              strokeWidth="3.4"
+              strokeLinecap="round"
+            />
+
+            {/* Vertex Dots */}
+            <circle cx="74" cy="200" r="4.5" fill="#556478" />
+            <circle cx="300" cy="200" r="4.5" fill="#556478" />
+            <circle cx="300" cy="52" r="4.5" fill="#556478" />
+
+            {/* Side Labels */}
+            <g transform="translate(172 110) rotate(-33)">
+              <CLabel x={0} y={0} fill="#b5375d" size={11}>
+                HYPOTENUSE (H)
+              </CLabel>
+            </g>
+            <CLabel x={312} y={122} anchor="start" fill="#1a7d69" size={10.5}>
+              OPPOSITE
+            </CLabel>
+            <CLabel x={312} y={136} anchor="start" fill="#1a7d69" size={9.5} weight={700}>
+              (O)
+            </CLabel>
+            <CLabel x={187} y={224} fill="#145a99" size={11}>
+              ADJACENT (A)
+            </CLabel>
+
+            {/* Right-hand Formula Panel */}
+            <rect
+              x="404"
+              y="22"
+              width="216"
+              height="204"
+              rx="14"
+              fill="#fafbfd"
+              stroke="#d5dfec"
+              strokeWidth="1.8"
+            />
+            <PillHeader
+              cx={512}
+              cy={44}
+              width={162}
+              text="SOH · CAH · TOA"
+              bg="#f3eafd"
+              stroke="#c59ef0"
+              color="#5c289c"
+            />
+
+            <rect x="422" y="68" width="180" height="32" rx="10" fill="#effcf8" stroke="#7bdcc1" strokeWidth="1.5" />
+            <CLabel x={512} y={88} fill="#1a7d69" size={11.5}>
+              sin θ = O ÷ H
+            </CLabel>
+
+            <rect x="422" y="108" width="180" height="32" rx="10" fill="#e4f3ff" stroke="#7bc0f7" strokeWidth="1.5" />
+            <CLabel x={512} y={128} fill="#145a99" size={11.5}>
+              cos θ = A ÷ H
+            </CLabel>
+
+            <rect x="422" y="148" width="180" height="32" rx="10" fill="#fdebf0" stroke="#f0a8bc" strokeWidth="1.5" />
+            <CLabel x={512} y={168} fill="#b5375d" size={11.5}>
+              tan θ = O ÷ A
+            </CLabel>
+
+            <rect x="422" y="188" width="180" height="28" rx="10" fill="#fff3d9" stroke="#f2ba5a" strokeWidth="1.5" />
+            <CLabel x={512} y={206} fill="#9c5c06" size={10.5}>
+              PYTHAGORAS: a² + b² = c²
+            </CLabel>
+          </svg>
+        );
+
+      /* =====================================================================
+       * 21. SUPPLY & DEMAND EQUILIBRIUM (Curves, P*, Q*, outward shift)
+       * ===================================================================*/
+      case 'supply-demand-equilibrium':
+        return (
+          <svg
+            viewBox="0 0 640 246"
+            preserveAspectRatio="xMidYMid meet"
+            aria-label="Supply and demand diagram showing equilibrium price and quantity and a rightward shift in demand to a new equilibrium"
+          >
+            <ArrowMarkerDefs
+              prefix={uid}
+              colors={{
+                slate: '#556478',
+                purple: '#7d3ec4',
+                teal: '#229680',
+                blue: '#2282d4',
+              }}
+            />
+
+            {/* Axes */}
+            <line
+              x1="94"
+              y1="208"
+              x2="94"
+              y2="28"
+              stroke="#556478"
+              strokeWidth="2.4"
+              strokeLinecap="round"
+              markerEnd={`url(#${uid}-slate)`}
+            />
+            <line
+              x1="94"
+              y1="208"
+              x2="394"
+              y2="208"
+              stroke="#556478"
+              strokeWidth="2.4"
+              strokeLinecap="round"
+              markerEnd={`url(#${uid}-slate)`}
+            />
+            <CLabel x={82} y={24} anchor="end" fill="#4f5b6b" size={10.5}>
+              PRICE (P)
+            </CLabel>
+            <CLabel x={392} y={230} anchor="end" fill="#4f5b6b" size={10.5}>
+              QUANTITY (Q)
+            </CLabel>
+
+            {/* Dashed Projections for E1 (226, 126) and E2 (251, 111) */}
+            <line x1="94" y1="126" x2="226" y2="126" stroke="#a6b3c4" strokeWidth="1.6" strokeDasharray="4 4" />
+            <line x1="226" y1="126" x2="226" y2="208" stroke="#a6b3c4" strokeWidth="1.6" strokeDasharray="4 4" />
+            <line x1="94" y1="111" x2="251" y2="111" stroke="#b694e8" strokeWidth="1.6" strokeDasharray="4 4" />
+            <line x1="251" y1="111" x2="251" y2="208" stroke="#b694e8" strokeWidth="1.6" strokeDasharray="4 4" />
+
+            <CLabel x={84} y={130} anchor="end" fill="#145a99" size={10}>
+              P*
+            </CLabel>
+            <CLabel x={84} y={114} anchor="end" fill="#682eb0" size={10}>
+              P₂
+            </CLabel>
+            <CLabel x={226} y={224} fill="#145a99" size={10}>
+              Q*
+            </CLabel>
+            <CLabel x={253} y={224} fill="#682eb0" size={10}>
+              Q₂
+            </CLabel>
+
+            {/* Supply Curve S */}
+            <line
+              x1="126"
+              y1="186"
+              x2="346"
+              y2="54"
+              stroke="#229680"
+              strokeWidth="3.1"
+              strokeLinecap="round"
+            />
+            <CLabel x={356} y={56} anchor="start" fill="#1a7d69" size={11.5}>
+              S
+            </CLabel>
+
+            {/* Demand Curve D1 */}
+            <line
+              x1="126"
+              y1="66"
+              x2="326"
+              y2="186"
+              stroke="#2282d4"
+              strokeWidth="3.1"
+              strokeLinecap="round"
+            />
+            <CLabel x={328} y={199} fill="#145a99" size={11}>
+              D₁
+            </CLabel>
+
+            {/* Shifted Demand Curve D2 */}
+            <line
+              x1="176"
+              y1="66"
+              x2="376"
+              y2="186"
+              stroke="#7d3ec4"
+              strokeWidth="3.1"
+              strokeLinecap="round"
+              strokeDasharray="7 4"
+            />
+            <CLabel x={380} y={199} fill="#5c289c" size={11}>
+              D₂
+            </CLabel>
+
+            {/* Outward Shift Arrow */}
+            <line
+              x1="288"
+              y1="158"
+              x2="326"
+              y2="158"
+              stroke="#7d3ec4"
+              strokeWidth="2.3"
+              strokeLinecap="round"
+              markerEnd={`url(#${uid}-purple)`}
+            />
+
+            {/* Equilibrium Dots */}
+            <circle cx="226" cy="126" r="5.5" fill="#2282d4" stroke="#ffffff" strokeWidth="2" />
+            <CLabel x={215} y={120} anchor="end" fill="#145a99" size={9.5}>
+              E₁
+            </CLabel>
+
+            <circle cx="251" cy="111" r="6" fill="#7d3ec4" stroke="#ffffff" strokeWidth="2" />
+            <CLabel x={262} y={106} anchor="start" fill="#5c289c" size={9.5}>
+              E₂
+            </CLabel>
+
+            {/* Right-hand explanation panel */}
+            <rect
+              x="418"
+              y="26"
+              width="202"
+              height="194"
+              rx="14"
+              fill="#f8fbff"
+              stroke="#c4ddf7"
+              strokeWidth="1.8"
+            />
+            <PillHeader
+              cx={519}
+              cy={50}
+              width={168}
+              text="MARKET EQUILIBRIUM"
+              bg="#effcf8"
+              stroke="#7bdcc1"
+              color="#1a7d69"
+            />
+
+            <rect x="434" y="76" width="170" height="40" rx="10" fill="#e4f3ff" stroke="#7bc0f7" strokeWidth="1.4" />
+            <CLabel x={519} y={92} fill="#145a99" size={9.5}>
+              E₁ (P*, Q*)
+            </CLabel>
+            <CLabel x={519} y={106} fill="#5b687a" size={8.5} weight={700}>
+              Quantity demanded = supplied
+            </CLabel>
+
+            <rect x="434" y="126" width="170" height="40" rx="10" fill="#f3eafd" stroke="#c59ef0" strokeWidth="1.4" />
+            <CLabel x={519} y={142} fill="#5c289c" size={9.5}>
+              SHIFT D₁ → D₂
+            </CLabel>
+            <CLabel x={519} y={156} fill="#5b687a" size={8.5} weight={700}>
+              Higher demand raises P & Q
+            </CLabel>
+
+            <rect x="434" y="176" width="170" height="30" rx="10" fill="#fff3d9" stroke="#f2ba5a" strokeWidth="1.4" />
+            <CLabel x={519} y={195} fill="#9c5c06" size={9}>
+              EXTENSION ALONG S TO E₂
+            </CLabel>
+          </svg>
+        );
+
+      /* =====================================================================
+       * 22. PRODUCTION POSSIBILITY CURVE (PPC / PPF)
+       * ===================================================================*/
+      case 'production-possibility-curve':
+        return (
+          <svg
+            viewBox="0 0 640 246"
+            preserveAspectRatio="xMidYMid meet"
+            aria-label="Production possibility curve showing efficient point on the curve, inefficient point inside, unattainable point outside, and an outward growth shift"
+          >
+            <ArrowMarkerDefs
+              prefix={uid}
+              colors={{
+                slate: '#556478',
+                purple: '#7d3ec4',
+              }}
+            />
+
+            {/* Soft area under PPC1 */}
+            <path d="M 96 68 Q 272 72 296 208 L 96 208 Z" fill="#effcf8" opacity="0.85" />
+
+            {/* Axes */}
+            <line
+              x1="96"
+              y1="208"
+              x2="96"
+              y2="24"
+              stroke="#556478"
+              strokeWidth="2.4"
+              strokeLinecap="round"
+              markerEnd={`url(#${uid}-slate)`}
+            />
+            <line
+              x1="96"
+              y1="208"
+              x2="394"
+              y2="208"
+              stroke="#556478"
+              strokeWidth="2.4"
+              strokeLinecap="round"
+              markerEnd={`url(#${uid}-slate)`}
+            />
+            <CLabel x={88} y={20} anchor="end" fill="#4f5b6b" size={9.5}>
+              CAPITAL
+            </CLabel>
+            <CLabel x={88} y={32} anchor="end" fill="#4f5b6b" size={9.5}>
+              GOODS
+            </CLabel>
+            <CLabel x={392} y={230} anchor="end" fill="#4f5b6b" size={10}>
+              CONSUMER GOODS
+            </CLabel>
+
+            {/* PPC1 Curve */}
+            <path
+              d="M 96 68 Q 272 72 296 208"
+              fill="none"
+              stroke="#229680"
+              strokeWidth="3.2"
+              strokeLinecap="round"
+            />
+            <CLabel x={286} y={196} anchor="end" fill="#1a7d69" size={10}>
+              PPC₁
+            </CLabel>
+
+            {/* Outward Shift PPC2 Curve */}
+            <path
+              d="M 96 42 Q 332 46 356 208"
+              fill="none"
+              stroke="#7d3ec4"
+              strokeWidth="2.6"
+              strokeDasharray="6 4"
+              strokeLinecap="round"
+            />
+            <CLabel x={368} y={196} fill="#5c289c" size={10}>
+              PPC₂
+            </CLabel>
+
+            {/* Growth Arrow */}
+            <line
+              x1="246"
+              y1="118"
+              x2="282"
+              y2="92"
+              stroke="#7d3ec4"
+              strokeWidth="2.2"
+              strokeLinecap="round"
+              markerEnd={`url(#${uid}-purple)`}
+            />
+
+            {/* Key Points: A (Efficient), B (Inefficient), C (Unattainable) */}
+            <circle cx="224" cy="99" r="5.5" fill="#229680" stroke="#ffffff" strokeWidth="2" />
+            <CLabel x={212} y={94} anchor="end" fill="#1a7d69" size={10.5}>
+              A
+            </CLabel>
+
+            <circle cx="166" cy="158" r="5.5" fill="#d98916" stroke="#ffffff" strokeWidth="2" />
+            <CLabel x={178} y={162} anchor="start" fill="#9c5c06" size={10.5}>
+              B
+            </CLabel>
+
+            <circle cx="322" cy="78" r="5.5" fill="#d95378" stroke="#ffffff" strokeWidth="2" />
+            <CLabel x={334} y={82} anchor="start" fill="#b5375d" size={10.5}>
+              C
+            </CLabel>
+
+            {/* Right-hand Key Panel */}
+            <rect
+              x="418"
+              y="22"
+              width="202"
+              height="204"
+              rx="14"
+              fill="#fafbfd"
+              stroke="#d5dfec"
+              strokeWidth="1.8"
+            />
+            <PillHeader
+              cx={519}
+              cy={44}
+              width={168}
+              text="PPC FRONTIER KEY"
+              bg="#effcf8"
+              stroke="#7bdcc1"
+              color="#1a7d69"
+            />
+
+            <rect x="434" y="66" width="170" height="32" rx="9" fill="#effcf8" stroke="#7bdcc1" strokeWidth="1.4" />
+            <CLabel x={519} y={80} fill="#1a7d69" size={9.5}>
+              A — EFFICIENT
+            </CLabel>
+            <CLabel x={519} y={92} fill="#5b687a" size={8.2} weight={700}>
+              All resources fully employed
+            </CLabel>
+
+            <rect x="434" y="106" width="170" height="32" rx="9" fill="#fff3d9" stroke="#f2ba5a" strokeWidth="1.4" />
+            <CLabel x={519} y={120} fill="#9c5c06" size={9.5}>
+              B — INEFFICIENT
+            </CLabel>
+            <CLabel x={519} y={132} fill="#5b687a" size={8.2} weight={700}>
+              Spare capacity / unemployment
+            </CLabel>
+
+            <rect x="434" y="146" width="170" height="32" rx="9" fill="#fdebf0" stroke="#f0a8bc" strokeWidth="1.4" />
+            <CLabel x={519} y={160} fill="#b5375d" size={9.5}>
+              C — UNATTAINABLE
+            </CLabel>
+            <CLabel x={519} y={172} fill="#5b687a" size={8.2} weight={700}>
+              Beyond current PPC₁ limit
+            </CLabel>
+
+            <rect x="434" y="186" width="170" height="28" rx="9" fill="#f3eafd" stroke="#c59ef0" strokeWidth="1.4" />
+            <CLabel x={519} y={204} fill="#5c289c" size={8.8}>
+              PPC₁ → PPC₂: ECONOMIC GROWTH
+            </CLabel>
+          </svg>
+        );
+
+      /* =====================================================================
+       * 23. VON NEUMANN CPU & FDE ARCHITECTURE (CU, ALU, Registers, RAM, Buses)
+       * ===================================================================*/
+      case 'cpu-fde-architecture':
+        return (
+          <svg
+            viewBox="0 0 660 248"
+            preserveAspectRatio="xMidYMid meet"
+            aria-label="Von Neumann CPU architecture showing Control Unit, ALU, registers PC, MAR, MDR, ACC, Main Memory RAM, and Address, Data, and Control buses"
+          >
+            <ArrowMarkerDefs
+              prefix={uid}
+              colors={{
+                blue: '#2282d4',
+                teal: '#229680',
+                coral: '#d95378',
+                purple: '#7d3ec4',
+              }}
+            />
+
+            {/* CPU Outer Box */}
+            <rect
+              x="20"
+              y="22"
+              width="374"
+              height="208"
+              rx="14"
+              fill="#f8fbff"
+              stroke="#7bc0f7"
+              strokeWidth="2.2"
+            />
+            <PillHeader
+              cx={207}
+              cy={22}
+              width={196}
+              text="CPU (VON NEUMANN)"
+              bg="#e4f3ff"
+              stroke="#2282d4"
+              color="#145a99"
+            />
+
+            {/* Control Unit */}
+            <rect x="38" y="48" width="154" height="68" rx="12" fill="#f3eafd" stroke="#9b66db" strokeWidth="1.8" />
+            <CLabel x={115} y={76} fill="#5c289c" size={11.5}>
+              CONTROL UNIT
+            </CLabel>
+            <CLabel x={115} y={93} fill="#682eb0" size={9} weight={700}>
+              Fetches & decodes
+            </CLabel>
+            <CLabel x={115} y={105} fill="#682eb0" size={9} weight={700}>
+              instructions (CU)
+            </CLabel>
+
+            {/* ALU */}
+            <rect x="38" y="136" width="154" height="74" rx="12" fill="#effcf8" stroke="#2da892" strokeWidth="1.8" />
+            <CLabel x={115} y={165} fill="#1a7d69" size={11.5}>
+              ALU
+            </CLabel>
+            <CLabel x={115} y={182} fill="#1f7f6b" size={9} weight={700}>
+              Arithmetic & logic
+            </CLabel>
+            <CLabel x={115} y={195} fill="#1f7f6b" size={9} weight={700}>
+              operations
+            </CLabel>
+
+            {/* Registers Column */}
+            <rect x="212" y="48" width="164" height="162" rx="12" fill="#ffffff" stroke="#a4d5fa" strokeWidth="1.6" />
+            <CLabel x={294} y={66} fill="#145a99" size={10}>
+              CPU REGISTERS
+            </CLabel>
+
+            <rect x="224" y="76" width="140" height="26" rx="8" fill="#e4f3ff" stroke="#7bc0f7" strokeWidth="1.3" />
+            <CLabel x={294} y={93} fill="#145a99" size={9.5}>
+              PC — Next address
+            </CLabel>
+
+            <rect x="224" y="108" width="140" height="26" rx="8" fill="#e4f3ff" stroke="#7bc0f7" strokeWidth="1.3" />
+            <CLabel x={294} y={125} fill="#145a99" size={9.5}>
+              MAR — Memory addr
+            </CLabel>
+
+            <rect x="224" y="140" width="140" height="26" rx="8" fill="#effcf8" stroke="#7bdcc1" strokeWidth="1.3" />
+            <CLabel x={294} y={157} fill="#1a7d69" size={9.5}>
+              MDR — Data / instr
+            </CLabel>
+
+            <rect x="224" y="172" width="140" height="26" rx="8" fill="#fff3d9" stroke="#f2ba5a" strokeWidth="1.3" />
+            <CLabel x={294} y={189} fill="#9c5c06" size={9.5}>
+              ACC — ALU result
+            </CLabel>
+
+            {/* System Buses between CPU (x=394) and RAM (x=518) */}
+            <line
+              x1="398"
+              y1="78"
+              x2="512"
+              y2="78"
+              stroke="#2282d4"
+              strokeWidth="2.8"
+              strokeLinecap="round"
+              markerEnd={`url(#${uid}-blue)`}
+            />
+            <CLabel x={456} y={68} fill="#145a99" size={9}>
+              ADDRESS BUS
+            </CLabel>
+
+            <line
+              x1="402"
+              y1="128"
+              x2="512"
+              y2="128"
+              stroke="#229680"
+              strokeWidth="2.8"
+              strokeLinecap="round"
+              markerStart={`url(#${uid}-teal)`}
+              markerEnd={`url(#${uid}-teal)`}
+            />
+            <CLabel x={456} y={118} fill="#1a7d69" size={9}>
+              DATA BUS
+            </CLabel>
+
+            <line
+              x1="402"
+              y1="178"
+              x2="512"
+              y2="178"
+              stroke="#d95378"
+              strokeWidth="2.8"
+              strokeLinecap="round"
+              markerStart={`url(#${uid}-coral)`}
+              markerEnd={`url(#${uid}-coral)`}
+            />
+            <CLabel x={456} y={168} fill="#b5375d" size={9}>
+              CONTROL BUS
+            </CLabel>
+
+            {/* Main Memory (RAM) Box */}
+            <rect
+              x="518"
+              y="38"
+              width="122"
+              height="176"
+              rx="14"
+              fill="#fff8eb"
+              stroke="#f2ba5a"
+              strokeWidth="2.2"
+            />
+            <PillHeader
+              cx={579}
+              cy={38}
+              width={102}
+              text="MAIN RAM"
+              bg="#fff3d9"
+              stroke="#d98916"
+              color="#9c5c06"
+            />
+            {[
+              { y: 66, label: '0001  LOAD 5' },
+              { y: 98, label: '0002  ADD 6' },
+              { y: 130, label: '0003  STORE 7' },
+              { y: 162, label: '0005  DATA: 12' },
+            ].map((slot) => (
+              <g key={slot.label}>
+                <rect
+                  x="530"
+                  y={slot.y}
+                  width="98"
+                  height="24"
+                  rx="6"
+                  fill="#ffffff"
+                  stroke="#f2cf8d"
+                  strokeWidth="1.2"
+                />
+                <CLabel x={579} y={slot.y + 15.5} fill="#7d4a07" size={8.4} weight={700}>
+                  {slot.label}
+                </CLabel>
+              </g>
+            ))}
+            <CLabel x={579} y={204} fill="#9c5c06" size={8.2} weight={700}>
+              STORES DATA & PROG
+            </CLabel>
+          </svg>
+        );
+
+      /* =====================================================================
+       * 24. LOGIC GATES & TRUTH TABLES (AND, OR, NOT)
+       * ===================================================================*/
+      case 'logic-gates-truth':
+        return (
+          <svg
+            viewBox="0 0 660 248"
+            preserveAspectRatio="xMidYMid meet"
+            aria-label="Standard AND, OR, and NOT logic gate symbols with inputs A and B, output Q, and corresponding truth tables"
+          >
+            {/* PANEL 1: AND GATE */}
+            <rect x="16" y="14" width="198" height="222" rx="14" fill="#effcf8" stroke="#7bdcc1" strokeWidth="1.8" />
+            <PillHeader cx={115} cy={34} width={128} text="AND (A · B)" bg="#d9f7ee" stroke="#229680" color="#1a7d69" />
+
+            {/* AND Gate Symbol */}
+            <line x1="56" y1="68" x2="88" y2="68" stroke="#556478" strokeWidth="2.2" strokeLinecap="round" />
+            <line x1="56" y1="94" x2="88" y2="94" stroke="#556478" strokeWidth="2.2" strokeLinecap="round" />
+            <line x1="138" y1="81" x2="170" y2="81" stroke="#556478" strokeWidth="2.2" strokeLinecap="round" />
+            <path
+              d="M 88 58 L 116 58 A 23 23 0 0 1 116 104 L 88 104 Z"
+              fill="#ffffff"
+              stroke="#229680"
+              strokeWidth="2.6"
+              strokeLinejoin="round"
+            />
+            <CLabel x={46} y={72} fill="#4f5b6b" size={10}>
+              A
+            </CLabel>
+            <CLabel x={46} y={98} fill="#4f5b6b" size={10}>
+              B
+            </CLabel>
+            <CLabel x={180} y={85} fill="#1a7d69" size={10.5}>
+              Q
+            </CLabel>
+
+            {/* AND Truth Table */}
+            <rect x="44" y="120" width="142" height="102" rx="9" fill="#ffffff" stroke="#bcebd9" strokeWidth="1.4" />
+            <rect x="44" y="120" width="142" height="22" rx="9" fill="#d9f7ee" />
+            <CLabel x={70} y={135} fill="#1a7d69" size={9.5}>
+              A
+            </CLabel>
+            <CLabel x={115} y={135} fill="#1a7d69" size={9.5}>
+              B
+            </CLabel>
+            <CLabel x={160} y={135} fill="#1a7d69" size={9.5}>
+              Q
+            </CLabel>
+            {[
+              ['0', '0', '0'],
+              ['0', '1', '0'],
+              ['1', '0', '0'],
+              ['1', '1', '1'],
+            ].map(([a, b, q], i) => (
+              <g key={`and-${i}`}>
+                {q === '1' && <rect x="48" y={145 + i * 19} width="134" height="17" rx="4" fill="#d9f7ee" />}
+                <CLabel x={70} y={157 + i * 19} fill="#4f5b6b" size={9.5} weight={700}>
+                  {a}
+                </CLabel>
+                <CLabel x={115} y={157 + i * 19} fill="#4f5b6b" size={9.5} weight={700}>
+                  {b}
+                </CLabel>
+                <CLabel x={160} y={157 + i * 19} fill={q === '1' ? '#1a7d69' : '#64748b'} size={9.5}>
+                  {q}
+                </CLabel>
+              </g>
+            ))}
+
+            {/* PANEL 2: OR GATE */}
+            <rect x="231" y="14" width="198" height="222" rx="14" fill="#edf7ff" stroke="#7bc0f7" strokeWidth="1.8" />
+            <PillHeader cx={330} cy={34} width={128} text="OR (A + B)" bg="#d9eeff" stroke="#2282d4" color="#145a99" />
+
+            {/* OR Gate Symbol */}
+            <line x1="271" y1="68" x2="306" y2="68" stroke="#556478" strokeWidth="2.2" strokeLinecap="round" />
+            <line x1="271" y1="94" x2="306" y2="94" stroke="#556478" strokeWidth="2.2" strokeLinecap="round" />
+            <line x1="356" y1="81" x2="385" y2="81" stroke="#556478" strokeWidth="2.2" strokeLinecap="round" />
+            <path
+              d="M 298 58 Q 312 81 298 104 Q 334 104 358 81 Q 334 58 298 58 Z"
+              fill="#ffffff"
+              stroke="#2282d4"
+              strokeWidth="2.6"
+              strokeLinejoin="round"
+            />
+            <CLabel x={261} y={72} fill="#4f5b6b" size={10}>
+              A
+            </CLabel>
+            <CLabel x={261} y={98} fill="#4f5b6b" size={10}>
+              B
+            </CLabel>
+            <CLabel x={395} y={85} fill="#145a99" size={10.5}>
+              Q
+            </CLabel>
+
+            {/* OR Truth Table */}
+            <rect x="259" y="120" width="142" height="102" rx="9" fill="#ffffff" stroke="#b8dcfb" strokeWidth="1.4" />
+            <rect x="259" y="120" width="142" height="22" rx="9" fill="#d9eeff" />
+            <CLabel x={285} y={135} fill="#145a99" size={9.5}>
+              A
+            </CLabel>
+            <CLabel x={330} y={135} fill="#145a99" size={9.5}>
+              B
+            </CLabel>
+            <CLabel x={375} y={135} fill="#145a99" size={9.5}>
+              Q
+            </CLabel>
+            {[
+              ['0', '0', '0'],
+              ['0', '1', '1'],
+              ['1', '0', '1'],
+              ['1', '1', '1'],
+            ].map(([a, b, q], i) => (
+              <g key={`or-${i}`}>
+                {q === '1' && <rect x="263" y={145 + i * 19} width="134" height="17" rx="4" fill="#e4f3ff" />}
+                <CLabel x={285} y={157 + i * 19} fill="#4f5b6b" size={9.5} weight={700}>
+                  {a}
+                </CLabel>
+                <CLabel x={330} y={157 + i * 19} fill="#4f5b6b" size={9.5} weight={700}>
+                  {b}
+                </CLabel>
+                <CLabel x={375} y={157 + i * 19} fill={q === '1' ? '#145a99' : '#64748b'} size={9.5}>
+                  {q}
+                </CLabel>
+              </g>
+            ))}
+
+            {/* PANEL 3: NOT GATE */}
+            <rect x="446" y="14" width="198" height="222" rx="14" fill="#f6effe" stroke="#c59ef0" strokeWidth="1.8" />
+            <PillHeader cx={545} cy={34} width={128} text="NOT (¬A)" bg="#eadbfd" stroke="#7d3ec4" color="#5c289c" />
+
+            {/* NOT Gate Symbol */}
+            <line x1="486" y1="81" x2="518" y2="81" stroke="#556478" strokeWidth="2.2" strokeLinecap="round" />
+            <line x1="572" y1="81" x2="600" y2="81" stroke="#556478" strokeWidth="2.2" strokeLinecap="round" />
+            <polygon
+              points="518,58 560,81 518,104"
+              fill="#ffffff"
+              stroke="#7d3ec4"
+              strokeWidth="2.6"
+              strokeLinejoin="round"
+            />
+            <circle cx="566" cy="81" r="5.5" fill="#ffffff" stroke="#7d3ec4" strokeWidth="2.4" />
+            <CLabel x={476} y={85} fill="#4f5b6b" size={10}>
+              A
+            </CLabel>
+            <CLabel x={610} y={85} fill="#5c289c" size={10.5}>
+              Q
+            </CLabel>
+
+            {/* NOT Truth Table */}
+            <rect x="484" y="120" width="122" height="72" rx="9" fill="#ffffff" stroke="#d9c1f5" strokeWidth="1.4" />
+            <rect x="484" y="120" width="122" height="22" rx="9" fill="#eadbfd" />
+            <CLabel x={516} y={135} fill="#5c289c" size={9.5}>
+              A
+            </CLabel>
+            <CLabel x={574} y={135} fill="#5c289c" size={9.5}>
+              Q
+            </CLabel>
+            <rect x="488" y="146" width="114" height="19" rx="4" fill="#f3eafd" />
+            <CLabel x={516} y={159} fill="#4f5b6b" size={9.5} weight={700}>
+              0
+            </CLabel>
+            <CLabel x={574} y={159} fill="#5c289c" size={9.5}>
+              1
+            </CLabel>
+            <CLabel x={516} y={181} fill="#4f5b6b" size={9.5} weight={700}>
+              1
+            </CLabel>
+            <CLabel x={574} y={181} fill="#64748b" size={9.5}>
+              0
+            </CLabel>
+            <CLabel x={545} y={214} fill="#682eb0" size={8.8} weight={700}>
+              INVERTS SINGLE INPUT
+            </CLabel>
+          </svg>
+        );
+
+      /* =====================================================================
+       * 25. TECTONIC PLATE MARGINS (Destructive, Constructive, Conservative)
+       * ===================================================================*/
+      case 'tectonic-plate-margins':
+        return (
+          <svg
+            viewBox="0 0 660 248"
+            preserveAspectRatio="xMidYMid meet"
+            aria-label="Three tectonic plate margins: destructive subduction boundary, constructive diverging boundary, and conservative sliding fault boundary"
+          >
+            <ArrowMarkerDefs
+              prefix={uid}
+              colors={{
+                coral: '#d95378',
+                teal: '#229680',
+                blue: '#2282d4',
+                amber: '#d98916',
+                purple: '#7d3ec4',
+              }}
+            />
+
+            {/* PANEL 1: DESTRUCTIVE */}
+            <rect x="16" y="14" width="198" height="222" rx="14" fill="#fff9fa" stroke="#f0a8bc" strokeWidth="1.8" />
+            <PillHeader cx={115} cy={34} width={132} text="DESTRUCTIVE" bg="#fdebf0" stroke="#d95378" color="#b5375d" />
+
+            {/* Mantle base */}
+            <rect x="26" y="138" width="178" height="58" rx="8" fill="#ffe9c7" />
+            {/* Subducting oceanic plate */}
+            <path
+              d="M 26 112 L 104 112 L 146 184 L 126 192 L 94 132 L 26 132 Z"
+              fill="#c8e5fc"
+              stroke="#2282d4"
+              strokeWidth="2"
+              strokeLinejoin="round"
+            />
+            {/* Continental plate + volcano */}
+            <path
+              d="M 108 112 L 142 112 L 160 80 L 178 112 L 204 112 L 204 142 L 116 142 Z"
+              fill="#e9d8fc"
+              stroke="#7d3ec4"
+              strokeWidth="2"
+              strokeLinejoin="round"
+            />
+            {/* Rising magma plume */}
+            <path d="M 148 164 Q 158 134 160 88" fill="none" stroke="#d95378" strokeWidth="3" strokeLinecap="round" />
+            {/* Converging Arrows */}
+            <line x1="36" y1="92" x2="80" y2="92" stroke="#2282d4" strokeWidth="2.4" markerEnd={`url(#${uid}-blue)`} />
+            <line x1="196" y1="68" x2="158" y2="68" stroke="#7d3ec4" strokeWidth="2.4" markerEnd={`url(#${uid}-purple)`} />
+            <CLabel x={62} y={125} fill="#145a99" size={8} weight={700}>
+              OCEANIC
+            </CLabel>
+            <CLabel x={162} y={131} fill="#5c289c" size={8} weight={700}>
+              CONT.
+            </CLabel>
+            <CLabel x={115} y={214} fill="#b5375d" size={8.6} weight={700}>
+              SUBDUCTION · VOLCANOES
+            </CLabel>
+            <CLabel x={115} y={226} fill="#5b687a" size={8} weight={700}>
+              &amp; STRONG EARTHQUAKES
+            </CLabel>
+
+            {/* PANEL 2: CONSTRUCTIVE */}
+            <rect x="231" y="14" width="198" height="222" rx="14" fill="#f4fdf9" stroke="#7bdcc1" strokeWidth="1.8" />
+            <PillHeader cx={330} cy={34} width={142} text="CONSTRUCTIVE" bg="#d9f7ee" stroke="#229680" color="#1a7d69" />
+
+            {/* Mantle base */}
+            <rect x="241" y="138" width="178" height="58" rx="8" fill="#ffe9c7" />
+            {/* Left & Right diverging plates */}
+            <rect x="241" y="108" width="70" height="28" rx="4" fill="#c8e5fc" stroke="#2282d4" strokeWidth="2" />
+            <rect x="349" y="108" width="70" height="28" rx="4" fill="#c8e5fc" stroke="#2282d4" strokeWidth="2" />
+            {/* Rising Magma & Mid-Ocean Ridge */}
+            <path
+              d="M 311 136 L 320 96 L 330 88 L 340 96 L 349 136 Z"
+              fill="#ffd6df"
+              stroke="#d95378"
+              strokeWidth="2"
+              strokeLinejoin="round"
+            />
+            <line x1="330" y1="184" x2="330" y2="112" stroke="#d95378" strokeWidth="2.5" markerEnd={`url(#${uid}-coral)`} />
+            {/* Diverging Arrows */}
+            <line x1="298" y1="86" x2="256" y2="86" stroke="#229680" strokeWidth="2.4" markerEnd={`url(#${uid}-teal)`} />
+            <line x1="362" y1="86" x2="404" y2="86" stroke="#229680" strokeWidth="2.4" markerEnd={`url(#${uid}-teal)`} />
+            <CLabel x={330} y={191} fill="#b5375d" size={8} weight={700}>
+              MAGMA RISES
+            </CLabel>
+            <CLabel x={330} y={214} fill="#1a7d69" size={8.6} weight={700}>
+              PLATES DIVERGE · NEW CRUST
+            </CLabel>
+            <CLabel x={330} y={226} fill="#5b687a" size={8} weight={700}>
+              SHIELD VOLCANOES
+            </CLabel>
+
+            {/* PANEL 3: CONSERVATIVE */}
+            <rect x="446" y="14" width="198" height="222" rx="14" fill="#f4f9ff" stroke="#7bc0f7" strokeWidth="1.8" />
+            <PillHeader cx={545} cy={34} width={142} text="CONSERVATIVE" bg="#d9eeff" stroke="#2282d4" color="#145a99" />
+
+            {/* Two Sliding Plates (plan view) */}
+            <rect x="462" y="66" width="76" height="122" rx="8" fill="#e4f3ff" stroke="#2282d4" strokeWidth="2" />
+            <rect x="552" y="66" width="76" height="122" rx="8" fill="#f3eafd" stroke="#7d3ec4" strokeWidth="2" />
+            {/* Fault Line */}
+            <path
+              d="M 545 62 L 541 88 L 549 114 L 541 140 L 549 166 L 545 192"
+              fill="none"
+              stroke="#d98916"
+              strokeWidth="2.4"
+              strokeLinecap="round"
+            />
+            {/* Pressure / Focus Ring */}
+            <circle cx="545" cy="127" r="12" fill="#fff3d9" stroke="#d95378" strokeWidth="2" strokeDasharray="3 2" />
+            <circle cx="545" cy="127" r="4" fill="#d95378" />
+            {/* Parallel Opposite Arrows */}
+            <line x1="500" y1="158" x2="500" y2="96" stroke="#2282d4" strokeWidth="2.6" markerEnd={`url(#${uid}-blue)`} />
+            <line x1="590" y1="96" x2="590" y2="158" stroke="#7d3ec4" strokeWidth="2.6" markerEnd={`url(#${uid}-purple)`} />
+            <CLabel x={545} y={214} fill="#145a99" size={8.6} weight={700}>
+              PLATES SLIDE · FRICTION
+            </CLabel>
+            <CLabel x={545} y={226} fill="#5b687a" size={8} weight={700}>
+              EARTHQUAKES ONLY (NO MAGMA)
+            </CLabel>
+          </svg>
+        );
+
+      /* =====================================================================
+       * 26. BREAK-EVEN CHART (FC, TC, TR, BEP, Profit/Loss, Margin of Safety)
+       * ===================================================================*/
+      case 'break-even-chart':
+        return (
+          <svg
+            viewBox="0 0 640 246"
+            preserveAspectRatio="xMidYMid meet"
+            aria-label="Break-even chart showing Fixed Costs, Total Costs, Total Revenue, Break-Even Point, shaded Loss and Profit zones, and Margin of Safety"
+          >
+            <ArrowMarkerDefs
+              prefix={uid}
+              colors={{
+                slate: '#556478',
+                purple: '#7d3ec4',
+              }}
+            />
+
+            {/* Shaded Loss & Profit Zones */}
+            <polygon points="88,206 88,158 248,126" fill="#fdebf0" opacity="0.78" />
+            <polygon points="248,126 408,94 408,46" fill="#d9f7ee" opacity="0.78" />
+
+            {/* Axes */}
+            <line
+              x1="88"
+              y1="206"
+              x2="88"
+              y2="24"
+              stroke="#556478"
+              strokeWidth="2.3"
+              strokeLinecap="round"
+              markerEnd={`url(#${uid}-slate)`}
+            />
+            <line
+              x1="88"
+              y1="206"
+              x2="424"
+              y2="206"
+              stroke="#556478"
+              strokeWidth="2.3"
+              strokeLinecap="round"
+              markerEnd={`url(#${uid}-slate)`}
+            />
+            <CLabel x={80} y={22} anchor="end" fill="#4f5b6b" size={9.5}>
+              COSTS /
+            </CLabel>
+            <CLabel x={80} y={34} anchor="end" fill="#4f5b6b" size={9.5}>
+              REV (£)
+            </CLabel>
+            <CLabel x={422} y={226} anchor="end" fill="#4f5b6b" size={9.5}>
+              OUTPUT (UNITS)
+            </CLabel>
+
+            {/* Fixed Costs (FC) */}
+            <line
+              x1="88"
+              y1="158"
+              x2="408"
+              y2="158"
+              stroke="#d98916"
+              strokeWidth="2.4"
+              strokeDasharray="6 4"
+            />
+            <CLabel x={412} y={162} anchor="start" fill="#9c5c06" size={9.5}>
+              FC
+            </CLabel>
+
+            {/* Total Costs (TC) */}
+            <line x1="88" y1="158" x2="408" y2="94" stroke="#d95378" strokeWidth="3" strokeLinecap="round" />
+            <CLabel x={412} y={98} anchor="start" fill="#b5375d" size={9.5}>
+              TC
+            </CLabel>
+
+            {/* Total Revenue (TR) */}
+            <line x1="88" y1="206" x2="408" y2="46" stroke="#229680" strokeWidth="3" strokeLinecap="round" />
+            <CLabel x={412} y={50} anchor="start" fill="#1a7d69" size={9.5}>
+              TR
+            </CLabel>
+
+            {/* Zone Captions */}
+            <CLabel x={148} y={166} fill="#b5375d" size={9}>
+              LOSS
+            </CLabel>
+            <CLabel x={364} y={84} fill="#1a7d69" size={9}>
+              PROFIT
+            </CLabel>
+
+            {/* BEP Vertical & Actual Output Vertical */}
+            <line x1="248" y1="126" x2="248" y2="206" stroke="#7d3ec4" strokeWidth="1.7" strokeDasharray="4 3" />
+            <line x1="348" y1="76" x2="348" y2="206" stroke="#a6b3c4" strokeWidth="1.5" strokeDasharray="4 3" />
+
+            {/* Margin of Safety Bracket */}
+            <line
+              x1="254"
+              y1="194"
+              x2="342"
+              y2="194"
+              stroke="#7d3ec4"
+              strokeWidth="2.1"
+              markerStart={`url(#${uid}-purple)`}
+              markerEnd={`url(#${uid}-purple)`}
+            />
+            <CLabel x={298} y={186} fill="#5c289c" size={8.5}>
+              MARGIN OF SAFETY
+            </CLabel>
+            <CLabel x={248} y={220} fill="#5c289c" size={8.8}>
+              BEP
+            </CLabel>
+            <CLabel x={348} y={220} fill="#4f5b6b" size={8.5} weight={700}>
+              ACTUAL
+            </CLabel>
+
+            {/* Break-Even Point Dot */}
+            <circle cx="248" cy="126" r="6" fill="#7d3ec4" stroke="#ffffff" strokeWidth="2" />
+            <CLabel x={244} y={114} anchor="end" fill="#5c289c" size={9.5}>
+              BREAK-EVEN (TR = TC)
+            </CLabel>
+
+            {/* Right-hand Summary Card */}
+            <rect
+              x="442"
+              y="26"
+              width="182"
+              height="194"
+              rx="14"
+              fill="#fafbfd"
+              stroke="#d5dfec"
+              strokeWidth="1.8"
+            />
+            <PillHeader
+              cx={533}
+              cy={50}
+              width={154}
+              text="KEY FORMULAS"
+              bg="#f3eafd"
+              stroke="#c59ef0"
+              color="#5c289c"
+            />
+
+            <rect x="454" y="76" width="158" height="44" rx="10" fill="#effcf8" stroke="#7bdcc1" strokeWidth="1.4" />
+            <CLabel x={533} y={93} fill="#1a7d69" size={9.2}>
+              BREAK-EVEN OUTPUT
+            </CLabel>
+            <CLabel x={533} y={108} fill="#5b687a" size={8.2} weight={700}>
+              Fixed Costs ÷ (P − VC)
+            </CLabel>
+
+            <rect x="454" y="130" width="158" height="36" rx="10" fill="#f3eafd" stroke="#c59ef0" strokeWidth="1.4" />
+            <CLabel x={533} y={145} fill="#5c289c" size={9.2}>
+              MARGIN OF SAFETY
+            </CLabel>
+            <CLabel x={533} y={158} fill="#5b687a" size={8.2} weight={700}>
+              Actual Output − BEP
+            </CLabel>
+
+            <rect x="454" y="176" width="158" height="30" rx="10" fill="#fff3d9" stroke="#f2ba5a" strokeWidth="1.4" />
+            <CLabel x={533} y={195} fill="#9c5c06" size={8.4}>
+              TC = FC + (VC × Output)
+            </CLabel>
+          </svg>
+        );
     }
   };
 

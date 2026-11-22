@@ -8,8 +8,9 @@ import {
   SlidersHorizontal,
 } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
-import { ALL_COURSES, QUALIFICATIONS } from '../../data/catalog';
+import { getCourseById, QUALIFICATIONS } from '../../data/catalog';
 import { useApp } from '../../store/AppContext';
+import { CourseDefinition } from '../../types/curriculum';
 import {
   NavActivityBarsIcon,
   NavStreakFlameIcon,
@@ -63,7 +64,16 @@ export const TopNav: React.FC<TopNavProps> = ({
   }, []);
 
   const groupedEnrolledCourses = useMemo(() => {
-    const enrolled = ALL_COURSES.filter((c) => profile.enrolledCourseIds.includes(c.id));
+    const seen = new Set<string>();
+    const enrolled: CourseDefinition[] = [];
+    for (const id of profile.enrolledCourseIds) {
+      if (!id || seen.has(id)) continue;
+      const course = getCourseById(id);
+      if (!course || seen.has(course.id)) continue;
+      seen.add(id);
+      seen.add(course.id);
+      enrolled.push(course);
+    }
     return QUALIFICATIONS.map((q) => ({
       qualification: q,
       courses: enrolled.filter((c) => c.qualification === q.id),

@@ -23,6 +23,48 @@ import { useApp } from '../../store/AppContext';
 import { QuizQuestion } from '../../types/curriculum';
 import { gradeShortAnswer, GradeResult } from '../../utils/grader';
 import { playSound } from '../../utils/soundEffects';
+import { renderInlineMarkdown } from './NotesViewerPage';
+
+function fnv1aHash(input: string): number {
+  let hash = 2166136261;
+  for (let i = 0; i < input.length; i++) {
+    hash ^= input.charCodeAt(i);
+    hash = Math.imul(hash, 16777619);
+  }
+  return hash >>> 0;
+}
+
+export function getShuffledMatchingPairs<T extends { left: string; right: string }>(
+  questionId: string,
+  pairs: T[]
+): T[] {
+  const n = pairs.length;
+  if (n <= 1) return [...pairs];
+  if (n === 2) return [pairs[1], pairs[0]];
+
+  const baseSeed = fnv1aHash(questionId);
+  if (n === 3) {
+    const order = baseSeed % 2 === 0 ? [1, 2, 0] : [2, 0, 1];
+    return order.map((idx) => pairs[idx]);
+  }
+
+  for (let attempt = 0; attempt < 8; attempt++) {
+    let state = (baseSeed + Math.imul(attempt + 1, 2654435761)) >>> 0;
+    const indices = Array.from({ length: n }, (_, i) => i);
+    for (let i = n - 1; i > 0; i--) {
+      state = (Math.imul(state, 1664525) + 1013904223) >>> 0;
+      const j = state % (i + 1);
+      [indices[i], indices[j]] = [indices[j], indices[i]];
+    }
+    const isIdentity = indices.every((origIdx, i) => origIdx === i);
+    const isReverse = indices.every((origIdx, i) => origIdx === n - 1 - i);
+    if (!isIdentity && !isReverse) {
+      return indices.map((idx) => pairs[idx]);
+    }
+  }
+
+  return pairs.map((_, i) => pairs[(i + 1) % n]);
+}
 
 interface AnswerState {
   checked: boolean;
@@ -454,7 +496,7 @@ export const QuizPlayerPage: React.FC = () => {
           </span>
         </div>
 
-        <h2 className="sp-quiz-prompt">{q.prompt}</h2>
+        <h2 className="sp-quiz-prompt">{renderInlineMarkdown(q.prompt)}</h2>
 
         {'diagram' in q && q.diagram && (
           <div className="sp-exam-diagram-frame">
@@ -493,7 +535,7 @@ export const QuizPlayerPage: React.FC = () => {
                 >
                   <span className="sp-choice-btn__left">
                     {isFocus && <span className="sp-choice-key">{idx + 1}</span>}
-                    <span>{opt}</span>
+                    <span>{renderInlineMarkdown(opt)}</span>
                   </span>
                   {st.checked && isRight && <Check size={18} strokeWidth={2.8} />}
                   {st.checked && isPicked && !isRight && <X size={18} strokeWidth={2.8} />}
@@ -539,7 +581,7 @@ export const QuizPlayerPage: React.FC = () => {
                     <span className="sp-choice-key">
                       {isSel ? <Check size={14} strokeWidth={3} /> : isFocus ? idx + 1 : ''}
                     </span>
-                    <span>{opt}</span>
+                    <span>{renderInlineMarkdown(opt)}</span>
                   </span>
                   {st.checked && isRight && <Check size={18} strokeWidth={2.8} />}
                   {st.checked && isSel && !isRight && <X size={18} strokeWidth={2.8} />}
@@ -562,7 +604,7 @@ export const QuizPlayerPage: React.FC = () => {
                   val.trim().toLowerCase() === q.answers[i].toLowerCase();
                 return (
                   <React.Fragment key={i}>
-                    <span>{seg}</span>
+                    <span>{renderInlineMarkdown(seg)}</span>
                     {i < q.answers.length && (
                       <input
                         type="text"
@@ -625,7 +667,9 @@ export const QuizPlayerPage: React.FC = () => {
                     flexWrap: 'wrap',
                   }}
                 >
-                  <span style={{ fontWeight: 700, fontSize: '0.94rem' }}>{lbl.marker}</span>
+                  <span style={{ fontWeight: 700, fontSize: '0.94rem' }}>
+                    {renderInlineMarkdown(lbl.marker)}
+                  </span>
                   <select
                     disabled={st.checked}
                     value={sels[lbl.marker] ?? ''}
@@ -669,21 +713,23 @@ export const QuizPlayerPage: React.FC = () => {
             />
             {st.checked && st.gradeResult && (
               <div className="sp-rubric-box">
-                <div style={{ fontWeight: 800 }}>{st.gradeResult.feedback}</div>
+                <div style={{ fontWeight: 800 }}>
+                  {renderInlineMarkdown(st.gradeResult.feedback)}
+                </div>
                 {st.gradeResult.hitPoints.map((hp) => (
                   <div key={hp} className="sp-rubric-hit">
                     <Check size={15} style={{ flexShrink: 0, marginTop: 2 }} />
-                    <span>{hp}</span>
+                    <span>{renderInlineMarkdown(hp)}</span>
                   </div>
                 ))}
                 {st.gradeResult.missedPoints.map((mp) => (
                   <div key={mp} className="sp-rubric-miss">
                     <X size={15} style={{ flexShrink: 0, marginTop: 2 }} />
-                    <span>Missed: {mp}</span>
+                    <span>Missed: {renderInlineMarkdown(mp)}</span>
                   </div>
                 ))}
                 <div style={{ paddingTop: 6, borderTop: '1px solid var(--border-subtle)' }}>
-                  <strong>Model answer:</strong> {st.gradeResult.modelAnswer}
+                  <strong>Model answer:</strong> {renderInlineMarkdown(st.gradeResult.modelAnswer)}
                 </div>
               </div>
             )}
@@ -711,10 +757,10 @@ export const QuizPlayerPage: React.FC = () => {
                         assigned ? ' is-paired' : ''
                       }`}
                     >
-                      <div>{p.left}</div>
+                      <div>{renderInlineMarkdown(p.left)}</div>
                       {assigned && (
                         <div style={{ fontSize: '0.76rem', opacity: 0.85, marginTop: 3 }}>
-                          → {assigned}
+                          → {renderInlineMarkdown(assigned)}
                         </div>
                       )}
                     </button>
@@ -722,9 +768,9 @@ export const QuizPlayerPage: React.FC = () => {
                 })}
               </div>
               <div style={{ display: 'grid', gap: 8 }}>
-                {[...q.pairs].reverse().map((p) => (
+                {getShuffledMatchingPairs(q.id, q.pairs).map((p, rIdx) => (
                   <button
-                    key={p.right}
+                    key={`${p.right}-${rIdx}`}
                     type="button"
                     disabled={st.checked}
                     className="sp-match-right sp-focusable"
@@ -737,7 +783,7 @@ export const QuizPlayerPage: React.FC = () => {
                       }));
                     }}
                   >
-                    {p.right}
+                    {renderInlineMarkdown(p.right)}
                   </button>
                 ))}
               </div>
@@ -772,7 +818,7 @@ export const QuizPlayerPage: React.FC = () => {
                 <span className="sp-xp-chip">+{st.xpAwarded ?? 15} XP</span>
               )}
             </div>
-            <div>{q.explanation}</div>
+            <div>{renderInlineMarkdown(q.explanation)}</div>
           </div>
         )}
 
@@ -1063,7 +1109,7 @@ export const QuizPlayerPage: React.FC = () => {
                 <RotateCcw size={15} /> Retry quiz
               </button>
 
-              {!course.isMaths && course.flashcards.length > 0 && (
+              {course.flashcards.length > 0 && (
                 <Link
                   to={`/course/${course.id}/flashcards/${subtopicId ?? 'all'}`}
                   className="tactile-btn tactile-btn--green"
@@ -1114,7 +1160,7 @@ export const QuizPlayerPage: React.FC = () => {
                           color: 'var(--text-heading)',
                         }}
                       >
-                        <span>{mq.prompt}</span>
+                        <span>{renderInlineMarkdown(mq.prompt)}</span>
                         <span className="sp-mark-badge">
                           {mst?.earnedMarks ?? 0} / {mq.marks}
                         </span>
@@ -1127,7 +1173,7 @@ export const QuizPlayerPage: React.FC = () => {
                           lineHeight: 1.5,
                         }}
                       >
-                        <strong>Explanation:</strong> {mq.explanation}
+                        <strong>Explanation:</strong> {renderInlineMarkdown(mq.explanation)}
                       </p>
                     </div>
                   );

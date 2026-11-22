@@ -43,18 +43,91 @@ function sanitizeKeyTermDefinition(term: string, definition: string): string {
   return clean;
 }
 
-function extractKeywords(text: string, maxCount = 3): string[][] {
-  const boldMatches = Array.from(text.matchAll(/\*\*([^*]+)\*\*/g)).map((m) =>
-    m[1].toLowerCase().trim()
-  );
-  const cleanWords = stripMarkdown(text)
+function normalizeForGrader(raw: string): string {
+  return raw
     .toLowerCase()
-    .replace(/[^a-z0-9\s-]/g, ' ')
+    .replace(/['’`]/g, '')
+    .replace(/[^a-z0-9.×xμµ\s/-]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function hashString(input: string): number {
+  let hash = 2166136261;
+  for (let i = 0; i < input.length; i++) {
+    hash ^= input.charCodeAt(i);
+    hash = Math.imul(hash, 16777619);
+  }
+  return hash >>> 0;
+}
+
+function placeCorrectOption(
+  correctText: string,
+  distractors: [string, string, string],
+  seedKey: string
+): { options: string[]; correctIndex: number } {
+  const correctIndex = hashString(seedKey) % 4;
+  const options: string[] = [];
+  let dIdx = 0;
+  for (let i = 0; i < 4; i++) {
+    if (i === correctIndex) {
+      options.push(correctText);
+    } else {
+      options.push(distractors[dIdx++]);
+    }
+  }
+  return { options, correctIndex };
+}
+
+const MULTI_SELECT_SLOTS: readonly [number, number][] = [
+  [0, 2],
+  [1, 3],
+  [0, 3],
+  [1, 2],
+  [0, 1],
+  [2, 3],
+];
+
+function placeTwoCorrectOptions(
+  correctA: string,
+  correctB: string,
+  wrongA: string,
+  wrongB: string,
+  seedKey: string
+): { options: string[]; correctIndices: number[] } {
+  const [slotA, slotB] = MULTI_SELECT_SLOTS[hashString(seedKey) % MULTI_SELECT_SLOTS.length];
+  const options = ['', '', '', ''];
+  options[slotA] = correctA;
+  options[slotB] = correctB;
+  const wrongs = [wrongA, wrongB];
+  let wIdx = 0;
+  for (let i = 0; i < 4; i++) {
+    if (i !== slotA && i !== slotB) {
+      options[i] = wrongs[wIdx++];
+    }
+  }
+  return { options, correctIndices: [slotA, slotB] };
+}
+
+function extractKeywords(text: string, maxCount = 3): string[][] {
+  const boldMatches = Array.from(text.matchAll(/\*\*([^*]+)\*\*/g))
+    .map((m) => normalizeForGrader(m[1]))
+    .filter((w) => w.length >= 2 && /[a-z0-9]/.test(w));
+
+  const cleanWords = normalizeForGrader(stripMarkdown(text))
     .split(/\s+/)
-    .filter((w) => w.length >= 5 && !STOP_KEYWORDS.has(w));
+    .filter((w) => w.length >= 5 && /[a-z0-9]/.test(w) && !STOP_KEYWORDS.has(w));
 
   const pool = Array.from(new Set([...boldMatches, ...cleanWords])).slice(0, maxCount);
   if (pool.length === 0) {
+    const shortWords = normalizeForGrader(stripMarkdown(text))
+      .split(/\s+/)
+      .filter((w) => w.length >= 2 && /[a-z0-9]/.test(w));
+    if (shortWords.length > 0) {
+      return Array.from(new Set(shortWords))
+        .slice(0, maxCount)
+        .map((w) => [w]);
+    }
     return [['concept', 'process', 'system']];
   }
   return pool.map((w) => [w]);
@@ -289,7 +362,6 @@ function getDefaultTopicsForPastPapersCourse(course: CourseDefinition): TopicDef
 }
 
 function buildSynthesizedQuizzesForSubtopic(
-  course: CourseDefinition,
   topic: TopicDefinition,
   subtopic: SubtopicDefinition,
   lesson: NoteLesson,
@@ -327,12 +399,12 @@ function buildSynthesizedQuizzesForSubtopic(
         t.term.toLowerCase() !== primaryTerm.term.toLowerCase() &&
         t.definition !== primaryTerm.definition
     )
-    .map((t) => t.definition);
+    .map((t) => stripMarkdown(t.definition));
 
-  const distractorDefs = [
-    otherTermDefs[0] ?? `A contrasting process that operates in the opposite direction without ${primaryTerm.term.toLowerCase()}.`,
-    otherTermDefs[1] ?? `An unrelated structural component not involved in ${subtopic.title.toLowerCase()}.`,
-    otherTermDefs[2] ?? `A secondary byproduct that remains constant regardless of ${subtopic.title.toLowerCase()}.`,
+  const distractorDefs: [string, string, string] = [
+    otherTermDefs[0] ?? `A contrasting mechanism in Topic ${topic.number} that describes ${secondaryTerm.term.toLowerCase()} rather than ${primaryTerm.term.toLowerCase()}.`,
+    otherTermDefs[1] ?? `A separate feature studied elsewhere in ${topic.title.toLowerCase()} with a different role.`,
+    otherTermDefs[2] ?? `A related outcome that occurs after ${primaryTerm.term.toLowerCase()} rather than defining it directly.`,
   ];
 
   const mistakeText =
@@ -346,63 +418,72 @@ function buildSynthesizedQuizzesForSubtopic(
 
   const otherBullets = allCourseBullets.filter((b) => !bullets.includes(b));
 
+  const q1Placed = placeCorrectOption(
+    stripMarkdown(primaryTerm.definition),
+    distractorDefs,
+    `${subtopic.id}:syn-q1`
+  );
+
+  const q2Placed = placeTwoCorrectOptions(
+    bullets[0] ?? stripMarkdown(lesson.checklistPoints[0] ?? primaryTerm.definition),
+    bullets[1] ?? stripMarkdown(lesson.checklistPoints[1] ?? secondaryTerm.definition),
+    otherBullets[0] ?? `In ${subtopic.title.toLowerCase()}, ${primaryTerm.term.toLowerCase()} reverses the direction of ${secondaryTerm.term.toLowerCase()}.`,
+    otherBullets[1] ?? `${primaryTerm.term} applies only outside Topic ${topic.number} and has no effect on ${subtopic.title.toLowerCase()}.`,
+    `${subtopic.id}:syn-q2`
+  );
+
+  const q3Placed = placeCorrectOption(
+    stripMarkdown(lesson.checklistPoints[0] ?? bullets[0] ?? primaryTerm.definition),
+    [
+      otherBullets[2] ?? `Treating ${primaryTerm.term.toLowerCase()} and ${secondaryTerm.term.toLowerCase()} as interchangeable terms.`,
+      otherBullets[3] ?? `Describing ${subtopic.title.toLowerCase()} without linking the mechanism to its observable effect.`,
+      otherTermDefs[3] ?? `Omitting the key condition required for ${primaryTerm.term.toLowerCase()} in Topic ${topic.number}.`,
+    ],
+    `${subtopic.id}:syn-q3`
+  );
+
   const candidates: QuizQuestion[] = [
     // 1. Key term / concept precision MCQ
     {
-      id: `${course.id}-${subtopic.id}-syn-q1`,
+      id: `${subtopic.id}-syn-q1`,
       subtopicId: subtopic.id,
       type: 'mcq',
       marks: 1,
-      prompt: `In ${subtopic.code} ${subtopic.title}, which statement accurately defines or describes ${primaryTerm.term}?`,
-      options: [
-        distractorDefs[0],
-        stripMarkdown(primaryTerm.definition),
-        distractorDefs[1],
-        distractorDefs[2],
-      ],
-      correctIndex: 1,
+      prompt: `Which statement accurately defines ${primaryTerm.term}?`,
+      options: q1Placed.options,
+      correctIndex: q1Placed.correctIndex,
       explanation: `${primaryTerm.term}: ${stripMarkdown(primaryTerm.definition)}`,
     },
     // 2. Multi-select specification statements
     {
-      id: `${course.id}-${subtopic.id}-syn-q2`,
+      id: `${subtopic.id}-syn-q2`,
       subtopicId: subtopic.id,
       type: 'multi-select',
       marks: 2,
       selectCount: 2,
-      prompt: `Select the TWO statements that are correct according to the ${course.boardLabel} specification for ${subtopic.code} ${subtopic.title}.`,
-      options: [
-        bullets[0] ?? stripMarkdown(lesson.checklistPoints[0] ?? primaryTerm.definition),
-        otherBullets[0] ?? `This process only occurs at absolute zero and never requires energy or particles.`,
-        bullets[1] ?? stripMarkdown(lesson.checklistPoints[1] ?? secondaryTerm.definition),
-        otherBullets[1] ?? `The values remain permanently invariant and independent of all external variables.`,
-      ],
-      correctIndices: [0, 2],
-      explanation: `Both selected statements are key specification requirements for ${subtopic.code} ${subtopic.title}. ${stripMarkdown(memoryText)}`,
+      prompt: `Select the TWO correct statements about ${subtopic.title}.`,
+      options: q2Placed.options,
+      correctIndices: q2Placed.correctIndices,
+      explanation: `Both selected statements are key requirements for ${subtopic.code} ${subtopic.title}. ${stripMarkdown(memoryText)}`,
     },
     // 3. Examiner misconception & mark-scheme precision MCQ
     {
-      id: `${course.id}-${subtopic.id}-syn-q3`,
+      id: `${subtopic.id}-syn-q3`,
       subtopicId: subtopic.id,
       type: 'mcq',
       marks: 1,
-      prompt: `When answering an exam question on ${subtopic.code} ${subtopic.title}, which point avoids a common student misconception and secures the mark?`,
-      options: [
-        `Assuming that ${primaryTerm.term.toLowerCase()} and ${secondaryTerm.term.toLowerCase()} are identical in every situation.`,
-        `Ignoring quantitative units and cause-and-effect terminology when describing ${subtopic.title.toLowerCase()}.`,
-        stripMarkdown(lesson.checklistPoints[0] ?? bullets[0] ?? primaryTerm.definition),
-        otherBullets[2] ?? `Stating that no variables or conditions affect the outcome of ${subtopic.title.toLowerCase()}.`,
-      ],
-      correctIndex: 2,
+      prompt: `Which statement is accurate for an exam answer on ${subtopic.title}?`,
+      options: q3Placed.options,
+      correctIndex: q3Placed.correctIndex,
       explanation: `Examiner note: ${stripMarkdown(mistakeText)}`,
     },
     // 4. Matching specification pairs
     {
-      id: `${course.id}-${subtopic.id}-syn-q4`,
+      id: `${subtopic.id}-syn-q4`,
       subtopicId: subtopic.id,
       type: 'matching',
       marks: 3,
-      prompt: `Match each concept from ${subtopic.code} ${subtopic.title} to its correct specification detail.`,
+      prompt: `Match each concept from ${subtopic.title} to its correct description.`,
       pairs: [
         {
           left: primaryTerm.term,
@@ -413,7 +494,7 @@ function buildSynthesizedQuizzesForSubtopic(
           right: stripMarkdown(secondaryTerm.definition).slice(0, 140),
         },
         {
-          left: lesson.cards[0]?.title ?? `Exam checklist (${subtopic.code})`,
+          left: lesson.cards[0]?.title ?? `Key takeaway (${subtopic.code})`,
           right: stripMarkdown(lesson.cards[0]?.summary ?? lesson.checklistPoints[0] ?? memoryText).slice(0, 140),
         },
       ],
@@ -421,11 +502,11 @@ function buildSynthesizedQuizzesForSubtopic(
     },
     // 5. Structured short-answer mark-scheme question
     {
-      id: `${course.id}-${subtopic.id}-syn-q5`,
+      id: `${subtopic.id}-syn-q5`,
       subtopicId: subtopic.id,
       type: 'short-answer',
       marks: 3,
-      prompt: `Explain the core principles of ${lesson.cards[0]?.title ?? subtopic.title} (${subtopic.code}) and state key points required by the mark scheme. [3 marks]`,
+      prompt: `Explain the key principles of ${lesson.cards[0]?.title ?? subtopic.title}. [3 marks]`,
       rubric: {
         maxMarks: 3,
         modelAnswer: [
@@ -436,7 +517,7 @@ function buildSynthesizedQuizzesForSubtopic(
         markPoints: [
           {
             id: `${subtopic.id}-syn-mp1`,
-            markDescription: `Accurately defines or identifies ${primaryTerm.term}: ${stripMarkdown(primaryTerm.definition)}`,
+            markDescription: `Defines or identifies ${primaryTerm.term}: ${stripMarkdown(primaryTerm.definition)}`,
             requiredKeywordGroups: extractKeywords(`${primaryTerm.term} ${primaryTerm.definition}`, 2),
           },
           {
@@ -446,7 +527,7 @@ function buildSynthesizedQuizzesForSubtopic(
           },
           {
             id: `${subtopic.id}-syn-mp3`,
-            markDescription: `Applies specification checklist point: ${stripMarkdown(lesson.checklistPoints[0] ?? memoryText)}`,
+            markDescription: `Applies key takeaway: ${stripMarkdown(lesson.checklistPoints[0] ?? memoryText)}`,
             requiredKeywordGroups: extractKeywords(lesson.checklistPoints[0] ?? memoryText, 2),
           },
         ],
@@ -461,7 +542,6 @@ function buildSynthesizedQuizzesForSubtopic(
 }
 
 function buildSynthesizedFlashcardsForSubtopic(
-  course: CourseDefinition,
   subtopic: SubtopicDefinition,
   lesson: NoteLesson,
   existingForSubtopic: FlashcardItem[]
@@ -480,11 +560,12 @@ function buildSynthesizedFlashcardsForSubtopic(
 
     if (cardBullets.length > 0) {
       candidates.push({
-        id: `${course.id}-${subtopic.id}-syn-fc-card-${idx + 1}`,
+        id: `${subtopic.id}-syn-fc-card-${idx + 1}`,
         subtopicId: subtopic.id,
-        front: `${subtopic.code} ${subtopic.title}: What are the key specification points for "${card.title}"?`,
+        front: `Summarise the key points for ${card.title}.`,
         backBullets: cardBullets,
         hint: card.summary ? stripMarkdown(card.summary) : `Focus on ${card.title.toLowerCase()}`,
+        diagram: card.diagram,
       });
     }
   });
@@ -496,16 +577,16 @@ function buildSynthesizedFlashcardsForSubtopic(
   ];
   allTerms.forEach((kt, idx) => {
     candidates.push({
-      id: `${course.id}-${subtopic.id}-syn-fc-term-${idx + 1}`,
+      id: `${subtopic.id}-syn-fc-term-${idx + 1}`,
       subtopicId: subtopic.id,
-      front: `Define "${kt.term}" (${subtopic.code} ${subtopic.title}).`,
+      front: `What is meant by ${kt.term}?`,
       backBullets: [
         stripMarkdown(kt.definition),
         ...(lesson.checklistPoints[idx % Math.max(1, lesson.checklistPoints.length)]
           ? [stripMarkdown(lesson.checklistPoints[idx % lesson.checklistPoints.length])]
           : []),
       ],
-      hint: `Key specification term in ${subtopic.code}`,
+      hint: `Key term from ${subtopic.title}`,
     });
   });
 
@@ -514,25 +595,25 @@ function buildSynthesizedFlashcardsForSubtopic(
   const memory = lesson.cards.find((c) => c.memoryAid)?.memoryAid;
   if (mistake || memory) {
     candidates.push({
-      id: `${course.id}-${subtopic.id}-syn-fc-examiner`,
+      id: `${subtopic.id}-syn-fc-examiner`,
       subtopicId: subtopic.id,
-      front: `What common exam pitfall and memory aid apply to ${subtopic.code} ${subtopic.title}?`,
+      front: `What common exam mistake should you avoid on ${subtopic.title}?`,
       backBullets: [
         ...(mistake ? [`Avoid: ${stripMarkdown(mistake)}`] : []),
         ...(memory ? [`Memory aid: ${stripMarkdown(memory)}`] : []),
       ],
-      hint: 'Think about how examiners award or withhold marks on this subtopic.',
+      hint: 'Recall the key distinction examiners look for here.',
     });
   }
 
   // 4. Checklist summary card
   if (lesson.checklistPoints.length > 0) {
     candidates.push({
-      id: `${course.id}-${subtopic.id}-syn-fc-checklist`,
+      id: `${subtopic.id}-syn-fc-checklist`,
       subtopicId: subtopic.id,
-      front: `What are the core exam checklist takeaways for ${subtopic.code} ${subtopic.title}?`,
+      front: `What are the key takeaways to remember for ${subtopic.title}?`,
       backBullets: lesson.checklistPoints.map(stripMarkdown),
-      hint: `Review the End of Notes checklist for ${subtopic.code}`,
+      hint: `Think of the core checkpoints for ${subtopic.code}`,
     });
   }
 
@@ -542,7 +623,6 @@ function buildSynthesizedFlashcardsForSubtopic(
 }
 
 function buildSynthesizedExamQuestionForSubtopic(
-  course: CourseDefinition,
   topic: TopicDefinition,
   subtopic: SubtopicDefinition,
   lesson: NoteLesson,
@@ -574,9 +654,9 @@ function buildSynthesizedExamQuestionForSubtopic(
     .join(' ');
 
   const secondCard = lesson.cards[Math.min(1, lesson.cards.length - 1)] ?? lesson.cards[0];
-  const partCBullets = [
+  const rawPartCBullets = [
     stripMarkdown(bullets[1] ?? bullets[0] ?? primaryTerm.definition),
-    stripMarkdown(bullets[2] ?? lesson.checklistPoints[0] ?? ''),
+    stripMarkdown(bullets[2] ?? lesson.checklistPoints[0] ?? primaryTerm.definition),
     stripMarkdown(
       lesson.cards.find((c) => c.commonMistake)?.commonMistake ??
         lesson.checklistPoints[1] ??
@@ -585,37 +665,48 @@ function buildSynthesizedExamQuestionForSubtopic(
     ),
   ].filter(Boolean);
 
-  const partCMarkPoints: MarkPoint[] = partCBullets.slice(0, 3).map((pt, idx) => ({
-    id: `${course.id}-ex-${subtopic.id}-c-mp${idx + 1}`,
+  const partCBullets = Array.from(new Set(rawPartCBullets)).slice(0, 3);
+  if (partCBullets.length === 0) {
+    partCBullets.push(stripMarkdown(primaryTerm.definition));
+  }
+
+  const partCMarkPoints: MarkPoint[] = partCBullets.map((pt, idx) => ({
+    id: `ex-syn-${subtopic.id}-c-mp${idx + 1}`,
     markDescription: pt,
     requiredKeywordGroups: extractKeywords(pt, 2),
   }));
+  const partCMarks = partCMarkPoints.length;
+
+  const partAPlaced = placeCorrectOption(
+    stripMarkdown(primaryTerm.definition),
+    [
+      otherDefs[0] ?? `A process that opposes ${subtopic.title.toLowerCase()} in Topic ${topic.number}.`,
+      otherDefs[1] ?? `An unrelated feature from another section of ${topic.title.toLowerCase()}.`,
+      otherDefs[2] ?? `A constant quantity independent of ${primaryTerm.term.toLowerCase()}.`,
+    ],
+    `${subtopic.id}:exam-syn-a`
+  );
 
   return {
-    id: `${course.id}-exam-syn-${subtopic.id}`,
+    id: `exam-syn-${subtopic.id}`,
     subtopicId: subtopic.id,
     number: questionNumber,
-    stimulus: `Topic ${topic.number} (${topic.title}) — Specification Question on ${subtopic.code} ${subtopic.title}: A student is revising ${lesson.cards.map((c) => c.title.toLowerCase()).join(' and ')} for ${course.qualificationLabel} ${course.subjectName} (${course.boardLabel} ${course.specCode}). Answer all parts of the question below.`,
+    stimulus: `Topic ${topic.number} (${topic.title}) — Structured Question on ${subtopic.code} ${subtopic.title}. Use your knowledge of ${lesson.cards.map((c) => c.title.toLowerCase()).join(' and ')} to answer parts (a) to (c).`,
     diagram,
     parts: [
       {
-        id: `${course.id}-exam-syn-${subtopic.id}-a`,
+        id: `exam-syn-${subtopic.id}-a`,
         label: 'a',
-        prompt: `Which statement best describes ${primaryTerm.term} in ${subtopic.code} ${subtopic.title}?`,
+        prompt: `Which statement best describes ${primaryTerm.term}?`,
         kind: 'mcq',
         marks: 1,
-        options: [
-          otherDefs[0] ?? `A process that prevents ${subtopic.title.toLowerCase()} from occurring.`,
-          stripMarkdown(primaryTerm.definition),
-          otherDefs[1] ?? `An unrelated variable not assessed in Topic ${topic.number}.`,
-          otherDefs[2] ?? `A constant quantity that is independent of ${primaryTerm.term.toLowerCase()}.`,
-        ],
-        correctIndex: 1,
+        options: partAPlaced.options,
+        correctIndex: partAPlaced.correctIndex,
       },
       {
-        id: `${course.id}-exam-syn-${subtopic.id}-b`,
+        id: `exam-syn-${subtopic.id}-b`,
         label: 'b',
-        prompt: `Define ${primaryTerm.term} and state one key specification principle for ${subtopic.code} ${subtopic.title}.`,
+        prompt: `Define ${primaryTerm.term} and state one key principle of ${subtopic.title}.`,
         kind: 'short-answer',
         marks: 2,
         rubric: {
@@ -623,26 +714,26 @@ function buildSynthesizedExamQuestionForSubtopic(
           modelAnswer: partBModel,
           markPoints: [
             {
-              id: `${course.id}-ex-${subtopic.id}-b-mp1`,
+              id: `ex-syn-${subtopic.id}-b-mp1`,
               markDescription: `Correct definition of ${primaryTerm.term}: ${stripMarkdown(primaryTerm.definition)}`,
               requiredKeywordGroups: extractKeywords(`${primaryTerm.term} ${primaryTerm.definition}`, 2),
             },
             {
-              id: `${course.id}-ex-${subtopic.id}-b-mp2`,
-              markDescription: `Key specification detail: ${stripMarkdown(bullets[0] ?? lesson.checklistPoints[0] ?? primaryTerm.definition)}`,
+              id: `ex-syn-${subtopic.id}-b-mp2`,
+              markDescription: `Key principle: ${stripMarkdown(bullets[0] ?? lesson.checklistPoints[0] ?? primaryTerm.definition)}`,
               requiredKeywordGroups: extractKeywords(bullets[0] ?? lesson.checklistPoints[0] ?? primaryTerm.definition, 2),
             },
           ],
         },
       },
       {
-        id: `${course.id}-exam-syn-${subtopic.id}-c`,
+        id: `exam-syn-${subtopic.id}-c`,
         label: 'c',
-        prompt: `Explain the key mechanisms or applications of ${secondCard?.title ?? subtopic.title} and how to avoid common errors in exam responses.`,
+        prompt: `Explain the key mechanisms or applications of ${secondCard?.title ?? subtopic.title}.`,
         kind: 'short-answer',
-        marks: 3,
+        marks: partCMarks,
         rubric: {
-          maxMarks: 3,
+          maxMarks: partCMarks,
           modelAnswer: partCBullets.join(' '),
           markPoints: partCMarkPoints,
         },
@@ -652,11 +743,11 @@ function buildSynthesizedExamQuestionForSubtopic(
 }
 
 function buildSynthesizedCheatSheetForTopic(
-  course: CourseDefinition,
+  notes: Record<string, NoteLesson>,
   topic: TopicDefinition
 ): CheatSheetItem {
   const sections: CheatSheetSection[] = topic.subtopics.map((sub) => {
-    const lesson = course.notes[sub.id];
+    const lesson = notes[sub.id];
     if (!lesson) {
       return {
         heading: `${sub.code} ${sub.title}`,
@@ -676,7 +767,7 @@ function buildSynthesizedCheatSheetForTopic(
     };
   });
 
-  const topicTerms = topic.subtopics.flatMap((sub) => course.notes[sub.id]?.keyTerms ?? []).slice(0, 5);
+  const topicTerms = topic.subtopics.flatMap((sub) => notes[sub.id]?.keyTerms ?? []).slice(0, 5);
   if (topicTerms.length > 0) {
     sections.push({
       heading: `Topic ${topic.number} Key Terms & Definitions`,
@@ -685,7 +776,7 @@ function buildSynthesizedCheatSheetForTopic(
   }
 
   return {
-    id: `${course.id}-cs-topic-${topic.number}`,
+    id: `syn-cs-topic-${topic.number}`,
     slug: `topic-${topic.number}-${topic.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`,
     title: `Topic ${topic.number}: ${topic.title}`,
     topicNumber: topic.number,
@@ -823,10 +914,73 @@ function buildCompletePastPapers(
   return result;
 }
 
+interface BundleOutput {
+  keyTerms: KeyTermEntry[];
+  quizzes: QuizQuestion[];
+  flashcards: FlashcardItem[];
+  examPractice: ExamQuestionItem[];
+  cheatSheets: CheatSheetItem[];
+}
+
+interface CachedBundleEntry {
+  topics: TopicDefinition[];
+  quizzes: QuizQuestion[];
+  flashcards: FlashcardItem[];
+  cheatSheets: CheatSheetItem[];
+  examPractice: ExamQuestionItem[];
+  keyTerms: KeyTermEntry[];
+  output: BundleOutput;
+}
+
 const completedCourseCache = new Map<string, CourseDefinition>();
+const bundleContentCache = new WeakMap<Record<string, NoteLesson>, CachedBundleEntry[]>();
+
+function findCachedBundle(
+  notes: Record<string, NoteLesson>,
+  topics: TopicDefinition[],
+  quizzes: QuizQuestion[],
+  flashcards: FlashcardItem[],
+  cheatSheets: CheatSheetItem[],
+  examPractice: ExamQuestionItem[],
+  keyTerms: KeyTermEntry[]
+): BundleOutput | undefined {
+  const entries = bundleContentCache.get(notes);
+  if (!entries) return undefined;
+  const hit = entries.find(
+    (e) =>
+      e.topics === topics &&
+      e.quizzes === quizzes &&
+      e.flashcards === flashcards &&
+      e.cheatSheets === cheatSheets &&
+      e.examPractice === examPractice &&
+      e.keyTerms === keyTerms
+  );
+  return hit?.output;
+}
+
+function storeCachedBundle(
+  notes: Record<string, NoteLesson>,
+  entry: CachedBundleEntry
+): void {
+  const existing = bundleContentCache.get(notes);
+  if (existing) {
+    const alreadyStored = existing.some(
+      (e) =>
+        e.topics === entry.topics &&
+        e.quizzes === entry.quizzes &&
+        e.flashcards === entry.flashcards &&
+        e.cheatSheets === entry.cheatSheets &&
+        e.examPractice === entry.examPractice &&
+        e.keyTerms === entry.keyTerms
+    );
+    if (!alreadyStored) existing.push(entry);
+  } else {
+    bundleContentCache.set(notes, [entry]);
+  }
+}
 
 export function ensureCompleteCourseContent(course: CourseDefinition): CourseDefinition {
-  const cacheKey = `${course.id}::${course.topics.length}::${course.quizzes.length}::${course.flashcards.length}::${course.cheatSheets.length}::${course.examPractice.length}::${course.pastPapers.length}`;
+  const cacheKey = `${course.id}::${course.board}::${course.tier}::${course.topics.length}::${course.quizzes.length}::${course.flashcards.length}::${course.cheatSheets.length}::${course.examPractice.length}::${course.pastPapers.length}::${course.keyTerms.length}`;
   const cached = completedCourseCache.get(cacheKey);
   if (cached) return cached;
 
@@ -854,9 +1008,20 @@ export function ensureCompleteCourseContent(course: CourseDefinition): CourseDef
     return completedPastOnly;
   }
 
-  // Merge and deduplicate keyTerms across course.keyTerms + NoteLesson.keyTerms + glossaryPills
-  const keyTerms: KeyTermEntry[] = [];
-  const seenTerms = new Set<string>();
+  let bundleOut = findCachedBundle(
+    course.notes,
+    topics,
+    course.quizzes,
+    course.flashcards,
+    course.cheatSheets,
+    course.examPractice,
+    course.keyTerms
+  );
+
+  if (!bundleOut) {
+    // Merge and deduplicate keyTerms across course.keyTerms + NoteLesson.keyTerms + glossaryPills
+    const keyTerms: KeyTermEntry[] = [];
+    const seenTerms = new Set<string>();
 
   for (const kt of course.keyTerms) {
     const norm = kt.term.trim().toLowerCase();
@@ -877,7 +1042,7 @@ export function ensureCompleteCourseContent(course: CourseDefinition): CourseDef
         if (!norm || seenTerms.has(norm)) return;
         seenTerms.add(norm);
         keyTerms.push({
-          id: `${course.id}-kt-${sub.id}-${idx + 1}`,
+          id: `kt-${sub.id}-${idx + 1}`,
           term: kt.term,
           definition: sanitizeKeyTermDefinition(kt.term, kt.definition),
           topicNumber: topic.number,
@@ -893,7 +1058,7 @@ export function ensureCompleteCourseContent(course: CourseDefinition): CourseDef
           seenTerms.add(norm);
           const displayTerm = pill.term.charAt(0).toUpperCase() + pill.term.slice(1);
           keyTerms.push({
-            id: `${course.id}-kt-pill-${sub.id}-${cIdx + 1}-${pIdx + 1}`,
+            id: `kt-pill-${sub.id}-${cIdx + 1}-${pIdx + 1}`,
             term: displayTerm,
             definition: sanitizeKeyTermDefinition(displayTerm, pill.definition),
             topicNumber: topic.number,
@@ -926,7 +1091,6 @@ export function ensureCompleteCourseContent(course: CourseDefinition): CourseDef
       if (lesson) {
         quizzes.push(
           ...buildSynthesizedQuizzesForSubtopic(
-            course,
             topic,
             sub,
             lesson,
@@ -936,7 +1100,7 @@ export function ensureCompleteCourseContent(course: CourseDefinition): CourseDef
           )
         );
         flashcards.push(
-          ...buildSynthesizedFlashcardsForSubtopic(course, sub, lesson, existingFcs)
+          ...buildSynthesizedFlashcardsForSubtopic(sub, lesson, existingFcs)
         );
         if (existingExams.length > 0) {
           existingExams.forEach((ex) => {
@@ -945,7 +1109,6 @@ export function ensureCompleteCourseContent(course: CourseDefinition): CourseDef
         } else {
           examPractice.push(
             buildSynthesizedExamQuestionForSubtopic(
-              course,
               topic,
               sub,
               lesson,
@@ -964,23 +1127,46 @@ export function ensureCompleteCourseContent(course: CourseDefinition): CourseDef
     }
   }
 
-  // Guarantee 1 CheatSheetItem per topic (sorted by topicNumber)
-  const cheatSheets: CheatSheetItem[] = topics.map((topic) => {
-    const existing = course.cheatSheets.find((cs) => cs.topicNumber === topic.number);
-    return existing ?? buildSynthesizedCheatSheetForTopic(course, topic);
-  });
+    // Guarantee 1 CheatSheetItem per topic (sorted by topicNumber)
+    const cheatSheets: CheatSheetItem[] = topics.map((topic) => {
+      const existing = course.cheatSheets.find((cs) => cs.topicNumber === topic.number);
+      return existing ?? buildSynthesizedCheatSheetForTopic(course.notes, topic);
+    });
+
+    bundleOut = { keyTerms, quizzes, flashcards, examPractice, cheatSheets };
+
+    // Register input refs AND output refs so aliased bundles and resolveCourseVariant hit O(1) cache
+    storeCachedBundle(course.notes, {
+      topics,
+      quizzes: course.quizzes,
+      flashcards: course.flashcards,
+      cheatSheets: course.cheatSheets,
+      examPractice: course.examPractice,
+      keyTerms: course.keyTerms,
+      output: bundleOut,
+    });
+    storeCachedBundle(course.notes, {
+      topics,
+      quizzes: bundleOut.quizzes,
+      flashcards: bundleOut.flashcards,
+      cheatSheets: bundleOut.cheatSheets,
+      examPractice: bundleOut.examPractice,
+      keyTerms: bundleOut.keyTerms,
+      output: bundleOut,
+    });
+  }
 
   const completed: CourseDefinition = {
     ...course,
     topics,
-    quizzes,
-    flashcards,
-    cheatSheets,
-    examPractice,
+    quizzes: bundleOut.quizzes,
+    flashcards: bundleOut.flashcards,
+    cheatSheets: bundleOut.cheatSheets,
+    examPractice: bundleOut.examPractice,
     pastPapers,
-    keyTerms,
-    totalQuestionsCount: quizzes.length,
-    totalFlashcardsCount: course.isMaths ? 0 : flashcards.length,
+    keyTerms: bundleOut.keyTerms,
+    totalQuestionsCount: bundleOut.quizzes.length,
+    totalFlashcardsCount: bundleOut.flashcards.length,
   };
 
   completedCourseCache.set(cacheKey, completed);

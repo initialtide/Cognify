@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
   AlertTriangle,
   ArrowRight,
@@ -17,11 +17,13 @@ import {
   ThumbsUp,
 } from 'lucide-react';
 import { Link, useLocation, useParams } from 'react-router-dom';
+import { EducationalDiagram } from '../../components/artwork/Diagrams';
 import { StudyTopBar } from '../../components/layout/StudyTopBar';
 import { ALL_COURSES, getCourseById } from '../../data/catalog';
 import { useApp } from '../../store/AppContext';
 import { FlashcardItem } from '../../types/curriculum';
 import { playSound } from '../../utils/soundEffects';
+import { renderInlineMarkdown } from './NotesViewerPage';
 
 function shuffleArray<T>(items: T[]): T[] {
   const copy = [...items];
@@ -66,14 +68,26 @@ export const FlashcardsPlayerPage: React.FC = () => {
     allSubtopics.find((s) => s.id === subtopicId)?.title ??
     `${course.subjectName} Flashcards`;
 
+  const savedConfidenceMap = profile.progressByCourse[course.id]?.flashcardConfidence;
+  const savedConfidenceRef = useRef(savedConfidenceMap);
+  savedConfidenceRef.current = savedConfidenceMap;
+
   const [browseMode, setBrowseMode] = useState(false);
   const [deckQueue, setDeckQueue] = useState<FlashcardItem[]>(cards);
   const [idx, setIdx] = useState(0);
   const [flipped, setFlipped] = useState(false);
   const [showHint, setShowHint] = useState(false);
   const [sessionXp, setSessionXp] = useState(0);
-  const [confidentIds, setConfidentIds] = useState<string[]>([]);
-  const [stillLearningIds, setStillLearningIds] = useState<string[]>([]);
+  const [confidentIds, setConfidentIds] = useState<string[]>(() =>
+    cards
+      .filter((c) => savedConfidenceMap?.[c.id]?.status === 'confident')
+      .map((c) => c.id)
+  );
+  const [stillLearningIds, setStillLearningIds] = useState<string[]>(() =>
+    cards
+      .filter((c) => savedConfidenceMap?.[c.id]?.status === 'still-learning')
+      .map((c) => c.id)
+  );
   const [filterStillLearning, setFilterStillLearning] = useState(false);
   const [roundVersion, setRoundVersion] = useState(0);
 
@@ -82,17 +96,22 @@ export const FlashcardsPlayerPage: React.FC = () => {
   const [cardFeedback, setCardFeedback] = useState<Record<string, 'up' | 'down' | 'flag' | null>>({});
 
   useEffect(() => {
+    const saved = savedConfidenceRef.current;
     setDeckQueue(cards);
     setIdx(0);
     setFlipped(false);
     setShowHint(false);
-    setConfidentIds([]);
-    setStillLearningIds([]);
+    setConfidentIds(
+      cards.filter((c) => saved?.[c.id]?.status === 'confident').map((c) => c.id)
+    );
+    setStillLearningIds(
+      cards.filter((c) => saved?.[c.id]?.status === 'still-learning').map((c) => c.id)
+    );
     setFilterStillLearning(false);
     setBrowseFlippedIds({});
     setSessionXp(0);
     setRoundVersion((v) => v + 1);
-  }, [cards]);
+  }, [cards, course.id]);
 
   const activeCard = deckQueue[idx];
   const isComplete = !browseMode && (idx >= deckQueue.length || !activeCard);
@@ -264,6 +283,14 @@ export const FlashcardsPlayerPage: React.FC = () => {
   };
 
   const handleBrowseRate = (card: FlashcardItem, status: 'confident' | 'still-learning') => {
+    recordFlashcardConfidence(
+      course.id,
+      card.id,
+      status,
+      `${title} flashcards`,
+      card.subtopicId
+    );
+    setSessionXp((x) => x + (status === 'confident' ? 10 : 5));
     playSound(
       status === 'confident' ? 'correct' : 'flip',
       profile.preferences.soundEnabled,
@@ -412,14 +439,24 @@ export const FlashcardsPlayerPage: React.FC = () => {
                     >
                       {!isCardFlipped ? (
                         <div className="sp-fc-front-body" style={{ padding: '10px 8px' }}>
-                          <div className="sp-fc-front-text">{card.front}</div>
+                          <div className="sp-fc-front-text">{renderInlineMarkdown(card.front)}</div>
                         </div>
                       ) : (
-                        <ul className="sp-fc-back-bullets">
-                          {card.backBullets.map((b, i) => (
-                            <li key={i}>{b}</li>
-                          ))}
-                        </ul>
+                        <div>
+                          <ul className="sp-fc-back-bullets">
+                            {card.backBullets.map((b, i) => (
+                              <li key={i}>{renderInlineMarkdown(b)}</li>
+                            ))}
+                          </ul>
+                          {card.diagram && (
+                            <div
+                              className="sp-exam-diagram-frame"
+                              style={{ marginTop: 12, marginBottom: 4 }}
+                            >
+                              <EducationalDiagram kind={card.diagram} compact />
+                            </div>
+                          )}
+                        </div>
                       )}
                     </div>
 
@@ -664,13 +701,13 @@ export const FlashcardsPlayerPage: React.FC = () => {
                     </div>
 
                     <div className="sp-fc-front-body">
-                      <div className="sp-fc-front-text">{activeCard.front}</div>
+                      <div className="sp-fc-front-text">{renderInlineMarkdown(activeCard.front)}</div>
 
                       {activeCard.hint && (
                         <div onClick={(e) => e.stopPropagation()}>
                           {showHint ? (
                             <div className="sp-fc-hint-box">
-                              <strong>Hint:</strong> {activeCard.hint}
+                              <strong>Hint:</strong> {renderInlineMarkdown(activeCard.hint)}
                             </div>
                           ) : (
                             <button
@@ -737,9 +774,18 @@ export const FlashcardsPlayerPage: React.FC = () => {
 
                     <ul className="sp-fc-back-bullets">
                       {activeCard.backBullets.map((b, bIdx) => (
-                        <li key={bIdx}>{b}</li>
+                        <li key={bIdx}>{renderInlineMarkdown(b)}</li>
                       ))}
                     </ul>
+
+                    {activeCard.diagram && (
+                      <div
+                        className="sp-exam-diagram-frame"
+                        style={{ marginTop: 12, marginBottom: 4 }}
+                      >
+                        <EducationalDiagram kind={activeCard.diagram} compact />
+                      </div>
+                    )}
 
                     <div className="sp-fc-face__footer">
                       <span className="sp-fc-tap-hint">Tap card to flip</span>

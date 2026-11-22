@@ -649,7 +649,7 @@ export const StudyTopBar: React.FC<StudyTopBarProps> = ({
                   onClick={() => setOptionsOpen(false)}
                   className="sp-options-action sp-focusable"
                 >
-                  <BookOpen size={16} /> Open notes
+                  <BookOpen size={16} /> {course.isMaths ? 'Open lessons' : 'Open notes'}
                 </Link>
               )}
 

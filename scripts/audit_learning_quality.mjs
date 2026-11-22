@@ -158,6 +158,169 @@ function scoreLesson(lesson, qualification) {
   };
 }
 
+function normalizeForGradability(raw) {
+  return String(raw ?? '')
+    .toLowerCase()
+    .replace(/['’`]/g, '')
+    .replace(/[^a-z0-9.×xμµ\s/-]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function isMarkPointGradable(mp) {
+  if (!mp || typeof mp !== 'object') return false;
+  if (mp.numericMatch) {
+    return (
+      typeof mp.numericMatch.value === 'number' &&
+      Number.isFinite(mp.numericMatch.value) &&
+      typeof mp.numericMatch.tolerance === 'number' &&
+      Number.isFinite(mp.numericMatch.tolerance) &&
+      mp.numericMatch.tolerance >= 0
+    );
+  }
+  if (!Array.isArray(mp.requiredKeywordGroups) || mp.requiredKeywordGroups.length === 0) {
+    return false;
+  }
+  return mp.requiredKeywordGroups.every(
+    (group) =>
+      Array.isArray(group) &&
+      group.length > 0 &&
+      group.some((kw) => typeof kw === 'string' && normalizeForGradability(kw).length > 0)
+  );
+}
+
+function auditCourseAssessments(course, subtopicCount) {
+  const quizzes = Array.isArray(course.quizzes) ? course.quizzes : [];
+  const flashcards = Array.isArray(course.flashcards) ? course.flashcards : [];
+  const examPractice = Array.isArray(course.examPractice) ? course.examPractice : [];
+  const cheatSheets = Array.isArray(course.cheatSheets) ? course.cheatSheets : [];
+  const topicCount = Array.isArray(course.topics) ? course.topics.length : 0;
+
+  let explicitQuizCount = 0;
+  let bakedQuizCount = 0;
+  let runtimeSynQuizCount = 0;
+
+  for (const q of quizzes) {
+    const id = String(q?.id ?? '');
+    if (/-syn-/i.test(id)) {
+      runtimeSynQuizCount++;
+    } else if (/-extra-/i.test(id)) {
+      bakedQuizCount++;
+    } else {
+      explicitQuizCount++;
+    }
+  }
+
+  let explicitFlashcardCount = 0;
+  let bakedFlashcardCount = 0;
+  let runtimeSynFlashcardCount = 0;
+
+  for (const f of flashcards) {
+    const id = String(f?.id ?? '');
+    if (/-syn-/i.test(id)) {
+      runtimeSynFlashcardCount++;
+    } else if (/-extra-/i.test(id)) {
+      bakedFlashcardCount++;
+    } else {
+      explicitFlashcardCount++;
+    }
+  }
+
+  let explicitExamCount = 0;
+  let bakedExamCount = 0;
+  let runtimeSynExamCount = 0;
+
+  for (const e of examPractice) {
+    const id = String(e?.id ?? '');
+    const stimulus = String(e?.stimulus ?? '');
+    if (/-exam-syn-|-syn-|^exam-syn-/i.test(id)) {
+      runtimeSynExamCount++;
+    } else if (/-extra-/i.test(id) || /^Structured exam question on Topic\b/i.test(stimulus)) {
+      bakedExamCount++;
+    } else {
+      explicitExamCount++;
+    }
+  }
+
+  let explicitCheatSheetCount = 0;
+  let runtimeSynCheatSheetCount = 0;
+
+  for (const cs of cheatSheets) {
+    const id = String(cs?.id ?? '');
+    if (/-cs-(?:syn-)?topic-|^syn-cs-topic-/i.test(id)) {
+      runtimeSynCheatSheetCount++;
+    } else {
+      explicitCheatSheetCount++;
+    }
+  }
+
+  let totalShortAnswerMarkPoints = 0;
+  let gradableShortAnswerMarkPoints = 0;
+  let ungradableShortAnswerMarkPoints = 0;
+
+  const inspectRubric = (rubric, fallbackMarks) => {
+    const markPoints = rubric?.markPoints;
+    if (!Array.isArray(markPoints) || markPoints.length === 0) {
+      const missingCount = Math.max(1, Number(fallbackMarks) || 1);
+      totalShortAnswerMarkPoints += missingCount;
+      ungradableShortAnswerMarkPoints += missingCount;
+      return;
+    }
+    for (const mp of markPoints) {
+      totalShortAnswerMarkPoints++;
+      if (isMarkPointGradable(mp)) {
+        gradableShortAnswerMarkPoints++;
+      } else {
+        ungradableShortAnswerMarkPoints++;
+      }
+    }
+  };
+
+  for (const q of quizzes) {
+    if (q?.type === 'short-answer') {
+      inspectRubric(q.rubric, q.marks);
+    }
+  }
+
+  for (const ex of examPractice) {
+    for (const part of ex?.parts ?? []) {
+      if (part?.kind === 'short-answer') {
+        inspectRubric(part.rubric, part.marks);
+      }
+    }
+  }
+
+  const gradableRubricPct =
+    totalShortAnswerMarkPoints === 0
+      ? 100
+      : Math.round((gradableShortAnswerMarkPoints / totalShortAnswerMarkPoints) * 100);
+
+  return {
+    explicitQuizCount,
+    explicitFlashcardCount,
+    explicitExamCount,
+    explicitCheatSheetCount,
+    explicitQuizzesPerSubtopic:
+      subtopicCount > 0 ? Number((explicitQuizCount / subtopicCount).toFixed(1)) : 0,
+    explicitFlashcardsPerSubtopic:
+      subtopicCount > 0 ? Number((explicitFlashcardCount / subtopicCount).toFixed(1)) : 0,
+    explicitExamsPerSubtopic:
+      subtopicCount > 0 ? Number((explicitExamCount / subtopicCount).toFixed(1)) : 0,
+    explicitCheatSheetsPerTopic:
+      topicCount > 0 ? Number((explicitCheatSheetCount / topicCount).toFixed(1)) : 0,
+    bakedExtraCount: bakedQuizCount + bakedFlashcardCount + bakedExamCount,
+    runtimeSynCount:
+      runtimeSynQuizCount +
+      runtimeSynFlashcardCount +
+      runtimeSynExamCount +
+      runtimeSynCheatSheetCount,
+    totalShortAnswerMarkPoints,
+    gradableShortAnswerMarkPoints,
+    ungradableShortAnswerMarkPoints,
+    gradableRubricPct,
+  };
+}
+
 function summarizeSubjectCoverage(catalogSubjects, targetSlugs) {
   const bySlug = new Map(catalogSubjects.map((s) => [s.slug, s]));
   const unlocked = [];
@@ -252,10 +415,12 @@ function buildReport(catalog) {
     }
 
     const avgScore = subtopics.length > 0 ? Math.round(scoreSum / subtopics.length) : 0;
+    const assessment = auditCourseAssessments(course, subtopics.length);
     courseSummaries.push({
       courseId: course.id,
       qualification: course.qualification,
       subjectName: course.subjectName,
+      topicCount: course.topics.length,
       subtopicCount: subtopics.length,
       avgScore,
       subsectionPct: Math.round((withSubsections / subtopics.length) * 100),
@@ -264,20 +429,80 @@ function buildReport(catalog) {
       memoryAidPct: Math.round((withMemoryAid / subtopics.length) * 100),
       diagramCount: withDiagram,
       underTargetCards,
+      ...assessment,
     });
   }
 
   const totalSubtopics = allLessonAudit.length;
+  const totalTopics = courseSummaries.reduce((acc, c) => acc + c.topicCount, 0);
   const overallScore =
     totalSubtopics > 0
       ? Math.round(allLessonAudit.reduce((acc, l) => acc + l.score, 0) / totalSubtopics)
       : 0;
+
+  const totalExplicitQuizzes = courseSummaries.reduce((acc, c) => acc + c.explicitQuizCount, 0);
+  const totalExplicitFlashcards = courseSummaries.reduce((acc, c) => acc + c.explicitFlashcardCount, 0);
+  const totalExplicitExams = courseSummaries.reduce((acc, c) => acc + c.explicitExamCount, 0);
+  const totalExplicitCheatSheets = courseSummaries.reduce((acc, c) => acc + c.explicitCheatSheetCount, 0);
+  const totalBakedExtraCount = courseSummaries.reduce((acc, c) => acc + c.bakedExtraCount, 0);
+  const totalRuntimeSynCount = courseSummaries.reduce((acc, c) => acc + c.runtimeSynCount, 0);
+  const totalMarkPoints = courseSummaries.reduce((acc, c) => acc + c.totalShortAnswerMarkPoints, 0);
+  const totalGradableMarkPoints = courseSummaries.reduce(
+    (acc, c) => acc + c.gradableShortAnswerMarkPoints,
+    0
+  );
+  const totalUngradableMarkPoints = courseSummaries.reduce(
+    (acc, c) => acc + c.ungradableShortAnswerMarkPoints,
+    0
+  );
+  const overallGradableRubricPct =
+    totalMarkPoints === 0 ? 100 : Math.round((totalGradableMarkPoints / totalMarkPoints) * 100);
+
+  const flaggedCourses = courseSummaries
+    .filter((c) => c.ungradableShortAnswerMarkPoints > 0)
+    .map((c) => ({
+      courseId: c.courseId,
+      ungradableShortAnswerMarkPoints: c.ungradableShortAnswerMarkPoints,
+      totalShortAnswerMarkPoints: c.totalShortAnswerMarkPoints,
+      gradableRubricPct: c.gradableRubricPct,
+    }));
+
+  const assessmentSummary = {
+    explicitQuizzesPerSubtopic:
+      totalSubtopics > 0 ? Number((totalExplicitQuizzes / totalSubtopics).toFixed(1)) : 0,
+    explicitFlashcardsPerSubtopic:
+      totalSubtopics > 0 ? Number((totalExplicitFlashcards / totalSubtopics).toFixed(1)) : 0,
+    explicitExamsPerSubtopic:
+      totalSubtopics > 0 ? Number((totalExplicitExams / totalSubtopics).toFixed(1)) : 0,
+    explicitCheatSheetsPerTopic:
+      totalTopics > 0 ? Number((totalExplicitCheatSheets / totalTopics).toFixed(1)) : 0,
+    totalExplicitQuizzes,
+    totalExplicitFlashcards,
+    totalExplicitExams,
+    totalExplicitCheatSheets,
+    totalBakedExtraCount,
+    totalRuntimeSynCount,
+    totalShortAnswerMarkPoints: totalMarkPoints,
+    gradableShortAnswerMarkPoints: totalGradableMarkPoints,
+    ungradableShortAnswerMarkPoints: totalUngradableMarkPoints,
+    gradableRubricPct: overallGradableRubricPct,
+    flaggedCourses,
+  };
 
   const igcseCoverage = summarizeSubjectCoverage(catalog.IGCSE_SUBJECTS, TARGET_IGCSE_SLUGS);
   const alevelCoverage = summarizeSubjectCoverage(catalog.ALEVEL_SUBJECTS, TARGET_ALEVEL_SLUGS);
 
   // Build prioritized Next Best Learning Upgrades queue
   const nextUpgrades = [];
+
+  for (const flagged of flaggedCourses) {
+    nextUpgrades.push({
+      priority: 'P1',
+      category: 'Fix Ungradable Rubrics',
+      target: `${flagged.courseId} (${flagged.gradableRubricPct}% gradable)`,
+      reason: `${flagged.ungradableShortAnswerMarkPoints}/${flagged.totalShortAnswerMarkPoints} short-answer markPoints lack valid requiredKeywordGroups or numericMatch.`,
+    });
+  }
 
   for (const stub of igcseCoverage.stubs) {
     nextUpgrades.push({
@@ -349,6 +574,7 @@ function buildReport(catalog) {
     overallScore,
     totalCourses: courseSummaries.length,
     totalSubtopics,
+    assessmentSummary,
     igcseCoverage,
     alevelCoverage,
     courseSummaries,
@@ -378,6 +604,27 @@ function renderMarkdown(report) {
   lines.push(
     `| **A-Level Unlocked Subjects** | ${report.alevelCoverage.unlocked.length} / ${report.alevelCoverage.targetCount} (${report.alevelCoverage.stubs.length} stubs) | ${report.alevelCoverage.targetCount} / ${report.alevelCoverage.targetCount} |`
   );
+  lines.push(
+    `| **Explicit Authored Quizzes / Subtopic** | ${report.assessmentSummary.explicitQuizzesPerSubtopic} | 5.0+ |`
+  );
+  lines.push(
+    `| **Explicit Authored Flashcards / Subtopic** | ${report.assessmentSummary.explicitFlashcardsPerSubtopic} | 5.0+ |`
+  );
+  lines.push(
+    `| **Explicit Authored Exam Practice / Subtopic** | ${report.assessmentSummary.explicitExamsPerSubtopic} | 1.0+ |`
+  );
+  lines.push(
+    `| **Explicit Authored Cheat Sheets / Topic** | ${report.assessmentSummary.explicitCheatSheetsPerTopic} | 1.0 |`
+  );
+  lines.push(
+    `| **Baked \`-extra-\` / Template Items** | ${report.assessmentSummary.totalBakedExtraCount} | 0 |`
+  );
+  lines.push(
+    `| **Runtime \`-syn-\` Fallback Items** | ${report.assessmentSummary.totalRuntimeSynCount} | 0 |`
+  );
+  lines.push(
+    `| **Gradable Short-Answer MarkPoints** | **${report.assessmentSummary.gradableRubricPct}%** (${report.assessmentSummary.gradableShortAnswerMarkPoints} / ${report.assessmentSummary.totalShortAnswerMarkPoints}, ${report.assessmentSummary.ungradableShortAnswerMarkPoints} ungradable) | 100% |`
+  );
   lines.push('');
 
   lines.push('## Top Next Learning Upgrades (Auto-Prioritized)');
@@ -398,6 +645,19 @@ function renderMarkdown(report) {
   for (const c of report.courseSummaries) {
     lines.push(
       `| \`${c.courseId}\` | ${c.subtopicCount} | **${c.avgScore}/100** | ${c.subsectionPct}% | ${c.examplePct}% | ${c.commonMistakePct}% | ${c.memoryAidPct}% | ${c.diagramCount} |`
+    );
+  }
+  lines.push('');
+
+  lines.push('## Assessment Authorship & Rubric Gradability Breakdown');
+  lines.push('');
+  lines.push(
+    '| Course | Auth. Quiz/Sub | Auth. Cards/Sub | Auth. Exam/Sub | Auth. Sheets/Topic | Baked `-extra-` | Runtime `-syn-` | Gradable MarkPoints |'
+  );
+  lines.push('| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |');
+  for (const c of report.courseSummaries) {
+    lines.push(
+      `| \`${c.courseId}\` | ${c.explicitQuizzesPerSubtopic} | ${c.explicitFlashcardsPerSubtopic} | ${c.explicitExamsPerSubtopic} | ${c.explicitCheatSheetsPerTopic} | ${c.bakedExtraCount} | ${c.runtimeSynCount} | ${c.gradableRubricPct}% (${c.gradableShortAnswerMarkPoints}/${c.totalShortAnswerMarkPoints}) |`
     );
   }
   lines.push('');
@@ -423,6 +683,7 @@ function renderMarkdown(report) {
 }
 
 function renderTerminal(report) {
+  const a = report.assessmentSummary;
   console.log(`\n=== Cognify Learning Quality Audit ===`);
   console.log(
     `Overall Learning Depth Score: ${report.overallScore}/100 across ${report.totalCourses} courses (${report.totalSubtopics} subtopics)`
@@ -433,13 +694,28 @@ function renderTerminal(report) {
   console.log(
     `A-Level Subjects: ${report.alevelCoverage.unlocked.length}/${report.alevelCoverage.targetCount} unlocked (${report.alevelCoverage.missing.length} not yet added)`
   );
+  console.log(
+    `Assessment Authorship: quiz=${a.explicitQuizzesPerSubtopic}/sub, cards=${a.explicitFlashcardsPerSubtopic}/sub, exam=${a.explicitExamsPerSubtopic}/sub, sheets=${a.explicitCheatSheetsPerTopic}/topic | baked -extra-=${a.totalBakedExtraCount}, runtime -syn-=${a.totalRuntimeSynCount}`
+  );
+  console.log(
+    `Short-Answer Rubric Gradability: ${a.gradableRubricPct}% (${a.gradableShortAnswerMarkPoints}/${a.totalShortAnswerMarkPoints} gradable, ${a.ungradableShortAnswerMarkPoints} ungradable)`
+  );
 
-  console.log('\nCourse Scores:');
+  console.log('\nCourse Scores & Assessment Authorship:');
   for (const c of report.courseSummaries) {
     const padId = c.courseId.padEnd(32, ' ');
     console.log(
-      `  ${padId} ${String(c.avgScore).padStart(3, ' ')}/100  (subtopics=${String(c.subtopicCount).padStart(2, ' ')}, subsections=${String(c.subsectionPct).padStart(3, ' ')}%, examples=${String(c.examplePct).padStart(3, ' ')}%, mistakes=${String(c.commonMistakePct).padStart(3, ' ')}%)`
+      `  ${padId} ${String(c.avgScore).padStart(3, ' ')}/100  (sub=${String(c.subtopicCount).padStart(2, ' ')}, q=${String(c.explicitQuizzesPerSubtopic).padStart(3, ' ')}/s, fc=${String(c.explicitFlashcardsPerSubtopic).padStart(3, ' ')}/s, ex=${String(c.explicitExamsPerSubtopic).padStart(3, ' ')}/s, extra=${String(c.bakedExtraCount).padStart(3, ' ')}, syn=${String(c.runtimeSynCount).padStart(3, ' ')}, gradable=${String(c.gradableRubricPct).padStart(3, ' ')}%)`
     );
+  }
+
+  if (a.flaggedCourses.length > 0) {
+    console.log('\nFlagged Ungradable Short-Answer Rubrics:');
+    for (const fc of a.flaggedCourses) {
+      console.log(
+        `  [UNGRADABLE] ${fc.courseId}: ${fc.ungradableShortAnswerMarkPoints}/${fc.totalShortAnswerMarkPoints} ungradable markPoints (${fc.gradableRubricPct}% gradable)`
+      );
+    }
   }
 
   console.log('\nTop Next Learning Upgrades:');
@@ -454,7 +730,7 @@ async function main() {
   const catalog = await loadCatalog();
   const report = buildReport(catalog);
 
-  if (args.has('--write-report')) {
+  if (args.has('--write-report') || args.has('--write')) {
     const reportPath = path.join(ROOT_DIR, 'docs', 'LEARNING_QUALITY_REPORT.md');
     fs.writeFileSync(reportPath, renderMarkdown(report), 'utf8');
     console.log(`Updated ${path.relative(ROOT_DIR, reportPath)}`);

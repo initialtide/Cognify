@@ -85,7 +85,7 @@ export const NavStreakFlameIcon: React.FC<IconProps> = ({ size = 22, className }
 
 export const StreakFlameTickIcon: React.FC<IconProps> = ({ size = 34, className }) => (
   <img
-    src="/assets/cognito/streak-flame-tick.png"
+    src={`${import.meta.env.BASE_URL}assets/cognito/streak-flame-tick.png`}
     alt=""
     aria-hidden="true"
     width={size}
