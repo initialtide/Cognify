@@ -6,28 +6,35 @@
 
 | Metric | Current | Target |
 | --- | --- | --- |
-| **Overall Learning Depth Score** | **60 / 100** | 95+ / 100 |
+| **Overall Learning Depth Score** | **67 / 100** | 95+ / 100 |
 | **Active Deep Courses Audited** | 15 | 31+ |
 | **Total Subtopic Lessons** | 219 | Growing |
 | **IGCSE Unlocked Subjects** | 5 / 13 (3 stubs) | 13 / 13 |
 | **A-Level Unlocked Subjects** | 5 / 14 (0 stubs) | 14 / 14 |
+| **Explicit Authored Quizzes / Subtopic** | 2.1 | 5.0+ |
+| **Explicit Authored Flashcards / Subtopic** | 2 | 5.0+ |
+| **Explicit Authored Exam Practice / Subtopic** | 0.4 | 1.0+ |
+| **Explicit Authored Cheat Sheets / Topic** | 0.8 | 1.0 |
+| **Baked `-extra-` / Template Items** | 403 | 0 |
+| **Runtime `-syn-` Fallback Items** | 1076 | 0 |
+| **Gradable Short-Answer MarkPoints** | **75%** (1060 / 1412, 352 ungradable) | 100% |
 
 ## Top Next Learning Upgrades (Auto-Prioritized)
 
 | Priority | Category | Target | Why It Improves Learning |
 | --- | --- | --- | --- |
+| **P1** | Fix Ungradable Rubrics | igcse-business-cie (10% gradable) | 96/107 short-answer markPoints lack valid requiredKeywordGroups or numericMatch. |
+| **P1** | Fix Ungradable Rubrics | igcse-maths-cie (7% gradable) | 130/140 short-answer markPoints lack valid requiredKeywordGroups or numericMatch. |
+| **P1** | Fix Ungradable Rubrics | igcse-physics-cie (12% gradable) | 126/143 short-answer markPoints lack valid requiredKeywordGroups or numericMatch. |
 | **P1** | Unlock Stub Subject | IGCSE computer-science | Currently shown in catalog as pastPapersOnly without interactive notes, videos, or active recall. |
 | **P1** | Unlock Stub Subject | IGCSE economics | Currently shown in catalog as pastPapersOnly without interactive notes, videos, or active recall. |
 | **P1** | Unlock Stub Subject | IGCSE english-language | Currently shown in catalog as pastPapersOnly without interactive notes, videos, or active recall. |
 | **P2** | Deepen Existing Notes | GCSE Biology (52/100) | subsections on 0% of subtopics; worked/concrete examples on 0% |
-| **P2** | Deepen Existing Notes | GCSE Chemistry (53/100) | subsections on 0% of subtopics; worked/concrete examples on 0% |
-| **P2** | Deepen Existing Notes | GCSE Combined Science (54/100) | subsections on 0% of subtopics; worked/concrete examples on 0% |
 | **P2** | Deepen Existing Notes | IGCSE Chemistry (56/100) | subsections on 0% of subtopics; worked/concrete examples on 0% |
-| **P2** | Deepen Existing Notes | GCSE Physics (57/100) | subsections on 0% of subtopics; worked/concrete examples on 0% |
 | **P2** | Deepen Existing Notes | IGCSE Business Studies (57/100) | subsections on 0% of subtopics; worked/concrete examples on 0% |
-| **P3** | Add Roadmap Subject | IGCSE english-literature | Planned in PLAN.md Phase 3 (target: 13 unlocked IGCSE subjects). |
-| **P3** | Add Roadmap Subject | IGCSE geography | Planned in PLAN.md Phase 3 (target: 13 unlocked IGCSE subjects). |
-| **P3** | Add Roadmap Subject | IGCSE history | Planned in PLAN.md Phase 3 (target: 13 unlocked IGCSE subjects). |
+| **P2** | Deepen Existing Notes | IGCSE Maths (58/100) | subsections on 0% of subtopics; worked/concrete examples on 0% |
+| **P2** | Deepen Existing Notes | A-LEVEL Maths (59/100) | subsections on 7% of subtopics; worked/concrete examples on 7% |
+| **P2** | Deepen Existing Notes | A-LEVEL Physics (61/100) | 16/16 subtopics have <3 cards; subsections on 25% of subtopics; worked/concrete examples on 25% |
 
 ## Course Pedagogical Depth Breakdown
 
@@ -39,15 +46,35 @@
 | `a-level-physics-aqa` | 16 | **61/100** | 25% | 25% | 100% | 100% | 4 |
 | `a-level-psychology-aqa` | 18 | **64/100** | 17% | 17% | 100% | 100% | 3 |
 | `gcse-biology-aqa-foundation` | 16 | **52/100** | 0% | 0% | 81% | 69% | 9 |
-| `gcse-chemistry-aqa-higher` | 12 | **53/100** | 0% | 0% | 92% | 42% | 3 |
-| `gcse-combined-aqa-higher` | 14 | **54/100** | 0% | 0% | 93% | 79% | 9 |
-| `gcse-maths-aqa-higher` | 8 | **59/100** | 0% | 0% | 100% | 100% | 0 |
-| `gcse-physics-aqa-higher` | 9 | **57/100** | 0% | 0% | 89% | 89% | 4 |
+| `gcse-chemistry-aqa-higher` | 12 | **100/100** | 100% | 100% | 100% | 100% | 3 |
+| `gcse-combined-aqa-higher` | 14 | **76/100** | 50% | 50% | 93% | 93% | 9 |
+| `gcse-maths-aqa-higher` | 8 | **100/100** | 100% | 100% | 100% | 100% | 2 |
+| `gcse-physics-aqa-higher` | 9 | **100/100** | 100% | 100% | 100% | 100% | 4 |
 | `igcse-biology-cie` | 20 | **64/100** | 5% | 5% | 100% | 95% | 7 |
 | `igcse-business-cie` | 12 | **57/100** | 0% | 0% | 100% | 58% | 0 |
 | `igcse-chemistry-cie` | 16 | **56/100** | 0% | 0% | 94% | 75% | 3 |
 | `igcse-maths-cie` | 15 | **58/100** | 0% | 0% | 100% | 93% | 0 |
 | `igcse-physics-cie` | 16 | **62/100** | 0% | 0% | 100% | 100% | 5 |
+
+## Assessment Authorship & Rubric Gradability Breakdown
+
+| Course | Auth. Quiz/Sub | Auth. Cards/Sub | Auth. Exam/Sub | Auth. Sheets/Topic | Baked `-extra-` | Runtime `-syn-` | Gradable MarkPoints |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| `a-level-biology-aqa` | 2 | 1.9 | 0.5 | 1 | 0 | 105 | 100% (99/99) |
+| `a-level-chemistry-aqa` | 1.9 | 1.6 | 0.5 | 1 | 0 | 111 | 100% (96/96) |
+| `a-level-maths-cie` | 2 | 2 | 0.4 | 1 | 0 | 99 | 100% (78/78) |
+| `a-level-physics-aqa` | 1.9 | 1.6 | 0.5 | 1 | 0 | 112 | 100% (95/95) |
+| `a-level-psychology-aqa` | 2 | 2 | 0.3 | 1 | 0 | 120 | 100% (97/97) |
+| `gcse-biology-aqa-foundation` | 2.2 | 1.7 | 0.2 | 0.6 | 0 | 120 | 100% (88/88) |
+| `gcse-chemistry-aqa-higher` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (65/65) |
+| `gcse-combined-aqa-higher` | 3.1 | 3.1 | 0.4 | 0.2 | 0 | 74 | 100% (99/99) |
+| `gcse-maths-aqa-higher` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (46/46) |
+| `gcse-physics-aqa-higher` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (65/65) |
+| `igcse-biology-cie` | 1 | 1.1 | 0.1 | 0.3 | 0 | 183 | 100% (108/108) |
+| `igcse-business-cie` | 0.8 | 0.8 | 0.1 | 1 | 111 | 0 | 10% (11/107) |
+| `igcse-chemistry-cie` | 0.9 | 0.9 | 0.1 | 0.3 | 0 | 152 | 100% (86/86) |
+| `igcse-maths-cie` | 0.7 | 0.5 | 0 | 1 | 148 | 0 | 7% (10/140) |
+| `igcse-physics-cie` | 0.8 | 1.1 | 0.1 | 1 | 144 | 0 | 12% (17/143) |
 
 ## Shallowest Subtopics (Best Quick Wins)
 

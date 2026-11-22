@@ -653,21 +653,24 @@ describe('M1 Platform Fixes & Foundation Contracts', () => {
     expect(typeof report.assessmentSummary.totalRuntimeSynCount).toBe('number');
     expect(report.assessmentSummary.totalShortAnswerMarkPoints).toBeGreaterThan(0);
 
-    // Accurately flags untouched legacy M2 courses that have pre-existing ungradable markPoints
-    const flaggedById = new Map(
-      report.assessmentSummary.flaggedCourses.map(
-        (c: { courseId: string; ungradableShortAnswerMarkPoints: number }) => [c.courseId, c]
-      )
-    );
-    expect(report.assessmentSummary.ungradableShortAnswerMarkPoints).toBeGreaterThan(0);
-    expect(flaggedById.has('gcse-physics-aqa-higher')).toBe(true);
+    // flaggedCourses must match exactly every course with ungradableShortAnswerMarkPoints > 0
+    const expectedFlaggedIds = report.courseSummaries
+      .filter((c: { ungradableShortAnswerMarkPoints: number }) => c.ungradableShortAnswerMarkPoints > 0)
+      .map((c: { courseId: string }) => c.courseId)
+      .sort();
+    const actualFlaggedIds = report.assessmentSummary.flaggedCourses
+      .map((c: { courseId: string }) => c.courseId)
+      .sort();
+    expect(actualFlaggedIds).toEqual(expectedFlaggedIds);
 
-    // Clean courses (e.g. A-Level Biology, IGCSE Biology) report 100% gradable markPoints
-    const aLevelBio = report.courseSummaries.find(
-      (c: { courseId: string }) => c.courseId === 'a-level-biology-aqa'
-    );
-    expect(aLevelBio).toBeDefined();
-    expect(aLevelBio.gradableRubricPct).toBe(100);
-    expect(aLevelBio.ungradableShortAnswerMarkPoints).toBe(0);
+    // Upgraded & clean courses report 100% gradable markPoints
+    for (const cleanId of ['a-level-biology-aqa', 'gcse-physics-aqa-higher', 'gcse-maths-aqa-higher']) {
+      const summary = report.courseSummaries.find(
+        (c: { courseId: string }) => c.courseId === cleanId
+      );
+      expect(summary).toBeDefined();
+      expect(summary.gradableRubricPct).toBe(100);
+      expect(summary.ungradableShortAnswerMarkPoints).toBe(0);
+    }
   });
 });
