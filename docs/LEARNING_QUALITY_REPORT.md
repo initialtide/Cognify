@@ -6,18 +6,18 @@
 
 | Metric | Current | Target |
 | --- | --- | --- |
-| **Overall Learning Depth Score** | **67 / 100** | 95+ / 100 |
+| **Overall Learning Depth Score** | **72 / 100** | 95+ / 100 |
 | **Active Deep Courses Audited** | 15 | 31+ |
 | **Total Subtopic Lessons** | 219 | Growing |
 | **IGCSE Unlocked Subjects** | 5 / 13 (3 stubs) | 13 / 13 |
 | **A-Level Unlocked Subjects** | 5 / 14 (0 stubs) | 14 / 14 |
-| **Explicit Authored Quizzes / Subtopic** | 2.1 | 5.0+ |
-| **Explicit Authored Flashcards / Subtopic** | 2 | 5.0+ |
+| **Explicit Authored Quizzes / Subtopic** | 2.3 | 5.0+ |
+| **Explicit Authored Flashcards / Subtopic** | 2.2 | 5.0+ |
 | **Explicit Authored Exam Practice / Subtopic** | 0.4 | 1.0+ |
 | **Explicit Authored Cheat Sheets / Topic** | 0.8 | 1.0 |
 | **Baked `-extra-` / Template Items** | 403 | 0 |
-| **Runtime `-syn-` Fallback Items** | 1076 | 0 |
-| **Gradable Short-Answer MarkPoints** | **75%** (1060 / 1412, 352 ungradable) | 100% |
+| **Runtime `-syn-` Fallback Items** | 949 | 0 |
+| **Gradable Short-Answer MarkPoints** | **75%** (1045 / 1397, 352 ungradable) | 100% |
 
 ## Top Next Learning Upgrades (Auto-Prioritized)
 
@@ -29,12 +29,12 @@
 | **P1** | Unlock Stub Subject | IGCSE computer-science | Currently shown in catalog as pastPapersOnly without interactive notes, videos, or active recall. |
 | **P1** | Unlock Stub Subject | IGCSE economics | Currently shown in catalog as pastPapersOnly without interactive notes, videos, or active recall. |
 | **P1** | Unlock Stub Subject | IGCSE english-language | Currently shown in catalog as pastPapersOnly without interactive notes, videos, or active recall. |
-| **P2** | Deepen Existing Notes | GCSE Biology (52/100) | subsections on 0% of subtopics; worked/concrete examples on 0% |
 | **P2** | Deepen Existing Notes | IGCSE Chemistry (56/100) | subsections on 0% of subtopics; worked/concrete examples on 0% |
 | **P2** | Deepen Existing Notes | IGCSE Business Studies (57/100) | subsections on 0% of subtopics; worked/concrete examples on 0% |
 | **P2** | Deepen Existing Notes | IGCSE Maths (58/100) | subsections on 0% of subtopics; worked/concrete examples on 0% |
 | **P2** | Deepen Existing Notes | A-LEVEL Maths (59/100) | subsections on 7% of subtopics; worked/concrete examples on 7% |
 | **P2** | Deepen Existing Notes | A-LEVEL Physics (61/100) | 16/16 subtopics have <3 cards; subsections on 25% of subtopics; worked/concrete examples on 25% |
+| **P2** | Deepen Existing Notes | IGCSE Physics (62/100) | subsections on 0% of subtopics; worked/concrete examples on 0% |
 
 ## Course Pedagogical Depth Breakdown
 
@@ -45,9 +45,9 @@
 | `a-level-maths-cie` | 15 | **59/100** | 7% | 7% | 100% | 93% | 2 |
 | `a-level-physics-aqa` | 16 | **61/100** | 25% | 25% | 100% | 100% | 4 |
 | `a-level-psychology-aqa` | 18 | **64/100** | 17% | 17% | 100% | 100% | 3 |
-| `gcse-biology-aqa-foundation` | 16 | **52/100** | 0% | 0% | 81% | 69% | 9 |
+| `gcse-biology-aqa-foundation` | 16 | **100/100** | 100% | 100% | 100% | 100% | 9 |
 | `gcse-chemistry-aqa-higher` | 12 | **100/100** | 100% | 100% | 100% | 100% | 3 |
-| `gcse-combined-aqa-higher` | 14 | **76/100** | 50% | 50% | 93% | 93% | 9 |
+| `gcse-combined-aqa-higher` | 14 | **100/100** | 100% | 100% | 100% | 100% | 9 |
 | `gcse-maths-aqa-higher` | 8 | **100/100** | 100% | 100% | 100% | 100% | 2 |
 | `gcse-physics-aqa-higher` | 9 | **100/100** | 100% | 100% | 100% | 100% | 4 |
 | `igcse-biology-cie` | 20 | **64/100** | 5% | 5% | 100% | 95% | 7 |
@@ -65,9 +65,9 @@
 | `a-level-maths-cie` | 2 | 2 | 0.4 | 1 | 0 | 99 | 100% (78/78) |
 | `a-level-physics-aqa` | 1.9 | 1.6 | 0.5 | 1 | 0 | 112 | 100% (95/95) |
 | `a-level-psychology-aqa` | 2 | 2 | 0.3 | 1 | 0 | 120 | 100% (97/97) |
-| `gcse-biology-aqa-foundation` | 2.2 | 1.7 | 0.2 | 0.6 | 0 | 120 | 100% (88/88) |
+| `gcse-biology-aqa-foundation` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (78/78) |
 | `gcse-chemistry-aqa-higher` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (65/65) |
-| `gcse-combined-aqa-higher` | 3.1 | 3.1 | 0.4 | 0.2 | 0 | 74 | 100% (99/99) |
+| `gcse-combined-aqa-higher` | 3.1 | 3.1 | 0.4 | 0.3 | 0 | 67 | 100% (94/94) |
 | `gcse-maths-aqa-higher` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (46/46) |
 | `gcse-physics-aqa-higher` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (65/65) |
 | `igcse-biology-cie` | 1 | 1.1 | 0.1 | 0.3 | 0 | 183 | 100% (108/108) |
@@ -80,18 +80,18 @@
 
 | Course | Subtopic | Score | Missing Learning Elements |
 | --- | --- | ---: | --- |
-| `gcse-biology-aqa-foundation` | `bio-1-3` — Cell Division & Mitosis | 36/100 | no subsections, no worked/concrete examples, no glossaryPills, no commonMistake |
-| `gcse-combined-aqa-higher` | `bio-1-3` — Cell Division & Mitosis | 36/100 | no subsections, no worked/concrete examples, no glossaryPills, no commonMistake |
-| `gcse-biology-aqa-foundation` | `bio-2-1` — Enzymes & The Digestive System | 36/100 | no subsections, no worked/concrete examples, no glossaryPills, no memoryAid |
-| `gcse-combined-aqa-higher` | `bio-2-1` — Enzymes & The Digestive System | 36/100 | no subsections, no worked/concrete examples, no glossaryPills, no memoryAid |
 | `igcse-chemistry-cie` | `igchem-8-1` — Periodic Table: Groups I, VII, VIII & Transition Metals | 39/100 | no subsections, no worked/concrete examples, no commonMistake, no memoryAid |
-| `gcse-biology-aqa-foundation` | `bio-1-2` — Microscopy & Magnification | 46/100 | no subsections, no worked/concrete examples, no glossaryPills |
-| `gcse-combined-aqa-higher` | `bio-1-2` — Microscopy & Magnification | 46/100 | no subsections, no worked/concrete examples, no glossaryPills |
 | `a-level-maths-cie` | `al-maths-4-1` — Differentiation — First Principles, Chain, Product & Quotient Rules | 49/100 | no subsections, no worked/concrete examples, no memoryAid |
-| `gcse-biology-aqa-foundation` | `bio-3-1` — Pathogens & Communicable Diseases | 49/100 | no subsections, no worked/concrete examples, no memoryAid |
-| `gcse-biology-aqa-foundation` | `bio-4-1` — Photosynthesis & Limiting Factors | 49/100 | no subsections, no worked/concrete examples, no commonMistake |
-| `gcse-biology-aqa-foundation` | `bio-4-2` — Aerobic & Anaerobic Respiration | 49/100 | no subsections, no worked/concrete examples, no memoryAid |
-| `gcse-biology-aqa-foundation` | `bio-6-1` — DNA, Meiosis & Genetic Inheritance | 49/100 | no subsections, no worked/concrete examples, no memoryAid |
+| `igcse-chemistry-cie` | `igchem-10-1` — Water Treatment, Air Pollutants & Climate Change | 49/100 | no subsections, no worked/concrete examples, no memoryAid |
+| `igcse-chemistry-cie` | `igchem-6-1` — Collision Theory, Rates of Reaction & Catalysts | 49/100 | no subsections, no worked/concrete examples, no memoryAid |
+| `igcse-chemistry-cie` | `igchem-9-1` — Crude Oil, Fractional Distillation, Alkanes & Alkenes | 49/100 | no subsections, no worked/concrete examples, no memoryAid |
+| `igcse-business-cie` | `igcse-bus-2-2` — Organisation Structure, Leadership, Recruitment, Training & Communication | 49/100 | no subsections, no worked/concrete examples, no memoryAid |
+| `igcse-business-cie` | `igcse-bus-3-1` — Market Segmentation, Niche vs Mass Markets & Market Research | 49/100 | no subsections, no worked/concrete examples, no memoryAid |
+| `igcse-business-cie` | `igcse-bus-5-2` — Income Statements, Balance Sheets & Financial Ratios | 49/100 | no subsections, no worked/concrete examples, no memoryAid |
+| `igcse-maths-cie` | `igcse-maths-1-3` — Ratio, Direct Proportion & Inverse Proportion | 49/100 | no subsections, no worked/concrete examples, no memoryAid |
+| `a-level-maths-cie` | `al-maths-3-2` — Trigonometric Identities, Addition Formulae & R-Formula | 50/100 | no subsections, no worked/concrete examples, no glossaryPills |
+| `a-level-chemistry-aqa` | `al-chem-1-1` — Atomic Orbitals, Sub-Shells & Electronic Configuration | 51/100 | only 2 cards (target >=3), no subsections, no worked/concrete examples |
+| `a-level-chemistry-aqa` | `al-chem-1-2` — TOF Mass Spectrometry & Ionisation Energy Trends | 51/100 | only 2 cards (target >=3), no subsections, no worked/concrete examples |
 
 ## Roadmap Coverage Status
 
