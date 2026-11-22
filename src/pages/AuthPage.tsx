@@ -106,7 +106,7 @@ export const AuthPage: React.FC<AuthPageProps> = ({ initialMode = 'signin' }) =>
             ))}
           </div>
 
-          {isAuthenticated && (
+          {isAuthenticated ? (
             <div
               style={{
                 display: 'flex',
@@ -128,6 +128,14 @@ export const AuthPage: React.FC<AuthPageProps> = ({ initialMode = 'signin' }) =>
                 Open Dashboard
               </Link>
             </div>
+          ) : (
+            <Link
+              to="/onboarding"
+              className="tactile-btn tactile-btn--sm"
+              style={{ width: '100%', justifyContent: 'center' }}
+            >
+              <Sparkles size={15} /> New here? Start 1-minute guided setup
+            </Link>
           )}
         </aside>
       </div>

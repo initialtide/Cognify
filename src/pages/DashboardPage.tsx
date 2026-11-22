@@ -267,13 +267,13 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
         </section>
       )}
 
-      {/* Free Account Save Strip for Guests */}
+      {/* Guided Onboarding / Save Progress Card for Guests */}
       {!isAuthenticated && !dismissedSaveTip && (
         <section
           className="cognito-card"
           style={{
             marginTop: 14,
-            padding: '14px 18px',
+            padding: '15px 18px',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
@@ -285,8 +285,8 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
           <div style={{ display: 'flex', alignItems: 'center', gap: 11, minWidth: 0 }}>
             <div
               style={{
-                width: 36,
-                height: 36,
+                width: 38,
+                height: 38,
                 borderRadius: 10,
                 backgroundColor: 'var(--color-blue-50)',
                 color: 'var(--color-blue-600)',
@@ -296,26 +296,39 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
                 flexShrink: 0,
               }}
             >
-              <ShieldCheck size={19} />
+              <ShieldCheck size={20} />
             </div>
             <div style={{ minWidth: 0 }}>
-              <div style={{ fontWeight: 800, fontSize: '0.93rem', color: 'var(--text-heading)' }}>
-                Save your revision progress
+              <div style={{ fontWeight: 800, fontSize: '0.95rem', color: 'var(--text-heading)' }}>
+                {!profile.onboardingCompleted
+                  ? 'Personalise Cognify in 60 seconds'
+                  : 'Save your revision progress'}
               </div>
               <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)' }}>
-                Create a free account or sign in to keep your XP, streaks, quiz scores, and flashcards protected.
+                {!profile.onboardingCompleted
+                  ? 'Pick your IGCSE or A-Level subjects, exam boards, daily XP target, and mascot — and save your account.'
+                  : 'Create a free account or sign in to keep your XP, streaks, quiz scores, and flashcards protected.'}
               </div>
             </div>
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
-            <button
-              type="button"
-              className="tactile-btn tactile-btn--sm tactile-btn--solid-blue"
-              onClick={() => (onOpenAuthModal ? onOpenAuthModal('register') : navigate('/register'))}
-            >
-              <UserPlus size={14} /> Create account
-            </button>
+            {!profile.onboardingCompleted ? (
+              <Link
+                to="/onboarding"
+                className="tactile-btn tactile-btn--sm tactile-btn--solid-blue"
+              >
+                Start guided setup <ArrowRight size={14} />
+              </Link>
+            ) : (
+              <button
+                type="button"
+                className="tactile-btn tactile-btn--sm tactile-btn--solid-blue"
+                onClick={() => (onOpenAuthModal ? onOpenAuthModal('register') : navigate('/register'))}
+              >
+                <UserPlus size={14} /> Create account
+              </button>
+            )}
             <button
               type="button"
               className="tactile-btn tactile-btn--sm"
@@ -325,7 +338,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
             </button>
             <button
               type="button"
-              aria-label="Dismiss save progress reminder"
+              aria-label="Dismiss setup reminder"
               onClick={() => setDismissedSaveTip(true)}
               style={{
                 border: 0,

@@ -91,11 +91,28 @@ export interface AuthActionResult {
   error?: string;
 }
 
+export type OnboardingQualification = 'igcse' | 'a-level' | 'both' | 'gcse';
+
+export interface OnboardingCompletionInput {
+  name: string;
+  yearGroup: string;
+  avatarId: AvatarId;
+  dailyXpGoal: 100 | 150 | 250 | 500;
+  selectedQualification: OnboardingQualification;
+  enrolledCourseIds: string[];
+  account?: {
+    email: string;
+    password: string;
+  };
+}
+
 export interface UserProfile {
   id: string;
   name: string;
   email?: string;
   isGuest?: boolean;
+  onboardingCompleted?: boolean;
+  selectedQualification?: OnboardingQualification;
   lastSavedAt?: string;
   yearGroup: string;
   avatarId: AvatarId;
