@@ -8,9 +8,9 @@ import {
   X,
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { ALL_COURSES } from '../../data/catalog';
+import { ALL_COURSES, getCourseById } from '../../data/catalog';
 import { useApp } from '../../store/AppContext';
-import { SubjectIconId } from '../../types/curriculum';
+import { CourseDefinition, SubjectIconId } from '../../types/curriculum';
 import { SubjectIcon } from '../artwork/SubjectIcons';
 
 interface QuickSearchModalProps {
@@ -133,8 +133,17 @@ export const QuickSearchModal: React.FC<QuickSearchModalProps> = ({ open, onClos
     const q = query.trim().toLowerCase();
 
     if (!q) {
-      // Default quick-jump list: enrolled courses first, up to 8 items
-      const enrolled = ALL_COURSES.filter((c) => enrolledSet.has(c.id));
+      // Default quick-jump list: enrolled courses first (including dynamic variants), up to 8 items
+      const seen = new Set<string>();
+      const enrolled: CourseDefinition[] = [];
+      for (const id of profile.enrolledCourseIds) {
+        if (!id || seen.has(id)) continue;
+        const resolved = getCourseById(id);
+        if (!resolved || seen.has(resolved.id)) continue;
+        seen.add(id);
+        seen.add(resolved.id);
+        enrolled.push(resolved);
+      }
       const fallback = enrolled.length > 0 ? enrolled : ALL_COURSES.slice(0, 8);
       return fallback.slice(0, 8).map((c, idx) => ({
         id: `default-${c.id}`,
@@ -190,7 +199,7 @@ export const QuickSearchModal: React.FC<QuickSearchModalProps> = ({ open, onClos
               { label: c.isMaths ? 'Lesson' : 'Notes', to: `/course/${c.id}/notes/${sub.id}` },
               { label: 'Quiz', to: `/course/${c.id}/quiz/${sub.id}` },
             ];
-            if (!c.isMaths && c.flashcards.length > 0) {
+            if (c.flashcards.length > 0) {
               jumps.push({ label: 'Cards', to: `/course/${c.id}/flashcards/${sub.id}` });
             }
             if (hasExam) {
@@ -249,7 +258,7 @@ export const QuickSearchModal: React.FC<QuickSearchModalProps> = ({ open, onClos
       ...cheatSheetItems.slice(0, 4),
       ...keyTermItems.slice(0, 5),
     ];
-  }, [query, canonicalContentCourses, enrolledSet]);
+  }, [query, canonicalContentCourses, enrolledSet, profile.enrolledCourseIds]);
 
   useEffect(() => {
     setSelectedIndex(0);

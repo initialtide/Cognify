@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { ArrowLeft, Check, ChevronRight, Plus } from 'lucide-react';
-import { ALL_COURSES, QUALIFICATIONS } from '../../data/catalog';
+import { ALL_COURSES, getCourseById, QUALIFICATIONS } from '../../data/catalog';
 import { useApp } from '../../store/AppContext';
-import { QualificationId } from '../../types/curriculum';
+import { CourseDefinition, QualificationId } from '../../types/curriculum';
 import { SubjectIcon } from '../artwork/SubjectIcons';
 import { CognitoDialog } from './CognitoDialog';
 
@@ -13,10 +13,19 @@ export const ManageCoursesModal: React.FC<{ open: boolean; onClose: () => void }
   const { profile, toggleEnrollCourse } = useApp();
   const [drillQual, setDrillQual] = useState<QualificationId | null>(null);
 
+  const seenEnrolled = new Set<string>();
+  const enrolledCourses: CourseDefinition[] = [];
+  for (const id of profile.enrolledCourseIds) {
+    if (!id || seenEnrolled.has(id)) continue;
+    const resolved = getCourseById(id);
+    if (!resolved || seenEnrolled.has(resolved.id)) continue;
+    seenEnrolled.add(id);
+    seenEnrolled.add(resolved.id);
+    enrolledCourses.push(resolved);
+  }
+
   const enrolledByQual = QUALIFICATIONS.map((q) => {
-    const courses = ALL_COURSES.filter(
-      (c) => c.qualification === q.id && profile.enrolledCourseIds.includes(c.id)
-    );
+    const courses = enrolledCourses.filter((c) => c.qualification === q.id);
     return { ...q, courses };
   });
 
@@ -24,9 +33,24 @@ export const ManageCoursesModal: React.FC<{ open: boolean; onClose: () => void }
   const unaddedGroups = enrolledByQual.filter((g) => g.courses.length === 0);
 
   const drillInfo = drillQual ? QUALIFICATIONS.find((q) => q.id === drillQual) : null;
-  const drillCourses = drillQual
-    ? ALL_COURSES.filter((c) => c.qualification === drillQual)
-    : [];
+  const drillCourses = (() => {
+    if (!drillQual) return [];
+    const seenDrill = new Set<string>();
+    const merged: CourseDefinition[] = [];
+    for (const c of enrolledCourses) {
+      if (c.qualification === drillQual && !seenDrill.has(c.id)) {
+        seenDrill.add(c.id);
+        merged.push(c);
+      }
+    }
+    for (const c of ALL_COURSES) {
+      if (c.qualification === drillQual && !seenDrill.has(c.id)) {
+        seenDrill.add(c.id);
+        merged.push(c);
+      }
+    }
+    return merged;
+  })();
 
   return (
     <CognitoDialog
@@ -119,7 +143,7 @@ export const ManageCoursesModal: React.FC<{ open: boolean; onClose: () => void }
           {/* YOUR COURSES */}
           <div className="cognito-card" style={{ paddingTop: 10 }}>
             <span className="tilted-badge tilted-badge--edge tilted-badge--navy">
-              YOUR COURSES ({profile.enrolledCourseIds.length})
+              YOUR COURSES ({enrolledCourses.length})
             </span>
             {activeGroups.length === 0 ? (
               <div style={{ padding: '22px 18px', color: 'var(--text-muted)' }}>

@@ -707,7 +707,8 @@ dialog.cognito-dialog[open] {
 }
 
 /* Subject Hero Color Themes */
-.subject-theme--biology {
+.subject-theme--biology,
+.subject-theme--food-nutrition {
   --subject-border: #98e7cc;
   --subject-tint: #eefbf6;
   --subject-accent: #42ac88;
@@ -725,7 +726,9 @@ dialog.cognito-dialog[open] {
   --subject-accent: #8d22cc;
 }
 
-.subject-theme--maths {
+.subject-theme--maths,
+.subject-theme--further-maths,
+.subject-theme--english-literature {
   --subject-border: #f3c0cd;
   --subject-tint: #fdf2f6;
   --subject-accent: #e16181;
@@ -734,7 +737,9 @@ dialog.cognito-dialog[open] {
 .subject-theme--business,
 .subject-theme--computer-science,
 .subject-theme--geography,
-.subject-theme--history {
+.subject-theme--history,
+.subject-theme--pe,
+.subject-theme--french {
   --subject-border: #a4d5fa;
   --subject-tint: #ecf7ff;
   --subject-accent: #1a96f3;
@@ -742,20 +747,37 @@ dialog.cognito-dialog[open] {
 
 .subject-theme--economics,
 .subject-theme--english-language,
-.subject-theme--languages {
+.subject-theme--languages,
+.subject-theme--rs,
+.subject-theme--design-technology,
+.subject-theme--german {
   --subject-border: #fed07a;
   --subject-tint: #fff7e9;
   --subject-accent: #ca8d1b;
 }
 
-.subject-theme--psychology {
+.subject-theme--spanish {
+  --subject-border: #f9b4af;
+  --subject-tint: #fdeceb;
+  --subject-accent: #f04438;
+}
+
+.subject-theme--psychology,
+.subject-theme--sociology {
   --subject-border: #d1a7eb;
   --subject-tint: #f6edfb;
   --subject-accent: #8d22cc;
 }
 
-:root[data-theme="dark"] [class*="subject-theme--"] {
+:root[data-theme="dark"] [class*="subject-theme--"],
+:root:has(> head > meta[name="color-scheme"][content="dark"]) [class*="subject-theme--"] {
   --subject-tint: rgba(255, 255, 255, 0.02);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not(:has(> head > meta[name="color-scheme"][content="light"])) [class*="subject-theme--"] {
+    --subject-tint: rgba(255, 255, 255, 0.02);
+  }
 }
 
 /* Responsive Two-Column Layouts */

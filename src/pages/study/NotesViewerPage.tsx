@@ -31,6 +31,39 @@ import { useApp } from '../../store/AppContext';
 import { GlossaryPill, NoteCardContent, NoteLesson, VideoTimestamp } from '../../types/curriculum';
 import { playSound } from '../../utils/soundEffects';
 
+const INLINE_MARKDOWN_REGEX = /(\*\*[^*]+\*\*|\*[^\s*](?:[^*]*[^\s*])?\*)/g;
+
+export function stripInlineMarkdown(text: string): string {
+  return text.replace(INLINE_MARKDOWN_REGEX, (seg) => {
+    if (seg.startsWith('**') && seg.endsWith('**') && seg.length > 4) {
+      return seg.slice(2, -2);
+    }
+    if (seg.startsWith('*') && seg.endsWith('*') && seg.length > 2) {
+      return seg.slice(1, -1);
+    }
+    return seg;
+  });
+}
+
+export function renderInlineMarkdown(text: string): React.ReactNode {
+  if (!text) return text;
+  const segments = text.split(INLINE_MARKDOWN_REGEX);
+  if (segments.length === 1) return text;
+  return segments.map((seg, idx) => {
+    if (seg.startsWith('**') && seg.endsWith('**') && seg.length > 4) {
+      return (
+        <strong key={`b-${idx}`} style={{ fontWeight: 700, color: 'var(--text-heading)' }}>
+          {seg.slice(2, -2)}
+        </strong>
+      );
+    }
+    if (seg.startsWith('*') && seg.endsWith('*') && seg.length > 2) {
+      return <em key={`i-${idx}`}>{seg.slice(1, -1)}</em>;
+    }
+    return <React.Fragment key={`t-${idx}`}>{seg}</React.Fragment>;
+  });
+}
+
 interface YTPlayerInstance {
   seekTo: (seconds: number, allowSeekAhead?: boolean) => void;
   playVideo: () => void;
@@ -1302,7 +1335,7 @@ export const NotesViewerPage: React.FC = () => {
                   <ChevronRight size={17} color="var(--text-muted)" />
                 </Link>
 
-                {!course.isMaths && (
+                {course.flashcards.length > 0 && (
                   <Link to={`/course/${course.id}/flashcards/${lesson.subtopicId}`} className="end-action-row">
                     <span style={{ display: 'inline-flex', alignItems: 'center', gap: 10 }}>
                       <Copy size={18} color="var(--text-heading)" />
