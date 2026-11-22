@@ -6,26 +6,23 @@
 
 | Metric | Current | Target |
 | --- | --- | --- |
-| **Overall Learning Depth Score** | **93 / 100** | 95+ / 100 |
+| **Overall Learning Depth Score** | **100 / 100** | 95+ / 100 |
 | **Active Deep Courses Audited** | 18 | 31+ |
 | **Total Subtopic Lessons** | 241 | Growing |
 | **IGCSE Unlocked Subjects** | 8 / 13 (0 stubs) | 13 / 13 |
 | **A-Level Unlocked Subjects** | 5 / 14 (0 stubs) | 14 / 14 |
-| **Explicit Authored Quizzes / Subtopic** | 4.3 | 5.0+ |
-| **Explicit Authored Flashcards / Subtopic** | 4.2 | 5.0+ |
-| **Explicit Authored Exam Practice / Subtopic** | 0.8 | 1.0+ |
+| **Explicit Authored Quizzes / Subtopic** | 4.9 | 5.0+ |
+| **Explicit Authored Flashcards / Subtopic** | 4.9 | 5.0+ |
+| **Explicit Authored Exam Practice / Subtopic** | 1 | 1.0+ |
 | **Explicit Authored Cheat Sheets / Topic** | 1 | 1.0 |
 | **Baked `-extra-` / Template Items** | 0 | 0 |
-| **Runtime `-syn-` Fallback Items** | 403 | 0 |
-| **Gradable Short-Answer MarkPoints** | **100%** (1412 / 1412, 0 ungradable) | 100% |
+| **Runtime `-syn-` Fallback Items** | 67 | 0 |
+| **Gradable Short-Answer MarkPoints** | **100%** (1460 / 1460, 0 ungradable) | 100% |
 
 ## Top Next Learning Upgrades (Auto-Prioritized)
 
 | Priority | Category | Target | Why It Improves Learning |
 | --- | --- | --- | --- |
-| **P2** | Deepen Existing Notes | A-LEVEL Chemistry (64/100) | 12/16 subtopics have <3 cards; subsections on 25% of subtopics; worked/concrete examples on 25% |
-| **P2** | Deepen Existing Notes | A-LEVEL Psychology (64/100) | subsections on 17% of subtopics; worked/concrete examples on 17% |
-| **P2** | Deepen Existing Notes | A-LEVEL Biology (72/100) | subsections on 25% of subtopics; worked/concrete examples on 25% |
 | **P3** | Add Roadmap Subject | IGCSE english-literature | Planned in PLAN.md Phase 3 (target: 13 unlocked IGCSE subjects). |
 | **P3** | Add Roadmap Subject | IGCSE geography | Planned in PLAN.md Phase 3 (target: 13 unlocked IGCSE subjects). |
 | **P3** | Add Roadmap Subject | IGCSE history | Planned in PLAN.md Phase 3 (target: 13 unlocked IGCSE subjects). |
@@ -37,11 +34,11 @@
 
 | Course | Subtopics | Score | Subsections | Examples | Common Mistakes | Memory Aids | Diagrams |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| `a-level-biology-aqa` | 16 | **72/100** | 25% | 25% | 100% | 100% | 6 |
-| `a-level-chemistry-aqa` | 16 | **64/100** | 25% | 25% | 100% | 100% | 4 |
+| `a-level-biology-aqa` | 16 | **99/100** | 100% | 100% | 100% | 100% | 6 |
+| `a-level-chemistry-aqa` | 16 | **100/100** | 100% | 100% | 100% | 100% | 4 |
 | `a-level-maths-cie` | 15 | **100/100** | 100% | 100% | 100% | 100% | 2 |
 | `a-level-physics-aqa` | 16 | **100/100** | 100% | 100% | 100% | 100% | 4 |
-| `a-level-psychology-aqa` | 18 | **64/100** | 17% | 17% | 100% | 100% | 3 |
+| `a-level-psychology-aqa` | 18 | **97/100** | 100% | 100% | 100% | 100% | 3 |
 | `gcse-biology-aqa-foundation` | 16 | **100/100** | 100% | 100% | 100% | 100% | 9 |
 | `gcse-chemistry-aqa-higher` | 12 | **100/100** | 100% | 100% | 100% | 100% | 3 |
 | `gcse-combined-aqa-higher` | 14 | **100/100** | 100% | 100% | 100% | 100% | 9 |
@@ -60,11 +57,11 @@
 
 | Course | Auth. Quiz/Sub | Auth. Cards/Sub | Auth. Exam/Sub | Auth. Sheets/Topic | Baked `-extra-` | Runtime `-syn-` | Gradable MarkPoints |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| `a-level-biology-aqa` | 2 | 1.9 | 0.5 | 1 | 0 | 105 | 100% (99/99) |
-| `a-level-chemistry-aqa` | 1.9 | 1.6 | 0.5 | 1 | 0 | 111 | 100% (96/96) |
+| `a-level-biology-aqa` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (117/117) |
+| `a-level-chemistry-aqa` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (114/114) |
 | `a-level-maths-cie` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (90/90) |
 | `a-level-physics-aqa` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (115/115) |
-| `a-level-psychology-aqa` | 2 | 2 | 0.3 | 1 | 0 | 120 | 100% (97/97) |
+| `a-level-psychology-aqa` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (109/109) |
 | `gcse-biology-aqa-foundation` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (78/78) |
 | `gcse-chemistry-aqa-higher` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (65/65) |
 | `gcse-combined-aqa-higher` | 3.1 | 3.1 | 0.4 | 0.3 | 0 | 67 | 100% (94/94) |
@@ -83,18 +80,18 @@
 
 | Course | Subtopic | Score | Missing Learning Elements |
 | --- | --- | ---: | --- |
-| `a-level-chemistry-aqa` | `al-chem-1-1` — Atomic Orbitals, Sub-Shells & Electronic Configuration | 51/100 | only 2 cards (target >=3), no subsections, no worked/concrete examples |
-| `a-level-chemistry-aqa` | `al-chem-1-2` — TOF Mass Spectrometry & Ionisation Energy Trends | 51/100 | only 2 cards (target >=3), no subsections, no worked/concrete examples |
-| `a-level-chemistry-aqa` | `al-chem-3-2` — Electronegativity, Bond Polarity & Intermolecular Forces | 51/100 | only 2 cards (target >=3), no subsections, no worked/concrete examples |
-| `a-level-chemistry-aqa` | `al-chem-4-1` — Enthalpy Changes, Calorimetry & Hess’s Law Cycles | 51/100 | only 2 cards (target >=3), no subsections, no worked/concrete examples |
-| `a-level-chemistry-aqa` | `al-chem-6-1` — Dynamic Equilibria, Equilibrium Constants Kc & Kp | 51/100 | only 2 cards (target >=3), no subsections, no worked/concrete examples |
-| `a-level-chemistry-aqa` | `al-chem-7-1` — Period 3 Oxides, Group 2 & Group 7 Halogens/Halides | 51/100 | only 2 cards (target >=3), no subsections, no worked/concrete examples |
-| `a-level-chemistry-aqa` | `al-chem-8-2` — Alcohols, Carbonyls, Carboxylic Acids & Acyl Chlorides | 51/100 | only 2 cards (target >=3), no subsections, no worked/concrete examples |
-| `a-level-chemistry-aqa` | `al-chem-7-2` — Transition Metals, Complex Ions, Chelate Effect & Catalysis | 57/100 | only 2 cards (target >=3), no subsections, no worked/concrete examples |
-| `a-level-psychology-aqa` | `al-psy-1-2` — Observations, Self-Reports, Case Studies & Correlations | 59/100 | no subsections, no worked/concrete examples |
-| `a-level-psychology-aqa` | `al-psy-1-3` — Ethics, Validity, Reliability & Data Analysis | 59/100 | no subsections, no worked/concrete examples |
-| `a-level-psychology-aqa` | `al-psy-2-2` — Andrade (2010) Doodling & Baron-Cohen et al. (2001) Eyes Test | 59/100 | no subsections, no worked/concrete examples |
-| `a-level-psychology-aqa` | `al-psy-2-3` — Eyewitness Testimony (Loftus & Palmer) & Pozzulo et al. (2010) | 59/100 | no subsections, no worked/concrete examples |
+| `a-level-psychology-aqa` | `al-psy-3-3` — Biopsychology — Localisation, Synaptic Transmission & Fight-or-Flight | 90/100 | Polish depth |
+| `a-level-biology-aqa` | `al-bio-1-2` — Proteins, Enzymes, ATP & Nucleic Acids | 93/100 | Polish depth |
+| `a-level-biology-aqa` | `al-bio-5-1` — Photosynthesis: Light-Dependent & Calvin Cycle | 93/100 | Polish depth |
+| `a-level-psychology-aqa` | `al-psy-1-3` — Ethics, Validity, Reliability & Data Analysis | 94/100 | Polish depth |
+| `a-level-psychology-aqa` | `al-psy-2-3` — Eyewitness Testimony (Loftus & Palmer) & Pozzulo et al. (2010) | 94/100 | Polish depth |
+| `a-level-psychology-aqa` | `al-psy-3-1` — Dement & Kleitman (1957) Sleep & Dreams | 94/100 | Polish depth |
+| `a-level-psychology-aqa` | `al-psy-4-2` — Bandura et al. (1961) Bobo Doll & Social Learning Theory | 94/100 | Polish depth |
+| `a-level-psychology-aqa` | `al-psy-5-3` — Piliavin et al. (1969) Subway Samaritan & Perry et al. (2015) | 94/100 | Polish depth |
+| `a-level-psychology-aqa` | `al-psy-6-3` — Anxiety Disorders, Phobias, OCD & Treatment Evaluation | 94/100 | Polish depth |
+| `a-level-biology-aqa` | `al-bio-1-1` — Carbohydrates & Lipids | 100/100 | Polish depth |
+| `a-level-biology-aqa` | `al-bio-2-1` — Eukaryotic Ultrastructure, Microscopy & Mitosis | 100/100 | Polish depth |
+| `a-level-biology-aqa` | `al-bio-2-2` — Transport Across Membranes & The Immune Response | 100/100 | Polish depth |
 
 ## Roadmap Coverage Status
 
