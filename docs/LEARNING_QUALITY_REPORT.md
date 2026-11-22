@@ -6,26 +6,23 @@
 
 | Metric | Current | Target |
 | --- | --- | --- |
-| **Overall Learning Depth Score** | **87 / 100** | 95+ / 100 |
-| **Active Deep Courses Audited** | 15 | 31+ |
-| **Total Subtopic Lessons** | 219 | Growing |
-| **IGCSE Unlocked Subjects** | 5 / 13 (3 stubs) | 13 / 13 |
+| **Overall Learning Depth Score** | **88 / 100** | 95+ / 100 |
+| **Active Deep Courses Audited** | 18 | 31+ |
+| **Total Subtopic Lessons** | 241 | Growing |
+| **IGCSE Unlocked Subjects** | 8 / 13 (0 stubs) | 13 / 13 |
 | **A-Level Unlocked Subjects** | 5 / 14 (0 stubs) | 14 / 14 |
-| **Explicit Authored Quizzes / Subtopic** | 3.8 | 5.0+ |
-| **Explicit Authored Flashcards / Subtopic** | 3.7 | 5.0+ |
+| **Explicit Authored Quizzes / Subtopic** | 3.9 | 5.0+ |
+| **Explicit Authored Flashcards / Subtopic** | 3.8 | 5.0+ |
 | **Explicit Authored Exam Practice / Subtopic** | 0.8 | 1.0+ |
 | **Explicit Authored Cheat Sheets / Topic** | 1 | 1.0 |
 | **Baked `-extra-` / Template Items** | 0 | 0 |
 | **Runtime `-syn-` Fallback Items** | 614 | 0 |
-| **Gradable Short-Answer MarkPoints** | **100%** (1270 / 1270, 0 ungradable) | 100% |
+| **Gradable Short-Answer MarkPoints** | **100%** (1380 / 1380, 0 ungradable) | 100% |
 
 ## Top Next Learning Upgrades (Auto-Prioritized)
 
 | Priority | Category | Target | Why It Improves Learning |
 | --- | --- | --- | --- |
-| **P1** | Unlock Stub Subject | IGCSE computer-science | Currently shown in catalog as pastPapersOnly without interactive notes, videos, or active recall. |
-| **P1** | Unlock Stub Subject | IGCSE economics | Currently shown in catalog as pastPapersOnly without interactive notes, videos, or active recall. |
-| **P1** | Unlock Stub Subject | IGCSE english-language | Currently shown in catalog as pastPapersOnly without interactive notes, videos, or active recall. |
 | **P2** | Deepen Existing Notes | A-LEVEL Maths (59/100) | subsections on 7% of subtopics; worked/concrete examples on 7% |
 | **P2** | Deepen Existing Notes | A-LEVEL Physics (61/100) | 16/16 subtopics have <3 cards; subsections on 25% of subtopics; worked/concrete examples on 25% |
 | **P2** | Deepen Existing Notes | A-LEVEL Chemistry (64/100) | 12/16 subtopics have <3 cards; subsections on 25% of subtopics; worked/concrete examples on 25% |
@@ -35,6 +32,8 @@
 | **P3** | Add Roadmap Subject | IGCSE geography | Planned in PLAN.md Phase 3 (target: 13 unlocked IGCSE subjects). |
 | **P3** | Add Roadmap Subject | IGCSE history | Planned in PLAN.md Phase 3 (target: 13 unlocked IGCSE subjects). |
 | **P3** | Add Roadmap Subject | A-Level further-maths | Planned in PLAN.md Phase 4 (target: 14 unlocked A-Level subjects). |
+| **P3** | Add Roadmap Subject | A-Level economics | Planned in PLAN.md Phase 4 (target: 14 unlocked A-Level subjects). |
+| **P3** | Add Roadmap Subject | A-Level business | Planned in PLAN.md Phase 4 (target: 14 unlocked A-Level subjects). |
 
 ## Course Pedagogical Depth Breakdown
 
@@ -53,6 +52,9 @@
 | `igcse-biology-cie` | 20 | **100/100** | 100% | 100% | 100% | 100% | 7 |
 | `igcse-business-cie` | 12 | **100/100** | 100% | 100% | 100% | 100% | 2 |
 | `igcse-chemistry-cie` | 16 | **100/100** | 100% | 100% | 100% | 100% | 3 |
+| `igcse-computer-science-cie` | 8 | **100/100** | 100% | 100% | 100% | 100% | 2 |
+| `igcse-economics-cie` | 8 | **100/100** | 100% | 100% | 100% | 100% | 2 |
+| `igcse-english-language-cie` | 6 | **100/100** | 100% | 100% | 100% | 100% | 0 |
 | `igcse-maths-cie` | 15 | **100/100** | 100% | 100% | 100% | 100% | 2 |
 | `igcse-physics-cie` | 16 | **100/100** | 100% | 100% | 100% | 100% | 4 |
 
@@ -73,6 +75,9 @@
 | `igcse-biology-cie` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (102/102) |
 | `igcse-business-cie` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (60/60) |
 | `igcse-chemistry-cie` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (98/98) |
+| `igcse-computer-science-cie` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (40/40) |
+| `igcse-economics-cie` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (40/40) |
+| `igcse-english-language-cie` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (30/30) |
 | `igcse-maths-cie` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (98/98) |
 | `igcse-physics-cie` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (99/99) |
 
@@ -95,6 +100,6 @@
 
 ## Roadmap Coverage Status
 
-- **IGCSE Stubs to Replace**: computer-science, economics, english-language
+- **IGCSE Stubs to Replace**: None
 - **IGCSE Subjects Not Yet Added**: english-literature, geography, history, french, spanish
 - **A-Level Subjects Not Yet Added**: further-maths, economics, business, computer-science, geography, history, sociology, english-literature, religious-studies

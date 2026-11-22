@@ -153,6 +153,36 @@ import {
   PHYSICS_QUIZZES,
   PHYSICS_TOPICS,
 } from './courses/physicsAqa';
+import {
+  COMPUTER_SCIENCE_CHEAT_SHEETS,
+  COMPUTER_SCIENCE_EXAM_PRACTICE,
+  COMPUTER_SCIENCE_FLASHCARDS,
+  COMPUTER_SCIENCE_KEY_TERMS,
+  COMPUTER_SCIENCE_NOTES,
+  COMPUTER_SCIENCE_PAST_PAPERS,
+  COMPUTER_SCIENCE_QUIZZES,
+  COMPUTER_SCIENCE_TOPICS,
+} from './courses/computerScience';
+import {
+  ECONOMICS_CHEAT_SHEETS,
+  ECONOMICS_EXAM_PRACTICE,
+  ECONOMICS_FLASHCARDS,
+  ECONOMICS_KEY_TERMS,
+  ECONOMICS_NOTES,
+  ECONOMICS_PAST_PAPERS,
+  ECONOMICS_QUIZZES,
+  ECONOMICS_TOPICS,
+} from './courses/economics';
+import {
+  ENGLISH_LANGUAGE_CHEAT_SHEETS,
+  ENGLISH_LANGUAGE_EXAM_PRACTICE,
+  ENGLISH_LANGUAGE_FLASHCARDS,
+  ENGLISH_LANGUAGE_KEY_TERMS,
+  ENGLISH_LANGUAGE_NOTES,
+  ENGLISH_LANGUAGE_PAST_PAPERS,
+  ENGLISH_LANGUAGE_QUIZZES,
+  ENGLISH_LANGUAGE_TOPICS,
+} from './courses/englishLanguage';
 import { ensureCompleteCourseContent } from './contentCompleteness';
 
 export interface QualificationInfo {
@@ -220,9 +250,9 @@ export const IGCSE_SUBJECTS: SubjectCatalogItem[] = [
   { slug: 'physics', name: 'Physics', icon: 'physics', category: 'science-maths' },
   { slug: 'maths', name: 'Maths', icon: 'maths', category: 'science-maths', isMaths: true },
   { slug: 'business', name: 'Business Studies', icon: 'business', category: 'other' },
-  { slug: 'computer-science', name: 'Computer Science', icon: 'computer-science', category: 'other', pastPapersOnly: true },
-  { slug: 'economics', name: 'Economics', icon: 'economics', category: 'other', pastPapersOnly: true },
-  { slug: 'english-language', name: 'English Language', icon: 'english-language', category: 'other', pastPapersOnly: true },
+  { slug: 'computer-science', name: 'Computer Science', icon: 'computer-science', category: 'other' },
+  { slug: 'economics', name: 'Economics', icon: 'economics', category: 'other' },
+  { slug: 'english-language', name: 'English Language', icon: 'english-language', category: 'other' },
 ];
 
 export const ALEVEL_SUBJECTS: SubjectCatalogItem[] = [
@@ -271,7 +301,13 @@ export function getTiersForQualification(
     return ['A-Level', 'AS-Level'];
   }
   if (qualification === 'igcse') {
-    if (subject.slug === 'business' || subject.pastPapersOnly) {
+    if (
+      subject.slug === 'business' ||
+      subject.slug === 'computer-science' ||
+      subject.slug === 'economics' ||
+      subject.slug === 'english-language' ||
+      subject.pastPapersOnly
+    ) {
       return ['Core'];
     }
     return ['Extended', 'Core'];
@@ -364,6 +400,39 @@ const IGCSE_BUSINESS_BUNDLE: CourseContentBundle = {
   examPractice: IGCSE_BUSINESS_EXAM_PRACTICE,
   pastPapers: IGCSE_BUSINESS_PAST_PAPERS,
   keyTerms: IGCSE_BUSINESS_KEY_TERMS,
+};
+
+const IGCSE_CS_BUNDLE: CourseContentBundle = {
+  topics: COMPUTER_SCIENCE_TOPICS,
+  notes: COMPUTER_SCIENCE_NOTES,
+  quizzes: COMPUTER_SCIENCE_QUIZZES,
+  flashcards: COMPUTER_SCIENCE_FLASHCARDS,
+  cheatSheets: COMPUTER_SCIENCE_CHEAT_SHEETS,
+  examPractice: COMPUTER_SCIENCE_EXAM_PRACTICE,
+  pastPapers: COMPUTER_SCIENCE_PAST_PAPERS,
+  keyTerms: COMPUTER_SCIENCE_KEY_TERMS,
+};
+
+const IGCSE_ECON_BUNDLE: CourseContentBundle = {
+  topics: ECONOMICS_TOPICS,
+  notes: ECONOMICS_NOTES,
+  quizzes: ECONOMICS_QUIZZES,
+  flashcards: ECONOMICS_FLASHCARDS,
+  cheatSheets: ECONOMICS_CHEAT_SHEETS,
+  examPractice: ECONOMICS_EXAM_PRACTICE,
+  pastPapers: ECONOMICS_PAST_PAPERS,
+  keyTerms: ECONOMICS_KEY_TERMS,
+};
+
+const IGCSE_ENGLANG_BUNDLE: CourseContentBundle = {
+  topics: ENGLISH_LANGUAGE_TOPICS,
+  notes: ENGLISH_LANGUAGE_NOTES,
+  quizzes: ENGLISH_LANGUAGE_QUIZZES,
+  flashcards: ENGLISH_LANGUAGE_FLASHCARDS,
+  cheatSheets: ENGLISH_LANGUAGE_CHEAT_SHEETS,
+  examPractice: ENGLISH_LANGUAGE_EXAM_PRACTICE,
+  pastPapers: ENGLISH_LANGUAGE_PAST_PAPERS,
+  keyTerms: ENGLISH_LANGUAGE_KEY_TERMS,
 };
 
 const ALEVEL_BIO_BUNDLE: CourseContentBundle = {
@@ -864,7 +933,7 @@ const RAW_COURSES: CourseDefinition[] = [
     availableBoards: IGCSE_BOARDS,
     bundle: IGCSE_BUSINESS_BUNDLE,
   }),
-  {
+  buildCourseFromBundle({
     id: 'igcse-computer-science-cie',
     qualification: 'igcse',
     qualificationLabel: 'IGCSE',
@@ -877,21 +946,11 @@ const RAW_COURSES: CourseDefinition[] = [
     subtitle: 'IGCSE · CIE',
     icon: 'computer-science',
     themeClass: 'subject-theme--computer-science',
-    pastPapersOnly: true,
-    totalQuestionsCount: 0,
-    totalFlashcardsCount: 0,
     availableTiers: ['Core'],
     availableBoards: IGCSE_BOARDS,
-    topics: getPastPapersOnlyTopics('computer-science', 'IGCSE Computer Science'),
-    notes: {},
-    quizzes: [],
-    flashcards: [],
-    cheatSheets: [],
-    examPractice: [],
-    pastPapers: makePastPaperSet('igcse-cs', 'IGCSE Computer Science', 'computer-science'),
-    keyTerms: [],
-  },
-  {
+    bundle: IGCSE_CS_BUNDLE,
+  }),
+  buildCourseFromBundle({
     id: 'igcse-economics-cie',
     qualification: 'igcse',
     qualificationLabel: 'IGCSE',
@@ -904,21 +963,11 @@ const RAW_COURSES: CourseDefinition[] = [
     subtitle: 'IGCSE · CIE',
     icon: 'economics',
     themeClass: 'subject-theme--economics',
-    pastPapersOnly: true,
-    totalQuestionsCount: 0,
-    totalFlashcardsCount: 0,
     availableTiers: ['Core'],
     availableBoards: IGCSE_BOARDS,
-    topics: getPastPapersOnlyTopics('economics', 'IGCSE Economics'),
-    notes: {},
-    quizzes: [],
-    flashcards: [],
-    cheatSheets: [],
-    examPractice: [],
-    pastPapers: makePastPaperSet('igcse-econ', 'IGCSE Economics', 'economics'),
-    keyTerms: [],
-  },
-  {
+    bundle: IGCSE_ECON_BUNDLE,
+  }),
+  buildCourseFromBundle({
     id: 'igcse-english-language-cie',
     qualification: 'igcse',
     qualificationLabel: 'IGCSE',
@@ -931,20 +980,10 @@ const RAW_COURSES: CourseDefinition[] = [
     subtitle: 'IGCSE · CIE',
     icon: 'english-language',
     themeClass: 'subject-theme--english-language',
-    pastPapersOnly: true,
-    totalQuestionsCount: 0,
-    totalFlashcardsCount: 0,
     availableTiers: ['Core'],
     availableBoards: IGCSE_BOARDS,
-    topics: getPastPapersOnlyTopics('english-language', 'IGCSE English Language'),
-    notes: {},
-    quizzes: [],
-    flashcards: [],
-    cheatSheets: [],
-    examPractice: [],
-    pastPapers: makePastPaperSet('igcse-eng', 'IGCSE English Language', 'english-language'),
-    keyTerms: [],
-  },
+    bundle: IGCSE_ENGLANG_BUNDLE,
+  }),
 
   // Dedicated A-Level Courses (AQA, Edexcel, CIE)
   buildCourseFromBundle({
