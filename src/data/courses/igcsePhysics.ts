@@ -11,3921 +11,5055 @@ import {
 
 export const IGCSE_PHYSICS_TOPICS: TopicDefinition[] = [
   {
-    number: 1,
-    title: 'Motion, Forces & Energy',
-    subtopics: [
+    "number": 1,
+    "title": "Motion, Forces & Energy",
+    "subtopics": [
       {
-        id: 'igcse-phys-1-1',
-        code: '1.1',
-        slug: '1.1-measurement-speed-motion-graphs',
-        title: 'Physical Quantities, Speed & Motion Graphs',
-        readingMinutes: 10,
-        hasDeepContent: true,
+        "id": "igcse-phys-1-1",
+        "code": "1.1",
+        "slug": "1.1-measurement-speed-motion-graphs",
+        "title": "Physical Quantities, Speed & Motion Graphs",
+        "readingMinutes": 10,
+        "hasDeepContent": true
       },
       {
-        id: 'igcse-phys-1-2',
-        code: '1.2',
-        slug: '1.2-mass-weight-density-forces',
-        title: 'Mass, Weight, Density, Forces & Newton’s Laws',
-        readingMinutes: 11,
-        hasDeepContent: true,
+        "id": "igcse-phys-1-2",
+        "code": "1.2",
+        "slug": "1.2-mass-weight-density-forces",
+        "title": "Mass, Weight, Density, Forces & Newton’s Laws",
+        "readingMinutes": 11,
+        "hasDeepContent": true
       },
       {
-        id: 'igcse-phys-1-3',
-        code: '1.3',
-        slug: '1.3-moments-momentum-pressure',
-        title: 'Moments, Momentum, Impulse & Pressure',
-        readingMinutes: 11,
-        hasDeepContent: true,
+        "id": "igcse-phys-1-3",
+        "code": "1.3",
+        "slug": "1.3-moments-momentum-pressure",
+        "title": "Moments, Momentum, Impulse & Pressure",
+        "readingMinutes": 11,
+        "hasDeepContent": true
       },
       {
-        id: 'igcse-phys-1-4',
-        code: '1.4',
-        slug: '1.4-energy-work-power-efficiency',
-        title: 'Energy Stores, Work Done, Power & Efficiency',
-        readingMinutes: 10,
-        hasDeepContent: true,
-      },
-    ],
+        "id": "igcse-phys-1-4",
+        "code": "1.4",
+        "slug": "1.4-energy-work-power-efficiency",
+        "title": "Energy Stores, Work Done, Power & Efficiency",
+        "readingMinutes": 10,
+        "hasDeepContent": true
+      }
+    ]
   },
   {
-    number: 2,
-    title: 'Thermal Physics',
-    subtopics: [
+    "number": 2,
+    "title": "Thermal Physics",
+    "subtopics": [
       {
-        id: 'igcse-phys-2-1',
-        code: '2.1',
-        slug: '2.1-kinetic-particle-model-gas-laws',
-        title: 'Kinetic Particle Model of Matter & Gas Laws',
-        readingMinutes: 9,
-        hasDeepContent: true,
+        "id": "igcse-phys-2-1",
+        "code": "2.1",
+        "slug": "2.1-kinetic-particle-model-gas-laws",
+        "title": "Kinetic Particle Model of Matter & Gas Laws",
+        "readingMinutes": 9,
+        "hasDeepContent": true
       },
       {
-        id: 'igcse-phys-2-2',
-        code: '2.2',
-        slug: '2.2-specific-heat-latent-heat-transfer',
-        title: 'Specific Heat Capacity, Latent Heat & Thermal Transfer',
-        readingMinutes: 11,
-        hasDeepContent: true,
-      },
-    ],
+        "id": "igcse-phys-2-2",
+        "code": "2.2",
+        "slug": "2.2-specific-heat-latent-heat-transfer",
+        "title": "Specific Heat Capacity, Latent Heat & Thermal Transfer",
+        "readingMinutes": 11,
+        "hasDeepContent": true
+      }
+    ]
   },
   {
-    number: 3,
-    title: 'Waves & Optics',
-    subtopics: [
+    "number": 3,
+    "title": "Waves & Optics",
+    "subtopics": [
       {
-        id: 'igcse-phys-3-1',
-        code: '3.1',
-        slug: '3.1-general-wave-properties',
-        title: 'General Wave Properties, Reflection, Refraction & Diffraction',
-        readingMinutes: 10,
-        hasDeepContent: true,
+        "id": "igcse-phys-3-1",
+        "code": "3.1",
+        "slug": "3.1-general-wave-properties",
+        "title": "General Wave Properties, Reflection, Refraction & Diffraction",
+        "readingMinutes": 10,
+        "hasDeepContent": true
       },
       {
-        id: 'igcse-phys-3-2',
-        code: '3.2',
-        slug: '3.2-light-lenses-tir-em-spectrum',
-        title: 'Light, Lenses, Total Internal Reflection & EM Spectrum',
-        readingMinutes: 11,
-        hasDeepContent: true,
+        "id": "igcse-phys-3-2",
+        "code": "3.2",
+        "slug": "3.2-light-lenses-tir-em-spectrum",
+        "title": "Light, Lenses, Total Internal Reflection & EM Spectrum",
+        "readingMinutes": 11,
+        "hasDeepContent": true
       },
       {
-        id: 'igcse-phys-3-3',
-        code: '3.3',
-        slug: '3.3-sound-waves-echoes-ultrasound',
-        title: 'Sound Waves, Echoes & Ultrasound',
-        readingMinutes: 8,
-        hasDeepContent: true,
-      },
-    ],
+        "id": "igcse-phys-3-3",
+        "code": "3.3",
+        "slug": "3.3-sound-waves-echoes-ultrasound",
+        "title": "Sound Waves, Echoes & Ultrasound",
+        "readingMinutes": 8,
+        "hasDeepContent": true
+      }
+    ]
   },
   {
-    number: 4,
-    title: 'Electricity & Magnetism',
-    subtopics: [
+    "number": 4,
+    "title": "Electricity & Magnetism",
+    "subtopics": [
       {
-        id: 'igcse-phys-4-1',
-        code: '4.1',
-        slug: '4.1-charge-current-emf-resistance',
-        title: 'Electric Charge, Current, EMF, Potential Difference & Resistance',
-        readingMinutes: 10,
-        hasDeepContent: true,
+        "id": "igcse-phys-4-1",
+        "code": "4.1",
+        "slug": "4.1-charge-current-emf-resistance",
+        "title": "Electric Charge, Current, EMF, Potential Difference & Resistance",
+        "readingMinutes": 10,
+        "hasDeepContent": true
       },
       {
-        id: 'igcse-phys-4-2',
-        code: '4.2',
-        slug: '4.2-series-parallel-circuits-safety',
-        title: 'Series & Parallel Circuits, Potential Dividers & Mains Safety',
-        readingMinutes: 11,
-        hasDeepContent: true,
+        "id": "igcse-phys-4-2",
+        "code": "4.2",
+        "slug": "4.2-series-parallel-circuits-safety",
+        "title": "Series & Parallel Circuits, Potential Dividers & Mains Safety",
+        "readingMinutes": 11,
+        "hasDeepContent": true
       },
       {
-        id: 'igcse-phys-4-3',
-        code: '4.3',
-        slug: '4.3-magnetism-motor-effect-transformers',
-        title: 'Magnetism, Motor Effect, EM Induction & Transformers',
-        readingMinutes: 12,
-        hasDeepContent: true,
-      },
-    ],
+        "id": "igcse-phys-4-3",
+        "code": "4.3",
+        "slug": "4.3-magnetism-motor-effect-transformers",
+        "title": "Magnetism, Motor Effect, EM Induction & Transformers",
+        "readingMinutes": 12,
+        "hasDeepContent": true
+      }
+    ]
   },
   {
-    number: 5,
-    title: 'Nuclear Physics',
-    subtopics: [
+    "number": 5,
+    "title": "Nuclear Physics",
+    "subtopics": [
       {
-        id: 'igcse-phys-5-1',
-        code: '5.1',
-        slug: '5.1-nuclear-atom-isotopes-fission-fusion',
-        title: 'The Nuclear Model of the Atom, Isotopes, Fission & Fusion',
-        readingMinutes: 9,
-        hasDeepContent: true,
+        "id": "igcse-phys-5-1",
+        "code": "5.1",
+        "slug": "5.1-nuclear-atom-isotopes-fission-fusion",
+        "title": "The Nuclear Model of the Atom, Isotopes, Fission & Fusion",
+        "readingMinutes": 9,
+        "hasDeepContent": true
       },
       {
-        id: 'igcse-phys-5-2',
-        code: '5.2',
-        slug: '5.2-radioactive-decay-half-life-safety',
-        title: 'Radioactive Decay (Alpha, Beta, Gamma) & Half-Life',
-        readingMinutes: 10,
-        hasDeepContent: true,
-      },
-    ],
+        "id": "igcse-phys-5-2",
+        "code": "5.2",
+        "slug": "5.2-radioactive-decay-half-life-safety",
+        "title": "Radioactive Decay (Alpha, Beta, Gamma) & Half-Life",
+        "readingMinutes": 10,
+        "hasDeepContent": true
+      }
+    ]
   },
   {
-    number: 6,
-    title: 'Space Physics',
-    subtopics: [
+    "number": 6,
+    "title": "Space Physics",
+    "subtopics": [
       {
-        id: 'igcse-phys-6-1',
-        code: '6.1',
-        slug: '6.1-earth-solar-system-orbits',
-        title: 'Earth, The Solar System & Orbital Motion',
-        readingMinutes: 9,
-        hasDeepContent: true,
+        "id": "igcse-phys-6-1",
+        "code": "6.1",
+        "slug": "6.1-earth-solar-system-orbits",
+        "title": "Earth, The Solar System & Orbital Motion",
+        "readingMinutes": 9,
+        "hasDeepContent": true
       },
       {
-        id: 'igcse-phys-6-2',
-        code: '6.2',
-        slug: '6.2-stars-redshift-big-bang',
-        title: 'Life Cycle of Stars, Red-Shift & The Big Bang (Hubble’s Law)',
-        readingMinutes: 10,
-        hasDeepContent: true,
-      },
-    ],
-  },
+        "id": "igcse-phys-6-2",
+        "code": "6.2",
+        "slug": "6.2-stars-redshift-big-bang",
+        "title": "Life Cycle of Stars, Red-Shift & The Big Bang (Hubble’s Law)",
+        "readingMinutes": 10,
+        "hasDeepContent": true
+      }
+    ]
+  }
 ];
 
 export const IGCSE_PHYSICS_NOTES: Record<string, NoteLesson> = {
-  'igcse-phys-1-1': {
-    subtopicId: 'igcse-phys-1-1',
-    subtopicCode: '1.1',
-    subtopicTitle: 'Physical Quantities, Speed & Motion Graphs',
-    readingMinutes: 10,
-    videoTitle: 'GCSE Physics - Velocity-Time Graphs - How to Find Acceleration & Distance Travelled',
-    youtubeId: 'VJefeYJL3uE',
-    videoChannel: 'Cognito',
-    videoDuration: '5:32',
-    courseMatchSummary: '4 of 4 sections match Cambridge IGCSE Physics (0625)',
-    timestamps: [
-      { time: '0:00', seconds: 0, label: 'Introduction', cardId: 'igcse-phys-1-1-c1' },
-      { time: '0:38', seconds: 38, label: 'How Gradient Represents Acceleration', cardId: 'igcse-phys-1-1-c2' },
-      { time: '2:36', seconds: 156, label: 'Distance Travelled - Area Under the Curve', cardId: 'igcse-phys-1-1-c3' },
-      { time: '4:01', seconds: 241, label: 'Estimating Distance for Curved Sections', cardId: 'igcse-phys-1-1-c3' },
-    ],
-    cards: [
+  "igcse-phys-1-1": {
+    "subtopicId": "igcse-phys-1-1",
+    "subtopicCode": "1.1",
+    "subtopicTitle": "Physical Quantities, Speed & Motion Graphs",
+    "readingMinutes": 10,
+    "videoTitle": "GCSE Physics - Velocity-Time Graphs - How to Find Acceleration & Distance Travelled",
+    "youtubeId": "VJefeYJL3uE",
+    "videoChannel": "Cognito",
+    "videoDuration": "5:32",
+    "courseMatchSummary": "4 of 4 sections match Cambridge IGCSE Physics (0625)",
+    "timestamps": [
       {
-        id: 'igcse-phys-1-1-c1',
-        title: 'Measurement Techniques, Scalars & Vectors',
-        summary: 'Using precision measuring instruments and distinguishing scalar vs vector quantities.',
-        bullets: [
-          'Length is measured with rulers (to 1 mm), vernier callipers (to 0.1 mm), or micrometer screw gauges (to 0.01 mm). Always check for zero error and read **perpendicular** to the scale to avoid parallax error.',
-          'To measure the period T of a pendulum accurately, time 20 complete oscillations with a stopwatch and divide the total time by 20 — this reduces the percentage error from human reaction time.',
-          '**A scalar quantity has magnitude (size) only:** distance, speed, time, mass, energy, temperature, and density.',
-          'A vector quantity has both magnitude and direction: displacement, velocity, acceleration, force, weight, momentum, and gravitational/electric field strength.',
-          'Resultant of two **perpendicular** vectors (e.g., 3 N east and 4 N north): magnitude = √(3² + 4²) = 5 N, direction found by tan θ = 4/3 (θ = 53.1° north of east).',
-        ],
-        glossaryPills: [
-          {
-            term: 'parallax error',
-            definition: 'Apparent shift in reading a scale caused by viewing the pointer or meniscus from an angle rather than straight on at eye level.',
-          },
-          {
-            term: 'vector quantity',
-            definition: 'A physical quantity described fully by both its numerical magnitude and its direction in space.',
-          },
-        ],
-        memoryAid: 'Think V for Vector = Value + direction arrow; S for Scalar = Size only.',
+        "time": "0:00",
+        "seconds": 0,
+        "label": "Measurement, Scalars & Vectors",
+        "cardId": "igcse-phys-1-1-c1"
       },
       {
-        id: 'igcse-phys-1-1-c2',
-        title: 'Speed, Velocity & Uniform Acceleration',
-        summary: 'Calculating average speed, velocity, uniform acceleration, and free fall.',
-        bullets: [
-          'Average speed = total distance travelled ÷ total time taken: **v = s ÷ t** (SI unit: m/s). Velocity is speed in a specified direction.',
-          '**Acceleration is the rate of change of velocity:** **a = (v − u) ÷ t** (SI unit: m/s²), where u is initial velocity and v is final velocity.',
-          'Negative acceleration (deceleration) occurs when velocity decreases in the forward direction (e.g., braking from 24 m/s to 6 m/s in 6 s gives a = (6 − 24) ÷ 6 = −3.0 m/s²).',
-          'Near Earth’s surface, all objects in free fall (ignoring air resistance) experience constant gravitational acceleration g ≈ 9.8 m/s² (CIE 0625 uses g = 9.8 m/s²).',
-        ],
-        commonMistake: 'When calculating average speed over a two-stage journey, NEVER average the two speeds directly — always divide TOTAL distance by TOTAL time.',
+        "time": "1:50",
+        "seconds": 110,
+        "label": "Speed, Velocity & Acceleration",
+        "cardId": "igcse-phys-1-1-c2"
       },
       {
-        id: 'igcse-phys-1-1-c3',
-        title: 'Interpreting Distance–Time & Speed–Time Graphs',
-        summary: 'Reading gradients and areas from distance-time and speed-time graphs.',
-        diagram: 'forces-free-body',
-        bullets: [
-          '**On a distance–time graph:** gradient = speed; a horizontal line means the object is stationary; a straight sloped line means constant speed; an upward-curving slope means accelerating.',
-          '**On a speed–time (or velocity–time) graph:** gradient = acceleration; a horizontal line above zero means constant speed; a downward straight line means uniform deceleration.',
-          'The area under a speed–time graph equals the distance travelled. Split complex regions into rectangles (base × height) and triangles (½ × base × height).',
-          '**Worked example:** A cyclist accelerates uniformly from 0 to 12 m/s in 8 s, then rides at 12 m/s for 20 s. Distance = (½ × 8 × 12) + (20 × 12) = 48 + 240 = 288 m.',
+        "time": "3:40",
+        "seconds": 220,
+        "label": "Distance-Time & Speed-Time Graphs",
+        "cardId": "igcse-phys-1-1-c3"
+      }
+    ],
+    "cards": [
+      {
+        "id": "igcse-phys-1-1-c1",
+        "title": "Precision Measurement, Scalars & Vectors",
+        "summary": "Use multiple-oscillation timing for pendulums and distinguish scalar (size only) from vector (size + direction).",
+        "bullets": [
+          "**Scalars vs Vectors** - a **scalar** has magnitude only (distance, speed, mass, time, energy, temperature); a **vector** has both magnitude and direction (displacement, velocity, acceleration, force, momentum)."
         ],
-        glossaryPills: [
+        "subsections": [
           {
-            term: 'gradient',
-            definition: 'Steepness of a graph calculated as vertical change divided by horizontal change (Δy ÷ Δx).',
-          },
+            "heading": "Reducing Measurement Error & Combining Vectors",
+            "bullets": [
+              "**Pendulum period T** - time 20 complete oscillations and divide by 20 to reduce percentage error from human reaction time; read scales at eye level to avoid **parallax error**.",
+              "**Perpendicular vectors** - combine two right-angled vectors using Pythagoras R = √(F₁² + F₂²) and tan θ = F₂ / F₁."
+            ],
+            "exampleHeading": "Worked example: Resultant of 6 N East and 8 N North",
+            "examples": [
+              "Magnitude R = √(6² + 8²) = √100 = 10 N.",
+              "Direction: tan θ = 8/6 → θ = 53.1° north of east."
+            ]
+          }
         ],
-        memoryAid: 'On a v–t graph: Gradient = Acceleration, Area = Distance (remember "G-A, A-D").',
+        "glossaryPills": [
+          {
+            "term": "parallax error",
+            "definition": "An apparent shift in a scale reading caused by viewing the instrument from an angle rather than perpendicularly at eye level."
+          },
+          {
+            "term": "vector",
+            "definition": "A physical quantity that has both magnitude (size) and a specified direction."
+          }
+        ]
       },
+      {
+        "id": "igcse-phys-1-1-c2",
+        "title": "Speed, Velocity & Acceleration",
+        "summary": "Acceleration is the rate of change of velocity: a = (v − u) / t, and free fall on Earth has g = 9.8 m/s².",
+        "bullets": [
+          "**Average speed** - total distance ÷ total time (v = s / t); **acceleration** a = (v − u) / t measured in m/s²."
+        ],
+        "subsections": [
+          {
+            "heading": "Free Fall & Terminal Velocity",
+            "bullets": [
+              "**Without air resistance** - all objects fall with constant acceleration g = 9.8 m/s² near Earth’s surface.",
+              "**With air resistance** - air drag increases with speed until upward drag equals downward weight, giving zero resultant force and constant **terminal velocity**."
+            ],
+            "exampleHeading": "Worked example: Car accelerating from 4 m/s to 22 m/s in 6 s",
+            "examples": [
+              "a = (v − u) / t = (22 − 4) / 6 = 18 / 6 = 3.0 m/s²."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "terminal velocity",
+            "definition": "The constant maximum velocity reached by a falling object when upward air resistance balances downward weight."
+          }
+        ],
+        "memoryAid": "Gradient of Distance-Time = Speed; Gradient of Speed-Time = Acceleration; Area under Speed-Time = Distance!"
+      },
+      {
+        "id": "igcse-phys-1-1-c3",
+        "title": "Distance-Time & Speed-Time Graphs",
+        "summary": "Read gradients for speed/acceleration and calculate the area under a speed-time graph for total distance.",
+        "bullets": [
+          "**Distance-time graph** - horizontal line = stationary; straight diagonal = constant speed; gradient = speed."
+        ],
+        "subsections": [
+          {
+            "heading": "Speed-Time Graph Area & Deceleration",
+            "bullets": [
+              "**Speed-time gradient** - positive slope = acceleration; horizontal line = constant speed; negative slope = deceleration.",
+              "**Distance travelled** - split the area under a speed-time graph into triangles (½bh), rectangles (bh), and trapezia (½(a+b)h)."
+            ],
+            "exampleHeading": "Worked example: Distance from 0 to 12 m/s in 5 s, then steady for 10 s",
+            "examples": [
+              "Triangle area = ½ × 5 × 12 = 30 m; Rectangle area = 10 × 12 = 120 m.",
+              "Total distance travelled = 30 + 120 = 150 m."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "deceleration",
+            "definition": "Negative acceleration — a decrease in speed over time."
+          }
+        ],
+        "commonMistake": "A horizontal line on a DISTANCE-time graph means stationary (speed = 0), whereas a horizontal line on a SPEED-time graph means moving at CONSTANT speed!"
+      }
     ],
-    keyTerms: [
-      { term: 'Scalar', definition: 'A physical quantity that has magnitude only and no direction (e.g., speed, mass, energy).' },
-      { term: 'Vector', definition: 'A physical quantity with both magnitude and direction (e.g., velocity, force, momentum).' },
-      { term: 'Acceleration', definition: 'Rate of change of velocity per unit time: a = (v − u) ÷ t, measured in m/s².' },
-      { term: 'Uniform acceleration', definition: 'Constant rate of increase of velocity, shown as a straight line on a speed–time graph.' },
+    "checklistPoints": [
+      "Distinguish scalar and vector quantities and resolve perpendicular vectors",
+      "Calculate average speed, acceleration a = (v − u)/t, and explain terminal velocity",
+      "Extract speed, acceleration, and total distance from distance-time and speed-time graphs"
     ],
-    checklistPoints: [
-      'Distinguish between scalar and vector quantities and find the resultant of two perpendicular vectors.',
-      'Calculate average speed (v = s/t) and acceleration (a = (v − u)/t) with correct SI units.',
-      'Determine speed from the gradient of a distance–time graph, and both acceleration (gradient) and distance (area) from a speed–time graph.',
-    ],
+    "keyTerms": [
+      {
+        "term": "Parallax error",
+        "definition": "An apparent shift in a scale reading caused by viewing the instrument from an angle rather than perpendicularly at eye level."
+      },
+      {
+        "term": "Vector",
+        "definition": "A physical quantity that has both magnitude (size) and a specified direction."
+      },
+      {
+        "term": "Terminal velocity",
+        "definition": "The constant maximum velocity reached by a falling object when upward air resistance balances downward weight."
+      },
+      {
+        "term": "Deceleration",
+        "definition": "Negative acceleration — a decrease in speed over time."
+      }
+    ]
   },
-  'igcse-phys-1-2': {
-    subtopicId: 'igcse-phys-1-2',
-    subtopicCode: '1.2',
-    subtopicTitle: 'Mass, Weight, Density, Forces & Newton’s Laws',
-    readingMinutes: 11,
-    videoTitle: 'GCSE Physics - Newton\'s 1st & 2nd Laws | Circular Motion | Inertia',
-    youtubeId: 'D8XOm4swxOU',
-    videoChannel: 'Cognito',
-    videoDuration: '6:36',
-    courseMatchSummary: '4 of 4 sections match Cambridge IGCSE Physics (0625)',
-    timestamps: [
-      { time: '0:00', seconds: 0, label: 'Introduction', cardId: 'igcse-phys-1-2-c1' },
-      { time: '1:11', seconds: 71, label: 'Newton\'s Second Law', cardId: 'igcse-phys-1-2-c3' },
-      { time: '3:05', seconds: 185, label: 'Circular Motion', cardId: 'igcse-phys-1-2-c3' },
-      { time: '5:10', seconds: 310, label: 'Inertia & Inertial Mass', cardId: 'igcse-phys-1-2-c1' },
-    ],
-    cards: [
+  "igcse-phys-1-2": {
+    "subtopicId": "igcse-phys-1-2",
+    "subtopicCode": "1.2",
+    "subtopicTitle": "Mass, Weight, Density, Forces & Newton’s Laws",
+    "readingMinutes": 11,
+    "videoTitle": "GCSE Physics - Newton's First and Second Laws",
+    "youtubeId": "D8XOm4swxOU",
+    "videoChannel": "Cognito",
+    "videoDuration": "6:36",
+    "courseMatchSummary": "4 of 4 sections match Cambridge IGCSE Physics (0625)",
+    "timestamps": [
       {
-        id: 'igcse-phys-1-2-c1',
-        title: 'Mass, Weight & Density',
-        summary: 'Linking mass, weight (W = mg), gravitational field strength, and density.',
-        bullets: [
-          'Mass (kg) is a measure of the quantity of matter in an object and resists changes in motion (inertia). Mass stays constant everywhere in the Universe.',
-          'Weight (N) is the gravitational force acting on a mass: **W = m × g**, where gravitational field strength g = W ÷ m ≈ 9.8 N/kg on Earth (~1.6 N/kg on the Moon).',
-          '**Density is mass per unit volume:** **ρ = m ÷ V** (units: kg/m³ or g/cm³, where 1 g/cm³ = 1,000 kg/m³).',
-          'To measure the density of an irregular sinking solid: measure mass on a top-pan balance, submerge in a measuring cylinder (or Eureka displacement can) to find volume displaced, then compute **ρ = m ÷ V**. An object floats in a liquid if its density is lower than the liquid’s density.',
-        ],
-        glossaryPills: [
-          {
-            term: 'inertia',
-            definition: 'The tendency of an object to remain at rest or continue moving at constant velocity unless acted on by a resultant external force.',
-          },
-          {
-            term: 'gravitational field strength',
-            definition: 'Gravitational force exerted per unit mass at a point in space: g = W ÷ m (N/kg).',
-          },
-        ],
-        commonMistake: 'Students often say "weight is measured in kg". Weight is a FORCE measured in newtons (N) using a newtonmeter; mass is measured in kilograms (kg).',
+        "time": "0:00",
+        "seconds": 0,
+        "label": "Mass, Weight & Density",
+        "cardId": "igcse-phys-1-2-c1"
       },
       {
-        id: 'igcse-phys-1-2-c2',
-        title: 'Hooke’s Law & Spring Constant',
-        summary: 'Spring extension, spring constant k, and the limit of proportionality.',
-        bullets: [
-          'Hooke’s Law states that the extension x of a spring is directly proportional to the stretching load F, provided the limit of proportionality is not exceeded: **F = k × x**.',
-          'Spring constant k = F ÷ x (units: N/m or N/cm) represents the stiffness of the spring and equals the gradient of the straight-line region of a force–extension graph.',
-          'Beyond the limit of proportionality (elastic limit), the graph curves, the spring deforms plastically, and it will not return to its original length when unloaded.',
-          '**Worked example:** A 4.0 N load stretches a spring from 12.0 cm to 17.0 cm. Extension x = 17.0 − 12.0 = 5.0 cm = 0.05 m, so k = 4.0 ÷ 0.05 = 80 N/m.',
-        ],
-        glossaryPills: [
-          {
-            term: 'limit of proportionality',
-            definition: 'The point on a load–extension graph beyond which extension is no longer directly proportional to load.',
-          },
-        ],
-        memoryAid: 'Always subtract the ORIGINAL unstretched length from the new length to get extension x before using F = kx.',
+        "time": "2:15",
+        "seconds": 135,
+        "label": "Newton’s Laws & Circular Motion",
+        "cardId": "igcse-phys-1-2-c2"
       },
       {
-        id: 'igcse-phys-1-2-c3',
-        title: 'Newton’s Laws, Circular Motion & Terminal Velocity',
-        summary: 'Applying F = ma, circular motion forces, and skydiver terminal velocity.',
-        diagram: 'forces-free-body',
-        bullets: [
-          '**Newton’s First Law:** If resultant force F = 0 N, a stationary object remains stationary and a moving object continues at constant speed in a straight line.',
-          '**Newton’s Second Law:** Resultant force = mass × acceleration (**F = m × a**). Acceleration acts in the exact direction of the resultant force.',
-          '**Newton’s Third Law:** Every action force has an equal and opposite reaction force acting on the two different interacting bodies.',
-          '**Circular motion:** An object moving in a circle at constant speed is constantly changing direction, so its velocity is changing — it accelerates toward the centre under a perpendicular centripetal force (gravity for orbits, tension for a string, friction for a turning car).',
-          'Terminal velocity of a falling skydiver: Initially weight > air resistance (downward acceleration ≈ 9.8 m/s²). As speed rises, drag increases, reducing resultant force and acceleration until air resistance = weight → resultant force = 0 → constant terminal velocity. Opening the parachute greatly increases drag > weight, causing rapid upward resultant force (deceleration) until a new, much slower terminal velocity is reached.',
+        "time": "4:30",
+        "seconds": 270,
+        "label": "Hooke’s Law & Limit of Proportionality",
+        "cardId": "igcse-phys-1-2-c3"
+      }
+    ],
+    "cards": [
+      {
+        "id": "igcse-phys-1-2-c1",
+        "title": "Mass, Weight & Density",
+        "summary": "Mass (kg) stays constant everywhere; weight (N) is W = mg; density is mass per unit volume ρ = m/V.",
+        "bullets": [
+          "**Weight vs Mass** - **mass** is the quantity of matter (scalar, kg) and resists changes in motion (**inertia**); **weight** is the gravitational force W = mg (vector, N, where g = 9.8 N/kg on Earth)."
         ],
-        glossaryPills: [
+        "subsections": [
           {
-            term: 'terminal velocity',
-            definition: 'The constant maximum velocity reached by a falling object when upward air resistance equals its downward weight.',
-          },
+            "heading": "Measuring Density & Floating",
+            "bullets": [
+              "**Density formula** - ρ = m / V (in kg/m³ or g/cm³); an object floats if its density is less than the liquid’s density.",
+              "**Irregular solid** - measure mass on a balance and volume by displacement of water in a measuring cylinder."
+            ],
+            "exampleHeading": "Worked example: Density of a metal block",
+            "examples": [
+              "Mass = 270 g; water level rises from 40 cm³ to 140 cm³ → Volume V = 100 cm³.",
+              "Density ρ = 270 / 100 = 2.7 g/cm³ (2,700 kg/m³)."
+            ]
+          }
         ],
+        "glossaryPills": [
+          {
+            "term": "density",
+            "definition": "Mass per unit volume of a substance: ρ = m / V."
+          },
+          {
+            "term": "inertia",
+            "definition": "The tendency of an object to stay at rest or keep moving at constant velocity unless acted on by a resultant force."
+          }
+        ]
       },
+      {
+        "id": "igcse-phys-1-2-c2",
+        "title": "Resultant Forces, Newton’s Laws & Circular Motion",
+        "summary": "Zero resultant force gives constant velocity; unbalanced force causes acceleration F = ma (or centripetal turning).",
+        "bullets": [
+          "**Newton’s 1st & 2nd Laws** - if resultant force = 0, an object stays at rest or moves at constant velocity; if resultant force ≠ 0, it accelerates according to **F = ma**."
+        ],
+        "subsections": [
+          {
+            "heading": "Newton’s 3rd Law & Circular Motion",
+            "bullets": [
+              "**Newton’s 3rd Law** - when body A exerts a force on body B, body B exerts an equal and opposite force of the same type on body A.",
+              "**Circular motion** - a perpendicular **centripetal force** directed towards the centre continuously changes velocity direction even at constant speed."
+            ],
+            "exampleHeading": "Worked example: Accelerating a 1,200 kg car",
+            "examples": [
+              "Driving force = 4,000 N forward; friction = 1,000 N backward → Resultant F = 3,000 N.",
+              "Acceleration a = F / m = 3,000 / 1,200 = 2.5 m/s²."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "resultant force",
+            "definition": "The single overall force having the same effect as all individual forces acting on an object combined."
+          }
+        ],
+        "diagram": "forces-free-body",
+        "memoryAid": "F = ma uses RESULTANT force — always subtract opposing friction/drag first!"
+      },
+      {
+        "id": "igcse-phys-1-2-c3",
+        "title": "Hooke’s Law & Spring Constant",
+        "summary": "Extension is directly proportional to load (F = kx) only up to the limit of proportionality.",
+        "bullets": [
+          "**Hooke’s Law** - F = kx, where k is the **spring constant** (N/m or N/cm) and x is the extension (stretched length − original unstretched length)."
+        ],
+        "subsections": [
+          {
+            "heading": "Load–Extension Graph",
+            "bullets": [
+              "**Linear region** - straight line through the origin where gradient = k (stiffer spring = steeper gradient).",
+              "**Limit of proportionality** - the point where the graph begins to curve and Hooke’s law no longer applies."
+            ],
+            "exampleHeading": "Worked example: Spring stretches from 12 cm to 17 cm under a 10 N load",
+            "examples": [
+              "Extension x = 17 − 12 = 5 cm = 0.05 m.",
+              "Spring constant k = F / x = 10 / 0.05 = 200 N/m."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "spring constant",
+            "definition": "The force required per unit extension of a spring (k = F / x), measuring its stiffness."
+          }
+        ],
+        "commonMistake": "In F = kx, x is the EXTENSION (new length minus original length) — NEVER substitute the total stretched length!"
+      }
     ],
-    keyTerms: [
-      { term: 'Density', definition: 'Mass per unit volume of a substance: ρ = m ÷ V (kg/m³ or g/cm³).' },
-      { term: 'Spring constant', definition: 'Force required per unit extension of a spring: k = F ÷ x (N/m).' },
-      { term: 'Resultant force', definition: 'The single force that has the same effect on an object’s motion as all individual forces combined.' },
-      { term: 'Terminal velocity', definition: 'Steady final speed when drag balances weight so resultant force and acceleration are zero.' },
+    "checklistPoints": [
+      "Distinguish mass from weight (W = mg) and calculate density by displacement",
+      "Apply F = ma with resultant forces and explain circular motion via centripetal force",
+      "Calculate spring constant k = F/x using extension and identify the limit of proportionality"
     ],
-    checklistPoints: [
-      'Calculate weight using W = mg and density using ρ = m/V, including displacement measurements.',
-      'Apply Hooke’s Law (F = kx) and identify the limit of proportionality on a load–extension graph.',
-      'Use F = ma and explain all stages of terminal velocity for a falling parachutist.',
-    ],
+    "keyTerms": [
+      {
+        "term": "Density",
+        "definition": "Mass per unit volume of a substance: ρ = m / V."
+      },
+      {
+        "term": "Inertia",
+        "definition": "The tendency of an object to stay at rest or keep moving at constant velocity unless acted on by a resultant force."
+      },
+      {
+        "term": "Resultant force",
+        "definition": "The single overall force having the same effect as all individual forces acting on an object combined."
+      },
+      {
+        "term": "Spring constant",
+        "definition": "The force required per unit extension of a spring (k = F / x), measuring its stiffness."
+      }
+    ]
   },
-  'igcse-phys-1-3': {
-    subtopicId: 'igcse-phys-1-3',
-    subtopicCode: '1.3',
-    subtopicTitle: 'Moments, Momentum, Impulse & Pressure',
-    readingMinutes: 11,
-    videoTitle: 'GCSE Physics - Momentum (Part 1 of 2) | Conservation of Momentum',
-    youtubeId: 'mjeOuh0G-gw',
-    videoChannel: 'Cognito',
-    videoDuration: '7:33',
-    courseMatchSummary: '4 of 4 sections match Cambridge IGCSE Physics (0625)',
-    timestamps: [
-      { time: '0:00', seconds: 0, label: 'Introduction to Momentum', cardId: 'igcse-phys-1-3-c2' },
-      { time: '0:58', seconds: 58, label: 'Momentum as a Vector Quantity', cardId: 'igcse-phys-1-3-c2' },
-      { time: '3:47', seconds: 227, label: 'Recoil and Explosions', cardId: 'igcse-phys-1-3-c2' },
-      { time: '6:44', seconds: 404, label: 'Symbol for Momentum', cardId: 'igcse-phys-1-3-c2' },
-    ],
-    cards: [
+  "igcse-phys-1-3": {
+    "subtopicId": "igcse-phys-1-3",
+    "subtopicCode": "1.3",
+    "subtopicTitle": "Moments, Momentum, Impulse & Pressure",
+    "readingMinutes": 11,
+    "videoTitle": "GCSE Physics - Momentum (Part 1 of 2) | Conservation of Momentum",
+    "youtubeId": "mjeOuh0G-gw",
+    "videoChannel": "Cognito",
+    "videoDuration": "7:33",
+    "courseMatchSummary": "4 of 4 sections match Cambridge IGCSE Physics (0625)",
+    "timestamps": [
       {
-        id: 'igcse-phys-1-3-c1',
-        title: 'Moments, Principle of Moments & Centre of Gravity',
-        summary: 'Balancing turning moments, equilibrium conditions, and centre of gravity.',
-        bullets: [
-          'The moment of a force measures its turning effect about a pivot: Moment = Force × perpendicular distance from the pivot (**M = F × d**, unit: N m).',
-          'For an object to be in complete equilibrium, two conditions must hold: (1) Zero resultant force, AND (2) Zero resultant moment (total clockwise moments = total anticlockwise moments about any pivot).',
-          'Centre of gravity is the single point where the entire weight of an object appears to act. For an irregular lamina, hang it from two different pin holes with a plumb line; the intersection of the vertical lines marks the centre of gravity.',
-          'An object is more stable if it has a LOWER centre of gravity and a WIDER base area (it topples only when the vertical line through its centre of gravity falls outside its base).',
-        ],
-        glossaryPills: [
-          {
-            term: 'centre of gravity',
-            definition: 'The point in or near an object through which the whole weight of the body can be considered to act.',
-          },
-          {
-            term: 'equilibrium',
-            definition: 'State of balance where both resultant force and resultant turning moment equal zero.',
-          },
-        ],
-        memoryAid: 'Think of a racing car: low to the ground (low CoG) and wide wheelbase (wide base) = maximum stability!',
+        "time": "0:00",
+        "seconds": 0,
+        "label": "Moments, Equilibrium & Centre of Gravity",
+        "cardId": "igcse-phys-1-3-c1"
       },
       {
-        id: 'igcse-phys-1-3-c2',
-        title: 'Momentum, Conservation & Impulse',
-        summary: 'Conservation of momentum in collisions and impulse in car safety.',
-        bullets: [
-          '**Momentum is a vector quantity defined as:** **p = m × v** (units: kg m/s or N s).',
-          '**Principle of conservation of momentum:** In any closed system (no external forces), total momentum before a collision or explosion equals total momentum after: m₁u₁ + m₂u₂ = m₁v₁ + m₂v₂.',
-          'Impulse is the change in momentum produced by a resultant force acting over time: Impulse = F × Δt = Δp = mv − mu.',
-          'Car safety features (crumple zones, airbags, seatbelts) reduce injury by INCREASING the impact duration Δt for the same change in momentum Δp; since F = Δp ÷ Δt, the force on the passenger decreases dramatically.',
-          '**Worked example:** A 2.0 kg trolley at 3.0 m/s collides and sticks to a stationary 1.0 kg trolley. Total p = 2.0 × 3.0 = 6.0 kg m/s. Combined mass = 3.0 kg, so final velocity v = 6.0 ÷ 3.0 = 2.0 m/s.',
-        ],
-        glossaryPills: [
-          {
-            term: 'impulse',
-            definition: 'Product of resultant force and time for which it acts (FΔt), numerically equal to change in momentum (Δp).',
-          },
-        ],
-        commonMistake: 'Momentum is a VECTOR — if two objects move toward each other, one velocity MUST be entered as negative!',
+        "time": "2:30",
+        "seconds": 150,
+        "label": "Momentum, Conservation & Impulse",
+        "cardId": "igcse-phys-1-3-c2"
       },
       {
-        id: 'igcse-phys-1-3-c3',
-        title: 'Pressure in Solids & Liquids',
-        summary: 'Calculating solid pressure, hydrostatic liquid pressure, and hydraulics.',
-        bullets: [
-          '**Pressure is force exerted per unit area:** **p = F ÷ A** (SI unit: pascal, Pa, where 1 Pa = 1 N/m²). A sharp knife concentrates force over a tiny area for high pressure; snowshoes spread weight over a large area for low pressure.',
-          'Pressure in a liquid increases with depth h, liquid density ρ, and gravitational field strength g: **Δp = ρ × g × Δh**. Pressure acts equally in all directions at a given depth.',
-          'Hydraulic systems (e.g., car brakes) exploit the fact that liquids are incompressible, transmitting pressure equally: F₁ ÷ A₁ = F₂ ÷ A₂ (a small force on a small master piston creates a huge force on a large slave piston).',
-          '**Worked example:** Find the excess water pressure 15 m below the surface of seawater (ρ = 1,030 kg/m³, g = 9.8 N/kg): Δp = 1030 × 9.8 × 15 = 151,410 Pa ≈ 151 kPa.',
+        "time": "5:10",
+        "seconds": 310,
+        "label": "Pressure in Solids & Liquids (p = ρgh)",
+        "cardId": "igcse-phys-1-3-c3"
+      }
+    ],
+    "cards": [
+      {
+        "id": "igcse-phys-1-3-c1",
+        "title": "Moments, Principle of Moments & Stability",
+        "summary": "A beam is in equilibrium when resultant force is zero AND total clockwise moment equals total anticlockwise moment.",
+        "bullets": [
+          "**Moment of a force** - Moment = Force × perpendicular distance from pivot (M = Fd, unit N m)."
         ],
+        "subsections": [
+          {
+            "heading": "Equilibrium & Centre of Gravity",
+            "bullets": [
+              "**Principle of moments** - for equilibrium: Sum of clockwise moments = Sum of anticlockwise moments AND zero resultant force.",
+              "**Stability** - lowered **centre of gravity** and wider base increase stability; an object topples when the vertical line from its centre of gravity falls outside its base."
+            ],
+            "exampleHeading": "Worked example: Balancing a uniform seesaw",
+            "examples": [
+              "A 400 N child sits 1.5 m left of the pivot: anticlockwise moment = 400 × 1.5 = 600 N m.",
+              "A 300 N child on the right must sit at d = 600 ÷ 300 = 2.0 m from the pivot."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "moment",
+            "definition": "The turning effect of a force about a pivot, equal to force multiplied by perpendicular distance from the pivot."
+          }
+        ]
       },
+      {
+        "id": "igcse-phys-1-3-c2",
+        "title": "Momentum, Conservation & Impulse",
+        "summary": "Total momentum before a collision equals total momentum after; crumple zones lengthen collision time to cut impact force.",
+        "bullets": [
+          "**Momentum & Impulse** - p = mv (kg m/s, vector); **Impulse** = FΔt = Δp = mv − mu (N s), so resultant force F = Δp / Δt."
+        ],
+        "subsections": [
+          {
+            "heading": "Conservation of Momentum & Car Safety",
+            "bullets": [
+              "**Conservation law** - in a closed system with no external forces, total momentum before = total momentum after (assign + and − signs to opposite directions!).",
+              "**Airbags & crumple zones** - increase collision duration Δt for the same change in momentum Δp, reducing average impact force F = Δp / Δt."
+            ],
+            "exampleHeading": "Worked example: Trolley collision sticking together",
+            "examples": [
+              "A 2 kg trolley at 6 m/s hits a stationary 4 kg trolley and sticks: initial p = 2 × 6 = 12 kg m/s.",
+              "Combined mass = 6 kg → final velocity v = 12 ÷ 6 = 2.0 m/s."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "impulse",
+            "definition": "Force multiplied by the time for which it acts (FΔt), equal to the change in momentum (Δp)."
+          }
+        ],
+        "memoryAid": "Safety devices (airbags, seatbelts, crumple zones): SAME Δp, LONGER Δt → SMALLER force F = Δp/Δt!"
+      },
+      {
+        "id": "igcse-phys-1-3-c3",
+        "title": "Pressure in Solids & Hydrostatic Pressure in Liquids",
+        "summary": "Solid pressure is p = F/A (Pa); liquid pressure increases with depth and density via Δp = ρgΔh.",
+        "bullets": [
+          "**Solid pressure** - p = F / A (1 Pa = 1 N/m²); sharp knives cut easily because tiny area A produces huge pressure."
+        ],
+        "subsections": [
+          {
+            "heading": "Liquid Pressure Δp = ρgΔh",
+            "bullets": [
+              "**Depth & density** - liquid pressure acts equally in all directions and depends ONLY on density ρ, gravitational field strength g, and vertical depth h — NOT container shape."
+            ],
+            "exampleHeading": "Worked example: Water pressure at 10 m depth (ρ = 1000 kg/m³, g = 9.8 N/kg)",
+            "examples": [
+              "Δp = ρgh = 1000 × 9.8 × 10 = 98,000 Pa (98 kPa)."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "pressure",
+            "definition": "Force acting perpendicularly per unit area (p = F / A), measured in pascals (Pa)."
+          }
+        ],
+        "commonMistake": "In conservation of momentum, remember momentum is a VECTOR — if two trolleys approach head-on, one velocity MUST be negative!"
+      }
     ],
-    keyTerms: [
-      { term: 'Moment', definition: 'Turning effect of a force about a pivot: M = F × d (N m).' },
-      { term: 'Momentum', definition: 'Product of mass and velocity (p = mv), a conserved vector quantity in closed collisions.' },
-      { term: 'Impulse', definition: 'Force multiplied by time (FΔt), equal to the change in momentum (Δp).' },
-      { term: 'Pascal (Pa)', definition: 'SI unit of pressure equal to one newton per square metre (1 N/m²).' },
+    "checklistPoints": [
+      "Apply the principle of moments and explain stability using centre of gravity",
+      "Solve momentum conservation problems and explain safety features using F = Δp/Δt",
+      "Calculate solid pressure (p = F/A) and liquid pressure (Δp = ρgΔh)"
     ],
-    checklistPoints: [
-      'Apply the principle of moments (clockwise = anticlockwise) to solve balanced beam problems.',
-      'Use p = mv, conservation of momentum, and F = Δp/Δt to explain crumple zones and solve collisions.',
-      'Calculate solid pressure (p = F/A) and hydrostatic liquid pressure (Δp = ρgΔh).',
-    ],
+    "keyTerms": [
+      {
+        "term": "Moment",
+        "definition": "The turning effect of a force about a pivot, equal to force multiplied by perpendicular distance from the pivot."
+      },
+      {
+        "term": "Impulse",
+        "definition": "Force multiplied by the time for which it acts (FΔt), equal to the change in momentum (Δp)."
+      },
+      {
+        "term": "Pressure",
+        "definition": "Force acting perpendicularly per unit area (p = F / A), measured in pascals (Pa)."
+      },
+      {
+        "term": "Moments, Principle of Moments & Stability",
+        "definition": "A beam is in equilibrium when resultant force is zero AND total clockwise moment equals total anticlockwise moment."
+      }
+    ]
   },
-  'igcse-phys-1-4': {
-    subtopicId: 'igcse-phys-1-4',
-    subtopicCode: '1.4',
-    subtopicTitle: 'Energy Stores, Work Done, Power & Efficiency',
-    readingMinutes: 10,
-    videoTitle: 'GCSE Physics - Energy Stores, Transferring Energy & Work Done',
-    youtubeId: 'JGwcDCeYRYo',
-    videoChannel: 'Cognito',
-    videoDuration: '5:09',
-    courseMatchSummary: '4 of 4 sections match Cambridge IGCSE Physics (0625)',
-    timestamps: [
-      { time: '0:00', seconds: 0, label: 'Conservation of Energy Principle', cardId: 'igcse-phys-1-4-c1' },
-      { time: '1:05', seconds: 65, label: 'The 8 Energy Stores', cardId: 'igcse-phys-1-4-c1' },
-      { time: '2:45', seconds: 165, label: 'Energy Transfer Pathways', cardId: 'igcse-phys-1-4-c1' },
-      { time: '3:55', seconds: 235, label: 'Mechanical & Electrical Work Done', cardId: 'igcse-phys-1-4-c2' },
-    ],
-    cards: [
+  "igcse-phys-1-4": {
+    "subtopicId": "igcse-phys-1-4",
+    "subtopicCode": "1.4",
+    "subtopicTitle": "Energy Stores, Work Done, Power & Efficiency",
+    "readingMinutes": 10,
+    "videoTitle": "GCSE Physics - Energy Stores, Transferring Energy & Work Done",
+    "youtubeId": "JGwcDCeYRYo",
+    "videoChannel": "Cognito",
+    "videoDuration": "5:09",
+    "courseMatchSummary": "4 of 4 sections match Cambridge IGCSE Physics (0625)",
+    "timestamps": [
       {
-        id: 'igcse-phys-1-4-c1',
-        title: 'Energy Stores, Transfers & Mechanical Work',
-        summary: 'The 8 energy stores, transfer pathways, mechanical work, Ek, and Ep.',
-        bullets: [
-          'Energy is stored in kinetic, gravitational potential, chemical, elastic (strain), nuclear, electrostatic, magnetic, and internal (thermal) stores.',
-          'Energy is transferred between stores mechanically (forces doing work), electrically (currents), by heating (conduction/convection/radiation), or by waves (light/sound).',
-          'Mechanical work done equals energy transferred when a force moves an object through distance d in the direction of the force: **W = F × d = ΔE** (unit: joule, J).',
-          '**Core energy formulas:** Kinetic energy **Ek = ½mv²**; Gravitational potential energy **ΔEp = mgΔh**.',
-          'By conservation of energy, for a frictionless roller coaster descending height h: ½mv² = mgh, so v = √(2gh) (independent of mass!).',
+        "time": "0:00",
+        "seconds": 0,
+        "label": "Energy Stores, Conservation & EK / EP",
+        "cardId": "igcse-phys-1-4-c1"
+      },
+      {
+        "time": "1:45",
+        "seconds": 105,
+        "label": "Work Done, Power & Efficiency",
+        "cardId": "igcse-phys-1-4-c2"
+      },
+      {
+        "time": "3:30",
+        "seconds": 210,
+        "label": "Renewable vs Non-Renewable Energy Resources",
+        "cardId": "igcse-phys-1-4-c3"
+      }
+    ],
+    "cards": [
+      {
+        "id": "igcse-phys-1-4-c1",
+        "title": "Energy Stores, Kinetic Energy & Gravitational Potential Energy",
+        "summary": "Energy cannot be created or destroyed; equate ΔEP = EK for frictionless falling objects.",
+        "bullets": [
+          "**Key equations** - Kinetic energy E_k = ½mv² and Gravitational potential energy ΔE_p = mgΔh (both in joules, J)."
         ],
-        glossaryPills: [
+        "subsections": [
           {
-            term: 'work done',
-            definition: 'Energy transferred mechanically when a force moves its point of application in the direction of the force: W = F × d.',
-          },
+            "heading": "Conservation of Mechanical Energy",
+            "bullets": [
+              "**Rollercoaster / free fall** - ignoring air resistance, loss in GPE = gain in KE, so mgΔh = ½mv² → v = √(2gΔh) (mass cancels!)."
+            ],
+            "exampleHeading": "Worked example: 2 kg ball dropped from 5 m (g = 9.8 N/kg)",
+            "examples": [
+              "ΔE_p = 2 × 9.8 × 5 = 98 J → ½(2)v² = 98 → v² = 98 → v = 9.9 m/s."
+            ]
+          }
         ],
-        memoryAid: 'Doubling speed quadruples kinetic energy (×4) because v is squared in Ek = ½mv².',
-      },
-      {
-        id: 'igcse-phys-1-4-c2',
-        title: 'Power & Efficiency',
-        summary: 'Calculating power, percentage efficiency, and reading Sankey diagrams.',
-        bullets: [
-          'Power is the rate of work done or energy transferred: **P = W ÷ t = ΔE ÷ t** (SI unit: watt, W, where 1 W = 1 J/s).',
-          'Percentage efficiency = (Useful energy output ÷ Total energy input) × 100%, or equivalently (Useful power output ÷ Total power input) × 100%.',
-          'No real machine can exceed 100% efficiency because friction and electrical resistance always dissipate some energy into thermal stores in the surroundings.',
-          'Sankey diagrams represent energy transfers to scale: arrow width is strictly proportional to the amount of energy in joules.',
-        ],
-        commonMistake: 'When calculating power in watts, ALWAYS convert time from minutes to seconds (×60) and energy from kJ to J (×1,000).',
-      },
-      {
-        id: 'igcse-phys-1-4-c3',
-        title: 'Renewable & Non-Renewable Energy Resources',
-        summary: 'Comparing reliability, cost, and environmental impacts of energy resources.',
-        bullets: [
-          'Non-renewable resources (coal, oil, natural gas, nuclear fission of uranium) are finite. Fossil fuels are reliable and high energy-density but release CO₂ (greenhouse gas) and SO₂ (acid rain). Nuclear produces no CO₂ during generation but creates long-lived radioactive waste.',
-          'Renewable resources (solar PV, wind, hydroelectric, wave, tidal, geothermal, biofuels) are replenished naturally and have low running costs/carbon emissions.',
-          '**Trade-offs:** Solar and wind are intermittent (weather-dependent); hydroelectric is reliable and fast-response but floods valleys; geothermal is reliable only in volcanic regions.',
-          'The Sun is the ultimate source of energy for almost all Earth resources (fossil fuels, wind, waves, hydro, biofuels, solar) EXCEPT geothermal, nuclear, and tidal (Moon’s gravity).',
-        ],
-        glossaryPills: [
+        "glossaryPills": [
           {
-            term: 'renewable',
-            definition: 'An energy resource that is naturally replenished as fast as or faster than it is used and will not run out.',
-          },
-        ],
+            "term": "kinetic energy",
+            "definition": "Energy stored by a moving object, given by E_k = ½mv²."
+          }
+        ]
       },
+      {
+        "id": "igcse-phys-1-4-c2",
+        "title": "Work Done, Power & Efficiency",
+        "summary": "Work done equals energy transferred (W = Fd), power is rate of energy transfer (P = W/t), and efficiency compares useful output to total input.",
+        "bullets": [
+          "**Work & Power** - Work done W = Fd (1 J = 1 N m); Power P = ΔE / t = W / t (1 W = 1 J/s)."
+        ],
+        "subsections": [
+          {
+            "heading": "Percentage Efficiency & Sankey Diagrams",
+            "bullets": [
+              "**Efficiency** - (Useful energy output ÷ Total energy input) × 100%, or (Useful power output ÷ Total power input) × 100%; can NEVER exceed 100%."
+            ],
+            "exampleHeading": "Worked example: Crane lifting 500 N through 12 m in 15 s",
+            "examples": [
+              "Work done W = 500 × 12 = 6,000 J.",
+              "Useful power P = 6,000 ÷ 15 = 400 W. If electrical input is 500 W, efficiency = (400/500) × 100% = 80%."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "power",
+            "definition": "The rate of doing work or transferring energy (P = W / t), measured in watts (W)."
+          },
+          {
+            "term": "efficiency",
+            "definition": "The fraction or percentage of total energy/power input converted into useful output."
+          }
+        ],
+        "memoryAid": "Power = Energy per second (1 Watt = 1 Joule per second)."
+      },
+      {
+        "id": "igcse-phys-1-4-c3",
+        "title": "Renewable & Non-Renewable Energy Resources",
+        "summary": "Compare reliability, carbon emissions, and environmental impacts of fossil, nuclear, solar, wind, hydro, and geothermal sources.",
+        "bullets": [
+          "**Sun as the origin** - the Sun is the ultimate source of energy for fossil fuels, biofuels, wind, waves, hydroelectricity, and solar cells — the exceptions are **nuclear, geothermal, and tidal**."
+        ],
+        "subsections": [
+          {
+            "heading": "Trade-Offs in Power Generation",
+            "bullets": [
+              "**Fossil fuels** - reliable and high output, but non-renewable and emit CO₂ (global warming) and SO₂ (acid rain).",
+              "**Nuclear** - reliable with zero CO₂ during operation, but produces hazardous radioactive waste requiring long-term storage.",
+              "**Renewables (wind/solar)** - zero operating CO₂ and never run out, but intermittent (depend on weather/daylight)."
+            ],
+            "exampleHeading": "Concrete comparison: Hydroelectric vs Wind",
+            "examples": [
+              "Hydroelectric starts up rapidly to meet peak demand, but flooding valleys destroys habitats.",
+              "Wind turbines have no fuel cost, but output drops to zero on calm days."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "renewable energy resource",
+            "definition": "An energy resource that is replenished naturally at a rate equal to or faster than it is used."
+          }
+        ],
+        "commonMistake": "When calculating v from E_k = ½mv², remember to multiply by 2, divide by m, AND take the square root — forgetting √ is the #1 calculation slip!"
+      }
     ],
-    keyTerms: [
-      { term: 'Power', definition: 'Rate of doing work or transferring energy: P = E ÷ t, measured in watts (W).' },
-      { term: 'Efficiency', definition: 'Proportion of total energy input transferred usefully: (Useful output ÷ Total input) × 100%.' },
-      { term: 'Work done', definition: 'Force multiplied by distance moved in the direction of the force: W = Fd (J).' },
+    "checklistPoints": [
+      "Calculate KE = ½mv², GPE = mgΔh, and equate them for energy conservation",
+      "Compute work done W = Fd, power P = W/t, and percentage efficiency",
+      "Identify the 3 energy resources NOT originating from the Sun (nuclear, geothermal, tidal)"
     ],
-    checklistPoints: [
-      'Apply W = Fd, Ek = ½mv², and ΔEp = mgΔh, including equating Ep lost to Ek gained.',
-      'Calculate power (P = E/t) and percentage efficiency using Sankey diagrams.',
-      'Evaluate environmental, reliability, and cost trade-offs of renewable vs non-renewable energy resources.',
-    ],
+    "keyTerms": [
+      {
+        "term": "Kinetic energy",
+        "definition": "Energy stored by a moving object, given by E_k = ½mv²."
+      },
+      {
+        "term": "Power",
+        "definition": "The rate of doing work or transferring energy (P = W / t), measured in watts (W)."
+      },
+      {
+        "term": "Efficiency",
+        "definition": "The fraction or percentage of total energy/power input converted into useful output."
+      },
+      {
+        "term": "Renewable energy resource",
+        "definition": "An energy resource that is replenished naturally at a rate equal to or faster than it is used."
+      }
+    ]
   },
-  'igcse-phys-2-1': {
-    subtopicId: 'igcse-phys-2-1',
-    subtopicCode: '2.1',
-    subtopicTitle: 'Kinetic Particle Model of Matter & Gas Laws',
-    readingMinutes: 9,
-    videoTitle: 'GCSE Physics - Specific Heat Capacity | Internal Energy & Temperature',
-    youtubeId: 'LUHGFLR2p8k',
-    videoChannel: 'Cognito',
-    videoDuration: '5:01',
-    courseMatchSummary: '4 of 4 sections match Cambridge IGCSE Physics (0625)',
-    timestamps: [
-      { time: '0:00', seconds: 0, label: 'Introduction', cardId: 'igcse-phys-2-1-c1' },
-      { time: '1:02', seconds: 62, label: 'How Heating Affects Internal Energy and Temperature', cardId: 'igcse-phys-2-1-c2' },
-      { time: '2:21', seconds: 141, label: 'The Specific Heat Capacity Equation', cardId: 'igcse-phys-2-1-c2' },
-      { time: '4:07', seconds: 247, label: 'Practical Considerations: Energy Loss', cardId: 'igcse-phys-2-1-c3' },
-    ],
-    cards: [
+  "igcse-phys-2-1": {
+    "subtopicId": "igcse-phys-2-1",
+    "subtopicCode": "2.1",
+    "subtopicTitle": "Kinetic Particle Model of Matter & Gas Laws",
+    "readingMinutes": 9,
+    "videoTitle": "GCSE Physics - Specific Heat Capacity | Internal Energy & Temperature",
+    "youtubeId": "LUHGFLR2p8k",
+    "videoChannel": "Cognito",
+    "videoDuration": "5:01",
+    "courseMatchSummary": "4 of 4 sections match Cambridge IGCSE Physics (0625)",
+    "timestamps": [
       {
-        id: 'igcse-phys-2-1-c1',
-        title: 'States of Matter & Brownian Motion',
-        summary: 'Particle arrangement in solids, liquids, and gases plus Brownian motion.',
-        bullets: [
-          '**Solids:** Particles tightly packed in a regular lattice, held by strong intermolecular forces, vibrating about fixed positions (fixed shape and volume).',
-          '**Liquids:** Particles close together but irregularly arranged, sliding past one another (fixed volume, takes container shape).',
-          '**Gases:** Particles far apart with negligible intermolecular forces, moving rapidly and randomly in all directions (compressible, fills container).',
-          'Brownian motion: Tiny smoke particles in air (or pollen in water) observed under a microscope jitter in random zig-zag paths because much smaller, faster-moving invisible air/water molecules collide unevenly with them from all sides.',
+        "time": "0:00",
+        "seconds": 0,
+        "label": "States of Matter & Brownian Motion",
+        "cardId": "igcse-phys-2-1-c1"
+      },
+      {
+        "time": "1:40",
+        "seconds": 100,
+        "label": "Kelvin Scale & Gas Pressure Mechanism",
+        "cardId": "igcse-phys-2-1-c2"
+      },
+      {
+        "time": "3:20",
+        "seconds": 200,
+        "label": "Boyle’s Law (p₁V₁ = p₂V₂) & Thermal Expansion",
+        "cardId": "igcse-phys-2-1-c3"
+      }
+    ],
+    "cards": [
+      {
+        "id": "igcse-phys-2-1-c1",
+        "title": "States of Matter & Brownian Motion",
+        "summary": "Brownian motion of visible smoke particles provides direct evidence that invisible gas molecules move rapidly and randomly.",
+        "bullets": [
+          "**Three states** - solids vibrate in fixed lattices; liquids slide past one another while staying close; gases move rapidly and randomly far apart."
         ],
-        glossaryPills: [
+        "subsections": [
           {
-            term: 'Brownian motion',
-            definition: 'Random erratic movement of visible microscopic particles (like smoke) caused by bombardment from much smaller, fast-moving fluid molecules.',
-          },
+            "heading": "Explaining Brownian Motion",
+            "bullets": [
+              "**Observation** - bright smoke specks jiggle continuously in random zig-zag paths under a microscope.",
+              "**Explanation** - tiny, fast-moving, invisible air molecules collide unevenly and randomly with the much larger smoke particles from all sides."
+            ],
+            "exampleHeading": "Exam wording check: Brownian motion",
+            "examples": [
+              "Always state that FAST, RANDOM collisions by MUCH SMALLER invisible air/water molecules push the larger visible smoke/pollen particles."
+            ]
+          }
         ],
-        memoryAid: 'Remember: Smoke particles are HUGE and slow; air molecules are TINY, invisible, and fast — collisions push the smoke randomly.',
-      },
-      {
-        id: 'igcse-phys-2-1-c2',
-        title: 'Temperature, Absolute Zero & The Kelvin Scale',
-        summary: 'Linking temperature to kinetic energy, absolute zero, and the Kelvin scale.',
-        bullets: [
-          'Temperature is a measure of the average **kinetic energy** of the particles in a substance.',
-          '**Absolute zero** (−273 °C or 0 K) is the lowest theoretically possible temperature, where particles have minimum (zero) kinetic energy and exert zero gas pressure.',
-          '**Converting between Celsius and Kelvin:** T (K) = θ (°C) + 273. For example, 27 °C = 300 K; 100 °C = 373 K.',
-          'Note that a temperature CHANGE of 1 °C equals a change of 1 K (ΔT in K = Δθ in °C).',
-        ],
-        commonMistake: 'In gas-law calculations linking pressure or volume to temperature, NEVER use Celsius — always convert to Kelvin (+273) first!',
-      },
-      {
-        id: 'igcse-phys-2-1-c3',
-        title: 'Gas Pressure & Boyle’s Law (p₁V₁ = p₂V₂)',
-        summary: 'Explaining gas pressure via collisions and solving Boyle’s Law problems.',
-        bullets: [
-          'Gas pressure arises from millions of gas particles colliding with the container walls every second. Each collision changes a particle’s momentum, exerting a force on the wall (**p = F ÷ A**).',
-          'Heating a fixed mass of gas at constant volume increases average particle **kinetic energy** and speed → particles hit the walls MORE FREQUENTLY and HARDER (greater momentum change per collision) → pressure increases.',
-          'Boyle’s Law (constant temperature & fixed mass): Pressure is inversely proportional to volume: p × V = constant, so **p₁V₁ = p₂V₂**.',
-          'Halving the volume packs the same particles into half the space, doubling the number of collisions per second per unit wall area, so pressure doubles.',
-          '**Worked example:** 400 cm³ of gas at 100 kPa is compressed isothermally to 160 cm³. New pressure p₂ = (100 × 400) ÷ 160 = 250 kPa.',
-        ],
-        glossaryPills: [
+        "glossaryPills": [
           {
-            term: 'Boyle’s Law',
-            definition: 'For a fixed mass of gas at constant temperature, pressure and volume are inversely proportional (p₁V₁ = p₂V₂).',
-          },
-        ],
+            "term": "Brownian motion",
+            "definition": "The random, jerky movement of microscopic suspended particles (such as smoke in air) caused by uneven bombardment by fast-moving fluid molecules."
+          }
+        ]
       },
+      {
+        "id": "igcse-phys-2-1-c2",
+        "title": "Absolute Zero, Kelvin Scale & Gas Pressure",
+        "summary": "Gas pressure comes from molecules colliding with container walls and exerting a force per unit area.",
+        "bullets": [
+          "**Kelvin conversion** - T(K) = θ(°C) + 273; **absolute zero** (0 K = −273 °C) is the lowest possible temperature where particles have minimum kinetic energy."
+        ],
+        "subsections": [
+          {
+            "heading": "Effect of Heating a Gas at Constant Volume",
+            "bullets": [
+              "**Molecular explanation** - raising temperature increases average kinetic energy and speed of molecules, so they hit the walls **more frequently** and **harder** (greater Δp per collision), increasing force and pressure."
+            ],
+            "exampleHeading": "Worked example: Converting temperatures",
+            "examples": [
+              "27 °C = 27 + 273 = 300 K; 373 K = 373 − 273 = 100 °C."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "absolute zero",
+            "definition": "0 K (−273 °C), the lowest theoretically possible temperature at which particles have minimum kinetic energy."
+          }
+        ],
+        "memoryAid": "Heating a fixed-volume gas makes molecules hit walls MORE OFTEN and HARDER → Higher pressure!"
+      },
+      {
+        "id": "igcse-phys-2-1-c3",
+        "title": "Boyle’s Law (Constant Temperature) & Thermal Expansion",
+        "summary": "At constant temperature, pressure is inversely proportional to volume (p₁V₁ = p₂V₂); gases expand far more than solids when heated.",
+        "bullets": [
+          "**Boyle’s Law** - for a fixed mass of gas at constant temperature: **p₁V₁ = p₂V₂** (halving volume doubles collision frequency with walls, doubling pressure)."
+        ],
+        "subsections": [
+          {
+            "heading": "Thermal Expansion Applications",
+            "bullets": [
+              "**Order of expansion** - Gases > Liquids > Solids (weakest intermolecular forces allow greatest increase in separation).",
+              "**Engineering** - railway expansion gaps prevent buckling; bimetallic strips bend to act as thermostats."
+            ],
+            "exampleHeading": "Worked example: Compressing gas at constant temperature",
+            "examples": [
+              "Gas at 100 kPa occupies 600 cm³ and is compressed to 150 cm³.",
+              "p₂ = (100 × 600) ÷ 150 = 400 kPa."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "Boyle’s law",
+            "definition": "For a fixed mass of gas at constant temperature, pressure is inversely proportional to volume (pV = constant)."
+          }
+        ],
+        "commonMistake": "In Brownian motion answers, never say the smoke particles are \"living\" or moving on their own — explicitly state they are bombarded by smaller invisible air molecules."
+      }
     ],
-    keyTerms: [
-      { term: 'Absolute zero', definition: '0 K (−273 °C), the temperature at which particles possess minimum possible kinetic energy.' },
-      { term: 'Brownian motion', definition: 'Random zig-zag motion of visible specks suspended in a fluid due to collisions with invisible fluid molecules.' },
-      { term: 'Boyle’s Law', definition: 'p₁V₁ = p₂V₂ for a fixed mass of gas held at constant temperature.' },
+    "checklistPoints": [
+      "Explain Brownian motion in terms of collisions with smaller, faster fluid molecules",
+      "Convert between °C and Kelvin (T = θ + 273) and explain gas pressure using particle collisions",
+      "Calculate unknown pressures or volumes using Boyle’s Law p₁V₁ = p₂V₂"
     ],
-    checklistPoints: [
-      'Describe particle arrangement, motion, and forces in solids, liquids, and gases.',
-      'Explain Brownian motion as evidence for the kinetic particle model.',
-      'Convert between °C and Kelvin and apply p₁V₁ = p₂V₂ to solve gas compression problems.',
-    ],
+    "keyTerms": [
+      {
+        "term": "Brownian motion",
+        "definition": "The random, jerky movement of microscopic suspended particles (such as smoke in air) caused by uneven bombardment by fast-moving fluid molecules."
+      },
+      {
+        "term": "Absolute zero",
+        "definition": "0 K (−273 °C), the lowest theoretically possible temperature at which particles have minimum kinetic energy."
+      },
+      {
+        "term": "Boyle’s law",
+        "definition": "For a fixed mass of gas at constant temperature, pressure is inversely proportional to volume (pV = constant)."
+      },
+      {
+        "term": "States of Matter & Brownian Motion",
+        "definition": "Brownian motion of visible smoke particles provides direct evidence that invisible gas molecules move rapidly and randomly."
+      }
+    ]
   },
-  'igcse-phys-2-2': {
-    subtopicId: 'igcse-phys-2-2',
-    subtopicCode: '2.2',
-    subtopicTitle: 'Specific Heat Capacity, Latent Heat & Thermal Transfer',
-    readingMinutes: 11,
-    videoTitle: 'GCSE Physics - Conduction, Convection & Radiation | How Heat Energy is Transferred',
-    youtubeId: 'rUnABMRPzvg',
-    videoChannel: 'Cognito',
-    videoDuration: '4:30',
-    courseMatchSummary: '4 of 4 sections match Cambridge IGCSE Physics (0625)',
-    timestamps: [
-      { time: '0:00', seconds: 0, label: 'Introduction to Heat Transfer', cardId: 'igcse-phys-2-2-c1' },
-      { time: '0:24', seconds: 24, label: 'Conduction Explained', cardId: 'igcse-phys-2-2-c3' },
-      { time: '2:10', seconds: 130, label: 'Convection Currents Explained', cardId: 'igcse-phys-2-2-c3' },
-      { time: '3:17', seconds: 197, label: 'Radiation Explained', cardId: 'igcse-phys-2-2-c3' },
-    ],
-    cards: [
+  "igcse-phys-2-2": {
+    "subtopicId": "igcse-phys-2-2",
+    "subtopicCode": "2.2",
+    "subtopicTitle": "Specific Heat Capacity, Latent Heat & Thermal Transfer",
+    "readingMinutes": 11,
+    "videoTitle": "GCSE Physics - Conduction, Convection & Radiation | How Heat Energy is Transferred",
+    "youtubeId": "rUnABMRPzvg",
+    "videoChannel": "Cognito",
+    "videoDuration": "4:30",
+    "courseMatchSummary": "4 of 4 sections match Cambridge IGCSE Physics (0625)",
+    "timestamps": [
       {
-        id: 'igcse-phys-2-2-c1',
-        title: 'Specific Heat Capacity & Latent Heat',
-        summary: 'Using ΔE = mcΔT, latent heat plateaus, and evaporative cooling.',
-        bullets: [
-          'Internal energy is the sum of the random kinetic energies AND intermolecular potential energies of all particles in a body.',
-          'Specific heat capacity (c) is the energy required to raise the temperature of 1 kg of a substance by 1 °C (or 1 K): **ΔE = m × c × ΔT** (units of c: J/(kg °C)). Water has a very high c ≈ 4,200 J/(kg °C).',
-          'During a change of state (melting or boiling), temperature remains CONSTANT on a heating curve even though energy is still supplied — this latent heat increases particles’ potential energy by weakening/breaking intermolecular bonds rather than increasing **kinetic energy**.',
-          '**Evaporation differs from boiling:** it occurs at ANY temperature below the boiling point and ONLY at the liquid’s surface. Because the fastest, highest-energy molecules escape, the average kinetic energy of the remaining liquid drops — causing evaporative cooling.',
-        ],
-        glossaryPills: [
-          {
-            term: 'specific heat capacity',
-            definition: 'Thermal energy needed per unit mass per unit temperature rise: c = ΔE ÷ (m × ΔT).',
-          },
-          {
-            term: 'latent heat',
-            definition: 'Hidden thermal energy absorbed or released during a change of state at constant temperature to break or form intermolecular bonds.',
-          },
-        ],
-        commonMistake: 'On a flat plateau of a heating curve, NEVER say "no energy is being absorbed" — energy IS absorbed to break intermolecular bonds (potential energy rises while kinetic energy/temperature stays flat).',
+        "time": "0:00",
+        "seconds": 0,
+        "label": "Specific Heat Capacity & Changes of State",
+        "cardId": "igcse-phys-2-2-c1"
       },
       {
-        id: 'igcse-phys-2-2-c2',
-        title: 'Thermal Expansion & Real-World Applications',
-        summary: 'Why solids, liquids, and gases expand when heated and practical applications.',
-        bullets: [
-          'When heated, particles vibrate or move faster and push further apart, causing expansion: gases expand the most, liquids moderately, and solids the least.',
-          '**Practical consequences:** Railway tracks and bridges have expansion joints to prevent buckling in summer; overhead power cables are hung slack so they do not snap in winter.',
-          '**Applications:** Liquid-in-glass thermometers expand mercury/alcohol up a narrow capillary; bimetallic strips bend on heating (brass expands more than iron) to switch thermostats.',
-        ],
+        "time": "1:30",
+        "seconds": 90,
+        "label": "Conduction & Convection Mechanisms",
+        "cardId": "igcse-phys-2-2-c2"
       },
       {
-        id: 'igcse-phys-2-2-c3',
-        title: 'Conduction, Convection & Infrared Radiation',
-        summary: 'How conduction, convection currents, and infrared radiation transfer heat.',
-        bullets: [
-          '**Conduction (mainly in solids):** Vibrating particles pass kinetic energy along a lattice. Metals are exceptional thermal conductors because DELOCALISED FREE ELECTRONS diffuse rapidly through the lattice and collide with distant metal ions.',
-          '**Convection (fluids — liquids & gases ONLY):** Heated fluid expands, becomes LESS DENSE, and rises while cooler, denser fluid sinks to replace it, forming a convection current.',
-          '**Infrared (IR) radiation:** Electromagnetic waves that require NO medium and can travel through the vacuum of space. Matt black surfaces are the BEST emitters and BEST absorbers of IR; shiny silver surfaces are the WORST emitters/absorbers and BEST reflectors.',
-          '**Vacuum flask design:** Vacuum wall prevents conduction & convection; silvered glass reflects IR radiation; plastic cap/stopper reduces conduction and evaporation.',
+        "time": "3:00",
+        "seconds": 180,
+        "label": "Infrared Radiation & Vacuum Flasks",
+        "cardId": "igcse-phys-2-2-c3"
+      }
+    ],
+    "cards": [
+      {
+        "id": "igcse-phys-2-2-c1",
+        "title": "Specific Heat Capacity, Evaporation & Latent Heat",
+        "summary": "Use ΔE = mcΔθ during temperature rise; temperature stays flat during melting/boiling as energy breaks intermolecular bonds.",
+        "bullets": [
+          "**Specific heat capacity (c)** - energy needed to raise 1 kg of a substance by 1 °C: **ΔE = mcΔθ** (unit J / (kg °C))."
         ],
-        glossaryPills: [
+        "subsections": [
           {
-            term: 'convection current',
-            definition: 'Circular flow in a liquid or gas driven by hotter, less dense fluid rising and cooler, denser fluid sinking.',
-          },
+            "heading": "Evaporation Cooling & Heating Curves",
+            "bullets": [
+              "**Flat plateaus on heating curves** - during melting or boiling, supplied energy increases potential energy to overcome intermolecular forces instead of raising kinetic energy, so temperature stays constant.",
+              "**Evaporation cools a liquid** - the most energetic (fastest) molecules escape from the surface, lowering the average kinetic energy — and thus temperature — of the remaining liquid."
+            ],
+            "exampleHeading": "Worked example: Heating 1.5 kg of water from 20 °C to 80 °C (c = 4200 J/(kg °C))",
+            "examples": [
+              "Δθ = 80 − 20 = 60 °C.",
+              "ΔE = 1.5 × 4200 × 60 = 378,000 J (378 kJ)."
+            ]
+          }
         ],
-        memoryAid: 'Metals conduct via Free Electrons; Fluids convect via Density differences; Vacuum transfers ONLY by Radiation!',
+        "glossaryPills": [
+          {
+            "term": "specific heat capacity",
+            "definition": "The thermal energy required to raise the temperature of 1 kg of a substance by 1 °C."
+          }
+        ]
       },
+      {
+        "id": "igcse-phys-2-2-c2",
+        "title": "Conduction & Convection",
+        "summary": "Metals conduct rapidly via delocalised free electrons; convection currents occur in fluids due to density changes.",
+        "bullets": [
+          "**Conduction** - vibrating particles pass kinetic energy to neighbours in all solids; metals conduct much faster because **delocalised (free) electrons** move through the lattice and collide with ions."
+        ],
+        "subsections": [
+          {
+            "heading": "Convection Currents in Liquids & Gases",
+            "bullets": [
+              "**Convection mechanism** - heating makes a fluid expand → becomes **less dense** → rises; cooler, denser fluid sinks to replace it, setting up a continuous convection current.",
+              "**No convection in solids** - particles in solids are fixed in place and cannot flow."
+            ],
+            "exampleHeading": "Concrete example: Sea breeze during the day",
+            "examples": [
+              "Land heats up faster than sea; warm air over land expands, becomes less dense, and rises.",
+              "Cooler, denser air from over the sea flows inland to replace it."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "convection",
+            "definition": "Thermal energy transfer in fluids caused by warmer, less dense fluid rising and cooler, denser fluid sinking."
+          }
+        ],
+        "commonMistake": "NEVER write \"heat rises\" — always write \"warmer fluid expands, becomes LESS DENSE, and rises\"!"
+      },
+      {
+        "id": "igcse-phys-2-2-c3",
+        "title": "Thermal (Infrared) Radiation & Insulation",
+        "summary": "Infrared radiation travels as EM waves even through a vacuum; matte black surfaces emit and absorb best.",
+        "bullets": [
+          "**Surface properties** - **dull (matte) black** surfaces are the best emitters and absorbers of infrared radiation; **shiny silver/white** surfaces are the worst emitters/absorbers and best reflectors."
+        ],
+        "subsections": [
+          {
+            "heading": "How a Vacuum Flask Stops All Three Transfers",
+            "bullets": [
+              "**Vacuum between double glass walls** - prevents conduction and convection (no particles).",
+              "**Silvered inner walls** - minimise infrared radiation emission and reflect heat back inside.",
+              "**Insulating plastic stopper** - reduces conduction and stops convection/evaporation out the top."
+            ],
+            "exampleHeading": "Concrete example: Leslie’s cube experiment",
+            "examples": [
+              "Fill a hollow metal cube with boiling water and measure each face with an infrared detector at equal distance.",
+              "The matte black face gives the highest reading; the shiny silver face gives the lowest."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "infrared radiation",
+            "definition": "Electromagnetic waves emitted by all objects above absolute zero that transfer thermal energy without needing a medium."
+          }
+        ],
+        "memoryAid": "Matte Black = Best Absorber & Best Emitter; Shiny Silver = Best Reflector!"
+      }
     ],
-    keyTerms: [
-      { term: 'Internal energy', definition: 'Total random kinetic and potential energy of all particles inside a system.' },
-      { term: 'Specific heat capacity', definition: 'Energy required to raise 1 kg of a substance by 1 °C: ΔE = mcΔT.' },
-      { term: 'Evaporation', definition: 'Escape of the most energetic molecules from a liquid surface below boiling point, cooling the remaining liquid.' },
-      { term: 'Thermal conduction', definition: 'Transfer of thermal energy through a solid by lattice vibrations and (in metals) free electron diffusion.' },
+    "checklistPoints": [
+      "Calculate thermal energy changes with ΔE = mcΔθ and explain evaporation cooling",
+      "Explain metallic conduction (lattice vibrations + free electrons) and convection (expansion → lower density → rises)",
+      "Compare matte black vs shiny silver surfaces and explain every insulating feature of a vacuum flask"
     ],
-    checklistPoints: [
-      'Use ΔE = mcΔT and explain why temperature remains constant during melting and boiling.',
-      'Explain why evaporation cools a liquid and list factors increasing its rate (temperature, surface area, draught).',
-      'Compare conduction (including free electrons in metals), convection (density changes), and IR radiation (surface colour/texture).',
-    ],
+    "keyTerms": [
+      {
+        "term": "Specific heat capacity",
+        "definition": "The thermal energy required to raise the temperature of 1 kg of a substance by 1 °C."
+      },
+      {
+        "term": "Convection",
+        "definition": "Thermal energy transfer in fluids caused by warmer, less dense fluid rising and cooler, denser fluid sinking."
+      },
+      {
+        "term": "Infrared radiation",
+        "definition": "Electromagnetic waves emitted by all objects above absolute zero that transfer thermal energy without needing a medium."
+      },
+      {
+        "term": "Specific Heat Capacity, Evaporation & Latent Heat",
+        "definition": "Use ΔE = mcΔθ during temperature rise; temperature stays flat during melting/boiling as energy breaks intermolecular bonds."
+      }
+    ]
   },
-  'igcse-phys-3-1': {
-    subtopicId: 'igcse-phys-3-1',
-    subtopicCode: '3.1',
-    subtopicTitle: 'General Wave Properties, Reflection, Refraction & Diffraction',
-    readingMinutes: 10,
-    videoTitle: 'GCSE Physics - Longitudinal & Transverse Waves - Labelling & Calculating Wave Speed',
-    youtubeId: '1DFAy8MXkMA',
-    videoChannel: 'Cognito',
-    videoDuration: '6:40',
-    courseMatchSummary: '4 of 4 sections match Cambridge IGCSE Physics (0625)',
-    timestamps: [
-      { time: '0:00', seconds: 0, label: 'Introduction to Waves', cardId: 'igcse-phys-3-1-c1' },
-      { time: '2:02', seconds: 122, label: 'Labelling a Wave (Displacement-Time Graph)', cardId: 'igcse-phys-3-1-c1' },
-      { time: '3:42', seconds: 222, label: 'The Wave Speed Equation', cardId: 'igcse-phys-3-1-c2' },
-      { time: '4:42', seconds: 282, label: 'Transverse vs Longitudinal Waves', cardId: 'igcse-phys-3-1-c1' },
-    ],
-    cards: [
+  "igcse-phys-3-1": {
+    "subtopicId": "igcse-phys-3-1",
+    "subtopicCode": "3.1",
+    "subtopicTitle": "General Wave Properties, Reflection, Refraction & Diffraction",
+    "readingMinutes": 10,
+    "videoTitle": "GCSE Physics - Longitudinal & Transverse Waves - Labelling & Calculating Wave Speed",
+    "youtubeId": "1DFAy8MXkMA",
+    "videoChannel": "Cognito",
+    "videoDuration": "6:40",
+    "courseMatchSummary": "4 of 4 sections match Cambridge IGCSE Physics (0625)",
+    "timestamps": [
       {
-        id: 'igcse-phys-3-1-c1',
-        title: 'Transverse vs Longitudinal Waves & Wave Parameters',
-        summary: 'Comparing transverse and longitudinal waves, amplitude, frequency, and wavelength.',
-        diagram: 'transverse-wave',
-        bullets: [
-          'Waves transfer ENERGY and information without transferring matter from place to place.',
-          '**Transverse waves:** Vibrations are perpendicular (90°) to the direction of wave travel (examples: all electromagnetic waves, water surface waves, seismic S-waves).',
-          '**Longitudinal waves:** Vibrations are parallel to wave travel, forming alternating high-pressure compressions and low-pressure rarefactions (examples: sound waves, ultrasound, seismic P-waves).',
-          '**Key terms:** Amplitude (A) = maximum displacement from rest; Wavelength (λ) = distance between adjacent crests; Frequency (f) = waves per second (Hz); Period **T = 1 ÷ f** (s).',
-        ],
-        glossaryPills: [
-          {
-            term: 'wavelength',
-            definition: 'Distance from one point on a wave to the exact corresponding point on the next adjacent wave (e.g., crest to crest), measured in metres.',
-          },
-          {
-            term: 'compressions',
-            definition: 'Regions in a longitudinal wave where particles are pushed closer together, producing higher pressure.',
-          },
-        ],
-        memoryAid: 'Transverse has a T (perpendicular 90° crossbar); Longitudinal is aLong the same line (parallel).',
+        "time": "0:00",
+        "seconds": 0,
+        "label": "Transverse vs Longitudinal & Wave Equation",
+        "cardId": "igcse-phys-3-1-c1"
       },
       {
-        id: 'igcse-phys-3-1-c2',
-        title: 'The Wave Equation (v = fλ)',
-        summary: 'Applying the wave speed equation v = fλ and time period T = 1/f.',
-        bullets: [
-          'Wave speed (m/s) = frequency (Hz) × wavelength (m): **v = f × λ**.',
-          '**Also link period and frequency:** **T = 1 ÷ f**, so a wave of frequency 50 Hz has a time period T = 0.02 s.',
-          '**Worked example:** A radio wave travels at 3.0 × 10⁸ m/s with frequency 100 MHz (1.0 × 10⁸ Hz). Wavelength λ = v ÷ f = (3.0 × 10⁸) ÷ (1.0 × 10⁸) = 3.0 m.',
-          'When a wave crosses into a new medium, its FREQUENCY stays unchanged — only its wave speed and wavelength change proportionally.',
-        ],
-        commonMistake: 'Remember to convert kHz (×10³), MHz (×10⁶), and cm (÷100) into Hz and metres before calculating v = fλ!',
+        "time": "2:15",
+        "seconds": 135,
+        "label": "Reflection & Refraction (Wavefronts)",
+        "cardId": "igcse-phys-3-1-c2"
       },
       {
-        id: 'igcse-phys-3-1-c3',
-        title: 'Reflection, Refraction & Diffraction in a Ripple Tank',
-        summary: 'Wavefront diagrams for reflection, refraction, and diffraction through gaps.',
-        bullets: [
-          '**Reflection:** Wavefronts bounce off a barrier with angle of incidence = angle of reflection (i = r); speed, frequency, and wavelength stay unchanged.',
-          '**Refraction:** Water waves moving from deep to shallow water SLOW DOWN, their wavelength DECREASES, and if they hit the boundary at an angle they bend TOWARD the normal (frequency stays constant).',
-          'Diffraction: Spreading of waves as they pass through a gap or around an obstacle. Diffraction is MAXIMUM when the gap width is roughly equal to the wavelength (gap ≈ λ).',
-          'Longer-wavelength waves (like radio waves) diffract more around hills than shorter-wavelength microwaves.',
+        "time": "4:30",
+        "seconds": 270,
+        "label": "Diffraction Through Gaps & Around Edges",
+        "cardId": "igcse-phys-3-1-c3"
+      }
+    ],
+    "cards": [
+      {
+        "id": "igcse-phys-3-1-c1",
+        "title": "Transverse vs Longitudinal Waves & v = fλ",
+        "summary": "Waves transfer energy without transferring matter; speed equals frequency multiplied by wavelength.",
+        "bullets": [
+          "**Transverse waves** - oscillations are **perpendicular** to energy transfer (all EM waves, water waves, seismic S-waves).",
+          "**Longitudinal waves** - oscillations are **parallel** to energy transfer, forming compressions and rarefactions (sound waves, seismic P-waves)."
         ],
-        glossaryPills: [
+        "subsections": [
           {
-            term: 'diffraction',
-            definition: 'The spreading out of wavefronts after passing through a narrow gap or past the edge of an obstacle.',
-          },
+            "heading": "Wave Equation & Definitions",
+            "bullets": [
+              "**v = fλ and f = 1/T** - wave speed v (m/s) = frequency f (Hz) × wavelength λ (m); amplitude is max displacement from rest."
+            ],
+            "exampleHeading": "Worked example: Water wave with f = 4 Hz and λ = 0.25 m",
+            "examples": [
+              "Wave speed v = fλ = 4 × 0.25 = 1.0 m/s; Period T = 1 / 4 = 0.25 s."
+            ]
+          }
         ],
+        "glossaryPills": [
+          {
+            "term": "wavelength",
+            "definition": "The distance between two consecutive identical points on a wave (e.g. crest to crest), measured in metres."
+          },
+          {
+            "term": "frequency",
+            "definition": "The number of complete waves passing a fixed point each second, measured in hertz (Hz)."
+          }
+        ],
+        "diagram": "transverse-wave"
       },
+      {
+        "id": "igcse-phys-3-1-c2",
+        "title": "Reflection & Refraction in Ripple Tanks",
+        "summary": "Frequency NEVER changes during refraction — only wave speed and wavelength change when depth or medium changes.",
+        "bullets": [
+          "**Reflection** - angle of incidence i = angle of reflection r (measured to the normal); speed, wavelength, and frequency stay unchanged."
+        ],
+        "subsections": [
+          {
+            "heading": "Refraction of Water Waves (Deep → Shallow)",
+            "bullets": [
+              "**Slowing down** - entering shallow water makes water waves **slow down**, **wavelength decreases** (wavefronts bunch closer), and waves bend **towards the normal**, while **frequency stays constant**."
+            ],
+            "exampleHeading": "Worked example: Deep to shallow water transition",
+            "examples": [
+              "Deep water: v = 0.40 m/s, f = 5 Hz → λ = 0.08 m.",
+              "Shallow water: v drops to 0.25 m/s, f remains 5 Hz → λ shrinks to 0.25 ÷ 5 = 0.05 m."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "refraction",
+            "definition": "The change in speed and direction of a wave when it crosses a boundary into a medium of different density or depth."
+          }
+        ],
+        "memoryAid": "FAST (Faster Away from normal, Slower Towards normal) — and Frequency NEVER changes!"
+      },
+      {
+        "id": "igcse-phys-3-1-c3",
+        "title": "Diffraction Through Gaps & Around Obstacles",
+        "summary": "Waves spread out most dramatically when the gap width is approximately equal to the wavelength.",
+        "bullets": [
+          "**Diffraction** - the spreading out of waves when passing through a gap or past an edge; wavelength, frequency, and speed stay unchanged."
+        ],
+        "subsections": [
+          {
+            "heading": "Effect of Gap Width vs Wavelength",
+            "bullets": [
+              "**Maximum diffraction** - occurs when gap width ≈ wavelength λ (nearly semicircular wavefronts).",
+              "**Minimal diffraction** - when the gap is much wider than λ, waves mostly pass straight through with only slight curving at the edges."
+            ],
+            "exampleHeading": "Concrete example: Why you hear around corners better than you see",
+            "examples": [
+              "Sound wavelengths (~0.5–2 m) are similar to doorway widths, so sound diffracts strongly around doors.",
+              "Light wavelengths (~5 × 10⁻⁷ m) are millions of times smaller than a doorway, so light barely diffracts."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "diffraction",
+            "definition": "The spreading of waves as they pass through a narrow gap or around an obstacle."
+          }
+        ],
+        "commonMistake": "Never claim that refraction changes wave frequency — frequency is fixed by the source and stays constant across boundaries!"
+      }
     ],
-    keyTerms: [
-      { term: 'Transverse wave', definition: 'Wave whose oscillations are perpendicular to the direction of energy transfer.' },
-      { term: 'Longitudinal wave', definition: 'Wave whose oscillations are parallel to the direction of energy transfer (compressions & rarefactions).' },
-      { term: 'Frequency', definition: 'Number of complete oscillations passing a point per second (Hz).' },
-      { term: 'Diffraction', definition: 'Spreading of waves around edges or through apertures, strongest when aperture width ≈ wavelength.' },
+    "checklistPoints": [
+      "Compare transverse and longitudinal waves and solve calculations with v = fλ and T = 1/f",
+      "Explain refraction of water waves from deep to shallow water (speed & λ decrease, f constant)",
+      "Draw diffracted wavefronts and state that maximum diffraction happens when gap width ≈ wavelength"
     ],
-    checklistPoints: [
-      'Compare transverse and longitudinal waves with examples of each.',
-      'Calculate wave speed, frequency, wavelength, and period using v = fλ and T = 1/f.',
-      'Draw wavefront diagrams for reflection, refraction (deep → shallow), and diffraction through narrow vs wide gaps.',
-    ],
+    "keyTerms": [
+      {
+        "term": "Wavelength",
+        "definition": "The distance between two consecutive identical points on a wave (e.g. crest to crest), measured in metres."
+      },
+      {
+        "term": "Frequency",
+        "definition": "The number of complete waves passing a fixed point each second, measured in hertz (Hz)."
+      },
+      {
+        "term": "Refraction",
+        "definition": "The change in speed and direction of a wave when it crosses a boundary into a medium of different density or depth."
+      },
+      {
+        "term": "Diffraction",
+        "definition": "The spreading of waves as they pass through a narrow gap or around an obstacle."
+      }
+    ]
   },
-  'igcse-phys-3-2': {
-    subtopicId: 'igcse-phys-3-2',
-    subtopicCode: '3.2',
-    subtopicTitle: 'Light, Lenses, Total Internal Reflection & EM Spectrum',
-    readingMinutes: 11,
-    videoTitle: 'GCSE Physics - How Lenses Work - Convex & Concave Lenses | Real & Virtual Images',
-    youtubeId: '0O3NdG0uWM4',
-    videoChannel: 'Cognito',
-    videoDuration: '6:36',
-    courseMatchSummary: '4 of 4 sections match Cambridge IGCSE Physics (0625)',
-    timestamps: [
-      { time: '0:00', seconds: 0, label: 'Introduction to Lenses and Refraction', cardId: 'igcse-phys-3-2-c1' },
-      { time: '1:01', seconds: 61, label: 'Concave (Diverging) Lenses Explained', cardId: 'igcse-phys-3-2-c2' },
-      { time: '2:22', seconds: 142, label: 'Lens Axis, Focal Length and Lens Power', cardId: 'igcse-phys-3-2-c2' },
-      { time: '5:29', seconds: 329, label: 'How to Describe Images', cardId: 'igcse-phys-3-2-c2' },
-    ],
-    cards: [
+  "igcse-phys-3-2": {
+    "subtopicId": "igcse-phys-3-2",
+    "subtopicCode": "3.2",
+    "subtopicTitle": "Light, Lenses, Total Internal Reflection & EM Spectrum",
+    "readingMinutes": 11,
+    "videoTitle": "GCSE Physics - How Lenses Work - Convex & Concave Lenses | Real & Virtual Images",
+    "youtubeId": "0O3NdG0uWM4",
+    "videoChannel": "Cognito",
+    "videoDuration": "6:36",
+    "courseMatchSummary": "4 of 4 sections match Cambridge IGCSE Physics (0625)",
+    "timestamps": [
       {
-        id: 'igcse-phys-3-2-c1',
-        title: 'Reflection, Snell’s Law & Total Internal Reflection',
-        summary: 'Plane mirrors, Snell’s Law, critical angle, and optical fibre TIR.',
-        bullets: [
-          'Plane mirrors form an image that is virtual, upright, same size as the object, laterally inverted, and the same distance behind the mirror as the object is in front.',
-          'Refractive index n = speed of light in vacuum ÷ speed in medium = sin i ÷ sin r (where i is angle in air and r is angle in glass/water). Light slows and bends TOWARD the normal entering denser glass, and AWAY leaving into air.',
-          'Total Internal Reflection (TIR) occurs ONLY when two conditions are met: (1) Light travels from a denser to a less dense medium (e.g., glass → air), AND (2) Angle of incidence exceeds the critical angle c (i > c).',
-          'Critical angle equation: **sin c = 1 ÷ n**. For glass with n = 1.5, sin c = 1/1.5 = 0.667, giving c ≈ 41.8°.',
-          '**Applications of TIR:** High-speed optical fibre communications (broadband) and medical endoscopes (keyhole surgery).',
-        ],
-        glossaryPills: [
-          {
-            term: 'critical angle',
-            definition: 'The angle of incidence inside a denser medium for which the refracted ray emerges exactly along the boundary (r = 90°).',
-          },
-          {
-            term: 'refractive index',
-            definition: 'Ratio of the speed of light in a vacuum to its speed in a material: n = c / v = sin i / sin r.',
-          },
-        ],
-        commonMistake: 'Angles of incidence i and refraction r are ALWAYS measured from the NORMAL (the 90° dotted line), NEVER from the glass surface!',
+        "time": "0:00",
+        "seconds": 0,
+        "label": "Snell’s Law & Total Internal Reflection",
+        "cardId": "igcse-phys-3-2-c1"
       },
       {
-        id: 'igcse-phys-3-2-c2',
-        title: 'Thin Converging & Diverging Lenses',
-        summary: 'Ray diagrams for converging lenses, real vs virtual images, and eye defects.',
-        bullets: [
-          'A thin converging (convex) lens bends **parallel** rays to meet at the principal focus F; focal length f is the distance from the optical centre to F.',
-          '**Ray diagram rules for a converging lens:** (1) Ray parallel to principal axis refracts through F; (2) Ray through optical centre continues straight undeviated.',
-          'Object beyond 2F → real, inverted, diminished image (camera/eye). Object between F and 2F → real, inverted, magnified image (projector). Object closer than F → VIRTUAL, upright, magnified image (magnifying glass).',
-          '**Eye defects:** Short-sightedness (myopia, focuses in front of retina) is corrected with a diverging (concave) lens; long-sightedness (hyperopia, focuses behind retina) is corrected with a converging (convex) lens.',
-        ],
-        glossaryPills: [
-          {
-            term: 'virtual',
-            definition: 'An optical image where light rays only appear to diverge from a point behind a mirror or lens and cannot be projected onto a screen.',
-          },
-        ],
+        "time": "2:10",
+        "seconds": 130,
+        "label": "Converging & Diverging Lenses + Eye Correction",
+        "cardId": "igcse-phys-3-2-c2"
       },
       {
-        id: 'igcse-phys-3-2-c3',
-        title: 'Dispersion & The Electromagnetic Spectrum',
-        summary: 'Prism dispersion plus properties, uses, and hazards of the EM spectrum.',
-        bullets: [
-          '**Dispersion:** A glass prism splits white light into ROYGBIV because violet light slows down slightly more (higher n) than red light and refracts through a larger angle.',
-          'All EM waves are transverse and travel through a vacuum at c = 3.0 × 10⁸ m/s. Order of INCREASING frequency (decreasing wavelength): Radio → Microwave → Infrared → Visible → Ultraviolet → X-rays → Gamma rays.',
-          '**Uses:** Radio (broadcasting, RFID), Microwaves (satellites, mobile phones, cooking), Infrared (thermal imaging, optical fibres, remotes), UV (security ink, sterilising water), X-rays (medical bone imaging, baggage scanners), Gamma (sterilising surgical kit, cancer radiotherapy).',
-          '**Hazards:** Microwaves cause internal heating of body tissue; IR causes surface skin burns; UV damages skin cells/eyes (skin cancer/cataracts); X-rays and gamma rays are ionising and cause DNA mutations/cancer.',
+        "time": "4:25",
+        "seconds": 265,
+        "label": "Electromagnetic Spectrum Uses & Hazards",
+        "cardId": "igcse-phys-3-2-c3"
+      }
+    ],
+    "cards": [
+      {
+        "id": "igcse-phys-3-2-c1",
+        "title": "Refractive Index, Snell’s Law & Total Internal Reflection",
+        "summary": "Use n = sin i / sin r and sin c = 1 / n; TIR occurs only from a denser to less dense medium when i > c.",
+        "bullets": [
+          "**Refractive index n** - n = sin i / sin r = c_air / v_medium (always ≥ 1, no units)."
         ],
-        memoryAid: 'Remember EM order (long λ → short λ): Rich Men In Vegas Use X-ray Glasses (Radio, Micro, IR, Visible, UV, X-ray, Gamma).',
+        "subsections": [
+          {
+            "heading": "Two Conditions for Total Internal Reflection (TIR)",
+            "bullets": [
+              "**Condition 1** - light must travel from an optically **denser** medium towards a **less dense** medium (e.g. glass → air).",
+              "**Condition 2** - angle of incidence i must be **greater than the critical angle c**, where sin c = 1 / n.",
+              "**Applications** - optical fibres for high-speed broadband/endoscopes and reflective prisms."
+            ],
+            "exampleHeading": "Worked example: Critical angle of glass with n = 1.50",
+            "examples": [
+              "sin c = 1 / 1.50 = 0.667 → c = sin⁻¹(0.667) = 41.8°."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "total internal reflection",
+            "definition": "Complete reflection of a light ray back inside a denser medium when the angle of incidence exceeds the critical angle."
+          },
+          {
+            "term": "critical angle",
+            "definition": "The angle of incidence in a denser medium that produces an angle of refraction of exactly 90° along the boundary."
+          }
+        ]
       },
+      {
+        "id": "igcse-phys-3-2-c2",
+        "title": "Thin Converging Lenses & Sight Correction",
+        "summary": "Convex lenses form real inverted images when object distance > f and magnified virtual images when object distance < f.",
+        "bullets": [
+          "**Real vs Virtual image** - a **real** image can be projected onto a screen (rays actually cross); a **virtual** image cannot be caught on a screen (rays only appear to diverge from it)."
+        ],
+        "subsections": [
+          {
+            "heading": "Ray Rules & Short/Long Sight Correction",
+            "bullets": [
+              "**Magnifying glass** - object placed closer than the focal length (u < f) to a converging lens produces a **virtual, upright, magnified** image.",
+              "**Correcting vision** - **short-sightedness (myopia)** (focuses in front of retina) is corrected with a **diverging (concave)** lens; **long-sightedness (hyperopia)** (focuses behind retina) is corrected with a **converging (convex)** lens."
+            ],
+            "exampleHeading": "Concrete check: Dispersion through a glass prism",
+            "examples": [
+              "Violet light slows down the most (highest n), so it refracts the most; red refracts the least (ROYGBIV)."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "focal length",
+            "definition": "The distance between the optical centre of a thin lens and its principal focus F."
+          }
+        ],
+        "commonMistake": "Angles of incidence i and refraction r are ALWAYS measured between the ray and the NORMAL — never between the ray and the glass surface!"
+      },
+      {
+        "id": "igcse-phys-3-2-c3",
+        "title": "The Electromagnetic Spectrum",
+        "summary": "All EM waves are transverse and travel at 3.0 × 10⁸ m/s in a vacuum, ordered from Radio to Gamma.",
+        "bullets": [
+          "**Order (increasing frequency & energy, decreasing wavelength)** - **Radio → Microwaves → Infrared → Visible → Ultraviolet → X-rays → Gamma rays**."
+        ],
+        "subsections": [
+          {
+            "heading": "Key Uses & Hazards",
+            "bullets": [
+              "**Low frequency** - Radio (broadcasting/Bluetooth), Microwaves (satellite TV/heating water in food), Infrared (thermal imaging/optical fibres/remotes).",
+              "**High frequency (ionising)** - UV (fluorescent lamps/skin cancer risk), X-rays (bone imaging/cell mutation), Gamma rays (sterilising food/radiotherapy/DNA damage)."
+            ],
+            "exampleHeading": "Worked example: Wavelength of a 100 MHz FM radio wave",
+            "examples": [
+              "λ = c / f = (3.0 × 10⁸) / (100 × 10⁶) = 3.0 m."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "electromagnetic spectrum",
+            "definition": "The continuous family of transverse waves that travel at 3.0 × 10⁸ m/s in a vacuum."
+          }
+        ],
+        "memoryAid": "Roman Men Invented Very Unusual X-ray Guns (Radio, Micro, IR, Visible, UV, X-ray, Gamma)!"
+      }
     ],
-    keyTerms: [
-      { term: 'Snell’s Law', definition: 'n = sin i ÷ sin r, relating angles of incidence and refraction to refractive index.' },
-      { term: 'Total internal reflection', definition: 'Complete reflection of light inside a denser medium when angle of incidence exceeds critical angle c.' },
-      { term: 'Focal length', definition: 'Distance from the optical centre of a thin lens to its principal focus F.' },
-      { term: 'Ionising radiation', definition: 'High-energy radiation (UV, X-rays, gamma) capable of knocking electrons off atoms and damaging DNA.' },
+    "checklistPoints": [
+      "Apply Snell’s Law n = sin i / sin r and state both conditions for total internal reflection",
+      "Draw converging lens ray diagrams and match concave/convex lenses to short/long sight",
+      "Recall all 7 regions of the EM spectrum in order with their speed (3.0 × 10⁸ m/s), uses, and hazards"
     ],
-    checklistPoints: [
-      'Apply n = sin i / sin r and sin c = 1 / n, and state the two conditions required for Total Internal Reflection.',
-      'Construct converging lens ray diagrams and distinguish real vs virtual images (including magnifying glass and eye correction).',
-      'Recall the full EM spectrum in order of wavelength/frequency along with uses and biological hazards.',
-    ],
+    "keyTerms": [
+      {
+        "term": "Total internal reflection",
+        "definition": "Complete reflection of a light ray back inside a denser medium when the angle of incidence exceeds the critical angle."
+      },
+      {
+        "term": "Critical angle",
+        "definition": "The angle of incidence in a denser medium that produces an angle of refraction of exactly 90° along the boundary."
+      },
+      {
+        "term": "Focal length",
+        "definition": "The distance between the optical centre of a thin lens and its principal focus F."
+      },
+      {
+        "term": "Electromagnetic spectrum",
+        "definition": "The continuous family of transverse waves that travel at 3.0 × 10⁸ m/s in a vacuum."
+      }
+    ]
   },
-  'igcse-phys-3-3': {
-    subtopicId: 'igcse-phys-3-3',
-    subtopicCode: '3.3',
-    subtopicTitle: 'Sound Waves, Echoes & Ultrasound',
-    readingMinutes: 8,
-    videoTitle: 'GCSE Physics - Sound Waves and Hearing',
-    youtubeId: 's9wZkP64rAc',
-    videoChannel: 'Cognito',
-    videoDuration: '5:08',
-    courseMatchSummary: '4 of 4 sections match Cambridge IGCSE Physics (0625)',
-    timestamps: [
-      { time: '0:00', seconds: 0, label: 'Introduction', cardId: 'igcse-phys-3-3-c1' },
-      { time: '0:51', seconds: 51, label: 'How Sound Travels Through Solids', cardId: 'igcse-phys-3-3-c1' },
-      { time: '2:38', seconds: 158, label: 'Refraction, Reflection & Absorption', cardId: 'igcse-phys-3-3-c1' },
-      { time: '4:21', seconds: 261, label: 'Human Hearing Range', cardId: 'igcse-phys-3-3-c2' },
-    ],
-    cards: [
+  "igcse-phys-3-3": {
+    "subtopicId": "igcse-phys-3-3",
+    "subtopicCode": "3.3",
+    "subtopicTitle": "Sound Waves, Echoes & Ultrasound",
+    "readingMinutes": 8,
+    "videoTitle": "GCSE Physics - Sound Waves and Hearing",
+    "youtubeId": "s9wZkP64rAc",
+    "videoChannel": "Cognito",
+    "videoDuration": "5:08",
+    "courseMatchSummary": "4 of 4 sections match Cambridge IGCSE Physics (0625)",
+    "timestamps": [
       {
-        id: 'igcse-phys-3-3-c1',
-        title: 'Production, Transmission & Speed of Sound',
-        summary: 'How sound travels through media and calculating echo or sonar distances.',
-        bullets: [
-          'Sound is produced by vibrating sources and travels as a LONGITUDINAL wave of compressions and rarefactions. Sound CANNOT travel through a vacuum (demonstrated by the bell-in-a-vacuum-jar experiment).',
-          'Speed of sound depends on how closely packed particles are: fastest in solids (~5,000 m/s in steel), moderate in liquids (~1,500 m/s in water), slowest in gases (~330–340 m/s in air at room temperature).',
-          '**Measuring speed of sound via echoes:** Clap in front of a wall at distance d and time the echo t; the sound travels THERE AND BACK (total distance = 2d), so **v = 2d ÷ t**.',
-          '**Worked example:** A ship’s sonar pulse returns from the seabed after 0.80 s (speed in water = 1,500 m/s). Depth d = (v × t) ÷ 2 = (1500 × 0.80) ÷ 2 = 600 m.',
-        ],
-        commonMistake: 'In echo and sonar calculations, forgetting to DIVIDE BY 2 (or multiply distance by 2) is the #1 error — remember the pulse goes out AND bounces back!',
+        "time": "0:00",
+        "seconds": 0,
+        "label": "Longitudinal Sound Waves, Pitch & Loudness",
+        "cardId": "igcse-phys-3-3-c1"
       },
       {
-        id: 'igcse-phys-3-3-c2',
-        title: 'Pitch, Loudness & Ultrasound Applications',
-        summary: 'Connecting pitch to frequency, loudness to amplitude, and ultrasound uses.',
-        bullets: [
-          'Human audible hearing range is approximately 20 Hz to 20,000 Hz (20 kHz).',
-          'Higher FREQUENCY produces a higher PITCH (closer waves on an oscilloscope trace). Larger AMPLITUDE produces a LOUDER sound (taller peaks on an oscilloscope trace).',
-          'Ultrasound is sound with a frequency GREATER than 20 kHz (above human hearing).',
-          'Uses of ultrasound: Prenatal medical scanning (safe non-ionising reflection at tissue boundaries), industrial non-destructive testing (detecting cracks inside metal pipes/castings), and sonar depth mapping.',
-        ],
-        glossaryPills: [
-          {
-            term: 'ultrasound',
-            definition: 'Longitudinal sound waves with frequencies above the upper limit of human hearing (> 20,000 Hz).',
-          },
-          {
-            term: 'oscilloscope',
-            definition: 'Laboratory instrument that displays electrical voltage signals (such as sound waveforms from a microphone) against time.',
-          },
-        ],
-        memoryAid: 'Frequency = Pitch (more waves squeezed on screen); Amplitude = Loudness (taller wave peaks).',
+        "time": "1:45",
+        "seconds": 105,
+        "label": "Speed of Sound & Echo Calculations",
+        "cardId": "igcse-phys-3-3-c2"
       },
+      {
+        "time": "3:25",
+        "seconds": 205,
+        "label": "Ultrasound (> 20 kHz) Medical & Sonar Uses",
+        "cardId": "igcse-phys-3-3-c3"
+      }
     ],
-    keyTerms: [
-      { term: 'Audible range', definition: 'Range of sound frequencies detectable by a healthy human ear: 20 Hz to 20 kHz.' },
-      { term: 'Ultrasound', definition: 'Sound waves with frequency exceeding 20 kHz, used in medical imaging and flaw detection.' },
-      { term: 'Echo', definition: 'Reflected sound wave heard after bouncing off a hard flat surface.' },
+    "cards": [
+      {
+        "id": "igcse-phys-3-3-c1",
+        "title": "Production of Sound, Pitch & Loudness",
+        "summary": "Sound is a longitudinal wave needing a medium; frequency controls pitch and amplitude controls loudness.",
+        "bullets": [
+          "**Medium required** - sound travels via vibrating particles as alternating **compressions** (high pressure) and **rarefactions** (low pressure); it CANNOT travel through a vacuum."
+        ],
+        "subsections": [
+          {
+            "heading": "Pitch, Loudness & Human Hearing Range",
+            "bullets": [
+              "**Pitch & Loudness** - higher **frequency** = higher pitch; larger **amplitude** = louder sound.",
+              "**Audible range** - healthy young human ears hear **20 Hz to 20,000 Hz (20 kHz)**."
+            ],
+            "exampleHeading": "Concrete example: Reading a CRO trace",
+            "examples": [
+              "More waves crammed across the oscilloscope screen = higher frequency = higher pitch; taller peaks = larger amplitude = louder sound."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "compression",
+            "definition": "A region in a longitudinal wave where particles are squashed closer together at higher pressure."
+          },
+          {
+            "term": "rarefaction",
+            "definition": "A region in a longitudinal wave where particles are spread further apart at lower pressure."
+          }
+        ]
+      },
+      {
+        "id": "igcse-phys-3-3-c2",
+        "title": "Speed of Sound in Media & Echo Distance Formula",
+        "summary": "Sound travels fastest in solids and slowest in gases (~330–340 m/s in air); always account for the 2× round trip in echoes.",
+        "bullets": [
+          "**Speed order** - **Solids (~5000 m/s) > Liquids (~1500 m/s) > Gases (~340 m/s)** because closer, tightly bonded particles pass vibrations much faster."
+        ],
+        "subsections": [
+          {
+            "heading": "Echo & Sonar Formula",
+            "bullets": [
+              "**Round-trip factor of 2** - an echo travels to the reflector and back, so total distance = 2d, giving **d = (v × t) / 2**."
+            ],
+            "exampleHeading": "Worked example: Ship sonar pulse returns after 0.8 s (v = 1500 m/s in seawater)",
+            "examples": [
+              "Total path 2d = 1500 × 0.8 = 1200 m → Sea depth d = 1200 ÷ 2 = 600 m."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "echo",
+            "definition": "A reflected sound wave heard after bouncing off a hard flat surface."
+          }
+        ],
+        "commonMistake": "In echo and sonar calculations, NEVER forget to divide by 2 — the sound travels to the seabed/cliff AND back again!"
+      },
+      {
+        "id": "igcse-phys-3-3-c3",
+        "title": "Ultrasound (> 20 kHz) Applications",
+        "summary": "Ultrasound partially reflects at boundaries between different tissues or internal metal cracks, making it ideal for non-ionising imaging.",
+        "bullets": [
+          "**Ultrasound** - sound waves with frequency **above 20,000 Hz (20 kHz)**, beyond human hearing."
+        ],
+        "subsections": [
+          {
+            "heading": "Medical Scanning, Industrial Testing & Sonar",
+            "bullets": [
+              "**Foetal scanning** - ultrasound is **non-ionising** (unlike X-rays), so it does not damage fetal DNA; reflections at tissue boundaries build a live image.",
+              "**Non-destructive testing** - detects internal cracks inside metal pipes/aircraft wings without cutting them open."
+            ],
+            "exampleHeading": "Worked example: Detecting a crack in a steel block (v = 6000 m/s)",
+            "examples": [
+              "Echo from crack arrives at t = 10 μs (1 × 10⁻⁵ s).",
+              "Depth of crack d = (6000 × 1 × 10⁻⁵) / 2 = 0.03 m = 3.0 cm."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "ultrasound",
+            "definition": "Longitudinal sound waves with a frequency greater than 20,000 Hz (20 kHz)."
+          }
+        ],
+        "memoryAid": "Loudness = Amplitude; Pitch = Frequency; Echo depth = (v × t) ÷ 2!"
+      }
     ],
-    checklistPoints: [
-      'Explain why sound cannot travel in a vacuum and why it travels fastest in solids.',
-      'Calculate echo and sonar distances accurately using 2d = v × t.',
-      'Link pitch to frequency, loudness to amplitude, and explain medical/industrial uses of ultrasound.',
+    "checklistPoints": [
+      "Explain why sound cannot travel through a vacuum and links between pitch/frequency and loudness/amplitude",
+      "Compare sound speeds in solids, liquids, and gases and solve echo problems with d = vt/2",
+      "Define ultrasound (> 20 kHz) and explain why it is safer than X-rays for prenatal scanning"
     ],
+    "keyTerms": [
+      {
+        "term": "Compression",
+        "definition": "A region in a longitudinal wave where particles are squashed closer together at higher pressure."
+      },
+      {
+        "term": "Rarefaction",
+        "definition": "A region in a longitudinal wave where particles are spread further apart at lower pressure."
+      },
+      {
+        "term": "Echo",
+        "definition": "A reflected sound wave heard after bouncing off a hard flat surface."
+      },
+      {
+        "term": "Ultrasound",
+        "definition": "Longitudinal sound waves with a frequency greater than 20,000 Hz (20 kHz)."
+      }
+    ]
   },
-  'igcse-phys-4-1': {
-    subtopicId: 'igcse-phys-4-1',
-    subtopicCode: '4.1',
-    subtopicTitle: 'Electric Charge, Current, EMF, Potential Difference & Resistance',
-    readingMinutes: 10,
-    videoTitle: 'GCSE Physics - Voltage, Current & Resistance | V = IR Equation | IV Graphs',
-    youtubeId: 'BbizKa6eywo',
-    videoChannel: 'Cognito',
-    videoDuration: '4:35',
-    courseMatchSummary: '4 of 4 sections match Cambridge IGCSE Physics (0625)',
-    timestamps: [
-      { time: '0:00', seconds: 0, label: 'Introduction to V=IR (Ohm\'s Law)', cardId: 'igcse-phys-4-1-c1' },
-      { time: '0:45', seconds: 45, label: 'Calculating Resistance by Rearranging V=IR', cardId: 'igcse-phys-4-1-c2' },
-      { time: '2:05', seconds: 125, label: 'How Resistance Value Affects the I-V Graph', cardId: 'igcse-phys-4-1-c2' },
-      { time: '3:04', seconds: 184, label: 'I-V Graphs for Filament Lamps and Diodes', cardId: 'igcse-phys-4-1-c2' },
-    ],
-    cards: [
+  "igcse-phys-4-1": {
+    "subtopicId": "igcse-phys-4-1",
+    "subtopicCode": "4.1",
+    "subtopicTitle": "Electric Charge, Current, EMF, Potential Difference & Resistance",
+    "readingMinutes": 10,
+    "videoTitle": "GCSE Physics - Voltage, Current & Resistance | V = IR Equation | IV Graphs",
+    "youtubeId": "BbizKa6eywo",
+    "videoChannel": "Cognito",
+    "videoDuration": "4:35",
+    "courseMatchSummary": "4 of 4 sections match Cambridge IGCSE Physics (0625)",
+    "timestamps": [
       {
-        id: 'igcse-phys-4-1-c1',
-        title: 'Electrostatics, Current & Charge (Q = It)',
-        summary: 'Electrostatic charging by electron transfer, electric fields, and Q = It.',
-        bullets: [
-          'Charging insulators by friction transfers NEGATIVELY CHARGED ELECTRONS only (protons never move in solids). Gaining electrons makes an object negative; losing electrons leaves it positive. Like charges repel; opposite charges attract.',
-          'An electric field is a region where an electric charge experiences a force; field lines always point away from positive charges and toward negative charges.',
-          'Electric current (I, amperes A) is the rate of flow of electric charge: I = Q ÷ t (or **Q = I × t**, with charge Q in coulombs, C).',
-          'In metallic conductors, current is a flow of delocalised electrons from negative to positive, whereas CONVENTIONAL CURRENT is drawn from positive (+) to negative (−).',
+        "time": "0:00",
+        "seconds": 0,
+        "label": "Electrostatics, Charge & Current (Q = It)",
+        "cardId": "igcse-phys-4-1-c1"
+      },
+      {
+        "time": "1:35",
+        "seconds": 95,
+        "label": "EMF, Potential Difference & Ohm’s Law",
+        "cardId": "igcse-phys-4-1-c2"
+      },
+      {
+        "time": "3:05",
+        "seconds": 185,
+        "label": "I–V Graphs, Wire Resistance & Electrical Power",
+        "cardId": "igcse-phys-4-1-c3"
+      }
+    ],
+    "cards": [
+      {
+        "id": "igcse-phys-4-1-c1",
+        "title": "Electrostatics, Charge & Electric Current",
+        "summary": "Friction transfers negative electrons only; current is the rate of flow of charge I = Q / t.",
+        "bullets": [
+          "**Charging by friction** - ONLY negatively charged **electrons** move between insulators; gaining electrons makes an object negative, losing them leaves it positive. Like charges repel, opposite charges attract."
         ],
-        glossaryPills: [
+        "subsections": [
           {
-            term: 'conventional current',
-            definition: 'Standard circuit convention showing current flowing from the positive terminal to the negative terminal of a cell, opposite to electron flow.',
-          },
+            "heading": "Current vs Electron Flow",
+            "bullets": [
+              "**I = Q / t (Q = It)** - 1 ampere (A) = 1 coulomb (C) passing per second.",
+              "**Conventional current vs electrons** - conventional current flows from **+ to −**, whereas actual electrons in metals flow from **− to +**."
+            ],
+            "exampleHeading": "Worked example: Charge flowing in 2 minutes at 3.5 A",
+            "examples": [
+              "Convert time: t = 2 × 60 = 120 s.",
+              "Q = It = 3.5 × 120 = 420 C."
+            ]
+          }
         ],
-        commonMistake: 'Never say "positive charges moved onto the cloth" during static charging — ONLY electrons transfer between rubbed insulators!',
-      },
-      {
-        id: 'igcse-phys-4-1-c2',
-        title: 'EMF, Potential Difference & Ohm’s Law (V = IR)',
-        summary: 'EMF vs potential difference, Ohm’s Law, wire resistance, and I-V graphs.',
-        bullets: [
-          'Electromotive force (e.m.f., E) is the electrical work done by a source in moving unit charge around a complete circuit: E = W ÷ Q (unit: volt, V, where 1 V = 1 J/C).',
-          'Potential difference (p.d., V) is the work done by unit charge passing through a component: V = W ÷ Q. Voltmeters are connected in **PARALLEL**; ammeters in SERIES.',
-          'Resistance R = V ÷ I (unit: ohm, Ω). For a uniform metal wire at constant temperature, R is directly proportional to length L and inversely proportional to cross-sectional area A (doubling diameter quadruples area, so R drops to ¼!).',
-          '**I–V graphs:** Ohmic resistor at constant temperature gives a straight line through the origin (I ∝ V). Filament lamp curves flatter at higher V because heating causes metal lattice ions to vibrate more, increasing collisions and resistance. Diode conducts only in the forward direction above ~0.6 V.',
-        ],
-        glossaryPills: [
+        "glossaryPills": [
           {
-            term: 'electromotive force',
-            definition: 'Total energy supplied by a power source per coulomb of charge driven around a complete circuit (measured in volts).',
-          },
-        ],
-        memoryAid: 'Longer wire = more obstacles (higher R); Thicker wire = wider motorway (lower R).',
+            "term": "electric current",
+            "definition": "The rate of flow of electric charge (I = Q / t), measured in amperes (A)."
+          }
+        ]
       },
       {
-        id: 'igcse-phys-4-1-c3',
-        title: 'Electrical Power & Kilowatt-Hours',
-        summary: 'Calculating electrical power, energy in joules, and kilowatt-hour bills.',
-        bullets: [
-          '**Electrical power:** **P = I × V = I²R = V² ÷ R** (watts, W).',
-          '**Electrical energy transferred:** E = P × t = I × V × t (joules, J).',
-          'Domestic electricity bills measure energy in kilowatt-hours (kWh): 1 kWh = 1,000 W × 3,600 s = 3.6 MJ. Cost = Power (kW) × Time (h) × Price per kWh.',
-          '**Worked example:** A 2.4 kW kettle runs for 10 minutes (1/6 h). Energy = 2.4 × (1/6) = 0.40 kWh. At 30p/kWh, cost = 0.40 × 30p = 12p.',
+        "id": "igcse-phys-4-1-c2",
+        "title": "EMF, Potential Difference & Resistance (V = IR)",
+        "summary": "EMF is energy supplied by a source per coulomb; p.d. is work done across a component per coulomb.",
+        "bullets": [
+          "**EMF vs p.d.** - both equal **W / Q** (1 volt = 1 joule per coulomb), measured with a **voltmeter in parallel**; **ammeters go in series**."
         ],
+        "subsections": [
+          {
+            "heading": "Ohm’s Law & Wire Resistance Factors",
+            "bullets": [
+              "**V = IR** - resistance R = V / I (ohms, Ω).",
+              "**Wire geometry** - resistance is **directly proportional to length** (R ∝ L) and **inversely proportional to cross-sectional area** (R ∝ 1/A). Doubling wire diameter multiplies area by 4, cutting resistance to ¼!"
+            ],
+            "exampleHeading": "Worked example: Wire doubled in length and doubled in cross-sectional area",
+            "examples": [
+              "Doubling length ×2 and doubling area ÷2 cancel out, so resistance stays unchanged."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "electromotive force",
+            "definition": "The electrical work done by a source in moving a unit charge (1 C) around a complete circuit (E = W / Q)."
+          },
+          {
+            "term": "potential difference",
+            "definition": "The work done per unit charge passing between two points in a circuit (V = W / Q)."
+          }
+        ]
       },
+      {
+        "id": "igcse-phys-4-1-c3",
+        "title": "I–V Characteristics & Electrical Power / Energy",
+        "summary": "Ohmic resistors give straight lines through (0,0); filament lamps curve as heating raises resistance; diodes conduct one way.",
+        "bullets": [
+          "**Three I–V graphs** - **ohmic resistor** (constant temperature): straight line through origin; **filament lamp**: S-curve flattening at high V as temperature and resistance rise; **diode**: zero current in reverse, steep rise forward."
+        ],
+        "subsections": [
+          {
+            "heading": "Electrical Power & Kilowatt-Hours (kWh)",
+            "bullets": [
+              "**Power & Energy** - **P = IV = I²R = V²/R** and **E = IVt** (in joules).",
+              "**Domestic electricity cost** - Energy (kWh) = Power (kW) × time (hours); Cost = kWh × price per unit."
+            ],
+            "exampleHeading": "Worked example: 2.5 kW kettle running for 30 minutes at 20p/kWh",
+            "examples": [
+              "Energy = 2.5 kW × 0.5 h = 1.25 kWh → Cost = 1.25 × 20p = 25p."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "ohmic conductor",
+            "definition": "A component whose current is directly proportional to potential difference at constant temperature (constant resistance)."
+          }
+        ],
+        "memoryAid": "Ammeter in Series (A-S), Voltmeter in Parallel (V-P); P = IV and E = IVt!",
+        "commonMistake": "NEVER say positive protons move during static charging — ONLY electrons transfer between objects!"
+      }
     ],
-    keyTerms: [
-      { term: 'Electric current', definition: 'Rate of flow of charge: I = Q ÷ t, measured in amperes (A).' },
-      { term: 'Potential difference', definition: 'Energy transferred per coulomb of charge across a component: V = W ÷ Q (V).' },
-      { term: 'Ohm’s Law', definition: 'Current through a metallic conductor is directly proportional to p.d. at constant temperature (V = IR).' },
-      { term: 'Kilowatt-hour (kWh)', definition: 'Unit of electrical energy equal to a 1 kW appliance operating for 1 hour (3.6 × 10⁶ J).' },
+    "checklistPoints": [
+      "Calculate charge Q = It and distinguish conventional current (+ to −) from electron flow (− to +)",
+      "Distinguish EMF from potential difference and scale wire resistance with length and cross-sectional area",
+      "Sketch and explain I–V graphs for resistors, filament lamps, and diodes, and compute P = IV and kWh costs"
     ],
-    checklistPoints: [
-      'Apply Q = It, V = W/Q, V = IR, P = IV, and E = IVt with correct SI and kWh units.',
-      'Sketch and explain I–V graphs for an ohmic resistor, filament lamp, and diode.',
-      'Predict how changing wire length or diameter alters electrical resistance.',
-    ],
+    "keyTerms": [
+      {
+        "term": "Electric current",
+        "definition": "The rate of flow of electric charge (I = Q / t), measured in amperes (A)."
+      },
+      {
+        "term": "Electromotive force",
+        "definition": "The electrical work done by a source in moving a unit charge (1 C) around a complete circuit (E = W / Q)."
+      },
+      {
+        "term": "Potential difference",
+        "definition": "The work done per unit charge passing between two points in a circuit (V = W / Q)."
+      },
+      {
+        "term": "Ohmic conductor",
+        "definition": "A component whose current is directly proportional to potential difference at constant temperature (constant resistance)."
+      },
+      {
+        "term": "Electromotive Force (EMF)",
+        "definition": "Electrical work done by a source in moving 1 C of charge around a complete circuit (E = W / Q)."
+      }
+    ]
   },
-  'igcse-phys-4-2': {
-    subtopicId: 'igcse-phys-4-2',
-    subtopicCode: '4.2',
-    subtopicTitle: 'Series & Parallel Circuits, Potential Dividers & Mains Safety',
-    readingMinutes: 11,
-    videoTitle: 'GCSE Physics - Series Circuits',
-    youtubeId: 'Hk4JEB5DITw',
-    videoChannel: 'Cognito',
-    videoDuration: '6:32',
-    courseMatchSummary: '4 of 4 sections match Cambridge IGCSE Physics (0625)',
-    timestamps: [
-      { time: '0:00', seconds: 0, label: 'Introduction', cardId: 'igcse-phys-4-2-c1' },
-      { time: '1:08', seconds: 68, label: 'Potential Difference (Voltage) in Series', cardId: 'igcse-phys-4-2-c1' },
-      { time: '2:48', seconds: 168, label: 'Resistance in Series', cardId: 'igcse-phys-4-2-c1' },
-      { time: '5:31', seconds: 331, label: 'Voltage & Resistance Relationship', cardId: 'igcse-phys-4-2-c2' },
-    ],
-    cards: [
+  "igcse-phys-4-2": {
+    "subtopicId": "igcse-phys-4-2",
+    "subtopicCode": "4.2",
+    "subtopicTitle": "Series & Parallel Circuits, Potential Dividers & Mains Safety",
+    "readingMinutes": 11,
+    "videoTitle": "GCSE Physics - Series Circuits",
+    "youtubeId": "Hk4JEB5DITw",
+    "videoChannel": "Cognito",
+    "videoDuration": "6:32",
+    "courseMatchSummary": "4 of 4 sections match Cambridge IGCSE Physics (0625)",
+    "timestamps": [
       {
-        id: 'igcse-phys-4-2-c1',
-        title: 'Series vs Parallel Circuits',
-        summary: 'Current, voltage, and combined resistance rules in series and parallel.',
-        diagram: 'circuit-series-parallel',
-        bullets: [
-          '**Series circuits:** Current is identical at every point (I = I₁ = I₂). Supply p.d. is shared across components (V_total = V₁ + V₂). Combined resistance adds up: R_total = R₁ + R₂.',
-          '**Parallel circuits:** Potential difference is identical across every branch (V = V₁ = V₂). Current from the source equals the sum of branch currents (I_total = I₁ + I₂).',
-          'Combined resistance of two resistors in parallel: **1/R_total = 1/R₁ + 1/R₂** (or R_total = (R₁R₂)/(R₁+R₂)). R_total is ALWAYS smaller than the smallest individual branch resistor!',
-          '**Why lamps are wired in parallel in homes:** Every lamp receives full mains voltage (full brightness), each can be switched independently, and if one fails the others stay lit.',
-        ],
-        memoryAid: 'Series = Same current, Shared voltage; Parallel = Same voltage, Split current, Lower total R.',
+        "time": "0:00",
+        "seconds": 0,
+        "label": "Series vs Parallel Current, Voltage & Resistance",
+        "cardId": "igcse-phys-4-2-c1"
       },
       {
-        id: 'igcse-phys-4-2-c2',
-        title: 'Sensing Components & Potential Dividers',
-        summary: 'How NTC thermistors, LDRs, and potential dividers control automatic circuits.',
-        bullets: [
-          'NTC Thermistor: As temperature **increases**, its resistance **decreases** (used in fire alarms and incubators).',
-          '**Light-Dependent Resistor (LDR):** As light intensity INCREASES, its resistance DECREASES (bright light → low R; darkness → high R; used in automatic street lamps).',
-          'Potential divider: Two resistors R₁ and R₂ in series divide the supply voltage in the exact ratio of their resistances: **V₁ ÷ V₂ = R₁ ÷ R₂** (or V_out = V_in × R₂ / (R₁ + R₂)).',
-          '**In an automatic night light:** Put the LDR at the bottom (output) of the divider. At night, R_LDR rises sharply → it takes a larger share of V_in → V_out rises above threshold and switches the lamp ON.',
+        "time": "2:10",
+        "seconds": 130,
+        "label": "Potential Dividers, Thermistors & LDRs",
+        "cardId": "igcse-phys-4-2-c2"
+      },
+      {
+        "time": "4:20",
+        "seconds": 260,
+        "label": "Mains Safety: Fuses, Earthing & Double Insulation",
+        "cardId": "igcse-phys-4-2-c3"
+      }
+    ],
+    "cards": [
+      {
+        "id": "igcse-phys-4-2-c1",
+        "title": "Series & Parallel Circuit Rules",
+        "summary": "Series circuits share voltage with identical current; parallel branches share full voltage and lower total resistance.",
+        "bullets": [
+          "**Series** - current is the SAME everywhere; total voltage splits (V = V₁ + V₂); total resistance adds (**R_total = R₁ + R₂**).",
+          "**Parallel** - voltage is the SAME across each branch; total current splits (I = I₁ + I₂); **1/R_total = 1/R₁ + 1/R₂** (always LESS than the smallest branch resistor!)."
         ],
-        glossaryPills: [
+        "subsections": [
           {
-            term: 'potential divider',
-            definition: 'Two resistors connected in series across a supply to split the potential difference into a desired fraction: V₁/V₂ = R₁/R₂.',
+            "heading": "Two Resistors in Parallel Shortcut",
+            "bullets": [
+              "**Product over sum** - for two resistors in parallel, R_total = (R₁ × R₂) / (R₁ + R₂)."
+            ],
+            "exampleHeading": "Worked example: 6 Ω and 3 Ω in parallel across a 12 V battery",
+            "examples": [
+              "R_total = (6 × 3) / (6 + 3) = 18 / 9 = 2 Ω.",
+              "Total supply current I = 12 / 2 = 6 A (4 A through 3 Ω branch + 2 A through 6 Ω branch)."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "parallel circuit",
+            "definition": "A circuit with multiple branches where each branch receives the full supply potential difference independently."
+          }
+        ],
+        "diagram": "circuit-series-parallel"
+      },
+      {
+        "id": "igcse-phys-4-2-c2",
+        "title": "Potential Dividers, NTC Thermistors & LDRs",
+        "summary": "In a series divider, the resistor with the larger resistance grabs the larger share of supply voltage.",
+        "bullets": [
+          "**Potential divider equation** - V₁ / V₂ = R₁ / R₂, or V_out = V_in × (R_out / (R₁ + R₂))."
+        ],
+        "subsections": [
+          {
+            "heading": "Sensing Components",
+            "bullets": [
+              "**NTC Thermistor** - as temperature **increases**, resistance **decreases** (used in thermostats/fire alarms).",
+              "**LDR (Light-Dependent Resistor)** - as light intensity **increases**, resistance **decreases** (used in automatic street lamps)."
+            ],
+            "exampleHeading": "Worked example: Automatic street light using an LDR",
+            "examples": [
+              "In darkness, the LDR’s resistance becomes very high, so it takes a much larger share of the supply p.d.",
+              "This higher voltage across the LDR triggers a switch/relay to turn the street lamp ON."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "thermistor",
+            "definition": "A temperature-dependent resistor whose resistance decreases sharply as temperature increases (NTC type)."
           },
           {
-            term: 'thermistor',
-            definition: 'Temperature-dependent semiconductor resistor whose resistance drops markedly as temperature rises (NTC type).',
-          },
+            "term": "potential divider",
+            "definition": "Two resistors connected in series that split an input potential difference in the ratio of their resistances."
+          }
         ],
+        "memoryAid": "TURD & LURD: Temperature Up → Resistance Down (Thermistor); Light Up → Resistance Down (LDR)!"
       },
       {
-        id: 'igcse-phys-4-2-c3',
-        title: 'Electrical Hazards & Mains Safety',
-        summary: 'Mains wiring colours, fuses, circuit breakers, earthing, and double insulation.',
-        bullets: [
-          '**Mains wiring:** Live wire (brown, ~230 V AC), Neutral wire (blue, ~0 V, completes circuit), Earth wire (green/yellow, safety path to ground). Switches and fuses MUST ALWAYS be placed in the LIVE wire!',
-          '**Fuse:** Contains a thin wire that melts and breaks the circuit if current exceeds its rating (pick the fuse rating just ABOVE normal operating current, e.g., 5 A fuse for a 4.2 A appliance).',
-          '**Circuit breakers (trip switches / MCBs):** Use an electromagnet to trip open faster than a fuse and can be reset easily without replacement.',
-          '**Earthing protects metal-cased appliances:** if a loose live wire touches the metal casing, a huge fault current surges safely down the low-resistance earth wire, instantly melting the fuse or tripping the breaker. Double-insulated appliances have non-conducting plastic casings and need NO earth wire.',
+        "id": "igcse-phys-4-2-c3",
+        "title": "Electrical Safety: Fuses, Circuit Breakers & Earthing",
+        "summary": "Switches and fuses always go on the LIVE wire; earthing creates a low-resistance path to blow the fuse if a metal case becomes live.",
+        "bullets": [
+          "**Three mains wires** - **Live** (brown, 230 V alternating), **Neutral** (blue, ~0 V return), **Earth** (green/yellow, 0 V safety wire attached to metal casings)."
         ],
-        commonMistake: 'Never put a switch or fuse in the neutral wire — even when open, the appliance would remain connected to the live 230 V supply and deliver a lethal shock!',
+        "subsections": [
+          {
+            "heading": "Fuses, Earthing & Double Insulation",
+            "bullets": [
+              "**Choosing a fuse** - pick the standard rating just **above** normal operating current (e.g. a 5.2 A appliance needs a 13 A fuse, not 5 A).",
+              "**How earthing saves lives** - if a loose live wire touches a metal case, a huge current flows straight to Earth through the low-resistance earth wire, melting the fuse in the live wire and disconnecting the appliance.",
+              "**Double insulation** - plastic outer casing means no exposed metal parts can become live, so no earth wire is needed."
+            ],
+            "exampleHeading": "Worked example: Fuse selection for a 1,150 W, 230 V toaster",
+            "examples": [
+              "Normal current I = P / V = 1150 / 230 = 5.0 A → fit the next standard fuse up (e.g. 10 A or 13 A; a 3 A fuse would blow immediately)."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "fuse",
+            "definition": "A thin wire placed in the live wire that melts and breaks the circuit if current exceeds a safe rating."
+          }
+        ],
+        "commonMistake": "When calculating 1/R_total = 1/R₁ + 1/R₂, ALWAYS flip (take the reciprocal of) your final fraction to get R_total!"
+      }
+    ],
+    "checklistPoints": [
+      "Solve combined series and parallel circuit current, p.d., and resistance problems",
+      "Explain how NTC thermistors and LDRs control output voltage in potential dividers",
+      "Explain why fuses/switches sit in the live wire and how earthing + fuse prevent electric shock"
+    ],
+    "keyTerms": [
+      {
+        "term": "Parallel circuit",
+        "definition": "A circuit with multiple branches where each branch receives the full supply potential difference independently."
       },
-    ],
-    keyTerms: [
-      { term: 'Parallel circuit', definition: 'Circuit with multiple branches where each branch receives full supply p.d. and total resistance is reduced.' },
-      { term: 'LDR', definition: 'Light-Dependent Resistor whose resistance falls when light intensity increases.' },
-      { term: 'Fuse', definition: 'Safety device in the live wire that melts to disconnect the circuit when current exceeds a safe rating.' },
-      { term: 'Double insulation', definition: 'Design enclosing live electrical parts in two layers of plastic/insulator so no earth wire is required.' },
-    ],
-    checklistPoints: [
-      'Calculate combined resistance in series (R₁ + R₂) and parallel (1/R = 1/R₁ + 1/R₂).',
-      'Use V₁/V₂ = R₁/R₂ to explain thermistor and LDR potential-divider sensing circuits.',
-      'Explain how fuses, trip switches, earthing, and double insulation prevent electrocution and fire.',
-    ],
+      {
+        "term": "Thermistor",
+        "definition": "A temperature-dependent resistor whose resistance decreases sharply as temperature increases (NTC type)."
+      },
+      {
+        "term": "Potential divider",
+        "definition": "Two resistors connected in series that split an input potential difference in the ratio of their resistances."
+      },
+      {
+        "term": "Fuse",
+        "definition": "A thin wire placed in the live wire that melts and breaks the circuit if current exceeds a safe rating."
+      }
+    ]
   },
-  'igcse-phys-4-3': {
-    subtopicId: 'igcse-phys-4-3',
-    subtopicCode: '4.3',
-    subtopicTitle: 'Magnetism, Motor Effect, EM Induction & Transformers',
-    readingMinutes: 12,
-    videoTitle: 'GCSE Physics - How Transformers Work',
-    youtubeId: '7RtBUEZbKmI',
-    videoChannel: 'Cognito',
-    videoDuration: '4:19',
-    courseMatchSummary: '4 of 4 sections match Cambridge IGCSE Physics (0625)',
-    timestamps: [
-      { time: '0:00', seconds: 0, label: 'Intro & Role in National Grid', cardId: 'igcse-phys-4-3-c3' },
-      { time: '1:07', seconds: 67, label: 'Transformer Structure', cardId: 'igcse-phys-4-3-c3' },
-      { time: '1:24', seconds: 84, label: 'How Transformers Work (Step-by-Step)', cardId: 'igcse-phys-4-3-c2' },
-      { time: '3:21', seconds: 201, label: 'Changing the Voltage (Step-up vs Step-down)', cardId: 'igcse-phys-4-3-c3' },
-    ],
-    cards: [
+  "igcse-phys-4-3": {
+    "subtopicId": "igcse-phys-4-3",
+    "subtopicCode": "4.3",
+    "subtopicTitle": "Magnetism, Motor Effect, EM Induction & Transformers",
+    "readingMinutes": 12,
+    "videoTitle": "GCSE Physics - How Transformers Work",
+    "youtubeId": "7RtBUEZbKmI",
+    "videoChannel": "Cognito",
+    "videoDuration": "4:19",
+    "courseMatchSummary": "4 of 4 sections match Cambridge IGCSE Physics (0625)",
+    "timestamps": [
       {
-        id: 'igcse-phys-4-3-c1',
-        title: 'Magnetic Fields, Electromagnets & The Motor Effect',
-        summary: 'Magnetic fields, electromagnets, Fleming’s Left-Hand Rule, and DC motors.',
-        bullets: [
-          'Magnetic field lines run from NORTH to SOUTH outside a magnet; closer spacing indicates a stronger field. Soft iron is easily magnetised and demagnetised (ideal for electromagnets and transformer cores); steel retains magnetism (permanent magnets).',
-          'A current-carrying wire creates concentric circular magnetic field lines (Right-Hand Grip Rule). Coiling the wire into a solenoid with a soft-iron core builds a strong controllable electromagnet.',
-          '**The Motor Effect:** A current-carrying conductor placed at right angles to a magnetic field experiences a force. Direction is found by Fleming’s LEFT-Hand Rule: ThuMb = Motion/Force, First finger = Field (N→S), SeCond finger = Conventional current (+→−).',
-          '**DC Electric Motor:** Opposite sides of a rectangular coil carry current in opposite directions, producing an upward force on one side and downward force on the other (turning couple). The SPLIT-RING COMMUTATOR reverses current direction in the coil every half-turn so it keeps spinning continuously in one direction.',
+        "time": "0:00",
+        "seconds": 0,
+        "label": "Magnetic Fields, Electromagnets & Motor Effect",
+        "cardId": "igcse-phys-4-3-c1"
+      },
+      {
+        "time": "1:25",
+        "seconds": 85,
+        "label": "Electromagnetic Induction & A.C. Generators",
+        "cardId": "igcse-phys-4-3-c2"
+      },
+      {
+        "time": "2:50",
+        "seconds": 170,
+        "label": "Transformers & High-Voltage Grid Transmission",
+        "cardId": "igcse-phys-4-3-c3"
+      }
+    ],
+    "cards": [
+      {
+        "id": "igcse-phys-4-3-c1",
+        "title": "Magnetic Fields, Soft Iron & The Motor Effect",
+        "summary": "Field lines run North to South; use Fleming’s Left-Hand Rule for motor force and a split-ring commutator to keep a DC motor spinning.",
+        "bullets": [
+          "**Magnetic materials** - **soft iron** magnetises and demagnetises easily (used in electromagnets and transformer cores); **steel** retains magnetism (permanent magnets)."
         ],
-        glossaryPills: [
+        "subsections": [
           {
-            term: 'split-ring commutator',
-            definition: 'Rotating electrical switch in a DC motor that reverses the current through the coil every half-rotation to maintain continuous rotation in one direction.',
-          },
+            "heading": "Fleming’s Left-Hand Rule & DC Motors",
+            "bullets": [
+              "**Left-hand rule** - **Thumb** = Motion/Force, **First finger** = Field (N → S), **Second finger** = Current (+ → −).",
+              "**Split-ring commutator** - reverses current direction in the coil every half-turn so the turning moment always pushes the coil in the same rotational direction."
+            ],
+            "exampleHeading": "Concrete check: Increasing DC motor speed",
+            "examples": [
+              "Increase current, use stronger magnets, or add more turns of wire on the coil."
+            ]
+          }
         ],
-        memoryAid: 'Use your LEFT hand for Motors (power IN → Motion OUT) and note that reversing EITHER current OR field reverses the force (reversing both leaves direction unchanged).',
-      },
-      {
-        id: 'igcse-phys-4-3-c2',
-        title: 'Electromagnetic Induction & AC Generators',
-        summary: 'Inducing voltage by cutting field lines, Lenz’s Law, and AC generators.',
-        bullets: [
-          'Electromagnetic induction: Whenever a conductor cuts across magnetic field lines (or magnetic flux through a coil changes), an e.m.f. is INDUCED across its ends.',
-          'Increase induced e.m.f. by: (1) moving the magnet/coil faster, (2) using a stronger magnet, or (3) using more turns on the coil.',
-          '**Lenz’s Law (conservation of energy):** The direction of an induced current always OPPOSES the change producing it (e.g., pushing a North pole into a coil induces a North pole at that end to repel it).',
-          '**AC Generator (alternator):** A coil rotates in a magnetic field and connects to the external circuit via SLIP RINGS and carbon brushes (NOT a split ring), producing an alternating sine-wave voltage whose peak occurs when the coil is horizontal (cutting field lines fastest).',
-        ],
-        glossaryPills: [
+        "glossaryPills": [
           {
-            term: 'electromagnetic induction',
-            definition: 'Production of an electromotive force (voltage) across a conductor when it cuts magnetic field lines or experiences a changing magnetic field.',
-          },
-        ],
+            "term": "split-ring commutator",
+            "definition": "A rotating switch in a DC motor that reverses current direction in the coil every half-revolution to maintain continuous rotation."
+          }
+        ]
       },
       {
-        id: 'igcse-phys-4-3-c3',
-        title: 'Transformers & High-Voltage Power Transmission',
-        summary: 'Transformer turns ratios and why high-voltage cables cut I²R losses.',
-        bullets: [
-          'A transformer consists of primary and secondary coils wound on a laminated soft-iron core. Alternating current in the primary produces a continuously changing magnetic field in the iron core, inducing an alternating e.m.f. in the secondary coil (transformers ONLY work with AC!).',
-          '**Transformer turns ratio equation:** **Vp ÷ Vs = Np ÷ Ns**. Step-up transformers have Ns > Np (increase V); step-down transformers have Ns < Np (decrease V).',
-          '**For an ideal (100% efficient) transformer:** Input power = Output power → **Vp × Ip = Vs × Is**.',
-          '**National Grid efficiency:** Step-up transformers boost transmission voltage to ~400 kV so current I becomes very small (for the same power P = VI). Since cable heating loss is **P_loss = I²R**, lowering current drastically reduces wasted thermal energy in long cables!',
+        "id": "igcse-phys-4-3-c2",
+        "title": "Electromagnetic Induction & A.C. Generators",
+        "summary": "Moving a conductor across magnetic field lines induces an EMF that opposes the change producing it (Lenz’s Law).",
+        "bullets": [
+          "**Induced EMF** - produced whenever a wire cuts magnetic field lines or the magnetic flux through a coil changes; increase it by moving faster, using a stronger magnet, or adding more turns."
         ],
-        commonMistake: 'Never say "high voltage reduces resistance of the cables" — high voltage reduces CURRENT I, which slashes power loss via P = I²R!',
+        "subsections": [
+          {
+            "heading": "Lenz’s Law & Slip Rings",
+            "bullets": [
+              "**Lenz’s law** - the direction of an induced current always opposes the motion/change that created it (conserving energy).",
+              "**A.C. generator** - uses **slip rings** (NOT a split-ring commutator) to output alternating current whose peak EMF occurs when the coil cuts field lines fastest (coil horizontal)."
+            ],
+            "exampleHeading": "Concrete check: Pushing a North pole into a solenoid",
+            "examples": [
+              "The near end of the solenoid becomes a North pole to repel the incoming magnet."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "electromagnetic induction",
+            "definition": "The generation of an electromotive force (EMF) across a conductor exposed to a changing magnetic field."
+          }
+        ],
+        "memoryAid": "Left Hand = Motor (electrical → motion); Right Hand = Generator (motion → electrical)!"
       },
+      {
+        "id": "igcse-phys-4-3-c3",
+        "title": "Transformers & High-Voltage Power Transmission",
+        "summary": "Transformers require A.C. to create a changing magnetic field in the soft-iron core, obeying V_p/V_s = N_p/N_s and I_pV_p = I_sV_s.",
+        "bullets": [
+          "**Transformer equations** - **V_p / V_s = N_p / N_s** and for a 100% efficient transformer **I_p V_p = I_s V_s**."
+        ],
+        "subsections": [
+          {
+            "heading": "Why the National Grid Uses High Voltage",
+            "bullets": [
+              "**Cutting I²R cable losses** - stepping UP voltage dramatically steps DOWN current (I = P / V). Because heating power loss in cables is **P_loss = I²R**, reducing current by 10× reduces wasted heat by 100×!",
+              "**Why A.C. is essential** - D.C. creates a steady magnetic field that stops changing, so zero voltage is induced in the secondary coil."
+            ],
+            "exampleHeading": "Worked example: Step-down transformer from 240 V to 12 V",
+            "examples": [
+              "Primary has 2,000 turns → Secondary turns N_s = 2000 × (12 / 240) = 100 turns.",
+              "If secondary current is 4 A, primary current I_p = (12 × 4) / 240 = 0.20 A."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "step-up transformer",
+            "definition": "A transformer with more turns on the secondary coil than the primary coil, increasing voltage and decreasing current."
+          }
+        ],
+        "commonMistake": "Never say electricity flows through the iron core of a transformer — the coils are electrically insulated; energy transfers purely via the CHANGING MAGNETIC FIELD in the soft-iron core!"
+      }
     ],
-    keyTerms: [
-      { term: 'Motor effect', definition: 'Force experienced by a current-carrying wire placed across a magnetic field.' },
-      { term: 'Lenz’s Law', definition: 'An induced current always flows in a direction that opposes the magnetic change causing it.' },
-      { term: 'Step-up transformer', definition: 'Transformer with more turns on the secondary coil than primary coil, increasing alternating voltage while decreasing current.' },
+    "checklistPoints": [
+      "Apply Fleming’s Left-Hand Rule and explain the role of the split-ring commutator in DC motors",
+      "Explain electromagnetic induction, Lenz’s Law, and how slip rings produce A.C. in a generator",
+      "Calculate transformer turns/voltages/currents and explain why high voltage reduces P = I²R grid losses"
     ],
-    checklistPoints: [
-      'Apply Fleming’s Left-Hand Rule and explain the role of the split-ring commutator in a DC motor.',
-      'Distinguish slip rings (AC generator) from split-ring commutators (DC motor) and explain Lenz’s Law.',
-      'Solve transformer problems using Vp/Vs = Np/Ns and VpIp = VsIs, and justify high-voltage transmission using P_loss = I²R.',
-    ],
+    "keyTerms": [
+      {
+        "term": "Split-ring commutator",
+        "definition": "A rotating switch in a DC motor that reverses current direction in the coil every half-revolution to maintain continuous rotation."
+      },
+      {
+        "term": "Electromagnetic induction",
+        "definition": "The generation of an electromotive force (EMF) across a conductor exposed to a changing magnetic field."
+      },
+      {
+        "term": "Step-up transformer",
+        "definition": "A transformer with more turns on the secondary coil than the primary coil, increasing voltage and decreasing current."
+      },
+      {
+        "term": "Magnetic Fields, Soft Iron & The Motor Effect",
+        "definition": "Field lines run North to South; use Fleming’s Left-Hand Rule for motor force and a split-ring commutator to keep a DC motor spinning."
+      }
+    ]
   },
-  'igcse-phys-5-1': {
-    subtopicId: 'igcse-phys-5-1',
-    subtopicCode: '5.1',
-    subtopicTitle: 'The Nuclear Model of the Atom, Isotopes, Fission & Fusion',
-    readingMinutes: 9,
-    videoTitle: 'GCSE Physics - Nuclear Fission - How it Works | Nuclear Reactors | Pros & Cons',
-    youtubeId: 'JQEZaJX7NVQ',
-    videoChannel: 'Cognito',
-    videoDuration: '4:14',
-    courseMatchSummary: '4 of 4 sections match Cambridge IGCSE Physics (0625)',
-    timestamps: [
-      { time: '0:00', seconds: 0, label: 'Introduction to Nuclear Fission', cardId: 'igcse-phys-5-1-c3' },
-      { time: '0:27', seconds: 27, label: 'Types of Nuclear Fission', cardId: 'igcse-phys-5-1-c3' },
-      { time: '2:19', seconds: 139, label: 'Controlling Fission in Nuclear Reactors', cardId: 'igcse-phys-5-1-c3' },
-      { time: '2:52', seconds: 172, label: 'Pros and Cons of Nuclear Energy', cardId: 'igcse-phys-5-1-c3' },
-    ],
-    cards: [
+  "igcse-phys-5-1": {
+    "subtopicId": "igcse-phys-5-1",
+    "subtopicCode": "5.1",
+    "subtopicTitle": "The Nuclear Model of the Atom, Isotopes, Fission & Fusion",
+    "readingMinutes": 9,
+    "videoTitle": "GCSE Physics - Nuclear Fission - How it Works | Nuclear Reactors | Pros & Cons",
+    "youtubeId": "JQEZaJX7NVQ",
+    "videoChannel": "Cognito",
+    "videoDuration": "4:14",
+    "courseMatchSummary": "4 of 4 sections match Cambridge IGCSE Physics (0625)",
+    "timestamps": [
       {
-        id: 'igcse-phys-5-1-c1',
-        title: 'Rutherford Scattering & Subatomic Particles',
-        summary: 'Rutherford’s gold foil findings and properties of protons, neutrons, and electrons.',
-        diagram: 'atomic-structure',
-        bullets: [
-          'Geiger–Marsden–Rutherford alpha scattering experiment fired positive alpha particles at ultra-thin gold foil in a vacuum:',
-          '**Observation 1:** Most alpha particles passed straight through undeflected → Conclusion: The atom is mostly EMPTY SPACE.',
-          '**Observation 2:** A tiny fraction deflected through large angles (>90°, some bouncing straight back) → Conclusion: Nearly all mass and ALL POSITIVE CHARGE are concentrated in a tiny, dense central NUCLEUS.',
-          '**Subatomic particles:** Proton (mass 1, charge +1, in nucleus); Neutron (mass 1, charge 0, in nucleus); Electron (negligible mass ~1/1840, charge −1, orbiting nucleus).',
+        "time": "0:00",
+        "seconds": 0,
+        "label": "Rutherford Alpha Scattering & Nuclear Model",
+        "cardId": "igcse-phys-5-1-c1"
+      },
+      {
+        "time": "1:25",
+        "seconds": 85,
+        "label": "Nuclide Notation & Isotopes",
+        "cardId": "igcse-phys-5-1-c2"
+      },
+      {
+        "time": "2:50",
+        "seconds": 170,
+        "label": "Nuclear Fission vs Nuclear Fusion",
+        "cardId": "igcse-phys-5-1-c3"
+      }
+    ],
+    "cards": [
+      {
+        "id": "igcse-phys-5-1-c1",
+        "title": "Rutherford’s Gold Foil Alpha-Scattering Experiment",
+        "summary": "Most alpha particles passed straight through (mostly empty space), while a tiny fraction rebounded (tiny, dense, positive nucleus).",
+        "bullets": [
+          "**Three key conclusions** - (1) Most went straight through → atom is mostly **empty space**; (2) Small fraction deflected at large angles → nucleus is **positively charged**; (3) Very few bounced straight back → nucleus is **tiny and contains almost all the mass**."
         ],
-        glossaryPills: [
+        "subsections": [
           {
-            term: 'nucleus',
-            definition: 'The extremely tiny, dense, positively charged core at the centre of an atom containing protons and neutrons.',
-          },
+            "heading": "Subatomic Particles",
+            "bullets": [
+              "**Protons (+1, mass 1)** and **Neutrons (0, mass 1)** sit in the central nucleus; **Electrons (−1, negligible mass)** orbit in shells."
+            ],
+            "exampleHeading": "Concrete check: Why a vacuum was required",
+            "examples": [
+              "Alpha particles have a very short range in air (a few cm), so the chamber had to be evacuated."
+            ]
+          }
         ],
-        memoryAid: 'Link the 3 Rutherford clues: Straight through = Empty space; Deflected = Positive core; Bounced back = Dense heavy nucleus.',
-      },
-      {
-        id: 'igcse-phys-5-1-c2',
-        title: 'Nuclide Notation & Isotopes',
-        summary: 'Reading nuclide notation and comparing isotopes of the same element.',
-        bullets: [
-          'Nuclide notation ᴬ_Z X: Proton (atomic) number Z = number of protons (defines the element); Nucleon (mass) number A = protons + neutrons; Neutron number N = A − Z.',
-          'Isotopes are atoms of the SAME element having the SAME number of protons (Z) but DIFFERENT numbers of neutrons (A − Z). Example: Carbon-12 (6p, 6n) and Carbon-14 (6p, 8n).',
-          'Isotopes have identical chemical properties (same electron configuration) but different masses and nuclear stability (radioisotopes have unstable nuclei).',
-        ],
-        glossaryPills: [
+        "glossaryPills": [
           {
-            term: 'isotopes',
-            definition: 'Atoms of the same element with the same proton number but different nucleon (neutron) numbers.',
-          },
+            "term": "nucleus",
+            "definition": "The tiny, dense, positively charged core of an atom containing protons and neutrons."
+          }
         ],
+        "diagram": "atomic-structure"
       },
       {
-        id: 'igcse-phys-5-1-c3',
-        title: 'Nuclear Fission & Nuclear Fusion',
-        summary: 'Splitting heavy nuclei in reactors vs fusing light nuclei in stars.',
-        bullets: [
-          '**Nuclear FISSION:** A heavy unstable nucleus (e.g., Uranium-235) absorbs a slow neutron and SPLITS into two smaller daughter nuclei, releasing 2–3 fast neutrons and vast kinetic/thermal energy. Excess neutrons can trigger a chain reaction (controlled in nuclear reactors using boron control rods and graphite/water moderators).',
-          '**Nuclear FUSION:** Two light nuclei (e.g., hydrogen isotopes deuterium and tritium) JOIN at extremely high temperatures and pressures (as in the core of the Sun) to form a heavier helium nucleus, releasing even greater energy per kg.',
-          'Fusion requires immense temperature so positively charged nuclei have enough **kinetic energy** to overcome electrostatic repulsion and get close enough for the strong nuclear force to bind them.',
+        "id": "igcse-phys-5-1-c2",
+        "title": "Nuclide Notation & Isotopes",
+        "summary": "Mass number A = protons + neutrons; atomic number Z = protons; isotopes share Z but differ in neutron number.",
+        "bullets": [
+          "**Nuclide notation ᴬ_Z X** - **Z** (bottom) = proton (atomic) number; **A** (top) = nucleon (mass) number = protons + neutrons; Neutrons = A − Z."
         ],
-        commonMistake: 'Do not mix up fission and fusion! Fission = Splitting (like a fissure/crack); Fusion = Fusing/joining light nuclei together.',
+        "subsections": [
+          {
+            "heading": "Isotopes & Nuclear Stability",
+            "bullets": [
+              "**Isotopes** - atoms of the SAME element with the same number of protons (Z) but DIFFERENT numbers of neutrons (hence different A)."
+            ],
+            "exampleHeading": "Worked example: Carbon-12 vs Carbon-14 (Z = 6)",
+            "examples": [
+              "¹²₆C has 6 protons and 6 neutrons; ¹⁴₆C has 6 protons and 8 neutrons (radioactive isotope)."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "isotope",
+            "definition": "Atoms of the same element with the same number of protons but different numbers of neutrons."
+          }
+        ]
       },
+      {
+        "id": "igcse-phys-5-1-c3",
+        "title": "Nuclear Fission & Nuclear Fusion",
+        "summary": "Fission splits a heavy nucleus (U-235) after neutron absorption; fusion joins light nuclei (hydrogen) under extreme temperature and pressure.",
+        "bullets": [
+          "**Nuclear fission** - a slow neutron is absorbed by uranium-235, splitting it into two smaller daughter nuclei, 2–3 fast neutrons (sustaining a **chain reaction**), and huge kinetic energy.",
+          "**Nuclear fusion** - two light nuclei (e.g. deuterium + tritium) combine into a heavier helium nucleus, releasing massive energy — powers all stars."
+        ],
+        "subsections": [
+          {
+            "heading": "Why Fusion Requires Extreme Conditions",
+            "bullets": [
+              "**Electrostatic repulsion** - positively charged light nuclei strongly repel each other, requiring extremely high **temperature** (high kinetic energy) and high **pressure/density** to collide closely enough to fuse."
+            ],
+            "exampleHeading": "Concrete comparison: Reactor control rods vs moderator",
+            "examples": [
+              "Control rods (boron) absorb excess neutrons to control chain-reaction rate; the moderator (graphite/water) slows fast neutrons down."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "nuclear fission",
+            "definition": "The splitting of a large unstable nucleus (such as U-235) into smaller daughter nuclei plus neutrons and energy."
+          },
+          {
+            "term": "nuclear fusion",
+            "definition": "The joining of two light atomic nuclei to form a heavier nucleus, releasing energy."
+          }
+        ],
+        "memoryAid": "Fission = Division (splitting heavy nuclei); Fusion = Fusing together (joining light nuclei in stars)!",
+        "commonMistake": "Do NOT confuse control rods with the moderator: control rods ABSORB neutrons, while the moderator SLOWS them down!"
+      }
     ],
-    keyTerms: [
-      { term: 'Nucleon number (A)', definition: 'Total number of protons plus neutrons in an atomic nucleus.' },
-      { term: 'Isotope', definition: 'Variants of the same element with identical proton numbers but different neutron numbers.' },
-      { term: 'Nuclear fission', definition: 'Splitting of a heavy unstable nucleus into lighter daughter nuclei plus neutrons and energy.' },
-      { term: 'Nuclear fusion', definition: 'Joining of two light nuclei at ultra-high temperature/pressure to form a heavier nucleus, powering stars.' },
+    "checklistPoints": [
+      "Link each observation from Rutherford’s gold-foil experiment to its nuclear conclusion",
+      "Calculate protons, neutrons (A − Z), and electrons from nuclide notation and define isotopes",
+      "Contrast nuclear fission (chain reaction in reactors) with nuclear fusion (powering stars)"
     ],
-    checklistPoints: [
-      'Explain how Rutherford’s gold foil observations established the nuclear model of the atom.',
-      'Calculate proton, neutron, and electron counts from nuclide notation and define isotopes.',
-      'Contrast nuclear fission (splitting heavy nuclei) with nuclear fusion (joining light nuclei in stars).',
-    ],
+    "keyTerms": [
+      {
+        "term": "Nucleus",
+        "definition": "The tiny, dense, positively charged core of an atom containing protons and neutrons."
+      },
+      {
+        "term": "Isotope",
+        "definition": "Atoms of the same element with the same number of protons but different numbers of neutrons."
+      },
+      {
+        "term": "Nuclear fission",
+        "definition": "The splitting of a large unstable nucleus (such as U-235) into smaller daughter nuclei plus neutrons and energy."
+      },
+      {
+        "term": "Nuclear fusion",
+        "definition": "The joining of two light atomic nuclei to form a heavier nucleus, releasing energy."
+      }
+    ]
   },
-  'igcse-phys-5-2': {
-    subtopicId: 'igcse-phys-5-2',
-    subtopicCode: '5.2',
-    subtopicTitle: 'Radioactive Decay (Alpha, Beta, Gamma) & Half-Life',
-    readingMinutes: 10,
-    videoTitle: 'GCSE Physics - Alpha, Beta & Gamma Radiation | How Ionising & Penetrating They Are',
-    youtubeId: '1ui5YnYkYpc',
-    videoChannel: 'Cognito',
-    videoDuration: '4:57',
-    courseMatchSummary: '4 of 4 sections match Cambridge IGCSE Physics (0625)',
-    timestamps: [
-      { time: '0:00', seconds: 0, label: 'Introduction to Isotopes & Radioactive Decay', cardId: 'igcse-phys-5-2-c1' },
-      { time: '2:09', seconds: 129, label: 'What is Beta Radiation?', cardId: 'igcse-phys-5-2-c2' },
-      { time: '2:55', seconds: 175, label: 'What is Gamma Radiation?', cardId: 'igcse-phys-5-2-c1' },
-      { time: '4:00', seconds: 240, label: 'Summary of Radiation Penetrating Power', cardId: 'igcse-phys-5-2-c3' },
-    ],
-    cards: [
+  "igcse-phys-5-2": {
+    "subtopicId": "igcse-phys-5-2",
+    "subtopicCode": "5.2",
+    "subtopicTitle": "Radioactive Decay (Alpha, Beta, Gamma) & Half-Life",
+    "readingMinutes": 10,
+    "videoTitle": "GCSE Physics - Alpha, Beta & Gamma Radiation | How Ionising & Penetrating They Are",
+    "youtubeId": "1ui5YnYkYpc",
+    "videoChannel": "Cognito",
+    "videoDuration": "4:57",
+    "courseMatchSummary": "4 of 4 sections match Cambridge IGCSE Physics (0625)",
+    "timestamps": [
       {
-        id: 'igcse-phys-5-2-c1',
-        title: 'Properties of Alpha, Beta & Gamma Radiation',
-        summary: 'Ionising power, penetration, and field deflection of alpha, beta, and gamma.',
-        bullets: [
-          'Background radiation comes from natural sources (radon gas from rocks, cosmic rays, food/buildings) and artificial sources (medical X-rays/scans). Always subtract background count rate before half-life calculations!',
-          'Alpha (α, ⁴₂He nucleus): Charge +2, heavy, VERY strongly ionising, stopped by paper or ~5 cm of air.',
-          'Beta-minus (β⁻, ⁰₋₁e fast electron emitted when a neutron turns into a proton + electron): Charge −1, moderately ionising, stopped by ~3–5 mm of aluminium.',
-          'Gamma (γ, high-frequency EM wave): No mass, zero charge, weakly ionising, greatly reduced only by thick lead or metres of concrete.',
-          '**In electric or magnetic fields:** Alpha deflects slightly toward the negative plate (heavy, +2); Beta deflects strongly in the OPPOSITE direction toward the positive plate (tiny mass, −1); Gamma is undeflected (uncharged).',
-        ],
-        glossaryPills: [
-          {
-            term: 'ionising',
-            definition: 'Ability of radiation to knock electrons out of neutral atoms to form charged ions, which can damage living DNA.',
-          },
-          {
-            term: 'background radiation',
-            definition: 'Low-level ambient ionising radiation always present in the environment from natural and human-made sources.',
-          },
-        ],
-        memoryAid: 'Penetration order: Paper stops Alpha, Aluminium stops Beta, Lead reduces Gamma (P-A-L). Ionising power is the EXACT reverse!',
+        "time": "0:00",
+        "seconds": 0,
+        "label": "Alpha, Beta & Gamma Properties & Deflection",
+        "cardId": "igcse-phys-5-2-c1"
       },
       {
-        id: 'igcse-phys-5-2-c2',
-        title: 'Balanced Nuclear Decay Equations',
-        summary: 'Balancing nucleon and proton numbers in alpha and beta decay equations.',
-        bullets: [
-          'Both total nucleon number (top) and total proton number (bottom) MUST balance on both sides of a nuclear equation.',
-          '**Alpha decay (loses 2p and 2n):** ᴬ_Z X → ᴬ⁻⁴_{Z−2} Y + ⁴₂α. Example: ²³⁸₉₂U → ²³⁴₉₀Th + ⁴₂He.',
-          'Beta-minus decay (1 neutron → 1 proton + 1 electron): ᴬ_Z X → ᴬ_{Z+1} Y + ⁰₋₁β. Nucleon number A stays constant, proton number Z INCREASES by 1! Example: ¹⁴₆C → ¹⁴₇N + ⁰₋₁e.',
-          'Gamma emission releases excess nuclear energy only — neither A nor Z changes.',
-        ],
-        commonMistake: 'In beta-minus decay, Z INCREASES by 1 (not decreases!) because (Z + 1) + (−1) = Z on the right-hand side.',
+        "time": "1:45",
+        "seconds": 105,
+        "label": "Balancing Nuclear Decay Equations",
+        "cardId": "igcse-phys-5-2-c2"
       },
       {
-        id: 'igcse-phys-5-2-c3',
-        title: 'Half-Life, Uses & Safe Handling',
-        summary: 'Half-life calculations, practical uses of isotopes, and safe handling.',
-        bullets: [
-          'Radioactive decay is spontaneous and RANDOM — it is impossible to predict when a single nucleus will decay, and decay rate is unaffected by temperature or chemical bonding.',
-          'Half-life (t_½) is the time taken for HALF of the unstable nuclei in a sample to decay (or for the corrected count rate/activity in becquerels, Bq, to halve).',
-          '**Worked example:** A sample has corrected activity 640 Bq and half-life 6 hours. After 18 hours (3 half-lives): 640 → 320 → 160 → 80 Bq.',
-          '**Applications:** Alpha in smoke detectors (short range, ionises air); Beta for monitoring paper/aluminium thickness; Gamma for medical tracers (short half-life), radiotherapy, and food/surgical sterilisation; Carbon-14 dating for ancient organic artefacts.',
-          '**Safety:** Store in lead-lined boxes, handle with tongs (maximise distance), minimise exposure time, and distinguish irradiation (outside exposure) from contamination (radioactive material on/in the body).',
+        "time": "3:20",
+        "seconds": 200,
+        "label": "Half-Life, Background Radiation & Safety",
+        "cardId": "igcse-phys-5-2-c3"
+      }
+    ],
+    "cards": [
+      {
+        "id": "igcse-phys-5-2-c1",
+        "title": "Properties & Field Deflection of Alpha, Beta & Gamma",
+        "summary": "Alpha is strongly ionising but stopped by paper; beta is moderate (aluminium); gamma is weakly ionising EM radiation (thick lead).",
+        "bullets": [
+          "**Alpha (α = ⁴₂He)** - +2 charge, mass 4, **highest ionising power**, stopped by paper or ~5 cm air.",
+          "**Beta (β⁻ = ⁰₋₁e)** - −1 charge, tiny mass, moderate ionising power, stopped by ~3–5 mm aluminium.",
+          "**Gamma (γ)** - uncharged EM wave, **lowest ionising power**, greatly reduced by thick lead or metres of concrete."
         ],
-        glossaryPills: [
+        "subsections": [
           {
-            term: 'half-life',
-            definition: 'The average time taken for half of the undecayed radioactive nuclei in a sample to decay, or for the corrected activity to halve.',
-          },
+            "heading": "Deflection in Electric & Magnetic Fields",
+            "bullets": [
+              "**Electric field** - positive α deflects slightly towards the negative plate; lightweight negative β deflects **sharply** towards the positive plate; uncharged γ passes straight through."
+            ],
+            "exampleHeading": "Concrete check: Why β deflects more than α",
+            "examples": [
+              "Although α has twice the charge magnitude, its mass is ~7,300 times larger than an electron, giving β a much larger charge-to-mass ratio."
+            ]
+          }
         ],
+        "glossaryPills": [
+          {
+            "term": "ionisation",
+            "definition": "Knocking electrons off neutral atoms to turn them into charged ions, which can damage living DNA."
+          }
+        ]
       },
+      {
+        "id": "igcse-phys-5-2-c2",
+        "title": "Balancing Nuclear Decay Equations",
+        "summary": "Total mass number (top) and total atomic number (bottom) must balance across the arrow.",
+        "bullets": [
+          "**Alpha decay** - mass number A decreases by **4**, atomic number Z decreases by **2** (emits ⁴₂He).",
+          "**Beta-minus decay** - a neutron turns into a proton + fast electron (⁰₋₁e), so A stays **unchanged** and Z **increases by 1**.",
+          "**Gamma emission** - releases excess nuclear energy only; A and Z stay unchanged."
+        ],
+        "subsections": [
+          {
+            "heading": "Worked Nuclear Equations",
+            "bullets": [
+              "**Check sums both sides** - top numbers left = top numbers right; bottom numbers left = bottom numbers right."
+            ],
+            "exampleHeading": "Worked example: Alpha decay of ²²⁶₈₈Ra and Beta decay of ¹⁴₆C",
+            "examples": [
+              "²²⁶₈₈Ra → ²²²₈₆Rn + ⁴₂He (222 + 4 = 226; 86 + 2 = 88).",
+              "¹⁴₆C → ¹⁴₇N + ⁰₋₁e (14 + 0 = 14; 7 − 1 = 6)."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "beta particle",
+            "definition": "A high-speed electron (⁰₋₁e) emitted from an unstable nucleus when a neutron changes into a proton."
+          }
+        ]
+      },
+      {
+        "id": "igcse-phys-5-2-c3",
+        "title": "Half-Life, Background Radiation & Applications",
+        "summary": "Always subtract background count rate FIRST before halving to find half-life.",
+        "bullets": [
+          "**Half-life (t_½)** - the average time taken for half the unstable nuclei in a sample to decay (or for the corrected count rate to halve). Decay is **random and spontaneous** (unaffected by temperature or chemical bonding)."
+        ],
+        "subsections": [
+          {
+            "heading": "Background Correction & Practical Uses",
+            "bullets": [
+              "**Background radiation** - comes from radon gas, rocks/buildings, cosmic rays, and medical X-rays; always subtract background from readings BEFORE finding half-life.",
+              "**Matching isotope to use** - smoke detectors use α (ionises air, stopped safely by casing); paper thickness gauges use β; medical tracers use short half-life γ (escapes body, low ionisation, decays quickly)."
+            ],
+            "exampleHeading": "Worked example: Count rate with background = 20 cpm",
+            "examples": [
+              "Measured rate drops from 340 cpm to 100 cpm in 12 hours.",
+              "Corrected rates: 320 cpm → 80 cpm (320 → 160 → 80 = 2 half-lives), so t_½ = 12 ÷ 2 = 6 hours."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "half-life",
+            "definition": "The time taken for half of the radioactive nuclei in a sample to decay, or for the activity/corrected count rate to halve."
+          }
+        ],
+        "memoryAid": "Background FIRST, halve SECOND! Always subtract background before dividing by 2.",
+        "commonMistake": "Never forget to subtract background count rate before halving — dividing raw 340 cpm directly gives the wrong half-life!"
+      }
     ],
-    keyTerms: [
-      { term: 'Alpha particle', definition: 'Helium nucleus (2 protons + 2 neutrons), strongly ionising with short range (stopped by paper).' },
-      { term: 'Beta particle', definition: 'High-speed electron emitted from a nucleus when a neutron decays into a proton.' },
-      { term: 'Half-life', definition: 'Time taken for half the unstable nuclei in a sample to decay.' },
-      { term: 'Becquerel (Bq)', definition: 'SI unit of radioactive activity equal to one nuclear decay per second.' },
+    "checklistPoints": [
+      "Compare α, β, and γ ionisation, penetration, and deflection in electric/magnetic fields",
+      "Balance alpha and beta decay equations accurately",
+      "Subtract background radiation first to compute half-life and match isotopes to practical uses"
     ],
-    checklistPoints: [
-      'Compare α, β, and γ radiation by nature, charge, penetration, ionising power, and field deflection.',
-      'Balance alpha and beta nuclear decay equations accurately.',
-      'Subtract background count rate and compute remaining activity or age using half-life graphs and equations.',
-    ],
+    "keyTerms": [
+      {
+        "term": "Ionisation",
+        "definition": "Knocking electrons off neutral atoms to turn them into charged ions, which can damage living DNA."
+      },
+      {
+        "term": "Beta particle",
+        "definition": "A high-speed electron (⁰₋₁e) emitted from an unstable nucleus when a neutron changes into a proton."
+      },
+      {
+        "term": "Half-life",
+        "definition": "The time taken for half of the radioactive nuclei in a sample to decay, or for the activity/corrected count rate to halve."
+      },
+      {
+        "term": "Properties & Field Deflection of Alpha, Beta & Gamma",
+        "definition": "Alpha is strongly ionising but stopped by paper; beta is moderate (aluminium); gamma is weakly ionising EM radiation (thick lead)."
+      }
+    ]
   },
-  'igcse-phys-6-1': {
-    subtopicId: 'igcse-phys-6-1',
-    subtopicCode: '6.1',
-    subtopicTitle: 'Earth, The Solar System & Orbital Motion',
-    readingMinutes: 9,
-    videoTitle: 'GCSE Physics - Gravitational Potential Energy & Gravity | How to Calculate Weight',
-    youtubeId: 'hSzEdvFEVq8',
-    videoChannel: 'Cognito',
-    videoDuration: '6:51',
-    courseMatchSummary: '4 of 4 sections match Cambridge IGCSE Physics (0625)',
-    timestamps: [
-      { time: '0:00', seconds: 0, label: 'Introduction to Gravity, Mass, Weight and Energy', cardId: 'igcse-phys-6-1-c1' },
-      { time: '1:34', seconds: 94, label: 'What is a Gravitational Field?', cardId: 'igcse-phys-6-1-c2' },
-      { time: '3:19', seconds: 199, label: 'The Difference Between Mass and Weight', cardId: 'igcse-phys-6-1-c2' },
-      { time: '5:19', seconds: 319, label: 'Gravitational Potential Energy Calculation Example', cardId: 'igcse-phys-6-1-c3' },
-    ],
-    cards: [
+  "igcse-phys-6-1": {
+    "subtopicId": "igcse-phys-6-1",
+    "subtopicCode": "6.1",
+    "subtopicTitle": "Earth, The Solar System & Orbital Motion",
+    "readingMinutes": 9,
+    "videoTitle": "GCSE Physics - Gravitational Potential Energy & Gravity | How to Calculate Weight",
+    "youtubeId": "hSzEdvFEVq8",
+    "videoChannel": "Cognito",
+    "videoDuration": "6:51",
+    "courseMatchSummary": "4 of 4 sections match Cambridge IGCSE Physics (0625)",
+    "timestamps": [
       {
-        id: 'igcse-phys-6-1-c1',
-        title: 'Earth’s Motion, Seasons & The Moon',
-        summary: 'How Earth’s rotation, 23.5° axial tilt, and lunar orbit create days and seasons.',
-        bullets: [
-          '**Day and night:** Earth spins on its tilted axis (23.5°) once every 24 hours; the Sun appears to rise in the east and set in the west.',
-          '**Seasons:** Earth orbits the Sun once every ~365.25 days while keeping its 23.5° axial tilt fixed. When the Northern Hemisphere tilts TOWARD the Sun, it receives more direct sunlight over longer days (summer), while the Southern Hemisphere experiences winter.',
-          'Phases of the Moon (~27.3–29.5 day lunar orbit): As the Moon orbits Earth, we view varying fractions of its sunlit half (New Moon → Waxing Crescent → First Quarter → Full Moon → Waning).',
-        ],
-        commonMistake: 'Seasons are NOT caused by Earth getting closer to the Sun — they are caused by Earth’s 23.5° axial tilt changing the angle of sunlight and daylight hours!',
+        "time": "0:00",
+        "seconds": 0,
+        "label": "Earth’s Rotation, Tilt, Seasons & Moon Phases",
+        "cardId": "igcse-phys-6-1-c1"
       },
       {
-        id: 'igcse-phys-6-1-c2',
-        title: 'The Solar System & Accretion Model',
-        summary: 'Planet order and how the accretion disc formed rocky vs gaseous worlds.',
-        bullets: [
-          '**Order of the 8 planets from the Sun:** Mercury, Venus, Earth, Mars (4 small, rocky, dense inner planets) — Asteroid Belt — Jupiter, Saturn, Uranus, Neptune (4 large, cold, low-density gas/ice giants).',
-          '**Accretion model of Solar System formation:** A rotating nebula of gas and dust collapsed under gravity into a swirling accretion disc. The hot dense core formed the Sun; near the Sun only rocky/metallic elements with high melting points condensed (rocky planets), whereas further out cooler gases and ices clumped into gas giants.',
-          'Gravitational field strength at a planet’s surface increases with planet mass, and gravity between two bodies weakens rapidly as distance increases.',
+        "time": "2:15",
+        "seconds": 135,
+        "label": "The Solar System, Accretion & Elliptical Orbits",
+        "cardId": "igcse-phys-6-1-c2"
+      },
+      {
+        "time": "4:35",
+        "seconds": 275,
+        "label": "Orbital Speed Formula v = 2πr / T",
+        "cardId": "igcse-phys-6-1-c3"
+      }
+    ],
+    "cards": [
+      {
+        "id": "igcse-phys-6-1-c1",
+        "title": "Earth’s Rotation, Axial Tilt, Seasons & Phases of the Moon",
+        "summary": "Earth’s 24 h spin causes day/night; its 23.5° axial tilt causes seasons; the Moon’s ~27.3–29.5 day orbit creates phases.",
+        "bullets": [
+          "**Day & Night** - caused by Earth rotating once on its axis every **24 hours** (Sun appears to rise in the East and set in the West).",
+          "**Seasons** - caused by Earth’s **23.5° axial tilt** as it orbits the Sun every **365.25 days** (NOT because Earth is closer to the Sun!)."
         ],
-        glossaryPills: [
+        "subsections": [
           {
-            term: 'accretion disc',
-            definition: 'Flattened rotating disc of gas and dust drawn together by gravity around a newly forming star from which planets coalesce.',
-          },
+            "heading": "Moon Phases",
+            "bullets": [
+              "**Phases of the Moon** - as the Moon orbits Earth roughly once a month, we see different fractions of its sunlit hemisphere (New → Waxing Crescent → First Quarter → Full → Waning)."
+            ],
+            "exampleHeading": "Concrete check: Why Northern Summer is warmer",
+            "examples": [
+              "When the Northern Hemisphere tilts towards the Sun, days are longer and sunlight strikes at a steeper angle, concentrating energy per unit area."
+            ]
+          }
         ],
-        memoryAid: 'Planet order: My Very Easy Method Just Speeds Up Naming (Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune).',
+        "glossaryPills": [
+          {
+            "term": "orbit",
+            "definition": "The curved gravitational path followed by a planet around a star or a moon/satellite around a planet."
+          }
+        ]
       },
       {
-        id: 'igcse-phys-6-1-c3',
-        title: 'Orbital Speed & Elliptical Comet Orbits',
-        summary: 'Calculating orbital speed (v = 2πr/T) and elliptical comet energy transfers.',
-        bullets: [
-          'Average orbital speed for a circular orbit of radius r and orbital period T: **v = (2 × π × r) ÷ T**.',
-          'As orbital radius increases across the Solar System, the Sun’s gravitational pull weakens, so outer planets orbit much MORE SLOWLY and have much LONGER orbital periods (years) than inner planets.',
-          'Comets follow highly elliptical orbits with the Sun off-centre at one focus. By conservation of energy, as a comet falls closer to the Sun its **gravitational potential energy** converts into kinetic energy — so it travels FASTEST at closest approach and SLOWEST far out.',
-          '**Worked example:** Earth orbits the Sun at r = 1.50 × 10¹¹ m in T = 365.25 × 86,400 = 3.156 × 10⁷ s. Orbital speed v = 2π(1.50 × 10¹¹) ÷ (3.156 × 10⁷) ≈ 29,900 m/s (≈ 30 km/s).',
+        "id": "igcse-phys-6-1-c2",
+        "title": "Structure of the Solar System & Accretion Model",
+        "summary": "Four small rocky inner planets, four huge gaseous/icy outer giants, formed by gravitational collapse of a rotating nebula.",
+        "bullets": [
+          "**Planet order** - **Mercury, Venus, Earth, Mars** (small, dense, rocky) | Asteroid Belt | **Jupiter, Saturn, Uranus, Neptune** (large, cold, gas/ice giants)."
         ],
-        glossaryPills: [
+        "subsections": [
           {
-            term: 'orbital period',
-            definition: 'The time T taken for a planet, moon, or satellite to complete one full orbit around its parent body.',
-          },
+            "heading": "Accretion Disc & Elliptical Comet Orbits",
+            "bullets": [
+              "**Accretion model** - a giant rotating cloud of gas and dust collapsed under gravity into a flat spinning **accretion disc**; high temperatures near the young Sun allowed only metals/rocks to condense into inner planets, while lighter gases/ices formed outer giants.",
+              "**Comets** - follow highly **elliptical** orbits; as a comet approaches the Sun, gravitational potential energy converts into kinetic energy so it travels **fastest at closest approach**."
+            ],
+            "exampleHeading": "Concrete check: Sun’s mass dominance",
+            "examples": [
+              "The Sun contains >99.8% of the Solar System’s mass, providing the huge gravitational pull holding all planets in orbit."
+            ]
+          }
         ],
+        "glossaryPills": [
+          {
+            "term": "accretion disc",
+            "definition": "A rotating flat disc of gas and dust around a forming star from which planets coalesce under gravity."
+          }
+        ],
+        "memoryAid": "My Very Educated Mother Just Served Us Noodles (Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune)!"
       },
+      {
+        "id": "igcse-phys-6-1-c3",
+        "title": "Orbital Speed v = 2πr / T & Gravitational Field Strength",
+        "summary": "Outer planets experience weaker solar gravity and move more slowly along much longer orbits.",
+        "bullets": [
+          "**Average orbital speed** - **v = 2πr / T**, where r is the average orbital radius and T is the orbital period."
+        ],
+        "subsections": [
+          {
+            "heading": "Trends Moving Outward from the Sun",
+            "bullets": [
+              "**As orbital distance r increases** - gravitational field strength **decreases**, orbital speed **decreases**, orbital period **increases**, and surface temperature generally **decreases**."
+            ],
+            "exampleHeading": "Worked example: Earth’s orbital speed (r = 1.5 × 10¹¹ m, T = 365 days)",
+            "examples": [
+              "T = 365 × 24 × 3600 = 3.15 × 10⁷ s.",
+              "v = (2π × 1.5 × 10¹¹) / (3.15 × 10⁷) ≈ 2.99 × 10⁴ m/s (≈ 30 km/s)."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "orbital period",
+            "definition": "The time T taken for a planet, moon, or satellite to complete one full orbit."
+          }
+        ],
+        "commonMistake": "NEVER claim summer happens because Earth is closer to the Sun — seasons are caused solely by Earth’s 23.5° axial tilt!"
+      }
     ],
-    keyTerms: [
-      { term: 'Orbital speed', definition: 'Average speed along a circular orbit: v = 2πr ÷ T.' },
-      { term: 'Accretion', definition: 'Process by which dust and gas particles clump together under gravity to form stars and planets.' },
-      { term: 'Elliptical orbit', definition: 'Oval-shaped orbit followed by planets and strongly elongated for comets, with the Sun at one focus.' },
+    "checklistPoints": [
+      "Explain day/night, seasons (axial tilt), and lunar phases clearly",
+      "Recall planet order, the accretion model, and energy conservation in elliptical comet orbits",
+      "Calculate average orbital speed using v = 2πr / T in consistent SI units"
     ],
-    checklistPoints: [
-      'Explain day/night, the seasons (23.5° tilt), and lunar phases clearly.',
-      'Explain why inner planets are rocky while outer planets are gaseous using the accretion model.',
-      'Calculate orbital speed with v = 2πr/T and explain why comets accelerate near the Sun via energy conservation.',
-    ],
+    "keyTerms": [
+      {
+        "term": "Orbit",
+        "definition": "The curved gravitational path followed by a planet around a star or a moon/satellite around a planet."
+      },
+      {
+        "term": "Accretion disc",
+        "definition": "A rotating flat disc of gas and dust around a forming star from which planets coalesce under gravity."
+      },
+      {
+        "term": "Orbital period",
+        "definition": "The time T taken for a planet, moon, or satellite to complete one full orbit."
+      },
+      {
+        "term": "Earth’s Rotation, Axial Tilt, Seasons & Phases of the Moon",
+        "definition": "Earth’s 24 h spin causes day/night; its 23.5° axial tilt causes seasons; the Moon’s ~27.3–29.5 day orbit creates phases."
+      }
+    ]
   },
-  'igcse-phys-6-2': {
-    subtopicId: 'igcse-phys-6-2',
-    subtopicCode: '6.2',
-    subtopicTitle: 'Life Cycle of Stars, Red-Shift & The Big Bang (Hubble’s Law)',
-    readingMinutes: 10,
-    videoTitle: 'GCSE Physics - What is Red Shift?',
-    youtubeId: 'bWEtm-7cYzM',
-    videoChannel: 'Cognito',
-    videoDuration: '5:59',
-    courseMatchSummary: '4 of 4 sections match Cambridge IGCSE Physics (0625)',
-    timestamps: [
-      { time: '0:00', seconds: 0, label: 'Intro to Red Shift & Big Bang', cardId: 'igcse-phys-6-2-c2' },
-      { time: '1:45', seconds: 105, label: 'Red Shift Observed in Distant Galaxies', cardId: 'igcse-phys-6-2-c2' },
-      { time: '3:08', seconds: 188, label: 'Balloon Model of the Expanding Universe', cardId: 'igcse-phys-6-2-c2' },
-      { time: '4:46', seconds: 286, label: 'How the Universe Began: The Big Bang Theory', cardId: 'igcse-phys-6-2-c3' },
-    ],
-    cards: [
+  "igcse-phys-6-2": {
+    "subtopicId": "igcse-phys-6-2",
+    "subtopicCode": "6.2",
+    "subtopicTitle": "Life Cycle of Stars, Red-Shift & The Big Bang (Hubble’s Law)",
+    "readingMinutes": 10,
+    "videoTitle": "GCSE Physics - What is Red Shift?",
+    "youtubeId": "bWEtm-7cYzM",
+    "videoChannel": "Cognito",
+    "videoDuration": "5:59",
+    "courseMatchSummary": "4 of 4 sections match Cambridge IGCSE Physics (0625)",
+    "timestamps": [
       {
-        id: 'igcse-phys-6-2-c1',
-        title: 'Light-Years & Life Cycle of Stars',
-        summary: 'Light-years and stellar evolution from nebulae to white dwarfs or black holes.',
-        bullets: [
-          'A light-year is a unit of DISTANCE (not time!) — the distance light travels in a vacuum in one year: 1 light-year ≈ 9.5 × 10¹⁵ m. Our Sun sits in the Milky Way galaxy (~100,000 light-years across).',
-          '**Star birth:** Gravity pulls dust and hydrogen gas in a NEBULA inward to form a dense hot PROTOSTAR. Once core temperature reaches millions of kelvin, hydrogen nuclear FUSION begins.',
-          '**Main Sequence Star (stable phase like the Sun):** Outward radiation/thermal pressure from hydrogen fusion exactly BALANCES inward gravitational collapse for billions of years.',
-          '**Low-mass stars (like our Sun):** Hydrogen runs low → expands and cools into a RED GIANT (fuses helium to carbon) → sheds outer layers as a PLANETARY NEBULA leaving a hot, dense WHITE DWARF that slowly cools.',
-          'High-mass stars (>8× Sun’s mass): Expand into a RED SUPERGIANT (fusing elements up to iron) → catastrophic SUPERNOVA explosion (forging heavy elements beyond iron like gold and uranium and scattering them into new nebulae) → core collapses into an ultra-dense NEUTRON STAR or, if massive enough, a BLACK HOLE.',
-        ],
-        glossaryPills: [
-          {
-            term: 'light-year',
-            definition: 'Astronomical unit of distance equal to how far light travels through a vacuum in one Earth year (~9.5 × 10¹⁵ m).',
-          },
-          {
-            term: 'supernova',
-            definition: 'Catastrophic explosion of a massive red supergiant star that synthesises heavy elements and disperses them across space.',
-          },
-        ],
-        memoryAid: 'Sun-like path: Nebula → Protostar → Main Sequence → Red Giant → Planetary Nebula → White Dwarf. Massive path: ... → Red Supergiant → Supernova → Neutron Star / Black Hole.',
+        "time": "0:00",
+        "seconds": 0,
+        "label": "Star Life Cycles (Sun-like vs Massive Stars)",
+        "cardId": "igcse-phys-6-2-c1"
       },
       {
-        id: 'igcse-phys-6-2-c2',
-        title: 'Red-Shift, CMBR & The Big Bang Theory',
-        summary: 'Galactic red-shift and CMBR as core evidence for the Big Bang.',
-        bullets: [
-          'Red-shift: Light emitted by distant galaxies is shifted toward the RED (longer wavelength, lower frequency) end of the spectrum because the space between galaxies is expanding and the galaxies are receding away from us.',
-          '**Key observation:** The FURTHER away a galaxy is, the GREATER its red-shift — meaning distant galaxies are receding FASTER than closer ones, proving the Universe is expanding.',
-          '**Cosmic Microwave Background Radiation (CMBR):** Uniform microwave radiation arriving from every direction in space. Originally high-energy gamma radiation emitted shortly after the Big Bang (~13.8 billion years ago), it has been stretched into the microwave region by billions of years of cosmic expansion.',
-          'Both galactic red-shift AND CMBR provide independent, compelling evidence for the **Big Bang Theory**.',
-        ],
-        glossaryPills: [
-          {
-            term: 'red-shift',
-            definition: 'Increase in observed wavelength of light from a receding galaxy due to the expansion of space.',
-          },
-        ],
-        commonMistake: 'Red-shift does NOT mean galaxies look bright red — it means their dark absorption spectral lines shift toward longer wavelengths relative to laboratory measurements on Earth.',
+        "time": "2:00",
+        "seconds": 120,
+        "label": "Galaxies, Light-Years & Red-Shift",
+        "cardId": "igcse-phys-6-2-c2"
       },
       {
-        id: 'igcse-phys-6-2-c3',
-        title: 'Hubble’s Law & Age of the Universe (CIE Extended)',
-        summary: 'Applying Hubble’s Law (H₀ = v/d) to estimate the age of the Universe.',
-        bullets: [
-          'Hubble’s Law states that a galaxy’s recession speed v is directly proportional to its distance d from Earth: **v = H₀ × d**, where H₀ = v ÷ d is the Hubble constant.',
-          '**Current measured value of the Hubble constant:** H₀ ≈ 2.2 × 10⁻¹⁸ s⁻¹.',
-          '**Estimating the age of the Universe:** Assuming galaxies have expanded at speed v over time t = d ÷ v, we obtain Age of Universe ≈ 1 ÷ H₀ ≈ 1 ÷ (2.2 × 10⁻¹⁸ s⁻¹) ≈ 4.5 × 10¹⁷ s ≈ 1.4 × 10¹⁰ years (~14 billion years).',
-          'Astronomers find distances d to distant galaxies by measuring the apparent brightness of Type Ia supernovae (whose true peak luminosity is known).',
+        "time": "4:00",
+        "seconds": 240,
+        "label": "CMBR, Big Bang & Hubble’s Law (H₀)",
+        "cardId": "igcse-phys-6-2-c3"
+      }
+    ],
+    "cards": [
+      {
+        "id": "igcse-phys-6-2-c1",
+        "title": "Life Cycle of Stars (Sun-Like vs Massive Stars)",
+        "summary": "Stable main-sequence stars balance inward gravity against outward radiation pressure from hydrogen fusion.",
+        "bullets": [
+          "**Formation** - interstellar **nebula** collapses under gravity → **protostar** heats until core fuses hydrogen into helium → stable **main sequence star** (gravity = outward radiation pressure)."
         ],
+        "subsections": [
+          {
+            "heading": "Two Evolutionary Paths",
+            "bullets": [
+              "**Sun-like (low-mass) star** - Main sequence → **Red Giant** → Planetary Nebula + **White Dwarf** (cools to black dwarf).",
+              "**Massive star** - Main sequence → **Red Supergiant** → **Supernova** explosion (creates elements heavier than iron!) → **Neutron Star** or **Black Hole**."
+            ],
+            "exampleHeading": "Concrete check: Origin of heavy elements like gold & uranium",
+            "examples": [
+              "Fusion inside stars builds elements up to iron; elements heavier than iron are forged in supernova explosions and scattered into new nebulae."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "supernova",
+            "definition": "The colossal explosion at the end of a massive star’s life that synthesises elements heavier than iron and scatters them into space."
+          }
+        ]
       },
+      {
+        "id": "igcse-phys-6-2-c2",
+        "title": "Light-Years, Galaxies & Cosmological Red-Shift",
+        "summary": "Light from distant galaxies is stretched to longer (redder) wavelengths, showing the Universe is expanding.",
+        "bullets": [
+          "**Light-year** - the **DISTANCE** light travels in a vacuum in one year (≈ 9.5 × 10¹⁵ m). Our Sun sits inside the **Milky Way** galaxy of billions of stars."
+        ],
+        "subsections": [
+          {
+            "heading": "Red-Shift as Evidence of Expansion",
+            "bullets": [
+              "**Cosmological red-shift** - absorption lines from distant galaxies are shifted towards the **red (longer wavelength, lower frequency)** end of the spectrum because space itself is expanding.",
+              "**Further = faster** - more distant galaxies show GREATER red-shift, proving they are receding faster."
+            ],
+            "exampleHeading": "Concrete analogy: Expanding raisin dough",
+            "examples": [
+              "As bread dough expands in an oven, every raisin moves away from every other raisin — the further apart two raisins are, the faster they separate."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "red-shift",
+            "definition": "The increase in observed wavelength of light emitted by receding distant galaxies due to the expansion of space."
+          },
+          {
+            "term": "light-year",
+            "definition": "A unit of distance equal to the distance light travels in a vacuum in one year (≈ 9.5 × 10¹⁵ m)."
+          }
+        ]
+      },
+      {
+        "id": "igcse-phys-6-2-c3",
+        "title": "CMBR, The Big Bang & Hubble’s Law",
+        "summary": "CMBR is stretched early-Universe radiation; Hubble’s Law v = H₀d allows estimating the age of the Universe as 1 / H₀.",
+        "bullets": [
+          "**Cosmic Microwave Background Radiation (CMBR)** - uniform microwave radiation arriving from all directions in space; remnant thermal radiation from the hot early Big Bang stretched into microwaves by expansion."
+        ],
+        "subsections": [
+          {
+            "heading": "Hubble’s Law & Age of the Universe",
+            "bullets": [
+              "**Hubble’s constant H₀** - **H₀ = v / d** ≈ 2.2 × 10⁻¹⁸ s⁻¹, where v is recession speed and d is galaxy distance.",
+              "**Age of the Universe** - **t = d / v = 1 / H₀** ≈ 1 / (2.2 × 10⁻¹⁸) ≈ 4.5 × 10¹⁷ s (≈ 14 billion years)."
+            ],
+            "exampleHeading": "Worked example: Recession speed of a galaxy at d = 5.0 × 10²⁴ m",
+            "examples": [
+              "v = H₀ d = (2.2 × 10⁻¹⁸) × (5.0 × 10²⁴) = 1.1 × 10⁷ m/s."
+            ]
+          }
+        ],
+        "glossaryPills": [
+          {
+            "term": "CMBR",
+            "definition": "Cosmic Microwave Background Radiation — uniform microwave radiation filling all of space, left over from the early hot Big Bang."
+          }
+        ],
+        "memoryAid": "Two Big Bang pillars: 1) Red-shift of distant galaxies (space expanding) + 2) CMBR (cooled glow from the hot beginning)!",
+        "commonMistake": "A light-year is a unit of DISTANCE (~9.5 × 10¹⁵ m), NOT a unit of time!"
+      }
     ],
-    keyTerms: [
-      { term: 'Main sequence star', definition: 'Stable star where inward gravity is balanced by outward pressure from core hydrogen fusion.' },
-      { term: 'Red-shift', definition: 'Stretching of light wavelengths from distant receding galaxies, providing evidence of cosmic expansion.' },
-      { term: 'CMBR', definition: 'Cosmic Microwave Background Radiation — relic thermal radiation from the early Universe stretched into microwaves.' },
-      { term: 'Hubble constant (H₀)', definition: 'Ratio of galaxy recession velocity to distance (H₀ = v ÷ d ≈ 2.2 × 10⁻¹⁸ s⁻¹); 1/H₀ estimates the Universe’s age.' },
+    "checklistPoints": [
+      "Trace both Sun-like and massive star life cycles and state why main-sequence stars are stable",
+      "Define light-year (distance) and explain how red-shift and CMBR support the Big Bang theory",
+      "Use Hubble’s Law H₀ = v / d and estimate the age of the Universe as 1 / H₀"
     ],
-    checklistPoints: [
-      'Trace the complete stellar life cycle for both Sun-sized stars and high-mass stars.',
-      'Explain how galactic red-shift and CMBR support the Big Bang Theory.',
-      'Apply Hubble’s Law (H₀ = v/d) and show how 1/H₀ estimates the age of the Universe.',
-    ],
-  },
+    "keyTerms": [
+      {
+        "term": "Supernova",
+        "definition": "The colossal explosion at the end of a massive star’s life that synthesises elements heavier than iron and scatters them into space."
+      },
+      {
+        "term": "Red-shift",
+        "definition": "The increase in observed wavelength of light emitted by receding distant galaxies due to the expansion of space."
+      },
+      {
+        "term": "Light-year",
+        "definition": "A unit of distance equal to the distance light travels in a vacuum in one year (≈ 9.5 × 10¹⁵ m)."
+      },
+      {
+        "term": "CMBR",
+        "definition": "Cosmic Microwave Background Radiation — uniform microwave radiation filling all of space, left over from the early hot Big Bang."
+      }
+    ]
+  }
 };
 
 export const IGCSE_PHYSICS_QUIZZES: QuizQuestion[] = [
   {
-    "id": "igcse-phys-q1",
+    "id": "igcse-phys-q-1-1-1",
     "subtopicId": "igcse-phys-1-1",
     "type": "mcq",
     "marks": 1,
-    "prompt": "On a speed–time graph, what physical quantities are represented by the gradient and the area under the line?",
+    "prompt": "What does the AREA underneath a speed-time graph represent?",
     "options": [
-      "Gradient = speed; Area = acceleration",
-      "Gradient = acceleration; Area = distance travelled",
-      "Gradient = distance; Area = speed",
-      "Gradient = force; Area = work done"
+      "Acceleration",
+      "Distance travelled",
+      "Resultant force",
+      "Average speed"
     ],
     "correctIndex": 1,
-    "explanation": "On a speed–time graph, Δv/Δt (gradient) gives acceleration and v × t (area under the graph) gives distance travelled."
+    "explanation": "Gradient of a speed-time graph is acceleration; area under the graph is distance travelled."
   },
   {
-    "id": "igcse-phys-q2",
-    "subtopicId": "igcse-phys-1-2",
+    "id": "igcse-phys-q-1-1-2",
+    "subtopicId": "igcse-phys-1-1",
     "type": "short-answer",
     "marks": 2,
-    "prompt": "A solid metal block has mass 540 g and volume 200 cm³. Calculate its density in g/cm³.",
+    "prompt": "A cyclist accelerates uniformly from 3 m/s to 15 m/s in 4 s. Calculate the acceleration.",
+    "explanation": "a = (15 − 3) ÷ 4 = 3 m/s².",
     "rubric": {
       "maxMarks": 2,
-      "modelAnswer": "ρ = m ÷ V = 540 ÷ 200 = 2.7 g/cm³.",
+      "modelAnswer": "a = (v − u) / t = (15 − 3) / 4 = 12 / 4 = 3 m/s².",
       "markPoints": [
         {
           "id": "mp1",
-          "markDescription": "Use ρ = m ÷ V (540 ÷ 200)",
           "requiredKeywordGroups": [
             [
-              "540",
-              "200"
+              "12",
+              "15 - 3",
+              "15 − 3"
             ]
-          ]
+          ],
+          "markDescription": "Uses (15 − 3)/4"
         },
         {
           "id": "mp2",
-          "markDescription": "Correct answer 2.7 g/cm³",
           "numericMatch": {
-            "value": 2.7,
+            "value": 3,
             "tolerance": 0.05
-          }
+          },
+          "markDescription": "Acceleration 3 m/s²"
         }
       ]
-    },
-    "explanation": "Density ρ = m ÷ V = 540 g ÷ 200 cm³ = 2.7 g/cm³ (aluminium)."
+    }
   },
   {
-    "id": "igcse-phys-q3",
-    "subtopicId": "igcse-phys-1-3",
+    "id": "igcse-phys-q-1-1-3",
+    "subtopicId": "igcse-phys-1-1",
+    "type": "multi-select",
+    "marks": 2,
+    "prompt": "Select the TWO vector quantities:",
+    "options": [
+      "Velocity",
+      "Momentum",
+      "Mass",
+      "Temperature"
+    ],
+    "selectCount": 2,
+    "correctIndices": [
+      0,
+      1
+    ],
+    "explanation": "Velocity and momentum have both magnitude and direction; mass and temperature are scalars."
+  },
+  {
+    "id": "igcse-phys-q-1-1-4",
+    "subtopicId": "igcse-phys-1-1",
+    "type": "fill-blank",
+    "marks": 2,
+    "prompt": "Complete the explanation of terminal velocity:",
+    "segments": [
+      "A skydiver reaches terminal velocity when upward ",
+      " equals downward ",
+      ", making the resultant force zero."
+    ],
+    "wordBank": [
+      "air resistance",
+      "weight",
+      "acceleration",
+      "mass"
+    ],
+    "answers": [
+      "air resistance",
+      "weight"
+    ],
+    "explanation": "Balanced air resistance and weight produce zero resultant force and constant velocity."
+  },
+  {
+    "id": "igcse-phys-q-1-1-5",
+    "subtopicId": "igcse-phys-1-1",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "Two perpendicular forces of 3 N and 4 N act on a point. What is the magnitude of their resultant force?",
+    "options": [
+      "7 N",
+      "5 N",
+      "1 N",
+      "12 N"
+    ],
+    "correctIndex": 1,
+    "explanation": "R = √(3² + 4²) = √25 = 5 N."
+  },
+  {
+    "id": "igcse-phys-q-1-2-1",
+    "subtopicId": "igcse-phys-1-2",
     "type": "short-answer",
-    "marks": 3,
-    "prompt": "A uniform seesaw balances horizontally at its centre. A 300 N child sits 2.0 m to the left of the pivot. How far to the right must a 400 N child sit to balance the seesaw?",
+    "marks": 2,
+    "prompt": "A spring stretches from 10 cm to 16 cm when a 12 N weight is hung on it. Calculate its spring constant k in N/cm.",
+    "explanation": "Subtract original length first: x = 6 cm, then k = 12 ÷ 6 = 2 N/cm.",
     "rubric": {
-      "maxMarks": 3,
-      "modelAnswer": "Anticlockwise moment = 300 × 2.0 = 600 N m. Clockwise moment = 400 × d = 600 → d = 600 ÷ 400 = 1.5 m.",
+      "maxMarks": 2,
+      "modelAnswer": "Extension x = 16 − 10 = 6 cm; k = F / x = 12 / 6 = 2 N/cm.",
       "markPoints": [
         {
           "id": "mp1",
-          "markDescription": "Anticlockwise moment = 600 N m",
+          "numericMatch": {
+            "value": 6,
+            "tolerance": 0.01
+          },
+          "markDescription": "Extension 6 cm"
+        },
+        {
+          "id": "mp2",
+          "numericMatch": {
+            "value": 2,
+            "tolerance": 0.01
+          },
+          "markDescription": "Spring constant 2 N/cm"
+        }
+      ]
+    }
+  },
+  {
+    "id": "igcse-phys-q-1-2-2",
+    "subtopicId": "igcse-phys-1-2",
+    "type": "diagram-label",
+    "marks": 2,
+    "prompt": "Identify the force concepts shown on a free-body diagram:",
+    "diagram": "forces-free-body",
+    "labels": [
+      {
+        "marker": "Balanced forces (resultant = 0)",
+        "options": [
+          "Constant velocity or rest",
+          "Increasing acceleration",
+          "Free fall"
+        ],
+        "answer": "Constant velocity or rest"
+      },
+      {
+        "marker": "Unbalanced resultant force F",
+        "options": [
+          "Acceleration a = F / m",
+          "Zero motion",
+          "Constant mass"
+        ],
+        "answer": "Acceleration a = F / m"
+      }
+    ],
+    "explanation": "Newton’s 1st and 2nd laws directly link resultant force to acceleration."
+  },
+  {
+    "id": "igcse-phys-q-1-2-3",
+    "subtopicId": "igcse-phys-1-2",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "A rock has mass 150 g and displaces 50 cm³ of water. What is its density?",
+    "options": [
+      "0.33 g/cm³",
+      "3.0 g/cm³",
+      "100 g/cm³",
+      "7500 g/cm³"
+    ],
+    "correctIndex": 1,
+    "explanation": "ρ = m / V = 150 / 50 = 3.0 g/cm³."
+  },
+  {
+    "id": "igcse-phys-q-1-2-4",
+    "subtopicId": "igcse-phys-1-2",
+    "type": "fill-blank",
+    "marks": 2,
+    "prompt": "Complete the distinction between mass and weight:",
+    "segments": [
+      "Mass is measured in ",
+      " and stays constant everywhere, while weight is a force in ",
+      " given by W = mg."
+    ],
+    "wordBank": [
+      "kilograms",
+      "newtons",
+      "joules",
+      "pascals"
+    ],
+    "answers": [
+      "kilograms",
+      "newtons"
+    ],
+    "explanation": "Mass is in kg; weight is a gravitational force in N."
+  },
+  {
+    "id": "igcse-phys-q-1-2-5",
+    "subtopicId": "igcse-phys-1-2",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "In uniform circular motion, which direction does the centripetal force always act?",
+    "options": [
+      "Outwards away from the centre",
+      "Tangentially forward",
+      "Inwards towards the centre of the circle",
+      "Vertically upwards"
+    ],
+    "correctIndex": 2,
+    "explanation": "Centripetal force always acts perpendicular to velocity towards the centre."
+  },
+  {
+    "id": "igcse-phys-q-1-3-1",
+    "subtopicId": "igcse-phys-1-3",
+    "type": "short-answer",
+    "marks": 2,
+    "prompt": "A 3 kg trolley moving at 4 m/s collides with and sticks to a stationary 1 kg trolley. Calculate their combined velocity.",
+    "explanation": "Conserve momentum: 12 = (3 + 1)v → v = 3 m/s.",
+    "rubric": {
+      "maxMarks": 2,
+      "modelAnswer": "Total momentum before = 3 × 4 = 12 kg m/s; combined mass = 4 kg; v = 12 / 4 = 3 m/s.",
+      "markPoints": [
+        {
+          "id": "mp1",
+          "numericMatch": {
+            "value": 12,
+            "tolerance": 0.05
+          },
+          "markDescription": "Initial momentum 12 kg m/s"
+        },
+        {
+          "id": "mp2",
+          "numericMatch": {
+            "value": 3,
+            "tolerance": 0.05
+          },
+          "markDescription": "Combined velocity 3 m/s"
+        }
+      ]
+    }
+  },
+  {
+    "id": "igcse-phys-q-1-3-2",
+    "subtopicId": "igcse-phys-1-3",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "Why do car airbags reduce injury during a crash?",
+    "options": [
+      "They reduce the total change in momentum",
+      "They increase collision time Δt, reducing average force F = Δp/Δt",
+      "They decrease the car’s mass",
+      "They eliminate impulse completely"
+    ],
+    "correctIndex": 1,
+    "explanation": "Same Δp over a longer time Δt produces a much smaller impact force."
+  },
+  {
+    "id": "igcse-phys-q-1-3-3",
+    "subtopicId": "igcse-phys-1-3",
+    "type": "fill-blank",
+    "marks": 2,
+    "prompt": "Complete the equilibrium condition:",
+    "segments": [
+      "For a beam to be in equilibrium, the total clockwise ",
+      " must equal the total anticlockwise moment, and the ",
+      " force must be zero."
+    ],
+    "wordBank": [
+      "moment",
+      "resultant",
+      "impulse",
+      "pressure"
+    ],
+    "answers": [
+      "moment",
+      "resultant"
+    ],
+    "explanation": "Both rotational (moments) and translational (forces) equilibrium are required."
+  },
+  {
+    "id": "igcse-phys-q-1-3-4",
+    "subtopicId": "igcse-phys-1-3",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "Calculate the liquid pressure at 5 m depth in water (ρ = 1000 kg/m³, g = 9.8 N/kg).",
+    "options": [
+      "490 Pa",
+      "4,900 Pa",
+      "49,000 Pa",
+      "2,000 Pa"
+    ],
+    "correctIndex": 2,
+    "explanation": "Δp = ρgh = 1000 × 9.8 × 5 = 49,000 Pa."
+  },
+  {
+    "id": "igcse-phys-q-1-3-5",
+    "subtopicId": "igcse-phys-1-3",
+    "type": "matching",
+    "marks": 2,
+    "prompt": "Match each quantity to its formula:",
+    "pairs": [
+      {
+        "left": "Moment",
+        "right": "F × d"
+      },
+      {
+        "left": "Momentum",
+        "right": "m × v"
+      },
+      {
+        "left": "Impulse",
+        "right": "F × Δt"
+      },
+      {
+        "left": "Liquid pressure",
+        "right": "ρ × g × h"
+      }
+    ],
+    "explanation": "Core mechanics and pressure formulae for 0625."
+  },
+  {
+    "id": "igcse-phys-q-1-4-1",
+    "subtopicId": "igcse-phys-1-4",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "Which set of energy resources does NOT originate from the Sun?",
+    "options": [
+      "Wind, solar, biofuels",
+      "Nuclear, geothermal, tidal",
+      "Hydroelectric, waves, coal",
+      "Oil, natural gas, wind"
+    ],
+    "correctIndex": 1,
+    "explanation": "Nuclear (fissionable isotopes), geothermal (Earth’s core), and tidal (Moon’s gravity) do not come from the Sun."
+  },
+  {
+    "id": "igcse-phys-q-1-4-2",
+    "subtopicId": "igcse-phys-1-4",
+    "type": "short-answer",
+    "marks": 2,
+    "prompt": "A motor uses 800 J of electrical energy to do 600 J of useful mechanical work. Calculate its percentage efficiency.",
+    "explanation": "(600 ÷ 800) × 100% = 75%.",
+    "rubric": {
+      "maxMarks": 2,
+      "modelAnswer": "Efficiency = (600 / 800) × 100% = 75%.",
+      "markPoints": [
+        {
+          "id": "mp1",
           "requiredKeywordGroups": [
             [
               "600"
+            ],
+            [
+              "800"
             ]
-          ]
+          ],
+          "markDescription": "Divides useful 600 by total 800"
         },
         {
           "id": "mp2",
-          "markDescription": "Equate clockwise and anticlockwise moments (400 × d = 600)",
-          "requiredKeywordGroups": [
-            [
-              "400"
-            ]
-          ]
-        },
-        {
-          "id": "mp3",
-          "markDescription": "Correct distance 1.5 m",
           "numericMatch": {
-            "value": 1.5,
-            "tolerance": 0.02
-          }
+            "value": 75,
+            "tolerance": 0.1
+          },
+          "markDescription": "75%"
         }
       ]
-    },
-    "explanation": "By the principle of moments, 300 × 2.0 = 400 × d, giving d = 600 ÷ 400 = 1.5 m."
+    }
   },
   {
-    "id": "igcse-phys-q4",
+    "id": "igcse-phys-q-1-4-3",
+    "subtopicId": "igcse-phys-1-4",
+    "type": "fill-blank",
+    "marks": 2,
+    "prompt": "Complete the mechanical energy formulae:",
+    "segments": [
+      "Kinetic energy is E_k = ½m",
+      ", and work done is W = ",
+      " × d."
+    ],
+    "wordBank": [
+      "v²",
+      "F",
+      "v",
+      "P"
+    ],
+    "answers": [
+      "v²",
+      "F"
+    ],
+    "explanation": "E_k = ½mv² and W = Fd."
+  },
+  {
+    "id": "igcse-phys-q-1-4-4",
     "subtopicId": "igcse-phys-1-4",
     "type": "mcq",
     "marks": 1,
-    "prompt": "An electric motor draws 500 W of electrical power and lifts a load at a useful rate of 350 W. What is its percentage efficiency?",
+    "prompt": "A 4 kg object moves at 5 m/s. What is its kinetic energy?",
     "options": [
-      "35%",
-      "60%",
-      "70%",
-      "143%"
+      "10 J",
+      "20 J",
+      "50 J",
+      "100 J"
     ],
     "correctIndex": 2,
-    "explanation": "Efficiency = (Useful power ÷ Total power) × 100% = (350 ÷ 500) × 100% = 70%."
+    "explanation": "E_k = ½ × 4 × 5² = 2 × 25 = 50 J."
   },
   {
-    "id": "igcse-phys-q5",
+    "id": "igcse-phys-q-1-4-5",
+    "subtopicId": "igcse-phys-1-4",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "A lift does 15,000 J of work in 10 s. What is its useful power output?",
+    "options": [
+      "150 W",
+      "1,500 W",
+      "150,000 W",
+      "1.5 W"
+    ],
+    "correctIndex": 1,
+    "explanation": "P = W / t = 15,000 ÷ 10 = 1,500 W."
+  },
+  {
+    "id": "igcse-phys-q-2-1-1",
+    "subtopicId": "igcse-phys-2-1",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "What is 27 °C on the Kelvin temperature scale?",
+    "options": [
+      "−246 K",
+      "246 K",
+      "300 K",
+      "273 K"
+    ],
+    "correctIndex": 2,
+    "explanation": "T(K) = 27 + 273 = 300 K."
+  },
+  {
+    "id": "igcse-phys-q-2-1-2",
     "subtopicId": "igcse-phys-2-1",
     "type": "short-answer",
     "marks": 2,
-    "prompt": "A trapped gas occupies 600 cm³ at a pressure of 100 kPa. It is compressed at constant temperature to 250 cm³. Calculate the new pressure in kPa.",
+    "prompt": "A fixed mass of gas has pressure 120 kPa and volume 500 cm³. It is compressed at constant temperature to 200 cm³. Calculate the new pressure.",
+    "explanation": "120 × 500 ÷ 200 = 300 kPa.",
     "rubric": {
       "maxMarks": 2,
-      "modelAnswer": "p₁V₁ = p₂V₂ → p₂ = (100 × 600) ÷ 250 = 240 kPa.",
+      "modelAnswer": "p₁V₁ = p₂V₂ → p₂ = (120 × 500) / 200 = 300 kPa.",
       "markPoints": [
         {
           "id": "mp1",
-          "markDescription": "Apply p₁V₁ = p₂V₂ (100 × 600 = p₂ × 250)",
           "requiredKeywordGroups": [
             [
-              "600",
-              "250"
+              "60000",
+              "120",
+              "200"
             ]
-          ]
+          ],
+          "markDescription": "Applies p₁V₁ = p₂V₂"
         },
         {
           "id": "mp2",
-          "markDescription": "Correct pressure 240 kPa",
           "numericMatch": {
-            "value": 240,
+            "value": 300,
             "tolerance": 0.5
-          }
+          },
+          "markDescription": "300 kPa"
         }
       ]
-    },
-    "explanation": "Using Boyle’s Law: p₂ = (100 × 600) ÷ 250 = 240 kPa."
+    }
   },
   {
-    "id": "igcse-phys-q6",
+    "id": "igcse-phys-q-2-1-3",
+    "subtopicId": "igcse-phys-2-1",
+    "type": "fill-blank",
+    "marks": 2,
+    "prompt": "Complete the explanation of Brownian motion:",
+    "segments": [
+      "Smoke particles move randomly because they are bombarded unevenly by much smaller, fast-moving ",
+      " molecules, and absolute zero equals ",
+      " °C."
+    ],
+    "wordBank": [
+      "air",
+      "−273",
+      "smoke",
+      "0"
+    ],
+    "answers": [
+      "air",
+      "−273"
+    ],
+    "explanation": "Invisible air molecules bombard larger visible smoke particles; 0 K = −273 °C."
+  },
+  {
+    "id": "igcse-phys-q-2-1-4",
+    "subtopicId": "igcse-phys-2-1",
+    "type": "multi-select",
+    "marks": 2,
+    "prompt": "When a gas in a rigid sealed tank is heated, select the TWO changes that raise its pressure:",
+    "options": [
+      "Molecules hit the walls more frequently",
+      "Molecules hit the walls harder (greater momentum change)",
+      "The mass of each molecule increases",
+      "The number of molecules increases"
+    ],
+    "selectCount": 2,
+    "correctIndices": [
+      0,
+      1
+    ],
+    "explanation": "Faster molecules collide both harder and more often with the container walls."
+  },
+  {
+    "id": "igcse-phys-q-2-1-5",
+    "subtopicId": "igcse-phys-2-1",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "Which state of matter expands the MOST for a given temperature rise?",
+    "options": [
+      "Solid",
+      "Liquid",
+      "Gas",
+      "All expand equally"
+    ],
+    "correctIndex": 2,
+    "explanation": "Gases have negligible intermolecular forces, so they expand far more than liquids or solids."
+  },
+  {
+    "id": "igcse-phys-q-2-2-1",
+    "subtopicId": "igcse-phys-2-2",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "Which surface is the BEST emitter and BEST absorber of infrared radiation?",
+    "options": [
+      "Shiny white",
+      "Shiny silver",
+      "Matte black",
+      "Glossy white"
+    ],
+    "correctIndex": 2,
+    "explanation": "Dull (matte) black surfaces absorb and emit infrared radiation most rapidly."
+  },
+  {
+    "id": "igcse-phys-q-2-2-2",
+    "subtopicId": "igcse-phys-2-2",
+    "type": "short-answer",
+    "marks": 2,
+    "prompt": "Calculate the thermal energy required to heat 2 kg of water (c = 4200 J/(kg °C)) by 10 °C.",
+    "explanation": "2 × 4200 × 10 = 84,000 J.",
+    "rubric": {
+      "maxMarks": 2,
+      "modelAnswer": "ΔE = mcΔθ = 2 × 4200 × 10 = 84,000 J (84 kJ).",
+      "markPoints": [
+        {
+          "id": "mp1",
+          "requiredKeywordGroups": [
+            [
+              "4200",
+              "mc"
+            ]
+          ],
+          "markDescription": "Uses mcΔθ"
+        },
+        {
+          "id": "mp2",
+          "requiredKeywordGroups": [
+            [
+              "84000",
+              "84,000",
+              "84 kj",
+              "84kj"
+            ]
+          ],
+          "markDescription": "84000 J or 84 kJ"
+        }
+      ]
+    }
+  },
+  {
+    "id": "igcse-phys-q-2-2-3",
     "subtopicId": "igcse-phys-2-2",
     "type": "fill-blank",
-    "marks": 3,
-    "prompt": "Complete the explanation of thermal energy transfer mechanisms.",
+    "marks": 2,
+    "prompt": "Complete the convection explanation:",
     "segments": [
-      "Metals conduct heat rapidly mainly because of ",
-      ". In liquids and gases, warmer fluid rises because it becomes ",
-      ". Across the vacuum of space, heat travels only by ",
+      "When water at the bottom of a pan is heated, it expands, becomes ",
+      " dense, and rises; metals conduct heat quickly using ",
+      " electrons."
+    ],
+    "wordBank": [
+      "less",
+      "delocalised",
+      "more",
+      "fixed"
+    ],
+    "answers": [
+      "less",
+      "delocalised"
+    ],
+    "explanation": "Warm fluid becomes less dense and rises; free/delocalised electrons speed conduction in metals."
+  },
+  {
+    "id": "igcse-phys-q-2-2-4",
+    "subtopicId": "igcse-phys-2-2",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "Why does evaporation cool the remaining liquid?",
+    "options": [
+      "Slowest molecules escape first",
+      "Most energetic molecules escape, lowering the average kinetic energy of those left behind",
+      "Water gains latent heat from the air",
+      "Density increases rapidly"
+    ],
+    "correctIndex": 1,
+    "explanation": "Fastest molecules escape from the surface, reducing average KE (and temperature) of the rest."
+  },
+  {
+    "id": "igcse-phys-q-2-2-5",
+    "subtopicId": "igcse-phys-2-2",
+    "type": "matching",
+    "marks": 2,
+    "prompt": "Match each vacuum flask feature to the transfer method it stops:",
+    "pairs": [
+      {
+        "left": "Vacuum gap",
+        "right": "Conduction and convection"
+      },
+      {
+        "left": "Silvered inner walls",
+        "right": "Infrared radiation"
+      },
+      {
+        "left": "Plastic stopper",
+        "right": "Evaporation and convection"
+      },
+      {
+        "left": "Insulating foam support",
+        "right": "Conduction to outer case"
+      }
+    ],
+    "explanation": "Each vacuum flask feature targets specific thermal transfer mechanisms."
+  },
+  {
+    "id": "igcse-phys-q-3-1-1",
+    "subtopicId": "igcse-phys-3-1",
+    "type": "diagram-label",
+    "marks": 2,
+    "prompt": "Identify the labelled quantities on a transverse wave:",
+    "diagram": "transverse-wave",
+    "labels": [
+      {
+        "marker": "Crest to crest distance",
+        "options": [
+          "Wavelength λ",
+          "Amplitude",
+          "Frequency"
+        ],
+        "answer": "Wavelength λ"
+      },
+      {
+        "marker": "Rest position to crest",
+        "options": [
+          "Amplitude",
+          "Wavelength λ",
+          "Period"
+        ],
+        "answer": "Amplitude"
+      }
+    ],
+    "explanation": "Wavelength is horizontal crest-to-crest; amplitude is vertical rest-to-crest."
+  },
+  {
+    "id": "igcse-phys-q-3-1-2",
+    "subtopicId": "igcse-phys-3-1",
+    "type": "short-answer",
+    "marks": 2,
+    "prompt": "A wave has frequency 25 Hz and wavelength 0.4 m. Calculate its speed.",
+    "explanation": "v = 25 × 0.4 = 10 m/s.",
+    "rubric": {
+      "maxMarks": 2,
+      "modelAnswer": "v = fλ = 25 × 0.4 = 10 m/s.",
+      "markPoints": [
+        {
+          "id": "mp1",
+          "requiredKeywordGroups": [
+            [
+              "25"
+            ],
+            [
+              "0.4"
+            ]
+          ],
+          "markDescription": "Uses v = fλ"
+        },
+        {
+          "id": "mp2",
+          "numericMatch": {
+            "value": 10,
+            "tolerance": 0.05
+          },
+          "markDescription": "10 m/s"
+        }
+      ]
+    }
+  },
+  {
+    "id": "igcse-phys-q-3-1-3",
+    "subtopicId": "igcse-phys-3-1",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "When water waves travel from deep water into shallow water, what happens to their speed, wavelength, and frequency?",
+    "options": [
+      "All three decrease",
+      "Speed and wavelength decrease; frequency stays constant",
+      "Speed decreases; wavelength increases; frequency constant",
+      "Frequency decreases; speed stays constant"
+    ],
+    "correctIndex": 1,
+    "explanation": "Frequency never changes across a boundary; slower speed means shorter wavelength."
+  },
+  {
+    "id": "igcse-phys-q-3-1-4",
+    "subtopicId": "igcse-phys-3-1",
+    "type": "fill-blank",
+    "marks": 2,
+    "prompt": "Complete the diffraction and oscillation facts:",
+    "segments": [
+      "Maximum diffraction occurs when the gap width is approximately equal to the ",
+      ", and longitudinal waves oscillate ",
+      " to energy transfer."
+    ],
+    "wordBank": [
+      "wavelength",
+      "parallel",
+      "amplitude",
+      "perpendicular"
+    ],
+    "answers": [
+      "wavelength",
+      "parallel"
+    ],
+    "explanation": "Gap ≈ λ maximises diffraction; longitudinal waves vibrate parallel to travel."
+  },
+  {
+    "id": "igcse-phys-q-3-1-5",
+    "subtopicId": "igcse-phys-3-1",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "Which of these is a LONGITUDINAL wave?",
+    "options": [
+      "Microwaves",
+      "Light waves",
+      "Sound waves",
+      "Water surface ripples"
+    ],
+    "correctIndex": 2,
+    "explanation": "Sound waves are longitudinal compressions and rarefactions; all EM waves and water ripples are transverse."
+  },
+  {
+    "id": "igcse-phys-q-3-2-1",
+    "subtopicId": "igcse-phys-3-2",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "What is the speed of all electromagnetic waves in a vacuum?",
+    "options": [
+      "340 m/s",
+      "3.0 × 10⁶ m/s",
+      "3.0 × 10⁸ m/s",
+      "3.0 × 10¹⁰ m/s"
+    ],
+    "correctIndex": 2,
+    "explanation": "All EM waves travel at c = 3.0 × 10⁸ m/s in a vacuum."
+  },
+  {
+    "id": "igcse-phys-q-3-2-2",
+    "subtopicId": "igcse-phys-3-2",
+    "type": "short-answer",
+    "marks": 2,
+    "prompt": "State the TWO conditions required for total internal reflection (TIR) of light.",
+    "explanation": "Both medium direction (denser → less dense) and i > c are essential.",
+    "rubric": {
+      "maxMarks": 2,
+      "modelAnswer": "1) Light must travel from a denser medium towards a less dense medium, and 2) the angle of incidence must be greater than the critical angle (i > c).",
+      "markPoints": [
+        {
+          "id": "mp1",
+          "requiredKeywordGroups": [
+            [
+              "denser",
+              "more dense"
+            ],
+            [
+              "less dense",
+              "air"
+            ]
+          ],
+          "markDescription": "Denser to less dense medium"
+        },
+        {
+          "id": "mp2",
+          "requiredKeywordGroups": [
+            [
+              "greater",
+              "bigger",
+              "exceeds",
+              ">"
+            ],
+            [
+              "critical"
+            ]
+          ],
+          "markDescription": "Angle of incidence > critical angle"
+        }
+      ]
+    }
+  },
+  {
+    "id": "igcse-phys-q-3-2-3",
+    "subtopicId": "igcse-phys-3-2",
+    "type": "fill-blank",
+    "marks": 2,
+    "prompt": "Complete the vision-correction rules:",
+    "segments": [
+      "Short-sightedness is corrected using a ",
+      " lens, while long-sightedness is corrected using a ",
+      " lens."
+    ],
+    "wordBank": [
+      "diverging",
+      "converging",
+      "plane",
+      "prism"
+    ],
+    "answers": [
+      "diverging",
+      "converging"
+    ],
+    "explanation": "Concave (diverging) lenses spread rays for myopia; convex (converging) lenses focus rays for hyperopia."
+  },
+  {
+    "id": "igcse-phys-q-3-2-4",
+    "subtopicId": "igcse-phys-3-2",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "Which EM region has the HIGHEST frequency and photon energy?",
+    "options": [
+      "Radio waves",
+      "Ultraviolet",
+      "X-rays",
+      "Gamma rays"
+    ],
+    "correctIndex": 3,
+    "explanation": "Gamma rays sit at the highest-frequency, shortest-wavelength end of the EM spectrum."
+  },
+  {
+    "id": "igcse-phys-q-3-2-5",
+    "subtopicId": "igcse-phys-3-2",
+    "type": "matching",
+    "marks": 2,
+    "prompt": "Match each EM wave to its primary use:",
+    "pairs": [
+      {
+        "left": "Microwaves",
+        "right": "Satellite TV & mobile phones"
+      },
+      {
+        "left": "Infrared",
+        "right": "Thermal imaging & optical fibres"
+      },
+      {
+        "left": "X-rays",
+        "right": "Hospital bone imaging"
+      },
+      {
+        "left": "Gamma rays",
+        "right": "Sterilising surgical equipment"
+      }
+    ],
+    "explanation": "Classic Cambridge 0625 EM wave uses."
+  },
+  {
+    "id": "igcse-phys-q-3-3-1",
+    "subtopicId": "igcse-phys-3-3",
+    "type": "short-answer",
+    "marks": 2,
+    "prompt": "A student claps 170 m from a cliff and hears the echo 1.0 s later. Calculate the speed of sound in air.",
+    "explanation": "Sound travels 170 m there and 170 m back = 340 m in 1.0 s → 340 m/s.",
+    "rubric": {
+      "maxMarks": 2,
+      "modelAnswer": "Total round-trip distance = 2 × 170 = 340 m; v = 340 / 1.0 = 340 m/s.",
+      "markPoints": [
+        {
+          "id": "mp1",
+          "requiredKeywordGroups": [
+            [
+              "340",
+              "2 × 170",
+              "2*170"
+            ]
+          ],
+          "markDescription": "Uses round-trip 340 m"
+        },
+        {
+          "id": "mp2",
+          "numericMatch": {
+            "value": 340,
+            "tolerance": 1
+          },
+          "markDescription": "340 m/s"
+        }
+      ]
+    }
+  },
+  {
+    "id": "igcse-phys-q-3-3-2",
+    "subtopicId": "igcse-phys-3-3",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "What is the approximate frequency range of healthy human hearing?",
+    "options": [
+      "2 Hz to 2,000 Hz",
+      "20 Hz to 20,000 Hz",
+      "200 Hz to 200,000 Hz",
+      "1 Hz to 10,000 Hz"
+    ],
+    "correctIndex": 1,
+    "explanation": "Humans hear roughly 20 Hz to 20 kHz; ultrasound is > 20 kHz."
+  },
+  {
+    "id": "igcse-phys-q-3-3-3",
+    "subtopicId": "igcse-phys-3-3",
+    "type": "fill-blank",
+    "marks": 2,
+    "prompt": "Complete the sound-wave relationships:",
+    "segments": [
+      "Increasing frequency produces a higher ",
+      ", while increasing ",
+      " produces a louder sound."
+    ],
+    "wordBank": [
+      "pitch",
+      "amplitude",
+      "wavelength",
+      "speed"
+    ],
+    "answers": [
+      "pitch",
+      "amplitude"
+    ],
+    "explanation": "Frequency ↔ pitch; Amplitude ↔ loudness."
+  },
+  {
+    "id": "igcse-phys-q-3-3-4",
+    "subtopicId": "igcse-phys-3-3",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "Why is ultrasound preferred over X-rays for prenatal baby scans?",
+    "options": [
+      "Ultrasound travels faster than light",
+      "Ultrasound is non-ionising and does not damage fetal cells/DNA",
+      "X-rays cannot pass through water",
+      "Ultrasound has higher frequency than X-rays"
+    ],
+    "correctIndex": 1,
+    "explanation": "Ultrasound is a non-ionising mechanical wave, whereas X-rays are ionising."
+  },
+  {
+    "id": "igcse-phys-q-3-3-5",
+    "subtopicId": "igcse-phys-3-3",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "In which medium does sound travel FASTEST?",
+    "options": [
+      "Vacuum",
+      "Air",
+      "Water",
+      "Steel"
+    ],
+    "correctIndex": 3,
+    "explanation": "Closely packed, strongly bonded particles in solids (steel) transmit vibrations fastest."
+  },
+  {
+    "id": "igcse-phys-q-4-1-1",
+    "subtopicId": "igcse-phys-4-1",
+    "type": "short-answer",
+    "marks": 2,
+    "prompt": "A current of 2.5 A flows through a lamp for 40 s. Calculate the total charge that passes through the lamp.",
+    "explanation": "Q = 2.5 × 40 = 100 C.",
+    "rubric": {
+      "maxMarks": 2,
+      "modelAnswer": "Q = It = 2.5 × 40 = 100 C.",
+      "markPoints": [
+        {
+          "id": "mp1",
+          "requiredKeywordGroups": [
+            [
+              "2.5"
+            ],
+            [
+              "40"
+            ]
+          ],
+          "markDescription": "Uses Q = It"
+        },
+        {
+          "id": "mp2",
+          "numericMatch": {
+            "value": 100,
+            "tolerance": 0.1
+          },
+          "markDescription": "100 C"
+        }
+      ]
+    }
+  },
+  {
+    "id": "igcse-phys-q-4-1-2",
+    "subtopicId": "igcse-phys-4-1",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "A copper wire has resistance 8 Ω. A second copper wire of the SAME length has TWICE the cross-sectional area. What is its resistance?",
+    "options": [
+      "16 Ω",
+      "4 Ω",
+      "2 Ω",
+      "8 Ω"
+    ],
+    "correctIndex": 1,
+    "explanation": "R ∝ 1/A, so doubling cross-sectional area halves resistance to 4 Ω."
+  },
+  {
+    "id": "igcse-phys-q-4-1-3",
+    "subtopicId": "igcse-phys-4-1",
+    "type": "fill-blank",
+    "marks": 2,
+    "prompt": "Complete the circuit-meter rules:",
+    "segments": [
+      "An ammeter is always connected in ",
+      ", while a voltmeter is always connected in ",
+      " across a component."
+    ],
+    "wordBank": [
+      "series",
+      "parallel",
+      "reverse",
+      "earth"
+    ],
+    "answers": [
+      "series",
+      "parallel"
+    ],
+    "explanation": "Ammeters measure through-current in series; voltmeters measure p.d. across in parallel."
+  },
+  {
+    "id": "igcse-phys-q-4-1-4",
+    "subtopicId": "igcse-phys-4-1",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "Why does the I–V graph of a filament lamp curve and flatten at higher voltages?",
+    "options": [
+      "Its resistance decreases as it cools",
+      "Higher current heats the filament, increasing its resistance",
+      "Electrons stop flowing",
+      "Voltage becomes negative"
+    ],
+    "correctIndex": 1,
+    "explanation": "Hotter metal ions vibrate more vigorously, obstructing electrons and raising resistance."
+  },
+  {
+    "id": "igcse-phys-q-4-1-5",
+    "subtopicId": "igcse-phys-4-1",
+    "type": "matching",
+    "marks": 2,
+    "prompt": "Match each electrical formula to its quantity:",
+    "pairs": [
+      {
+        "left": "Charge Q",
+        "right": "I × t"
+      },
+      {
+        "left": "Potential difference V",
+        "right": "I × R"
+      },
+      {
+        "left": "Electrical power P",
+        "right": "I × V"
+      },
+      {
+        "left": "Electrical energy E",
+        "right": "I × V × t"
+      }
+    ],
+    "explanation": "Essential electricity equations for Cambridge 0625."
+  },
+  {
+    "id": "igcse-phys-q-4-2-1",
+    "subtopicId": "igcse-phys-4-2",
+    "type": "diagram-label",
+    "marks": 2,
+    "prompt": "Identify the rules for series and parallel circuits:",
+    "diagram": "circuit-series-parallel",
+    "labels": [
+      {
+        "marker": "Series loop",
+        "options": [
+          "Same current everywhere",
+          "Same voltage everywhere",
+          "Lower total resistance"
+        ],
+        "answer": "Same current everywhere"
+      },
+      {
+        "marker": "Parallel branches",
+        "options": [
+          "Each branch gets full supply p.d.",
+          "Total resistance = R₁ + R₂",
+          "Current stops if one bulb breaks"
+        ],
+        "answer": "Each branch gets full supply p.d."
+      }
+    ],
+    "explanation": "Series shares voltage with equal current; parallel shares current with equal branch voltage."
+  },
+  {
+    "id": "igcse-phys-q-4-2-2",
+    "subtopicId": "igcse-phys-4-2",
+    "type": "short-answer",
+    "marks": 2,
+    "prompt": "Calculate the combined resistance of a 12 Ω resistor and a 4 Ω resistor connected in parallel.",
+    "explanation": "(12 × 4) / (12 + 4) = 48 / 16 = 3 Ω.",
+    "rubric": {
+      "maxMarks": 2,
+      "modelAnswer": "1/R = 1/12 + 1/4 = 4/12 = 1/3, so R = 3 Ω.",
+      "markPoints": [
+        {
+          "id": "mp1",
+          "requiredKeywordGroups": [
+            [
+              "1/12",
+              "1/3",
+              "48/16",
+              "12 × 4"
+            ]
+          ],
+          "markDescription": "Uses parallel formula"
+        },
+        {
+          "id": "mp2",
+          "numericMatch": {
+            "value": 3,
+            "tolerance": 0.05
+          },
+          "markDescription": "3 Ω"
+        }
+      ]
+    }
+  },
+  {
+    "id": "igcse-phys-q-4-2-3",
+    "subtopicId": "igcse-phys-4-2",
+    "type": "fill-blank",
+    "marks": 2,
+    "prompt": "Complete the sensor and mains-safety rules:",
+    "segments": [
+      "As light intensity increases, the resistance of an LDR ",
+      ", and fuses must always be wired into the ",
+      " wire."
+    ],
+    "wordBank": [
+      "decreases",
+      "live",
+      "increases",
+      "neutral"
+    ],
+    "answers": [
+      "decreases",
+      "live"
+    ],
+    "explanation": "Brighter light lowers LDR resistance; fuses disconnect the high-voltage live wire."
+  },
+  {
+    "id": "igcse-phys-q-4-2-4",
+    "subtopicId": "igcse-phys-4-2",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "Why does a double-insulated appliance with a plastic casing NOT need an earth wire?",
+    "options": [
+      "It uses D.C. only",
+      "Its outer plastic casing is an insulator and cannot become live",
+      "It has zero resistance",
+      "It has no live wire"
+    ],
+    "correctIndex": 1,
+    "explanation": "No exposed metal parts can become live, preventing electric shock on contact."
+  },
+  {
+    "id": "igcse-phys-q-4-2-5",
+    "subtopicId": "igcse-phys-4-2",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "A 10 Ω resistor and a 30 Ω resistor are in series across a 12 V battery. What is the p.d. across the 30 Ω resistor?",
+    "options": [
+      "3 V",
+      "6 V",
+      "9 V",
+      "12 V"
+    ],
+    "correctIndex": 2,
+    "explanation": "V = 12 × (30 / (10 + 30)) = 12 × 3/4 = 9 V."
+  },
+  {
+    "id": "igcse-phys-q-4-3-1",
+    "subtopicId": "igcse-phys-4-3",
+    "type": "short-answer",
+    "marks": 2,
+    "prompt": "A transformer has 500 primary turns and 2,500 secondary turns. If the primary input is 12 V a.c., calculate the secondary output voltage.",
+    "explanation": "V_s / 12 = 2500 / 500 → V_s = 60 V.",
+    "rubric": {
+      "maxMarks": 2,
+      "modelAnswer": "V_s = 12 × (2500 / 500) = 12 × 5 = 60 V.",
+      "markPoints": [
+        {
+          "id": "mp1",
+          "requiredKeywordGroups": [
+            [
+              "2500",
+              "500",
+              "5"
+            ]
+          ],
+          "markDescription": "Turns ratio 5"
+        },
+        {
+          "id": "mp2",
+          "numericMatch": {
+            "value": 60,
+            "tolerance": 0.1
+          },
+          "markDescription": "60 V"
+        }
+      ]
+    }
+  },
+  {
+    "id": "igcse-phys-q-4-3-2",
+    "subtopicId": "igcse-phys-4-3",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "Why is electrical power transmitted across national grid cables at very high voltage?",
+    "options": [
+      "To increase current in the cables",
+      "To reduce current and therefore cut I²R thermal energy losses",
+      "To make transformers work on D.C.",
+      "To increase cable resistance"
+    ],
+    "correctIndex": 1,
+    "explanation": "High voltage means low current for the same power, drastically slashing P = I²R heating."
+  },
+  {
+    "id": "igcse-phys-q-4-3-3",
+    "subtopicId": "igcse-phys-4-3",
+    "type": "fill-blank",
+    "marks": 2,
+    "prompt": "Complete the motor and transformer rules:",
+    "segments": [
+      "A DC motor uses a ",
+      " commutator to reverse coil current every half-turn, and a transformer core is made of ",
+      " iron."
+    ],
+    "wordBank": [
+      "split-ring",
+      "soft",
+      "slip-ring",
+      "hard"
+    ],
+    "answers": [
+      "split-ring",
+      "soft"
+    ],
+    "explanation": "Split-ring commutator keeps DC rotation one-way; soft iron magnetises/demagnetises easily."
+  },
+  {
+    "id": "igcse-phys-q-4-3-4",
+    "subtopicId": "igcse-phys-4-3",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "In Fleming’s Left-Hand Rule, what does the THUMB represent?",
+    "options": [
+      "Magnetic field direction",
+      "Conventional current direction",
+      "Force / motion direction",
+      "Induced voltage"
+    ],
+    "correctIndex": 2,
+    "explanation": "Thumb = Motion/Force, First finger = Field, Second finger = Current."
+  },
+  {
+    "id": "igcse-phys-q-4-3-5",
+    "subtopicId": "igcse-phys-4-3",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "Why will a transformer NOT output a steady voltage if connected to a D.C. battery?",
+    "options": [
+      "Iron blocks D.C.",
+      "A steady D.C. produces a constant magnetic field with no changing flux to induce EMF",
+      "Secondary coils only conduct A.C.",
+      "D.C. melts the insulation"
+    ],
+    "correctIndex": 1,
+    "explanation": "Electromagnetic induction requires a CHANGING magnetic field."
+  },
+  {
+    "id": "igcse-phys-q-5-1-1",
+    "subtopicId": "igcse-phys-5-1",
+    "type": "diagram-label",
+    "marks": 2,
+    "prompt": "Identify the atomic components in the nuclear model:",
+    "diagram": "atomic-structure",
+    "labels": [
+      {
+        "marker": "Central dense core",
+        "options": [
+          "Nucleus (protons + neutrons)",
+          "Electron shell",
+          "Alpha beam"
+        ],
+        "answer": "Nucleus (protons + neutrons)"
+      },
+      {
+        "marker": "Orbiting negatively charged particles",
+        "options": [
+          "Electrons",
+          "Neutrons",
+          "Protons"
+        ],
+        "answer": "Electrons"
+      }
+    ],
+    "explanation": "Protons and neutrons form the dense central nucleus; electrons orbit around it."
+  },
+  {
+    "id": "igcse-phys-q-5-1-2",
+    "subtopicId": "igcse-phys-5-1",
+    "type": "short-answer",
+    "marks": 2,
+    "prompt": "How many protons and neutrons are in a nucleus of uranium-235 (²³⁵₉₂U)?",
+    "explanation": "Z = 92 protons; neutrons = A − Z = 235 − 92 = 143.",
+    "rubric": {
+      "maxMarks": 2,
+      "modelAnswer": "92 protons and 235 − 92 = 143 neutrons.",
+      "markPoints": [
+        {
+          "id": "mp1",
+          "numericMatch": {
+            "value": 92,
+            "tolerance": 0.01
+          },
+          "markDescription": "92 protons"
+        },
+        {
+          "id": "mp2",
+          "numericMatch": {
+            "value": 143,
+            "tolerance": 0.01
+          },
+          "markDescription": "143 neutrons"
+        }
+      ]
+    }
+  },
+  {
+    "id": "igcse-phys-q-5-1-3",
+    "subtopicId": "igcse-phys-5-1",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "In Rutherford’s gold-foil experiment, why did the vast majority of alpha particles pass straight through?",
+    "options": [
+      "Gold has no electrons",
+      "Atoms are mostly empty space",
+      "Alpha particles are neutral",
+      "Gold nuclei are negatively charged"
+    ],
+    "correctIndex": 1,
+    "explanation": "Most alpha particles never encountered the tiny central nucleus."
+  },
+  {
+    "id": "igcse-phys-q-5-1-4",
+    "subtopicId": "igcse-phys-5-1",
+    "type": "fill-blank",
+    "marks": 2,
+    "prompt": "Complete the fission vs fusion comparison:",
+    "segments": [
+      "Nuclear ",
+      " splits a heavy nucleus like U-235, whereas nuclear ",
+      " joins light hydrogen nuclei inside stars."
+    ],
+    "wordBank": [
+      "fission",
+      "fusion",
+      "ionisation",
+      "conduction"
+    ],
+    "answers": [
+      "fission",
+      "fusion"
+    ],
+    "explanation": "Fission splits heavy nuclei; fusion joins light nuclei."
+  },
+  {
+    "id": "igcse-phys-q-5-1-5",
+    "subtopicId": "igcse-phys-5-1",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "What is the definition of ISOTOPES?",
+    "options": [
+      "Same neutrons, different protons",
+      "Same protons, different neutrons",
+      "Same electrons, different charge",
+      "Same mass number, different elements"
+    ],
+    "correctIndex": 1,
+    "explanation": "Isotopes are atoms of the same element (same Z) with different neutron counts (different A)."
+  },
+  {
+    "id": "igcse-phys-q-5-2-1",
+    "subtopicId": "igcse-phys-5-2",
+    "type": "short-answer",
+    "marks": 2,
+    "prompt": "A radioactive isotope has a half-life of 4 hours and an initial corrected activity of 640 Bq. What is its activity after 12 hours?",
+    "explanation": "640 ÷ 2³ = 80 Bq.",
+    "rubric": {
+      "maxMarks": 2,
+      "modelAnswer": "12 ÷ 4 = 3 half-lives: 640 → 320 → 160 → 80 Bq.",
+      "markPoints": [
+        {
+          "id": "mp1",
+          "requiredKeywordGroups": [
+            [
+              "3",
+              "three",
+              "160",
+              "320"
+            ]
+          ],
+          "markDescription": "3 half-lives"
+        },
+        {
+          "id": "mp2",
+          "numericMatch": {
+            "value": 80,
+            "tolerance": 0.1
+          },
+          "markDescription": "80 Bq"
+        }
+      ]
+    }
+  },
+  {
+    "id": "igcse-phys-q-5-2-2",
+    "subtopicId": "igcse-phys-5-2",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "When a nucleus emits a beta-minus (β⁻) particle, what happens to its mass number A and proton number Z?",
+    "options": [
+      "A decreases by 4, Z decreases by 2",
+      "A stays the same, Z increases by 1",
+      "A stays the same, Z decreases by 1",
+      "Both stay the same"
+    ],
+    "correctIndex": 1,
+    "explanation": "A neutron turns into a proton + electron, so A is unchanged and Z increases by 1."
+  },
+  {
+    "id": "igcse-phys-q-5-2-3",
+    "subtopicId": "igcse-phys-5-2",
+    "type": "matching",
+    "marks": 2,
+    "prompt": "Match each radiation type to its absorber:",
+    "pairs": [
+      {
+        "left": "Alpha (α)",
+        "right": "Sheet of paper or ~5 cm air"
+      },
+      {
+        "left": "Beta (β⁻)",
+        "right": "Few mm of aluminium"
+      },
+      {
+        "left": "Gamma (γ)",
+        "right": "Thick lead or thick concrete"
+      },
+      {
+        "left": "Medical tracer",
+        "right": "Short half-life gamma emitter"
+      }
+    ],
+    "explanation": "Penetrating power rises from α → β → γ as ionising power falls."
+  },
+  {
+    "id": "igcse-phys-q-5-2-4",
+    "subtopicId": "igcse-phys-5-2",
+    "type": "fill-blank",
+    "marks": 2,
+    "prompt": "Complete the half-life lab procedure:",
+    "segments": [
+      "Before calculating half-life from GM-tube readings, always subtract ",
+      " radiation first; radioactive decay is random and ",
       "."
     ],
     "wordBank": [
-      "free electrons",
-      "less dense",
-      "infrared radiation",
-      "more dense",
-      "convection"
+      "background",
+      "spontaneous",
+      "thermal",
+      "predictable"
     ],
     "answers": [
-      "free electrons",
-      "less dense",
-      "infrared radiation"
+      "background",
+      "spontaneous"
     ],
-    "explanation": "Delocalised free electrons transfer energy in metals; heated fluids expand and become less dense to drive convection; only EM infrared radiation crosses a vacuum."
+    "explanation": "Always remove background count rate first; decay cannot be sped up by heat or chemistry."
   },
   {
-    "id": "igcse-phys-q7",
-    "subtopicId": "igcse-phys-3-1",
+    "id": "igcse-phys-q-5-2-5",
+    "subtopicId": "igcse-phys-5-2",
     "type": "mcq",
     "marks": 1,
-    "prompt": "Water waves move from deep water into shallow water. Which statement is TRUE?",
+    "prompt": "Which radiation is NOT deflected by an electric or magnetic field?",
     "options": [
-      "Frequency decreases and wavelength stays constant",
-      "Speed and wavelength both decrease while frequency stays constant",
-      "Speed increases and frequency increases",
-      "Wavelength increases while speed decreases"
-    ],
-    "correctIndex": 1,
-    "explanation": "Entering shallow water slows the wave and shortens its wavelength, while frequency set by the source never changes."
-  },
-  {
-    "id": "igcse-phys-q8",
-    "subtopicId": "igcse-phys-3-2",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "Which pair of conditions is required for Total Internal Reflection inside a glass optical fibre?",
-    "options": [
-      "Light goes from air to glass and i < c",
-      "Light goes from glass to air and i > c",
-      "Light goes from glass to air and i < c",
-      "Light goes from air to glass and i = 90°"
-    ],
-    "correctIndex": 1,
-    "explanation": "TIR requires light travelling from optically denser (glass) toward less dense (air) at an angle of incidence exceeding the critical angle (i > c)."
-  },
-  {
-    "id": "igcse-phys-q9",
-    "subtopicId": "igcse-phys-3-3",
-    "type": "short-answer",
-    "marks": 2,
-    "prompt": "A boat emits an ultrasound sonar pulse straight down and detects the echo 0.60 s later. Given speed of sound in water = 1,500 m/s, calculate the depth of the water.",
-    "rubric": {
-      "maxMarks": 2,
-      "modelAnswer": "2d = v × t = 1500 × 0.60 = 900 m, so depth d = 450 m.",
-      "markPoints": [
-        {
-          "id": "mp1",
-          "markDescription": "Recognise round-trip distance 900 m or divide by 2",
-          "requiredKeywordGroups": [
-            [
-              "900",
-              "2"
-            ]
-          ]
-        },
-        {
-          "id": "mp2",
-          "markDescription": "Correct depth 450 m",
-          "numericMatch": {
-            "value": 450,
-            "tolerance": 1
-          }
-        }
-      ]
-    },
-    "explanation": "Total path = 1500 × 0.60 = 900 m. Depth d = 900 ÷ 2 = 450 m."
-  },
-  {
-    "id": "igcse-phys-q10",
-    "subtopicId": "igcse-phys-4-2",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "Two resistors of 6 Ω and 3 Ω are connected in PARALLEL. What is their combined resistance?",
-    "options": [
-      "9 Ω",
-      "4.5 Ω",
-      "2 Ω",
-      "0.5 Ω"
+      "Alpha",
+      "Beta",
+      "Gamma",
+      "All are deflected"
     ],
     "correctIndex": 2,
-    "explanation": "1/R = 1/6 + 1/3 = 3/6 = 1/2, so R = 2 Ω (always smaller than the smallest branch resistor)."
+    "explanation": "Gamma rays are uncharged electromagnetic waves."
   },
   {
-    "id": "igcse-phys-q11",
-    "subtopicId": "igcse-phys-4-3",
+    "id": "igcse-phys-q-6-1-1",
+    "subtopicId": "igcse-phys-6-1",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "What is the primary cause of Earth’s seasons?",
+    "options": [
+      "Earth’s changing distance from the Sun",
+      "Earth’s 23.5° axial tilt as it orbits the Sun",
+      "The Moon’s gravity",
+      "Solar flares"
+    ],
+    "correctIndex": 1,
+    "explanation": "Axial tilt alters day length and angle of sunlight hitting each hemisphere."
+  },
+  {
+    "id": "igcse-phys-q-6-1-2",
+    "subtopicId": "igcse-phys-6-1",
     "type": "short-answer",
     "marks": 2,
-    "prompt": "A step-down transformer has 1,000 turns on its primary coil and 50 turns on its secondary coil. If primary voltage is 240 V AC, calculate the secondary output voltage.",
+    "prompt": "A satellite orbits at radius r = 7.0 × 10⁶ m with orbital period T = 5,800 s. Calculate its orbital speed to 2 significant figures.",
+    "explanation": "2 × π × 7.0 × 10⁶ ÷ 5800 ≈ 7,580 m/s.",
     "rubric": {
       "maxMarks": 2,
-      "modelAnswer": "Vs = Vp × (Ns ÷ Np) = 240 × (50 ÷ 1000) = 12 V.",
+      "modelAnswer": "v = 2πr / T = (2π × 7.0 × 10⁶) / 5800 = 7,580 m/s ≈ 7,600 m/s.",
       "markPoints": [
         {
           "id": "mp1",
-          "markDescription": "Use Vp/Vs = Np/Ns ratio",
           "requiredKeywordGroups": [
             [
-              "240",
-              "50",
-              "1000"
+              "2π",
+              "2pi",
+              "4.4",
+              "4398"
             ]
-          ]
+          ],
+          "markDescription": "Applies v = 2πr / T"
         },
         {
           "id": "mp2",
-          "markDescription": "Correct output voltage 12 V",
           "numericMatch": {
-            "value": 12,
-            "tolerance": 0.1
-          }
+            "value": 7583,
+            "tolerance": 120
+          },
+          "markDescription": "7580–7600 m/s"
         }
       ]
-    },
-    "explanation": "Vp/Vs = Np/Ns → 240/Vs = 1000/50 = 20 → Vs = 240 ÷ 20 = 12 V."
+    }
   },
   {
-    "id": "igcse-phys-q12",
-    "subtopicId": "igcse-phys-5-2",
+    "id": "igcse-phys-q-6-1-3",
+    "subtopicId": "igcse-phys-6-1",
+    "type": "fill-blank",
+    "marks": 2,
+    "prompt": "Complete the Solar System facts:",
+    "segments": [
+      "The four inner planets are small and ",
+      ", and a comet travels ",
+      " when it is closest to the Sun."
+    ],
+    "wordBank": [
+      "rocky",
+      "fastest",
+      "gaseous",
+      "slowest"
+    ],
+    "answers": [
+      "rocky",
+      "fastest"
+    ],
+    "explanation": "Inner planets condensed from rock/metal; comets speed up as GPE converts to KE near the Sun."
+  },
+  {
+    "id": "igcse-phys-q-6-1-4",
+    "subtopicId": "igcse-phys-6-1",
     "type": "mcq",
     "marks": 1,
-    "prompt": "A radioactive isotope has a half-life of 4 days. Its corrected activity starts at 800 Bq. What will its activity be after 12 days?",
+    "prompt": "As you move to planets further from the Sun, what happens to orbital speed and orbital period?",
     "options": [
-      "400 Bq",
-      "200 Bq",
-      "100 Bq",
-      "50 Bq"
+      "Speed increases, period decreases",
+      "Speed decreases, period increases",
+      "Both increase",
+      "Both decrease"
+    ],
+    "correctIndex": 1,
+    "explanation": "Weaker solar gravity gives slower orbital speeds over much larger circumferences."
+  },
+  {
+    "id": "igcse-phys-q-6-1-5",
+    "subtopicId": "igcse-phys-6-1",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "Which planet lies directly beyond the Asteroid Belt?",
+    "options": [
+      "Mars",
+      "Jupiter",
+      "Saturn",
+      "Uranus"
+    ],
+    "correctIndex": 1,
+    "explanation": "The Asteroid Belt sits between Mars and Jupiter."
+  },
+  {
+    "id": "igcse-phys-q-6-2-1",
+    "subtopicId": "igcse-phys-6-2",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "What quantity is measured by a LIGHT-YEAR?",
+    "options": [
+      "Time",
+      "Speed",
+      "Distance",
+      "Luminosity"
     ],
     "correctIndex": 2,
-    "explanation": "12 days = 3 half-lives. 800 → 400 (4 d) → 200 (8 d) → 100 Bq (12 d)."
+    "explanation": "A light-year is the DISTANCE light travels in a vacuum in one year (≈ 9.5 × 10¹⁵ m)."
   },
   {
-    "id": "igcse-phys-q13",
-    "subtopicId": "igcse-phys-6-2",
-    "type": "multi-select",
-    "marks": 2,
-    "selectCount": 2,
-    "prompt": "Select TWO pieces of observational evidence that support the Big Bang Theory.",
-    "options": [
-      "Red-shift of light from distant galaxies increasing with distance",
-      "The tilt of Earth’s axis at 23.5°",
-      "Cosmic Microwave Background Radiation (CMBR) arriving uniformly from all directions",
-      "Comets speeding up as they approach the Sun"
-    ],
-    "correctIndices": [
-      0,
-      2
-    ],
-    "explanation": "Galactic red-shift proves space is expanding, and uniform CMBR is relic radiation from the hot early Universe stretched by expansion."
-  },
-  {
-    "id": "igcse-phys-q-extra-113",
-    "subtopicId": "igcse-phys-1-1",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "In 1.1 (Physical Quantities, Speed & Motion Graphs), which of the following is the accurate definition of \"Scalar\"?",
-    "options": [
-      "A physical quantity that has magnitude only and no direction (e.g., speed, mass, energy).",
-      "The inverse ratio of Vector measured under zero-load conditions.",
-      "A constant quantity that remains unaffected by any change in Physical Quantities, Speed & Motion Graphs.",
-      "An experimental error caused by neglecting unit conversions in Measurement Techniques, Scalars & Vectors."
-    ],
-    "correctIndex": 0,
-    "explanation": "Scalar is defined as: A physical quantity that has magnitude only and no direction (e.g., speed, mass, energy)."
-  },
-  {
-    "id": "igcse-phys-q-extra-114",
-    "subtopicId": "igcse-phys-1-1",
-    "type": "short-answer",
-    "marks": 2,
-    "prompt": "State two key principles or relationships from \"Speed, Velocity & Uniform Acceleration\" (1.1 Physical Quantities, Speed & Motion Graphs).",
-    "rubric": {
-      "maxMarks": 2,
-      "modelAnswer": "1. Average speed = total distance travelled ÷ total time taken: v = s ÷ t (SI unit: m/s). Velocity is speed in a specified direction. 2. Acceleration is the rate of change of velocity: a = (v − u) ÷ t (SI unit: m/s²), where u is initial velocity and v is final velocity.",
-      "markPoints": [
-        {
-          "id": "mp1",
-          "markDescription": "Average speed = total distance travelled ÷ total time taken: v = s ÷ t (SI unit: m/s). Velocity is speed in a specified direction."
-        },
-        {
-          "id": "mp2",
-          "markDescription": "Acceleration is the rate of change of velocity: a = (v − u) ÷ t (SI unit: m/s²), where u is initial velocity and v is final velocity."
-        }
-      ]
-    },
-    "explanation": "From Speed, Velocity & Uniform Acceleration: Average speed = total distance travelled ÷ total time taken: v = s ÷ t (SI unit: m/s). Velocity is speed in a specified direction."
-  },
-  {
-    "id": "igcse-phys-q-extra-115",
-    "subtopicId": "igcse-phys-1-1",
-    "type": "multi-select",
-    "marks": 2,
-    "selectCount": 2,
-    "prompt": "Select the TWO correct statements regarding 1.1 Physical Quantities, Speed & Motion Graphs.",
-    "options": [
-      "Distinguish between scalar and vector quantities and find the resultant of two perpendicular vectors.",
-      "In Physical Quantities, Speed & Motion Graphs, standard unit conversions are never required before applying formulas.",
-      "Calculate average speed (v = s/t) and acceleration (a = (v − u)/t) with correct SI units.",
-      "Scalar and Vector always have identical numerical values and units."
-    ],
-    "correctIndices": [
-      0,
-      2
-    ],
-    "explanation": "Both \"Distinguish between scalar and vector quantities and find the resultant of two perpendicular vectors.\" and \"Calculate average speed (v = s/t) and acceleration (a = (v − u)/t) with correct SI units.\" are core specification points."
-  },
-  {
-    "id": "igcse-phys-q-extra-116",
-    "subtopicId": "igcse-phys-1-1",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "Which exam advice applies directly to 1.1 (Physical Quantities, Speed & Motion Graphs)?",
-    "options": [
-      "When calculating average speed over a two-stage journey, NEVER average the two speeds directly — always divide TOTAL distance by TOTAL time.",
-      "Always omit units and rounding in Physical Quantities, Speed & Motion Graphs calculations.",
-      "Never show intermediate working steps in 1.1 questions.",
-      "Assume Scalar is always equal to 100 in every question."
-    ],
-    "correctIndex": 0,
-    "explanation": "When calculating average speed over a two-stage journey, NEVER average the two speeds directly — always divide TOTAL distance by TOTAL time."
-  },
-  {
-    "id": "igcse-phys-q-extra-118",
-    "subtopicId": "igcse-phys-1-2",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "In 1.2 (Mass, Weight, Density, Forces & Newton’s Laws), which of the following is the accurate definition of \"Density\"?",
-    "options": [
-      "Mass per unit volume of a substance: ρ = m ÷ V (kg/m³ or g/cm³).",
-      "The inverse ratio of Spring constant measured under zero-load conditions.",
-      "A constant quantity that remains unaffected by any change in Mass, Weight, Density, Forces & Newton’s Laws.",
-      "An experimental error caused by neglecting unit conversions in Mass, Weight & Density."
-    ],
-    "correctIndex": 0,
-    "explanation": "Density is defined as: Mass per unit volume of a substance: ρ = m ÷ V (kg/m³ or g/cm³)."
-  },
-  {
-    "id": "igcse-phys-q-extra-119",
-    "subtopicId": "igcse-phys-1-2",
-    "type": "short-answer",
-    "marks": 2,
-    "prompt": "State two key principles or relationships from \"Hooke’s Law & Spring Constant\" (1.2 Mass, Weight, Density, Forces & Newton’s Laws).",
-    "rubric": {
-      "maxMarks": 2,
-      "modelAnswer": "1. Hooke’s Law states that the extension x of a spring is directly proportional to the stretching load F, provided the limit of proportionality is not exceeded: F = k × x. 2. Spring constant k = F ÷ x (units: N/m or N/cm) represents the stiffness of the spring and equals the gradient of the straight-line region of a force–extension graph.",
-      "markPoints": [
-        {
-          "id": "mp1",
-          "markDescription": "Hooke’s Law states that the extension x of a spring is directly proportional to the stretching load F, provided the limit of proportionality is not exceeded: F = k × x."
-        },
-        {
-          "id": "mp2",
-          "markDescription": "Spring constant k = F ÷ x (units: N/m or N/cm) represents the stiffness of the spring and equals the gradient of the straight-line region of a force–extension graph."
-        }
-      ]
-    },
-    "explanation": "From Hooke’s Law & Spring Constant: Hooke’s Law states that the extension x of a spring is directly proportional to the stretching load F, provided the limit of proportionality is not exceeded: F = k × x."
-  },
-  {
-    "id": "igcse-phys-q-extra-120",
-    "subtopicId": "igcse-phys-1-2",
-    "type": "multi-select",
-    "marks": 2,
-    "selectCount": 2,
-    "prompt": "Select the TWO correct statements regarding 1.2 Mass, Weight, Density, Forces & Newton’s Laws.",
-    "options": [
-      "Calculate weight using W = mg and density using ρ = m/V, including displacement measurements.",
-      "In Mass, Weight, Density, Forces & Newton’s Laws, standard unit conversions are never required before applying formulas.",
-      "Apply Hooke’s Law (F = kx) and identify the limit of proportionality on a load–extension graph.",
-      "Density and Spring constant always have identical numerical values and units."
-    ],
-    "correctIndices": [
-      0,
-      2
-    ],
-    "explanation": "Both \"Calculate weight using W = mg and density using ρ = m/V, including displacement measurements.\" and \"Apply Hooke’s Law (F = kx) and identify the limit of proportionality on a load–extension graph.\" are core specification points."
-  },
-  {
-    "id": "igcse-phys-q-extra-121",
-    "subtopicId": "igcse-phys-1-2",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "Which exam advice applies directly to 1.2 (Mass, Weight, Density, Forces & Newton’s Laws)?",
-    "options": [
-      "Students often say \"weight is measured in kg\". Weight is a FORCE measured in newtons (N) using a newtonmeter; mass is measured in kilograms (kg).",
-      "Always omit units and rounding in Mass, Weight, Density, Forces & Newton’s Laws calculations.",
-      "Never show intermediate working steps in 1.2 questions.",
-      "Assume Density is always equal to 100 in every question."
-    ],
-    "correctIndex": 0,
-    "explanation": "Students often say \"weight is measured in kg\". Weight is a FORCE measured in newtons (N) using a newtonmeter; mass is measured in kilograms (kg)."
-  },
-  {
-    "id": "igcse-phys-q-extra-123",
-    "subtopicId": "igcse-phys-1-3",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "In 1.3 (Moments, Momentum, Impulse & Pressure), which of the following is the accurate definition of \"Moment\"?",
-    "options": [
-      "Turning effect of a force about a pivot: M = F × d (N m).",
-      "The inverse ratio of Momentum measured under zero-load conditions.",
-      "A constant quantity that remains unaffected by any change in Moments, Momentum, Impulse & Pressure.",
-      "An experimental error caused by neglecting unit conversions in Moments, Principle of Moments & Centre of Gravity."
-    ],
-    "correctIndex": 0,
-    "explanation": "Moment is defined as: Turning effect of a force about a pivot: M = F × d (N m)."
-  },
-  {
-    "id": "igcse-phys-q-extra-124",
-    "subtopicId": "igcse-phys-1-3",
-    "type": "short-answer",
-    "marks": 2,
-    "prompt": "State two key principles or relationships from \"Momentum, Conservation & Impulse\" (1.3 Moments, Momentum, Impulse & Pressure).",
-    "rubric": {
-      "maxMarks": 2,
-      "modelAnswer": "1. Momentum is a vector quantity defined as: p = m × v (units: kg m/s or N s). 2. Principle of conservation of momentum: In any closed system (no external forces), total momentum before a collision or explosion equals total momentum after: m₁u₁ + m₂u₂ = m₁v₁ + m₂v₂.",
-      "markPoints": [
-        {
-          "id": "mp1",
-          "markDescription": "Momentum is a vector quantity defined as: p = m × v (units: kg m/s or N s)."
-        },
-        {
-          "id": "mp2",
-          "markDescription": "Principle of conservation of momentum: In any closed system (no external forces), total momentum before a collision or explosion equals total momentum after: m₁u₁ + m₂u₂ = m₁v₁ + m₂v₂."
-        }
-      ]
-    },
-    "explanation": "From Momentum, Conservation & Impulse: Momentum is a vector quantity defined as: p = m × v (units: kg m/s or N s)."
-  },
-  {
-    "id": "igcse-phys-q-extra-125",
-    "subtopicId": "igcse-phys-1-3",
-    "type": "multi-select",
-    "marks": 2,
-    "selectCount": 2,
-    "prompt": "Select the TWO correct statements regarding 1.3 Moments, Momentum, Impulse & Pressure.",
-    "options": [
-      "Apply the principle of moments (clockwise = anticlockwise) to solve balanced beam problems.",
-      "In Moments, Momentum, Impulse & Pressure, standard unit conversions are never required before applying formulas.",
-      "Use p = mv, conservation of momentum, and F = Δp/Δt to explain crumple zones and solve collisions.",
-      "Moment and Momentum always have identical numerical values and units."
-    ],
-    "correctIndices": [
-      0,
-      2
-    ],
-    "explanation": "Both \"Apply the principle of moments (clockwise = anticlockwise) to solve balanced beam problems.\" and \"Use p = mv, conservation of momentum, and F = Δp/Δt to explain crumple zones and solve collisions.\" are core specification points."
-  },
-  {
-    "id": "igcse-phys-q-extra-126",
-    "subtopicId": "igcse-phys-1-3",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "Which exam advice applies directly to 1.3 (Moments, Momentum, Impulse & Pressure)?",
-    "options": [
-      "Momentum is a VECTOR — if two objects move toward each other, one velocity MUST be entered as negative!",
-      "Always omit units and rounding in Moments, Momentum, Impulse & Pressure calculations.",
-      "Never show intermediate working steps in 1.3 questions.",
-      "Assume Moment is always equal to 100 in every question."
-    ],
-    "correctIndex": 0,
-    "explanation": "Momentum is a VECTOR — if two objects move toward each other, one velocity MUST be entered as negative!"
-  },
-  {
-    "id": "igcse-phys-q-extra-128",
-    "subtopicId": "igcse-phys-1-4",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "In 1.4 (Energy Stores, Work Done, Power & Efficiency), which of the following is the accurate definition of \"Power\"?",
-    "options": [
-      "Rate of doing work or transferring energy: P = E ÷ t, measured in watts (W).",
-      "The inverse ratio of Efficiency measured under zero-load conditions.",
-      "A constant quantity that remains unaffected by any change in Energy Stores, Work Done, Power & Efficiency.",
-      "An experimental error caused by neglecting unit conversions in Energy Stores, Transfers & Mechanical Work."
-    ],
-    "correctIndex": 0,
-    "explanation": "Power is defined as: Rate of doing work or transferring energy: P = E ÷ t, measured in watts (W)."
-  },
-  {
-    "id": "igcse-phys-q-extra-129",
-    "subtopicId": "igcse-phys-1-4",
-    "type": "short-answer",
-    "marks": 2,
-    "prompt": "State two key principles or relationships from \"Power & Efficiency\" (1.4 Energy Stores, Work Done, Power & Efficiency).",
-    "rubric": {
-      "maxMarks": 2,
-      "modelAnswer": "1. Power is the rate of work done or energy transferred: P = W ÷ t = ΔE ÷ t (SI unit: watt, W, where 1 W = 1 J/s). 2. Percentage efficiency = (Useful energy output ÷ Total energy input) × 100%, or equivalently (Useful power output ÷ Total power input) × 100%.",
-      "markPoints": [
-        {
-          "id": "mp1",
-          "markDescription": "Power is the rate of work done or energy transferred: P = W ÷ t = ΔE ÷ t (SI unit: watt, W, where 1 W = 1 J/s)."
-        },
-        {
-          "id": "mp2",
-          "markDescription": "Percentage efficiency = (Useful energy output ÷ Total energy input) × 100%, or equivalently (Useful power output ÷ Total power input) × 100%."
-        }
-      ]
-    },
-    "explanation": "From Power & Efficiency: Power is the rate of work done or energy transferred: P = W ÷ t = ΔE ÷ t (SI unit: watt, W, where 1 W = 1 J/s)."
-  },
-  {
-    "id": "igcse-phys-q-extra-130",
-    "subtopicId": "igcse-phys-1-4",
-    "type": "multi-select",
-    "marks": 2,
-    "selectCount": 2,
-    "prompt": "Select the TWO correct statements regarding 1.4 Energy Stores, Work Done, Power & Efficiency.",
-    "options": [
-      "Apply W = Fd, Ek = ½mv², and ΔEp = mgΔh, including equating Ep lost to Ek gained.",
-      "In Energy Stores, Work Done, Power & Efficiency, standard unit conversions are never required before applying formulas.",
-      "Calculate power (P = E/t) and percentage efficiency using Sankey diagrams.",
-      "Power and Efficiency always have identical numerical values and units."
-    ],
-    "correctIndices": [
-      0,
-      2
-    ],
-    "explanation": "Both \"Apply W = Fd, Ek = ½mv², and ΔEp = mgΔh, including equating Ep lost to Ek gained.\" and \"Calculate power (P = E/t) and percentage efficiency using Sankey diagrams.\" are core specification points."
-  },
-  {
-    "id": "igcse-phys-q-extra-131",
-    "subtopicId": "igcse-phys-1-4",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "Which exam advice applies directly to 1.4 (Energy Stores, Work Done, Power & Efficiency)?",
-    "options": [
-      "When calculating power in watts, ALWAYS convert time from minutes to seconds (×60) and energy from kJ to J (×1,000).",
-      "Always omit units and rounding in Energy Stores, Work Done, Power & Efficiency calculations.",
-      "Never show intermediate working steps in 1.4 questions.",
-      "Assume Power is always equal to 100 in every question."
-    ],
-    "correctIndex": 0,
-    "explanation": "When calculating power in watts, ALWAYS convert time from minutes to seconds (×60) and energy from kJ to J (×1,000)."
-  },
-  {
-    "id": "igcse-phys-q-extra-133",
-    "subtopicId": "igcse-phys-2-1",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "In 2.1 (Kinetic Particle Model of Matter & Gas Laws), which of the following is the accurate definition of \"Absolute zero\"?",
-    "options": [
-      "0 K (−273 °C), the temperature at which particles possess minimum possible kinetic energy.",
-      "The inverse ratio of Brownian motion measured under zero-load conditions.",
-      "A constant quantity that remains unaffected by any change in Kinetic Particle Model of Matter & Gas Laws.",
-      "An experimental error caused by neglecting unit conversions in States of Matter & Brownian Motion."
-    ],
-    "correctIndex": 0,
-    "explanation": "Absolute zero is defined as: 0 K (−273 °C), the temperature at which particles possess minimum possible kinetic energy."
-  },
-  {
-    "id": "igcse-phys-q-extra-134",
-    "subtopicId": "igcse-phys-2-1",
-    "type": "short-answer",
-    "marks": 2,
-    "prompt": "State two key principles or relationships from \"Temperature, Absolute Zero & The Kelvin Scale\" (2.1 Kinetic Particle Model of Matter & Gas Laws).",
-    "rubric": {
-      "maxMarks": 2,
-      "modelAnswer": "1. Temperature is a measure of the average kinetic energy of the particles in a substance. 2. Absolute zero (−273 °C or 0 K) is the lowest theoretically possible temperature, where particles have minimum (zero) kinetic energy and exert zero gas pressure.",
-      "markPoints": [
-        {
-          "id": "mp1",
-          "markDescription": "Temperature is a measure of the average kinetic energy of the particles in a substance."
-        },
-        {
-          "id": "mp2",
-          "markDescription": "Absolute zero (−273 °C or 0 K) is the lowest theoretically possible temperature, where particles have minimum (zero) kinetic energy and exert zero gas pressure."
-        }
-      ]
-    },
-    "explanation": "From Temperature, Absolute Zero & The Kelvin Scale: Temperature is a measure of the average kinetic energy of the particles in a substance."
-  },
-  {
-    "id": "igcse-phys-q-extra-135",
-    "subtopicId": "igcse-phys-2-1",
-    "type": "multi-select",
-    "marks": 2,
-    "selectCount": 2,
-    "prompt": "Select the TWO correct statements regarding 2.1 Kinetic Particle Model of Matter & Gas Laws.",
-    "options": [
-      "Describe particle arrangement, motion, and forces in solids, liquids, and gases.",
-      "In Kinetic Particle Model of Matter & Gas Laws, standard unit conversions are never required before applying formulas.",
-      "Explain Brownian motion as evidence for the kinetic particle model.",
-      "Absolute zero and Brownian motion always have identical numerical values and units."
-    ],
-    "correctIndices": [
-      0,
-      2
-    ],
-    "explanation": "Both \"Describe particle arrangement, motion, and forces in solids, liquids, and gases.\" and \"Explain Brownian motion as evidence for the kinetic particle model.\" are core specification points."
-  },
-  {
-    "id": "igcse-phys-q-extra-136",
-    "subtopicId": "igcse-phys-2-1",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "Which exam advice applies directly to 2.1 (Kinetic Particle Model of Matter & Gas Laws)?",
-    "options": [
-      "In gas-law calculations linking pressure or volume to temperature, NEVER use Celsius — always convert to Kelvin (+273) first!",
-      "Always omit units and rounding in Kinetic Particle Model of Matter & Gas Laws calculations.",
-      "Never show intermediate working steps in 2.1 questions.",
-      "Assume Absolute zero is always equal to 100 in every question."
-    ],
-    "correctIndex": 0,
-    "explanation": "In gas-law calculations linking pressure or volume to temperature, NEVER use Celsius — always convert to Kelvin (+273) first!"
-  },
-  {
-    "id": "igcse-phys-q-extra-138",
-    "subtopicId": "igcse-phys-2-2",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "In 2.2 (Specific Heat Capacity, Latent Heat & Thermal Transfer), which of the following is the accurate definition of \"Internal energy\"?",
-    "options": [
-      "Total random kinetic and potential energy of all particles inside a system.",
-      "The inverse ratio of Specific heat capacity measured under zero-load conditions.",
-      "A constant quantity that remains unaffected by any change in Specific Heat Capacity, Latent Heat & Thermal Transfer.",
-      "An experimental error caused by neglecting unit conversions in Specific Heat Capacity & Latent Heat."
-    ],
-    "correctIndex": 0,
-    "explanation": "Internal energy is defined as: Total random kinetic and potential energy of all particles inside a system."
-  },
-  {
-    "id": "igcse-phys-q-extra-139",
-    "subtopicId": "igcse-phys-2-2",
-    "type": "short-answer",
-    "marks": 2,
-    "prompt": "State two key principles or relationships from \"Thermal Expansion & Real-World Applications\" (2.2 Specific Heat Capacity, Latent Heat & Thermal Transfer).",
-    "rubric": {
-      "maxMarks": 2,
-      "modelAnswer": "1. When heated, particles vibrate or move faster and push further apart, causing expansion: gases expand the most, liquids moderately, and solids the least. 2. Practical consequences: Railway tracks and bridges have expansion joints to prevent buckling in summer; overhead power cables are hung slack so they do not snap in winter.",
-      "markPoints": [
-        {
-          "id": "mp1",
-          "markDescription": "When heated, particles vibrate or move faster and push further apart, causing expansion: gases expand the most, liquids moderately, and solids the least."
-        },
-        {
-          "id": "mp2",
-          "markDescription": "Practical consequences: Railway tracks and bridges have expansion joints to prevent buckling in summer; overhead power cables are hung slack so they do not snap in winter."
-        }
-      ]
-    },
-    "explanation": "From Thermal Expansion & Real-World Applications: When heated, particles vibrate or move faster and push further apart, causing expansion: gases expand the most, liquids moderately, and solids the least."
-  },
-  {
-    "id": "igcse-phys-q-extra-140",
-    "subtopicId": "igcse-phys-2-2",
-    "type": "multi-select",
-    "marks": 2,
-    "selectCount": 2,
-    "prompt": "Select the TWO correct statements regarding 2.2 Specific Heat Capacity, Latent Heat & Thermal Transfer.",
-    "options": [
-      "Use ΔE = mcΔT and explain why temperature remains constant during melting and boiling.",
-      "In Specific Heat Capacity, Latent Heat & Thermal Transfer, standard unit conversions are never required before applying formulas.",
-      "Explain why evaporation cools a liquid and list factors increasing its rate (temperature, surface area, draught).",
-      "Internal energy and Specific heat capacity always have identical numerical values and units."
-    ],
-    "correctIndices": [
-      0,
-      2
-    ],
-    "explanation": "Both \"Use ΔE = mcΔT and explain why temperature remains constant during melting and boiling.\" and \"Explain why evaporation cools a liquid and list factors increasing its rate (temperature, surface area, draught).\" are core specification points."
-  },
-  {
-    "id": "igcse-phys-q-extra-141",
-    "subtopicId": "igcse-phys-2-2",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "Which exam advice applies directly to 2.2 (Specific Heat Capacity, Latent Heat & Thermal Transfer)?",
-    "options": [
-      "On a flat plateau of a heating curve, NEVER say \"no energy is being absorbed\" — energy IS absorbed to break intermolecular bonds (potential energy rises while kinetic energy/temperature stays flat).",
-      "Always omit units and rounding in Specific Heat Capacity, Latent Heat & Thermal Transfer calculations.",
-      "Never show intermediate working steps in 2.2 questions.",
-      "Assume Internal energy is always equal to 100 in every question."
-    ],
-    "correctIndex": 0,
-    "explanation": "On a flat plateau of a heating curve, NEVER say \"no energy is being absorbed\" — energy IS absorbed to break intermolecular bonds (potential energy rises while kinetic energy/temperature stays flat)."
-  },
-  {
-    "id": "igcse-phys-q-extra-143",
-    "subtopicId": "igcse-phys-3-1",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "In 3.1 (General Wave Properties, Reflection, Refraction & Diffraction), which of the following is the accurate definition of \"Transverse wave\"?",
-    "options": [
-      "Wave whose oscillations are perpendicular to the direction of energy transfer.",
-      "The inverse ratio of Longitudinal wave measured under zero-load conditions.",
-      "A constant quantity that remains unaffected by any change in General Wave Properties, Reflection, Refraction & Diffraction.",
-      "An experimental error caused by neglecting unit conversions in Transverse vs Longitudinal Waves & Wave Parameters."
-    ],
-    "correctIndex": 0,
-    "explanation": "Transverse wave is defined as: Wave whose oscillations are perpendicular to the direction of energy transfer."
-  },
-  {
-    "id": "igcse-phys-q-extra-144",
-    "subtopicId": "igcse-phys-3-1",
-    "type": "short-answer",
-    "marks": 2,
-    "prompt": "State two key principles or relationships from \"The Wave Equation (v = fλ)\" (3.1 General Wave Properties, Reflection, Refraction & Diffraction).",
-    "rubric": {
-      "maxMarks": 2,
-      "modelAnswer": "1. Wave speed (m/s) = frequency (Hz) × wavelength (m): v = f × λ. 2. Also link period and frequency: T = 1 ÷ f, so a wave of frequency 50 Hz has a time period T = 0.02 s.",
-      "markPoints": [
-        {
-          "id": "mp1",
-          "markDescription": "Wave speed (m/s) = frequency (Hz) × wavelength (m): v = f × λ."
-        },
-        {
-          "id": "mp2",
-          "markDescription": "Also link period and frequency: T = 1 ÷ f, so a wave of frequency 50 Hz has a time period T = 0.02 s."
-        }
-      ]
-    },
-    "explanation": "From The Wave Equation (v = fλ): Wave speed (m/s) = frequency (Hz) × wavelength (m): v = f × λ."
-  },
-  {
-    "id": "igcse-phys-q-extra-145",
-    "subtopicId": "igcse-phys-3-1",
-    "type": "multi-select",
-    "marks": 2,
-    "selectCount": 2,
-    "prompt": "Select the TWO correct statements regarding 3.1 General Wave Properties, Reflection, Refraction & Diffraction.",
-    "options": [
-      "Compare transverse and longitudinal waves with examples of each.",
-      "In General Wave Properties, Reflection, Refraction & Diffraction, standard unit conversions are never required before applying formulas.",
-      "Calculate wave speed, frequency, wavelength, and period using v = fλ and T = 1/f.",
-      "Transverse wave and Longitudinal wave always have identical numerical values and units."
-    ],
-    "correctIndices": [
-      0,
-      2
-    ],
-    "explanation": "Both \"Compare transverse and longitudinal waves with examples of each.\" and \"Calculate wave speed, frequency, wavelength, and period using v = fλ and T = 1/f.\" are core specification points."
-  },
-  {
-    "id": "igcse-phys-q-extra-146",
-    "subtopicId": "igcse-phys-3-1",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "Which exam advice applies directly to 3.1 (General Wave Properties, Reflection, Refraction & Diffraction)?",
-    "options": [
-      "Remember to convert kHz (×10³), MHz (×10⁶), and cm (÷100) into Hz and metres before calculating v = fλ!",
-      "Always omit units and rounding in General Wave Properties, Reflection, Refraction & Diffraction calculations.",
-      "Never show intermediate working steps in 3.1 questions.",
-      "Assume Transverse wave is always equal to 100 in every question."
-    ],
-    "correctIndex": 0,
-    "explanation": "Remember to convert kHz (×10³), MHz (×10⁶), and cm (÷100) into Hz and metres before calculating v = fλ!"
-  },
-  {
-    "id": "igcse-phys-q-extra-148",
-    "subtopicId": "igcse-phys-3-2",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "In 3.2 (Light, Lenses, Total Internal Reflection & EM Spectrum), which of the following is the accurate definition of \"Snell’s Law\"?",
-    "options": [
-      "n = sin i ÷ sin r, relating angles of incidence and refraction to refractive index.",
-      "The inverse ratio of Total internal reflection measured under zero-load conditions.",
-      "A constant quantity that remains unaffected by any change in Light, Lenses, Total Internal Reflection & EM Spectrum.",
-      "An experimental error caused by neglecting unit conversions in Reflection, Snell’s Law & Total Internal Reflection."
-    ],
-    "correctIndex": 0,
-    "explanation": "Snell’s Law is defined as: n = sin i ÷ sin r, relating angles of incidence and refraction to refractive index."
-  },
-  {
-    "id": "igcse-phys-q-extra-149",
-    "subtopicId": "igcse-phys-3-2",
-    "type": "short-answer",
-    "marks": 2,
-    "prompt": "State two key principles or relationships from \"Thin Converging & Diverging Lenses\" (3.2 Light, Lenses, Total Internal Reflection & EM Spectrum).",
-    "rubric": {
-      "maxMarks": 2,
-      "modelAnswer": "1. A thin converging (convex) lens bends parallel rays to meet at the principal focus F; focal length f is the distance from the optical centre to F. 2. Ray diagram rules for a converging lens: (1) Ray parallel to principal axis refracts through F; (2) Ray through optical centre continues straight undeviated.",
-      "markPoints": [
-        {
-          "id": "mp1",
-          "markDescription": "A thin converging (convex) lens bends parallel rays to meet at the principal focus F; focal length f is the distance from the optical centre to F."
-        },
-        {
-          "id": "mp2",
-          "markDescription": "Ray diagram rules for a converging lens: (1) Ray parallel to principal axis refracts through F; (2) Ray through optical centre continues straight undeviated."
-        }
-      ]
-    },
-    "explanation": "From Thin Converging & Diverging Lenses: A thin converging (convex) lens bends parallel rays to meet at the principal focus F; focal length f is the distance from the optical centre to F."
-  },
-  {
-    "id": "igcse-phys-q-extra-150",
-    "subtopicId": "igcse-phys-3-2",
-    "type": "multi-select",
-    "marks": 2,
-    "selectCount": 2,
-    "prompt": "Select the TWO correct statements regarding 3.2 Light, Lenses, Total Internal Reflection & EM Spectrum.",
-    "options": [
-      "Apply n = sin i / sin r and sin c = 1 / n, and state the two conditions required for Total Internal Reflection.",
-      "In Light, Lenses, Total Internal Reflection & EM Spectrum, standard unit conversions are never required before applying formulas.",
-      "Construct converging lens ray diagrams and distinguish real vs virtual images (including magnifying glass and eye correction).",
-      "Snell’s Law and Total internal reflection always have identical numerical values and units."
-    ],
-    "correctIndices": [
-      0,
-      2
-    ],
-    "explanation": "Both \"Apply n = sin i / sin r and sin c = 1 / n, and state the two conditions required for Total Internal Reflection.\" and \"Construct converging lens ray diagrams and distinguish real vs virtual images (including magnifying glass and eye correction).\" are core specification points."
-  },
-  {
-    "id": "igcse-phys-q-extra-151",
-    "subtopicId": "igcse-phys-3-2",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "Which exam advice applies directly to 3.2 (Light, Lenses, Total Internal Reflection & EM Spectrum)?",
-    "options": [
-      "Angles of incidence i and refraction r are ALWAYS measured from the NORMAL (the 90° dotted line), NEVER from the glass surface!",
-      "Always omit units and rounding in Light, Lenses, Total Internal Reflection & EM Spectrum calculations.",
-      "Never show intermediate working steps in 3.2 questions.",
-      "Assume Snell’s Law is always equal to 100 in every question."
-    ],
-    "correctIndex": 0,
-    "explanation": "Angles of incidence i and refraction r are ALWAYS measured from the NORMAL (the 90° dotted line), NEVER from the glass surface!"
-  },
-  {
-    "id": "igcse-phys-q-extra-153",
-    "subtopicId": "igcse-phys-3-3",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "In 3.3 (Sound Waves, Echoes & Ultrasound), which of the following is the accurate definition of \"Audible range\"?",
-    "options": [
-      "Range of sound frequencies detectable by a healthy human ear: 20 Hz to 20 kHz.",
-      "The inverse ratio of Ultrasound measured under zero-load conditions.",
-      "A constant quantity that remains unaffected by any change in Sound Waves, Echoes & Ultrasound.",
-      "An experimental error caused by neglecting unit conversions in Production, Transmission & Speed of Sound."
-    ],
-    "correctIndex": 0,
-    "explanation": "Audible range is defined as: Range of sound frequencies detectable by a healthy human ear: 20 Hz to 20 kHz."
-  },
-  {
-    "id": "igcse-phys-q-extra-154",
-    "subtopicId": "igcse-phys-3-3",
-    "type": "short-answer",
-    "marks": 2,
-    "prompt": "State two key principles or relationships from \"Pitch, Loudness & Ultrasound Applications\" (3.3 Sound Waves, Echoes & Ultrasound).",
-    "rubric": {
-      "maxMarks": 2,
-      "modelAnswer": "1. Human audible hearing range is approximately 20 Hz to 20,000 Hz (20 kHz). 2. Higher FREQUENCY produces a higher PITCH (closer waves on an oscilloscope trace). Larger AMPLITUDE produces a LOUDER sound (taller peaks on an oscilloscope trace).",
-      "markPoints": [
-        {
-          "id": "mp1",
-          "markDescription": "Human audible hearing range is approximately 20 Hz to 20,000 Hz (20 kHz)."
-        },
-        {
-          "id": "mp2",
-          "markDescription": "Higher FREQUENCY produces a higher PITCH (closer waves on an oscilloscope trace). Larger AMPLITUDE produces a LOUDER sound (taller peaks on an oscilloscope trace)."
-        }
-      ]
-    },
-    "explanation": "From Pitch, Loudness & Ultrasound Applications: Human audible hearing range is approximately 20 Hz to 20,000 Hz (20 kHz)."
-  },
-  {
-    "id": "igcse-phys-q-extra-155",
-    "subtopicId": "igcse-phys-3-3",
-    "type": "multi-select",
-    "marks": 2,
-    "selectCount": 2,
-    "prompt": "Select the TWO correct statements regarding 3.3 Sound Waves, Echoes & Ultrasound.",
-    "options": [
-      "Explain why sound cannot travel in a vacuum and why it travels fastest in solids.",
-      "In Sound Waves, Echoes & Ultrasound, standard unit conversions are never required before applying formulas.",
-      "Calculate echo and sonar distances accurately using 2d = v × t.",
-      "Audible range and Ultrasound always have identical numerical values and units."
-    ],
-    "correctIndices": [
-      0,
-      2
-    ],
-    "explanation": "Both \"Explain why sound cannot travel in a vacuum and why it travels fastest in solids.\" and \"Calculate echo and sonar distances accurately using 2d = v × t.\" are core specification points."
-  },
-  {
-    "id": "igcse-phys-q-extra-156",
-    "subtopicId": "igcse-phys-3-3",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "Which exam advice applies directly to 3.3 (Sound Waves, Echoes & Ultrasound)?",
-    "options": [
-      "In echo and sonar calculations, forgetting to DIVIDE BY 2 (or multiply distance by 2) is the #1 error — remember the pulse goes out AND bounces back!",
-      "Always omit units and rounding in Sound Waves, Echoes & Ultrasound calculations.",
-      "Never show intermediate working steps in 3.3 questions.",
-      "Assume Audible range is always equal to 100 in every question."
-    ],
-    "correctIndex": 0,
-    "explanation": "In echo and sonar calculations, forgetting to DIVIDE BY 2 (or multiply distance by 2) is the #1 error — remember the pulse goes out AND bounces back!"
-  },
-  {
-    "id": "igcse-phys-q-extra-158",
-    "subtopicId": "igcse-phys-4-1",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "In 4.1 (Electric Charge, Current, EMF, Potential Difference & Resistance), which of the following is the accurate definition of \"Electric current\"?",
-    "options": [
-      "Rate of flow of charge: I = Q ÷ t, measured in amperes (A).",
-      "The inverse ratio of Potential difference measured under zero-load conditions.",
-      "A constant quantity that remains unaffected by any change in Electric Charge, Current, EMF, Potential Difference & Resistance.",
-      "An experimental error caused by neglecting unit conversions in Electrostatics, Current & Charge (Q = It)."
-    ],
-    "correctIndex": 0,
-    "explanation": "Electric current is defined as: Rate of flow of charge: I = Q ÷ t, measured in amperes (A)."
-  },
-  {
-    "id": "igcse-phys-q-extra-159",
-    "subtopicId": "igcse-phys-4-1",
-    "type": "short-answer",
-    "marks": 2,
-    "prompt": "State two key principles or relationships from \"EMF, Potential Difference & Ohm’s Law (V = IR)\" (4.1 Electric Charge, Current, EMF, Potential Difference & Resistance).",
-    "rubric": {
-      "maxMarks": 2,
-      "modelAnswer": "1. Electromotive force (e.m.f., E) is the electrical work done by a source in moving unit charge around a complete circuit: E = W ÷ Q (unit: volt, V, where 1 V = 1 J/C). 2. Potential difference (p.d., V) is the work done by unit charge passing through a component: V = W ÷ Q. Voltmeters are connected in PARALLEL; ammeters in SERIES.",
-      "markPoints": [
-        {
-          "id": "mp1",
-          "markDescription": "Electromotive force (e.m.f., E) is the electrical work done by a source in moving unit charge around a complete circuit: E = W ÷ Q (unit: volt, V, where 1 V = 1 J/C)."
-        },
-        {
-          "id": "mp2",
-          "markDescription": "Potential difference (p.d., V) is the work done by unit charge passing through a component: V = W ÷ Q. Voltmeters are connected in PARALLEL; ammeters in SERIES."
-        }
-      ]
-    },
-    "explanation": "From EMF, Potential Difference & Ohm’s Law (V = IR): Electromotive force (e.m.f., E) is the electrical work done by a source in moving unit charge around a complete circuit: E = W ÷ Q (unit: volt, V, where 1 V = 1 J/C)."
-  },
-  {
-    "id": "igcse-phys-q-extra-160",
-    "subtopicId": "igcse-phys-4-1",
-    "type": "multi-select",
-    "marks": 2,
-    "selectCount": 2,
-    "prompt": "Select the TWO correct statements regarding 4.1 Electric Charge, Current, EMF, Potential Difference & Resistance.",
-    "options": [
-      "Apply Q = It, V = W/Q, V = IR, P = IV, and E = IVt with correct SI and kWh units.",
-      "In Electric Charge, Current, EMF, Potential Difference & Resistance, standard unit conversions are never required before applying formulas.",
-      "Sketch and explain I–V graphs for an ohmic resistor, filament lamp, and diode.",
-      "Electric current and Potential difference always have identical numerical values and units."
-    ],
-    "correctIndices": [
-      0,
-      2
-    ],
-    "explanation": "Both \"Apply Q = It, V = W/Q, V = IR, P = IV, and E = IVt with correct SI and kWh units.\" and \"Sketch and explain I–V graphs for an ohmic resistor, filament lamp, and diode.\" are core specification points."
-  },
-  {
-    "id": "igcse-phys-q-extra-161",
-    "subtopicId": "igcse-phys-4-1",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "Which exam advice applies directly to 4.1 (Electric Charge, Current, EMF, Potential Difference & Resistance)?",
-    "options": [
-      "Never say \"positive charges moved onto the cloth\" during static charging — ONLY electrons transfer between rubbed insulators!",
-      "Always omit units and rounding in Electric Charge, Current, EMF, Potential Difference & Resistance calculations.",
-      "Never show intermediate working steps in 4.1 questions.",
-      "Assume Electric current is always equal to 100 in every question."
-    ],
-    "correctIndex": 0,
-    "explanation": "Never say \"positive charges moved onto the cloth\" during static charging — ONLY electrons transfer between rubbed insulators!"
-  },
-  {
-    "id": "igcse-phys-q-extra-162",
-    "subtopicId": "igcse-phys-4-1",
-    "type": "short-answer",
-    "marks": 2,
-    "prompt": "Explain the core rule covered in \"Electrical Power & Kilowatt-Hours\" for 4.1 Electric Charge, Current, EMF, Potential Difference & Resistance.",
-    "rubric": {
-      "maxMarks": 2,
-      "modelAnswer": "Electrical power: P = I × V = I²R = V² ÷ R (watts, W). Electrical energy transferred: E = P × t = I × V × t (joules, J).",
-      "markPoints": [
-        {
-          "id": "mp1",
-          "markDescription": "Electrical power: P = I × V = I²R = V² ÷ R (watts, W)."
-        },
-        {
-          "id": "mp2",
-          "markDescription": "Electrical energy transferred: E = P × t = I × V × t (joules, J)."
-        }
-      ]
-    },
-    "explanation": "Electrical power: P = I × V = I²R = V² ÷ R (watts, W)."
-  },
-  {
-    "id": "igcse-phys-q-extra-163",
-    "subtopicId": "igcse-phys-4-2",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "In 4.2 (Series & Parallel Circuits, Potential Dividers & Mains Safety), which of the following is the accurate definition of \"Parallel circuit\"?",
-    "options": [
-      "Circuit with multiple branches where each branch receives full supply p.d. and total resistance is reduced.",
-      "The inverse ratio of LDR measured under zero-load conditions.",
-      "A constant quantity that remains unaffected by any change in Series & Parallel Circuits, Potential Dividers & Mains Safety.",
-      "An experimental error caused by neglecting unit conversions in Series vs Parallel Circuits."
-    ],
-    "correctIndex": 0,
-    "explanation": "Parallel circuit is defined as: Circuit with multiple branches where each branch receives full supply p.d. and total resistance is reduced."
-  },
-  {
-    "id": "igcse-phys-q-extra-164",
-    "subtopicId": "igcse-phys-4-2",
-    "type": "short-answer",
-    "marks": 2,
-    "prompt": "State two key principles or relationships from \"Sensing Components & Potential Dividers\" (4.2 Series & Parallel Circuits, Potential Dividers & Mains Safety).",
-    "rubric": {
-      "maxMarks": 2,
-      "modelAnswer": "1. NTC Thermistor: As temperature increases, its resistance decreases (used in fire alarms and incubators). 2. Light-Dependent Resistor (LDR): As light intensity INCREASES, its resistance DECREASES (bright light → low R; darkness → high R; used in automatic street lamps).",
-      "markPoints": [
-        {
-          "id": "mp1",
-          "markDescription": "NTC Thermistor: As temperature increases, its resistance decreases (used in fire alarms and incubators)."
-        },
-        {
-          "id": "mp2",
-          "markDescription": "Light-Dependent Resistor (LDR): As light intensity INCREASES, its resistance DECREASES (bright light → low R; darkness → high R; used in automatic street lamps)."
-        }
-      ]
-    },
-    "explanation": "From Sensing Components & Potential Dividers: NTC Thermistor: As temperature increases, its resistance decreases (used in fire alarms and incubators)."
-  },
-  {
-    "id": "igcse-phys-q-extra-165",
-    "subtopicId": "igcse-phys-4-2",
-    "type": "multi-select",
-    "marks": 2,
-    "selectCount": 2,
-    "prompt": "Select the TWO correct statements regarding 4.2 Series & Parallel Circuits, Potential Dividers & Mains Safety.",
-    "options": [
-      "Calculate combined resistance in series (R₁ + R₂) and parallel (1/R = 1/R₁ + 1/R₂).",
-      "In Series & Parallel Circuits, Potential Dividers & Mains Safety, standard unit conversions are never required before applying formulas.",
-      "Use V₁/V₂ = R₁/R₂ to explain thermistor and LDR potential-divider sensing circuits.",
-      "Parallel circuit and LDR always have identical numerical values and units."
-    ],
-    "correctIndices": [
-      0,
-      2
-    ],
-    "explanation": "Both \"Calculate combined resistance in series (R₁ + R₂) and parallel (1/R = 1/R₁ + 1/R₂).\" and \"Use V₁/V₂ = R₁/R₂ to explain thermistor and LDR potential-divider sensing circuits.\" are core specification points."
-  },
-  {
-    "id": "igcse-phys-q-extra-166",
-    "subtopicId": "igcse-phys-4-2",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "Which exam advice applies directly to 4.2 (Series & Parallel Circuits, Potential Dividers & Mains Safety)?",
-    "options": [
-      "Never put a switch or fuse in the neutral wire — even when open, the appliance would remain connected to the live 230 V supply and deliver a lethal shock!",
-      "Always omit units and rounding in Series & Parallel Circuits, Potential Dividers & Mains Safety calculations.",
-      "Never show intermediate working steps in 4.2 questions.",
-      "Assume Parallel circuit is always equal to 100 in every question."
-    ],
-    "correctIndex": 0,
-    "explanation": "Never put a switch or fuse in the neutral wire — even when open, the appliance would remain connected to the live 230 V supply and deliver a lethal shock!"
-  },
-  {
-    "id": "igcse-phys-q-extra-168",
-    "subtopicId": "igcse-phys-4-3",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "In 4.3 (Magnetism, Motor Effect, EM Induction & Transformers), which of the following is the accurate definition of \"Motor effect\"?",
-    "options": [
-      "Force experienced by a current-carrying wire placed across a magnetic field.",
-      "The inverse ratio of Lenz’s Law measured under zero-load conditions.",
-      "A constant quantity that remains unaffected by any change in Magnetism, Motor Effect, EM Induction & Transformers.",
-      "An experimental error caused by neglecting unit conversions in Magnetic Fields, Electromagnets & The Motor Effect."
-    ],
-    "correctIndex": 0,
-    "explanation": "Motor effect is defined as: Force experienced by a current-carrying wire placed across a magnetic field."
-  },
-  {
-    "id": "igcse-phys-q-extra-169",
-    "subtopicId": "igcse-phys-4-3",
-    "type": "short-answer",
-    "marks": 2,
-    "prompt": "State two key principles or relationships from \"Electromagnetic Induction & AC Generators\" (4.3 Magnetism, Motor Effect, EM Induction & Transformers).",
-    "rubric": {
-      "maxMarks": 2,
-      "modelAnswer": "1. Electromagnetic induction: Whenever a conductor cuts across magnetic field lines (or magnetic flux through a coil changes), an e.m.f. is INDUCED across its ends. 2. Increase induced e.m.f. by: (1) moving the magnet/coil faster, (2) using a stronger magnet, or (3) using more turns on the coil.",
-      "markPoints": [
-        {
-          "id": "mp1",
-          "markDescription": "Electromagnetic induction: Whenever a conductor cuts across magnetic field lines (or magnetic flux through a coil changes), an e.m.f. is INDUCED across its ends."
-        },
-        {
-          "id": "mp2",
-          "markDescription": "Increase induced e.m.f. by: (1) moving the magnet/coil faster, (2) using a stronger magnet, or (3) using more turns on the coil."
-        }
-      ]
-    },
-    "explanation": "From Electromagnetic Induction & AC Generators: Electromagnetic induction: Whenever a conductor cuts across magnetic field lines (or magnetic flux through a coil changes), an e.m.f. is INDUCED across its ends."
-  },
-  {
-    "id": "igcse-phys-q-extra-170",
-    "subtopicId": "igcse-phys-4-3",
-    "type": "multi-select",
-    "marks": 2,
-    "selectCount": 2,
-    "prompt": "Select the TWO correct statements regarding 4.3 Magnetism, Motor Effect, EM Induction & Transformers.",
-    "options": [
-      "Apply Fleming’s Left-Hand Rule and explain the role of the split-ring commutator in a DC motor.",
-      "In Magnetism, Motor Effect, EM Induction & Transformers, standard unit conversions are never required before applying formulas.",
-      "Distinguish slip rings (AC generator) from split-ring commutators (DC motor) and explain Lenz’s Law.",
-      "Motor effect and Lenz’s Law always have identical numerical values and units."
-    ],
-    "correctIndices": [
-      0,
-      2
-    ],
-    "explanation": "Both \"Apply Fleming’s Left-Hand Rule and explain the role of the split-ring commutator in a DC motor.\" and \"Distinguish slip rings (AC generator) from split-ring commutators (DC motor) and explain Lenz’s Law.\" are core specification points."
-  },
-  {
-    "id": "igcse-phys-q-extra-171",
-    "subtopicId": "igcse-phys-4-3",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "Which exam advice applies directly to 4.3 (Magnetism, Motor Effect, EM Induction & Transformers)?",
-    "options": [
-      "Never say \"high voltage reduces resistance of the cables\" — high voltage reduces CURRENT I, which slashes power loss via P = I²R!",
-      "Always omit units and rounding in Magnetism, Motor Effect, EM Induction & Transformers calculations.",
-      "Never show intermediate working steps in 4.3 questions.",
-      "Assume Motor effect is always equal to 100 in every question."
-    ],
-    "correctIndex": 0,
-    "explanation": "Never say \"high voltage reduces resistance of the cables\" — high voltage reduces CURRENT I, which slashes power loss via P = I²R!"
-  },
-  {
-    "id": "igcse-phys-q-extra-173",
-    "subtopicId": "igcse-phys-5-1",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "In 5.1 (The Nuclear Model of the Atom, Isotopes, Fission & Fusion), which of the following is the accurate definition of \"Nucleon number (A)\"?",
-    "options": [
-      "Total number of protons plus neutrons in an atomic nucleus.",
-      "The inverse ratio of Isotope measured under zero-load conditions.",
-      "A constant quantity that remains unaffected by any change in The Nuclear Model of the Atom, Isotopes, Fission & Fusion.",
-      "An experimental error caused by neglecting unit conversions in Rutherford Scattering & Subatomic Particles."
-    ],
-    "correctIndex": 0,
-    "explanation": "Nucleon number (A) is defined as: Total number of protons plus neutrons in an atomic nucleus."
-  },
-  {
-    "id": "igcse-phys-q-extra-174",
-    "subtopicId": "igcse-phys-5-1",
-    "type": "short-answer",
-    "marks": 2,
-    "prompt": "State two key principles or relationships from \"Nuclide Notation & Isotopes\" (5.1 The Nuclear Model of the Atom, Isotopes, Fission & Fusion).",
-    "rubric": {
-      "maxMarks": 2,
-      "modelAnswer": "1. Nuclide notation ᴬ_Z X: Proton (atomic) number Z = number of protons (defines the element); Nucleon (mass) number A = protons + neutrons; Neutron number N = A − Z. 2. Isotopes are atoms of the SAME element having the SAME number of protons (Z) but DIFFERENT numbers of neutrons (A − Z). Example: Carbon-12 (6p, 6n) and Carbon-14 (6p, 8n).",
-      "markPoints": [
-        {
-          "id": "mp1",
-          "markDescription": "Nuclide notation ᴬ_Z X: Proton (atomic) number Z = number of protons (defines the element); Nucleon (mass) number A = protons + neutrons; Neutron number N = A − Z."
-        },
-        {
-          "id": "mp2",
-          "markDescription": "Isotopes are atoms of the SAME element having the SAME number of protons (Z) but DIFFERENT numbers of neutrons (A − Z). Example: Carbon-12 (6p, 6n) and Carbon-14 (6p, 8n)."
-        }
-      ]
-    },
-    "explanation": "From Nuclide Notation & Isotopes: Nuclide notation ᴬ_Z X: Proton (atomic) number Z = number of protons (defines the element); Nucleon (mass) number A = protons + neutrons; Neutron number N = A − Z."
-  },
-  {
-    "id": "igcse-phys-q-extra-175",
-    "subtopicId": "igcse-phys-5-1",
-    "type": "multi-select",
-    "marks": 2,
-    "selectCount": 2,
-    "prompt": "Select the TWO correct statements regarding 5.1 The Nuclear Model of the Atom, Isotopes, Fission & Fusion.",
-    "options": [
-      "Explain how Rutherford’s gold foil observations established the nuclear model of the atom.",
-      "In The Nuclear Model of the Atom, Isotopes, Fission & Fusion, standard unit conversions are never required before applying formulas.",
-      "Calculate proton, neutron, and electron counts from nuclide notation and define isotopes.",
-      "Nucleon number (A) and Isotope always have identical numerical values and units."
-    ],
-    "correctIndices": [
-      0,
-      2
-    ],
-    "explanation": "Both \"Explain how Rutherford’s gold foil observations established the nuclear model of the atom.\" and \"Calculate proton, neutron, and electron counts from nuclide notation and define isotopes.\" are core specification points."
-  },
-  {
-    "id": "igcse-phys-q-extra-176",
-    "subtopicId": "igcse-phys-5-1",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "Which exam advice applies directly to 5.1 (The Nuclear Model of the Atom, Isotopes, Fission & Fusion)?",
-    "options": [
-      "Do not mix up fission and fusion! Fission = Splitting (like a fissure/crack); Fusion = Fusing/joining light nuclei together.",
-      "Always omit units and rounding in The Nuclear Model of the Atom, Isotopes, Fission & Fusion calculations.",
-      "Never show intermediate working steps in 5.1 questions.",
-      "Assume Nucleon number (A) is always equal to 100 in every question."
-    ],
-    "correctIndex": 0,
-    "explanation": "Do not mix up fission and fusion! Fission = Splitting (like a fissure/crack); Fusion = Fusing/joining light nuclei together."
-  },
-  {
-    "id": "igcse-phys-q-extra-177",
-    "subtopicId": "igcse-phys-5-1",
-    "type": "short-answer",
-    "marks": 2,
-    "prompt": "Explain the core rule covered in \"Nuclear Fission & Nuclear Fusion\" for 5.1 The Nuclear Model of the Atom, Isotopes, Fission & Fusion.",
-    "rubric": {
-      "maxMarks": 2,
-      "modelAnswer": "Nuclear FISSION: A heavy unstable nucleus (e.g., Uranium-235) absorbs a slow neutron and SPLITS into two smaller daughter nuclei, releasing 2–3 fast neutrons and vast kinetic/thermal energy. Excess neutrons can trigger a chain reaction (controlled in nuclear reactors using boron control rods and graphite/water moderators). Nuclear FUSION: Two light nuclei (e.g., hydrogen isotopes deuterium and tritium) JOIN at extremely high temperatures and pressures (as in the core of the Sun) to form a heavier helium nucleus, releasing even greater energy per kg.",
-      "markPoints": [
-        {
-          "id": "mp1",
-          "markDescription": "Nuclear FISSION: A heavy unstable nucleus (e.g., Uranium-235) absorbs a slow neutron and SPLITS into two smaller daughter nuclei, releasing 2–3 fast neutrons and vast kinetic/thermal energy. Excess neutrons can trigger a chain reaction (controlled in nuclear reactors using boron control rods and graphite/water moderators)."
-        },
-        {
-          "id": "mp2",
-          "markDescription": "Nuclear FUSION: Two light nuclei (e.g., hydrogen isotopes deuterium and tritium) JOIN at extremely high temperatures and pressures (as in the core of the Sun) to form a heavier helium nucleus, releasing even greater energy per kg."
-        }
-      ]
-    },
-    "explanation": "Nuclear FISSION: A heavy unstable nucleus (e.g., Uranium-235) absorbs a slow neutron and SPLITS into two smaller daughter nuclei, releasing 2–3 fast neutrons and vast kinetic/thermal energy. Excess neutrons can trigger a chain reaction (controlled in nuclear reactors using boron control rods and graphite/water moderators)."
-  },
-  {
-    "id": "igcse-phys-q-extra-178",
-    "subtopicId": "igcse-phys-5-2",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "In 5.2 (Radioactive Decay (Alpha, Beta, Gamma) & Half-Life), which of the following is the accurate definition of \"Alpha particle\"?",
-    "options": [
-      "Helium nucleus (2 protons + 2 neutrons), strongly ionising with short range (stopped by paper).",
-      "The inverse ratio of Beta particle measured under zero-load conditions.",
-      "A constant quantity that remains unaffected by any change in Radioactive Decay (Alpha, Beta, Gamma) & Half-Life.",
-      "An experimental error caused by neglecting unit conversions in Properties of Alpha, Beta & Gamma Radiation."
-    ],
-    "correctIndex": 0,
-    "explanation": "Alpha particle is defined as: Helium nucleus (2 protons + 2 neutrons), strongly ionising with short range (stopped by paper)."
-  },
-  {
-    "id": "igcse-phys-q-extra-179",
-    "subtopicId": "igcse-phys-5-2",
-    "type": "short-answer",
-    "marks": 2,
-    "prompt": "State two key principles or relationships from \"Balanced Nuclear Decay Equations\" (5.2 Radioactive Decay (Alpha, Beta, Gamma) & Half-Life).",
-    "rubric": {
-      "maxMarks": 2,
-      "modelAnswer": "1. Both total nucleon number (top) and total proton number (bottom) MUST balance on both sides of a nuclear equation. 2. Alpha decay (loses 2p and 2n): ᴬ_Z X → ᴬ⁻⁴_{Z−2} Y + ⁴₂α. Example: ²³⁸₉₂U → ²³⁴₉₀Th + ⁴₂He.",
-      "markPoints": [
-        {
-          "id": "mp1",
-          "markDescription": "Both total nucleon number (top) and total proton number (bottom) MUST balance on both sides of a nuclear equation."
-        },
-        {
-          "id": "mp2",
-          "markDescription": "Alpha decay (loses 2p and 2n): ᴬ_Z X → ᴬ⁻⁴_{Z−2} Y + ⁴₂α. Example: ²³⁸₉₂U → ²³⁴₉₀Th + ⁴₂He."
-        }
-      ]
-    },
-    "explanation": "From Balanced Nuclear Decay Equations: Both total nucleon number (top) and total proton number (bottom) MUST balance on both sides of a nuclear equation."
-  },
-  {
-    "id": "igcse-phys-q-extra-180",
-    "subtopicId": "igcse-phys-5-2",
-    "type": "multi-select",
-    "marks": 2,
-    "selectCount": 2,
-    "prompt": "Select the TWO correct statements regarding 5.2 Radioactive Decay (Alpha, Beta, Gamma) & Half-Life.",
-    "options": [
-      "Compare α, β, and γ radiation by nature, charge, penetration, ionising power, and field deflection.",
-      "In Radioactive Decay (Alpha, Beta, Gamma) & Half-Life, standard unit conversions are never required before applying formulas.",
-      "Balance alpha and beta nuclear decay equations accurately.",
-      "Alpha particle and Beta particle always have identical numerical values and units."
-    ],
-    "correctIndices": [
-      0,
-      2
-    ],
-    "explanation": "Both \"Compare α, β, and γ radiation by nature, charge, penetration, ionising power, and field deflection.\" and \"Balance alpha and beta nuclear decay equations accurately.\" are core specification points."
-  },
-  {
-    "id": "igcse-phys-q-extra-181",
-    "subtopicId": "igcse-phys-5-2",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "Which exam advice applies directly to 5.2 (Radioactive Decay (Alpha, Beta, Gamma) & Half-Life)?",
-    "options": [
-      "In beta-minus decay, Z INCREASES by 1 (not decreases!) because (Z + 1) + (−1) = Z on the right-hand side.",
-      "Always omit units and rounding in Radioactive Decay (Alpha, Beta, Gamma) & Half-Life calculations.",
-      "Never show intermediate working steps in 5.2 questions.",
-      "Assume Alpha particle is always equal to 100 in every question."
-    ],
-    "correctIndex": 0,
-    "explanation": "In beta-minus decay, Z INCREASES by 1 (not decreases!) because (Z + 1) + (−1) = Z on the right-hand side."
-  },
-  {
-    "id": "igcse-phys-q-extra-183",
-    "subtopicId": "igcse-phys-6-1",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "In 6.1 (Earth, The Solar System & Orbital Motion), which of the following is the accurate definition of \"Orbital speed\"?",
-    "options": [
-      "Average speed along a circular orbit: v = 2πr ÷ T.",
-      "The inverse ratio of Accretion measured under zero-load conditions.",
-      "A constant quantity that remains unaffected by any change in Earth, The Solar System & Orbital Motion.",
-      "An experimental error caused by neglecting unit conversions in Earth’s Motion, Seasons & The Moon."
-    ],
-    "correctIndex": 0,
-    "explanation": "Orbital speed is defined as: Average speed along a circular orbit: v = 2πr ÷ T."
-  },
-  {
-    "id": "igcse-phys-q-extra-184",
-    "subtopicId": "igcse-phys-6-1",
-    "type": "short-answer",
-    "marks": 2,
-    "prompt": "State two key principles or relationships from \"The Solar System & Accretion Model\" (6.1 Earth, The Solar System & Orbital Motion).",
-    "rubric": {
-      "maxMarks": 2,
-      "modelAnswer": "1. Order of the 8 planets from the Sun: Mercury, Venus, Earth, Mars (4 small, rocky, dense inner planets) — Asteroid Belt — Jupiter, Saturn, Uranus, Neptune (4 large, cold, low-density gas/ice giants). 2. Accretion model of Solar System formation: A rotating nebula of gas and dust collapsed under gravity into a swirling accretion disc. The hot dense core formed the Sun; near the Sun only rocky/metallic elements with high melting points condensed (rocky planets), whereas further out cooler gases and ices clumped into gas giants.",
-      "markPoints": [
-        {
-          "id": "mp1",
-          "markDescription": "Order of the 8 planets from the Sun: Mercury, Venus, Earth, Mars (4 small, rocky, dense inner planets) — Asteroid Belt — Jupiter, Saturn, Uranus, Neptune (4 large, cold, low-density gas/ice giants)."
-        },
-        {
-          "id": "mp2",
-          "markDescription": "Accretion model of Solar System formation: A rotating nebula of gas and dust collapsed under gravity into a swirling accretion disc. The hot dense core formed the Sun; near the Sun only rocky/metallic elements with high melting points condensed (rocky planets), whereas further out cooler gases and ices clumped into gas giants."
-        }
-      ]
-    },
-    "explanation": "From The Solar System & Accretion Model: Order of the 8 planets from the Sun: Mercury, Venus, Earth, Mars (4 small, rocky, dense inner planets) — Asteroid Belt — Jupiter, Saturn, Uranus, Neptune (4 large, cold, low-density gas/ice giants)."
-  },
-  {
-    "id": "igcse-phys-q-extra-185",
-    "subtopicId": "igcse-phys-6-1",
-    "type": "multi-select",
-    "marks": 2,
-    "selectCount": 2,
-    "prompt": "Select the TWO correct statements regarding 6.1 Earth, The Solar System & Orbital Motion.",
-    "options": [
-      "Explain day/night, the seasons (23.5° tilt), and lunar phases clearly.",
-      "In Earth, The Solar System & Orbital Motion, standard unit conversions are never required before applying formulas.",
-      "Explain why inner planets are rocky while outer planets are gaseous using the accretion model.",
-      "Orbital speed and Accretion always have identical numerical values and units."
-    ],
-    "correctIndices": [
-      0,
-      2
-    ],
-    "explanation": "Both \"Explain day/night, the seasons (23.5° tilt), and lunar phases clearly.\" and \"Explain why inner planets are rocky while outer planets are gaseous using the accretion model.\" are core specification points."
-  },
-  {
-    "id": "igcse-phys-q-extra-186",
-    "subtopicId": "igcse-phys-6-1",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "Which exam advice applies directly to 6.1 (Earth, The Solar System & Orbital Motion)?",
-    "options": [
-      "Seasons are NOT caused by Earth getting closer to the Sun — they are caused by Earth’s 23.5° axial tilt changing the angle of sunlight and daylight hours!",
-      "Always omit units and rounding in Earth, The Solar System & Orbital Motion calculations.",
-      "Never show intermediate working steps in 6.1 questions.",
-      "Assume Orbital speed is always equal to 100 in every question."
-    ],
-    "correctIndex": 0,
-    "explanation": "Seasons are NOT caused by Earth getting closer to the Sun — they are caused by Earth’s 23.5° axial tilt changing the angle of sunlight and daylight hours!"
-  },
-  {
-    "id": "igcse-phys-q-extra-187",
-    "subtopicId": "igcse-phys-6-1",
-    "type": "short-answer",
-    "marks": 2,
-    "prompt": "Explain the core rule covered in \"Orbital Speed & Elliptical Comet Orbits\" for 6.1 Earth, The Solar System & Orbital Motion.",
-    "rubric": {
-      "maxMarks": 2,
-      "modelAnswer": "Average orbital speed for a circular orbit of radius r and orbital period T: v = (2 × π × r) ÷ T. As orbital radius increases across the Solar System, the Sun’s gravitational pull weakens, so outer planets orbit much MORE SLOWLY and have much LONGER orbital periods (years) than inner planets.",
-      "markPoints": [
-        {
-          "id": "mp1",
-          "markDescription": "Average orbital speed for a circular orbit of radius r and orbital period T: v = (2 × π × r) ÷ T."
-        },
-        {
-          "id": "mp2",
-          "markDescription": "As orbital radius increases across the Solar System, the Sun’s gravitational pull weakens, so outer planets orbit much MORE SLOWLY and have much LONGER orbital periods (years) than inner planets."
-        }
-      ]
-    },
-    "explanation": "Average orbital speed for a circular orbit of radius r and orbital period T: v = (2 × π × r) ÷ T."
-  },
-  {
-    "id": "igcse-phys-q-extra-188",
-    "subtopicId": "igcse-phys-6-2",
-    "type": "mcq",
-    "marks": 1,
-    "prompt": "In 6.2 (Life Cycle of Stars, Red-Shift & The Big Bang (Hubble’s Law)), which of the following is the accurate definition of \"Main sequence star\"?",
-    "options": [
-      "Stable star where inward gravity is balanced by outward pressure from core hydrogen fusion.",
-      "The inverse ratio of Red-shift measured under zero-load conditions.",
-      "A constant quantity that remains unaffected by any change in Life Cycle of Stars, Red-Shift & The Big Bang (Hubble’s Law).",
-      "An experimental error caused by neglecting unit conversions in Light-Years & Life Cycle of Stars."
-    ],
-    "correctIndex": 0,
-    "explanation": "Main sequence star is defined as: Stable star where inward gravity is balanced by outward pressure from core hydrogen fusion."
-  },
-  {
-    "id": "igcse-phys-q-extra-189",
+    "id": "igcse-phys-q-6-2-2",
     "subtopicId": "igcse-phys-6-2",
     "type": "short-answer",
     "marks": 2,
-    "prompt": "State two key principles or relationships from \"Red-Shift, CMBR & The Big Bang Theory\" (6.2 Life Cycle of Stars, Red-Shift & The Big Bang (Hubble’s Law)).",
+    "prompt": "State the TWO main pieces of observational evidence supporting the Big Bang theory.",
+    "explanation": "Red-shift proves expansion; CMBR is the stretched thermal afterglow of the hot early Universe.",
     "rubric": {
       "maxMarks": 2,
-      "modelAnswer": "1. Red-shift: Light emitted by distant galaxies is shifted toward the RED (longer wavelength, lower frequency) end of the spectrum because the space between galaxies is expanding and the galaxies are receding away from us. 2. Key observation: The FURTHER away a galaxy is, the GREATER its red-shift — meaning distant galaxies are receding FASTER than closer ones, proving the Universe is expanding.",
+      "modelAnswer": "1) Cosmological red-shift of light from distant galaxies (showing space is expanding) and 2) Cosmic Microwave Background Radiation (CMBR) arriving uniformly from all directions.",
       "markPoints": [
         {
           "id": "mp1",
-          "markDescription": "Red-shift: Light emitted by distant galaxies is shifted toward the RED (longer wavelength, lower frequency) end of the spectrum because the space between galaxies is expanding and the galaxies are receding away from us."
+          "requiredKeywordGroups": [
+            [
+              "red-shift",
+              "redshift",
+              "red shift"
+            ]
+          ],
+          "markDescription": "Red-shift of distant galaxies"
         },
         {
           "id": "mp2",
-          "markDescription": "Key observation: The FURTHER away a galaxy is, the GREATER its red-shift — meaning distant galaxies are receding FASTER than closer ones, proving the Universe is expanding."
+          "requiredKeywordGroups": [
+            [
+              "cmbr",
+              "cosmic microwave",
+              "microwave background"
+            ]
+          ],
+          "markDescription": "CMBR / Cosmic Microwave Background"
         }
       ]
-    },
-    "explanation": "From Red-Shift, CMBR & The Big Bang Theory: Red-shift: Light emitted by distant galaxies is shifted toward the RED (longer wavelength, lower frequency) end of the spectrum because the space between galaxies is expanding and the galaxies are receding away from us."
+    }
   },
   {
-    "id": "igcse-phys-q-extra-190",
+    "id": "igcse-phys-q-6-2-3",
     "subtopicId": "igcse-phys-6-2",
-    "type": "multi-select",
+    "type": "fill-blank",
     "marks": 2,
-    "selectCount": 2,
-    "prompt": "Select the TWO correct statements regarding 6.2 Life Cycle of Stars, Red-Shift & The Big Bang (Hubble’s Law).",
-    "options": [
-      "Trace the complete stellar life cycle for both Sun-sized stars and high-mass stars.",
-      "In Life Cycle of Stars, Red-Shift & The Big Bang (Hubble’s Law), standard unit conversions are never required before applying formulas.",
-      "Explain how galactic red-shift and CMBR support the Big Bang Theory.",
-      "Main sequence star and Red-shift always have identical numerical values and units."
+    "prompt": "Complete the star-evolution stages:",
+    "segments": [
+      "A Sun-like star becomes a red giant and then a ",
+      ", whereas elements heavier than iron are created in a ",
+      "."
     ],
-    "correctIndices": [
-      0,
-      2
+    "wordBank": [
+      "white dwarf",
+      "supernova",
+      "black hole",
+      "protostar"
     ],
-    "explanation": "Both \"Trace the complete stellar life cycle for both Sun-sized stars and high-mass stars.\" and \"Explain how galactic red-shift and CMBR support the Big Bang Theory.\" are core specification points."
+    "answers": [
+      "white dwarf",
+      "supernova"
+    ],
+    "explanation": "Low-mass stars end as white dwarfs; massive stars explode as supernovae creating heavy elements."
   },
   {
-    "id": "igcse-phys-q-extra-191",
+    "id": "igcse-phys-q-6-2-4",
     "subtopicId": "igcse-phys-6-2",
     "type": "mcq",
     "marks": 1,
-    "prompt": "Which exam advice applies directly to 6.2 (Life Cycle of Stars, Red-Shift & The Big Bang (Hubble’s Law))?",
+    "prompt": "Using Hubble’s Law H₀ = v / d, which expression estimates the age of the Universe?",
     "options": [
-      "Red-shift does NOT mean galaxies look bright red — it means their dark absorption spectral lines shift toward longer wavelengths relative to laboratory measurements on Earth.",
-      "Always omit units and rounding in Life Cycle of Stars, Red-Shift & The Big Bang (Hubble’s Law) calculations.",
-      "Never show intermediate working steps in 6.2 questions.",
-      "Assume Main sequence star is always equal to 100 in every question."
+      "H₀",
+      "1 / H₀",
+      "H₀²",
+      "v × d"
     ],
-    "correctIndex": 0,
-    "explanation": "Red-shift does NOT mean galaxies look bright red — it means their dark absorption spectral lines shift toward longer wavelengths relative to laboratory measurements on Earth."
+    "correctIndex": 1,
+    "explanation": "Time t = d / v = 1 / H₀ ≈ 4.5 × 10¹⁷ s (≈ 14 billion years)."
+  },
+  {
+    "id": "igcse-phys-q-6-2-5",
+    "subtopicId": "igcse-phys-6-2",
+    "type": "mcq",
+    "marks": 1,
+    "prompt": "Why is a main-sequence star stable in size for billions of years?",
+    "options": [
+      "It has no gravity",
+      "Inward gravitational pull balances outward radiation pressure from nuclear fusion",
+      "Hydrogen stops fusing",
+      "It rotates very slowly"
+    ],
+    "correctIndex": 1,
+    "explanation": "Equilibrium between inward gravity and outward thermal/radiation pressure maintains a stable radius."
   }
 ];
 
 export const IGCSE_PHYSICS_FLASHCARDS: FlashcardItem[] = [
   {
-    "id": "igcse-phys-fc-1",
+    "id": "igcse-phys-fc-1-1-1",
     "subtopicId": "igcse-phys-1-1",
-    "front": "How do you find acceleration and distance from a speed–time graph?",
+    "front": "Difference between a scalar and a vector?",
     "backBullets": [
-      "Acceleration = Gradient (Δv ÷ Δt)",
-      "Distance = Area under the graph (triangles + rectangles)"
+      "Scalar = magnitude only (speed, mass); Vector = magnitude + direction (velocity, force, momentum)."
     ]
   },
   {
-    "id": "igcse-phys-fc-2",
-    "subtopicId": "igcse-phys-1-2",
-    "front": "State Hooke’s Law and define the spring constant k.",
-    "backBullets": [
-      "F = k × x (up to the limit of proportionality)",
-      "k = F ÷ x is the force per unit extension (N/m)"
-    ]
-  },
-  {
-    "id": "igcse-phys-fc-3",
-    "subtopicId": "igcse-phys-1-3",
-    "front": "How do crumple zones and airbags protect passengers using impulse?",
-    "backBullets": [
-      "Impulse FΔt = Δp (same change in momentum)",
-      "Increasing impact duration Δt lowers the average force F = Δp ÷ Δt on passengers"
-    ]
-  },
-  {
-    "id": "igcse-phys-fc-4",
-    "subtopicId": "igcse-phys-1-3",
-    "front": "State the equation for pressure beneath a liquid surface.",
-    "backBullets": [
-      "Δp = ρ g Δh",
-      "ρ = density (kg/m³), g = 9.8 N/kg, Δh = depth (m)"
-    ]
-  },
-  {
-    "id": "igcse-phys-fc-5",
-    "subtopicId": "igcse-phys-1-4",
-    "front": "Which 3 energy resources do NOT originally come from the Sun?",
-    "backBullets": [
-      "Geothermal (hot rocks inside Earth)",
-      "Nuclear (uranium fission)",
-      "Tidal (Moon’s gravitational pull)"
-    ]
-  },
-  {
-    "id": "igcse-phys-fc-6",
-    "subtopicId": "igcse-phys-2-1",
-    "front": "How do you convert Celsius (°C) to Kelvin (K), and what is Boyle’s Law?",
-    "backBullets": [
-      "T(K) = θ(°C) + 273 (0 K = −273 °C)",
-      "Boyle’s Law at constant T: p₁V₁ = p₂V₂"
-    ]
-  },
-  {
-    "id": "igcse-phys-fc-7",
-    "subtopicId": "igcse-phys-2-2",
-    "front": "Why does evaporation cool the remaining liquid?",
-    "backBullets": [
-      "The highest kinetic-energy molecules escape from the surface",
-      "Average kinetic energy of remaining molecules drops → temperature falls"
-    ]
-  },
-  {
-    "id": "igcse-phys-fc-8",
-    "subtopicId": "igcse-phys-3-1",
-    "front": "When is wave diffraction through a gap strongest?",
-    "backBullets": [
-      "When the gap width is approximately equal to the wavelength (gap ≈ λ)"
-    ]
-  },
-  {
-    "id": "igcse-phys-fc-9",
-    "subtopicId": "igcse-phys-3-2",
-    "front": "State Snell’s Law and the critical angle equation.",
-    "backBullets": [
-      "n = sin i ÷ sin r",
-      "sin c = 1 ÷ n (for TIR when light travels from denser to less dense and i > c)"
-    ]
-  },
-  {
-    "id": "igcse-phys-fc-10",
-    "subtopicId": "igcse-phys-3-3",
-    "front": "What is the human hearing range and what defines ultrasound?",
-    "backBullets": [
-      "Audible range: 20 Hz to 20,000 Hz (20 kHz)",
-      "Ultrasound: sound waves with frequency > 20 kHz"
-    ]
-  },
-  {
-    "id": "igcse-phys-fc-11",
-    "subtopicId": "igcse-phys-4-1",
-    "front": "How does doubling a wire’s diameter change its resistance?",
-    "backBullets": [
-      "Doubling diameter increases cross-sectional area by ×4 (A = πr²)",
-      "Since R ∝ 1/A, resistance drops to ¼ of its original value"
-    ]
-  },
-  {
-    "id": "igcse-phys-fc-12",
-    "subtopicId": "igcse-phys-4-2",
-    "front": "How do NTC thermistors and LDRs behave as temperature or light increases?",
-    "backBullets": [
-      "Both decrease resistance when their input increases",
-      "Higher T → lower R_thermistor; Brighter light → lower R_LDR"
-    ]
-  },
-  {
-    "id": "igcse-phys-fc-13",
-    "subtopicId": "igcse-phys-4-3",
-    "front": "Why does the National Grid transmit electricity at very high voltage?",
-    "backBullets": [
-      "For fixed power P = VI, step-up transformers raise V and sharply lower current I",
-      "Lower I drastically reduces cable heating loss P_loss = I²R"
-    ]
-  },
-  {
-    "id": "igcse-phys-fc-14",
-    "subtopicId": "igcse-phys-5-1",
-    "front": "What did Rutherford’s gold foil experiment prove?",
-    "backBullets": [
-      "Most α passed straight through → atom is mostly empty space",
-      "A few deflected >90° → tiny, dense, positively charged nucleus"
-    ]
-  },
-  {
-    "id": "igcse-phys-fc-15",
-    "subtopicId": "igcse-phys-5-2",
-    "front": "What happens to nucleon number A and proton number Z in alpha vs beta-minus decay?",
-    "backBullets": [
-      "Alpha (⁴₂He): A decreases by 4, Z decreases by 2",
-      "Beta-minus (⁰₋₁e): A stays unchanged, Z INCREASES by 1"
-    ]
-  },
-  {
-    "id": "igcse-phys-fc-16",
-    "subtopicId": "igcse-phys-6-1",
-    "front": "State the orbital speed formula.",
-    "backBullets": [
-      "v = 2πr ÷ T",
-      "r = orbital radius (m), T = orbital period (s)"
-    ]
-  },
-  {
-    "id": "igcse-phys-fc-17",
-    "subtopicId": "igcse-phys-6-2",
-    "front": "State Hubble’s Law and how it gives the age of the Universe.",
-    "backBullets": [
-      "H₀ = v ÷ d (≈ 2.2 × 10⁻¹⁸ s⁻¹)",
-      "Age of the Universe ≈ d ÷ v = 1 ÷ H₀ (~14 billion years)"
-    ]
-  },
-  {
-    "id": "igcse-phys-fc-extra-117",
+    "id": "igcse-phys-fc-1-1-2",
     "subtopicId": "igcse-phys-1-1",
-    "front": "1.1 Measurement Techniques, Scalars & Vectors: What are the essential exam points to remember?",
+    "front": "What do gradient and area represent on a speed-time graph?",
     "backBullets": [
-      "Length is measured with rulers (to 1 mm), vernier callipers (to 0.1 mm), or micrometer screw gauges (to 0.01 mm). Always check for zero error and read perpendicular to the scale to avoid parallax error.",
-      "To measure the period T of a pendulum accurately, time 20 complete oscillations with a stopwatch and divide the total time by 20 — this reduces the percentage error from human reaction time.",
-      "A scalar quantity has magnitude (size) only: distance, speed, time, mass, energy, temperature, and density."
-    ],
-    "hint": "Think V for Vector = Value + direction arrow; S for Scalar = Size only."
+      "Gradient = acceleration; Area under graph = distance travelled."
+    ]
   },
   {
-    "id": "igcse-phys-fc-extra-118",
+    "id": "igcse-phys-fc-1-1-3",
     "subtopicId": "igcse-phys-1-1",
-    "front": "1.1 Speed, Velocity & Uniform Acceleration: What are the essential exam points to remember?",
+    "front": "Equation for uniform acceleration?",
     "backBullets": [
-      "Average speed = total distance travelled ÷ total time taken: v = s ÷ t (SI unit: m/s). Velocity is speed in a specified direction.",
-      "Acceleration is the rate of change of velocity: a = (v − u) ÷ t (SI unit: m/s²), where u is initial velocity and v is final velocity.",
-      "Negative acceleration (deceleration) occurs when velocity decreases in the forward direction (e.g., braking from 24 m/s to 6 m/s in 6 s gives a = (6 − 24) ÷ 6 = −3.0 m/s²)."
+      "a = (v − u) / t (unit: m/s²)."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-119",
+    "id": "igcse-phys-fc-1-1-4",
     "subtopicId": "igcse-phys-1-1",
-    "front": "1.1 Interpreting Distance–Time & Speed–Time Graphs: What are the essential exam points to remember?",
+    "front": "Why do you time 20 oscillations of a pendulum instead of 1?",
     "backBullets": [
-      "On a distance–time graph: gradient = speed; a horizontal line means the object is stationary; a straight sloped line means constant speed; an upward-curving slope means accelerating.",
-      "On a speed–time (or velocity–time) graph: gradient = acceleration; a horizontal line above zero means constant speed; a downward straight line means uniform deceleration.",
-      "The area under a speed–time graph equals the distance travelled. Split complex regions into rectangles (base × height) and triangles (½ × base × height)."
-    ],
-    "hint": "On a v–t graph: Gradient = Acceleration, Area = Distance (remember \"G-A, A-D\")."
+      "Reduces percentage uncertainty caused by human reaction time."
+    ]
   },
   {
-    "id": "igcse-phys-fc-extra-120",
+    "id": "igcse-phys-fc-1-1-5",
     "subtopicId": "igcse-phys-1-1",
-    "front": "Define: Scalar (1.1)",
+    "front": "Condition for terminal velocity?",
     "backBullets": [
-      "A physical quantity that has magnitude only and no direction (e.g., speed, mass, energy)."
+      "Upward air resistance = downward weight → resultant force = 0 → constant velocity."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-121",
+    "id": "igcse-phys-fc-1-2-1",
     "subtopicId": "igcse-phys-1-2",
-    "front": "1.2 Mass, Weight & Density: What are the essential exam points to remember?",
+    "front": "Equation linking weight, mass, and g?",
     "backBullets": [
-      "Mass (kg) is a measure of the quantity of matter in an object and resists changes in motion (inertia). Mass stays constant everywhere in the Universe.",
-      "Weight (N) is the gravitational force acting on a mass: W = m × g, where gravitational field strength g = W ÷ m ≈ 9.8 N/kg on Earth (~1.6 N/kg on the Moon).",
-      "Density is mass per unit volume: ρ = m ÷ V (units: kg/m³ or g/cm³, where 1 g/cm³ = 1,000 kg/m³)."
+      "W = mg (g ≈ 9.8 N/kg on Earth)."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-122",
+    "id": "igcse-phys-fc-1-2-2",
     "subtopicId": "igcse-phys-1-2",
-    "front": "1.2 Hooke’s Law & Spring Constant: What are the essential exam points to remember?",
+    "front": "Density equation and floating condition?",
     "backBullets": [
-      "Hooke’s Law states that the extension x of a spring is directly proportional to the stretching load F, provided the limit of proportionality is not exceeded: F = k × x.",
-      "Spring constant k = F ÷ x (units: N/m or N/cm) represents the stiffness of the spring and equals the gradient of the straight-line region of a force–extension graph.",
-      "Beyond the limit of proportionality (elastic limit), the graph curves, the spring deforms plastically, and it will not return to its original length when unloaded."
-    ],
-    "hint": "Always subtract the ORIGINAL unstretched length from the new length to get extension x before using F = kx."
-  },
-  {
-    "id": "igcse-phys-fc-extra-123",
-    "subtopicId": "igcse-phys-1-2",
-    "front": "1.2 Newton’s Laws, Circular Motion & Terminal Velocity: What are the essential exam points to remember?",
-    "backBullets": [
-      "Newton’s First Law: If resultant force F = 0 N, a stationary object remains stationary and a moving object continues at constant speed in a straight line.",
-      "Newton’s Second Law: Resultant force = mass × acceleration (F = m × a). Acceleration acts in the exact direction of the resultant force.",
-      "Newton’s Third Law: Every action force has an equal and opposite reaction force acting on the two different interacting bodies."
+      "ρ = m / V; object floats if its density < density of the liquid."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-124",
+    "id": "igcse-phys-fc-1-2-3",
     "subtopicId": "igcse-phys-1-2",
-    "front": "Define: Density (1.2)",
+    "front": "Newton’s Second Law equation?",
     "backBullets": [
-      "Mass per unit volume of a substance: ρ = m ÷ V (kg/m³ or g/cm³)."
+      "F = ma (F must be the RESULTANT force)."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-125",
+    "id": "igcse-phys-fc-1-2-4",
+    "subtopicId": "igcse-phys-1-2",
+    "front": "Hooke’s Law equation and meaning of x?",
+    "backBullets": [
+      "F = kx, where x is extension (stretched length − original length) up to the limit of proportionality."
+    ]
+  },
+  {
+    "id": "igcse-phys-fc-1-2-5",
+    "subtopicId": "igcse-phys-1-2",
+    "front": "Direction of centripetal force in circular motion?",
+    "backBullets": [
+      "Always towards the centre of the circle, perpendicular to velocity."
+    ]
+  },
+  {
+    "id": "igcse-phys-fc-1-3-1",
     "subtopicId": "igcse-phys-1-3",
-    "front": "1.3 Moments, Principle of Moments & Centre of Gravity: What are the essential exam points to remember?",
+    "front": "Two conditions for an object to be in equilibrium?",
     "backBullets": [
-      "The moment of a force measures its turning effect about a pivot: Moment = Force × perpendicular distance from the pivot (M = F × d, unit: N m).",
-      "For an object to be in complete equilibrium, two conditions must hold: (1) Zero resultant force, AND (2) Zero resultant moment (total clockwise moments = total anticlockwise moments about any pivot).",
-      "Centre of gravity is the single point where the entire weight of an object appears to act. For an irregular lamina, hang it from two different pin holes with a plumb line; the intersection of the vertical lines marks the centre of gravity."
-    ],
-    "hint": "Think of a racing car: low to the ground (low CoG) and wide wheelbase (wide base) = maximum stability!"
+      "1) Zero resultant force AND 2) Total clockwise moment = Total anticlockwise moment."
+    ]
   },
   {
-    "id": "igcse-phys-fc-extra-126",
+    "id": "igcse-phys-fc-1-3-2",
     "subtopicId": "igcse-phys-1-3",
-    "front": "1.3 Momentum, Conservation & Impulse: What are the essential exam points to remember?",
+    "front": "Momentum and Impulse equations?",
     "backBullets": [
-      "Momentum is a vector quantity defined as: p = m × v (units: kg m/s or N s).",
-      "Principle of conservation of momentum: In any closed system (no external forces), total momentum before a collision or explosion equals total momentum after: m₁u₁ + m₂u₂ = m₁v₁ + m₂v₂.",
-      "Impulse is the change in momentum produced by a resultant force acting over time: Impulse = F × Δt = Δp = mv − mu."
+      "p = mv; Impulse = FΔt = Δp = mv − mu."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-127",
+    "id": "igcse-phys-fc-1-3-3",
     "subtopicId": "igcse-phys-1-3",
-    "front": "1.3 Pressure in Solids & Liquids: What are the essential exam points to remember?",
+    "front": "How do crumple zones and airbags reduce force?",
     "backBullets": [
-      "Pressure is force exerted per unit area: p = F ÷ A (SI unit: pascal, Pa, where 1 Pa = 1 N/m²). A sharp knife concentrates force over a tiny area for high pressure; snowshoes spread weight over a large area for low pressure.",
-      "Pressure in a liquid increases with depth h, liquid density ρ, and gravitational field strength g: Δp = ρ × g × Δh. Pressure acts equally in all directions at a given depth.",
-      "Hydraulic systems (e.g., car brakes) exploit the fact that liquids are incompressible, transmitting pressure equally: F₁ ÷ A₁ = F₂ ÷ A₂ (a small force on a small master piston creates a huge force on a large slave piston)."
+      "Increase impact time Δt for the same Δp, reducing force F = Δp / Δt."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-128",
+    "id": "igcse-phys-fc-1-3-4",
+    "subtopicId": "igcse-phys-1-3",
+    "front": "Formula for pressure beneath a liquid surface?",
+    "backBullets": [
+      "Δp = ρgΔh (depends only on density, g, and vertical depth)."
+    ]
+  },
+  {
+    "id": "igcse-phys-fc-1-3-5",
+    "subtopicId": "igcse-phys-1-3",
+    "front": "Two ways to make an object more stable?",
+    "backBullets": [
+      "Lower its centre of gravity and widen its base."
+    ]
+  },
+  {
+    "id": "igcse-phys-fc-1-4-1",
     "subtopicId": "igcse-phys-1-4",
-    "front": "1.4 Energy Stores, Transfers & Mechanical Work: What are the essential exam points to remember?",
+    "front": "Formulae for Kinetic Energy and Gravitational Potential Energy?",
     "backBullets": [
-      "Energy is stored in kinetic, gravitational potential, chemical, elastic (strain), nuclear, electrostatic, magnetic, and internal (thermal) stores.",
-      "Energy is transferred between stores mechanically (forces doing work), electrically (currents), by heating (conduction/convection/radiation), or by waves (light/sound).",
-      "Mechanical work done equals energy transferred when a force moves an object through distance d in the direction of the force: W = F × d = ΔE (unit: joule, J)."
-    ],
-    "hint": "Doubling speed quadruples kinetic energy (×4) because v is squared in Ek = ½mv²."
+      "E_k = ½mv² and ΔE_p = mgΔh."
+    ]
   },
   {
-    "id": "igcse-phys-fc-extra-129",
+    "id": "igcse-phys-fc-1-4-2",
     "subtopicId": "igcse-phys-1-4",
-    "front": "1.4 Power & Efficiency: What are the essential exam points to remember?",
+    "front": "Formulae for Work Done and Power?",
     "backBullets": [
-      "Power is the rate of work done or energy transferred: P = W ÷ t = ΔE ÷ t (SI unit: watt, W, where 1 W = 1 J/s).",
-      "Percentage efficiency = (Useful energy output ÷ Total energy input) × 100%, or equivalently (Useful power output ÷ Total power input) × 100%.",
-      "No real machine can exceed 100% efficiency because friction and electrical resistance always dissipate some energy into thermal stores in the surroundings."
+      "W = Fd (J); P = W / t = ΔE / t (W)."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-130",
+    "id": "igcse-phys-fc-1-4-3",
     "subtopicId": "igcse-phys-1-4",
-    "front": "1.4 Renewable & Non-Renewable Energy Resources: What are the essential exam points to remember?",
+    "front": "Percentage efficiency equation?",
     "backBullets": [
-      "Non-renewable resources (coal, oil, natural gas, nuclear fission of uranium) are finite. Fossil fuels are reliable and high energy-density but release CO₂ (greenhouse gas) and SO₂ (acid rain). Nuclear produces no CO₂ during generation but creates long-lived radioactive waste.",
-      "Renewable resources (solar PV, wind, hydroelectric, wave, tidal, geothermal, biofuels) are replenished naturally and have low running costs/carbon emissions.",
-      "Trade-offs: Solar and wind are intermittent (weather-dependent); hydroelectric is reliable and fast-response but floods valleys; geothermal is reliable only in volcanic regions."
+      "(Useful energy or power output ÷ Total input) × 100%."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-131",
+    "id": "igcse-phys-fc-1-4-4",
     "subtopicId": "igcse-phys-1-4",
-    "front": "Define: Power (1.4)",
+    "front": "Three energy resources NOT derived from the Sun?",
     "backBullets": [
-      "Rate of doing work or transferring energy: P = E ÷ t, measured in watts (W)."
+      "Nuclear, geothermal, and tidal."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-132",
+    "id": "igcse-phys-fc-1-4-5",
+    "subtopicId": "igcse-phys-1-4",
+    "front": "Speed of a frictionless falling object dropped from height h?",
+    "backBullets": [
+      "mgΔh = ½mv² → v = √(2gh) (independent of mass)."
+    ]
+  },
+  {
+    "id": "igcse-phys-fc-2-1-1",
     "subtopicId": "igcse-phys-2-1",
-    "front": "2.1 States of Matter & Brownian Motion: What are the essential exam points to remember?",
+    "front": "What causes Brownian motion of smoke specks?",
     "backBullets": [
-      "Solids: Particles tightly packed in a regular lattice, held by strong intermolecular forces, vibrating about fixed positions (fixed shape and volume).",
-      "Liquids: Particles close together but irregularly arranged, sliding past one another (fixed volume, takes container shape).",
-      "Gases: Particles far apart with negligible intermolecular forces, moving rapidly and randomly in all directions (compressible, fills container)."
-    ],
-    "hint": "Remember: Smoke particles are HUGE and slow; air molecules are TINY, invisible, and fast — collisions push the smoke randomly."
+      "Uneven, random collisions by much smaller, fast-moving invisible air molecules."
+    ]
   },
   {
-    "id": "igcse-phys-fc-extra-133",
+    "id": "igcse-phys-fc-2-1-2",
     "subtopicId": "igcse-phys-2-1",
-    "front": "2.1 Temperature, Absolute Zero & The Kelvin Scale: What are the essential exam points to remember?",
+    "front": "How do you convert Celsius to Kelvin?",
     "backBullets": [
-      "Temperature is a measure of the average kinetic energy of the particles in a substance.",
-      "Absolute zero (−273 °C or 0 K) is the lowest theoretically possible temperature, where particles have minimum (zero) kinetic energy and exert zero gas pressure.",
-      "Converting between Celsius and Kelvin: T (K) = θ (°C) + 273. For example, 27 °C = 300 K; 100 °C = 373 K."
+      "T(K) = θ(°C) + 273 (absolute zero = 0 K = −273 °C)."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-134",
+    "id": "igcse-phys-fc-2-1-3",
     "subtopicId": "igcse-phys-2-1",
-    "front": "2.1 Gas Pressure & Boyle’s Law (p₁V₁ = p₂V₂): What are the essential exam points to remember?",
+    "front": "Why does heating a sealed gas raise its pressure?",
     "backBullets": [
-      "Gas pressure arises from millions of gas particles colliding with the container walls every second. Each collision changes a particle’s momentum, exerting a force on the wall (p = F ÷ A).",
-      "Heating a fixed mass of gas at constant volume increases average particle kinetic energy and speed → particles hit the walls MORE FREQUENTLY and HARDER (greater momentum change per collision) → pressure increases.",
-      "Boyle’s Law (constant temperature & fixed mass): Pressure is inversely proportional to volume: p × V = constant, so p₁V₁ = p₂V₂."
+      "Molecules move faster, hitting container walls more frequently and harder."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-135",
+    "id": "igcse-phys-fc-2-1-4",
     "subtopicId": "igcse-phys-2-1",
-    "front": "Define: Absolute zero (2.1)",
+    "front": "State Boyle’s Law equation and condition.",
     "backBullets": [
-      "0 K (−273 °C), the temperature at which particles possess minimum possible kinetic energy."
+      "p₁V₁ = p₂V₂ for a fixed mass of gas at constant temperature."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-136",
+    "id": "igcse-phys-fc-2-1-5",
+    "subtopicId": "igcse-phys-2-1",
+    "front": "Rank thermal expansion from greatest to least.",
+    "backBullets": [
+      "Gases > Liquids > Solids."
+    ]
+  },
+  {
+    "id": "igcse-phys-fc-2-2-1",
     "subtopicId": "igcse-phys-2-2",
-    "front": "2.2 Specific Heat Capacity & Latent Heat: What are the essential exam points to remember?",
+    "front": "Specific heat capacity formula?",
     "backBullets": [
-      "Internal energy is the sum of the random kinetic energies AND intermolecular potential energies of all particles in a body.",
-      "Specific heat capacity (c) is the energy required to raise the temperature of 1 kg of a substance by 1 °C (or 1 K): ΔE = m × c × ΔT (units of c: J/(kg °C)). Water has a very high c ≈ 4,200 J/(kg °C).",
-      "During a change of state (melting or boiling), temperature remains CONSTANT on a heating curve even though energy is still supplied — this latent heat increases particles’ potential energy by weakening/breaking intermolecular bonds rather than increasing kinetic energy."
+      "ΔE = mcΔθ (c in J / (kg °C))."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-137",
+    "id": "igcse-phys-fc-2-2-2",
     "subtopicId": "igcse-phys-2-2",
-    "front": "2.2 Thermal Expansion & Real-World Applications: What are the essential exam points to remember?",
+    "front": "Why does temperature stay constant during melting or boiling?",
     "backBullets": [
-      "When heated, particles vibrate or move faster and push further apart, causing expansion: gases expand the most, liquids moderately, and solids the least.",
-      "Practical consequences: Railway tracks and bridges have expansion joints to prevent buckling in summer; overhead power cables are hung slack so they do not snap in winter.",
-      "Applications: Liquid-in-glass thermometers expand mercury/alcohol up a narrow capillary; bimetallic strips bend on heating (brass expands more than iron) to switch thermostats."
+      "Supplied energy breaks intermolecular bonds (raises potential energy) rather than increasing kinetic energy."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-138",
+    "id": "igcse-phys-fc-2-2-3",
     "subtopicId": "igcse-phys-2-2",
-    "front": "2.2 Conduction, Convection & Infrared Radiation: What are the essential exam points to remember?",
+    "front": "Why are metals far better thermal conductors than plastics?",
     "backBullets": [
-      "Conduction (mainly in solids): Vibrating particles pass kinetic energy along a lattice. Metals are exceptional thermal conductors because DELOCALISED FREE ELECTRONS diffuse rapidly through the lattice and collide with distant metal ions.",
-      "Convection (fluids — liquids & gases ONLY): Heated fluid expands, becomes LESS DENSE, and rises while cooler, denser fluid sinks to replace it, forming a convection current.",
-      "Infrared (IR) radiation: Electromagnetic waves that require NO medium and can travel through the vacuum of space. Matt black surfaces are the BEST emitters and BEST absorbers of IR; shiny silver surfaces are the WORST emitters/absorbers and BEST reflectors."
-    ],
-    "hint": "Metals conduct via Free Electrons; Fluids convect via Density differences; Vacuum transfers ONLY by Radiation!"
+      "Metals contain delocalised (free) electrons that move rapidly and transfer energy across the lattice."
+    ]
   },
   {
-    "id": "igcse-phys-fc-extra-139",
+    "id": "igcse-phys-fc-2-2-4",
     "subtopicId": "igcse-phys-2-2",
-    "front": "Define: Internal energy (2.2)",
+    "front": "Explain how a convection current forms.",
     "backBullets": [
-      "Total random kinetic and potential energy of all particles inside a system."
+      "Heated fluid expands, becomes less dense, and rises; cooler, denser fluid sinks to replace it."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-140",
+    "id": "igcse-phys-fc-2-2-5",
+    "subtopicId": "igcse-phys-2-2",
+    "front": "Best emitter/absorber vs best reflector of infrared?",
+    "backBullets": [
+      "Matte black = best emitter & absorber; Shiny silver = best reflector & worst emitter."
+    ]
+  },
+  {
+    "id": "igcse-phys-fc-3-1-1",
     "subtopicId": "igcse-phys-3-1",
-    "front": "3.1 Transverse vs Longitudinal Waves & Wave Parameters: What are the essential exam points to remember?",
+    "front": "Wave speed equation and frequency–period link?",
     "backBullets": [
-      "Waves transfer ENERGY and information without transferring matter from place to place.",
-      "Transverse waves: Vibrations are perpendicular (90°) to the direction of wave travel (examples: all electromagnetic waves, water surface waves, seismic S-waves).",
-      "Longitudinal waves: Vibrations are parallel to wave travel, forming alternating high-pressure compressions and low-pressure rarefactions (examples: sound waves, ultrasound, seismic P-waves)."
-    ],
-    "hint": "Transverse has a T (perpendicular 90° crossbar); Longitudinal is aLong the same line (parallel)."
+      "v = fλ and f = 1 / T."
+    ]
   },
   {
-    "id": "igcse-phys-fc-extra-141",
+    "id": "igcse-phys-fc-3-1-2",
     "subtopicId": "igcse-phys-3-1",
-    "front": "3.1 The Wave Equation (v = fλ): What are the essential exam points to remember?",
+    "front": "Transverse vs longitudinal oscillation direction?",
     "backBullets": [
-      "Wave speed (m/s) = frequency (Hz) × wavelength (m): v = f × λ.",
-      "Also link period and frequency: T = 1 ÷ f, so a wave of frequency 50 Hz has a time period T = 0.02 s.",
-      "Worked example: A radio wave travels at 3.0 × 10⁸ m/s with frequency 100 MHz (1.0 × 10⁸ Hz). Wavelength λ = v ÷ f = (3.0 × 10⁸) ÷ (1.0 × 10⁸) = 3.0 m."
+      "Transverse = perpendicular to energy transfer; Longitudinal = parallel to energy transfer."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-142",
+    "id": "igcse-phys-fc-3-1-3",
     "subtopicId": "igcse-phys-3-1",
-    "front": "3.1 Reflection, Refraction & Diffraction in a Ripple Tank: What are the essential exam points to remember?",
+    "front": "What changes and what stays constant during refraction?",
     "backBullets": [
-      "Reflection: Wavefronts bounce off a barrier with angle of incidence = angle of reflection (i = r); speed, frequency, and wavelength stay unchanged.",
-      "Refraction: Water waves moving from deep to shallow water SLOW DOWN, their wavelength DECREASES, and if they hit the boundary at an angle they bend TOWARD the normal (frequency stays constant).",
-      "Diffraction: Spreading of waves as they pass through a gap or around an obstacle. Diffraction is MAXIMUM when the gap width is roughly equal to the wavelength (gap ≈ λ)."
+      "Speed and wavelength change; frequency ALWAYS stays constant."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-143",
+    "id": "igcse-phys-fc-3-1-4",
     "subtopicId": "igcse-phys-3-1",
-    "front": "Define: Transverse wave (3.1)",
+    "front": "Condition for maximum diffraction through a gap?",
     "backBullets": [
-      "Wave whose oscillations are perpendicular to the direction of energy transfer."
+      "Gap width ≈ wavelength λ."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-144",
+    "id": "igcse-phys-fc-3-1-5",
+    "subtopicId": "igcse-phys-3-1",
+    "front": "Which way does a wave bend when slowing down?",
+    "backBullets": [
+      "Towards the normal (Slower Towards, Faster Away)."
+    ]
+  },
+  {
+    "id": "igcse-phys-fc-3-2-1",
     "subtopicId": "igcse-phys-3-2",
-    "front": "3.2 Reflection, Snell’s Law & Total Internal Reflection: What are the essential exam points to remember?",
+    "front": "Snell’s Law and critical angle equations?",
     "backBullets": [
-      "Plane mirrors form an image that is virtual, upright, same size as the object, laterally inverted, and the same distance behind the mirror as the object is in front.",
-      "Refractive index n = speed of light in vacuum ÷ speed in medium = sin i ÷ sin r (where i is angle in air and r is angle in glass/water). Light slows and bends TOWARD the normal entering denser glass, and AWAY leaving into air.",
-      "Total Internal Reflection (TIR) occurs ONLY when two conditions are met: (1) Light travels from a denser to a less dense medium (e.g., glass → air), AND (2) Angle of incidence exceeds the critical angle c (i > c)."
+      "n = sin i / sin r and sin c = 1 / n."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-145",
+    "id": "igcse-phys-fc-3-2-2",
     "subtopicId": "igcse-phys-3-2",
-    "front": "3.2 Thin Converging & Diverging Lenses: What are the essential exam points to remember?",
+    "front": "Two conditions for Total Internal Reflection (TIR)?",
     "backBullets": [
-      "A thin converging (convex) lens bends parallel rays to meet at the principal focus F; focal length f is the distance from the optical centre to F.",
-      "Ray diagram rules for a converging lens: (1) Ray parallel to principal axis refracts through F; (2) Ray through optical centre continues straight undeviated.",
-      "Object beyond 2F → real, inverted, diminished image (camera/eye). Object between F and 2F → real, inverted, magnified image (projector). Object closer than F → VIRTUAL, upright, magnified image (magnifying glass)."
+      "1) Denser → less dense medium AND 2) angle of incidence i > critical angle c."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-146",
+    "id": "igcse-phys-fc-3-2-3",
     "subtopicId": "igcse-phys-3-2",
-    "front": "3.2 Dispersion & The Electromagnetic Spectrum: What are the essential exam points to remember?",
+    "front": "Which lens corrects short-sight vs long-sight?",
     "backBullets": [
-      "Dispersion: A glass prism splits white light into ROYGBIV because violet light slows down slightly more (higher n) than red light and refracts through a larger angle.",
-      "All EM waves are transverse and travel through a vacuum at c = 3.0 × 10⁸ m/s. Order of INCREASING frequency (decreasing wavelength): Radio → Microwave → Infrared → Visible → Ultraviolet → X-rays → Gamma rays.",
-      "Uses: Radio (broadcasting, RFID), Microwaves (satellites, mobile phones, cooking), Infrared (thermal imaging, optical fibres, remotes), UV (security ink, sterilising water), X-rays (medical bone imaging, baggage scanners), Gamma (sterilising surgical kit, cancer radiotherapy)."
-    ],
-    "hint": "Remember EM order (long λ → short λ): Rich Men In Vegas Use X-ray Glasses (Radio, Micro, IR, Visible, UV, X-ray, Gamma)."
+      "Short-sight (myopia) → diverging (concave); Long-sight (hyperopia) → converging (convex)."
+    ]
   },
   {
-    "id": "igcse-phys-fc-extra-147",
+    "id": "igcse-phys-fc-3-2-4",
     "subtopicId": "igcse-phys-3-2",
-    "front": "Define: Snell’s Law (3.2)",
+    "front": "Order of the EM spectrum from lowest to highest frequency?",
     "backBullets": [
-      "n = sin i ÷ sin r, relating angles of incidence and refraction to refractive index."
+      "Radio, Microwaves, Infrared, Visible, Ultraviolet, X-rays, Gamma rays."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-148",
+    "id": "igcse-phys-fc-3-2-5",
+    "subtopicId": "igcse-phys-3-2",
+    "front": "Real vs virtual image?",
+    "backBullets": [
+      "Real = rays intersect, can be projected on a screen; Virtual = rays appear to diverge, cannot be caught on a screen."
+    ]
+  },
+  {
+    "id": "igcse-phys-fc-3-3-1",
     "subtopicId": "igcse-phys-3-3",
-    "front": "3.3 Production, Transmission & Speed of Sound: What are the essential exam points to remember?",
+    "front": "Human audible frequency range and ultrasound definition?",
     "backBullets": [
-      "Sound is produced by vibrating sources and travels as a LONGITUDINAL wave of compressions and rarefactions. Sound CANNOT travel through a vacuum (demonstrated by the bell-in-a-vacuum-jar experiment).",
-      "Speed of sound depends on how closely packed particles are: fastest in solids (~5,000 m/s in steel), moderate in liquids (~1,500 m/s in water), slowest in gases (~330–340 m/s in air at room temperature).",
-      "Measuring speed of sound via echoes: Clap in front of a wall at distance d and time the echo t; the sound travels THERE AND BACK (total distance = 2d), so v = 2d ÷ t."
+      "Human range: 20 Hz to 20,000 Hz (20 kHz); Ultrasound: > 20,000 Hz."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-149",
+    "id": "igcse-phys-fc-3-3-2",
     "subtopicId": "igcse-phys-3-3",
-    "front": "3.3 Pitch, Loudness & Ultrasound Applications: What are the essential exam points to remember?",
+    "front": "Echo / sonar depth formula?",
     "backBullets": [
-      "Human audible hearing range is approximately 20 Hz to 20,000 Hz (20 kHz).",
-      "Higher FREQUENCY produces a higher PITCH (closer waves on an oscilloscope trace). Larger AMPLITUDE produces a LOUDER sound (taller peaks on an oscilloscope trace).",
-      "Ultrasound is sound with a frequency GREATER than 20 kHz (above human hearing)."
-    ],
-    "hint": "Frequency = Pitch (more waves squeezed on screen); Amplitude = Loudness (taller wave peaks)."
+      "d = (v × t) / 2 (dividing by 2 for the out-and-back journey)."
+    ]
   },
   {
-    "id": "igcse-phys-fc-extra-150",
+    "id": "igcse-phys-fc-3-3-3",
     "subtopicId": "igcse-phys-3-3",
-    "front": "Define: Audible range (3.3)",
+    "front": "Order of sound speed in solids, liquids, and gases?",
     "backBullets": [
-      "Range of sound frequencies detectable by a healthy human ear: 20 Hz to 20 kHz."
+      "Solids (~5000 m/s) > Liquids (~1500 m/s) > Gases (~340 m/s); 0 in a vacuum."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-151",
+    "id": "igcse-phys-fc-3-3-4",
     "subtopicId": "igcse-phys-3-3",
-    "front": "Define: Ultrasound (3.3)",
+    "front": "Which wave property controls pitch vs loudness?",
     "backBullets": [
-      "Sound waves with frequency exceeding 20 kHz, used in medical imaging and flaw detection."
+      "Frequency controls pitch; Amplitude controls loudness."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-152",
+    "id": "igcse-phys-fc-3-3-5",
+    "subtopicId": "igcse-phys-3-3",
+    "front": "Why is ultrasound safe for foetal imaging?",
+    "backBullets": [
+      "It is non-ionising (does not cause DNA mutation like X-rays)."
+    ]
+  },
+  {
+    "id": "igcse-phys-fc-4-1-1",
     "subtopicId": "igcse-phys-4-1",
-    "front": "4.1 Electrostatics, Current & Charge (Q = It): What are the essential exam points to remember?",
+    "front": "Charge, Ohm’s Law, and Electrical Power formulae?",
     "backBullets": [
-      "Charging insulators by friction transfers NEGATIVELY CHARGED ELECTRONS only (protons never move in solids). Gaining electrons makes an object negative; losing electrons leaves it positive. Like charges repel; opposite charges attract.",
-      "An electric field is a region where an electric charge experiences a force; field lines always point away from positive charges and toward negative charges.",
-      "Electric current (I, amperes A) is the rate of flow of electric charge: I = Q ÷ t (or Q = I × t, with charge Q in coulombs, C)."
+      "Q = It, V = IR, P = IV = I²R, E = IVt."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-153",
+    "id": "igcse-phys-fc-4-1-2",
     "subtopicId": "igcse-phys-4-1",
-    "front": "4.1 EMF, Potential Difference & Ohm’s Law (V = IR): What are the essential exam points to remember?",
+    "front": "Direction of conventional current vs electron flow?",
     "backBullets": [
-      "Electromotive force (e.m.f., E) is the electrical work done by a source in moving unit charge around a complete circuit: E = W ÷ Q (unit: volt, V, where 1 V = 1 J/C).",
-      "Potential difference (p.d., V) is the work done by unit charge passing through a component: V = W ÷ Q. Voltmeters are connected in PARALLEL; ammeters in SERIES.",
-      "Resistance R = V ÷ I (unit: ohm, Ω). For a uniform metal wire at constant temperature, R is directly proportional to length L and inversely proportional to cross-sectional area A (doubling diameter quadruples area, so R drops to ¼!)."
-    ],
-    "hint": "Longer wire = more obstacles (higher R); Thicker wire = wider motorway (lower R)."
+      "Conventional current: + to −; Electrons: − to +."
+    ]
   },
   {
-    "id": "igcse-phys-fc-extra-154",
+    "id": "igcse-phys-fc-4-1-3",
     "subtopicId": "igcse-phys-4-1",
-    "front": "4.1 Electrical Power & Kilowatt-Hours: What are the essential exam points to remember?",
+    "front": "How does wire resistance depend on length L and area A?",
     "backBullets": [
-      "Electrical power: P = I × V = I²R = V² ÷ R (watts, W).",
-      "Electrical energy transferred: E = P × t = I × V × t (joules, J).",
-      "Domestic electricity bills measure energy in kilowatt-hours (kWh): 1 kWh = 1,000 W × 3,600 s = 3.6 MJ. Cost = Power (kW) × Time (h) × Price per kWh."
+      "R ∝ L and R ∝ 1/A (longer = higher R; thicker = lower R)."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-155",
+    "id": "igcse-phys-fc-4-1-4",
     "subtopicId": "igcse-phys-4-1",
-    "front": "Define: Electric current (4.1)",
+    "front": "Shape of I–V graph for a filament lamp?",
     "backBullets": [
-      "Rate of flow of charge: I = Q ÷ t, measured in amperes (A)."
+      "S-curve through (0,0) flattening at higher V because heating increases resistance."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-156",
+    "id": "igcse-phys-fc-4-1-5",
+    "subtopicId": "igcse-phys-4-1",
+    "front": "How is an ammeter vs voltmeter connected?",
+    "backBullets": [
+      "Ammeter in series; Voltmeter in parallel."
+    ]
+  },
+  {
+    "id": "igcse-phys-fc-4-2-1",
     "subtopicId": "igcse-phys-4-2",
-    "front": "4.2 Series vs Parallel Circuits: What are the essential exam points to remember?",
+    "front": "Series vs parallel combined resistance equations?",
     "backBullets": [
-      "Series circuits: Current is identical at every point (I = I₁ = I₂). Supply p.d. is shared across components (V_total = V₁ + V₂). Combined resistance adds up: R_total = R₁ + R₂.",
-      "Parallel circuits: Potential difference is identical across every branch (V = V₁ = V₂). Current from the source equals the sum of branch currents (I_total = I₁ + I₂).",
-      "Combined resistance of two resistors in parallel: 1/R_total = 1/R₁ + 1/R₂ (or R_total = (R₁R₂)/(R₁+R₂)). R_total is ALWAYS smaller than the smallest individual branch resistor!"
-    ],
-    "hint": "Series = Same current, Shared voltage; Parallel = Same voltage, Split current, Lower total R."
+      "Series: R = R₁ + R₂; Parallel: 1/R = 1/R₁ + 1/R₂."
+    ]
   },
   {
-    "id": "igcse-phys-fc-extra-157",
+    "id": "igcse-phys-fc-4-2-2",
     "subtopicId": "igcse-phys-4-2",
-    "front": "4.2 Sensing Components & Potential Dividers: What are the essential exam points to remember?",
+    "front": "Potential divider formula?",
     "backBullets": [
-      "NTC Thermistor: As temperature increases, its resistance decreases (used in fire alarms and incubators).",
-      "Light-Dependent Resistor (LDR): As light intensity INCREASES, its resistance DECREASES (bright light → low R; darkness → high R; used in automatic street lamps).",
-      "Potential divider: Two resistors R₁ and R₂ in series divide the supply voltage in the exact ratio of their resistances: V₁ ÷ V₂ = R₁ ÷ R₂ (or V_out = V_in × R₂ / (R₁ + R₂))."
+      "V₁ / V₂ = R₁ / R₂ (larger resistance gets larger share of supply voltage)."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-158",
+    "id": "igcse-phys-fc-4-2-3",
     "subtopicId": "igcse-phys-4-2",
-    "front": "4.2 Electrical Hazards & Mains Safety: What are the essential exam points to remember?",
+    "front": "How do NTC thermistors and LDRs respond to rising T / light?",
     "backBullets": [
-      "Mains wiring: Live wire (brown, ~230 V AC), Neutral wire (blue, ~0 V, completes circuit), Earth wire (green/yellow, safety path to ground). Switches and fuses MUST ALWAYS be placed in the LIVE wire!",
-      "Fuse: Contains a thin wire that melts and breaks the circuit if current exceeds its rating (pick the fuse rating just ABOVE normal operating current, e.g., 5 A fuse for a 4.2 A appliance).",
-      "Circuit breakers (trip switches / MCBs): Use an electromagnet to trip open faster than a fuse and can be reset easily without replacement."
+      "Thermistor: T up → R down; LDR: Light up → R down."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-159",
+    "id": "igcse-phys-fc-4-2-4",
     "subtopicId": "igcse-phys-4-2",
-    "front": "Define: Parallel circuit (4.2)",
+    "front": "Which wire must contain the fuse and switch?",
     "backBullets": [
-      "Circuit with multiple branches where each branch receives full supply p.d. and total resistance is reduced."
+      "The LIVE wire (brown), so the appliance is isolated from 230 V when blown/off."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-160",
+    "id": "igcse-phys-fc-4-2-5",
+    "subtopicId": "igcse-phys-4-2",
+    "front": "How do earthing and a fuse protect against a live metal case?",
+    "backBullets": [
+      "Low-resistance earth wire carries a large fault current to Earth, melting the fuse and cutting off the live supply."
+    ]
+  },
+  {
+    "id": "igcse-phys-fc-4-3-1",
     "subtopicId": "igcse-phys-4-3",
-    "front": "4.3 Magnetic Fields, Electromagnets & The Motor Effect: What are the essential exam points to remember?",
+    "front": "Fleming’s Left-Hand Rule fingers?",
     "backBullets": [
-      "Magnetic field lines run from NORTH to SOUTH outside a magnet; closer spacing indicates a stronger field. Soft iron is easily magnetised and demagnetised (ideal for electromagnets and transformer cores); steel retains magnetism (permanent magnets).",
-      "A current-carrying wire creates concentric circular magnetic field lines (Right-Hand Grip Rule). Coiling the wire into a solenoid with a soft-iron core builds a strong controllable electromagnet.",
-      "The Motor Effect: A current-carrying conductor placed at right angles to a magnetic field experiences a force. Direction is found by Fleming’s LEFT-Hand Rule: ThuMb = Motion/Force, First finger = Field (N→S), SeCond finger = Conventional current (+→−)."
-    ],
-    "hint": "Use your LEFT hand for Motors (power IN → Motion OUT) and note that reversing EITHER current OR field reverses the force (reversing both leaves direction unchanged)."
+      "Thumb = Motion/Force, First = Field (N→S), Second = Current (+→−)."
+    ]
   },
   {
-    "id": "igcse-phys-fc-extra-161",
+    "id": "igcse-phys-fc-4-3-2",
     "subtopicId": "igcse-phys-4-3",
-    "front": "4.3 Electromagnetic Induction & AC Generators: What are the essential exam points to remember?",
+    "front": "Role of split-ring commutator in a DC motor?",
     "backBullets": [
-      "Electromagnetic induction: Whenever a conductor cuts across magnetic field lines (or magnetic flux through a coil changes), an e.m.f. is INDUCED across its ends.",
-      "Increase induced e.m.f. by: (1) moving the magnet/coil faster, (2) using a stronger magnet, or (3) using more turns on the coil.",
-      "Lenz’s Law (conservation of energy): The direction of an induced current always OPPOSES the change producing it (e.g., pushing a North pole into a coil induces a North pole at that end to repel it)."
+      "Reverses coil current every half-turn so turning force stays in the same rotational direction."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-162",
+    "id": "igcse-phys-fc-4-3-3",
     "subtopicId": "igcse-phys-4-3",
-    "front": "4.3 Transformers & High-Voltage Power Transmission: What are the essential exam points to remember?",
+    "front": "Transformer voltage and ideal power equations?",
     "backBullets": [
-      "A transformer consists of primary and secondary coils wound on a laminated soft-iron core. Alternating current in the primary produces a continuously changing magnetic field in the iron core, inducing an alternating e.m.f. in the secondary coil (transformers ONLY work with AC!).",
-      "Transformer turns ratio equation: Vp ÷ Vs = Np ÷ Ns. Step-up transformers have Ns > Np (increase V); step-down transformers have Ns < Np (decrease V).",
-      "For an ideal (100% efficient) transformer: Input power = Output power → Vp × Ip = Vs × Is."
+      "V_p / V_s = N_p / N_s and I_p V_p = I_s V_s."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-163",
+    "id": "igcse-phys-fc-4-3-4",
     "subtopicId": "igcse-phys-4-3",
-    "front": "Define: Motor effect (4.3)",
+    "front": "Why do national grids transmit at high voltage?",
     "backBullets": [
-      "Force experienced by a current-carrying wire placed across a magnetic field."
+      "Lowers current I for the same power, drastically reducing cable heat loss P = I²R."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-164",
+    "id": "igcse-phys-fc-4-3-5",
+    "subtopicId": "igcse-phys-4-3",
+    "front": "Why do transformers need A.C. instead of D.C.?",
+    "backBullets": [
+      "Only A.C. produces a continuously changing magnetic field in the soft-iron core to induce EMF."
+    ]
+  },
+  {
+    "id": "igcse-phys-fc-5-1-1",
     "subtopicId": "igcse-phys-5-1",
-    "front": "5.1 Rutherford Scattering & Subatomic Particles: What are the essential exam points to remember?",
+    "front": "Three conclusions from Rutherford’s alpha-scattering experiment?",
     "backBullets": [
-      "Geiger–Marsden–Rutherford alpha scattering experiment fired positive alpha particles at ultra-thin gold foil in a vacuum:",
-      "Observation 1: Most alpha particles passed straight through undeflected → Conclusion: The atom is mostly EMPTY SPACE.",
-      "Observation 2: A tiny fraction deflected through large angles (>90°, some bouncing straight back) → Conclusion: Nearly all mass and ALL POSITIVE CHARGE are concentrated in a tiny, dense central NUCLEUS."
-    ],
-    "hint": "Link the 3 Rutherford clues: Straight through = Empty space; Deflected = Positive core; Bounced back = Dense heavy nucleus."
+      "Atom is mostly empty space; nucleus is tiny, dense (most mass), and positively charged."
+    ]
   },
   {
-    "id": "igcse-phys-fc-extra-165",
+    "id": "igcse-phys-fc-5-1-2",
     "subtopicId": "igcse-phys-5-1",
-    "front": "5.1 Nuclide Notation & Isotopes: What are the essential exam points to remember?",
+    "front": "How do you find neutron number from ᴬ_Z X?",
     "backBullets": [
-      "Nuclide notation ᴬ_Z X: Proton (atomic) number Z = number of protons (defines the element); Nucleon (mass) number A = protons + neutrons; Neutron number N = A − Z.",
-      "Isotopes are atoms of the SAME element having the SAME number of protons (Z) but DIFFERENT numbers of neutrons (A − Z). Example: Carbon-12 (6p, 6n) and Carbon-14 (6p, 8n).",
-      "Isotopes have identical chemical properties (same electron configuration) but different masses and nuclear stability (radioisotopes have unstable nuclei)."
+      "Neutrons = A − Z (nucleon number minus proton number)."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-166",
+    "id": "igcse-phys-fc-5-1-3",
     "subtopicId": "igcse-phys-5-1",
-    "front": "5.1 Nuclear Fission & Nuclear Fusion: What are the essential exam points to remember?",
+    "front": "Define isotopes.",
     "backBullets": [
-      "Nuclear FISSION: A heavy unstable nucleus (e.g., Uranium-235) absorbs a slow neutron and SPLITS into two smaller daughter nuclei, releasing 2–3 fast neutrons and vast kinetic/thermal energy. Excess neutrons can trigger a chain reaction (controlled in nuclear reactors using boron control rods and graphite/water moderators).",
-      "Nuclear FUSION: Two light nuclei (e.g., hydrogen isotopes deuterium and tritium) JOIN at extremely high temperatures and pressures (as in the core of the Sun) to form a heavier helium nucleus, releasing even greater energy per kg.",
-      "Fusion requires immense temperature so positively charged nuclei have enough kinetic energy to overcome electrostatic repulsion and get close enough for the strong nuclear force to bind them."
+      "Atoms of the same element with the same proton number (Z) but different neutron numbers."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-167",
+    "id": "igcse-phys-fc-5-1-4",
     "subtopicId": "igcse-phys-5-1",
-    "front": "Define: Nucleon number (A) (5.1)",
+    "front": "Nuclear fission vs nuclear fusion?",
     "backBullets": [
-      "Total number of protons plus neutrons in an atomic nucleus."
+      "Fission splits heavy U-235 into smaller nuclei + neutrons; Fusion joins light hydrogen nuclei into helium."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-168",
+    "id": "igcse-phys-fc-5-1-5",
+    "subtopicId": "igcse-phys-5-1",
+    "front": "Why does nuclear fusion require extreme temperature & pressure?",
+    "backBullets": [
+      "To overcome strong electrostatic repulsion between positively charged nuclei."
+    ]
+  },
+  {
+    "id": "igcse-phys-fc-5-2-1",
     "subtopicId": "igcse-phys-5-2",
-    "front": "5.2 Properties of Alpha, Beta & Gamma Radiation: What are the essential exam points to remember?",
+    "front": "Composition, charge, and absorber of α, β⁻, and γ?",
     "backBullets": [
-      "Background radiation comes from natural sources (radon gas from rocks, cosmic rays, food/buildings) and artificial sources (medical X-rays/scans). Always subtract background count rate before half-life calculations!",
-      "Alpha (α, ⁴₂He nucleus): Charge +2, heavy, VERY strongly ionising, stopped by paper or ~5 cm of air.",
-      "Beta-minus (β⁻, ⁰₋₁e fast electron emitted when a neutron turns into a proton + electron): Charge −1, moderately ionising, stopped by ~3–5 mm of aluminium."
-    ],
-    "hint": "Penetration order: Paper stops Alpha, Aluminium stops Beta, Lead reduces Gamma (P-A-L). Ionising power is the EXACT reverse!"
+      "α (⁴₂He, +2, paper); β⁻ (⁰₋₁e, −1, aluminium); γ (EM wave, 0, thick lead)."
+    ]
   },
   {
-    "id": "igcse-phys-fc-extra-169",
+    "id": "igcse-phys-fc-5-2-2",
     "subtopicId": "igcse-phys-5-2",
-    "front": "5.2 Balanced Nuclear Decay Equations: What are the essential exam points to remember?",
+    "front": "Effect of alpha vs beta decay on A and Z?",
     "backBullets": [
-      "Both total nucleon number (top) and total proton number (bottom) MUST balance on both sides of a nuclear equation.",
-      "Alpha decay (loses 2p and 2n): ᴬ_Z X → ᴬ⁻⁴_{Z−2} Y + ⁴₂α. Example: ²³⁸₉₂U → ²³⁴₉₀Th + ⁴₂He.",
-      "Beta-minus decay (1 neutron → 1 proton + 1 electron): ᴬ_Z X → ᴬ_{Z+1} Y + ⁰₋₁β. Nucleon number A stays constant, proton number Z INCREASES by 1! Example: ¹⁴₆C → ¹⁴₇N + ⁰₋₁e."
+      "Alpha: A − 4, Z − 2; Beta-minus: A unchanged, Z + 1."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-170",
+    "id": "igcse-phys-fc-5-2-3",
     "subtopicId": "igcse-phys-5-2",
-    "front": "5.2 Half-Life, Uses & Safe Handling: What are the essential exam points to remember?",
+    "front": "Define half-life.",
     "backBullets": [
-      "Radioactive decay is spontaneous and RANDOM — it is impossible to predict when a single nucleus will decay, and decay rate is unaffected by temperature or chemical bonding.",
-      "Half-life (t_½) is the time taken for HALF of the unstable nuclei in a sample to decay (or for the corrected count rate/activity in becquerels, Bq, to halve).",
-      "Worked example: A sample has corrected activity 640 Bq and half-life 6 hours. After 18 hours (3 half-lives): 640 → 320 → 160 → 80 Bq."
+      "Time taken for half the unstable nuclei in a sample to decay (or corrected count rate to halve)."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-171",
+    "id": "igcse-phys-fc-5-2-4",
     "subtopicId": "igcse-phys-5-2",
-    "front": "Define: Alpha particle (5.2)",
+    "front": "Crucial first step before computing half-life from raw counts?",
     "backBullets": [
-      "Helium nucleus (2 protons + 2 neutrons), strongly ionising with short range (stopped by paper)."
+      "Subtract background count rate from every reading first!"
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-172",
+    "id": "igcse-phys-fc-5-2-5",
+    "subtopicId": "igcse-phys-5-2",
+    "front": "Why are gamma emitters with short half-lives used as medical tracers?",
+    "backBullets": [
+      "Gamma penetrates out of the body with low ionisation, and short half-life minimises patient dose."
+    ]
+  },
+  {
+    "id": "igcse-phys-fc-6-1-1",
     "subtopicId": "igcse-phys-6-1",
-    "front": "6.1 Earth’s Motion, Seasons & The Moon: What are the essential exam points to remember?",
+    "front": "What causes Earth’s seasons?",
     "backBullets": [
-      "Day and night: Earth spins on its tilted axis (23.5°) once every 24 hours; the Sun appears to rise in the east and set in the west.",
-      "Seasons: Earth orbits the Sun once every ~365.25 days while keeping its 23.5° axial tilt fixed. When the Northern Hemisphere tilts TOWARD the Sun, it receives more direct sunlight over longer days (summer), while the Southern Hemisphere experiences winter.",
-      "Phases of the Moon (~27.3–29.5 day lunar orbit): As the Moon orbits Earth, we view varying fractions of its sunlit half (New Moon → Waxing Crescent → First Quarter → Full Moon → Waning)."
+      "Earth’s 23.5° axial tilt as it orbits the Sun every 365.25 days."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-173",
+    "id": "igcse-phys-fc-6-1-2",
     "subtopicId": "igcse-phys-6-1",
-    "front": "6.1 The Solar System & Accretion Model: What are the essential exam points to remember?",
+    "front": "Order of the 8 planets from the Sun?",
     "backBullets": [
-      "Order of the 8 planets from the Sun: Mercury, Venus, Earth, Mars (4 small, rocky, dense inner planets) — Asteroid Belt — Jupiter, Saturn, Uranus, Neptune (4 large, cold, low-density gas/ice giants).",
-      "Accretion model of Solar System formation: A rotating nebula of gas and dust collapsed under gravity into a swirling accretion disc. The hot dense core formed the Sun; near the Sun only rocky/metallic elements with high melting points condensed (rocky planets), whereas further out cooler gases and ices clumped into gas giants.",
-      "Gravitational field strength at a planet’s surface increases with planet mass, and gravity between two bodies weakens rapidly as distance increases."
-    ],
-    "hint": "Planet order: My Very Easy Method Just Speeds Up Naming (Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune)."
+      "Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune."
+    ]
   },
   {
-    "id": "igcse-phys-fc-extra-174",
+    "id": "igcse-phys-fc-6-1-3",
     "subtopicId": "igcse-phys-6-1",
-    "front": "6.1 Orbital Speed & Elliptical Comet Orbits: What are the essential exam points to remember?",
+    "front": "Average orbital speed equation?",
     "backBullets": [
-      "Average orbital speed for a circular orbit of radius r and orbital period T: v = (2 × π × r) ÷ T.",
-      "As orbital radius increases across the Solar System, the Sun’s gravitational pull weakens, so outer planets orbit much MORE SLOWLY and have much LONGER orbital periods (years) than inner planets.",
-      "Comets follow highly elliptical orbits with the Sun off-centre at one focus. By conservation of energy, as a comet falls closer to the Sun its gravitational potential energy converts into kinetic energy — so it travels FASTEST at closest approach and SLOWEST far out."
+      "v = 2πr / T."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-175",
+    "id": "igcse-phys-fc-6-1-4",
     "subtopicId": "igcse-phys-6-1",
-    "front": "Define: Orbital speed (6.1)",
+    "front": "Where in its elliptical orbit does a comet move fastest?",
     "backBullets": [
-      "Average speed along a circular orbit: v = 2πr ÷ T."
+      "Closest to the Sun (minimum GPE → maximum KE)."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-176",
-    "subtopicId": "igcse-phys-6-2",
-    "front": "6.2 Light-Years & Life Cycle of Stars: What are the essential exam points to remember?",
+    "id": "igcse-phys-fc-6-1-5",
+    "subtopicId": "igcse-phys-6-1",
+    "front": "Why are inner planets rocky while outer planets are gas/ice giants?",
     "backBullets": [
-      "A light-year is a unit of DISTANCE (not time!) — the distance light travels in a vacuum in one year: 1 light-year ≈ 9.5 × 10¹⁵ m. Our Sun sits in the Milky Way galaxy (~100,000 light-years across).",
-      "Star birth: Gravity pulls dust and hydrogen gas in a NEBULA inward to form a dense hot PROTOSTAR. Once core temperature reaches millions of kelvin, hydrogen nuclear FUSION begins.",
-      "Main Sequence Star (stable phase like the Sun): Outward radiation/thermal pressure from hydrogen fusion exactly BALANCES inward gravitational collapse for billions of years."
-    ],
-    "hint": "Sun-like path: Nebula → Protostar → Main Sequence → Red Giant → Planetary Nebula → White Dwarf. Massive path: ... → Red Supergiant → Supernova → Neutron Star / Black Hole."
-  },
-  {
-    "id": "igcse-phys-fc-extra-177",
-    "subtopicId": "igcse-phys-6-2",
-    "front": "6.2 Red-Shift, CMBR & The Big Bang Theory: What are the essential exam points to remember?",
-    "backBullets": [
-      "Red-shift: Light emitted by distant galaxies is shifted toward the RED (longer wavelength, lower frequency) end of the spectrum because the space between galaxies is expanding and the galaxies are receding away from us.",
-      "Key observation: The FURTHER away a galaxy is, the GREATER its red-shift — meaning distant galaxies are receding FASTER than closer ones, proving the Universe is expanding.",
-      "Cosmic Microwave Background Radiation (CMBR): Uniform microwave radiation arriving from every direction in space. Originally high-energy gamma radiation emitted shortly after the Big Bang (~13.8 billion years ago), it has been stretched into the microwave region by billions of years of cosmic expansion."
+      "High temperature near the young Sun in the accretion disc allowed only high-melting-point rocks/metals to condense close in."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-178",
+    "id": "igcse-phys-fc-6-2-1",
     "subtopicId": "igcse-phys-6-2",
-    "front": "6.2 Hubble’s Law & Age of the Universe (CIE Extended): What are the essential exam points to remember?",
+    "front": "Life cycle of a Sun-like star vs a massive star?",
     "backBullets": [
-      "Hubble’s Law states that a galaxy’s recession speed v is directly proportional to its distance d from Earth: v = H₀ × d, where H₀ = v ÷ d is the Hubble constant.",
-      "Current measured value of the Hubble constant: H₀ ≈ 2.2 × 10⁻¹⁸ s⁻¹.",
-      "Estimating the age of the Universe: Assuming galaxies have expanded at speed v over time t = d ÷ v, we obtain Age of Universe ≈ 1 ÷ H₀ ≈ 1 ÷ (2.2 × 10⁻¹⁸ s⁻¹) ≈ 4.5 × 10¹⁷ s ≈ 1.4 × 10¹⁰ years (~14 billion years)."
+      "Sun-like: Main Seq → Red Giant → White Dwarf; Massive: Main Seq → Red Supergiant → Supernova → Neutron Star / Black Hole."
     ]
   },
   {
-    "id": "igcse-phys-fc-extra-179",
+    "id": "igcse-phys-fc-6-2-2",
     "subtopicId": "igcse-phys-6-2",
-    "front": "Define: Main sequence star (6.2)",
+    "front": "What is a light-year?",
     "backBullets": [
-      "Stable star where inward gravity is balanced by outward pressure from core hydrogen fusion."
+      "The DISTANCE light travels in a vacuum in 1 year (≈ 9.5 × 10¹⁵ m)."
+    ]
+  },
+  {
+    "id": "igcse-phys-fc-6-2-3",
+    "subtopicId": "igcse-phys-6-2",
+    "front": "What does cosmological red-shift show?",
+    "backBullets": [
+      "Light from distant galaxies is stretched to longer wavelengths because space is expanding; further galaxies recede faster."
+    ]
+  },
+  {
+    "id": "igcse-phys-fc-6-2-4",
+    "subtopicId": "igcse-phys-6-2",
+    "front": "What is CMBR?",
+    "backBullets": [
+      "Cosmic Microwave Background Radiation — uniform microwave afterglow from the hot early Big Bang stretched by expansion."
+    ]
+  },
+  {
+    "id": "igcse-phys-fc-6-2-5",
+    "subtopicId": "igcse-phys-6-2",
+    "front": "Hubble’s Law and age of the Universe formula?",
+    "backBullets": [
+      "H₀ = v / d (≈ 2.2 × 10⁻¹⁸ s⁻¹); Age of Universe = 1 / H₀ ≈ 14 billion years."
     ]
   }
 ];
 
 export const IGCSE_PHYSICS_CHEAT_SHEETS: CheatSheetItem[] = [
   {
-    "id": "cs-igcse-phys-topic-1",
+    "id": "igcse-phys-cs-1",
     "slug": "topic-1-motion-forces-energy",
-    "title": "Topic 1: Motion, Forces & Energy — Complete Cheat Sheet",
+    "title": "1. Motion, Forces & Energy Cheat Sheet",
     "topicNumber": 1,
     "topicName": "Motion, Forces & Energy",
-    "summary": "One-page revision summary covering 1.1 Physical Quantities, Speed & Motion Graphs; 1.2 Mass, Weight, Density, Forces & Newton’s Laws; 1.3 Moments, Momentum, Impulse & Pressure; 1.4 Energy Stores, Work Done, Power & Efficiency.",
-    "accentColor": "#8d22cc",
+    "summary": "Kinematics, Newton’s laws, Hooke’s law, moments, momentum, pressure, work & power.",
+    "accentColor": "#7C3AED",
     "sections": [
       {
-        "heading": "1.1 Physical Quantities, Speed & Motion Graphs",
-        "formula": "v = s/t  |  a = (v − u)/t  |  W = mg  |  ρ = m/V  |  F = ma  |  F = kx",
+        "heading": "Key Formulae & Core Rules",
         "points": [
-          "Distinguish between scalar and vector quantities and find the resultant of two perpendicular vectors.",
-          "Calculate average speed (v = s/t) and acceleration (a = (v − u)/t) with correct SI units.",
-          "Tip: Think V for Vector = Value + direction arrow; S for Scalar = Size only."
+          "a = (v − u)/t | v = s/t",
+          "W = mg | ρ = m/V | F = ma | F = kx",
+          "M = Fd | p = mv | FΔt = Δp",
+          "p = F/A | Δp = ρgΔh",
+          "E_k = ½mv² | ΔE_p = mgΔh | W = Fd | P = W/t"
         ]
       },
       {
-        "heading": "1.2 Mass, Weight, Density, Forces & Newton’s Laws",
-        "formula": "M = Fd  |  p = mv  |  FΔt = Δp  |  Δp = ρgΔh  |  Ek = ½mv²  |  ΔEp = mgΔh  |  P = E/t",
+        "heading": "Common Exam Traps to Avoid",
         "points": [
-          "Calculate weight using W = mg and density using ρ = m/V, including displacement measurements.",
-          "Apply Hooke’s Law (F = kx) and identify the limit of proportionality on a load–extension graph.",
-          "Watch out: Students often say \"weight is measured in kg\". Weight is a FORCE measured in newtons (N) using a newtonmeter; mass is measured in kilograms (kg)."
+          "In F = kx use EXTENSION, not total length",
+          "Area under speed-time graph = distance (gradient = acceleration)"
         ]
       },
       {
-        "heading": "1.3 Moments, Momentum, Impulse & Pressure",
-        "formula": "v = s/t  |  a = (v − u)/t  |  W = mg  |  ρ = m/V  |  F = ma  |  F = kx",
+        "heading": "Top Exam Technique Tips",
         "points": [
-          "Apply the principle of moments (clockwise = anticlockwise) to solve balanced beam problems.",
-          "Use p = mv, conservation of momentum, and F = Δp/Δt to explain crumple zones and solve collisions.",
-          "Tip: Think of a racing car: low to the ground (low CoG) and wide wheelbase (wide base) = maximum stability!"
-        ]
-      },
-      {
-        "heading": "1.4 Energy Stores, Work Done, Power & Efficiency",
-        "formula": "M = Fd  |  p = mv  |  FΔt = Δp  |  Δp = ρgΔh  |  Ek = ½mv²  |  ΔEp = mgΔh  |  P = E/t",
-        "points": [
-          "Apply W = Fd, Ek = ½mv², and ΔEp = mgΔh, including equating Ep lost to Ek gained.",
-          "Calculate power (P = E/t) and percentage efficiency using Sankey diagrams.",
-          "Tip: Doubling speed quadruples kinetic energy (×4) because v is squared in Ek = ½mv²."
+          "Always subtract opposing forces before F = ma",
+          "Assign + and − signs to opposite directions in momentum problems"
         ]
       }
     ]
   },
   {
-    "id": "cs-igcse-phys-topic-2",
+    "id": "igcse-phys-cs-2",
     "slug": "topic-2-thermal-physics",
-    "title": "Topic 2: Thermal Physics — Complete Cheat Sheet",
+    "title": "2. Thermal Physics Cheat Sheet",
     "topicNumber": 2,
     "topicName": "Thermal Physics",
-    "summary": "One-page revision summary covering 2.1 Kinetic Particle Model of Matter & Gas Laws; 2.2 Specific Heat Capacity, Latent Heat & Thermal Transfer.",
-    "accentColor": "#1a96f3",
+    "summary": "Kinetic model, Brownian motion, Boyle’s law, SHC, conduction, convection & radiation.",
+    "accentColor": "#7C3AED",
     "sections": [
       {
-        "heading": "2.1 Kinetic Particle Model of Matter & Gas Laws",
-        "formula": "T(K) = θ(°C) + 273  |  p₁V₁ = p₂V₂ (Boyle’s Law)",
+        "heading": "Key Formulae & Core Rules",
         "points": [
-          "Describe particle arrangement, motion, and forces in solids, liquids, and gases.",
-          "Explain Brownian motion as evidence for the kinetic particle model.",
-          "Tip: Remember: Smoke particles are HUGE and slow; air molecules are TINY, invisible, and fast — collisions push the smoke randomly."
+          "T(K) = θ(°C) + 273",
+          "p₁V₁ = p₂V₂ (constant T)",
+          "ΔE = mcΔθ"
         ]
       },
       {
-        "heading": "2.2 Specific Heat Capacity, Latent Heat & Thermal Transfer",
-        "formula": "c = ΔE ÷ (mΔT)  |  ΔE = mcΔT",
+        "heading": "Common Exam Traps to Avoid",
         "points": [
-          "Use ΔE = mcΔT and explain why temperature remains constant during melting and boiling.",
-          "Explain why evaporation cools a liquid and list factors increasing its rate (temperature, surface area, draught).",
-          "Watch out: On a flat plateau of a heating curve, NEVER say \"no energy is being absorbed\" — energy IS absorbed to break intermolecular bonds (potential energy rises while kinetic energy/temperature stays flat)."
+          "Never say \"heat rises\" — say warmer fluid expands, becomes less dense, and rises",
+          "Evaporation cools because fastest molecules escape"
+        ]
+      },
+      {
+        "heading": "Top Exam Technique Tips",
+        "points": [
+          "Matte black = best emitter & absorber; shiny silver = best reflector"
         ]
       }
     ]
   },
   {
-    "id": "cs-igcse-phys-topic-3",
+    "id": "igcse-phys-cs-3",
     "slug": "topic-3-waves-optics",
-    "title": "Topic 3: Waves & Optics — Complete Cheat Sheet",
+    "title": "3. Waves & Optics Cheat Sheet",
     "topicNumber": 3,
     "topicName": "Waves & Optics",
-    "summary": "One-page revision summary covering 3.1 General Wave Properties, Reflection, Refraction & Diffraction; 3.2 Light, Lenses, Total Internal Reflection & EM Spectrum; 3.3 Sound Waves, Echoes & Ultrasound.",
-    "accentColor": "#059669",
+    "summary": "Wave equation, refraction, diffraction, TIR, lenses, EM spectrum & ultrasound.",
+    "accentColor": "#7C3AED",
     "sections": [
       {
-        "heading": "3.1 General Wave Properties, Reflection, Refraction & Diffraction",
-        "formula": "v = fλ  |  T = 1 ÷ f  |  n = sin i ÷ sin r",
+        "heading": "Key Formulae & Core Rules",
         "points": [
-          "Compare transverse and longitudinal waves with examples of each.",
-          "Calculate wave speed, frequency, wavelength, and period using v = fλ and T = 1/f.",
-          "Tip: Transverse has a T (perpendicular 90° crossbar); Longitudinal is aLong the same line (parallel)."
+          "v = fλ | f = 1/T",
+          "n = sin i / sin r | sin c = 1/n",
+          "c = 3.0 × 10⁸ m/s",
+          "Echo depth d = vt / 2"
         ]
       },
       {
-        "heading": "3.2 Light, Lenses, Total Internal Reflection & EM Spectrum",
-        "formula": "sin c = 1 ÷ n  |  Echoes & Sonar: 2d = v × t",
+        "heading": "Common Exam Traps to Avoid",
         "points": [
-          "Apply n = sin i / sin r and sin c = 1 / n, and state the two conditions required for Total Internal Reflection.",
-          "Construct converging lens ray diagrams and distinguish real vs virtual images (including magnifying glass and eye correction).",
-          "Watch out: Angles of incidence i and refraction r are ALWAYS measured from the NORMAL (the 90° dotted line), NEVER from the glass surface!"
+          "Frequency NEVER changes during refraction",
+          "Always measure i and r from the NORMAL, not the glass surface"
         ]
       },
       {
-        "heading": "3.3 Sound Waves, Echoes & Ultrasound",
-        "formula": "v = fλ  |  T = 1 ÷ f  |  n = sin i ÷ sin r",
+        "heading": "Top Exam Technique Tips",
         "points": [
-          "Explain why sound cannot travel in a vacuum and why it travels fastest in solids.",
-          "Calculate echo and sonar distances accurately using 2d = v × t.",
-          "Watch out: In echo and sonar calculations, forgetting to DIVIDE BY 2 (or multiply distance by 2) is the #1 error — remember the pulse goes out AND bounces back!"
+          "Divide echo time by 2 for one-way depth",
+          "Memorise EM order: R-M-I-V-U-X-G"
         ]
       }
     ]
   },
   {
-    "id": "cs-igcse-phys-topic-4",
+    "id": "igcse-phys-cs-4",
     "slug": "topic-4-electricity-magnetism",
-    "title": "Topic 4: Electricity & Magnetism — Complete Cheat Sheet",
+    "title": "4. Electricity & Magnetism Cheat Sheet",
     "topicNumber": 4,
     "topicName": "Electricity & Magnetism",
-    "summary": "One-page revision summary covering 4.1 Electric Charge, Current, EMF, Potential Difference & Resistance; 4.2 Series & Parallel Circuits, Potential Dividers & Mains Safety; 4.3 Magnetism, Motor Effect, EM Induction & Transformers.",
-    "accentColor": "#ea580c",
+    "summary": "Charge, Ohm’s law, series/parallel, potential dividers, safety, motors & transformers.",
+    "accentColor": "#7C3AED",
     "sections": [
       {
-        "heading": "4.1 Electric Charge, Current, EMF, Potential Difference & Resistance",
-        "formula": "Q = It  |  V = W/Q  |  V = IR  |  P = IV = I²R  |  E = IVt",
+        "heading": "Key Formulae & Core Rules",
         "points": [
-          "Apply Q = It, V = W/Q, V = IR, P = IV, and E = IVt with correct SI and kWh units.",
-          "Sketch and explain I–V graphs for an ohmic resistor, filament lamp, and diode.",
-          "Watch out: Never say \"positive charges moved onto the cloth\" during static charging — ONLY electrons transfer between rubbed insulators!"
+          "Q = It | V = IR | P = IV = I²R | E = IVt",
+          "1/R = 1/R₁ + 1/R₂ | V₁/V₂ = R₁/R₂",
+          "V_p/V_s = N_p/N_s | I_p V_p = I_s V_s"
         ]
       },
       {
-        "heading": "4.2 Series & Parallel Circuits, Potential Dividers & Mains Safety",
-        "formula": "1/R_p = 1/R₁ + 1/R₂  |  V₁/V₂ = R₁/R₂  |  Vp/Vs = Np/Ns  |  P_loss = I²R",
+        "heading": "Common Exam Traps to Avoid",
         "points": [
-          "Calculate combined resistance in series (R₁ + R₂) and parallel (1/R = 1/R₁ + 1/R₂).",
-          "Use V₁/V₂ = R₁/R₂ to explain thermistor and LDR potential-divider sensing circuits.",
-          "Tip: Series = Same current, Shared voltage; Parallel = Same voltage, Split current, Lower total R."
+          "Flip 1/R_total at the end of parallel calculations",
+          "Transformers need A.C. — D.C. induces zero steady output"
         ]
       },
       {
-        "heading": "4.3 Magnetism, Motor Effect, EM Induction & Transformers",
-        "formula": "Q = It  |  V = W/Q  |  V = IR  |  P = IV = I²R  |  E = IVt",
+        "heading": "Top Exam Technique Tips",
         "points": [
-          "Apply Fleming’s Left-Hand Rule and explain the role of the split-ring commutator in a DC motor.",
-          "Distinguish slip rings (AC generator) from split-ring commutators (DC motor) and explain Lenz’s Law.",
-          "Tip: Use your LEFT hand for Motors (power IN → Motion OUT) and note that reversing EITHER current OR field reverses the force (reversing both leaves direction unchanged)."
+          "High grid voltage cuts current I and slashes P = I²R losses",
+          "Left hand = Motor; Right hand = Generator"
         ]
       }
     ]
   },
   {
-    "id": "cs-igcse-phys-topic-5",
+    "id": "igcse-phys-cs-5",
     "slug": "topic-5-nuclear-physics",
-    "title": "Topic 5: Nuclear Physics — Complete Cheat Sheet",
+    "title": "5. Nuclear Physics Cheat Sheet",
     "topicNumber": 5,
     "topicName": "Nuclear Physics",
-    "summary": "One-page revision summary covering 5.1 The Nuclear Model of the Atom, Isotopes, Fission & Fusion; 5.2 Radioactive Decay (Alpha, Beta, Gamma) & Half-Life.",
-    "accentColor": "#7c3aed",
+    "summary": "Rutherford scattering, isotopes, fission, fusion, α/β/γ decay & half-life.",
+    "accentColor": "#7C3AED",
     "sections": [
       {
-        "heading": "5.1 The Nuclear Model of the Atom, Isotopes, Fission & Fusion",
-        "formula": "Nuclide: ᴬ_Z X (N = A − Z)",
+        "heading": "Key Formulae & Core Rules",
         "points": [
-          "Explain how Rutherford’s gold foil observations established the nuclear model of the atom.",
-          "Calculate proton, neutron, and electron counts from nuclide notation and define isotopes.",
-          "Tip: Link the 3 Rutherford clues: Straight through = Empty space; Deflected = Positive core; Bounced back = Dense heavy nucleus."
+          "Neutrons = A − Z",
+          "α: A−4, Z−2 | β⁻: A same, Z+1",
+          "Corrected count = Raw − Background"
         ]
       },
       {
-        "heading": "5.2 Radioactive Decay (Alpha, Beta, Gamma) & Half-Life",
-        "formula": "α: ᴬ_Z X → ᴬ⁻⁴_{Z−2} Y + ⁴₂He  |  β⁻: ᴬ_Z X → ᴬ_{Z+1} Y + ⁰₋₁e",
+        "heading": "Common Exam Traps to Avoid",
         "points": [
-          "Compare α, β, and γ radiation by nature, charge, penetration, ionising power, and field deflection.",
-          "Balance alpha and beta nuclear decay equations accurately.",
-          "Tip: Penetration order: Paper stops Alpha, Aluminium stops Beta, Lead reduces Gamma (P-A-L). Ionising power is the EXACT reverse!"
+          "ALWAYS subtract background radiation BEFORE halving for half-life",
+          "Control rods absorb neutrons; moderator slows them"
+        ]
+      },
+      {
+        "heading": "Top Exam Technique Tips",
+        "points": [
+          "Check top (A) and bottom (Z) totals balance across nuclear arrows"
         ]
       }
     ]
   },
   {
-    "id": "cs-igcse-phys-topic-6",
+    "id": "igcse-phys-cs-6",
     "slug": "topic-6-space-physics",
-    "title": "Topic 6: Space Physics — Complete Cheat Sheet",
+    "title": "6. Space Physics Cheat Sheet",
     "topicNumber": 6,
     "topicName": "Space Physics",
-    "summary": "One-page revision summary covering 6.1 Earth, The Solar System & Orbital Motion; 6.2 Life Cycle of Stars, Red-Shift & The Big Bang (Hubble’s Law).",
-    "accentColor": "#0284c7",
+    "summary": "Earth/seasons, Solar System, orbital speed, star life cycles, red-shift, CMBR & Hubble’s Law.",
+    "accentColor": "#7C3AED",
     "sections": [
       {
-        "heading": "6.1 Earth, The Solar System & Orbital Motion",
-        "formula": "v = 2πr ÷ T (Orbital Speed)",
+        "heading": "Key Formulae & Core Rules",
         "points": [
-          "Explain day/night, the seasons (23.5° tilt), and lunar phases clearly.",
-          "Explain why inner planets are rocky while outer planets are gaseous using the accretion model.",
-          "Watch out: Seasons are NOT caused by Earth getting closer to the Sun — they are caused by Earth’s 23.5° axial tilt changing the angle of sunlight and daylight hours!"
+          "v = 2πr / T",
+          "1 light-year ≈ 9.5 × 10¹⁵ m",
+          "H₀ = v / d | Age = 1 / H₀"
         ]
       },
       {
-        "heading": "6.2 Life Cycle of Stars, Red-Shift & The Big Bang (Hubble’s Law)",
-        "formula": "H₀ = v ÷ d ≈ 2.2 × 10⁻¹⁸ s⁻¹  |  Age of Universe ≈ 1 ÷ H₀",
+        "heading": "Common Exam Traps to Avoid",
         "points": [
-          "Trace the complete stellar life cycle for both Sun-sized stars and high-mass stars.",
-          "Explain how galactic red-shift and CMBR support the Big Bang Theory.",
-          "Tip: Sun-like path: Nebula → Protostar → Main Sequence → Red Giant → Planetary Nebula → White Dwarf. Massive path: ... → Red Supergiant → Supernova → Neutron Star / Black Hole."
+          "Seasons are caused by axial tilt, NOT distance from the Sun",
+          "Light-year is DISTANCE, not time"
+        ]
+      },
+      {
+        "heading": "Top Exam Technique Tips",
+        "points": [
+          "Quote both red-shift AND CMBR as Big Bang evidence"
         ]
       }
     ]
@@ -3934,164 +5068,1093 @@ export const IGCSE_PHYSICS_CHEAT_SHEETS: CheatSheetItem[] = [
 
 export const IGCSE_PHYSICS_EXAM_PRACTICE: ExamQuestionItem[] = [
   {
-    "id": "igcse-phys-exam-1",
-    "subtopicId": "igcse-phys-4-2",
+    "id": "igcse-phys-ex-1-1",
+    "subtopicId": "igcse-phys-1-1",
     "number": 1,
-    "stimulus": "A student connects two identical 12 Ω lamps in parallel across a 6.0 V battery of negligible internal resistance.",
-    "diagram": "circuit-series-parallel",
+    "stimulus": "[Cambridge IGCSE 0625 Paper 4 Style] A train starts from rest and accelerates uniformly to 20 m/s in 10 s, then travels at constant 20 m/s for 30 s.",
     "parts": [
       {
-        "id": "igcse-phys-exam-1a",
-        "label": "a)",
-        "prompt": "Calculate the combined resistance of the two 12 Ω lamps connected in parallel.",
-        "kind": "short-answer",
+        "id": "p1",
+        "label": "(a)",
+        "prompt": "Calculate the acceleration during the first 10 s.",
         "marks": 2,
+        "kind": "short-answer",
         "rubric": {
           "maxMarks": 2,
-          "modelAnswer": "1/R = 1/12 + 1/12 = 2/12 = 1/6, so R = 6.0 Ω.",
+          "modelAnswer": "a = (20 − 0) / 10 = 2.0 m/s².",
           "markPoints": [
             {
               "id": "mp1",
-              "markDescription": "Correct parallel formula 1/R = 1/12 + 1/12",
               "requiredKeywordGroups": [
                 [
-                  "12"
+                  "20"
+                ],
+                [
+                  "10"
                 ]
-              ]
+              ],
+              "markDescription": "Uses (v − u)/t"
             },
             {
               "id": "mp2",
-              "markDescription": "Combined resistance = 6 Ω",
+              "numericMatch": {
+                "value": 2,
+                "tolerance": 0.05
+              },
+              "markDescription": "2 m/s²"
+            }
+          ]
+        }
+      },
+      {
+        "id": "p2",
+        "label": "(b)",
+        "prompt": "Calculate the total distance travelled in the 40 s journey.",
+        "marks": 3,
+        "kind": "short-answer",
+        "rubric": {
+          "maxMarks": 3,
+          "modelAnswer": "Triangle area = ½ × 10 × 20 = 100 m; Rectangle area = 30 × 20 = 600 m; Total = 700 m.",
+          "markPoints": [
+            {
+              "id": "mp1",
+              "numericMatch": {
+                "value": 100,
+                "tolerance": 1
+              },
+              "markDescription": "First stage 100 m"
+            },
+            {
+              "id": "mp2",
+              "numericMatch": {
+                "value": 600,
+                "tolerance": 1
+              },
+              "markDescription": "Second stage 600 m"
+            },
+            {
+              "id": "mp3",
+              "numericMatch": {
+                "value": 700,
+                "tolerance": 1
+              },
+              "markDescription": "Total 700 m"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "igcse-phys-ex-1-2",
+    "subtopicId": "igcse-phys-1-2",
+    "number": 2,
+    "stimulus": "[Cambridge IGCSE 0625 Paper 4 Style] A 1,500 kg car experiences a forward engine force of 4,200 N and total resistive drag of 1,200 N.",
+    "parts": [
+      {
+        "id": "p1",
+        "label": "(a)",
+        "prompt": "Calculate the resultant force and acceleration of the car.",
+        "marks": 2,
+        "kind": "short-answer",
+        "rubric": {
+          "maxMarks": 2,
+          "modelAnswer": "Resultant force = 4200 − 1200 = 3000 N; a = 3000 / 1500 = 2.0 m/s².",
+          "markPoints": [
+            {
+              "id": "mp1",
+              "numericMatch": {
+                "value": 3000,
+                "tolerance": 1
+              },
+              "markDescription": "Resultant 3000 N"
+            },
+            {
+              "id": "mp2",
+              "numericMatch": {
+                "value": 2,
+                "tolerance": 0.05
+              },
+              "markDescription": "Acceleration 2 m/s²"
+            }
+          ]
+        }
+      },
+      {
+        "id": "p2",
+        "label": "(b)",
+        "prompt": "Explain what happens to the car’s acceleration as its speed rises further.",
+        "marks": 2,
+        "kind": "short-answer",
+        "rubric": {
+          "maxMarks": 2,
+          "modelAnswer": "Air resistance increases with speed, reducing the resultant force, so acceleration decreases until air resistance equals engine force (top speed).",
+          "markPoints": [
+            {
+              "id": "mp1",
+              "requiredKeywordGroups": [
+                [
+                  "air resistance",
+                  "drag",
+                  "friction"
+                ],
+                [
+                  "increase",
+                  "rises",
+                  "greater"
+                ]
+              ],
+              "markDescription": "Air resistance/drag increases"
+            },
+            {
+              "id": "mp2",
+              "requiredKeywordGroups": [
+                [
+                  "resultant",
+                  "acceleration"
+                ],
+                [
+                  "decrease",
+                  "smaller",
+                  "zero"
+                ]
+              ],
+              "markDescription": "Resultant force and acceleration decrease"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "igcse-phys-ex-1-3",
+    "subtopicId": "igcse-phys-1-3",
+    "number": 3,
+    "stimulus": "[Cambridge IGCSE 0625 Paper 4 Style] A 0.5 kg football moving at 12 m/s is caught and brought to rest by a goalkeeper’s gloves in 0.20 s.",
+    "parts": [
+      {
+        "id": "p1",
+        "label": "(a)",
+        "prompt": "Calculate the impulse and average force exerted by the gloves on the ball.",
+        "marks": 2,
+        "kind": "short-answer",
+        "rubric": {
+          "maxMarks": 2,
+          "modelAnswer": "Δp = 0.5 × 12 = 6.0 kg m/s (N s); F = Δp / Δt = 6.0 / 0.20 = 30 N.",
+          "markPoints": [
+            {
+              "id": "mp1",
+              "numericMatch": {
+                "value": 6,
+                "tolerance": 0.1
+              },
+              "markDescription": "Impulse 6 N s"
+            },
+            {
+              "id": "mp2",
+              "numericMatch": {
+                "value": 30,
+                "tolerance": 0.2
+              },
+              "markDescription": "Force 30 N"
+            }
+          ]
+        }
+      },
+      {
+        "id": "p2",
+        "label": "(b)",
+        "prompt": "Explain why pulling hands backwards while catching reduces stinging.",
+        "marks": 2,
+        "kind": "short-answer",
+        "rubric": {
+          "maxMarks": 2,
+          "modelAnswer": "It increases the stopping time Δt for the same change in momentum Δp, reducing the average impact force F = Δp/Δt.",
+          "markPoints": [
+            {
+              "id": "mp1",
+              "requiredKeywordGroups": [
+                [
+                  "time",
+                  "longer",
+                  "increases"
+                ]
+              ],
+              "markDescription": "Increases stopping time"
+            },
+            {
+              "id": "mp2",
+              "requiredKeywordGroups": [
+                [
+                  "force"
+                ],
+                [
+                  "smaller",
+                  "less",
+                  "reduces",
+                  "decreases"
+                ]
+              ],
+              "markDescription": "Reduces force for same momentum change"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "igcse-phys-ex-1-4",
+    "subtopicId": "igcse-phys-1-4",
+    "number": 4,
+    "stimulus": "[Cambridge IGCSE 0625 Paper 4 Style] A 60 kg skier descends a frictionless slope of vertical height 20 m (g = 9.8 N/kg).",
+    "parts": [
+      {
+        "id": "p1",
+        "label": "(a)",
+        "prompt": "Calculate the loss in gravitational potential energy.",
+        "marks": 2,
+        "kind": "short-answer",
+        "rubric": {
+          "maxMarks": 2,
+          "modelAnswer": "ΔE_p = mgΔh = 60 × 9.8 × 20 = 11,760 J.",
+          "markPoints": [
+            {
+              "id": "mp1",
+              "requiredKeywordGroups": [
+                [
+                  "60"
+                ],
+                [
+                  "9.8",
+                  "10"
+                ]
+              ],
+              "markDescription": "Uses mgh"
+            },
+            {
+              "id": "mp2",
+              "numericMatch": {
+                "value": 11760,
+                "tolerance": 250
+              },
+              "markDescription": "11760 J (or 12000 J with g=10)"
+            }
+          ]
+        }
+      },
+      {
+        "id": "p2",
+        "label": "(b)",
+        "prompt": "Calculate the skier’s maximum speed at the bottom of the slope.",
+        "marks": 2,
+        "kind": "short-answer",
+        "rubric": {
+          "maxMarks": 2,
+          "modelAnswer": "½ × 60 × v² = 11760 → v² = 392 → v = 19.8 m/s (or 20 m/s).",
+          "markPoints": [
+            {
+              "id": "mp1",
+              "requiredKeywordGroups": [
+                [
+                  "392",
+                  "400",
+                  "19.8",
+                  "20"
+                ]
+              ],
+              "markDescription": "Equates KE = GPE"
+            },
+            {
+              "id": "mp2",
+              "numericMatch": {
+                "value": 19.9,
+                "tolerance": 0.2
+              },
+              "markDescription": "Speed 19.8–20.0 m/s"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "igcse-phys-ex-2-1",
+    "subtopicId": "igcse-phys-2-1",
+    "number": 5,
+    "stimulus": "[Cambridge IGCSE 0625 Paper 4 Style] Air of volume 400 cm³ at pressure 100 kPa is trapped in a sealed syringe at constant temperature.",
+    "parts": [
+      {
+        "id": "p1",
+        "label": "(a)",
+        "prompt": "Calculate: The piston is pushed until the volume is 160 cm³. Calculate the new pressure.",
+        "marks": 2,
+        "kind": "short-answer",
+        "rubric": {
+          "maxMarks": 2,
+          "modelAnswer": "p₂ = (100 × 400) / 160 = 250 kPa.",
+          "markPoints": [
+            {
+              "id": "mp1",
+              "requiredKeywordGroups": [
+                [
+                  "40000",
+                  "160"
+                ]
+              ],
+              "markDescription": "Applies p₁V₁ = p₂V₂"
+            },
+            {
+              "id": "mp2",
+              "numericMatch": {
+                "value": 250,
+                "tolerance": 0.5
+              },
+              "markDescription": "250 kPa"
+            }
+          ]
+        }
+      },
+      {
+        "id": "p2",
+        "label": "(b)",
+        "prompt": "Explain in terms of molecules why compressing the gas at constant temperature raises its pressure.",
+        "marks": 2,
+        "kind": "short-answer",
+        "rubric": {
+          "maxMarks": 2,
+          "modelAnswer": "The molecules have the same average speed, but in a smaller volume they collide with the walls more frequently, increasing force per unit area.",
+          "markPoints": [
+            {
+              "id": "mp1",
+              "requiredKeywordGroups": [
+                [
+                  "smaller volume",
+                  "closer",
+                  "same speed",
+                  "per unit volume"
+                ]
+              ],
+              "markDescription": "Same speed / more molecules per unit volume"
+            },
+            {
+              "id": "mp2",
+              "requiredKeywordGroups": [
+                [
+                  "frequent",
+                  "more often",
+                  "collisions"
+                ],
+                [
+                  "wall"
+                ]
+              ],
+              "markDescription": "More frequent collisions with walls"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "igcse-phys-ex-2-2",
+    "subtopicId": "igcse-phys-2-2",
+    "number": 6,
+    "stimulus": "[Cambridge IGCSE 0625 Paper 4 Style] A 1,000 W electric heater warms 0.5 kg of oil (c = 2,000 J/(kg °C)) for 60 s with no heat loss.",
+    "parts": [
+      {
+        "id": "p1",
+        "label": "(a)",
+        "prompt": "Calculate the temperature rise of the oil.",
+        "marks": 2,
+        "kind": "short-answer",
+        "rubric": {
+          "maxMarks": 2,
+          "modelAnswer": "E = Pt = 1000 × 60 = 60,000 J; Δθ = 60,000 / (0.5 × 2000) = 60 °C.",
+          "markPoints": [
+            {
+              "id": "mp1",
+              "numericMatch": {
+                "value": 60000,
+                "tolerance": 10
+              },
+              "markDescription": "Energy 60,000 J"
+            },
+            {
+              "id": "mp2",
+              "numericMatch": {
+                "value": 60,
+                "tolerance": 0.2
+              },
+              "markDescription": "Temp rise 60 °C"
+            }
+          ]
+        }
+      },
+      {
+        "id": "p2",
+        "label": "(b)",
+        "prompt": "Explain why painting a solar water-heating panel matte black improves its efficiency.",
+        "marks": 2,
+        "kind": "short-answer",
+        "rubric": {
+          "maxMarks": 2,
+          "modelAnswer": "Matte black surfaces are the best absorbers of infrared radiation from the Sun, transferring thermal energy rapidly to the water.",
+          "markPoints": [
+            {
+              "id": "mp1",
+              "requiredKeywordGroups": [
+                [
+                  "absorb",
+                  "absorber"
+                ]
+              ],
+              "markDescription": "Best absorber"
+            },
+            {
+              "id": "mp2",
+              "requiredKeywordGroups": [
+                [
+                  "infrared",
+                  "radiation",
+                  "thermal"
+                ]
+              ],
+              "markDescription": "Infrared/thermal radiation"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "igcse-phys-ex-3-1",
+    "subtopicId": "igcse-phys-3-1",
+    "number": 7,
+    "stimulus": "[Cambridge IGCSE 0625 Paper 4 Style] Water waves of frequency 5 Hz and wavelength 6 cm travel from deep water into shallow water where their speed drops to 0.20 m/s.",
+    "parts": [
+      {
+        "id": "p1",
+        "label": "(a)",
+        "prompt": "Calculate the wave speed in deep water (in m/s) and the new wavelength in shallow water (in cm).",
+        "marks": 2,
+        "kind": "short-answer",
+        "rubric": {
+          "maxMarks": 2,
+          "modelAnswer": "Deep speed = 5 × 0.06 = 0.30 m/s; Shallow λ = 0.20 / 5 = 0.04 m = 4 cm.",
+          "markPoints": [
+            {
+              "id": "mp1",
+              "numericMatch": {
+                "value": 0.3,
+                "tolerance": 0.01
+              },
+              "markDescription": "Deep speed 0.30 m/s"
+            },
+            {
+              "id": "mp2",
+              "requiredKeywordGroups": [
+                [
+                  "4 cm",
+                  "4cm",
+                  "0.04"
+                ]
+              ],
+              "markDescription": "Shallow λ = 4 cm (0.04 m)"
+            }
+          ]
+        }
+      },
+      {
+        "id": "p2",
+        "label": "(b)",
+        "prompt": "State what happens to the frequency and direction of waves striking the shallow boundary at an angle.",
+        "marks": 2,
+        "kind": "short-answer",
+        "rubric": {
+          "maxMarks": 2,
+          "modelAnswer": "Frequency stays constant at 5 Hz, and the waves refract (bend) towards the normal.",
+          "markPoints": [
+            {
+              "id": "mp1",
+              "requiredKeywordGroups": [
+                [
+                  "frequency"
+                ],
+                [
+                  "constant",
+                  "same",
+                  "unchanged"
+                ]
+              ],
+              "markDescription": "Frequency constant"
+            },
+            {
+              "id": "mp2",
+              "requiredKeywordGroups": [
+                [
+                  "towards"
+                ],
+                [
+                  "normal"
+                ]
+              ],
+              "markDescription": "Bends towards normal"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "igcse-phys-ex-3-2",
+    "subtopicId": "igcse-phys-3-2",
+    "number": 8,
+    "stimulus": "[Cambridge IGCSE 0625 Paper 4 Style] A ray of light in air strikes a glass block (n = 1.50) at an angle of incidence of 45°.",
+    "parts": [
+      {
+        "id": "p1",
+        "label": "(a)",
+        "prompt": "Calculate the angle of refraction inside the glass to 1 decimal place.",
+        "marks": 2,
+        "kind": "short-answer",
+        "rubric": {
+          "maxMarks": 2,
+          "modelAnswer": "sin r = sin 45° / 1.50 = 0.4714 → r = 28.1°.",
+          "markPoints": [
+            {
+              "id": "mp1",
+              "requiredKeywordGroups": [
+                [
+                  "0.47",
+                  "sin 45",
+                  "sin45"
+                ]
+              ],
+              "markDescription": "sin r = 0.471"
+            },
+            {
+              "id": "mp2",
+              "numericMatch": {
+                "value": 28.1,
+                "tolerance": 0.2
+              },
+              "markDescription": "r = 28.1°"
+            }
+          ]
+        }
+      },
+      {
+        "id": "p2",
+        "label": "(b)",
+        "prompt": "Calculate the critical angle of this glass to 1 decimal place.",
+        "marks": 2,
+        "kind": "short-answer",
+        "rubric": {
+          "maxMarks": 2,
+          "modelAnswer": "sin c = 1 / 1.50 = 0.667 → c = 41.8°.",
+          "markPoints": [
+            {
+              "id": "mp1",
+              "requiredKeywordGroups": [
+                [
+                  "0.667",
+                  "0.67",
+                  "1/1.5"
+                ]
+              ],
+              "markDescription": "sin c = 1/1.5"
+            },
+            {
+              "id": "mp2",
+              "numericMatch": {
+                "value": 41.8,
+                "tolerance": 0.2
+              },
+              "markDescription": "c = 41.8°"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "igcse-phys-ex-3-3",
+    "subtopicId": "igcse-phys-3-3",
+    "number": 9,
+    "stimulus": "[Cambridge IGCSE 0625 Paper 4 Style] A fishing boat transmits an ultrasound pulse vertically down into seawater (v = 1,500 m/s) and detects the echo from a shoal of fish 0.12 s later.",
+    "parts": [
+      {
+        "id": "p1",
+        "label": "(a)",
+        "prompt": "Calculate the depth of the shoal of fish below the boat.",
+        "marks": 2,
+        "kind": "short-answer",
+        "rubric": {
+          "maxMarks": 2,
+          "modelAnswer": "d = (1500 × 0.12) / 2 = 180 / 2 = 90 m.",
+          "markPoints": [
+            {
+              "id": "mp1",
+              "requiredKeywordGroups": [
+                [
+                  "180",
+                  "/ 2",
+                  "÷ 2"
+                ]
+              ],
+              "markDescription": "Divides round-trip 180 m by 2"
+            },
+            {
+              "id": "mp2",
+              "numericMatch": {
+                "value": 90,
+                "tolerance": 0.2
+              },
+              "markDescription": "Depth 90 m"
+            }
+          ]
+        }
+      },
+      {
+        "id": "p2",
+        "label": "(b)",
+        "prompt": "Describe the nature of ultrasound waves in terms of frequency and particle oscillation.",
+        "marks": 2,
+        "kind": "short-answer",
+        "rubric": {
+          "maxMarks": 2,
+          "modelAnswer": "Ultrasound is a longitudinal wave (particles oscillate parallel to energy transfer) with a frequency above 20,000 Hz (20 kHz).",
+          "markPoints": [
+            {
+              "id": "mp1",
+              "requiredKeywordGroups": [
+                [
+                  "longitudinal",
+                  "parallel"
+                ]
+              ],
+              "markDescription": "Longitudinal / parallel oscillation"
+            },
+            {
+              "id": "mp2",
+              "requiredKeywordGroups": [
+                [
+                  "20,000",
+                  "20000",
+                  "20 khz",
+                  "20khz"
+                ]
+              ],
+              "markDescription": "Frequency > 20,000 Hz / 20 kHz"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "igcse-phys-ex-4-1",
+    "subtopicId": "igcse-phys-4-1",
+    "number": 10,
+    "stimulus": "[Cambridge IGCSE 0625 Paper 4 Style] An electric heater rated at 230 V draws a steady current of 10 A for 5 minutes.",
+    "parts": [
+      {
+        "id": "p1",
+        "label": "(a)",
+        "prompt": "Calculate the resistance and power rating of the heater.",
+        "marks": 2,
+        "kind": "short-answer",
+        "rubric": {
+          "maxMarks": 2,
+          "modelAnswer": "R = V / I = 230 / 10 = 23 Ω; P = IV = 10 × 230 = 2,300 W (2.3 kW).",
+          "markPoints": [
+            {
+              "id": "mp1",
+              "numericMatch": {
+                "value": 23,
+                "tolerance": 0.1
+              },
+              "markDescription": "R = 23 Ω"
+            },
+            {
+              "id": "mp2",
+              "numericMatch": {
+                "value": 2300,
+                "tolerance": 5
+              },
+              "markDescription": "P = 2300 W"
+            }
+          ]
+        }
+      },
+      {
+        "id": "p2",
+        "label": "(b)",
+        "prompt": "Calculate the total electrical energy transferred in 5 minutes (in kJ).",
+        "marks": 2,
+        "kind": "short-answer",
+        "rubric": {
+          "maxMarks": 2,
+          "modelAnswer": "t = 300 s; E = Pt = 2300 × 300 = 690,000 J = 690 kJ.",
+          "markPoints": [
+            {
+              "id": "mp1",
+              "numericMatch": {
+                "value": 300,
+                "tolerance": 0.5
+              },
+              "markDescription": "Converts 5 min to 300 s"
+            },
+            {
+              "id": "mp2",
+              "requiredKeywordGroups": [
+                [
+                  "690",
+                  "690,000",
+                  "690000"
+                ]
+              ],
+              "markDescription": "690 kJ (690,000 J)"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "igcse-phys-ex-4-2",
+    "subtopicId": "igcse-phys-4-2",
+    "number": 11,
+    "stimulus": "[Cambridge IGCSE 0625 Paper 4 Style] A 12 V battery feeds a potential divider made of a fixed 2 kΩ resistor in series with an NTC thermistor.",
+    "parts": [
+      {
+        "id": "p1",
+        "label": "(a)",
+        "prompt": "Calculate: When the thermistor resistance is 6 kΩ, calculate the p.d. across the thermistor.",
+        "marks": 2,
+        "kind": "short-answer",
+        "rubric": {
+          "maxMarks": 2,
+          "modelAnswer": "V = 12 × (6 / (2 + 6)) = 12 × 6/8 = 9.0 V.",
+          "markPoints": [
+            {
+              "id": "mp1",
+              "requiredKeywordGroups": [
+                [
+                  "8",
+                  "6/8",
+                  "3/4"
+                ]
+              ],
+              "markDescription": "Total R = 8 kΩ"
+            },
+            {
+              "id": "mp2",
+              "numericMatch": {
+                "value": 9,
+                "tolerance": 0.05
+              },
+              "markDescription": "9 V"
+            }
+          ]
+        }
+      },
+      {
+        "id": "p2",
+        "label": "(b)",
+        "prompt": "Explain what happens to the p.d. across the thermistor when the room gets hotter.",
+        "marks": 2,
+        "kind": "short-answer",
+        "rubric": {
+          "maxMarks": 2,
+          "modelAnswer": "As temperature rises, the NTC thermistor’s resistance decreases, so it takes a smaller fraction of the 12 V supply and its p.d. decreases.",
+          "markPoints": [
+            {
+              "id": "mp1",
+              "requiredKeywordGroups": [
+                [
+                  "resistance"
+                ],
+                [
+                  "decrease",
+                  "drops",
+                  "falls",
+                  "lower"
+                ]
+              ],
+              "markDescription": "Thermistor resistance decreases"
+            },
+            {
+              "id": "mp2",
+              "requiredKeywordGroups": [
+                [
+                  "voltage",
+                  "p.d.",
+                  "pd",
+                  "potential difference"
+                ],
+                [
+                  "decrease",
+                  "drops",
+                  "falls",
+                  "smaller"
+                ]
+              ],
+              "markDescription": "p.d. across thermistor decreases"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "igcse-phys-ex-4-3",
+    "subtopicId": "igcse-phys-4-3",
+    "number": 12,
+    "stimulus": "[Cambridge IGCSE 0625 Paper 4 Style] A 100%-efficient step-up transformer has 400 primary turns and 8,000 secondary turns. Input is 250 V a.c. at 20 A.",
+    "parts": [
+      {
+        "id": "p1",
+        "label": "(a)",
+        "prompt": "Calculate the secondary output voltage and secondary current.",
+        "marks": 3,
+        "kind": "short-answer",
+        "rubric": {
+          "maxMarks": 3,
+          "modelAnswer": "V_s = 250 × (8000 / 400) = 5,000 V; I_s = (250 × 20) / 5000 = 1.0 A.",
+          "markPoints": [
+            {
+              "id": "mp1",
+              "requiredKeywordGroups": [
+                [
+                  "20",
+                  "8000"
+                ]
+              ],
+              "markDescription": "Turns ratio 20"
+            },
+            {
+              "id": "mp2",
+              "numericMatch": {
+                "value": 5000,
+                "tolerance": 5
+              },
+              "markDescription": "V_s = 5000 V"
+            },
+            {
+              "id": "mp3",
+              "numericMatch": {
+                "value": 1,
+                "tolerance": 0.02
+              },
+              "markDescription": "I_s = 1 A"
+            }
+          ]
+        }
+      },
+      {
+        "id": "p2",
+        "label": "(b)",
+        "prompt": "Explain how the primary coil induces a voltage in the secondary coil.",
+        "marks": 2,
+        "kind": "short-answer",
+        "rubric": {
+          "maxMarks": 2,
+          "modelAnswer": "Alternating current in the primary creates a continuously changing magnetic field in the soft-iron core, which cuts the secondary coil and induces an alternating EMF.",
+          "markPoints": [
+            {
+              "id": "mp1",
+              "requiredKeywordGroups": [
+                [
+                  "changing",
+                  "alternating"
+                ],
+                [
+                  "magnetic field"
+                ]
+              ],
+              "markDescription": "Changing magnetic field in iron core"
+            },
+            {
+              "id": "mp2",
+              "requiredKeywordGroups": [
+                [
+                  "induce",
+                  "induced"
+                ],
+                [
+                  "secondary"
+                ]
+              ],
+              "markDescription": "Induces EMF/voltage in secondary"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "igcse-phys-ex-5-1",
+    "subtopicId": "igcse-phys-5-1",
+    "number": 13,
+    "stimulus": "[Cambridge IGCSE 0625 Paper 4 Style] In a nuclear reactor, uranium-235 absorbs a slow neutron and undergoes fission.",
+    "parts": [
+      {
+        "id": "p1",
+        "label": "(a)",
+        "prompt": "Describe how a self-sustaining chain reaction occurs during nuclear fission of U-235.",
+        "marks": 2,
+        "kind": "short-answer",
+        "rubric": {
+          "maxMarks": 2,
+          "modelAnswer": "The U-235 nucleus splits into two daughter nuclei and releases 2–3 neutrons, which can be absorbed by further U-235 nuclei to trigger more fissions.",
+          "markPoints": [
+            {
+              "id": "mp1",
+              "requiredKeywordGroups": [
+                [
+                  "splits",
+                  "daughter"
+                ],
+                [
+                  "neutron"
+                ]
+              ],
+              "markDescription": "Splits and releases neutrons"
+            },
+            {
+              "id": "mp2",
+              "requiredKeywordGroups": [
+                [
+                  "further",
+                  "other",
+                  "more",
+                  "another"
+                ],
+                [
+                  "uranium",
+                  "nuclei",
+                  "fission"
+                ]
+              ],
+              "markDescription": "Neutrons hit further U-235 nuclei"
+            }
+          ]
+        }
+      },
+      {
+        "id": "p2",
+        "label": "(b)",
+        "prompt": "State the functions of the moderator and control rods in the reactor.",
+        "marks": 2,
+        "kind": "short-answer",
+        "rubric": {
+          "maxMarks": 2,
+          "modelAnswer": "The moderator slows down fast neutrons so U-235 can absorb them; control rods absorb excess neutrons to regulate the reaction rate.",
+          "markPoints": [
+            {
+              "id": "mp1",
+              "requiredKeywordGroups": [
+                [
+                  "moderator"
+                ],
+                [
+                  "slow"
+                ]
+              ],
+              "markDescription": "Moderator slows neutrons"
+            },
+            {
+              "id": "mp2",
+              "requiredKeywordGroups": [
+                [
+                  "control"
+                ],
+                [
+                  "absorb"
+                ]
+              ],
+              "markDescription": "Control rods absorb neutrons"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "igcse-phys-ex-5-2",
+    "subtopicId": "igcse-phys-5-2",
+    "number": 14,
+    "stimulus": "[Cambridge IGCSE 0625 Paper 4 Style] A detector records a constant background count rate of 15 counts/min. With a sample placed nearby, the reading is 255 counts/min, falling to 45 counts/min after 18 minutes.",
+    "parts": [
+      {
+        "id": "p1",
+        "label": "(a)",
+        "prompt": "Calculate the half-life of the radioactive sample.",
+        "marks": 3,
+        "kind": "short-answer",
+        "rubric": {
+          "maxMarks": 3,
+          "modelAnswer": "Corrected rates: 255 − 15 = 240 cpm and 45 − 15 = 30 cpm. 240 → 120 → 60 → 30 is 3 half-lives, so t_½ = 18 ÷ 3 = 6 minutes.",
+          "markPoints": [
+            {
+              "id": "mp1",
+              "requiredKeywordGroups": [
+                [
+                  "240"
+                ],
+                [
+                  "30"
+                ]
+              ],
+              "markDescription": "Subtracts 15 to get 240 and 30"
+            },
+            {
+              "id": "mp2",
+              "requiredKeywordGroups": [
+                [
+                  "3",
+                  "three"
+                ]
+              ],
+              "markDescription": "Identifies 3 half-lives"
+            },
+            {
+              "id": "mp3",
               "numericMatch": {
                 "value": 6,
                 "tolerance": 0.05
-              }
+              },
+              "markDescription": "Half-life = 6 minutes"
             }
           ]
         }
       },
       {
-        "id": "igcse-phys-exam-1b",
-        "label": "b)",
-        "prompt": "Calculate the total current drawn from the 6.0 V battery.",
-        "kind": "short-answer",
+        "id": "p2",
+        "label": "(b)",
+        "prompt": "Write: Complete the alpha decay of polonium-210 (²¹⁰₈₄Po) into lead (Pb).",
         "marks": 2,
+        "kind": "short-answer",
         "rubric": {
           "maxMarks": 2,
-          "modelAnswer": "I = V ÷ R = 6.0 ÷ 6.0 = 1.0 A.",
+          "modelAnswer": "²¹⁰₈₄Po → ²⁰⁶₈₂Pb + ⁴₂He (mass number 206, atomic number 82).",
           "markPoints": [
             {
               "id": "mp1",
-              "markDescription": "Apply I = V / R",
-              "requiredKeywordGroups": [
-                [
-                  "6"
-                ]
-              ]
-            },
-            {
-              "id": "mp2",
-              "markDescription": "Total current = 1 A",
               "numericMatch": {
-                "value": 1,
-                "tolerance": 0.05
-              }
-            }
-          ]
-        }
-      },
-      {
-        "id": "igcse-phys-exam-1c",
-        "label": "c)",
-        "prompt": "Explain one key principle or common pitfall when solving exam problems on Series & Parallel Circuits, Potential Dividers & Mains Safety.",
-        "kind": "short-answer",
-        "marks": 2,
-        "rubric": {
-          "maxMarks": 2,
-          "modelAnswer": "Never put a switch or fuse in the neutral wire — even when open, the appliance would remain connected to the live 230 V supply and deliver a lethal shock!",
-          "markPoints": [
-            {
-              "id": "mp1",
-              "markDescription": "Identifies key rule: Calculate combined resistance in series (R₁ + R₂) and parallel (1/R = 1/R₁ + 1/R₂)."
+                "value": 206,
+                "tolerance": 0.01
+              },
+              "markDescription": "Mass number 206"
             },
             {
               "id": "mp2",
-              "markDescription": "Explains correct method/units/application clearly"
-            }
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "id": "igcse-phys-exam-2",
-    "subtopicId": "igcse-phys-3-2",
-    "number": 2,
-    "stimulus": "A ray of red light enters a glass block of refractive index n = 1.50 from air at an angle of incidence of 42°.",
-    "parts": [
-      {
-        "id": "igcse-phys-exam-2a",
-        "label": "a)",
-        "prompt": "Calculate the critical angle c for this glass–air boundary (give your answer to 1 decimal place).",
-        "kind": "short-answer",
-        "marks": 2,
-        "rubric": {
-          "maxMarks": 2,
-          "modelAnswer": "sin c = 1 ÷ 1.50 = 0.6667 → c = sin⁻¹(0.6667) = 41.8°.",
-          "markPoints": [
-            {
-              "id": "mp1",
-              "markDescription": "Use sin c = 1 / n (1 / 1.5)",
-              "requiredKeywordGroups": [
-                [
-                  "1.5",
-                  "0.67",
-                  "0.667"
-                ]
-              ]
-            },
-            {
-              "id": "mp2",
-              "markDescription": "Critical angle ≈ 41.8°",
               "numericMatch": {
-                "value": 41.8,
-                "tolerance": 0.3
-              }
-            }
-          ]
-        }
-      },
-      {
-        "id": "igcse-phys-exam-2b",
-        "label": "b)",
-        "prompt": "State why optical fibres are preferred over copper cables for long-distance telecommunications.",
-        "kind": "mcq",
-        "marks": 1,
-        "options": [
-          "Optical fibres carry higher bandwidth signals over longer distances with much less signal attenuation",
-          "Optical fibres transmit electricity directly to homes",
-          "Light moves slower in glass than electrons drift in copper",
-          "Optical fibres do not rely on total internal reflection"
-        ],
-        "correctIndex": 0
-      },
-      {
-        "id": "igcse-phys-exam-2c",
-        "label": "c)",
-        "prompt": "Explain one key principle or common pitfall when solving exam problems on Light, Lenses, Total Internal Reflection & EM Spectrum.",
-        "kind": "short-answer",
-        "marks": 2,
-        "rubric": {
-          "maxMarks": 2,
-          "modelAnswer": "Angles of incidence i and refraction r are ALWAYS measured from the NORMAL (the 90° dotted line), NEVER from the glass surface!",
-          "markPoints": [
-            {
-              "id": "mp1",
-              "markDescription": "Identifies key rule: Apply n = sin i / sin r and sin c = 1 / n, and state the two conditions required for Total Internal Reflection."
-            },
-            {
-              "id": "mp2",
-              "markDescription": "Explains correct method/units/application clearly"
+                "value": 82,
+                "tolerance": 0.01
+              },
+              "markDescription": "Atomic number 82"
             }
           ]
         }
@@ -4099,947 +6162,82 @@ export const IGCSE_PHYSICS_EXAM_PRACTICE: ExamQuestionItem[] = [
     ]
   },
   {
-    "id": "igcse-phys-exam-3",
-    "subtopicId": "igcse-phys-1-1",
-    "number": 3,
-    "stimulus": "Structured exam question on Topic 1.1 (Physical Quantities, Speed & Motion Graphs). Study the information and answer parts (a), (b), and (c).",
-    "diagram": "forces-free-body",
-    "parts": [
-      {
-        "id": "igcse-phys-exam-3a",
-        "label": "a)",
-        "prompt": "Which statement accurately describes a core principle of Physical Quantities, Speed & Motion Graphs?",
-        "kind": "mcq",
-        "marks": 1,
-        "options": [
-          "Distinguish between scalar and vector quantities and find the resultant of two perpendicular vectors.",
-          "It violates the core rule of Physical Quantities, Speed & Motion Graphs by reversing the relationship between variables.",
-          "It ignores the required standard units and boundary conditions for Scalar.",
-          "It assumes Vector remains zero under all operating conditions."
-        ],
-        "correctIndex": 0
-      },
-      {
-        "id": "igcse-phys-exam-3b",
-        "label": "b)",
-        "prompt": "Define \"Scalar\" and explain the key principles covered in \"Speed, Velocity & Uniform Acceleration\".",
-        "kind": "short-answer",
-        "marks": 3,
-        "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Scalar: A physical quantity that has magnitude only and no direction (e.g., speed, mass, energy). Furthermore, Average speed = total distance travelled ÷ total time taken: v = s ÷ t (SI unit: m/s). Velocity is speed in a specified direction. Acceleration is the rate of change of velocity: a = (v − u) ÷ t (SI unit: m/s²), where u is initial velocity and v is final velocity.",
-          "markPoints": [
-            {
-              "id": "mp1",
-              "markDescription": "Defines Scalar: A physical quantity that has magnitude only and no direction (e.g., speed, mass, energy)."
-            },
-            {
-              "id": "mp2",
-              "markDescription": "States key mechanism/formula: Average speed = total distance travelled ÷ total time taken: v = s ÷ t (SI unit: m/s). Velocity is speed in a specified direction."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Applies principle accurately: Acceleration is the rate of change of velocity: a = (v − u) ÷ t (SI unit: m/s²), where u is initial velocity and v is final velocity."
-            }
-          ]
-        }
-      },
-      {
-        "id": "igcse-phys-exam-3c",
-        "label": "c)",
-        "prompt": "Apply \"Interpreting Distance–Time & Speed–Time Graphs\" to explain how examiners award full marks on Physical Quantities, Speed & Motion Graphs problems.",
-        "kind": "short-answer",
-        "marks": 3,
-        "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "On a distance–time graph: gradient = speed; a horizontal line means the object is stationary; a straight sloped line means constant speed; an upward-curving slope means accelerating. On a speed–time (or velocity–time) graph: gradient = acceleration; a horizontal line above zero means constant speed; a downward straight line means uniform deceleration.",
-          "markPoints": [
-            {
-              "id": "mp1",
-              "markDescription": "On a distance–time graph: gradient = speed; a horizontal line means the object is stationary; a straight sloped line means constant speed; an upward-curving slope means accelerating."
-            },
-            {
-              "id": "mp2",
-              "markDescription": "On a speed–time (or velocity–time) graph: gradient = acceleration; a horizontal line above zero means constant speed; a downward straight line means uniform deceleration."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Think V for Vector = Value + direction arrow; S for Scalar = Size only."
-            }
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "id": "igcse-phys-exam-4",
-    "subtopicId": "igcse-phys-1-2",
-    "number": 4,
-    "stimulus": "Structured exam question on Topic 1.2 (Mass, Weight, Density, Forces & Newton’s Laws). Study the information and answer parts (a), (b), and (c).",
-    "diagram": "forces-free-body",
-    "parts": [
-      {
-        "id": "igcse-phys-exam-4a",
-        "label": "a)",
-        "prompt": "Which statement accurately describes a core principle of Mass, Weight, Density, Forces & Newton’s Laws?",
-        "kind": "mcq",
-        "marks": 1,
-        "options": [
-          "Calculate weight using W = mg and density using ρ = m/V, including displacement measurements.",
-          "It violates the core rule of Mass, Weight, Density, Forces & Newton’s Laws by reversing the relationship between variables.",
-          "It ignores the required standard units and boundary conditions for Density.",
-          "It assumes Spring constant remains zero under all operating conditions."
-        ],
-        "correctIndex": 0
-      },
-      {
-        "id": "igcse-phys-exam-4b",
-        "label": "b)",
-        "prompt": "Define \"Density\" and explain the key principles covered in \"Hooke’s Law & Spring Constant\".",
-        "kind": "short-answer",
-        "marks": 3,
-        "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Density: Mass per unit volume of a substance: ρ = m ÷ V (kg/m³ or g/cm³). Furthermore, Hooke’s Law states that the extension x of a spring is directly proportional to the stretching load F, provided the limit of proportionality is not exceeded: F = k × x. Spring constant k = F ÷ x (units: N/m or N/cm) represents the stiffness of the spring and equals the gradient of the straight-line region of a force–extension graph.",
-          "markPoints": [
-            {
-              "id": "mp1",
-              "markDescription": "Defines Density: Mass per unit volume of a substance: ρ = m ÷ V (kg/m³ or g/cm³)."
-            },
-            {
-              "id": "mp2",
-              "markDescription": "States key mechanism/formula: Hooke’s Law states that the extension x of a spring is directly proportional to the stretching load F, provided the limit of proportionality is not exceeded: F = k × x."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Applies principle accurately: Spring constant k = F ÷ x (units: N/m or N/cm) represents the stiffness of the spring and equals the gradient of the straight-line region of a force–extension graph."
-            }
-          ]
-        }
-      },
-      {
-        "id": "igcse-phys-exam-4c",
-        "label": "c)",
-        "prompt": "Apply \"Newton’s Laws, Circular Motion & Terminal Velocity\" to explain how examiners award full marks on Mass, Weight, Density, Forces & Newton’s Laws problems.",
-        "kind": "short-answer",
-        "marks": 3,
-        "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Newton’s First Law: If resultant force F = 0 N, a stationary object remains stationary and a moving object continues at constant speed in a straight line. Newton’s Second Law: Resultant force = mass × acceleration (F = m × a). Acceleration acts in the exact direction of the resultant force.",
-          "markPoints": [
-            {
-              "id": "mp1",
-              "markDescription": "Newton’s First Law: If resultant force F = 0 N, a stationary object remains stationary and a moving object continues at constant speed in a straight line."
-            },
-            {
-              "id": "mp2",
-              "markDescription": "Newton’s Second Law: Resultant force = mass × acceleration (F = m × a). Acceleration acts in the exact direction of the resultant force."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Calculate weight using W = mg and density using ρ = m/V, including displacement measurements."
-            }
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "id": "igcse-phys-exam-5",
-    "subtopicId": "igcse-phys-1-3",
-    "number": 5,
-    "stimulus": "Structured exam question on Topic 1.3 (Moments, Momentum, Impulse & Pressure). Study the information and answer parts (a), (b), and (c).",
-    "diagram": "forces-free-body",
-    "parts": [
-      {
-        "id": "igcse-phys-exam-5a",
-        "label": "a)",
-        "prompt": "Which statement accurately describes a core principle of Moments, Momentum, Impulse & Pressure?",
-        "kind": "mcq",
-        "marks": 1,
-        "options": [
-          "Apply the principle of moments (clockwise = anticlockwise) to solve balanced beam problems.",
-          "It violates the core rule of Moments, Momentum, Impulse & Pressure by reversing the relationship between variables.",
-          "It ignores the required standard units and boundary conditions for Moment.",
-          "It assumes Momentum remains zero under all operating conditions."
-        ],
-        "correctIndex": 0
-      },
-      {
-        "id": "igcse-phys-exam-5b",
-        "label": "b)",
-        "prompt": "Define \"Moment\" and explain the key principles covered in \"Momentum, Conservation & Impulse\".",
-        "kind": "short-answer",
-        "marks": 3,
-        "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Moment: Turning effect of a force about a pivot: M = F × d (N m). Furthermore, Momentum is a vector quantity defined as: p = m × v (units: kg m/s or N s). Principle of conservation of momentum: In any closed system (no external forces), total momentum before a collision or explosion equals total momentum after: m₁u₁ + m₂u₂ = m₁v₁ + m₂v₂.",
-          "markPoints": [
-            {
-              "id": "mp1",
-              "markDescription": "Defines Moment: Turning effect of a force about a pivot: M = F × d (N m)."
-            },
-            {
-              "id": "mp2",
-              "markDescription": "States key mechanism/formula: Momentum is a vector quantity defined as: p = m × v (units: kg m/s or N s)."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Applies principle accurately: Principle of conservation of momentum: In any closed system (no external forces), total momentum before a collision or explosion equals total momentum after: m₁u₁ + m₂u₂ = m₁v₁ + m₂v₂."
-            }
-          ]
-        }
-      },
-      {
-        "id": "igcse-phys-exam-5c",
-        "label": "c)",
-        "prompt": "Apply \"Pressure in Solids & Liquids\" to explain how examiners award full marks on Moments, Momentum, Impulse & Pressure problems.",
-        "kind": "short-answer",
-        "marks": 3,
-        "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Pressure is force exerted per unit area: p = F ÷ A (SI unit: pascal, Pa, where 1 Pa = 1 N/m²). A sharp knife concentrates force over a tiny area for high pressure; snowshoes spread weight over a large area for low pressure. Pressure in a liquid increases with depth h, liquid density ρ, and gravitational field strength g: Δp = ρ × g × Δh. Pressure acts equally in all directions at a given depth.",
-          "markPoints": [
-            {
-              "id": "mp1",
-              "markDescription": "Pressure is force exerted per unit area: p = F ÷ A (SI unit: pascal, Pa, where 1 Pa = 1 N/m²). A sharp knife concentrates force over a tiny area for high pressure; snowshoes spread weight over a large area for low pressure."
-            },
-            {
-              "id": "mp2",
-              "markDescription": "Pressure in a liquid increases with depth h, liquid density ρ, and gravitational field strength g: Δp = ρ × g × Δh. Pressure acts equally in all directions at a given depth."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Think of a racing car: low to the ground (low CoG) and wide wheelbase (wide base) = maximum stability!"
-            }
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "id": "igcse-phys-exam-6",
-    "subtopicId": "igcse-phys-1-4",
-    "number": 6,
-    "stimulus": "Structured exam question on Topic 1.4 (Energy Stores, Work Done, Power & Efficiency). Study the information and answer parts (a), (b), and (c).",
-    "diagram": "forces-free-body",
-    "parts": [
-      {
-        "id": "igcse-phys-exam-6a",
-        "label": "a)",
-        "prompt": "Which statement accurately describes a core principle of Energy Stores, Work Done, Power & Efficiency?",
-        "kind": "mcq",
-        "marks": 1,
-        "options": [
-          "Apply W = Fd, Ek = ½mv², and ΔEp = mgΔh, including equating Ep lost to Ek gained.",
-          "It violates the core rule of Energy Stores, Work Done, Power & Efficiency by reversing the relationship between variables.",
-          "It ignores the required standard units and boundary conditions for Power.",
-          "It assumes Efficiency remains zero under all operating conditions."
-        ],
-        "correctIndex": 0
-      },
-      {
-        "id": "igcse-phys-exam-6b",
-        "label": "b)",
-        "prompt": "Define \"Power\" and explain the key principles covered in \"Power & Efficiency\".",
-        "kind": "short-answer",
-        "marks": 3,
-        "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Power: Rate of doing work or transferring energy: P = E ÷ t, measured in watts (W). Furthermore, Power is the rate of work done or energy transferred: P = W ÷ t = ΔE ÷ t (SI unit: watt, W, where 1 W = 1 J/s). Percentage efficiency = (Useful energy output ÷ Total energy input) × 100%, or equivalently (Useful power output ÷ Total power input) × 100%.",
-          "markPoints": [
-            {
-              "id": "mp1",
-              "markDescription": "Defines Power: Rate of doing work or transferring energy: P = E ÷ t, measured in watts (W)."
-            },
-            {
-              "id": "mp2",
-              "markDescription": "States key mechanism/formula: Power is the rate of work done or energy transferred: P = W ÷ t = ΔE ÷ t (SI unit: watt, W, where 1 W = 1 J/s)."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Applies principle accurately: Percentage efficiency = (Useful energy output ÷ Total energy input) × 100%, or equivalently (Useful power output ÷ Total power input) × 100%."
-            }
-          ]
-        }
-      },
-      {
-        "id": "igcse-phys-exam-6c",
-        "label": "c)",
-        "prompt": "Apply \"Renewable & Non-Renewable Energy Resources\" to explain how examiners award full marks on Energy Stores, Work Done, Power & Efficiency problems.",
-        "kind": "short-answer",
-        "marks": 3,
-        "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Non-renewable resources (coal, oil, natural gas, nuclear fission of uranium) are finite. Fossil fuels are reliable and high energy-density but release CO₂ (greenhouse gas) and SO₂ (acid rain). Nuclear produces no CO₂ during generation but creates long-lived radioactive waste. Renewable resources (solar PV, wind, hydroelectric, wave, tidal, geothermal, biofuels) are replenished naturally and have low running costs/carbon emissions.",
-          "markPoints": [
-            {
-              "id": "mp1",
-              "markDescription": "Non-renewable resources (coal, oil, natural gas, nuclear fission of uranium) are finite. Fossil fuels are reliable and high energy-density but release CO₂ (greenhouse gas) and SO₂ (acid rain). Nuclear produces no CO₂ during generation but creates long-lived radioactive waste."
-            },
-            {
-              "id": "mp2",
-              "markDescription": "Renewable resources (solar PV, wind, hydroelectric, wave, tidal, geothermal, biofuels) are replenished naturally and have low running costs/carbon emissions."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Doubling speed quadruples kinetic energy (×4) because v is squared in Ek = ½mv²."
-            }
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "id": "igcse-phys-exam-7",
-    "subtopicId": "igcse-phys-2-1",
-    "number": 7,
-    "stimulus": "Structured exam question on Topic 2.1 (Kinetic Particle Model of Matter & Gas Laws). Study the information and answer parts (a), (b), and (c).",
-    "diagram": "circuit-series-parallel",
-    "parts": [
-      {
-        "id": "igcse-phys-exam-7a",
-        "label": "a)",
-        "prompt": "Which statement accurately describes a core principle of Kinetic Particle Model of Matter & Gas Laws?",
-        "kind": "mcq",
-        "marks": 1,
-        "options": [
-          "Describe particle arrangement, motion, and forces in solids, liquids, and gases.",
-          "It violates the core rule of Kinetic Particle Model of Matter & Gas Laws by reversing the relationship between variables.",
-          "It ignores the required standard units and boundary conditions for Absolute zero.",
-          "It assumes Brownian motion remains zero under all operating conditions."
-        ],
-        "correctIndex": 0
-      },
-      {
-        "id": "igcse-phys-exam-7b",
-        "label": "b)",
-        "prompt": "Define \"Absolute zero\" and explain the key principles covered in \"Temperature, Absolute Zero & The Kelvin Scale\".",
-        "kind": "short-answer",
-        "marks": 3,
-        "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Absolute zero: 0 K (−273 °C), the temperature at which particles possess minimum possible kinetic energy. Furthermore, Temperature is a measure of the average kinetic energy of the particles in a substance. Absolute zero (−273 °C or 0 K) is the lowest theoretically possible temperature, where particles have minimum (zero) kinetic energy and exert zero gas pressure.",
-          "markPoints": [
-            {
-              "id": "mp1",
-              "markDescription": "Defines Absolute zero: 0 K (−273 °C), the temperature at which particles possess minimum possible kinetic energy."
-            },
-            {
-              "id": "mp2",
-              "markDescription": "States key mechanism/formula: Temperature is a measure of the average kinetic energy of the particles in a substance."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Applies principle accurately: Absolute zero (−273 °C or 0 K) is the lowest theoretically possible temperature, where particles have minimum (zero) kinetic energy and exert zero gas pressure."
-            }
-          ]
-        }
-      },
-      {
-        "id": "igcse-phys-exam-7c",
-        "label": "c)",
-        "prompt": "Apply \"Gas Pressure & Boyle’s Law (p₁V₁ = p₂V₂)\" to explain how examiners award full marks on Kinetic Particle Model of Matter & Gas Laws problems.",
-        "kind": "short-answer",
-        "marks": 3,
-        "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Gas pressure arises from millions of gas particles colliding with the container walls every second. Each collision changes a particle’s momentum, exerting a force on the wall (p = F ÷ A). Heating a fixed mass of gas at constant volume increases average particle kinetic energy and speed → particles hit the walls MORE FREQUENTLY and HARDER (greater momentum change per collision) → pressure increases.",
-          "markPoints": [
-            {
-              "id": "mp1",
-              "markDescription": "Gas pressure arises from millions of gas particles colliding with the container walls every second. Each collision changes a particle’s momentum, exerting a force on the wall (p = F ÷ A)."
-            },
-            {
-              "id": "mp2",
-              "markDescription": "Heating a fixed mass of gas at constant volume increases average particle kinetic energy and speed → particles hit the walls MORE FREQUENTLY and HARDER (greater momentum change per collision) → pressure increases."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Remember: Smoke particles are HUGE and slow; air molecules are TINY, invisible, and fast — collisions push the smoke randomly."
-            }
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "id": "igcse-phys-exam-8",
-    "subtopicId": "igcse-phys-2-2",
-    "number": 8,
-    "stimulus": "Structured exam question on Topic 2.2 (Specific Heat Capacity, Latent Heat & Thermal Transfer). Study the information and answer parts (a), (b), and (c).",
-    "diagram": "circuit-series-parallel",
-    "parts": [
-      {
-        "id": "igcse-phys-exam-8a",
-        "label": "a)",
-        "prompt": "Which statement accurately describes a core principle of Specific Heat Capacity, Latent Heat & Thermal Transfer?",
-        "kind": "mcq",
-        "marks": 1,
-        "options": [
-          "Use ΔE = mcΔT and explain why temperature remains constant during melting and boiling.",
-          "It violates the core rule of Specific Heat Capacity, Latent Heat & Thermal Transfer by reversing the relationship between variables.",
-          "It ignores the required standard units and boundary conditions for Internal energy.",
-          "It assumes Specific heat capacity remains zero under all operating conditions."
-        ],
-        "correctIndex": 0
-      },
-      {
-        "id": "igcse-phys-exam-8b",
-        "label": "b)",
-        "prompt": "Define \"Internal energy\" and explain the key principles covered in \"Thermal Expansion & Real-World Applications\".",
-        "kind": "short-answer",
-        "marks": 3,
-        "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Internal energy: Total random kinetic and potential energy of all particles inside a system. Furthermore, When heated, particles vibrate or move faster and push further apart, causing expansion: gases expand the most, liquids moderately, and solids the least. Practical consequences: Railway tracks and bridges have expansion joints to prevent buckling in summer; overhead power cables are hung slack so they do not snap in winter.",
-          "markPoints": [
-            {
-              "id": "mp1",
-              "markDescription": "Defines Internal energy: Total random kinetic and potential energy of all particles inside a system."
-            },
-            {
-              "id": "mp2",
-              "markDescription": "States key mechanism/formula: When heated, particles vibrate or move faster and push further apart, causing expansion: gases expand the most, liquids moderately, and solids the least."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Applies principle accurately: Practical consequences: Railway tracks and bridges have expansion joints to prevent buckling in summer; overhead power cables are hung slack so they do not snap in winter."
-            }
-          ]
-        }
-      },
-      {
-        "id": "igcse-phys-exam-8c",
-        "label": "c)",
-        "prompt": "Apply \"Conduction, Convection & Infrared Radiation\" to explain how examiners award full marks on Specific Heat Capacity, Latent Heat & Thermal Transfer problems.",
-        "kind": "short-answer",
-        "marks": 3,
-        "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Conduction (mainly in solids): Vibrating particles pass kinetic energy along a lattice. Metals are exceptional thermal conductors because DELOCALISED FREE ELECTRONS diffuse rapidly through the lattice and collide with distant metal ions. Convection (fluids — liquids & gases ONLY): Heated fluid expands, becomes LESS DENSE, and rises while cooler, denser fluid sinks to replace it, forming a convection current.",
-          "markPoints": [
-            {
-              "id": "mp1",
-              "markDescription": "Conduction (mainly in solids): Vibrating particles pass kinetic energy along a lattice. Metals are exceptional thermal conductors because DELOCALISED FREE ELECTRONS diffuse rapidly through the lattice and collide with distant metal ions."
-            },
-            {
-              "id": "mp2",
-              "markDescription": "Convection (fluids — liquids & gases ONLY): Heated fluid expands, becomes LESS DENSE, and rises while cooler, denser fluid sinks to replace it, forming a convection current."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Use ΔE = mcΔT and explain why temperature remains constant during melting and boiling."
-            }
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "id": "igcse-phys-exam-9",
-    "subtopicId": "igcse-phys-3-1",
-    "number": 9,
-    "stimulus": "Structured exam question on Topic 3.1 (General Wave Properties, Reflection, Refraction & Diffraction). Study the information and answer parts (a), (b), and (c).",
-    "diagram": "transverse-wave",
-    "parts": [
-      {
-        "id": "igcse-phys-exam-9a",
-        "label": "a)",
-        "prompt": "Which statement accurately describes a core principle of General Wave Properties, Reflection, Refraction & Diffraction?",
-        "kind": "mcq",
-        "marks": 1,
-        "options": [
-          "Compare transverse and longitudinal waves with examples of each.",
-          "It violates the core rule of General Wave Properties, Reflection, Refraction & Diffraction by reversing the relationship between variables.",
-          "It ignores the required standard units and boundary conditions for Transverse wave.",
-          "It assumes Longitudinal wave remains zero under all operating conditions."
-        ],
-        "correctIndex": 0
-      },
-      {
-        "id": "igcse-phys-exam-9b",
-        "label": "b)",
-        "prompt": "Define \"Transverse wave\" and explain the key principles covered in \"The Wave Equation (v = fλ)\".",
-        "kind": "short-answer",
-        "marks": 3,
-        "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Transverse wave: Wave whose oscillations are perpendicular to the direction of energy transfer. Furthermore, Wave speed (m/s) = frequency (Hz) × wavelength (m): v = f × λ. Also link period and frequency: T = 1 ÷ f, so a wave of frequency 50 Hz has a time period T = 0.02 s.",
-          "markPoints": [
-            {
-              "id": "mp1",
-              "markDescription": "Defines Transverse wave: Wave whose oscillations are perpendicular to the direction of energy transfer."
-            },
-            {
-              "id": "mp2",
-              "markDescription": "States key mechanism/formula: Wave speed (m/s) = frequency (Hz) × wavelength (m): v = f × λ."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Applies principle accurately: Also link period and frequency: T = 1 ÷ f, so a wave of frequency 50 Hz has a time period T = 0.02 s."
-            }
-          ]
-        }
-      },
-      {
-        "id": "igcse-phys-exam-9c",
-        "label": "c)",
-        "prompt": "Apply \"Reflection, Refraction & Diffraction in a Ripple Tank\" to explain how examiners award full marks on General Wave Properties, Reflection, Refraction & Diffraction problems.",
-        "kind": "short-answer",
-        "marks": 3,
-        "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Reflection: Wavefronts bounce off a barrier with angle of incidence = angle of reflection (i = r); speed, frequency, and wavelength stay unchanged. Refraction: Water waves moving from deep to shallow water SLOW DOWN, their wavelength DECREASES, and if they hit the boundary at an angle they bend TOWARD the normal (frequency stays constant).",
-          "markPoints": [
-            {
-              "id": "mp1",
-              "markDescription": "Reflection: Wavefronts bounce off a barrier with angle of incidence = angle of reflection (i = r); speed, frequency, and wavelength stay unchanged."
-            },
-            {
-              "id": "mp2",
-              "markDescription": "Refraction: Water waves moving from deep to shallow water SLOW DOWN, their wavelength DECREASES, and if they hit the boundary at an angle they bend TOWARD the normal (frequency stays constant)."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Transverse has a T (perpendicular 90° crossbar); Longitudinal is aLong the same line (parallel)."
-            }
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "id": "igcse-phys-exam-10",
-    "subtopicId": "igcse-phys-3-3",
-    "number": 10,
-    "stimulus": "Structured exam question on Topic 3.3 (Sound Waves, Echoes & Ultrasound). Study the information and answer parts (a), (b), and (c).",
-    "diagram": "transverse-wave",
-    "parts": [
-      {
-        "id": "igcse-phys-exam-10a",
-        "label": "a)",
-        "prompt": "Which statement accurately describes a core principle of Sound Waves, Echoes & Ultrasound?",
-        "kind": "mcq",
-        "marks": 1,
-        "options": [
-          "Explain why sound cannot travel in a vacuum and why it travels fastest in solids.",
-          "It violates the core rule of Sound Waves, Echoes & Ultrasound by reversing the relationship between variables.",
-          "It ignores the required standard units and boundary conditions for Audible range.",
-          "It assumes Ultrasound remains zero under all operating conditions."
-        ],
-        "correctIndex": 0
-      },
-      {
-        "id": "igcse-phys-exam-10b",
-        "label": "b)",
-        "prompt": "Define \"Audible range\" and explain the key principles covered in \"Pitch, Loudness & Ultrasound Applications\".",
-        "kind": "short-answer",
-        "marks": 3,
-        "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Audible range: Range of sound frequencies detectable by a healthy human ear: 20 Hz to 20 kHz. Furthermore, Human audible hearing range is approximately 20 Hz to 20,000 Hz (20 kHz). Higher FREQUENCY produces a higher PITCH (closer waves on an oscilloscope trace). Larger AMPLITUDE produces a LOUDER sound (taller peaks on an oscilloscope trace).",
-          "markPoints": [
-            {
-              "id": "mp1",
-              "markDescription": "Defines Audible range: Range of sound frequencies detectable by a healthy human ear: 20 Hz to 20 kHz."
-            },
-            {
-              "id": "mp2",
-              "markDescription": "States key mechanism/formula: Human audible hearing range is approximately 20 Hz to 20,000 Hz (20 kHz)."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Applies principle accurately: Higher FREQUENCY produces a higher PITCH (closer waves on an oscilloscope trace). Larger AMPLITUDE produces a LOUDER sound (taller peaks on an oscilloscope trace)."
-            }
-          ]
-        }
-      },
-      {
-        "id": "igcse-phys-exam-10c",
-        "label": "c)",
-        "prompt": "Apply \"Pitch, Loudness & Ultrasound Applications\" to explain how examiners award full marks on Sound Waves, Echoes & Ultrasound problems.",
-        "kind": "short-answer",
-        "marks": 3,
-        "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Human audible hearing range is approximately 20 Hz to 20,000 Hz (20 kHz). Higher FREQUENCY produces a higher PITCH (closer waves on an oscilloscope trace). Larger AMPLITUDE produces a LOUDER sound (taller peaks on an oscilloscope trace).",
-          "markPoints": [
-            {
-              "id": "mp1",
-              "markDescription": "Human audible hearing range is approximately 20 Hz to 20,000 Hz (20 kHz)."
-            },
-            {
-              "id": "mp2",
-              "markDescription": "Higher FREQUENCY produces a higher PITCH (closer waves on an oscilloscope trace). Larger AMPLITUDE produces a LOUDER sound (taller peaks on an oscilloscope trace)."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Explain why sound cannot travel in a vacuum and why it travels fastest in solids."
-            }
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "id": "igcse-phys-exam-11",
-    "subtopicId": "igcse-phys-4-1",
-    "number": 11,
-    "stimulus": "Structured exam question on Topic 4.1 (Electric Charge, Current, EMF, Potential Difference & Resistance). Study the information and answer parts (a), (b), and (c).",
-    "diagram": "circuit-series-parallel",
-    "parts": [
-      {
-        "id": "igcse-phys-exam-11a",
-        "label": "a)",
-        "prompt": "Which statement accurately describes a core principle of Electric Charge, Current, EMF, Potential Difference & Resistance?",
-        "kind": "mcq",
-        "marks": 1,
-        "options": [
-          "Apply Q = It, V = W/Q, V = IR, P = IV, and E = IVt with correct SI and kWh units.",
-          "It violates the core rule of Electric Charge, Current, EMF, Potential Difference & Resistance by reversing the relationship between variables.",
-          "It ignores the required standard units and boundary conditions for Electric current.",
-          "It assumes Potential difference remains zero under all operating conditions."
-        ],
-        "correctIndex": 0
-      },
-      {
-        "id": "igcse-phys-exam-11b",
-        "label": "b)",
-        "prompt": "Define \"Electric current\" and explain the key principles covered in \"EMF, Potential Difference & Ohm’s Law (V = IR)\".",
-        "kind": "short-answer",
-        "marks": 3,
-        "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Electric current: Rate of flow of charge: I = Q ÷ t, measured in amperes (A). Furthermore, Electromotive force (e.m.f., E) is the electrical work done by a source in moving unit charge around a complete circuit: E = W ÷ Q (unit: volt, V, where 1 V = 1 J/C). Potential difference (p.d., V) is the work done by unit charge passing through a component: V = W ÷ Q. Voltmeters are connected in PARALLEL; ammeters in SERIES.",
-          "markPoints": [
-            {
-              "id": "mp1",
-              "markDescription": "Defines Electric current: Rate of flow of charge: I = Q ÷ t, measured in amperes (A)."
-            },
-            {
-              "id": "mp2",
-              "markDescription": "States key mechanism/formula: Electromotive force (e.m.f., E) is the electrical work done by a source in moving unit charge around a complete circuit: E = W ÷ Q (unit: volt, V, where 1 V = 1 J/C)."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Applies principle accurately: Potential difference (p.d., V) is the work done by unit charge passing through a component: V = W ÷ Q. Voltmeters are connected in PARALLEL; ammeters in SERIES."
-            }
-          ]
-        }
-      },
-      {
-        "id": "igcse-phys-exam-11c",
-        "label": "c)",
-        "prompt": "Apply \"Electrical Power & Kilowatt-Hours\" to explain how examiners award full marks on Electric Charge, Current, EMF, Potential Difference & Resistance problems.",
-        "kind": "short-answer",
-        "marks": 3,
-        "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Electrical power: P = I × V = I²R = V² ÷ R (watts, W). Electrical energy transferred: E = P × t = I × V × t (joules, J).",
-          "markPoints": [
-            {
-              "id": "mp1",
-              "markDescription": "Electrical power: P = I × V = I²R = V² ÷ R (watts, W)."
-            },
-            {
-              "id": "mp2",
-              "markDescription": "Electrical energy transferred: E = P × t = I × V × t (joules, J)."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Apply Q = It, V = W/Q, V = IR, P = IV, and E = IVt with correct SI and kWh units."
-            }
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "id": "igcse-phys-exam-12",
-    "subtopicId": "igcse-phys-4-3",
-    "number": 12,
-    "stimulus": "Structured exam question on Topic 4.3 (Magnetism, Motor Effect, EM Induction & Transformers). Study the information and answer parts (a), (b), and (c).",
-    "parts": [
-      {
-        "id": "igcse-phys-exam-12a",
-        "label": "a)",
-        "prompt": "Which statement accurately describes a core principle of Magnetism, Motor Effect, EM Induction & Transformers?",
-        "kind": "mcq",
-        "marks": 1,
-        "options": [
-          "Apply Fleming’s Left-Hand Rule and explain the role of the split-ring commutator in a DC motor.",
-          "It violates the core rule of Magnetism, Motor Effect, EM Induction & Transformers by reversing the relationship between variables.",
-          "It ignores the required standard units and boundary conditions for Motor effect.",
-          "It assumes Lenz’s Law remains zero under all operating conditions."
-        ],
-        "correctIndex": 0
-      },
-      {
-        "id": "igcse-phys-exam-12b",
-        "label": "b)",
-        "prompt": "Define \"Motor effect\" and explain the key principles covered in \"Electromagnetic Induction & AC Generators\".",
-        "kind": "short-answer",
-        "marks": 3,
-        "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Motor effect: Force experienced by a current-carrying wire placed across a magnetic field. Furthermore, Electromagnetic induction: Whenever a conductor cuts across magnetic field lines (or magnetic flux through a coil changes), an e.m.f. is INDUCED across its ends. Increase induced e.m.f. by: (1) moving the magnet/coil faster, (2) using a stronger magnet, or (3) using more turns on the coil.",
-          "markPoints": [
-            {
-              "id": "mp1",
-              "markDescription": "Defines Motor effect: Force experienced by a current-carrying wire placed across a magnetic field."
-            },
-            {
-              "id": "mp2",
-              "markDescription": "States key mechanism/formula: Electromagnetic induction: Whenever a conductor cuts across magnetic field lines (or magnetic flux through a coil changes), an e.m.f. is INDUCED across its ends."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Applies principle accurately: Increase induced e.m.f. by: (1) moving the magnet/coil faster, (2) using a stronger magnet, or (3) using more turns on the coil."
-            }
-          ]
-        }
-      },
-      {
-        "id": "igcse-phys-exam-12c",
-        "label": "c)",
-        "prompt": "Apply \"Transformers & High-Voltage Power Transmission\" to explain how examiners award full marks on Magnetism, Motor Effect, EM Induction & Transformers problems.",
-        "kind": "short-answer",
-        "marks": 3,
-        "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "A transformer consists of primary and secondary coils wound on a laminated soft-iron core. Alternating current in the primary produces a continuously changing magnetic field in the iron core, inducing an alternating e.m.f. in the secondary coil (transformers ONLY work with AC!). Transformer turns ratio equation: Vp ÷ Vs = Np ÷ Ns. Step-up transformers have Ns > Np (increase V); step-down transformers have Ns < Np (decrease V). Avoid: Never say \"high voltage reduces resistance of the cables\" — high voltage reduces CURRENT I, which slashes power loss via P = I²R!",
-          "markPoints": [
-            {
-              "id": "mp1",
-              "markDescription": "A transformer consists of primary and secondary coils wound on a laminated soft-iron core. Alternating current in the primary produces a continuously changing magnetic field in the iron core, inducing an alternating e.m.f. in the secondary coil (transformers ONLY work with AC!)."
-            },
-            {
-              "id": "mp2",
-              "markDescription": "Transformer turns ratio equation: Vp ÷ Vs = Np ÷ Ns. Step-up transformers have Ns > Np (increase V); step-down transformers have Ns < Np (decrease V)."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Never say \"high voltage reduces resistance of the cables\" — high voltage reduces CURRENT I, which slashes power loss via P = I²R!"
-            }
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "id": "igcse-phys-exam-13",
-    "subtopicId": "igcse-phys-5-1",
-    "number": 13,
-    "stimulus": "Structured exam question on Topic 5.1 (The Nuclear Model of the Atom, Isotopes, Fission & Fusion). Study the information and answer parts (a), (b), and (c).",
-    "diagram": "atomic-structure",
-    "parts": [
-      {
-        "id": "igcse-phys-exam-13a",
-        "label": "a)",
-        "prompt": "Which statement accurately describes a core principle of The Nuclear Model of the Atom, Isotopes, Fission & Fusion?",
-        "kind": "mcq",
-        "marks": 1,
-        "options": [
-          "Explain how Rutherford’s gold foil observations established the nuclear model of the atom.",
-          "It violates the core rule of The Nuclear Model of the Atom, Isotopes, Fission & Fusion by reversing the relationship between variables.",
-          "It ignores the required standard units and boundary conditions for Nucleon number (A).",
-          "It assumes Isotope remains zero under all operating conditions."
-        ],
-        "correctIndex": 0
-      },
-      {
-        "id": "igcse-phys-exam-13b",
-        "label": "b)",
-        "prompt": "Define \"Nucleon number (A)\" and explain the key principles covered in \"Nuclide Notation & Isotopes\".",
-        "kind": "short-answer",
-        "marks": 3,
-        "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Nucleon number (A): Total number of protons plus neutrons in an atomic nucleus. Furthermore, Nuclide notation ᴬ_Z X: Proton (atomic) number Z = number of protons (defines the element); Nucleon (mass) number A = protons + neutrons; Neutron number N = A − Z. Isotopes are atoms of the SAME element having the SAME number of protons (Z) but DIFFERENT numbers of neutrons (A − Z). Example: Carbon-12 (6p, 6n) and Carbon-14 (6p, 8n).",
-          "markPoints": [
-            {
-              "id": "mp1",
-              "markDescription": "Defines Nucleon number (A): Total number of protons plus neutrons in an atomic nucleus."
-            },
-            {
-              "id": "mp2",
-              "markDescription": "States key mechanism/formula: Nuclide notation ᴬ_Z X: Proton (atomic) number Z = number of protons (defines the element); Nucleon (mass) number A = protons + neutrons; Neutron number N = A − Z."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Applies principle accurately: Isotopes are atoms of the SAME element having the SAME number of protons (Z) but DIFFERENT numbers of neutrons (A − Z). Example: Carbon-12 (6p, 6n) and Carbon-14 (6p, 8n)."
-            }
-          ]
-        }
-      },
-      {
-        "id": "igcse-phys-exam-13c",
-        "label": "c)",
-        "prompt": "Apply \"Nuclear Fission & Nuclear Fusion\" to explain how examiners award full marks on The Nuclear Model of the Atom, Isotopes, Fission & Fusion problems.",
-        "kind": "short-answer",
-        "marks": 3,
-        "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Nuclear FISSION: A heavy unstable nucleus (e.g., Uranium-235) absorbs a slow neutron and SPLITS into two smaller daughter nuclei, releasing 2–3 fast neutrons and vast kinetic/thermal energy. Excess neutrons can trigger a chain reaction (controlled in nuclear reactors using boron control rods and graphite/water moderators). Nuclear FUSION: Two light nuclei (e.g., hydrogen isotopes deuterium and tritium) JOIN at extremely high temperatures and pressures (as in the core of the Sun) to form a heavier helium nucleus, releasing even greater energy per kg. Avoid: Do not mix up fission and fusion! Fission = Splitting (like a fissure/crack); Fusion = Fusing/joining light nuclei together.",
-          "markPoints": [
-            {
-              "id": "mp1",
-              "markDescription": "Nuclear FISSION: A heavy unstable nucleus (e.g., Uranium-235) absorbs a slow neutron and SPLITS into two smaller daughter nuclei, releasing 2–3 fast neutrons and vast kinetic/thermal energy. Excess neutrons can trigger a chain reaction (controlled in nuclear reactors using boron control rods and graphite/water moderators)."
-            },
-            {
-              "id": "mp2",
-              "markDescription": "Nuclear FUSION: Two light nuclei (e.g., hydrogen isotopes deuterium and tritium) JOIN at extremely high temperatures and pressures (as in the core of the Sun) to form a heavier helium nucleus, releasing even greater energy per kg."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Do not mix up fission and fusion! Fission = Splitting (like a fissure/crack); Fusion = Fusing/joining light nuclei together."
-            }
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "id": "igcse-phys-exam-14",
-    "subtopicId": "igcse-phys-5-2",
-    "number": 14,
-    "stimulus": "Structured exam question on Topic 5.2 (Radioactive Decay (Alpha, Beta, Gamma) & Half-Life). Study the information and answer parts (a), (b), and (c).",
-    "diagram": "forces-free-body",
-    "parts": [
-      {
-        "id": "igcse-phys-exam-14a",
-        "label": "a)",
-        "prompt": "Which statement accurately describes a core principle of Radioactive Decay (Alpha, Beta, Gamma) & Half-Life?",
-        "kind": "mcq",
-        "marks": 1,
-        "options": [
-          "Compare α, β, and γ radiation by nature, charge, penetration, ionising power, and field deflection.",
-          "It violates the core rule of Radioactive Decay (Alpha, Beta, Gamma) & Half-Life by reversing the relationship between variables.",
-          "It ignores the required standard units and boundary conditions for Alpha particle.",
-          "It assumes Beta particle remains zero under all operating conditions."
-        ],
-        "correctIndex": 0
-      },
-      {
-        "id": "igcse-phys-exam-14b",
-        "label": "b)",
-        "prompt": "Define \"Alpha particle\" and explain the key principles covered in \"Balanced Nuclear Decay Equations\".",
-        "kind": "short-answer",
-        "marks": 3,
-        "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Alpha particle: Helium nucleus (2 protons + 2 neutrons), strongly ionising with short range (stopped by paper). Furthermore, Both total nucleon number (top) and total proton number (bottom) MUST balance on both sides of a nuclear equation. Alpha decay (loses 2p and 2n): ᴬ_Z X → ᴬ⁻⁴_{Z−2} Y + ⁴₂α. Example: ²³⁸₉₂U → ²³⁴₉₀Th + ⁴₂He.",
-          "markPoints": [
-            {
-              "id": "mp1",
-              "markDescription": "Defines Alpha particle: Helium nucleus (2 protons + 2 neutrons), strongly ionising with short range (stopped by paper)."
-            },
-            {
-              "id": "mp2",
-              "markDescription": "States key mechanism/formula: Both total nucleon number (top) and total proton number (bottom) MUST balance on both sides of a nuclear equation."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Applies principle accurately: Alpha decay (loses 2p and 2n): ᴬ_Z X → ᴬ⁻⁴_{Z−2} Y + ⁴₂α. Example: ²³⁸₉₂U → ²³⁴₉₀Th + ⁴₂He."
-            }
-          ]
-        }
-      },
-      {
-        "id": "igcse-phys-exam-14c",
-        "label": "c)",
-        "prompt": "Apply \"Half-Life, Uses & Safe Handling\" to explain how examiners award full marks on Radioactive Decay (Alpha, Beta, Gamma) & Half-Life problems.",
-        "kind": "short-answer",
-        "marks": 3,
-        "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Radioactive decay is spontaneous and RANDOM — it is impossible to predict when a single nucleus will decay, and decay rate is unaffected by temperature or chemical bonding. Half-life (t_½) is the time taken for HALF of the unstable nuclei in a sample to decay (or for the corrected count rate/activity in becquerels, Bq, to halve).",
-          "markPoints": [
-            {
-              "id": "mp1",
-              "markDescription": "Radioactive decay is spontaneous and RANDOM — it is impossible to predict when a single nucleus will decay, and decay rate is unaffected by temperature or chemical bonding."
-            },
-            {
-              "id": "mp2",
-              "markDescription": "Half-life (t_½) is the time taken for HALF of the unstable nuclei in a sample to decay (or for the corrected count rate/activity in becquerels, Bq, to halve)."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Penetration order: Paper stops Alpha, Aluminium stops Beta, Lead reduces Gamma (P-A-L). Ionising power is the EXACT reverse!"
-            }
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "id": "igcse-phys-exam-15",
+    "id": "igcse-phys-ex-6-1",
     "subtopicId": "igcse-phys-6-1",
     "number": 15,
-    "stimulus": "Structured exam question on Topic 6.1 (Earth, The Solar System & Orbital Motion). Study the information and answer parts (a), (b), and (c).",
-    "diagram": "transverse-wave",
+    "stimulus": "[Cambridge IGCSE 0625 Paper 4 Style] A comet follows a highly elliptical orbit around the Sun.",
     "parts": [
       {
-        "id": "igcse-phys-exam-15a",
-        "label": "a)",
-        "prompt": "Which statement accurately describes a core principle of Earth, The Solar System & Orbital Motion?",
-        "kind": "mcq",
-        "marks": 1,
-        "options": [
-          "Explain day/night, the seasons (23.5° tilt), and lunar phases clearly.",
-          "It violates the core rule of Earth, The Solar System & Orbital Motion by reversing the relationship between variables.",
-          "It ignores the required standard units and boundary conditions for Orbital speed.",
-          "It assumes Accretion remains zero under all operating conditions."
-        ],
-        "correctIndex": 0
-      },
-      {
-        "id": "igcse-phys-exam-15b",
-        "label": "b)",
-        "prompt": "Define \"Orbital speed\" and explain the key principles covered in \"The Solar System & Accretion Model\".",
+        "id": "p1",
+        "label": "(a)",
+        "prompt": "Explain in terms of energy conservation why the comet travels fastest when closest to the Sun.",
+        "marks": 2,
         "kind": "short-answer",
-        "marks": 3,
         "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Orbital speed: Average speed along a circular orbit: v = 2πr ÷ T. Furthermore, Order of the 8 planets from the Sun: Mercury, Venus, Earth, Mars (4 small, rocky, dense inner planets) — Asteroid Belt — Jupiter, Saturn, Uranus, Neptune (4 large, cold, low-density gas/ice giants). Accretion model of Solar System formation: A rotating nebula of gas and dust collapsed under gravity into a swirling accretion disc. The hot dense core formed the Sun; near the Sun only rocky/metallic elements with high melting points condensed (rocky planets), whereas further out cooler gases and ices clumped into gas giants.",
+          "maxMarks": 2,
+          "modelAnswer": "As the comet moves closer to the Sun, its gravitational potential energy decreases and transfers into kinetic energy, so its orbital speed increases to a maximum at closest approach.",
           "markPoints": [
             {
               "id": "mp1",
-              "markDescription": "Defines Orbital speed: Average speed along a circular orbit: v = 2πr ÷ T."
+              "requiredKeywordGroups": [
+                [
+                  "gravitational potential",
+                  "gpe"
+                ],
+                [
+                  "kinetic",
+                  "ke"
+                ]
+              ],
+              "markDescription": "GPE decreases / transfers to KE"
             },
             {
               "id": "mp2",
-              "markDescription": "States key mechanism/formula: Order of the 8 planets from the Sun: Mercury, Venus, Earth, Mars (4 small, rocky, dense inner planets) — Asteroid Belt — Jupiter, Saturn, Uranus, Neptune (4 large, cold, low-density gas/ice giants)."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Applies principle accurately: Accretion model of Solar System formation: A rotating nebula of gas and dust collapsed under gravity into a swirling accretion disc. The hot dense core formed the Sun; near the Sun only rocky/metallic elements with high melting points condensed (rocky planets), whereas further out cooler gases and ices clumped into gas giants."
+              "requiredKeywordGroups": [
+                [
+                  "speed",
+                  "fastest",
+                  "maximum"
+                ]
+              ],
+              "markDescription": "Speed reaches maximum closest to Sun"
             }
           ]
         }
       },
       {
-        "id": "igcse-phys-exam-15c",
-        "label": "c)",
-        "prompt": "Apply \"Orbital Speed & Elliptical Comet Orbits\" to explain how examiners award full marks on Earth, The Solar System & Orbital Motion problems.",
+        "id": "p2",
+        "label": "(b)",
+        "prompt": "Calculate: A planet orbits at r = 2.0 × 10¹¹ m with period T = 6.0 × 10⁷ s. Calculate its average orbital speed to 2 s.f.",
+        "marks": 2,
         "kind": "short-answer",
-        "marks": 3,
         "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Average orbital speed for a circular orbit of radius r and orbital period T: v = (2 × π × r) ÷ T. As orbital radius increases across the Solar System, the Sun’s gravitational pull weakens, so outer planets orbit much MORE SLOWLY and have much LONGER orbital periods (years) than inner planets.",
+          "maxMarks": 2,
+          "modelAnswer": "v = 2πr / T = (2π × 2.0 × 10¹¹) / (6.0 × 10⁷) = 2.1 × 10⁴ m/s (21,000 m/s).",
           "markPoints": [
             {
               "id": "mp1",
-              "markDescription": "Average orbital speed for a circular orbit of radius r and orbital period T: v = (2 × π × r) ÷ T."
+              "requiredKeywordGroups": [
+                [
+                  "2π",
+                  "2pi",
+                  "1.26"
+                ]
+              ],
+              "markDescription": "Uses 2πr / T"
             },
             {
               "id": "mp2",
-              "markDescription": "As orbital radius increases across the Solar System, the Sun’s gravitational pull weakens, so outer planets orbit much MORE SLOWLY and have much LONGER orbital periods (years) than inner planets."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Explain day/night, the seasons (23.5° tilt), and lunar phases clearly."
+              "requiredKeywordGroups": [
+                [
+                  "21000",
+                  "20900",
+                  "2.1",
+                  "20,900",
+                  "21,000"
+                ]
+              ],
+              "markDescription": "21000 m/s (2.1 × 10⁴)"
             }
           ]
         }
@@ -5047,71 +6245,89 @@ export const IGCSE_PHYSICS_EXAM_PRACTICE: ExamQuestionItem[] = [
     ]
   },
   {
-    "id": "igcse-phys-exam-16",
+    "id": "igcse-phys-ex-6-2",
     "subtopicId": "igcse-phys-6-2",
     "number": 16,
-    "stimulus": "Structured exam question on Topic 6.2 (Life Cycle of Stars, Red-Shift & The Big Bang (Hubble’s Law)). Study the information and answer parts (a), (b), and (c).",
+    "stimulus": "[Cambridge IGCSE 0625 Paper 4 Style] Astronomers measure a distant galaxy receding at v = 6.6 × 10⁶ m/s, using H₀ = 2.2 × 10⁻¹⁸ s⁻¹.",
     "parts": [
       {
-        "id": "igcse-phys-exam-16a",
-        "label": "a)",
-        "prompt": "Which statement accurately describes a core principle of Life Cycle of Stars, Red-Shift & The Big Bang (Hubble’s Law)?",
-        "kind": "mcq",
-        "marks": 1,
-        "options": [
-          "Trace the complete stellar life cycle for both Sun-sized stars and high-mass stars.",
-          "It violates the core rule of Life Cycle of Stars, Red-Shift & The Big Bang (Hubble’s Law) by reversing the relationship between variables.",
-          "It ignores the required standard units and boundary conditions for Main sequence star.",
-          "It assumes Red-shift remains zero under all operating conditions."
-        ],
-        "correctIndex": 0
-      },
-      {
-        "id": "igcse-phys-exam-16b",
-        "label": "b)",
-        "prompt": "Define \"Main sequence star\" and explain the key principles covered in \"Red-Shift, CMBR & The Big Bang Theory\".",
+        "id": "p1",
+        "label": "(a)",
+        "prompt": "Calculate: Use Hubble’s Law to calculate the distance d to this galaxy in metres.",
+        "marks": 2,
         "kind": "short-answer",
-        "marks": 3,
         "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Main sequence star: Stable star where inward gravity is balanced by outward pressure from core hydrogen fusion. Furthermore, Red-shift: Light emitted by distant galaxies is shifted toward the RED (longer wavelength, lower frequency) end of the spectrum because the space between galaxies is expanding and the galaxies are receding away from us. Key observation: The FURTHER away a galaxy is, the GREATER its red-shift — meaning distant galaxies are receding FASTER than closer ones, proving the Universe is expanding.",
+          "maxMarks": 2,
+          "modelAnswer": "d = v / H₀ = (6.6 × 10⁶) / (2.2 × 10⁻¹⁸) = 3.0 × 10²⁴ m.",
           "markPoints": [
             {
               "id": "mp1",
-              "markDescription": "Defines Main sequence star: Stable star where inward gravity is balanced by outward pressure from core hydrogen fusion."
+              "requiredKeywordGroups": [
+                [
+                  "6.6"
+                ],
+                [
+                  "2.2"
+                ]
+              ],
+              "markDescription": "Uses d = v / H₀"
             },
             {
               "id": "mp2",
-              "markDescription": "States key mechanism/formula: Red-shift: Light emitted by distant galaxies is shifted toward the RED (longer wavelength, lower frequency) end of the spectrum because the space between galaxies is expanding and the galaxies are receding away from us."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Applies principle accurately: Key observation: The FURTHER away a galaxy is, the GREATER its red-shift — meaning distant galaxies are receding FASTER than closer ones, proving the Universe is expanding."
+              "requiredKeywordGroups": [
+                [
+                  "3.0",
+                  "3 × 10",
+                  "3x10",
+                  "3e24",
+                  "10^24",
+                  "10²⁴"
+                ]
+              ],
+              "markDescription": "3.0 × 10²⁴ m"
             }
           ]
         }
       },
       {
-        "id": "igcse-phys-exam-16c",
-        "label": "c)",
-        "prompt": "Apply \"Hubble’s Law & Age of the Universe (CIE Extended)\" to explain how examiners award full marks on Life Cycle of Stars, Red-Shift & The Big Bang (Hubble’s Law) problems.",
+        "id": "p2",
+        "label": "(b)",
+        "prompt": "Explain what CMBR is and why it provides strong evidence for the Big Bang.",
+        "marks": 2,
         "kind": "short-answer",
-        "marks": 3,
         "rubric": {
-          "maxMarks": 3,
-          "modelAnswer": "Hubble’s Law states that a galaxy’s recession speed v is directly proportional to its distance d from Earth: v = H₀ × d, where H₀ = v ÷ d is the Hubble constant. Current measured value of the Hubble constant: H₀ ≈ 2.2 × 10⁻¹⁸ s⁻¹.",
+          "maxMarks": 2,
+          "modelAnswer": "CMBR is uniform microwave radiation arriving from all directions in space; it is high-energy thermal radiation emitted shortly after the hot Big Bang that has been stretched (red-shifted) into microwaves by the expansion of space.",
           "markPoints": [
             {
               "id": "mp1",
-              "markDescription": "Hubble’s Law states that a galaxy’s recession speed v is directly proportional to its distance d from Earth: v = H₀ × d, where H₀ = v ÷ d is the Hubble constant."
+              "requiredKeywordGroups": [
+                [
+                  "microwave"
+                ],
+                [
+                  "all directions",
+                  "uniform",
+                  "everywhere",
+                  "space"
+                ]
+              ],
+              "markDescription": "Uniform microwave radiation from all directions"
             },
             {
               "id": "mp2",
-              "markDescription": "Current measured value of the Hubble constant: H₀ ≈ 2.2 × 10⁻¹⁸ s⁻¹."
-            },
-            {
-              "id": "mp3",
-              "markDescription": "Sun-like path: Nebula → Protostar → Main Sequence → Red Giant → Planetary Nebula → White Dwarf. Massive path: ... → Red Supergiant → Supernova → Neutron Star / Black Hole."
+              "requiredKeywordGroups": [
+                [
+                  "stretched",
+                  "red-shift",
+                  "redshift",
+                  "expanded",
+                  "expanding",
+                  "early",
+                  "hot"
+                ]
+              ],
+              "markDescription": "Stretched/red-shifted early Big Bang radiation"
             }
           ]
         }
@@ -5125,52 +6341,38 @@ export const IGCSE_PHYSICS_PAST_PAPERS: PastPaperDoc[] = [
     "id": "igcse-phys-pp-2024-p2",
     "specEra": "new-9-1",
     "year": "2024",
-    "title": "CIE 0625 Paper 2 Multiple Choice Extended (0625/22)",
+    "title": "Cambridge IGCSE Physics (0625) Paper 2 (Extended MCQ) — May/June 2024",
     "tier": "Extended",
-    "series": "May/June 2024",
+    "series": "May/June",
     "paperCode": "0625/22",
     "durationMinutes": 45,
     "totalMarks": 40,
-    "insertNote": "Use g = 9.8 N/kg throughout CIE 0625 (2023–2025 syllabus).",
     "sampleQuestions": [
       {
-        "number": "01",
-        "question": "[Topic 1.1 — Physical Quantities, Speed & Motion Graphs] (a) Define Scalar. (b) Apply the principles of \"Measurement Techniques, Scalars & Vectors\" to solve and explain a standard exam scenario.",
-        "marks": 4,
+        "number": "Q1",
+        "question": "Identify resultant force from perpendicular vectors and speed-time graph areas.",
+        "marks": 3,
         "markScheme": [
-          "1 mark: Accurate definition of Scalar — A physical quantity that has magnitude only and no direction (e.g., speed, mass, energy).",
-          "2 marks: Length is measured with rulers (to 1 mm), vernier callipers (to 0.1 mm), or micrometer screw gauges (to 0.01 mm). Always check for zero error and read perpendicular to the scale to avoid parallax error.",
-          "1 mark: To measure the period T of a pendulum accurately, time 20 complete oscillations with a stopwatch and divide the total time by 20 — this reduces the percentage error from human reaction time."
+          "Apply the correct Cambridge IGCSE Physics (0625) method and show full working.",
+          "State final numerical value to appropriate significant figures with correct SI/metric units."
         ]
       },
       {
-        "number": "02",
-        "question": "[Topic 1.3 — Moments, Momentum, Impulse & Pressure] (a) Define Moment. (b) Apply the principles of \"Momentum, Conservation & Impulse\" to solve and explain a standard exam scenario.",
-        "marks": 4,
+        "number": "Q2",
+        "question": "Select the correct I–V characteristic for a filament lamp and NTC thermistor.",
+        "marks": 3,
         "markScheme": [
-          "1 mark: Accurate definition of Moment — Turning effect of a force about a pivot: M = F × d (N m).",
-          "2 marks: Momentum is a vector quantity defined as: p = m × v (units: kg m/s or N s).",
-          "1 mark: Principle of conservation of momentum: In any closed system (no external forces), total momentum before a collision or explosion equals total momentum after: m₁u₁ + m₂u₂ = m₁v₁ + m₂v₂."
+          "Apply the correct Cambridge IGCSE Physics (0625) method and show full working.",
+          "State final numerical value to appropriate significant figures with correct SI/metric units."
         ]
       },
       {
-        "number": "03",
-        "question": "[Topic 2.1 — Kinetic Particle Model of Matter & Gas Laws] (a) Define Absolute zero. (b) Apply the principles of \"Gas Pressure & Boyle’s Law (p₁V₁ = p₂V₂)\" to solve and explain a standard exam scenario.",
-        "marks": 4,
+        "number": "Q3",
+        "question": "Determine nuclide numbers after sequential alpha and beta decays.",
+        "marks": 3,
         "markScheme": [
-          "1 mark: Accurate definition of Absolute zero — 0 K (−273 °C), the temperature at which particles possess minimum possible kinetic energy.",
-          "2 marks: Gas pressure arises from millions of gas particles colliding with the container walls every second. Each collision changes a particle’s momentum, exerting a force on the wall (p = F ÷ A).",
-          "1 mark: Heating a fixed mass of gas at constant volume increases average particle kinetic energy and speed → particles hit the walls MORE FREQUENTLY and HARDER (greater momentum change per collision) → pressure increases."
-        ]
-      },
-      {
-        "number": "04",
-        "question": "[Topic 3.1 — General Wave Properties, Reflection, Refraction & Diffraction] (a) Define Transverse wave. (b) Apply the principles of \"Transverse vs Longitudinal Waves & Wave Parameters\" to solve and explain a standard exam scenario.",
-        "marks": 4,
-        "markScheme": [
-          "1 mark: Accurate definition of Transverse wave — Wave whose oscillations are perpendicular to the direction of energy transfer.",
-          "2 marks: Waves transfer ENERGY and information without transferring matter from place to place.",
-          "1 mark: Transverse waves: Vibrations are perpendicular (90°) to the direction of wave travel (examples: all electromagnetic waves, water surface waves, seismic S-waves)."
+          "Apply the correct Cambridge IGCSE Physics (0625) method and show full working.",
+          "State final numerical value to appropriate significant figures with correct SI/metric units."
         ]
       }
     ]
@@ -5179,106 +6381,118 @@ export const IGCSE_PHYSICS_PAST_PAPERS: PastPaperDoc[] = [
     "id": "igcse-phys-pp-2024-p4",
     "specEra": "new-9-1",
     "year": "2024",
-    "title": "CIE 0625 Paper 4 Extended Theory (0625/42)",
+    "title": "Cambridge IGCSE Physics (0625) Paper 4 (Extended Theory) — May/June 2024",
     "tier": "Extended",
-    "series": "May/June 2024",
+    "series": "May/June",
     "paperCode": "0625/42",
     "durationMinutes": 75,
     "totalMarks": 80,
-    "insertNote": "Includes CIE 0625 Constants & Electrical Symbols Data Sheet.",
     "sampleQuestions": [
       {
-        "number": "01",
-        "question": "[Topic 1.4 — Energy Stores, Work Done, Power & Efficiency] (a) Define Power. (b) Apply the principles of \"Energy Stores, Transfers & Mechanical Work\" to solve and explain a standard exam scenario.",
-        "marks": 4,
+        "number": "Q1",
+        "question": "Calculate impulse and explain how airbags reduce impact force using F = Δp/Δt.",
+        "marks": 6,
         "markScheme": [
-          "1 mark: Accurate definition of Power — Rate of doing work or transferring energy: P = E ÷ t, measured in watts (W).",
-          "2 marks: Energy is stored in kinetic, gravitational potential, chemical, elastic (strain), nuclear, electrostatic, magnetic, and internal (thermal) stores.",
-          "1 mark: Energy is transferred between stores mechanically (forces doing work), electrically (currents), by heating (conduction/convection/radiation), or by waves (light/sound)."
+          "Apply the correct Cambridge IGCSE Physics (0625) method and show full working.",
+          "State final numerical value to appropriate significant figures with correct SI/metric units."
         ]
       },
       {
-        "number": "02",
-        "question": "[Topic 2.2 — Specific Heat Capacity, Latent Heat & Thermal Transfer] (a) Define Internal energy. (b) Apply the principles of \"Thermal Expansion & Real-World Applications\" to solve and explain a standard exam scenario.",
-        "marks": 4,
+        "number": "Q2",
+        "question": "Calculate critical angle for glass (n = 1.50) and state both conditions for TIR.",
+        "marks": 6,
         "markScheme": [
-          "1 mark: Accurate definition of Internal energy — Total random kinetic and potential energy of all particles inside a system.",
-          "2 marks: When heated, particles vibrate or move faster and push further apart, causing expansion: gases expand the most, liquids moderately, and solids the least.",
-          "1 mark: Practical consequences: Railway tracks and bridges have expansion joints to prevent buckling in summer; overhead power cables are hung slack so they do not snap in winter."
+          "Apply the correct Cambridge IGCSE Physics (0625) method and show full working.",
+          "State final numerical value to appropriate significant figures with correct SI/metric units."
         ]
       },
       {
-        "number": "03",
-        "question": "[Topic 3.2 — Light, Lenses, Total Internal Reflection & EM Spectrum] (a) Define Snell’s Law. (b) Apply the principles of \"Dispersion & The Electromagnetic Spectrum\" to solve and explain a standard exam scenario.",
-        "marks": 4,
+        "number": "Q3",
+        "question": "Explain how a step-up transformer reduces I²R losses in grid transmission cables.",
+        "marks": 6,
         "markScheme": [
-          "1 mark: Accurate definition of Snell’s Law — n = sin i ÷ sin r, relating angles of incidence and refraction to refractive index.",
-          "2 marks: Dispersion: A glass prism splits white light into ROYGBIV because violet light slows down slightly more (higher n) than red light and refracts through a larger angle.",
-          "1 mark: All EM waves are transverse and travel through a vacuum at c = 3.0 × 10⁸ m/s. Order of INCREASING frequency (decreasing wavelength): Radio → Microwave → Infrared → Visible → Ultraviolet → X-rays → Gamma rays."
-        ]
-      },
-      {
-        "number": "04",
-        "question": "[Topic 4.1 — Electric Charge, Current, EMF, Potential Difference & Resistance] (a) Define Electric current. (b) Apply the principles of \"Electrostatics, Current & Charge (Q = It)\" to solve and explain a standard exam scenario.",
-        "marks": 4,
-        "markScheme": [
-          "1 mark: Accurate definition of Electric current — Rate of flow of charge: I = Q ÷ t, measured in amperes (A).",
-          "2 marks: Charging insulators by friction transfers NEGATIVELY CHARGED ELECTRONS only (protons never move in solids). Gaining electrons makes an object negative; losing electrons leaves it positive. Like charges repel; opposite charges attract.",
-          "1 mark: An electric field is a region where an electric charge experiences a force; field lines always point away from positive charges and toward negative charges."
+          "Apply the correct Cambridge IGCSE Physics (0625) method and show full working.",
+          "State final numerical value to appropriate significant figures with correct SI/metric units."
         ]
       }
     ]
   },
   {
-    "id": "igcse-phys-pp-2024-p6",
+    "id": "igcse-phys-pp-2023n-p2",
     "specEra": "new-9-1",
-    "year": "2024",
-    "title": "CIE 0625 Paper 6 Alternative to Practical (0625/62)",
-    "tier": "Core & Extended",
-    "series": "May/June 2024",
-    "paperCode": "0625/62",
-    "durationMinutes": 60,
+    "year": "2023",
+    "title": "Cambridge IGCSE Physics (0625) Paper 2 (Extended MCQ) — Oct/Nov 2023",
+    "tier": "Extended",
+    "series": "Oct/Nov",
+    "paperCode": "0625/22",
+    "durationMinutes": 45,
     "totalMarks": 40,
-    "insertNote": "Experimental Planning, Ray-Tracing & Graph Analysis Paper.",
     "sampleQuestions": [
       {
-        "number": "01",
-        "question": "[Topic 3.1 — General Wave Properties, Reflection, Refraction & Diffraction] (a) Define Transverse wave. (b) Apply the principles of \"Transverse vs Longitudinal Waves & Wave Parameters\" to solve and explain a standard exam scenario.",
-        "marks": 4,
+        "number": "Q1",
+        "question": "Calculate spring constant using extension rather than total length.",
+        "marks": 3,
         "markScheme": [
-          "1 mark: Accurate definition of Transverse wave — Wave whose oscillations are perpendicular to the direction of energy transfer.",
-          "2 marks: Waves transfer ENERGY and information without transferring matter from place to place.",
-          "1 mark: Transverse waves: Vibrations are perpendicular (90°) to the direction of wave travel (examples: all electromagnetic waves, water surface waves, seismic S-waves)."
+          "Apply the correct Cambridge IGCSE Physics (0625) method and show full working.",
+          "State final numerical value to appropriate significant figures with correct SI/metric units."
         ]
       },
       {
-        "number": "02",
-        "question": "[Topic 3.3 — Sound Waves, Echoes & Ultrasound] (a) Define Audible range. (b) Apply the principles of \"Pitch, Loudness & Ultrasound Applications\" to solve and explain a standard exam scenario.",
-        "marks": 4,
+        "number": "Q2",
+        "question": "Predict wavelength and frequency changes from deep to shallow water.",
+        "marks": 3,
         "markScheme": [
-          "1 mark: Accurate definition of Audible range — Range of sound frequencies detectable by a healthy human ear: 20 Hz to 20 kHz.",
-          "2 marks: Human audible hearing range is approximately 20 Hz to 20,000 Hz (20 kHz).",
-          "1 mark: Higher FREQUENCY produces a higher PITCH (closer waves on an oscilloscope trace). Larger AMPLITUDE produces a LOUDER sound (taller peaks on an oscilloscope trace)."
+          "Apply the correct Cambridge IGCSE Physics (0625) method and show full working.",
+          "State final numerical value to appropriate significant figures with correct SI/metric units."
         ]
       },
       {
-        "number": "03",
-        "question": "[Topic 4.2 — Series & Parallel Circuits, Potential Dividers & Mains Safety] (a) Define Parallel circuit. (b) Apply the principles of \"Electrical Hazards & Mains Safety\" to solve and explain a standard exam scenario.",
-        "marks": 4,
+        "number": "Q3",
+        "question": "Compare rocky inner planets with gas giants using the accretion model.",
+        "marks": 3,
         "markScheme": [
-          "1 mark: Accurate definition of Parallel circuit — Circuit with multiple branches where each branch receives full supply p.d. and total resistance is reduced.",
-          "2 marks: Mains wiring: Live wire (brown, ~230 V AC), Neutral wire (blue, ~0 V, completes circuit), Earth wire (green/yellow, safety path to ground). Switches and fuses MUST ALWAYS be placed in the LIVE wire!",
-          "1 mark: Fuse: Contains a thin wire that melts and breaks the circuit if current exceeds its rating (pick the fuse rating just ABOVE normal operating current, e.g., 5 A fuse for a 4.2 A appliance)."
+          "Apply the correct Cambridge IGCSE Physics (0625) method and show full working.",
+          "State final numerical value to appropriate significant figures with correct SI/metric units."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "igcse-phys-pp-2023n-p4",
+    "specEra": "new-9-1",
+    "year": "2023",
+    "title": "Cambridge IGCSE Physics (0625) Paper 4 (Extended Theory) — Oct/Nov 2023",
+    "tier": "Extended",
+    "series": "Oct/Nov",
+    "paperCode": "0625/42",
+    "durationMinutes": 75,
+    "totalMarks": 80,
+    "sampleQuestions": [
+      {
+        "number": "Q1",
+        "question": "Explain terminal velocity in terms of increasing air resistance and zero resultant force.",
+        "marks": 6,
+        "markScheme": [
+          "Apply the correct Cambridge IGCSE Physics (0625) method and show full working.",
+          "State final numerical value to appropriate significant figures with correct SI/metric units."
         ]
       },
       {
-        "number": "04",
-        "question": "[Topic 5.1 — The Nuclear Model of the Atom, Isotopes, Fission & Fusion] (a) Define Nucleon number (A). (b) Apply the principles of \"Rutherford Scattering & Subatomic Particles\" to solve and explain a standard exam scenario.",
-        "marks": 4,
+        "number": "Q2",
+        "question": "Calculate parallel resistance and LDR potential divider output voltage.",
+        "marks": 6,
         "markScheme": [
-          "1 mark: Accurate definition of Nucleon number (A) — Total number of protons plus neutrons in an atomic nucleus.",
-          "2 marks: Geiger–Marsden–Rutherford alpha scattering experiment fired positive alpha particles at ultra-thin gold foil in a vacuum:",
-          "1 mark: Observation 1: Most alpha particles passed straight through undeflected → Conclusion: The atom is mostly EMPTY SPACE."
+          "Apply the correct Cambridge IGCSE Physics (0625) method and show full working.",
+          "State final numerical value to appropriate significant figures with correct SI/metric units."
+        ]
+      },
+      {
+        "number": "Q3",
+        "question": "Subtract background radiation before determining half-life from decay counts.",
+        "marks": 6,
+        "markScheme": [
+          "Apply the correct Cambridge IGCSE Physics (0625) method and show full working.",
+          "State final numerical value to appropriate significant figures with correct SI/metric units."
         ]
       }
     ]
@@ -5287,52 +6501,38 @@ export const IGCSE_PHYSICS_PAST_PAPERS: PastPaperDoc[] = [
     "id": "igcse-phys-pp-2023-p2",
     "specEra": "new-9-1",
     "year": "2023",
-    "title": "CIE 0625 Paper 2 Multiple Choice Extended (0625/22)",
+    "title": "Cambridge IGCSE Physics (0625) Paper 2 (Extended MCQ) — May/June 2023",
     "tier": "Extended",
-    "series": "Oct/Nov 2023",
+    "series": "May/June",
     "paperCode": "0625/22",
     "durationMinutes": 45,
     "totalMarks": 40,
-    "insertNote": "Use g = 9.8 N/kg throughout CIE 0625.",
     "sampleQuestions": [
       {
-        "number": "01",
-        "question": "[Topic 4.1 — Electric Charge, Current, EMF, Potential Difference & Resistance] (a) Define Electric current. (b) Apply the principles of \"Electrostatics, Current & Charge (Q = It)\" to solve and explain a standard exam scenario.",
-        "marks": 4,
+        "number": "Q1",
+        "question": "Calculate hydrostatic pressure at depth using Δp = ρgΔh.",
+        "marks": 3,
         "markScheme": [
-          "1 mark: Accurate definition of Electric current — Rate of flow of charge: I = Q ÷ t, measured in amperes (A).",
-          "2 marks: Charging insulators by friction transfers NEGATIVELY CHARGED ELECTRONS only (protons never move in solids). Gaining electrons makes an object negative; losing electrons leaves it positive. Like charges repel; opposite charges attract.",
-          "1 mark: An electric field is a region where an electric charge experiences a force; field lines always point away from positive charges and toward negative charges."
+          "Apply the correct Cambridge IGCSE Physics (0625) method and show full working.",
+          "State final numerical value to appropriate significant figures with correct SI/metric units."
         ]
       },
       {
-        "number": "02",
-        "question": "[Topic 4.3 — Magnetism, Motor Effect, EM Induction & Transformers] (a) Define Motor effect. (b) Apply the principles of \"Electromagnetic Induction & AC Generators\" to solve and explain a standard exam scenario.",
-        "marks": 4,
+        "number": "Q2",
+        "question": "Compute sonar depth remembering the factor of 2.",
+        "marks": 3,
         "markScheme": [
-          "1 mark: Accurate definition of Motor effect — Force experienced by a current-carrying wire placed across a magnetic field.",
-          "2 marks: Electromagnetic induction: Whenever a conductor cuts across magnetic field lines (or magnetic flux through a coil changes), an e.m.f. is INDUCED across its ends.",
-          "1 mark: Increase induced e.m.f. by: (1) moving the magnet/coil faster, (2) using a stronger magnet, or (3) using more turns on the coil."
+          "Apply the correct Cambridge IGCSE Physics (0625) method and show full working.",
+          "State final numerical value to appropriate significant figures with correct SI/metric units."
         ]
       },
       {
-        "number": "03",
-        "question": "[Topic 5.2 — Radioactive Decay (Alpha, Beta, Gamma) & Half-Life] (a) Define Alpha particle. (b) Apply the principles of \"Half-Life, Uses & Safe Handling\" to solve and explain a standard exam scenario.",
-        "marks": 4,
+        "number": "Q3",
+        "question": "Match Rutherford gold-foil observations to nuclear conclusions.",
+        "marks": 3,
         "markScheme": [
-          "1 mark: Accurate definition of Alpha particle — Helium nucleus (2 protons + 2 neutrons), strongly ionising with short range (stopped by paper).",
-          "2 marks: Radioactive decay is spontaneous and RANDOM — it is impossible to predict when a single nucleus will decay, and decay rate is unaffected by temperature or chemical bonding.",
-          "1 mark: Half-life (t_½) is the time taken for HALF of the unstable nuclei in a sample to decay (or for the corrected count rate/activity in becquerels, Bq, to halve)."
-        ]
-      },
-      {
-        "number": "04",
-        "question": "[Topic 6.2 — Life Cycle of Stars, Red-Shift & The Big Bang (Hubble’s Law)] (a) Define Main sequence star. (b) Apply the principles of \"Light-Years & Life Cycle of Stars\" to solve and explain a standard exam scenario.",
-        "marks": 4,
-        "markScheme": [
-          "1 mark: Accurate definition of Main sequence star — Stable star where inward gravity is balanced by outward pressure from core hydrogen fusion.",
-          "2 marks: A light-year is a unit of DISTANCE (not time!) — the distance light travels in a vacuum in one year: 1 light-year ≈ 9.5 × 10¹⁵ m. Our Sun sits in the Milky Way galaxy (~100,000 light-years across).",
-          "1 mark: Star birth: Gravity pulls dust and hydrogen gas in a NEBULA inward to form a dense hot PROTOSTAR. Once core temperature reaches millions of kelvin, hydrogen nuclear FUSION begins."
+          "Apply the correct Cambridge IGCSE Physics (0625) method and show full working.",
+          "State final numerical value to appropriate significant figures with correct SI/metric units."
         ]
       }
     ]
@@ -5341,214 +6541,38 @@ export const IGCSE_PHYSICS_PAST_PAPERS: PastPaperDoc[] = [
     "id": "igcse-phys-pp-2023-p4",
     "specEra": "new-9-1",
     "year": "2023",
-    "title": "CIE 0625 Paper 4 Extended Theory (0625/42)",
+    "title": "Cambridge IGCSE Physics (0625) Paper 4 (Extended Theory) — May/June 2023",
     "tier": "Extended",
-    "series": "Oct/Nov 2023",
+    "series": "May/June",
     "paperCode": "0625/42",
     "durationMinutes": 75,
     "totalMarks": 80,
-    "insertNote": "Includes CIE 0625 Constants & Electrical Symbols Data Sheet.",
     "sampleQuestions": [
       {
-        "number": "01",
-        "question": "[Topic 4.3 — Magnetism, Motor Effect, EM Induction & Transformers] (a) Define Motor effect. (b) Apply the principles of \"Magnetic Fields, Electromagnets & The Motor Effect\" to solve and explain a standard exam scenario.",
-        "marks": 4,
+        "number": "Q1",
+        "question": "Explain Boyle’s Law pressure rise in terms of collision frequency with container walls.",
+        "marks": 6,
         "markScheme": [
-          "1 mark: Accurate definition of Motor effect — Force experienced by a current-carrying wire placed across a magnetic field.",
-          "2 marks: Magnetic field lines run from NORTH to SOUTH outside a magnet; closer spacing indicates a stronger field. Soft iron is easily magnetised and demagnetised (ideal for electromagnets and transformer cores); steel retains magnetism (permanent magnets).",
-          "1 mark: A current-carrying wire creates concentric circular magnetic field lines (Right-Hand Grip Rule). Coiling the wire into a solenoid with a soft-iron core builds a strong controllable electromagnet."
+          "Apply the correct Cambridge IGCSE Physics (0625) method and show full working.",
+          "State final numerical value to appropriate significant figures with correct SI/metric units."
         ]
       },
       {
-        "number": "02",
-        "question": "[Topic 5.2 — Radioactive Decay (Alpha, Beta, Gamma) & Half-Life] (a) Define Alpha particle. (b) Apply the principles of \"Balanced Nuclear Decay Equations\" to solve and explain a standard exam scenario.",
-        "marks": 4,
+        "number": "Q2",
+        "question": "Explain why nuclear fusion requires extreme temperature and pressure.",
+        "marks": 6,
         "markScheme": [
-          "1 mark: Accurate definition of Alpha particle — Helium nucleus (2 protons + 2 neutrons), strongly ionising with short range (stopped by paper).",
-          "2 marks: Both total nucleon number (top) and total proton number (bottom) MUST balance on both sides of a nuclear equation.",
-          "1 mark: Alpha decay (loses 2p and 2n): ᴬ_Z X → ᴬ⁻⁴_{Z−2} Y + ⁴₂α. Example: ²³⁸₉₂U → ²³⁴₉₀Th + ⁴₂He."
+          "Apply the correct Cambridge IGCSE Physics (0625) method and show full working.",
+          "State final numerical value to appropriate significant figures with correct SI/metric units."
         ]
       },
       {
-        "number": "03",
-        "question": "[Topic 6.2 — Life Cycle of Stars, Red-Shift & The Big Bang (Hubble’s Law)] (a) Define Main sequence star. (b) Apply the principles of \"Hubble’s Law & Age of the Universe (CIE Extended)\" to solve and explain a standard exam scenario.",
-        "marks": 4,
+        "number": "Q3",
+        "question": "Use Hubble’s Law H₀ = v/d to calculate galaxy distance and age of the Universe.",
+        "marks": 6,
         "markScheme": [
-          "1 mark: Accurate definition of Main sequence star — Stable star where inward gravity is balanced by outward pressure from core hydrogen fusion.",
-          "2 marks: Hubble’s Law states that a galaxy’s recession speed v is directly proportional to its distance d from Earth: v = H₀ × d, where H₀ = v ÷ d is the Hubble constant.",
-          "1 mark: Current measured value of the Hubble constant: H₀ ≈ 2.2 × 10⁻¹⁸ s⁻¹."
-        ]
-      },
-      {
-        "number": "04",
-        "question": "[Topic 1.2 — Mass, Weight, Density, Forces & Newton’s Laws] (a) Define Density. (b) Apply the principles of \"Mass, Weight & Density\" to solve and explain a standard exam scenario.",
-        "marks": 4,
-        "markScheme": [
-          "1 mark: Accurate definition of Density — Mass per unit volume of a substance: ρ = m ÷ V (kg/m³ or g/cm³).",
-          "2 marks: Mass (kg) is a measure of the quantity of matter in an object and resists changes in motion (inertia). Mass stays constant everywhere in the Universe.",
-          "1 mark: Weight (N) is the gravitational force acting on a mass: W = m × g, where gravitational field strength g = W ÷ m ≈ 9.8 N/kg on Earth (~1.6 N/kg on the Moon)."
-        ]
-      }
-    ]
-  },
-  {
-    "id": "igcse-phys-pp-2022-p2",
-    "specEra": "new-9-1",
-    "year": "2022",
-    "title": "CIE 0625 Paper 2 Multiple Choice Extended (0625/22)",
-    "tier": "Extended",
-    "series": "May/June 2022",
-    "paperCode": "0625/22",
-    "durationMinutes": 45,
-    "totalMarks": 40,
-    "insertNote": "Includes CIE 0625 Physical Constants Insert.",
-    "sampleQuestions": [
-      {
-        "number": "01",
-        "question": "[Topic 1.3 — Moments, Momentum, Impulse & Pressure] (a) Define Moment. (b) Apply the principles of \"Moments, Principle of Moments & Centre of Gravity\" to solve and explain a standard exam scenario.",
-        "marks": 4,
-        "markScheme": [
-          "1 mark: Accurate definition of Moment — Turning effect of a force about a pivot: M = F × d (N m).",
-          "2 marks: The moment of a force measures its turning effect about a pivot: Moment = Force × perpendicular distance from the pivot (M = F × d, unit: N m).",
-          "1 mark: For an object to be in complete equilibrium, two conditions must hold: (1) Zero resultant force, AND (2) Zero resultant moment (total clockwise moments = total anticlockwise moments about any pivot)."
-        ]
-      },
-      {
-        "number": "02",
-        "question": "[Topic 2.1 — Kinetic Particle Model of Matter & Gas Laws] (a) Define Absolute zero. (b) Apply the principles of \"Temperature, Absolute Zero & The Kelvin Scale\" to solve and explain a standard exam scenario.",
-        "marks": 4,
-        "markScheme": [
-          "1 mark: Accurate definition of Absolute zero — 0 K (−273 °C), the temperature at which particles possess minimum possible kinetic energy.",
-          "2 marks: Temperature is a measure of the average kinetic energy of the particles in a substance.",
-          "1 mark: Absolute zero (−273 °C or 0 K) is the lowest theoretically possible temperature, where particles have minimum (zero) kinetic energy and exert zero gas pressure."
-        ]
-      },
-      {
-        "number": "03",
-        "question": "[Topic 3.1 — General Wave Properties, Reflection, Refraction & Diffraction] (a) Define Transverse wave. (b) Apply the principles of \"Reflection, Refraction & Diffraction in a Ripple Tank\" to solve and explain a standard exam scenario.",
-        "marks": 4,
-        "markScheme": [
-          "1 mark: Accurate definition of Transverse wave — Wave whose oscillations are perpendicular to the direction of energy transfer.",
-          "2 marks: Reflection: Wavefronts bounce off a barrier with angle of incidence = angle of reflection (i = r); speed, frequency, and wavelength stay unchanged.",
-          "1 mark: Refraction: Water waves moving from deep to shallow water SLOW DOWN, their wavelength DECREASES, and if they hit the boundary at an angle they bend TOWARD the normal (frequency stays constant)."
-        ]
-      },
-      {
-        "number": "04",
-        "question": "[Topic 3.3 — Sound Waves, Echoes & Ultrasound] (a) Define Audible range. (b) Apply the principles of \"Pitch, Loudness & Ultrasound Applications\" to solve and explain a standard exam scenario.",
-        "marks": 4,
-        "markScheme": [
-          "1 mark: Accurate definition of Audible range — Range of sound frequencies detectable by a healthy human ear: 20 Hz to 20 kHz.",
-          "2 marks: Human audible hearing range is approximately 20 Hz to 20,000 Hz (20 kHz).",
-          "1 mark: Higher FREQUENCY produces a higher PITCH (closer waves on an oscilloscope trace). Larger AMPLITUDE produces a LOUDER sound (taller peaks on an oscilloscope trace)."
-        ]
-      }
-    ]
-  },
-  {
-    "id": "igcse-phys-pp-2022-p4",
-    "specEra": "new-9-1",
-    "year": "2022",
-    "title": "CIE 0625 Paper 4 Extended Theory (0625/42)",
-    "tier": "Extended",
-    "series": "May/June 2022",
-    "paperCode": "0625/42",
-    "durationMinutes": 75,
-    "totalMarks": 80,
-    "insertNote": "Includes CIE 0625 Physical Constants Insert.",
-    "sampleQuestions": [
-      {
-        "number": "01",
-        "question": "[Topic 2.2 — Specific Heat Capacity, Latent Heat & Thermal Transfer] (a) Define Internal energy. (b) Apply the principles of \"Specific Heat Capacity & Latent Heat\" to solve and explain a standard exam scenario.",
-        "marks": 4,
-        "markScheme": [
-          "1 mark: Accurate definition of Internal energy — Total random kinetic and potential energy of all particles inside a system.",
-          "2 marks: Internal energy is the sum of the random kinetic energies AND intermolecular potential energies of all particles in a body.",
-          "1 mark: Specific heat capacity (c) is the energy required to raise the temperature of 1 kg of a substance by 1 °C (or 1 K): ΔE = m × c × ΔT (units of c: J/(kg °C)). Water has a very high c ≈ 4,200 J/(kg °C)."
-        ]
-      },
-      {
-        "number": "02",
-        "question": "[Topic 3.2 — Light, Lenses, Total Internal Reflection & EM Spectrum] (a) Define Snell’s Law. (b) Apply the principles of \"Thin Converging & Diverging Lenses\" to solve and explain a standard exam scenario.",
-        "marks": 4,
-        "markScheme": [
-          "1 mark: Accurate definition of Snell’s Law — n = sin i ÷ sin r, relating angles of incidence and refraction to refractive index.",
-          "2 marks: A thin converging (convex) lens bends parallel rays to meet at the principal focus F; focal length f is the distance from the optical centre to F.",
-          "1 mark: Ray diagram rules for a converging lens: (1) Ray parallel to principal axis refracts through F; (2) Ray through optical centre continues straight undeviated."
-        ]
-      },
-      {
-        "number": "03",
-        "question": "[Topic 4.1 — Electric Charge, Current, EMF, Potential Difference & Resistance] (a) Define Electric current. (b) Apply the principles of \"Electrical Power & Kilowatt-Hours\" to solve and explain a standard exam scenario.",
-        "marks": 4,
-        "markScheme": [
-          "1 mark: Accurate definition of Electric current — Rate of flow of charge: I = Q ÷ t, measured in amperes (A).",
-          "2 marks: Electrical power: P = I × V = I²R = V² ÷ R (watts, W).",
-          "1 mark: Electrical energy transferred: E = P × t = I × V × t (joules, J)."
-        ]
-      },
-      {
-        "number": "04",
-        "question": "[Topic 4.3 — Magnetism, Motor Effect, EM Induction & Transformers] (a) Define Motor effect. (b) Apply the principles of \"Magnetic Fields, Electromagnets & The Motor Effect\" to solve and explain a standard exam scenario.",
-        "marks": 4,
-        "markScheme": [
-          "1 mark: Accurate definition of Motor effect — Force experienced by a current-carrying wire placed across a magnetic field.",
-          "2 marks: Magnetic field lines run from NORTH to SOUTH outside a magnet; closer spacing indicates a stronger field. Soft iron is easily magnetised and demagnetised (ideal for electromagnets and transformer cores); steel retains magnetism (permanent magnets).",
-          "1 mark: A current-carrying wire creates concentric circular magnetic field lines (Right-Hand Grip Rule). Coiling the wire into a solenoid with a soft-iron core builds a strong controllable electromagnet."
-        ]
-      }
-    ]
-  },
-  {
-    "id": "igcse-phys-pp-2019-p4",
-    "specEra": "old",
-    "year": "2019",
-    "title": "CIE 0625 Paper 4 Extended Theory (Legacy Series — 0625/42)",
-    "tier": "Extended",
-    "series": "May/June 2019",
-    "paperCode": "0625/42",
-    "durationMinutes": 75,
-    "totalMarks": 80,
-    "insertNote": "Legacy Syllabus Series (g = 10 N/kg prior to 2023 Space Physics expansion).",
-    "sampleQuestions": [
-      {
-        "number": "01",
-        "question": "[Topic 3.3 — Sound Waves, Echoes & Ultrasound] (a) Define Audible range. (b) Apply the principles of \"Production, Transmission & Speed of Sound\" to solve and explain a standard exam scenario.",
-        "marks": 4,
-        "markScheme": [
-          "1 mark: Accurate definition of Audible range — Range of sound frequencies detectable by a healthy human ear: 20 Hz to 20 kHz.",
-          "2 marks: Sound is produced by vibrating sources and travels as a LONGITUDINAL wave of compressions and rarefactions. Sound CANNOT travel through a vacuum (demonstrated by the bell-in-a-vacuum-jar experiment).",
-          "1 mark: Speed of sound depends on how closely packed particles are: fastest in solids (~5,000 m/s in steel), moderate in liquids (~1,500 m/s in water), slowest in gases (~330–340 m/s in air at room temperature)."
-        ]
-      },
-      {
-        "number": "02",
-        "question": "[Topic 4.2 — Series & Parallel Circuits, Potential Dividers & Mains Safety] (a) Define Parallel circuit. (b) Apply the principles of \"Sensing Components & Potential Dividers\" to solve and explain a standard exam scenario.",
-        "marks": 4,
-        "markScheme": [
-          "1 mark: Accurate definition of Parallel circuit — Circuit with multiple branches where each branch receives full supply p.d. and total resistance is reduced.",
-          "2 marks: NTC Thermistor: As temperature increases, its resistance decreases (used in fire alarms and incubators).",
-          "1 mark: Light-Dependent Resistor (LDR): As light intensity INCREASES, its resistance DECREASES (bright light → low R; darkness → high R; used in automatic street lamps)."
-        ]
-      },
-      {
-        "number": "03",
-        "question": "[Topic 5.1 — The Nuclear Model of the Atom, Isotopes, Fission & Fusion] (a) Define Nucleon number (A). (b) Apply the principles of \"Nuclear Fission & Nuclear Fusion\" to solve and explain a standard exam scenario.",
-        "marks": 4,
-        "markScheme": [
-          "1 mark: Accurate definition of Nucleon number (A) — Total number of protons plus neutrons in an atomic nucleus.",
-          "2 marks: Nuclear FISSION: A heavy unstable nucleus (e.g., Uranium-235) absorbs a slow neutron and SPLITS into two smaller daughter nuclei, releasing 2–3 fast neutrons and vast kinetic/thermal energy. Excess neutrons can trigger a chain reaction (controlled in nuclear reactors using boron control rods and graphite/water moderators).",
-          "1 mark: Nuclear FUSION: Two light nuclei (e.g., hydrogen isotopes deuterium and tritium) JOIN at extremely high temperatures and pressures (as in the core of the Sun) to form a heavier helium nucleus, releasing even greater energy per kg."
-        ]
-      },
-      {
-        "number": "04",
-        "question": "[Topic 6.1 — Earth, The Solar System & Orbital Motion] (a) Define Orbital speed. (b) Apply the principles of \"Earth’s Motion, Seasons & The Moon\" to solve and explain a standard exam scenario.",
-        "marks": 4,
-        "markScheme": [
-          "1 mark: Accurate definition of Orbital speed — Average speed along a circular orbit: v = 2πr ÷ T.",
-          "2 marks: Day and night: Earth spins on its tilted axis (23.5°) once every 24 hours; the Sun appears to rise in the east and set in the west.",
-          "1 mark: Seasons: Earth orbits the Sun once every ~365.25 days while keeping its 23.5° axial tilt fixed. When the Northern Hemisphere tilts TOWARD the Sun, it receives more direct sunlight over longer days (summer), while the Southern Hemisphere experiences winter."
+          "Apply the correct Cambridge IGCSE Physics (0625) method and show full working.",
+          "State final numerical value to appropriate significant figures with correct SI/metric units."
         ]
       }
     ]
@@ -5557,721 +6581,161 @@ export const IGCSE_PHYSICS_PAST_PAPERS: PastPaperDoc[] = [
 
 export const IGCSE_PHYSICS_KEY_TERMS: KeyTermEntry[] = [
   {
-    "id": "ipkt-1",
-    "term": "Acceleration",
-    "definition": "Rate of change of velocity: a = (v − u) ÷ t (m/s²).",
+    "id": "igcse-phys-kt-1",
+    "term": "Terminal Velocity",
+    "definition": "Constant maximum falling speed reached when upward air resistance balances downward weight.",
     "topicNumber": 1,
     "subtopicId": "igcse-phys-1-1",
     "subtopicCode": "1.1"
   },
   {
-    "id": "ipkt-2",
-    "term": "Vector quantity",
-    "definition": "Physical quantity having both magnitude and direction (e.g., force, velocity, momentum).",
-    "topicNumber": 1,
-    "subtopicId": "igcse-phys-1-1",
-    "subtopicCode": "1.1"
-  },
-  {
-    "id": "ipkt-3",
-    "term": "Density",
-    "definition": "Mass per unit volume of a substance: ρ = m ÷ V (kg/m³ or g/cm³).",
+    "id": "igcse-phys-kt-2",
+    "term": "Spring Constant",
+    "definition": "Force per unit extension (k = F / x) measuring a spring’s stiffness up to the limit of proportionality.",
     "topicNumber": 1,
     "subtopicId": "igcse-phys-1-2",
     "subtopicCode": "1.2"
   },
   {
-    "id": "ipkt-4",
-    "term": "Terminal velocity",
-    "definition": "Constant maximum falling speed reached when upward drag equals downward weight.",
-    "topicNumber": 1,
-    "subtopicId": "igcse-phys-1-2",
-    "subtopicCode": "1.2"
-  },
-  {
-    "id": "ipkt-5",
-    "term": "Moment",
-    "definition": "Turning effect of a force about a pivot: M = F × d (N m).",
-    "topicNumber": 1,
-    "subtopicId": "igcse-phys-1-3",
-    "subtopicCode": "1.3"
-  },
-  {
-    "id": "ipkt-6",
+    "id": "igcse-phys-kt-3",
     "term": "Impulse",
-    "definition": "Product of force and time (FΔt), equal to change in momentum (Δp).",
+    "definition": "Force × time (FΔt), equal to change in momentum (Δp = mv − mu).",
     "topicNumber": 1,
     "subtopicId": "igcse-phys-1-3",
     "subtopicCode": "1.3"
   },
   {
-    "id": "ipkt-7",
+    "id": "igcse-phys-kt-4",
     "term": "Efficiency",
-    "definition": "Ratio of useful energy/power output to total energy/power input, expressed as a percentage.",
+    "definition": "(Useful energy or power output ÷ Total input) × 100%.",
     "topicNumber": 1,
     "subtopicId": "igcse-phys-1-4",
     "subtopicCode": "1.4"
   },
   {
-    "id": "ipkt-8",
-    "term": "Brownian motion",
-    "definition": "Random erratic movement of visible smoke/pollen specks caused by bombardment from invisible fluid molecules.",
+    "id": "igcse-phys-kt-5",
+    "term": "Brownian Motion",
+    "definition": "Random zig-zag motion of visible smoke/pollen specks caused by uneven collisions with smaller invisible fluid molecules.",
     "topicNumber": 2,
     "subtopicId": "igcse-phys-2-1",
     "subtopicCode": "2.1"
   },
   {
-    "id": "ipkt-9",
-    "term": "Absolute zero",
+    "id": "igcse-phys-kt-6",
+    "term": "Absolute Zero",
     "definition": "0 K (−273 °C), the lowest possible temperature where particles have minimum kinetic energy.",
     "topicNumber": 2,
     "subtopicId": "igcse-phys-2-1",
     "subtopicCode": "2.1"
   },
   {
-    "id": "ipkt-10",
-    "term": "Specific heat capacity",
-    "definition": "Thermal energy required to raise 1 kg of a substance by 1 °C: ΔE = mcΔT.",
+    "id": "igcse-phys-kt-7",
+    "term": "Specific Heat Capacity",
+    "definition": "Thermal energy needed to raise 1 kg of a substance by 1 °C (ΔE = mcΔθ).",
     "topicNumber": 2,
     "subtopicId": "igcse-phys-2-2",
     "subtopicCode": "2.2"
   },
   {
-    "id": "ipkt-11",
-    "term": "Latent heat",
-    "definition": "Energy absorbed or released during a change of state at constant temperature.",
+    "id": "igcse-phys-kt-8",
+    "term": "Convection",
+    "definition": "Heat transfer in fluids as warm, less dense fluid rises and cool, denser fluid sinks.",
     "topicNumber": 2,
     "subtopicId": "igcse-phys-2-2",
     "subtopicCode": "2.2"
   },
   {
-    "id": "ipkt-12",
-    "term": "Diffraction",
-    "definition": "Spreading of waves around obstacles or through gaps, strongest when gap width ≈ wavelength.",
+    "id": "igcse-phys-kt-9",
+    "term": "Refraction",
+    "definition": "Change in wave speed and direction across a boundary while frequency remains constant.",
     "topicNumber": 3,
     "subtopicId": "igcse-phys-3-1",
     "subtopicCode": "3.1"
   },
   {
-    "id": "ipkt-13",
-    "term": "Total internal reflection",
-    "definition": "Complete reflection inside a denser medium when angle of incidence exceeds critical angle c.",
+    "id": "igcse-phys-kt-10",
+    "term": "Total Internal Reflection",
+    "definition": "Complete internal reflection occurring from a denser to less dense medium when i > critical angle c.",
     "topicNumber": 3,
     "subtopicId": "igcse-phys-3-2",
     "subtopicCode": "3.2"
   },
   {
-    "id": "ipkt-14",
+    "id": "igcse-phys-kt-11",
     "term": "Ultrasound",
-    "definition": "Longitudinal sound waves with frequencies greater than 20 kHz.",
+    "definition": "Longitudinal sound waves with frequency above 20,000 Hz (20 kHz).",
     "topicNumber": 3,
     "subtopicId": "igcse-phys-3-3",
     "subtopicCode": "3.3"
   },
   {
-    "id": "ipkt-15",
-    "term": "Electromotive force",
-    "definition": "Electrical work done by a power source per unit charge driven around a complete circuit (V).",
+    "id": "igcse-phys-kt-12",
+    "term": "Electromotive Force (EMF)",
+    "definition": "Electrical work done by a source in moving 1 C of charge around a complete circuit (E = W / Q).",
     "topicNumber": 4,
     "subtopicId": "igcse-phys-4-1",
     "subtopicCode": "4.1"
   },
   {
-    "id": "ipkt-16",
-    "term": "Potential divider",
-    "definition": "Series resistor arrangement splitting supply p.d. according to V₁/V₂ = R₁/R₂.",
+    "id": "igcse-phys-kt-13",
+    "term": "Potential Divider",
+    "definition": "Series resistors splitting supply voltage in direct proportion to their resistances (V₁/V₂ = R₁/R₂).",
     "topicNumber": 4,
     "subtopicId": "igcse-phys-4-2",
     "subtopicCode": "4.2"
   },
   {
-    "id": "ipkt-17",
-    "term": "Electromagnetic induction",
-    "definition": "Generation of an e.m.f. across a conductor cutting magnetic field lines or experiencing changing flux.",
+    "id": "igcse-phys-kt-14",
+    "term": "Electromagnetic Induction",
+    "definition": "Inducing an EMF across a conductor when magnetic field lines are cut or magnetic flux changes.",
     "topicNumber": 4,
     "subtopicId": "igcse-phys-4-3",
     "subtopicCode": "4.3"
   },
   {
-    "id": "ipkt-18",
-    "term": "Isotopes",
-    "definition": "Atoms of the same element with the same proton number but different neutron numbers.",
-    "topicNumber": 5,
-    "subtopicId": "igcse-phys-5-1",
-    "subtopicCode": "5.1"
-  },
-  {
-    "id": "ipkt-19",
-    "term": "Half-life",
-    "definition": "Time taken for half the radioactive nuclei in a sample to decay, or corrected count rate to halve.",
-    "topicNumber": 5,
-    "subtopicId": "igcse-phys-5-2",
-    "subtopicCode": "5.2"
-  },
-  {
-    "id": "ipkt-20",
-    "term": "Orbital speed",
-    "definition": "Average circular orbit speed given by v = 2πr ÷ T.",
-    "topicNumber": 6,
-    "subtopicId": "igcse-phys-6-1",
-    "subtopicCode": "6.1"
-  },
-  {
-    "id": "ipkt-21",
-    "term": "Red-shift",
-    "definition": "Increase in observed wavelength of light from receding galaxies due to cosmic expansion.",
-    "topicNumber": 6,
-    "subtopicId": "igcse-phys-6-2",
-    "subtopicCode": "6.2"
-  },
-  {
-    "id": "ipkt-22",
-    "term": "Hubble constant (H₀)",
-    "definition": "Ratio of galactic recession speed to distance (H₀ = v ÷ d ≈ 2.2 × 10⁻¹⁸ s⁻¹).",
-    "topicNumber": 6,
-    "subtopicId": "igcse-phys-6-2",
-    "subtopicCode": "6.2"
-  },
-  {
-    "id": "igcse-phys-kt-122",
-    "term": "Scalar",
-    "definition": "A physical quantity that has magnitude only and no direction (e.g., speed, mass, energy).",
-    "topicNumber": 1,
-    "subtopicId": "igcse-phys-1-1",
-    "subtopicCode": "1.1"
-  },
-  {
-    "id": "igcse-phys-kt-123",
-    "term": "Vector",
-    "definition": "A physical quantity with both magnitude and direction (e.g., velocity, force, momentum).",
-    "topicNumber": 1,
-    "subtopicId": "igcse-phys-1-1",
-    "subtopicCode": "1.1"
-  },
-  {
-    "id": "igcse-phys-kt-124",
-    "term": "Uniform acceleration",
-    "definition": "Constant rate of increase of velocity, shown as a straight line on a speed–time graph.",
-    "topicNumber": 1,
-    "subtopicId": "igcse-phys-1-1",
-    "subtopicCode": "1.1"
-  },
-  {
-    "id": "igcse-phys-kt-125",
-    "term": "Parallax error",
-    "definition": "Apparent shift in reading a scale caused by viewing the pointer or meniscus from an angle rather than straight on at eye level.",
-    "topicNumber": 1,
-    "subtopicId": "igcse-phys-1-1",
-    "subtopicCode": "1.1"
-  },
-  {
-    "id": "igcse-phys-kt-126",
-    "term": "Gradient",
-    "definition": "Steepness of a graph calculated as vertical change divided by horizontal change (Δy ÷ Δx).",
-    "topicNumber": 1,
-    "subtopicId": "igcse-phys-1-1",
-    "subtopicCode": "1.1"
-  },
-  {
-    "id": "igcse-phys-kt-127",
-    "term": "Spring constant",
-    "definition": "Force required per unit extension of a spring: k = F ÷ x (N/m).",
-    "topicNumber": 1,
-    "subtopicId": "igcse-phys-1-2",
-    "subtopicCode": "1.2"
-  },
-  {
-    "id": "igcse-phys-kt-128",
-    "term": "Resultant force",
-    "definition": "The single force that has the same effect on an object’s motion as all individual forces combined.",
-    "topicNumber": 1,
-    "subtopicId": "igcse-phys-1-2",
-    "subtopicCode": "1.2"
-  },
-  {
-    "id": "igcse-phys-kt-129",
-    "term": "Inertia",
-    "definition": "The tendency of an object to remain at rest or continue moving at constant velocity unless acted on by a resultant external force.",
-    "topicNumber": 1,
-    "subtopicId": "igcse-phys-1-2",
-    "subtopicCode": "1.2"
-  },
-  {
-    "id": "igcse-phys-kt-130",
-    "term": "Gravitational field strength",
-    "definition": "Gravitational force exerted per unit mass at a point in space: g = W ÷ m (N/kg).",
-    "topicNumber": 1,
-    "subtopicId": "igcse-phys-1-2",
-    "subtopicCode": "1.2"
-  },
-  {
-    "id": "igcse-phys-kt-131",
-    "term": "Limit of proportionality",
-    "definition": "The point on a load–extension graph beyond which extension is no longer directly proportional to load.",
-    "topicNumber": 1,
-    "subtopicId": "igcse-phys-1-2",
-    "subtopicCode": "1.2"
-  },
-  {
-    "id": "igcse-phys-kt-132",
-    "term": "Momentum",
-    "definition": "Product of mass and velocity (p = mv), a conserved vector quantity in closed collisions.",
-    "topicNumber": 1,
-    "subtopicId": "igcse-phys-1-3",
-    "subtopicCode": "1.3"
-  },
-  {
-    "id": "igcse-phys-kt-133",
-    "term": "Pascal (Pa)",
-    "definition": "SI unit of pressure equal to one newton per square metre (1 N/m²).",
-    "topicNumber": 1,
-    "subtopicId": "igcse-phys-1-3",
-    "subtopicCode": "1.3"
-  },
-  {
-    "id": "igcse-phys-kt-134",
-    "term": "Centre of gravity",
-    "definition": "The point in or near an object through which the whole weight of the body can be considered to act.",
-    "topicNumber": 1,
-    "subtopicId": "igcse-phys-1-3",
-    "subtopicCode": "1.3"
-  },
-  {
-    "id": "igcse-phys-kt-135",
-    "term": "Equilibrium",
-    "definition": "State of balance where both resultant force and resultant turning moment equal zero.",
-    "topicNumber": 1,
-    "subtopicId": "igcse-phys-1-3",
-    "subtopicCode": "1.3"
-  },
-  {
-    "id": "igcse-phys-kt-136",
-    "term": "Power",
-    "definition": "Rate of doing work or transferring energy: P = E ÷ t, measured in watts (W).",
-    "topicNumber": 1,
-    "subtopicId": "igcse-phys-1-4",
-    "subtopicCode": "1.4"
-  },
-  {
-    "id": "igcse-phys-kt-137",
-    "term": "Work done",
-    "definition": "Force multiplied by distance moved in the direction of the force: W = Fd (J).",
-    "topicNumber": 1,
-    "subtopicId": "igcse-phys-1-4",
-    "subtopicCode": "1.4"
-  },
-  {
-    "id": "igcse-phys-kt-138",
-    "term": "Renewable",
-    "definition": "An energy resource that is naturally replenished as fast as or faster than it is used and will not run out.",
-    "topicNumber": 1,
-    "subtopicId": "igcse-phys-1-4",
-    "subtopicCode": "1.4"
-  },
-  {
-    "id": "igcse-phys-kt-139",
-    "term": "Boyle’s Law",
-    "definition": "p₁V₁ = p₂V₂ for a fixed mass of gas held at constant temperature.",
-    "topicNumber": 2,
-    "subtopicId": "igcse-phys-2-1",
-    "subtopicCode": "2.1"
-  },
-  {
-    "id": "igcse-phys-kt-140",
-    "term": "Internal energy",
-    "definition": "Total random kinetic and potential energy of all particles inside a system.",
-    "topicNumber": 2,
-    "subtopicId": "igcse-phys-2-2",
-    "subtopicCode": "2.2"
-  },
-  {
-    "id": "igcse-phys-kt-141",
-    "term": "Evaporation",
-    "definition": "Escape of the most energetic molecules from a liquid surface below boiling point, cooling the remaining liquid.",
-    "topicNumber": 2,
-    "subtopicId": "igcse-phys-2-2",
-    "subtopicCode": "2.2"
-  },
-  {
-    "id": "igcse-phys-kt-142",
-    "term": "Thermal conduction",
-    "definition": "Transfer of thermal energy through a solid by lattice vibrations and (in metals) free electron diffusion.",
-    "topicNumber": 2,
-    "subtopicId": "igcse-phys-2-2",
-    "subtopicCode": "2.2"
-  },
-  {
-    "id": "igcse-phys-kt-143",
-    "term": "Convection current",
-    "definition": "Circular flow in a liquid or gas driven by hotter, less dense fluid rising and cooler, denser fluid sinking.",
-    "topicNumber": 2,
-    "subtopicId": "igcse-phys-2-2",
-    "subtopicCode": "2.2"
-  },
-  {
-    "id": "igcse-phys-kt-144",
-    "term": "Transverse wave",
-    "definition": "Wave whose oscillations are perpendicular to the direction of energy transfer.",
-    "topicNumber": 3,
-    "subtopicId": "igcse-phys-3-1",
-    "subtopicCode": "3.1"
-  },
-  {
-    "id": "igcse-phys-kt-145",
-    "term": "Longitudinal wave",
-    "definition": "Wave whose oscillations are parallel to the direction of energy transfer (compressions & rarefactions).",
-    "topicNumber": 3,
-    "subtopicId": "igcse-phys-3-1",
-    "subtopicCode": "3.1"
-  },
-  {
-    "id": "igcse-phys-kt-146",
-    "term": "Frequency",
-    "definition": "Number of complete oscillations passing a point per second (Hz).",
-    "topicNumber": 3,
-    "subtopicId": "igcse-phys-3-1",
-    "subtopicCode": "3.1"
-  },
-  {
-    "id": "igcse-phys-kt-147",
-    "term": "Wavelength",
-    "definition": "Distance from one point on a wave to the exact corresponding point on the next adjacent wave (e.g., crest to crest), measured in metres.",
-    "topicNumber": 3,
-    "subtopicId": "igcse-phys-3-1",
-    "subtopicCode": "3.1"
-  },
-  {
-    "id": "igcse-phys-kt-148",
-    "term": "Compressions",
-    "definition": "Regions in a longitudinal wave where particles are pushed closer together, producing higher pressure.",
-    "topicNumber": 3,
-    "subtopicId": "igcse-phys-3-1",
-    "subtopicCode": "3.1"
-  },
-  {
-    "id": "igcse-phys-kt-149",
-    "term": "Snell’s Law",
-    "definition": "n = sin i ÷ sin r, relating angles of incidence and refraction to refractive index.",
-    "topicNumber": 3,
-    "subtopicId": "igcse-phys-3-2",
-    "subtopicCode": "3.2"
-  },
-  {
-    "id": "igcse-phys-kt-150",
-    "term": "Focal length",
-    "definition": "Distance from the optical centre of a thin lens to its principal focus F.",
-    "topicNumber": 3,
-    "subtopicId": "igcse-phys-3-2",
-    "subtopicCode": "3.2"
-  },
-  {
-    "id": "igcse-phys-kt-151",
-    "term": "Ionising radiation",
-    "definition": "High-energy radiation (UV, X-rays, gamma) capable of knocking electrons off atoms and damaging DNA.",
-    "topicNumber": 3,
-    "subtopicId": "igcse-phys-3-2",
-    "subtopicCode": "3.2"
-  },
-  {
-    "id": "igcse-phys-kt-152",
-    "term": "Critical angle",
-    "definition": "The angle of incidence inside a denser medium for which the refracted ray emerges exactly along the boundary (r = 90°).",
-    "topicNumber": 3,
-    "subtopicId": "igcse-phys-3-2",
-    "subtopicCode": "3.2"
-  },
-  {
-    "id": "igcse-phys-kt-153",
-    "term": "Refractive index",
-    "definition": "Ratio of the speed of light in a vacuum to its speed in a material: n = c / v = sin i / sin r.",
-    "topicNumber": 3,
-    "subtopicId": "igcse-phys-3-2",
-    "subtopicCode": "3.2"
-  },
-  {
-    "id": "igcse-phys-kt-154",
-    "term": "Virtual",
-    "definition": "An optical image where light rays only appear to diverge from a point behind a mirror or lens and cannot be projected onto a screen.",
-    "topicNumber": 3,
-    "subtopicId": "igcse-phys-3-2",
-    "subtopicCode": "3.2"
-  },
-  {
-    "id": "igcse-phys-kt-155",
-    "term": "Audible range",
-    "definition": "Range of sound frequencies detectable by a healthy human ear: 20 Hz to 20 kHz.",
-    "topicNumber": 3,
-    "subtopicId": "igcse-phys-3-3",
-    "subtopicCode": "3.3"
-  },
-  {
-    "id": "igcse-phys-kt-156",
-    "term": "Echo",
-    "definition": "Reflected sound wave heard after bouncing off a hard flat surface.",
-    "topicNumber": 3,
-    "subtopicId": "igcse-phys-3-3",
-    "subtopicCode": "3.3"
-  },
-  {
-    "id": "igcse-phys-kt-157",
-    "term": "Oscilloscope",
-    "definition": "Laboratory instrument that displays electrical voltage signals (such as sound waveforms from a microphone) against time.",
-    "topicNumber": 3,
-    "subtopicId": "igcse-phys-3-3",
-    "subtopicCode": "3.3"
-  },
-  {
-    "id": "igcse-phys-kt-158",
-    "term": "Electric current",
-    "definition": "Rate of flow of charge: I = Q ÷ t, measured in amperes (A).",
-    "topicNumber": 4,
-    "subtopicId": "igcse-phys-4-1",
-    "subtopicCode": "4.1"
-  },
-  {
-    "id": "igcse-phys-kt-159",
-    "term": "Potential difference",
-    "definition": "Energy transferred per coulomb of charge across a component: V = W ÷ Q (V).",
-    "topicNumber": 4,
-    "subtopicId": "igcse-phys-4-1",
-    "subtopicCode": "4.1"
-  },
-  {
-    "id": "igcse-phys-kt-160",
-    "term": "Ohm’s Law",
-    "definition": "Current through a metallic conductor is directly proportional to p.d. at constant temperature (V = IR).",
-    "topicNumber": 4,
-    "subtopicId": "igcse-phys-4-1",
-    "subtopicCode": "4.1"
-  },
-  {
-    "id": "igcse-phys-kt-161",
-    "term": "Kilowatt-hour (kWh)",
-    "definition": "Unit of electrical energy equal to a 1 kW appliance operating for 1 hour (3.6 × 10⁶ J).",
-    "topicNumber": 4,
-    "subtopicId": "igcse-phys-4-1",
-    "subtopicCode": "4.1"
-  },
-  {
-    "id": "igcse-phys-kt-162",
-    "term": "Conventional current",
-    "definition": "Standard circuit convention showing current flowing from the positive terminal to the negative terminal of a cell, opposite to electron flow.",
-    "topicNumber": 4,
-    "subtopicId": "igcse-phys-4-1",
-    "subtopicCode": "4.1"
-  },
-  {
-    "id": "igcse-phys-kt-163",
-    "term": "Parallel circuit",
-    "definition": "Circuit with multiple branches where each branch receives full supply p.d. and total resistance is reduced.",
-    "topicNumber": 4,
-    "subtopicId": "igcse-phys-4-2",
-    "subtopicCode": "4.2"
-  },
-  {
-    "id": "igcse-phys-kt-164",
-    "term": "LDR",
-    "definition": "Light-Dependent Resistor whose resistance falls when light intensity increases.",
-    "topicNumber": 4,
-    "subtopicId": "igcse-phys-4-2",
-    "subtopicCode": "4.2"
-  },
-  {
-    "id": "igcse-phys-kt-165",
-    "term": "Fuse",
-    "definition": "Safety device in the live wire that melts to disconnect the circuit when current exceeds a safe rating.",
-    "topicNumber": 4,
-    "subtopicId": "igcse-phys-4-2",
-    "subtopicCode": "4.2"
-  },
-  {
-    "id": "igcse-phys-kt-166",
-    "term": "Double insulation",
-    "definition": "Design enclosing live electrical parts in two layers of plastic/insulator so no earth wire is required.",
-    "topicNumber": 4,
-    "subtopicId": "igcse-phys-4-2",
-    "subtopicCode": "4.2"
-  },
-  {
-    "id": "igcse-phys-kt-167",
-    "term": "Thermistor",
-    "definition": "Temperature-dependent semiconductor resistor whose resistance drops markedly as temperature rises (NTC type).",
-    "topicNumber": 4,
-    "subtopicId": "igcse-phys-4-2",
-    "subtopicCode": "4.2"
-  },
-  {
-    "id": "igcse-phys-kt-168",
-    "term": "Motor effect",
-    "definition": "Force experienced by a current-carrying wire placed across a magnetic field.",
-    "topicNumber": 4,
-    "subtopicId": "igcse-phys-4-3",
-    "subtopicCode": "4.3"
-  },
-  {
-    "id": "igcse-phys-kt-169",
-    "term": "Lenz’s Law",
-    "definition": "An induced current always flows in a direction that opposes the magnetic change causing it.",
-    "topicNumber": 4,
-    "subtopicId": "igcse-phys-4-3",
-    "subtopicCode": "4.3"
-  },
-  {
-    "id": "igcse-phys-kt-170",
-    "term": "Step-up transformer",
-    "definition": "Transformer with more turns on the secondary coil than primary coil, increasing alternating voltage while decreasing current.",
-    "topicNumber": 4,
-    "subtopicId": "igcse-phys-4-3",
-    "subtopicCode": "4.3"
-  },
-  {
-    "id": "igcse-phys-kt-171",
-    "term": "Split-ring commutator",
-    "definition": "Rotating electrical switch in a DC motor that reverses the current through the coil every half-rotation to maintain continuous rotation in one direction.",
-    "topicNumber": 4,
-    "subtopicId": "igcse-phys-4-3",
-    "subtopicCode": "4.3"
-  },
-  {
-    "id": "igcse-phys-kt-172",
-    "term": "Nucleon number (A)",
-    "definition": "Total number of protons plus neutrons in an atomic nucleus.",
-    "topicNumber": 5,
-    "subtopicId": "igcse-phys-5-1",
-    "subtopicCode": "5.1"
-  },
-  {
-    "id": "igcse-phys-kt-173",
+    "id": "igcse-phys-kt-15",
     "term": "Isotope",
-    "definition": "Variants of the same element with identical proton numbers but different neutron numbers.",
+    "definition": "Atoms of the same element with equal proton number Z but different neutron numbers.",
     "topicNumber": 5,
     "subtopicId": "igcse-phys-5-1",
     "subtopicCode": "5.1"
   },
   {
-    "id": "igcse-phys-kt-174",
-    "term": "Nuclear fission",
-    "definition": "Splitting of a heavy unstable nucleus into lighter daughter nuclei plus neutrons and energy.",
+    "id": "igcse-phys-kt-16",
+    "term": "Nuclear Fusion",
+    "definition": "Joining two light nuclei into a heavier nucleus under extreme temperature and pressure, releasing energy.",
     "topicNumber": 5,
     "subtopicId": "igcse-phys-5-1",
     "subtopicCode": "5.1"
   },
   {
-    "id": "igcse-phys-kt-175",
-    "term": "Nuclear fusion",
-    "definition": "Joining of two light nuclei at ultra-high temperature/pressure to form a heavier nucleus, powering stars.",
-    "topicNumber": 5,
-    "subtopicId": "igcse-phys-5-1",
-    "subtopicCode": "5.1"
-  },
-  {
-    "id": "igcse-phys-kt-176",
-    "term": "Nucleus",
-    "definition": "The extremely tiny, dense, positively charged core at the centre of an atom containing protons and neutrons.",
-    "topicNumber": 5,
-    "subtopicId": "igcse-phys-5-1",
-    "subtopicCode": "5.1"
-  },
-  {
-    "id": "igcse-phys-kt-177",
-    "term": "Alpha particle",
-    "definition": "Helium nucleus (2 protons + 2 neutrons), strongly ionising with short range (stopped by paper).",
+    "id": "igcse-phys-kt-17",
+    "term": "Half-Life",
+    "definition": "Time taken for half the radioactive nuclei in a sample to decay or corrected count rate to halve.",
     "topicNumber": 5,
     "subtopicId": "igcse-phys-5-2",
     "subtopicCode": "5.2"
   },
   {
-    "id": "igcse-phys-kt-178",
-    "term": "Beta particle",
-    "definition": "High-speed electron emitted from a nucleus when a neutron decays into a proton.",
-    "topicNumber": 5,
-    "subtopicId": "igcse-phys-5-2",
-    "subtopicCode": "5.2"
-  },
-  {
-    "id": "igcse-phys-kt-179",
-    "term": "Becquerel (Bq)",
-    "definition": "SI unit of radioactive activity equal to one nuclear decay per second.",
-    "topicNumber": 5,
-    "subtopicId": "igcse-phys-5-2",
-    "subtopicCode": "5.2"
-  },
-  {
-    "id": "igcse-phys-kt-180",
-    "term": "Ionising",
-    "definition": "Ability of radiation to knock electrons out of neutral atoms to form charged ions, which can damage living DNA.",
-    "topicNumber": 5,
-    "subtopicId": "igcse-phys-5-2",
-    "subtopicCode": "5.2"
-  },
-  {
-    "id": "igcse-phys-kt-181",
-    "term": "Background radiation",
-    "definition": "Low-level ambient ionising radiation always present in the environment from natural and human-made sources.",
-    "topicNumber": 5,
-    "subtopicId": "igcse-phys-5-2",
-    "subtopicCode": "5.2"
-  },
-  {
-    "id": "igcse-phys-kt-182",
-    "term": "Accretion",
-    "definition": "Process by which dust and gas particles clump together under gravity to form stars and planets.",
+    "id": "igcse-phys-kt-18",
+    "term": "Accretion Disc",
+    "definition": "Spinning flat disc of nebula gas and dust from which planets coalesced around the young Sun.",
     "topicNumber": 6,
     "subtopicId": "igcse-phys-6-1",
     "subtopicCode": "6.1"
   },
   {
-    "id": "igcse-phys-kt-183",
-    "term": "Elliptical orbit",
-    "definition": "Oval-shaped orbit followed by planets and strongly elongated for comets, with the Sun at one focus.",
-    "topicNumber": 6,
-    "subtopicId": "igcse-phys-6-1",
-    "subtopicCode": "6.1"
-  },
-  {
-    "id": "igcse-phys-kt-184",
-    "term": "Accretion disc",
-    "definition": "Flattened rotating disc of gas and dust drawn together by gravity around a newly forming star from which planets coalesce.",
-    "topicNumber": 6,
-    "subtopicId": "igcse-phys-6-1",
-    "subtopicCode": "6.1"
-  },
-  {
-    "id": "igcse-phys-kt-185",
-    "term": "Orbital period",
-    "definition": "The time T taken for a planet, moon, or satellite to complete one full orbit around its parent body.",
-    "topicNumber": 6,
-    "subtopicId": "igcse-phys-6-1",
-    "subtopicCode": "6.1"
-  },
-  {
-    "id": "igcse-phys-kt-186",
-    "term": "Main sequence star",
-    "definition": "Stable star where inward gravity is balanced by outward pressure from core hydrogen fusion.",
+    "id": "igcse-phys-kt-19",
+    "term": "Red-Shift",
+    "definition": "Stretching of light from receding galaxies to longer wavelengths due to expansion of space.",
     "topicNumber": 6,
     "subtopicId": "igcse-phys-6-2",
     "subtopicCode": "6.2"
   },
   {
-    "id": "igcse-phys-kt-187",
+    "id": "igcse-phys-kt-20",
     "term": "CMBR",
-    "definition": "Cosmic Microwave Background Radiation — relic thermal radiation from the early Universe stretched into microwaves.",
-    "topicNumber": 6,
-    "subtopicId": "igcse-phys-6-2",
-    "subtopicCode": "6.2"
-  },
-  {
-    "id": "igcse-phys-kt-188",
-    "term": "Light-year",
-    "definition": "Astronomical unit of distance equal to how far light travels through a vacuum in one Earth year (~9.5 × 10¹⁵ m).",
-    "topicNumber": 6,
-    "subtopicId": "igcse-phys-6-2",
-    "subtopicCode": "6.2"
-  },
-  {
-    "id": "igcse-phys-kt-189",
-    "term": "Supernova",
-    "definition": "Catastrophic explosion of a massive red supergiant star that synthesises heavy elements and disperses them across space.",
+    "definition": "Cosmic Microwave Background Radiation — uniform microwave afterglow from the early Big Bang.",
     "topicNumber": 6,
     "subtopicId": "igcse-phys-6-2",
     "subtopicCode": "6.2"
