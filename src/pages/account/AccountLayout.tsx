@@ -1,12 +1,20 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import {
   BarChart3,
+  Check,
   Clock,
+  Cloud,
+  Copy,
   Download,
+  KeyRound,
+  Lock,
+  LogIn,
+  LogOut,
   Mail,
   Moon,
   Pencil,
   RotateCcw,
+  ShieldCheck,
   SlidersHorizontal,
   Sparkles,
   Upload,
@@ -16,6 +24,8 @@ import {
 } from 'lucide-react';
 import { Link, useParams } from 'react-router-dom';
 import { MonsterAvatar } from '../../components/artwork/Avatars';
+import { AuthMode } from '../../components/auth/AuthFormCard';
+import { encodeSyncCode } from '../../services/authService';
 import { exportProfileJson, useApp } from '../../store/AppContext';
 
 type ActivityRange = 'today' | 'week' | 'month' | 'year' | 'all';
@@ -23,11 +33,13 @@ type ActivityRange = 'today' | 'week' | 'month' | 'year' | 'all';
 interface AccountLayoutProps {
   onOpenAvatarModal: () => void;
   onOpenDailyGoalModal: () => void;
+  onOpenAuthModal?: (mode: AuthMode) => void;
 }
 
 export const AccountLayout: React.FC<AccountLayoutProps> = ({
   onOpenAvatarModal,
   onOpenDailyGoalModal,
+  onOpenAuthModal,
 }) => {
   const { tab } = useParams<{ tab?: string }>();
   const activeTab = tab === 'preferences' ? 'preferences' : tab === 'activity' ? 'activity' : 'profile';
@@ -35,12 +47,22 @@ export const AccountLayout: React.FC<AccountLayoutProps> = ({
   const {
     state,
     profile,
+    currentAccount,
+    isAuthenticated,
+    cloudSync,
+    lastSavedAt,
     updateProfile,
     updatePreferences,
     switchProfile,
     createProfile,
     importProfile,
     resetActiveProfile,
+    signOutAccount,
+    changeAccountPassword,
+    applySyncCode,
+    updateCloudSyncConfig,
+    pushCloudSync,
+    pullCloudSync,
   } = useApp();
 
   const [editName, setEditName] = useState(profile.name);
@@ -48,6 +70,24 @@ export const AccountLayout: React.FC<AccountLayoutProps> = ({
   const [savedNotice, setSavedNotice] = useState('');
   const [newProfileName, setNewProfileName] = useState('');
   const [importError, setImportError] = useState('');
+
+  // Sync Code & Password Change state
+  const [syncCopied, setSyncCopied] = useState(false);
+  const [restoreCodeInput, setRestoreCodeInput] = useState('');
+  const [syncStatusMsg, setSyncStatusMsg] = useState('');
+  const [syncErrorMsg, setSyncErrorMsg] = useState('');
+  const [showChangePw, setShowChangePw] = useState(false);
+  const [curPw, setCurPw] = useState('');
+  const [newPw, setNewPw] = useState('');
+  const [pwMsg, setPwMsg] = useState('');
+  const [pwErr, setPwErr] = useState('');
+  const [showCloudPanel, setShowCloudPanel] = useState(false);
+  const [cloudBusy, setCloudBusy] = useState(false);
+
+  useEffect(() => {
+    setEditName(profile.name);
+    setEditYear(profile.yearGroup);
+  }, [profile.id, profile.name, profile.yearGroup]);
 
   // Activity Log state — ALL 5 timeframes unlocked!
   const [range, setRange] = useState<ActivityRange>('today');
@@ -134,6 +174,77 @@ export const AccountLayout: React.FC<AccountLayoutProps> = ({
     reader.readAsText(file);
   };
 
+  const handleCopySyncCode = async () => {
+    setSyncErrorMsg('');
+    const code = encodeSyncCode(profile);
+    try {
+      await navigator.clipboard.writeText(code);
+      setSyncCopied(true);
+      setSyncStatusMsg('Sync Code copied! Paste it on another device to transfer your saved progress.');
+      setTimeout(() => setSyncCopied(false), 2500);
+    } catch {
+      setRestoreCodeInput(code);
+      setSyncStatusMsg('Your Sync Code is shown below — copy it manually.');
+    }
+  };
+
+  const handleRestoreSyncCode = (e: React.FormEvent) => {
+    e.preventDefault();
+    setSyncErrorMsg('');
+    setSyncStatusMsg('');
+    const res = applySyncCode(restoreCodeInput);
+    if (!res.ok) {
+      setSyncErrorMsg(res.error ?? 'Could not restore Sync Code.');
+      return;
+    }
+    setRestoreCodeInput('');
+    setSyncStatusMsg('Progress restored from Sync Code!');
+  };
+
+  const handleChangePassword = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setPwErr('');
+    setPwMsg('');
+    const res = await changeAccountPassword(curPw, newPw);
+    if (!res.ok) {
+      setPwErr(res.error ?? 'Password update failed.');
+      return;
+    }
+    setCurPw('');
+    setNewPw('');
+    setPwMsg('Password updated cleanly!');
+  };
+
+  const handleCloudPush = async () => {
+    setCloudBusy(true);
+    setSyncErrorMsg('');
+    setSyncStatusMsg('');
+    try {
+      const res = await pushCloudSync();
+      if (!res.ok) setSyncErrorMsg(res.error ?? 'Cloud save failed.');
+      else setSyncStatusMsg('Saved to Supabase cloud!');
+    } finally {
+      setCloudBusy(false);
+    }
+  };
+
+  const handleCloudPull = async () => {
+    setCloudBusy(true);
+    setSyncErrorMsg('');
+    setSyncStatusMsg('');
+    try {
+      const res = await pullCloudSync();
+      if (!res.ok) setSyncErrorMsg(res.error ?? 'Cloud restore failed.');
+      else setSyncStatusMsg('Restored latest backup from Supabase cloud!');
+    } finally {
+      setCloudBusy(false);
+    }
+  };
+
+  const formattedSavedTime = lastSavedAt
+    ? new Date(lastSavedAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+    : 'Just now';
+
   const uniqueSubjects = Array.from(new Set(profile.activityLog.map((e) => e.subjectName)));
 
   return (
@@ -141,58 +252,91 @@ export const AccountLayout: React.FC<AccountLayoutProps> = ({
       {/* Grid-Paper Profile Header Card (NO Upgrade to Pro Banner!) */}
       <section
         className="cognito-card cognito-grid-bg"
-        style={{ padding: '24px 26px', display: 'flex', alignItems: 'center', gap: 22, flexWrap: 'wrap' }}
+        style={{ padding: '24px 26px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 22, flexWrap: 'wrap' }}
       >
-        <div style={{ position: 'relative' }}>
-          <MonsterAvatar avatarId={profile.avatarId} size={90} />
-          <button
-            type="button"
-            onClick={onOpenAvatarModal}
-            aria-label="Edit avatar"
-            style={{
-              position: 'absolute',
-              right: -2,
-              bottom: -2,
-              width: 32,
-              height: 32,
-              borderRadius: '999px',
-              border: '1px solid var(--border-card)',
-              backgroundColor: 'var(--bg-elevated)',
-              display: 'inline-flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              boxShadow: 'var(--shadow-sm)',
-            }}
-          >
-            <Pencil size={14} />
-          </button>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 22, flexWrap: 'wrap' }}>
+          <div style={{ position: 'relative' }}>
+            <MonsterAvatar avatarId={profile.avatarId} size={90} />
+            <button
+              type="button"
+              onClick={onOpenAvatarModal}
+              aria-label="Edit avatar"
+              style={{
+                position: 'absolute',
+                right: -2,
+                bottom: -2,
+                width: 32,
+                height: 32,
+                borderRadius: '999px',
+                border: '1px solid var(--border-card)',
+                backgroundColor: 'var(--bg-elevated)',
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                boxShadow: 'var(--shadow-sm)',
+              }}
+            >
+              <Pencil size={14} />
+            </button>
+          </div>
+
+          <div>
+            <h1 className="font-heading" style={{ fontSize: '2rem', lineHeight: 1.15 }}>
+              {profile.name}
+            </h1>
+            <div style={{ color: 'var(--text-muted)', fontSize: '0.94rem', marginTop: 2 }}>
+              {isAuthenticated && currentAccount
+                ? `${currentAccount.email} · ${profile.yearGroup}`
+                : `Guest Student · ${profile.yearGroup}`}
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginTop: 12, flexWrap: 'wrap' }}>
+              <span
+                className="font-logo"
+                style={{
+                  padding: '5px 14px',
+                  borderRadius: 8,
+                  backgroundColor: isAuthenticated ? 'var(--color-green-600)' : 'var(--color-blue-500)',
+                  color: '#ffffff',
+                  fontSize: '0.8rem',
+                  fontWeight: 700,
+                }}
+              >
+                {isAuthenticated ? 'ACCOUNT SAVED · AUTO-SYNC ON' : 'ALL ACCESS · UNLOCKED'}
+              </span>
+              <span style={{ fontSize: '0.84rem', color: 'var(--text-muted)' }}>
+                Joined {profile.joinedDate} · Auto-saved {formattedSavedTime}
+              </span>
+            </div>
+          </div>
         </div>
 
         <div>
-          <h1 className="font-heading" style={{ fontSize: '2rem', lineHeight: 1.15 }}>
-            {profile.name}
-          </h1>
-          <div style={{ color: 'var(--text-muted)', fontSize: '0.94rem', marginTop: 2 }}>
-            Student · {profile.yearGroup}
-          </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginTop: 12, flexWrap: 'wrap' }}>
-            <span
-              className="font-logo"
-              style={{
-                padding: '5px 14px',
-                borderRadius: 8,
-                backgroundColor: 'var(--color-blue-500)',
-                color: '#ffffff',
-                fontSize: '0.82rem',
-                fontWeight: 700,
-              }}
+          {isAuthenticated ? (
+            <button
+              type="button"
+              className="tactile-btn tactile-btn--sm tactile-btn--pink"
+              onClick={signOutAccount}
             >
-              ALL ACCESS · UNLOCKED
-            </span>
-            <span style={{ fontSize: '0.86rem', color: 'var(--text-muted)' }}>
-              Joined {profile.joinedDate}
-            </span>
-          </div>
+              <LogOut size={15} /> Sign out
+            </button>
+          ) : (
+            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+              <button
+                type="button"
+                className="tactile-btn tactile-btn--sm tactile-btn--solid-blue"
+                onClick={() => onOpenAuthModal?.('register')}
+              >
+                <UserPlus size={15} /> Register
+              </button>
+              <button
+                type="button"
+                className="tactile-btn tactile-btn--sm"
+                onClick={() => onOpenAuthModal?.('signin')}
+              >
+                <LogIn size={15} /> Sign in
+              </button>
+            </div>
+          )}
         </div>
       </section>
 
@@ -235,6 +379,255 @@ export const AccountLayout: React.FC<AccountLayoutProps> = ({
         <div style={{ minWidth: 0 }}>
           {activeTab === 'profile' && (
             <div style={{ display: 'grid', gap: 20 }}>
+              {/* Account Security & Cross-Device Sync Card */}
+              <section className="cognito-card" style={{ padding: '26px 26px' }}>
+                <span className="tilted-badge tilted-badge--edge tilted-badge--blue">
+                  SIGN IN &amp; SAVE SYNC
+                </span>
+
+                {!isAuthenticated ? (
+                  <div style={{ display: 'grid', gap: 14 }}>
+                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: 12 }}>
+                      <ShieldCheck size={22} color="var(--color-blue-500)" style={{ flexShrink: 0, marginTop: 2 }} />
+                      <div>
+                        <div style={{ fontWeight: 800, fontSize: '1.02rem', color: 'var(--text-heading)' }}>
+                          You are currently studying in Guest mode
+                        </div>
+                        <p style={{ margin: '4px 0 0', fontSize: '0.88rem', color: 'var(--text-muted)' }}>
+                          Register a free password-protected account so your courses, XP, streaks, quiz scores, and flashcards are saved under your email — or sign in to an existing account.
+                        </p>
+                      </div>
+                    </div>
+                    <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+                      <button
+                        type="button"
+                        className="tactile-btn tactile-btn--solid-blue"
+                        onClick={() => onOpenAuthModal?.('register')}
+                      >
+                        <UserPlus size={16} /> Create free account
+                      </button>
+                      <button
+                        type="button"
+                        className="tactile-btn"
+                        onClick={() => onOpenAuthModal?.('signin')}
+                      >
+                        <LogIn size={16} /> Sign in
+                      </button>
+                      <button
+                        type="button"
+                        className="tactile-btn"
+                        onClick={() => onOpenAuthModal?.('sync')}
+                      >
+                        <KeyRound size={16} /> Restore Sync Code
+                      </button>
+                    </div>
+                  </div>
+                ) : (
+                  <div style={{ display: 'grid', gap: 16 }}>
+                    <div
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'space-between',
+                        gap: 12,
+                        flexWrap: 'wrap',
+                        padding: '12px 14px',
+                        borderRadius: 12,
+                        backgroundColor: 'var(--bg-sunken)',
+                      }}
+                    >
+                      <div>
+                        <div style={{ fontWeight: 800, fontSize: '0.95rem', color: 'var(--text-heading)' }}>
+                          Signed in as {currentAccount?.email}
+                        </div>
+                        <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)', marginTop: 2 }}>
+                          Password protected with PBKDF2-SHA256 · Last auto-saved at {formattedSavedTime}
+                        </div>
+                      </div>
+                      <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                        <button
+                          type="button"
+                          className="tactile-btn tactile-btn--sm"
+                          onClick={() => setShowChangePw((v) => !v)}
+                        >
+                          <Lock size={14} /> Change password
+                        </button>
+                        <button
+                          type="button"
+                          className="tactile-btn tactile-btn--sm tactile-btn--pink"
+                          onClick={signOutAccount}
+                        >
+                          <LogOut size={14} /> Sign out
+                        </button>
+                      </div>
+                    </div>
+
+                    {showChangePw && (
+                      <form
+                        onSubmit={handleChangePassword}
+                        style={{
+                          display: 'grid',
+                          gap: 10,
+                          maxWidth: 420,
+                          padding: 14,
+                          borderRadius: 12,
+                          border: '1px solid var(--border-subtle)',
+                          backgroundColor: 'var(--bg-sunken)',
+                        }}
+                      >
+                        <div style={{ fontWeight: 800, fontSize: '0.9rem' }}>Update password</div>
+                        <input
+                          type="password"
+                          required
+                          placeholder="Current password"
+                          value={curPw}
+                          onChange={(e) => setCurPw(e.target.value)}
+                          style={{ padding: '9px 11px', borderRadius: 9, border: '1px solid var(--border-card)', backgroundColor: 'var(--bg-elevated)' }}
+                        />
+                        <input
+                          type="password"
+                          required
+                          minLength={6}
+                          placeholder="New password (min 6 chars)"
+                          value={newPw}
+                          onChange={(e) => setNewPw(e.target.value)}
+                          style={{ padding: '9px 11px', borderRadius: 9, border: '1px solid var(--border-card)', backgroundColor: 'var(--bg-elevated)' }}
+                        />
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                          <button type="submit" className="tactile-btn tactile-btn--sm tactile-btn--solid-blue">
+                            Save new password
+                          </button>
+                          {pwMsg && <span style={{ color: 'var(--color-green-600)', fontWeight: 700, fontSize: '0.85rem' }}>{pwMsg}</span>}
+                          {pwErr && <span style={{ color: 'var(--color-red-600)', fontWeight: 700, fontSize: '0.85rem' }}>{pwErr}</span>}
+                        </div>
+                      </form>
+                    )}
+
+                    {/* Cross-Device Portable Sync Code */}
+                    <div style={{ display: 'grid', gap: 10, paddingTop: 12, borderTop: '1px solid var(--border-subtle)' }}>
+                      <div style={{ fontWeight: 800, fontSize: '0.94rem', color: 'var(--text-heading)' }}>
+                        Move your saved progress between devices (Sync Code)
+                      </div>
+                      <div style={{ fontSize: '0.84rem', color: 'var(--text-muted)' }}>
+                        Copy a portable Sync Code to transfer your XP, courses, quiz history, and flashcards to another browser, laptop, or phone.
+                      </div>
+                      <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+                        <button
+                          type="button"
+                          className="tactile-btn tactile-btn--sm tactile-btn--blue"
+                          onClick={handleCopySyncCode}
+                        >
+                          {syncCopied ? <Check size={14} /> : <Copy size={14} />}
+                          {syncCopied ? 'Copied Sync Code!' : 'Copy Sync Code'}
+                        </button>
+                        <button
+                          type="button"
+                          className="tactile-btn tactile-btn--sm"
+                          onClick={() => setShowCloudPanel((v) => !v)}
+                        >
+                          <Cloud size={14} /> Optional Cloud Sync (Supabase)
+                        </button>
+                      </div>
+
+                      <form onSubmit={handleRestoreSyncCode} style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginTop: 4 }}>
+                        <input
+                          type="text"
+                          placeholder="Paste COGNIFY-SAVE-V1:... code to restore"
+                          value={restoreCodeInput}
+                          onChange={(e) => setRestoreCodeInput(e.target.value)}
+                          style={{
+                            flex: '1 1 240px',
+                            padding: '8px 11px',
+                            borderRadius: 10,
+                            border: '1px solid var(--border-card)',
+                            backgroundColor: 'var(--bg-elevated)',
+                            fontFamily: 'monospace',
+                            fontSize: '0.82rem',
+                          }}
+                        />
+                        <button type="submit" className="tactile-btn tactile-btn--sm">
+                          <KeyRound size={14} /> Apply code
+                        </button>
+                      </form>
+
+                      {syncStatusMsg && (
+                        <div style={{ color: 'var(--color-green-600)', fontWeight: 700, fontSize: '0.85rem' }}>
+                          {syncStatusMsg}
+                        </div>
+                      )}
+                      {syncErrorMsg && (
+                        <div style={{ color: 'var(--color-red-600)', fontWeight: 700, fontSize: '0.85rem' }}>
+                          {syncErrorMsg}
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Optional Supabase Cloud Sync Configuration */}
+                    {showCloudPanel && (
+                      <div
+                        style={{
+                          display: 'grid',
+                          gap: 10,
+                          padding: 14,
+                          borderRadius: 12,
+                          backgroundColor: 'var(--bg-sunken)',
+                          border: '1px solid var(--border-subtle)',
+                        }}
+                      >
+                        <div style={{ fontWeight: 800, fontSize: '0.9rem' }}>
+                          Optional Supabase Cloud Sync
+                        </div>
+                        <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)' }}>
+                          Connect a free Supabase project (table <code>cognify_profiles(email text primary key, payload jsonb, updated_at timestamptz)</code>) to sync automatically across devices.
+                        </div>
+                        <input
+                          type="url"
+                          placeholder="https://your-project.supabase.co"
+                          value={cloudSync.supabaseUrl}
+                          onChange={(e) =>
+                            updateCloudSyncConfig({
+                              provider: e.target.value.trim() ? 'supabase' : 'local',
+                              supabaseUrl: e.target.value,
+                            })
+                          }
+                          style={{ padding: '8px 11px', borderRadius: 9, border: '1px solid var(--border-card)', backgroundColor: 'var(--bg-elevated)' }}
+                        />
+                        <input
+                          type="password"
+                          placeholder="Supabase anon public key"
+                          value={cloudSync.supabaseAnonKey}
+                          onChange={(e) =>
+                            updateCloudSyncConfig({
+                              provider: cloudSync.supabaseUrl.trim() && e.target.value.trim() ? 'supabase' : 'local',
+                              supabaseAnonKey: e.target.value,
+                            })
+                          }
+                          style={{ padding: '8px 11px', borderRadius: 9, border: '1px solid var(--border-card)', backgroundColor: 'var(--bg-elevated)' }}
+                        />
+                        <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                          <button
+                            type="button"
+                            disabled={cloudBusy}
+                            className="tactile-btn tactile-btn--sm tactile-btn--solid-blue"
+                            onClick={handleCloudPush}
+                          >
+                            <Upload size={14} /> Save to Cloud
+                          </button>
+                          <button
+                            type="button"
+                            disabled={cloudBusy}
+                            className="tactile-btn tactile-btn--sm"
+                            onClick={handleCloudPull}
+                          >
+                            <Download size={14} /> Restore from Cloud
+                          </button>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
+              </section>
+
               <section className="cognito-card" style={{ padding: '26px 26px' }}>
                 <span className="tilted-badge tilted-badge--edge tilted-badge--paper">ACCOUNT</span>
                 <form onSubmit={handleSaveProfile} style={{ display: 'grid', gap: 14, maxWidth: 420 }}>
