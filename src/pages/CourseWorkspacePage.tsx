@@ -249,17 +249,17 @@ export const CourseWorkspacePage: React.FC = () => {
         </div>
       )}
 
-      {/* Subject Hero Banner Card */}
+      {/* Subject Hero Banner Card — Airy Cognito Proportions */}
       <section
         className={`cognito-grid-bg ${course.themeClass}`}
         style={{
           position: 'relative',
-          padding: '28px 26px',
-          borderRadius: 20,
+          padding: '38px 40px',
+          borderRadius: 22,
           border: '2px solid var(--subject-border)',
           backgroundColor: 'var(--subject-tint)',
           boxShadow: '0 4px 0 var(--border-lip)',
-          marginTop: 12,
+          marginTop: 8,
         }}
       >
         <span
@@ -278,18 +278,18 @@ export const CourseWorkspacePage: React.FC = () => {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            gap: 20,
+            gap: 24,
             flexWrap: 'wrap',
           }}
         >
-          <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
-            <SubjectIcon icon={course.icon} size={86} />
+          <div style={{ display: 'flex', alignItems: 'center', gap: 24 }}>
+            <SubjectIcon icon={course.icon} size={94} />
             <div>
-              <h1 className="font-heading" style={{ fontSize: '2.35rem', lineHeight: 1.1 }}>
+              <h1 className="font-heading" style={{ fontSize: '2.55rem', lineHeight: 1.08 }}>
                 {course.subjectName}
               </h1>
 
-              <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginTop: 10, position: 'relative' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginTop: 12, position: 'relative' }}>
                 <button
                   type="button"
                   onClick={() => setShowTierDropdown((s) => !s)}
@@ -297,11 +297,11 @@ export const CourseWorkspacePage: React.FC = () => {
                     display: 'inline-flex',
                     alignItems: 'center',
                     gap: 6,
-                    padding: '6px 14px',
+                    padding: '7px 15px',
                     borderRadius: 999,
                     border: '1px solid var(--border-card)',
-                    backgroundColor: 'var(--bg-sunken)',
-                    fontSize: '0.88rem',
+                    backgroundColor: 'var(--bg-card)',
+                    fontSize: '0.9rem',
                     fontWeight: 700,
                     color: 'var(--text-heading)',
                   }}
@@ -316,11 +316,11 @@ export const CourseWorkspacePage: React.FC = () => {
                   title={isEnrolled ? 'Saved on Dashboard (click to remove)' : 'Add course to Dashboard'}
                   aria-label={isEnrolled ? 'Remove course from dashboard' : 'Add course to dashboard'}
                   style={{
-                    width: 34,
-                    height: 34,
+                    width: 36,
+                    height: 36,
                     borderRadius: '999px',
                     border: '1px solid var(--border-card)',
-                    backgroundColor: isEnrolled ? 'var(--color-green-500)' : 'var(--bg-sunken)',
+                    backgroundColor: isEnrolled ? 'var(--color-green-500)' : 'var(--bg-card)',
                     color: isEnrolled ? '#ffffff' : 'var(--text-heading)',
                     display: 'inline-flex',
                     alignItems: 'center',
@@ -338,7 +338,7 @@ export const CourseWorkspacePage: React.FC = () => {
                       top: 'calc(100% + 8px)',
                       left: 0,
                       width: 260,
-                      padding: 10,
+                      padding: 12,
                     }}
                   >
                     <div style={{ fontSize: '0.74rem', fontWeight: 800, color: 'var(--text-muted)', padding: '4px 8px' }}>
@@ -354,7 +354,7 @@ export const CourseWorkspacePage: React.FC = () => {
                         {t}
                       </button>
                     ))}
-                    <div style={{ fontSize: '0.74rem', fontWeight: 800, color: 'var(--text-muted)', padding: '8px 8px 4px' }}>
+                    <div style={{ fontSize: '0.74rem', fontWeight: 800, color: 'var(--text-muted)', padding: '10px 8px 6px' }}>
                       SWITCH BOARD
                     </div>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, padding: '0 6px 4px' }}>
@@ -366,12 +366,12 @@ export const CourseWorkspacePage: React.FC = () => {
                             type="button"
                             onClick={() => switchVariant(course.tier, bId)}
                             style={{
-                              padding: '4px 9px',
+                              padding: '5px 10px',
                               borderRadius: 8,
                               border: '1px solid var(--border-card)',
                               background: bId === course.board ? 'var(--color-blue-500)' : 'var(--bg-elevated)',
                               color: bId === course.board ? '#ffffff' : 'var(--text-primary)',
-                              fontSize: '0.78rem',
+                              fontSize: '0.8rem',
                               fontWeight: 700,
                             }}
                           >
@@ -390,7 +390,7 @@ export const CourseWorkspacePage: React.FC = () => {
             <Link
               to={`/course/${course.id}/revision-session`}
               className="tactile-btn"
-              style={{ minHeight: 50, padding: '10px 22px', fontSize: '0.98rem' }}
+              style={{ minHeight: 50, padding: '10px 24px', fontSize: '0.98rem' }}
             >
               Study multiple subtopics <ArrowRight size={17} />
             </Link>
@@ -398,14 +398,15 @@ export const CourseWorkspacePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Activity Navigation Tabs */}
+      {/* Activity Navigation Tabs — Exact Cognito Full-Width Underline Rail */}
       <div
         style={{
-          marginTop: 24,
+          marginTop: 32,
+          borderBottom: '1.5px solid var(--border-subtle)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          gap: 10,
+          gap: 12,
           position: 'relative',
         }}
       >
@@ -440,8 +441,8 @@ export const CourseWorkspacePage: React.FC = () => {
               <span
                 style={{
                   position: 'absolute',
-                  top: -5,
-                  right: -4,
+                  top: 2,
+                  right: -2,
                   backgroundColor: 'var(--color-blue-500)',
                   color: '#ffffff',
                   fontSize: '0.62rem',
@@ -456,7 +457,7 @@ export const CourseWorkspacePage: React.FC = () => {
             {showMoreMenu && (
               <div
                 className="popover-surface"
-                style={{ position: 'absolute', top: 'calc(100% + 6px)', right: 0, width: 200, padding: 8 }}
+                style={{ position: 'absolute', top: 'calc(100% + 8px)', right: 0, width: 210, padding: 10 }}
               >
                 <div style={{ fontSize: '0.72rem', fontWeight: 800, color: 'var(--text-muted)', padding: '4px 10px' }}>
                   STUDY TOOLS
@@ -489,36 +490,30 @@ export const CourseWorkspacePage: React.FC = () => {
       {activeTab === 'past-papers' ? (
         <PastPapersTab course={course} />
       ) : activeTab === 'cheat-sheets' ? (
-        <section style={{ marginTop: 20 }}>
-          <div className="cognito-card" style={{ padding: '16px 20px', marginBottom: 18 }}>
-            <p style={{ margin: 0, color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
-              One-page printable revision cheat sheets covering {course.qualificationLabel} {course.subjectName}.
-              All sheets are unlocked — expand, search, or download as PNG &amp; PDF.
-            </p>
-          </div>
+        <section style={{ marginTop: 28 }}>
           {course.cheatSheets.length === 0 ? (
-            <div className="cognito-card" style={{ padding: 28, textAlign: 'center', color: 'var(--text-muted)' }}>
+            <div className="cognito-card" style={{ padding: 36, textAlign: 'center', color: 'var(--text-muted)' }}>
               Cheat sheets for this subject are coming soon — use Notes, Quizzes, and Past Papers meanwhile!
             </div>
           ) : (
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: 16 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(290px, 1fr))', gap: 20 }}>
               {course.cheatSheets.map((cs) => (
                 <Link
                   key={cs.id}
                   to={`/course/${course.id}/cheat-sheets/${cs.slug}`}
                   className="cognito-card cognito-card--interactive"
-                  style={{ padding: 20, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: 14 }}
+                  style={{ padding: 26, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: 16 }}
                 >
                   <div>
-                    <span className="tilted-badge tilted-badge--navy" style={{ marginBottom: 12 }}>
+                    <span className="tilted-badge tilted-badge--navy" style={{ marginBottom: 14 }}>
                       {cs.topicName}
                     </span>
-                    <h3 className="font-heading" style={{ fontSize: '1.35rem', marginBottom: 6 }}>
+                    <h3 className="font-heading" style={{ fontSize: '1.4rem', marginBottom: 8 }}>
                       {cs.title}
                     </h3>
-                    <p style={{ margin: 0, fontSize: '0.88rem', color: 'var(--text-muted)' }}>{cs.summary}</p>
+                    <p style={{ margin: 0, fontSize: '0.92rem', color: 'var(--text-muted)', lineHeight: 1.5 }}>{cs.summary}</p>
                   </div>
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.86rem', fontWeight: 700, color: 'var(--text-link)' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.88rem', fontWeight: 700, color: 'var(--text-link)' }}>
                     <span>Open &amp; download</span>
                     <ArrowRight size={15} />
                   </div>
@@ -529,7 +524,7 @@ export const CourseWorkspacePage: React.FC = () => {
         </section>
       ) : (
         /* Topic List (Notes / Lessons / Quiz / Flashcards / Exam Practice) */
-        <section style={{ marginTop: 18 }}>
+        <section style={{ marginTop: 26 }}>
           {/* Dynamic Overall Progress + Inline Filter + Expand/Collapse */}
           <div className="workspace-toolbar">
             <button
@@ -537,10 +532,10 @@ export const CourseWorkspacePage: React.FC = () => {
               onClick={() => setShowProgressModal(true)}
               className="cognito-card workspace-progress-card"
             >
-              <span style={{ fontWeight: 700, fontSize: '0.9rem', whiteSpace: 'nowrap', color: 'var(--text-heading)' }}>
+              <span style={{ fontWeight: 700, fontSize: '0.92rem', whiteSpace: 'nowrap', color: 'var(--text-heading)' }}>
                 Overall progress:
               </span>
-              <div style={{ flex: 1, minWidth: 80, height: 9, borderRadius: 999, backgroundColor: 'var(--bg-sunken)', overflow: 'hidden' }}>
+              <div style={{ flex: 1, minWidth: 90, height: 10, borderRadius: 999, backgroundColor: 'var(--bg-sunken)', overflow: 'hidden' }}>
                 <div
                   style={{
                     width: `${overallMetrics.pct}%`,
@@ -551,7 +546,7 @@ export const CourseWorkspacePage: React.FC = () => {
                   }}
                 />
               </div>
-              <span style={{ fontSize: '0.84rem', fontWeight: 800, color: 'var(--text-secondary)', whiteSpace: 'nowrap' }}>
+              <span style={{ fontSize: '0.86rem', fontWeight: 800, color: 'var(--text-secondary)', whiteSpace: 'nowrap' }}>
                 {overallMetrics.summary}
               </span>
               {overallMetrics.accentPill && (
@@ -565,7 +560,7 @@ export const CourseWorkspacePage: React.FC = () => {
                 size={15}
                 style={{
                   position: 'absolute',
-                  left: 13,
+                  left: 14,
                   top: '50%',
                   transform: 'translateY(-50%)',
                   color: 'var(--text-muted)',
@@ -593,7 +588,7 @@ export const CourseWorkspacePage: React.FC = () => {
                   onClick={() => setSearchQuery('')}
                   style={{
                     position: 'absolute',
-                    right: 8,
+                    right: 10,
                     top: '50%',
                     transform: 'translateY(-50%)',
                     border: 0,
@@ -615,13 +610,13 @@ export const CourseWorkspacePage: React.FC = () => {
               }
               className="cognito-card"
               style={{
-                height: 44,
-                padding: '0 15px',
+                height: 48,
+                padding: '0 18px',
                 display: 'inline-flex',
                 alignItems: 'center',
-                gap: 6,
+                gap: 7,
                 fontWeight: 700,
-                fontSize: '0.88rem',
+                fontSize: '0.9rem',
                 color: 'var(--text-heading)',
               }}
             >
@@ -630,20 +625,9 @@ export const CourseWorkspacePage: React.FC = () => {
             </button>
           </div>
 
-          {/* Intro Card (matches Cognito specification note) */}
-          <div className="cognito-card" style={{ padding: '16px 20px', marginBottom: 16 }}>
-            <p style={{ margin: 0, fontSize: '0.94rem', color: 'var(--text-secondary)', lineHeight: 1.55 }}>
-              Study any subtopic of{' '}
-              <strong style={{ color: 'var(--text-heading)' }}>
-                {course.qualificationLabel} {course.subjectName} {course.boardLabel} ({course.specCode})
-              </strong>{' '}
-              with videos, revision notes, interactive quizzes, flashcards, cheat sheets, exam practice and past papers — 100% unlocked.
-            </p>
-          </div>
-
-          {/* Topic Accordions */}
+          {/* Topic Accordions — Clean & Uncluttered like Real Cognito */}
           {filteredTopics.length === 0 ? (
-            <div className="cognito-card" style={{ padding: 28, textAlign: 'center', color: 'var(--text-muted)' }}>
+            <div className="cognito-card" style={{ padding: 36, textAlign: 'center', color: 'var(--text-muted)' }}>
               No topics match &ldquo;{searchQuery}&rdquo;.{' '}
               <button
                 type="button"
@@ -654,7 +638,7 @@ export const CourseWorkspacePage: React.FC = () => {
               </button>
             </div>
           ) : (
-            <div style={{ display: 'grid', gap: 12 }}>
+            <div style={{ display: 'grid', gap: 16 }}>
               {filteredTopics.map((topic) => {
                 const isOpen = expandedTopics.includes(topic.number);
                 const topicMetrics = getTopicMetrics(topic);
@@ -668,11 +652,11 @@ export const CourseWorkspacePage: React.FC = () => {
                       className="workspace-topic-header"
                     >
                       <div style={{ flex: 1, minWidth: 0 }}>
-                        <div style={{ fontWeight: 700, fontSize: '1.02rem', color: 'var(--text-heading)' }}>
+                        <div style={{ fontWeight: 700, fontSize: '1.08rem', color: 'var(--text-heading)' }}>
                           Topic {topic.number} - {topic.title}
                         </div>
-                        <div style={{ marginTop: 8, display: 'flex', alignItems: 'center', gap: 10 }}>
-                          <div style={{ width: 150, height: 6, borderRadius: 999, backgroundColor: 'var(--bg-sunken)', overflow: 'hidden' }}>
+                        <div style={{ marginTop: 10, display: 'flex', alignItems: 'center', gap: 12 }}>
+                          <div style={{ width: 175, height: 7, borderRadius: 999, backgroundColor: 'var(--bg-sunken)', overflow: 'hidden' }}>
                             <div
                               style={{
                                 width: `${topicMetrics.pct}%`,

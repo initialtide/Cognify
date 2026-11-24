@@ -14,8 +14,8 @@ export const AuthPage: React.FC<AuthPageProps> = ({ initialMode = 'signin' }) =>
   const { isAuthenticated, profile } = useApp();
 
   return (
-    <main className="page-container" style={{ maxWidth: 880 }}>
-      <div style={{ marginBottom: 18 }}>
+    <main className="page-container" style={{ maxWidth: 960 }}>
+      <div style={{ marginBottom: 22 }}>
         <Link
           to="/dashboard"
           style={{
@@ -23,7 +23,7 @@ export const AuthPage: React.FC<AuthPageProps> = ({ initialMode = 'signin' }) =>
             alignItems: 'center',
             gap: 6,
             fontWeight: 700,
-            fontSize: '0.9rem',
+            fontSize: '0.92rem',
             color: 'var(--text-secondary)',
           }}
         >
@@ -34,13 +34,13 @@ export const AuthPage: React.FC<AuthPageProps> = ({ initialMode = 'signin' }) =>
       <div
         style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-          gap: 22,
+          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+          gap: 28,
           alignItems: 'start',
         }}
       >
         {/* Left: Auth Form Card */}
-        <section className="cognito-card" style={{ padding: '28px 26px' }}>
+        <section className="cognito-card" style={{ padding: '36px 36px' }}>
           <AuthFormCard
             key={initialMode}
             initialMode={initialMode}
@@ -52,7 +52,7 @@ export const AuthPage: React.FC<AuthPageProps> = ({ initialMode = 'signin' }) =>
         {/* Right: Why Save Your Account Info Card */}
         <aside
           className="cognito-card cognito-grid-bg"
-          style={{ padding: '28px 26px', display: 'grid', gap: 18 }}
+          style={{ padding: '36px 36px', display: 'grid', gap: 20 }}
         >
           <div>
             <CognitoLogo />

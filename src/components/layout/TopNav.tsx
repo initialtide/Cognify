@@ -220,19 +220,29 @@ export const TopNav: React.FC<TopNavProps> = ({
             )}
           </div>
 
-          {/* Sleek Quick Search Trigger (Ctrl + K) */}
+          {/* Minimalist Quick Search Icon Trigger (Ctrl + K) — keeps left nav airy like real Cognito */}
           <button
             type="button"
-            className="nav-search-trigger"
             onClick={() => {
               setOpenMenu(null);
               onOpenQuickSearch();
             }}
             aria-label="Quick search (Ctrl+K)"
+            title="Quick search (Ctrl+K)"
+            style={{
+              width: 38,
+              height: 38,
+              borderRadius: 11,
+              border: '1px solid var(--border-card)',
+              backgroundColor: 'var(--bg-pill)',
+              color: 'var(--text-secondary)',
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              boxShadow: '0 2px 0 var(--border-lip)',
+            }}
           >
-            <Search size={15} />
-            <span className="hide-mobile">Search</span>
-            <kbd className="kbd-cap hide-mobile">Ctrl K</kbd>
+            <Search size={16} />
           </button>
         </div>
 
@@ -288,14 +298,21 @@ export const TopNav: React.FC<TopNavProps> = ({
           {!isAuthenticated && onOpenAuthModal && (
             <button
               type="button"
-              className="tactile-btn tactile-btn--sm tactile-btn--solid-blue"
-              style={{ minHeight: 36, padding: '6px 12px', fontSize: '0.84rem' }}
+              className="nav-pill-btn"
+              style={{
+                border: '1px solid var(--color-blue-200)',
+                backgroundColor: 'var(--color-blue-50)',
+                color: 'var(--color-blue-700)',
+                borderRadius: 12,
+                padding: '8px 14px',
+                boxShadow: '0 2px 0 var(--border-lip)',
+              }}
               onClick={() => {
                 setOpenMenu(null);
                 onOpenAuthModal('signin');
               }}
             >
-              <LogIn size={14} />
+              <LogIn size={15} />
               <span className="hide-mobile">Sign in</span>
             </button>
           )}
