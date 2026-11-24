@@ -3,12 +3,16 @@ import { AvatarId } from '../components/artwork/Avatars';
 import { ALL_COURSES, getCourseById } from '../data/catalog';
 import {
   decodeSyncCode,
+  generateRecoveryKey,
   generateSalt,
   getDefaultCloudSyncConfig,
   hashPassword,
   normalizeEmail,
+  normalizeRecoveryKey,
   pullProfileFromSupabase,
   pushProfileToSupabase,
+  signInWithSupabaseAuth,
+  signUpWithSupabaseAuth,
   validateEmail,
   validatePassword,
   verifyPassword,
@@ -29,6 +33,7 @@ import {
 } from '../types/user';
 
 export const STORAGE_KEY = 'cognito_clone_v1';
+export const ACCOUNTS_VAULT_KEY = 'cognify_accounts_vault_v1';
 
 export function formatDateKey(date: Date = new Date()): string {
   const y = date.getFullYear();
@@ -386,17 +391,84 @@ export function parseImportedProfileJson(rawJson: string): UserProfile | null {
   }
 }
 
+interface AccountsVaultPayload {
+  accounts: AuthAccount[];
+  profiles: UserProfile[];
+}
+
+function readAccountsVault(): AccountsVaultPayload {
+  try {
+    const raw = localStorage.getItem(ACCOUNTS_VAULT_KEY);
+    if (!raw) return { accounts: [], profiles: [] };
+    const parsed = JSON.parse(raw) as Partial<AccountsVaultPayload>;
+    return {
+      accounts: Array.isArray(parsed.accounts) ? parsed.accounts : [],
+      profiles: Array.isArray(parsed.profiles) ? parsed.profiles : [],
+    };
+  } catch {
+    return { accounts: [], profiles: [] };
+  }
+}
+
+function persistStoreState(next: AppStoreState): void {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
+    const accounts = next.accounts ?? [];
+    if (accounts.length > 0) {
+      const accountProfileIds = new Set(accounts.map((a) => a.profileId));
+      const vault: AccountsVaultPayload = {
+        accounts,
+        profiles: next.profiles.filter((p) => accountProfileIds.has(p.id)),
+      };
+      localStorage.setItem(ACCOUNTS_VAULT_KEY, JSON.stringify(vault));
+    }
+  } catch {
+    // Ignore quota / restricted storage errors
+  }
+}
+
+function mergeAccountsByEmail(primary: AuthAccount[], secondary: AuthAccount[]): AuthAccount[] {
+  const byEmail = new Map<string, AuthAccount>();
+  for (const acc of secondary) {
+    byEmail.set(normalizeEmail(acc.email), acc);
+  }
+  for (const acc of primary) {
+    byEmail.set(normalizeEmail(acc.email), acc);
+  }
+  return Array.from(byEmail.values());
+}
+
 function loadStoreState(): AppStoreState {
+  const vault = readAccountsVault();
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
-    if (!raw) return createInitialStoreState();
+    if (!raw) {
+      const fresh = createInitialStoreState();
+      if (vault.accounts.length > 0) {
+        const existingIds = new Set(fresh.profiles.map((p) => p.id));
+        const restoredProfiles = vault.profiles.filter((p) => !existingIds.has(p.id));
+        return {
+          ...fresh,
+          accounts: vault.accounts,
+          profiles: [...fresh.profiles, ...restoredProfiles],
+        };
+      }
+      return fresh;
+    }
     const parsed = JSON.parse(raw) as AppStoreState;
     if (!parsed || !Array.isArray(parsed.profiles) || parsed.profiles.length === 0) {
       return createInitialStoreState();
     }
+    const mergedAccounts = mergeAccountsByEmail(
+      Array.isArray(parsed.accounts) ? parsed.accounts : [],
+      vault.accounts
+    );
+    const existingProfileIds = new Set(parsed.profiles.map((p) => p.id));
+    const missingVaultProfiles = vault.profiles.filter((p) => !existingProfileIds.has(p.id));
     return {
       ...parsed,
-      accounts: Array.isArray(parsed.accounts) ? parsed.accounts : [],
+      profiles: [...parsed.profiles, ...missingVaultProfiles],
+      accounts: mergedAccounts,
       sessionAccountId: parsed.sessionAccountId ?? null,
       cloudSync: parsed.cloudSync ?? getDefaultCloudSyncConfig(),
     };
@@ -462,6 +534,12 @@ interface AppContextValue {
     currentPassword: string,
     newPassword: string
   ) => Promise<AuthActionResult>;
+  resetAccountPassword: (
+    email: string,
+    recoveryKey: string,
+    newPassword: string
+  ) => Promise<AuthActionResult>;
+  regenerateRecoveryKey: () => Promise<AuthActionResult>;
   applySyncCode: (rawCode: string) => AuthActionResult;
   updateCloudSyncConfig: (patch: Partial<CloudSyncConfig>) => void;
   pushCloudSync: () => Promise<AuthActionResult>;
@@ -473,6 +551,14 @@ const AppContext = createContext<AppContextValue | null>(null);
 
 export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [state, setState] = useState<AppStoreState>(() => loadStoreState());
+
+  const commitState = (updater: (prev: AppStoreState) => AppStoreState) => {
+    setState((prev) => {
+      const next = updater(prev);
+      persistStoreState(next);
+      return next;
+    });
+  };
 
   const accounts = state.accounts ?? [];
   const currentAccount =
@@ -488,8 +574,8 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const lastSavedAt = profile.lastSavedAt ?? null;
 
   useEffect(() => {
+    persistStoreState(state);
     try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
       const mode = profile.preferences.darkMode ? 'dark' : 'light';
       localStorage.setItem('color-scheme', mode);
       document.documentElement.dataset.theme = mode;
@@ -500,9 +586,20 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     }
   }, [state, profile.preferences.darkMode]);
 
+  // Keep open browser tabs in sync whenever an account is registered, signed in, or updated
+  useEffect(() => {
+    const handleStorage = (e: StorageEvent) => {
+      if (e.key === STORAGE_KEY || e.key === ACCOUNTS_VAULT_KEY) {
+        setState(loadStoreState());
+      }
+    };
+    window.addEventListener('storage', handleStorage);
+    return () => window.removeEventListener('storage', handleStorage);
+  }, []);
+
   const updateProfile = (updater: (prev: UserProfile) => UserProfile) => {
     const savedAt = new Date().toISOString();
-    setState((prev) => ({
+    commitState((prev) => ({
       ...prev,
       profiles: prev.profiles.map((p) =>
         p.id === prev.activeProfileId ? { ...updater(p), lastSavedAt: savedAt } : p
@@ -822,6 +919,18 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     }));
   };
 
+  const getFreshAccountSnapshot = () => {
+    const disk = loadStoreState();
+    const mergedAccounts = mergeAccountsByEmail(state.accounts ?? [], disk.accounts ?? []);
+    const profileMap = new Map<string, UserProfile>();
+    for (const p of disk.profiles) profileMap.set(p.id, p);
+    for (const p of state.profiles) profileMap.set(p.id, p);
+    return {
+      accounts: mergedAccounts,
+      profiles: Array.from(profileMap.values()),
+    };
+  };
+
   const registerAccount = async (input: RegisterAccountInput): Promise<AuthActionResult> => {
     const emailErr = validateEmail(input.email);
     if (emailErr) return { ok: false, error: emailErr };
@@ -834,16 +943,22 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     }
 
     const email = normalizeEmail(input.email);
-    const existingAccounts = state.accounts ?? [];
-    if (existingAccounts.some((a) => normalizeEmail(a.email) === email)) {
+    const snapshot = getFreshAccountSnapshot();
+    if (snapshot.accounts.some((a) => normalizeEmail(a.email) === email)) {
       return {
         ok: false,
+        code: 'EMAIL_EXISTS',
         error: 'An account with this email already exists. Try signing in instead.',
       };
     }
 
     const salt = generateSalt();
     const passwordHash = await hashPassword(input.password, salt);
+    const recoveryKey = generateRecoveryKey();
+    const recoveryKeySalt = generateSalt();
+    const recoveryKeyHash = await hashPassword(normalizeRecoveryKey(recoveryKey), recoveryKeySalt);
+    const recoveryKeyHint = recoveryKey.slice(-4);
+
     const now = new Date();
     const nowIso = now.toISOString();
     const joinedDate = now.toLocaleDateString('en-GB', { month: 'short', year: 'numeric' });
@@ -851,12 +966,13 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     const accountId = `acct-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
 
     const guestSource = input.keepGuestProgress ? profile : null;
+    const onboardingCompleted = !input.runOnboardingNext;
     const newProfile = createDefaultProfile({
       id: profileId,
       name: cleanName,
       email,
       isGuest: false,
-      onboardingCompleted: true,
+      onboardingCompleted,
       lastSavedAt: nowIso,
       yearGroup: input.yearGroup.trim().toUpperCase() || 'YEAR 11',
       avatarId: input.avatarId,
@@ -879,20 +995,42 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       email,
       passwordHash,
       passwordSalt: salt,
+      recoveryKeyHash,
+      recoveryKeySalt,
+      recoveryKeyHint,
       createdAt: nowIso,
       lastSignedInAt: nowIso,
       profileId,
     };
 
-    setState((prev) => ({
-      ...prev,
-      activeProfileId: profileId,
-      profiles: [...prev.profiles, newProfile],
-      accounts: [...(prev.accounts ?? []), newAccount],
-      sessionAccountId: accountId,
-    }));
+    commitState((prev) => {
+      const mergedAccounts = mergeAccountsByEmail(
+        [...(prev.accounts ?? []), newAccount],
+        snapshot.accounts
+      );
+      const profileIds = new Set(prev.profiles.map((p) => p.id));
+      const extraProfiles = snapshot.profiles.filter((p) => !profileIds.has(p.id));
+      return {
+        ...prev,
+        activeProfileId: profileId,
+        profiles: [...prev.profiles, ...extraProfiles, newProfile],
+        accounts: mergedAccounts,
+        sessionAccountId: accountId,
+      };
+    });
 
-    return { ok: true };
+    // Optional real cloud sync when Supabase is configured
+    if (cloudSync.provider === 'supabase' && cloudSync.supabaseUrl && cloudSync.supabaseAnonKey) {
+      void signUpWithSupabaseAuth(cloudSync, email, input.password, cleanName).then(() =>
+        pushProfileToSupabase(cloudSync, email, newProfile)
+      );
+    }
+
+    return {
+      ok: true,
+      recoveryKey,
+      needsOnboarding: !onboardingCompleted,
+    };
   };
 
   const signInAccount = async (input: SignInAccountInput): Promise<AuthActionResult> => {
@@ -901,27 +1039,83 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     if (!input.password) return { ok: false, error: 'Please enter your password.' };
 
     const email = normalizeEmail(input.email);
-    const existingAccounts = state.accounts ?? [];
-    const account = existingAccounts.find((a) => normalizeEmail(a.email) === email);
+    const snapshot = getFreshAccountSnapshot();
+    const account = snapshot.accounts.find((a) => normalizeEmail(a.email) === email);
+
     if (!account) {
+      // Optional cloud fallback: if Supabase is configured, authenticate & hydrate from cloud
+      if (cloudSync.provider === 'supabase' && cloudSync.supabaseUrl && cloudSync.supabaseAnonKey) {
+        const cloudAuth = await signInWithSupabaseAuth(cloudSync, email, input.password);
+        if (cloudAuth.ok) {
+          const pulled = await pullProfileFromSupabase(cloudSync, email);
+          const nowIso = new Date().toISOString();
+          const salt = generateSalt();
+          const passwordHash = await hashPassword(input.password, salt);
+          const profileId = `profile-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
+          const accountId = `acct-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
+          const hydratedProfile = createDefaultProfile({
+            ...(pulled.profile ?? {}),
+            id: profileId,
+            name: pulled.profile?.name ?? (email.split('@')[0] || 'Student'),
+            email,
+            isGuest: false,
+            lastSavedAt: nowIso,
+            progressByCourse: pulled.profile?.progressByCourse ?? {},
+            activityLog: pulled.profile?.activityLog ?? [],
+          });
+          const hydratedAccount: AuthAccount = {
+            id: accountId,
+            email,
+            passwordHash,
+            passwordSalt: salt,
+            createdAt: nowIso,
+            lastSignedInAt: nowIso,
+            lastSyncedAt: nowIso,
+            profileId,
+          };
+          commitState((prev) => ({
+            ...prev,
+            activeProfileId: profileId,
+            profiles: [...prev.profiles, hydratedProfile],
+            accounts: mergeAccountsByEmail([...(prev.accounts ?? []), hydratedAccount], snapshot.accounts),
+            sessionAccountId: accountId,
+          }));
+          return {
+            ok: true,
+            needsOnboarding: !hydratedProfile.onboardingCompleted,
+          };
+        }
+      }
+
       return {
         ok: false,
-        error: 'No account found with that email on this browser. Register a new account or restore using a Sync Code.',
+        code: 'EMAIL_NOT_FOUND',
+        error: 'No account found with that email on this browser. Create a free account or restore using a Sync Code.',
       };
     }
 
     const valid = await verifyPassword(input.password, account.passwordSalt, account.passwordHash);
     if (!valid) {
-      return { ok: false, error: 'Incorrect password. Please try again.' };
+      return {
+        ok: false,
+        code: 'WRONG_PASSWORD',
+        error: 'Incorrect password. Please try again or use Forgot password.',
+      };
     }
 
     const nowIso = new Date().toISOString();
-    setState((prev) => {
-      const hasProfile = prev.profiles.some((p) => p.id === account.profileId);
+    const existingTargetProfile = snapshot.profiles.find((p) => p.id === account.profileId);
+    const needsOnboarding = existingTargetProfile ? !existingTargetProfile.onboardingCompleted : false;
+
+    commitState((prev) => {
+      const profileIds = new Set(prev.profiles.map((p) => p.id));
+      const missingSnapshotProfiles = snapshot.profiles.filter((p) => !profileIds.has(p.id));
+      const combinedProfiles = [...prev.profiles, ...missingSnapshotProfiles];
+      const hasProfile = combinedProfiles.some((p) => p.id === account.profileId);
       const nextProfiles = hasProfile
-        ? prev.profiles
+        ? combinedProfiles
         : [
-            ...prev.profiles,
+            ...combinedProfiles,
             createDefaultProfile({
               id: account.profileId,
               name: email.split('@')[0] || 'Student',
@@ -932,22 +1126,23 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
               activityLog: [],
             }),
           ];
+      const mergedAccounts = mergeAccountsByEmail(prev.accounts ?? [], snapshot.accounts).map((a) =>
+        a.id === account.id ? { ...a, lastSignedInAt: nowIso } : a
+      );
       return {
         ...prev,
         activeProfileId: account.profileId,
         profiles: nextProfiles,
         sessionAccountId: account.id,
-        accounts: (prev.accounts ?? []).map((a) =>
-          a.id === account.id ? { ...a, lastSignedInAt: nowIso } : a
-        ),
+        accounts: mergedAccounts,
       };
     });
 
-    return { ok: true };
+    return { ok: true, needsOnboarding };
   };
 
   const signOutAccount = () => {
-    setState((prev) => {
+    commitState((prev) => {
       const guestProfile =
         prev.profiles.find((p) => p.id === 'profile-default' || p.isGuest) ??
         createDefaultProfile({ id: 'profile-default', isGuest: true });
@@ -974,14 +1169,14 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       currentAccount.passwordHash
     );
     if (!valid) {
-      return { ok: false, error: 'Current password is incorrect.' };
+      return { ok: false, code: 'WRONG_PASSWORD', error: 'Current password is incorrect.' };
     }
     const pwErr = validatePassword(newPassword);
     if (pwErr) return { ok: false, error: pwErr };
 
     const newSalt = generateSalt();
     const newHash = await hashPassword(newPassword, newSalt);
-    setState((prev) => ({
+    commitState((prev) => ({
       ...prev,
       accounts: (prev.accounts ?? []).map((a) =>
         a.id === currentAccount.id
@@ -990,6 +1185,93 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       ),
     }));
     return { ok: true };
+  };
+
+  const resetAccountPassword = async (
+    rawEmail: string,
+    rawRecoveryKey: string,
+    newPassword: string
+  ): Promise<AuthActionResult> => {
+    const emailErr = validateEmail(rawEmail);
+    if (emailErr) return { ok: false, error: emailErr };
+    const pwErr = validatePassword(newPassword);
+    if (pwErr) return { ok: false, error: pwErr };
+
+    const cleanKey = normalizeRecoveryKey(rawRecoveryKey);
+    if (!cleanKey) {
+      return { ok: false, code: 'INVALID_RECOVERY_KEY', error: 'Please enter your Recovery Key (e.g. COG-XXXX-XXXX-XXXX).' };
+    }
+
+    const email = normalizeEmail(rawEmail);
+    const snapshot = getFreshAccountSnapshot();
+    const account = snapshot.accounts.find((a) => normalizeEmail(a.email) === email);
+    if (!account) {
+      return {
+        ok: false,
+        code: 'EMAIL_NOT_FOUND',
+        error: 'No account found with that email on this browser.',
+      };
+    }
+
+    if (!account.recoveryKeyHash || !account.recoveryKeySalt) {
+      return {
+        ok: false,
+        code: 'INVALID_RECOVERY_KEY',
+        error: 'This account does not have a Recovery Key saved yet. Sign in or restore with a Sync Code.',
+      };
+    }
+
+    const validKey = await verifyPassword(cleanKey, account.recoveryKeySalt, account.recoveryKeyHash);
+    if (!validKey) {
+      return {
+        ok: false,
+        code: 'INVALID_RECOVERY_KEY',
+        error: 'That Recovery Key does not match this account. Double-check the characters and try again.',
+      };
+    }
+
+    const newSalt = generateSalt();
+    const newHash = await hashPassword(newPassword, newSalt);
+    const nowIso = new Date().toISOString();
+
+    commitState((prev) => {
+      const mergedAccounts = mergeAccountsByEmail(prev.accounts ?? [], snapshot.accounts).map((a) =>
+        a.id === account.id
+          ? { ...a, passwordSalt: newSalt, passwordHash: newHash, lastSignedInAt: nowIso }
+          : a
+      );
+      const profileIds = new Set(prev.profiles.map((p) => p.id));
+      const extraProfiles = snapshot.profiles.filter((p) => !profileIds.has(p.id));
+      return {
+        ...prev,
+        activeProfileId: account.profileId,
+        profiles: [...prev.profiles, ...extraProfiles],
+        accounts: mergedAccounts,
+        sessionAccountId: account.id,
+      };
+    });
+
+    return { ok: true };
+  };
+
+  const regenerateRecoveryKey = async (): Promise<AuthActionResult> => {
+    if (!currentAccount) {
+      return { ok: false, error: 'Sign in first to generate a Recovery Key.' };
+    }
+    const recoveryKey = generateRecoveryKey();
+    const recoveryKeySalt = generateSalt();
+    const recoveryKeyHash = await hashPassword(normalizeRecoveryKey(recoveryKey), recoveryKeySalt);
+    const recoveryKeyHint = recoveryKey.slice(-4);
+
+    commitState((prev) => ({
+      ...prev,
+      accounts: (prev.accounts ?? []).map((a) =>
+        a.id === currentAccount.id
+          ? { ...a, recoveryKeyHash, recoveryKeySalt, recoveryKeyHint }
+          : a
+      ),
+    }));
+    return { ok: true, recoveryKey };
   };
 
   const applySyncCode = (rawCode: string): AuthActionResult => {
@@ -1001,7 +1283,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       };
     }
     const nowIso = new Date().toISOString();
-    setState((prev) => {
+    commitState((prev) => {
       // Merge restored study progress into the active profile while preserving active id & login email
       const updated = prev.profiles.map((p) =>
         p.id === prev.activeProfileId
@@ -1020,7 +1302,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   };
 
   const updateCloudSyncConfig = (patch: Partial<CloudSyncConfig>) => {
-    setState((prev) => ({
+    commitState((prev) => ({
       ...prev,
       cloudSync: {
         ...(prev.cloudSync ?? getDefaultCloudSyncConfig()),
@@ -1053,7 +1335,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     }
     const restored = res.profile;
     const nowIso = new Date().toISOString();
-    setState((prev) => ({
+    commitState((prev) => ({
       ...prev,
       profiles: prev.profiles.map((p) =>
         p.id === prev.activeProfileId
@@ -1097,16 +1379,22 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       if (pwErr) return { ok: false, error: pwErr };
 
       const email = normalizeEmail(input.account.email);
-      const existingAccounts = state.accounts ?? [];
-      if (existingAccounts.some((a) => normalizeEmail(a.email) === email)) {
+      const snapshot = getFreshAccountSnapshot();
+      if (snapshot.accounts.some((a) => normalizeEmail(a.email) === email)) {
         return {
           ok: false,
+          code: 'EMAIL_EXISTS',
           error: 'An account with this email already exists. Try signing in instead.',
         };
       }
 
       const salt = generateSalt();
       const passwordHash = await hashPassword(input.account.password, salt);
+      const recoveryKey = generateRecoveryKey();
+      const recoveryKeySalt = generateSalt();
+      const recoveryKeyHash = await hashPassword(normalizeRecoveryKey(recoveryKey), recoveryKeySalt);
+      const recoveryKeyHint = recoveryKey.slice(-4);
+
       const joinedDate = now.toLocaleDateString('en-GB', { month: 'short', year: 'numeric' });
       const profileId = `profile-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
       const accountId = `acct-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
@@ -1136,23 +1424,41 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         email,
         passwordHash,
         passwordSalt: salt,
+        recoveryKeyHash,
+        recoveryKeySalt,
+        recoveryKeyHint,
         createdAt: nowIso,
         lastSignedInAt: nowIso,
         profileId,
       };
 
-      setState((prev) => ({
-        ...prev,
-        activeProfileId: profileId,
-        profiles: [...prev.profiles, newProfile],
-        accounts: [...(prev.accounts ?? []), newAccount],
-        sessionAccountId: accountId,
-      }));
-      return { ok: true };
+      commitState((prev) => {
+        const mergedAccounts = mergeAccountsByEmail(
+          [...(prev.accounts ?? []), newAccount],
+          snapshot.accounts
+        );
+        const profileIds = new Set(prev.profiles.map((p) => p.id));
+        const extraProfiles = snapshot.profiles.filter((p) => !profileIds.has(p.id));
+        return {
+          ...prev,
+          activeProfileId: profileId,
+          profiles: [...prev.profiles, ...extraProfiles, newProfile],
+          accounts: mergedAccounts,
+          sessionAccountId: accountId,
+        };
+      });
+
+      if (cloudSync.provider === 'supabase' && cloudSync.supabaseUrl && cloudSync.supabaseAnonKey) {
+        void signUpWithSupabaseAuth(cloudSync, email, input.account.password, cleanName).then(() =>
+          pushProfileToSupabase(cloudSync, email, newProfile)
+        );
+      }
+
+      return { ok: true, recoveryKey };
     }
 
     // Guest or already-signed-in user updating their setup
-    setState((prev) => ({
+    commitState((prev) => ({
       ...prev,
       profiles: prev.profiles.map((p) =>
         p.id === prev.activeProfileId
@@ -1211,6 +1517,8 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         signInAccount,
         signOutAccount,
         changeAccountPassword,
+        resetAccountPassword,
+        regenerateRecoveryKey,
         applySyncCode,
         updateCloudSyncConfig,
         pushCloudSync,

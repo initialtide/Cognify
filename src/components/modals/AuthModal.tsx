@@ -1,17 +1,21 @@
 import React from 'react';
-import { AuthFormCard, AuthMode } from '../auth/AuthFormCard';
+import { AuthFormCard, AuthMode, AuthSuccessMeta } from '../auth/AuthFormCard';
 import { CognitoDialog } from './CognitoDialog';
 
 interface AuthModalProps {
   open: boolean;
   initialMode?: AuthMode;
   onClose: () => void;
+  onAuthSuccess?: (meta: AuthSuccessMeta) => void;
+  onStartGuidedOnboarding?: () => void;
 }
 
 export const AuthModal: React.FC<AuthModalProps> = ({
   open,
   initialMode = 'signin',
   onClose,
+  onAuthSuccess,
+  onStartGuidedOnboarding,
 }) => {
   return (
     <CognitoDialog open={open} onClose={onClose} titleId="auth-modal-title" size="default">
@@ -21,7 +25,18 @@ export const AuthModal: React.FC<AuthModalProps> = ({
           initialMode={initialMode}
           titleId="auth-modal-title"
           compact
-          onSuccess={onClose}
+          onSuccess={(meta) => {
+            onClose();
+            onAuthSuccess?.(meta);
+          }}
+          onStartGuidedOnboarding={
+            onStartGuidedOnboarding
+              ? () => {
+                  onClose();
+                  onStartGuidedOnboarding();
+                }
+              : undefined
+          }
         />
       )}
     </CognitoDialog>

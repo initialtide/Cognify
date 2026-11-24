@@ -18,12 +18,13 @@ import {
   Target,
   User,
 } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { AVATAR_OPTIONS, AvatarId, MonsterAvatar } from '../components/artwork/Avatars';
 import { CognitoLogo } from '../components/artwork/CognitoLogo';
 import { SubjectIcon } from '../components/artwork/SubjectIcons';
-import { AuthMode } from '../components/auth/AuthFormCard';
+import { AuthFormCard, AuthMode, AuthSuccessMeta } from '../components/auth/AuthFormCard';
 import { ALL_COURSES } from '../data/catalog';
+import { getPasswordStrength } from '../services/authService';
 import { useApp } from '../store/AppContext';
 import { CourseDefinition } from '../types/curriculum';
 import { OnboardingQualification } from '../types/user';
@@ -138,12 +139,16 @@ function getDefaultCourseIdsForQual(
   return sorted.slice(0, 4).map((g) => g.variants[0].id);
 }
 
-export const OnboardingPage: React.FC<OnboardingPageProps> = ({ onOpenAuthModal }) => {
+export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
   const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
   const { profile, isAuthenticated, completeOnboarding } = useApp();
 
   const allGroups = useMemo(() => buildSubjectGroups(), []);
 
+  const initialViewMode: 'setup' | 'signin' =
+    searchParams.get('mode') === 'signin' && !isAuthenticated ? 'signin' : 'setup';
+  const [viewMode, setViewMode] = useState<'setup' | 'signin'>(initialViewMode);
   const [step, setStep] = useState<1 | 2 | 3 | 4>(1);
   const [qualification, setQualification] = useState<OnboardingQualification>(
     profile.selectedQualification ?? 'igcse'
@@ -179,7 +184,28 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = ({ onOpenAuthModal 
   const [showPassword, setShowPassword] = useState(false);
 
   const [error, setError] = useState('');
+  const [errorCode, setErrorCode] = useState<string | undefined>(undefined);
   const [submitting, setSubmitting] = useState(false);
+
+  const switchViewMode = (next: 'setup' | 'signin') => {
+    setViewMode(next);
+    setError('');
+    setErrorCode(undefined);
+    if (next === 'signin') {
+      setSearchParams({ mode: 'signin' }, { replace: true });
+    } else {
+      setSearchParams({}, { replace: true });
+    }
+  };
+
+  const handleInlineAuthSuccess = (meta: AuthSuccessMeta) => {
+    if (meta.needsOnboarding) {
+      setStep(1);
+      switchViewMode('setup');
+      return;
+    }
+    navigate('/dashboard');
+  };
 
   const visibleGroups = useMemo(() => {
     return allGroups.filter((g) =>
@@ -258,6 +284,7 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = ({ onOpenAuthModal 
   const handleFinishWithAccount = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
+    setErrorCode(undefined);
     if (password !== confirmPassword) {
       setError('Passwords do not match. Please check both fields.');
       return;
@@ -275,6 +302,7 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = ({ onOpenAuthModal 
       });
       if (!res.ok) {
         setError(res.error ?? 'Could not create account.');
+        setErrorCode(res.code);
         return;
       }
       navigate('/dashboard');
@@ -346,50 +374,63 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = ({ onOpenAuthModal 
               style={{
                 fontSize: '0.82rem',
                 fontWeight: 800,
-                padding: '3px 10px',
+                padding: '4px 11px',
                 borderRadius: 999,
                 backgroundColor: 'var(--bg-sunken)',
                 color: 'var(--text-secondary)',
               }}
             >
-              Step {step} of 4
+              {viewMode === 'signin' ? 'Sign in' : `Step ${step} of 4`}
             </span>
           </div>
 
-          {/* Animated Progress Track */}
-          <div
-            aria-label={`Onboarding progress: step ${step} of 4`}
-            style={{
-              flex: '1 1 180px',
-              maxWidth: 320,
-              height: 10,
-              borderRadius: 999,
-              backgroundColor: 'var(--bg-sunken)',
-              overflow: 'hidden',
-              border: '1px solid var(--border-subtle)',
-            }}
-          >
+          {/* Animated Progress Track (shown during 4-step setup) */}
+          {viewMode === 'setup' ? (
             <div
+              aria-label={`Onboarding progress: step ${step} of 4`}
               style={{
-                width: `${progressPercent}%`,
-                height: '100%',
+                flex: '1 1 180px',
+                maxWidth: 320,
+                height: 10,
                 borderRadius: 999,
-                backgroundColor: 'var(--color-blue-500)',
-                transition: 'width 240ms ease',
+                backgroundColor: 'var(--bg-sunken)',
+                overflow: 'hidden',
+                border: '1px solid var(--border-subtle)',
               }}
-            />
-          </div>
+            >
+              <div
+                style={{
+                  width: `${progressPercent}%`,
+                  height: '100%',
+                  borderRadius: 999,
+                  backgroundColor: 'var(--color-blue-500)',
+                  transition: 'width 240ms ease',
+                }}
+              />
+            </div>
+          ) : (
+            <div style={{ flex: '1 1 auto' }} />
+          )}
 
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            {!isAuthenticated && (
-              <button
-                type="button"
-                className="tactile-btn tactile-btn--sm"
-                onClick={() => (onOpenAuthModal ? onOpenAuthModal('signin') : navigate('/login'))}
-              >
-                <LogIn size={14} /> <span className="hide-mobile">Sign in</span>
-              </button>
-            )}
+            {!isAuthenticated &&
+              (viewMode === 'setup' ? (
+                <button
+                  type="button"
+                  className="tactile-btn tactile-btn--sm"
+                  onClick={() => switchViewMode('signin')}
+                >
+                  <LogIn size={14} /> <span className="hide-mobile">Sign in</span>
+                </button>
+              ) : (
+                <button
+                  type="button"
+                  className="tactile-btn tactile-btn--sm tactile-btn--solid-blue"
+                  onClick={() => switchViewMode('setup')}
+                >
+                  <Sparkles size={14} /> <span className="hide-mobile">Guided setup</span>
+                </button>
+              ))}
             <button
               type="button"
               onClick={() => navigate('/dashboard')}
@@ -408,7 +449,91 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = ({ onOpenAuthModal 
         </div>
       </header>
 
-      <main className="page-container" style={{ maxWidth: 920, paddingTop: 38 }}>
+      <main className="page-container" style={{ maxWidth: 960, paddingTop: 40 }}>
+        {viewMode === 'signin' ? (
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+              gap: 28,
+              alignItems: 'start',
+            }}
+          >
+            <section className="cognito-card" style={{ padding: '36px 38px' }}>
+              <AuthFormCard
+                initialMode="signin"
+                titleId="onboarding-signin-title"
+                defaultRunOnboarding
+                onSuccess={handleInlineAuthSuccess}
+                onStartGuidedOnboarding={() => switchViewMode('setup')}
+              />
+            </section>
+
+            <aside
+              className="cognito-card cognito-grid-bg"
+              style={{ padding: '36px 36px', display: 'grid', gap: 20 }}
+            >
+              <div>
+                <span className="tilted-badge tilted-badge--blue" style={{ marginBottom: 12 }}>
+                  NEW TO COGNIFY?
+                </span>
+                <h2 className="font-heading" style={{ fontSize: '1.65rem', lineHeight: 1.2 }}>
+                  Set up your IGCSE &amp; A-Level plan in 60 seconds
+                </h2>
+                <p style={{ margin: '8px 0 0', color: 'var(--text-secondary)', fontSize: '0.94rem', lineHeight: 1.55 }}>
+                  Pick your exact subjects, exam boards, daily XP target, and mascot — then create a free account so every quiz, flashcard, and note auto-saves.
+                </p>
+              </div>
+
+              <div style={{ display: 'grid', gap: 10 }}>
+                {[
+                  'Choose IGCSE, A-Level, or both in one dashboard',
+                  'Match your exact exam board (CIE, Edexcel, AQA)',
+                  'Auto-save XP, streaks, quiz marks & flashcards',
+                  '100% free forever — zero paywalls or weekly caps',
+                ].map((bullet) => (
+                  <div
+                    key={bullet}
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: 10,
+                      fontSize: '0.9rem',
+                      fontWeight: 700,
+                      color: 'var(--text-heading)',
+                    }}
+                  >
+                    <span
+                      style={{
+                        width: 22,
+                        height: 22,
+                        borderRadius: 999,
+                        backgroundColor: 'var(--color-green-100)',
+                        color: 'var(--color-green-700)',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        flexShrink: 0,
+                      }}
+                    >
+                      <Check size={13} strokeWidth={3} />
+                    </span>
+                    <span>{bullet}</span>
+                  </div>
+                ))}
+              </div>
+
+              <button
+                type="button"
+                className="tactile-btn tactile-btn--solid-blue"
+                style={{ width: '100%' }}
+                onClick={() => switchViewMode('setup')}
+              >
+                <Sparkles size={16} /> Start 4-step guided setup <ArrowRight size={15} />
+              </button>
+            </aside>
+          </div>
+        ) : (
         <section className="cognito-card cognito-grid-bg" style={{ padding: '40px 42px' }}>
           {/* STEP 1: QUALIFICATION & YEAR GROUP */}
           {step === 1 && (
@@ -982,6 +1107,21 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = ({ onOpenAuthModal 
                       </label>
                     </div>
 
+                    {(password.length > 0 || confirmPassword.length > 0) && (() => {
+                      const pwStrength = getPasswordStrength(password);
+                      const matches = Boolean(password && confirmPassword && password === confirmPassword);
+                      return (
+                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 10, flexWrap: 'wrap', fontSize: '0.78rem', fontWeight: 700 }}>
+                          <span style={{ color: pwStrength.color }}>{pwStrength.label}</span>
+                          {confirmPassword.length > 0 && (
+                            <span style={{ color: matches ? 'var(--color-green-600)' : 'var(--color-red-600)' }}>
+                              {matches ? 'Passwords match ✓' : 'Passwords do not match'}
+                            </span>
+                          )}
+                        </div>
+                      );
+                    })()}
+
                     <button
                       type="submit"
                       disabled={submitting}
@@ -1003,7 +1143,7 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = ({ onOpenAuthModal 
                     </button>
                     <button
                       type="button"
-                      onClick={() => (onOpenAuthModal ? onOpenAuthModal('signin') : navigate('/login'))}
+                      onClick={() => switchViewMode('signin')}
                       style={{
                         border: 0,
                         background: 'transparent',
@@ -1029,7 +1169,9 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = ({ onOpenAuthModal 
                 marginTop: 16,
                 display: 'flex',
                 alignItems: 'center',
-                gap: 8,
+                justifyContent: 'space-between',
+                gap: 10,
+                flexWrap: 'wrap',
                 padding: '10px 13px',
                 borderRadius: 11,
                 backgroundColor: 'rgba(239, 68, 68, 0.1)',
@@ -1039,8 +1181,27 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = ({ onOpenAuthModal 
                 fontSize: '0.88rem',
               }}
             >
-              <AlertCircle size={17} style={{ flexShrink: 0 }} />
-              <span>{error}</span>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+                <AlertCircle size={17} style={{ flexShrink: 0 }} />
+                <span>{error}</span>
+              </span>
+              {errorCode === 'EMAIL_EXISTS' && (
+                <button
+                  type="button"
+                  onClick={() => switchViewMode('signin')}
+                  style={{
+                    border: '1px solid var(--color-blue-500)',
+                    borderRadius: 8,
+                    padding: '5px 10px',
+                    backgroundColor: 'var(--bg-elevated)',
+                    color: 'var(--color-blue-600)',
+                    fontWeight: 800,
+                    fontSize: '0.8rem',
+                  }}
+                >
+                  Sign in instead →
+                </button>
+              )}
             </div>
           )}
 
@@ -1093,6 +1254,7 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = ({ onOpenAuthModal 
             )}
           </div>
         </section>
+        )}
       </main>
     </div>
   );

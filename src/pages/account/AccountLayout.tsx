@@ -59,6 +59,7 @@ export const AccountLayout: React.FC<AccountLayoutProps> = ({
     resetActiveProfile,
     signOutAccount,
     changeAccountPassword,
+    regenerateRecoveryKey,
     applySyncCode,
     updateCloudSyncConfig,
     pushCloudSync,
@@ -81,6 +82,8 @@ export const AccountLayout: React.FC<AccountLayoutProps> = ({
   const [newPw, setNewPw] = useState('');
   const [pwMsg, setPwMsg] = useState('');
   const [pwErr, setPwErr] = useState('');
+  const [freshRecoveryKey, setFreshRecoveryKey] = useState('');
+  const [recoveryCopied, setRecoveryCopied] = useState(false);
   const [showCloudPanel, setShowCloudPanel] = useState(false);
   const [cloudBusy, setCloudBusy] = useState(false);
 
@@ -502,6 +505,70 @@ export const AccountLayout: React.FC<AccountLayoutProps> = ({
                         </div>
                       </form>
                     )}
+
+                    {/* Account Recovery Key (for Forgot Password reset) */}
+                    <div style={{ display: 'grid', gap: 10, paddingTop: 12, borderTop: '1px solid var(--border-subtle)' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 10, flexWrap: 'wrap' }}>
+                        <div>
+                          <div style={{ fontWeight: 800, fontSize: '0.94rem', color: 'var(--text-heading)' }}>
+                            Password Recovery Key
+                          </div>
+                          <div style={{ fontSize: '0.83rem', color: 'var(--text-muted)', marginTop: 2 }}>
+                            {currentAccount?.recoveryKeyHint
+                              ? `Active key ending in ••••-${currentAccount.recoveryKeyHint}. Keep a copy to reset your password anytime.`
+                              : 'Generate a Recovery Key so you can reset your password if you ever forget it.'}
+                          </div>
+                        </div>
+                        <button
+                          type="button"
+                          className="tactile-btn tactile-btn--sm"
+                          onClick={async () => {
+                            const res = await regenerateRecoveryKey();
+                            if (res.ok && res.recoveryKey) {
+                              setFreshRecoveryKey(res.recoveryKey);
+                              setRecoveryCopied(false);
+                            }
+                          }}
+                        >
+                          <KeyRound size={14} /> {currentAccount?.recoveryKeyHint ? 'New Recovery Key' : 'Generate Recovery Key'}
+                        </button>
+                      </div>
+
+                      {freshRecoveryKey && (
+                        <div
+                          style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'space-between',
+                            gap: 10,
+                            flexWrap: 'wrap',
+                            padding: '10px 14px',
+                            borderRadius: 11,
+                            backgroundColor: 'var(--color-blue-50)',
+                            border: '1px solid var(--color-blue-200)',
+                          }}
+                        >
+                          <code style={{ fontWeight: 800, fontSize: '0.92rem', color: '#0b3c61', letterSpacing: '0.04em' }}>
+                            {freshRecoveryKey}
+                          </code>
+                          <button
+                            type="button"
+                            className="tactile-btn tactile-btn--sm tactile-btn--solid-blue"
+                            onClick={async () => {
+                              try {
+                                await navigator.clipboard.writeText(freshRecoveryKey);
+                                setRecoveryCopied(true);
+                              } catch {
+                                setRecoveryCopied(false);
+                              }
+                            }}
+                          >
+                            {recoveryCopied ? <Check size={14} /> : <Copy size={14} />}
+                            {recoveryCopied ? 'Copied!' : 'Copy key'}
+                          </button>
+                        </div>
+                      )}
+                    </div>
 
                     {/* Cross-Device Portable Sync Code */}
                     <div style={{ display: 'grid', gap: 10, paddingTop: 12, borderTop: '1px solid var(--border-subtle)' }}>

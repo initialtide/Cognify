@@ -30,6 +30,44 @@ export function generateSalt(): string {
   return `${Date.now().toString(16)}-${Math.random().toString(16).slice(2, 18)}`;
 }
 
+const RECOVERY_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+
+/**
+ * Generates a human-friendly recovery key (e.g. COG-7K9P-3M4W-8R2X) so students
+ * can reset a forgotten password even without an external email server.
+ */
+export function generateRecoveryKey(): string {
+  const bytes = new Uint8Array(12);
+  if (typeof crypto !== 'undefined' && typeof crypto.getRandomValues === 'function') {
+    crypto.getRandomValues(bytes);
+  } else {
+    for (let i = 0; i < bytes.length; i++) {
+      bytes[i] = Math.floor(Math.random() * 256);
+    }
+  }
+  const chars = Array.from(bytes, (b) => RECOVERY_ALPHABET[b % RECOVERY_ALPHABET.length]);
+  return `COG-${chars.slice(0, 4).join('')}-${chars.slice(4, 8).join('')}-${chars.slice(8, 12).join('')}`;
+}
+
+export function normalizeRecoveryKey(raw: string): string {
+  return raw.trim().toUpperCase().replace(/\s+/g, '');
+}
+
+export function getPasswordStrength(password: string): {
+  score: 0 | 1 | 2 | 3;
+  label: string;
+  color: string;
+} {
+  if (!password) return { score: 0, label: '', color: 'var(--border-card)' };
+  if (password.length < 6) return { score: 1, label: 'Too short (min 6 chars)', color: 'var(--color-red-600)' };
+  let points = 1;
+  if (password.length >= 10) points += 1;
+  if (/[0-9]/.test(password) && /[A-Za-z]/.test(password)) points += 1;
+  if (/[^A-Za-z0-9]/.test(password)) points += 1;
+  if (points >= 3) return { score: 3, label: 'Strong password', color: 'var(--color-green-600)' };
+  return { score: 2, label: 'Good password', color: 'var(--color-blue-600)' };
+}
+
 /**
  * Deterministic fallback hash used only if Web Crypto SubtleCrypto is unavailable
  * (e.g. non-HTTPS legacy contexts). Produces a salted multi-round hex digest.
@@ -248,3 +286,74 @@ export async function pullProfileFromSupabase(
     return { ok: false, error: 'Could not reach Supabase cloud server.' };
   }
 }
+
+/**
+ * Optional zero-dependency Supabase Auth (GoTrue) signup adapter.
+ * Automatically activates when VITE_SUPABASE_URL & VITE_SUPABASE_ANON_KEY (or Account Cloud Sync) are configured.
+ */
+export async function signUpWithSupabaseAuth(
+  config: CloudSyncConfig,
+  email: string,
+  password: string,
+  name: string
+): Promise<{ ok: boolean; error?: string }> {
+  if (config.provider !== 'supabase' || !config.supabaseUrl || !config.supabaseAnonKey) {
+    return { ok: false, error: 'Cloud auth is not configured.' };
+  }
+  const baseUrl = config.supabaseUrl.replace(/\/+$/, '');
+  try {
+    const res = await fetch(`${baseUrl}/auth/v1/signup`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        apikey: config.supabaseAnonKey,
+        Authorization: `Bearer ${config.supabaseAnonKey}`,
+      },
+      body: JSON.stringify({
+        email: normalizeEmail(email),
+        password,
+        data: { name },
+      }),
+    });
+    if (!res.ok) {
+      const body = (await res.json().catch(() => ({}))) as { msg?: string; error_description?: string };
+      return { ok: false, error: body.msg || body.error_description || `Cloud sign-up failed (HTTP ${res.status}).` };
+    }
+    return { ok: true };
+  } catch {
+    return { ok: false, error: 'Could not reach Supabase auth server.' };
+  }
+}
+
+export async function signInWithSupabaseAuth(
+  config: CloudSyncConfig,
+  email: string,
+  password: string
+): Promise<{ ok: boolean; error?: string }> {
+  if (config.provider !== 'supabase' || !config.supabaseUrl || !config.supabaseAnonKey) {
+    return { ok: false, error: 'Cloud auth is not configured.' };
+  }
+  const baseUrl = config.supabaseUrl.replace(/\/+$/, '');
+  try {
+    const res = await fetch(`${baseUrl}/auth/v1/token?grant_type=password`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        apikey: config.supabaseAnonKey,
+        Authorization: `Bearer ${config.supabaseAnonKey}`,
+      },
+      body: JSON.stringify({
+        email: normalizeEmail(email),
+        password,
+      }),
+    });
+    if (!res.ok) {
+      const body = (await res.json().catch(() => ({}))) as { msg?: string; error_description?: string };
+      return { ok: false, error: body.error_description || body.msg || `Cloud sign-in failed (HTTP ${res.status}).` };
+    }
+    return { ok: true };
+  } catch {
+    return { ok: false, error: 'Could not reach Supabase auth server.' };
+  }
+}
+

@@ -312,13 +312,12 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
             >
               Start guided setup <ArrowRight size={14} />
             </Link>
-            <button
-              type="button"
+            <Link
+              to="/onboarding?mode=signin"
               className="tactile-btn tactile-btn--sm"
-              onClick={() => (onOpenAuthModal ? onOpenAuthModal('signin') : navigate('/login'))}
             >
               <LogIn size={14} /> Sign in
-            </button>
+            </Link>
             <button
               type="button"
               aria-label="Dismiss setup reminder"

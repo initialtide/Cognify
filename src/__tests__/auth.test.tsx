@@ -183,4 +183,78 @@ describe('Sign In, Register & Progress Save System', () => {
     // Guest save banner should disappear once signed in!
     expect(screen.queryByText(/Save your revision progress/i)).not.toBeInTheDocument();
   });
+
+  it('persists registered accounts synchronously across full remount and supports Recovery Key password reset', async () => {
+    let api!: ReturnType<typeof useApp>;
+    const Harness: React.FC = () => {
+      api = useApp();
+      return (
+        <div>
+          <span data-testid="name">{api.profile.name}</span>
+          <span data-testid="auth">{api.isAuthenticated ? 'yes' : 'no'}</span>
+        </div>
+      );
+    };
+
+    const firstMount = render(
+      <AppProvider>
+        <Harness />
+      </AppProvider>
+    );
+
+    const regRes = await act(async () =>
+      api.registerAccount({
+        name: 'Amara',
+        email: 'amara@alevel.uk',
+        password: 'initialPassword1',
+        yearGroup: 'YEAR 13',
+        avatarId: 'wizard',
+        keepGuestProgress: false,
+      })
+    );
+    expect(regRes.ok).toBe(true);
+    expect(regRes.recoveryKey).toMatch(/^COG-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}$/);
+
+    // Simulate an immediate browser reload by unmounting and mounting a fresh AppProvider
+    firstMount.unmount();
+
+    render(
+      <AppProvider>
+        <Harness />
+      </AppProvider>
+    );
+
+    // Still signed in as Amara after reload!
+    expect(screen.getByTestId('auth')).toHaveTextContent('yes');
+    expect(screen.getByTestId('name')).toHaveTextContent('Amara');
+
+    // Sign out and reset forgotten password with Recovery Key
+    act(() => {
+      api.signOutAccount();
+    });
+    expect(screen.getByTestId('auth')).toHaveTextContent('no');
+
+    const badReset = await act(async () =>
+      api.resetAccountPassword('amara@alevel.uk', 'COG-0000-0000-0000', 'brandNewPass9')
+    );
+    expect(badReset.ok).toBe(false);
+    expect(badReset.code).toBe('INVALID_RECOVERY_KEY');
+
+    const goodReset = await act(async () =>
+      api.resetAccountPassword('amara@alevel.uk', regRes.recoveryKey!, 'brandNewPass9')
+    );
+    expect(goodReset.ok).toBe(true);
+    expect(screen.getByTestId('auth')).toHaveTextContent('yes');
+    expect(screen.getByTestId('name')).toHaveTextContent('Amara');
+
+    // Sign out and verify the new password actually works
+    act(() => {
+      api.signOutAccount();
+    });
+    const signInRes = await act(async () =>
+      api.signInAccount({ email: 'amara@alevel.uk', password: 'brandNewPass9' })
+    );
+    expect(signInRes.ok).toBe(true);
+    expect(screen.getByTestId('name')).toHaveTextContent('Amara');
+  });
 });
