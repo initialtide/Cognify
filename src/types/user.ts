@@ -59,6 +59,9 @@ export interface AuthAccount {
   email: string;
   passwordHash: string;
   passwordSalt: string;
+  recoveryKeyHash?: string;
+  recoveryKeySalt?: string;
+  recoveryKeyHint?: string;
   createdAt: string;
   lastSignedInAt: string;
   lastSyncedAt?: string;
@@ -79,6 +82,7 @@ export interface RegisterAccountInput {
   yearGroup: string;
   avatarId: AvatarId;
   keepGuestProgress: boolean;
+  runOnboardingNext?: boolean;
 }
 
 export interface SignInAccountInput {
@@ -89,6 +93,9 @@ export interface SignInAccountInput {
 export interface AuthActionResult {
   ok: boolean;
   error?: string;
+  code?: 'EMAIL_NOT_FOUND' | 'WRONG_PASSWORD' | 'EMAIL_EXISTS' | 'INVALID_RECOVERY_KEY';
+  recoveryKey?: string;
+  needsOnboarding?: boolean;
 }
 
 export type OnboardingQualification = 'igcse' | 'a-level' | 'both' | 'gcse';

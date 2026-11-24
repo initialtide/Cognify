@@ -108,4 +108,69 @@ describe('Guided 4-Step Onboarding Flow', () => {
     expect(screen.queryByText(/Save your revision progress/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/Personalise Cognify in 60 seconds/i)).not.toBeInTheDocument();
   });
+
+  it('supports inline Sign In inside Onboarding (/onboarding?mode=signin) and routes directly to Dashboard', async () => {
+    // First register a real account via onboarding, then mount /onboarding?mode=signin in a fresh session
+    const first = renderOnboardingApp();
+    fireEvent.click(screen.getByRole('button', { name: /Continue/i }));
+    fireEvent.click(screen.getByRole('button', { name: /Continue/i }));
+    fireEvent.change(screen.getByPlaceholderText(/e\.g\. Elena/i), {
+      target: { value: 'Kira' },
+    });
+    fireEvent.click(screen.getByRole('button', { name: /Continue/i }));
+    fireEvent.change(screen.getByPlaceholderText(/student@example\.com/i), {
+      target: { value: 'kira@igcse.org' },
+    });
+    fireEvent.change(screen.getByPlaceholderText(/Min 6 characters/i), {
+      target: { value: 'chemistry77' },
+    });
+    fireEvent.change(screen.getByPlaceholderText(/Repeat password/i), {
+      target: { value: 'chemistry77' },
+    });
+    fireEvent.click(screen.getByRole('button', { name: /Create free account & start studying/i }));
+
+    await waitFor(() => {
+      expect(screen.getByText(/Hi Kira/i)).toBeInTheDocument();
+    });
+
+    // Clear only the active session in localStorage to simulate signed-out returning student
+    const saved = JSON.parse(localStorage.getItem('cognito_clone_v1') || '{}');
+    saved.sessionAccountId = null;
+    saved.activeProfileId = 'profile-default';
+    localStorage.setItem('cognito_clone_v1', JSON.stringify(saved));
+    first.unmount();
+
+    // Visit /onboarding?mode=signin -> renders inline Cognito Sign-In Onboarding
+    render(
+      <AppProvider>
+        <MemoryRouter initialEntries={['/onboarding?mode=signin']}>
+          <Routes>
+            <Route path="/onboarding" element={<OnboardingPage />} />
+            <Route
+              path="/dashboard"
+              element={
+                <DashboardPage
+                  onOpenAvatarModal={() => {}}
+                  onOpenStreakModal={() => {}}
+                  onOpenManageCourses={() => {}}
+                />
+              }
+            />
+          </Routes>
+        </MemoryRouter>
+      </AppProvider>
+    );
+
+    expect(screen.getByText(/Welcome back to Cognify/i)).toBeInTheDocument();
+    // Saved account pill for Kira is shown for 1-tap email fill
+    fireEvent.click(screen.getByRole('button', { name: /Kira/i }));
+    fireEvent.change(screen.getByPlaceholderText(/Enter your password/i), {
+      target: { value: 'chemistry77' },
+    });
+    fireEvent.click(screen.getByRole('button', { name: /^Sign in$/i }));
+
+    await waitFor(() => {
+      expect(screen.getByText(/Hi Kira/i)).toBeInTheDocument();
+    });
+  });
 });

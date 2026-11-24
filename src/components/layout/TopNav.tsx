@@ -295,26 +295,40 @@ export const TopNav: React.FC<TopNavProps> = ({
             )}
           </div>
 
-          {!isAuthenticated && onOpenAuthModal && (
-            <button
-              type="button"
-              className="nav-pill-btn"
-              style={{
-                border: '1px solid var(--color-blue-200)',
-                backgroundColor: 'var(--color-blue-50)',
-                color: 'var(--color-blue-700)',
-                borderRadius: 12,
-                padding: '8px 14px',
-                boxShadow: '0 2px 0 var(--border-lip)',
-              }}
-              onClick={() => {
-                setOpenMenu(null);
-                onOpenAuthModal('signin');
-              }}
-            >
-              <LogIn size={15} />
-              <span className="hide-mobile">Sign in</span>
-            </button>
+          {!isAuthenticated && (
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+              <Link
+                to="/onboarding?mode=signin"
+                className="nav-pill-btn"
+                style={{
+                  border: '1px solid var(--border-card)',
+                  backgroundColor: 'var(--bg-pill)',
+                  color: 'var(--text-primary)',
+                  borderRadius: 12,
+                  padding: '8px 13px',
+                  boxShadow: '0 2px 0 var(--border-lip)',
+                }}
+                onClick={() => setOpenMenu(null)}
+              >
+                <LogIn size={15} />
+                <span className="hide-mobile">Sign in</span>
+              </Link>
+              <Link
+                to="/onboarding"
+                className="nav-pill-btn hide-mobile"
+                style={{
+                  border: '1px solid var(--color-blue-600)',
+                  backgroundColor: 'var(--color-blue-500)',
+                  color: '#ffffff',
+                  borderRadius: 12,
+                  padding: '8px 14px',
+                  boxShadow: '0 2px 0 var(--color-blue-700)',
+                }}
+                onClick={() => setOpenMenu(null)}
+              >
+                <span>Sign up</span>
+              </Link>
+            </div>
           )}
 
           <div className="nav-pill-group" style={{ position: 'relative' }}>

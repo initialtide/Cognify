@@ -45,6 +45,7 @@ export const CognitoDialog: React.FC<CognitoDialogProps> = ({
 
     let pressedOutside = false;
     const isOutside = (e: PointerEvent) => {
+      if (e.target !== dialog) return false;
       const r = dialog.getBoundingClientRect();
       return (
         e.clientX < r.left ||

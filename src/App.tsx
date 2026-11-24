@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Send } from 'lucide-react';
-import { BrowserRouter, Navigate, Route, Routes, useLocation } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import { TopNav } from './components/layout/TopNav';
-import { AuthMode } from './components/auth/AuthFormCard';
+import { AuthMode, AuthSuccessMeta } from './components/auth/AuthFormCard';
 import { AuthModal } from './components/modals/AuthModal';
 import { AvatarModal } from './components/modals/AvatarModal';
 import { DailyGoalModal } from './components/modals/DailyGoalModal';
@@ -30,6 +30,7 @@ import { AppProvider } from './store/AppContext';
 
 const AppShell: React.FC = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const [avatarOpen, setAvatarOpen] = useState(false);
   const [streakOpen, setStreakOpen] = useState(false);
   const [dailyGoalOpen, setDailyGoalOpen] = useState(false);
@@ -43,6 +44,21 @@ const AppShell: React.FC = () => {
 
   const openAuthModal = (mode: AuthMode = 'signin') =>
     setAuthModalState({ open: true, mode });
+
+  const handleAuthModalSuccess = (meta: AuthSuccessMeta) => {
+    if (meta.needsOnboarding) {
+      navigate('/onboarding');
+      return;
+    }
+    if (
+      location.pathname === '/onboarding' ||
+      location.pathname === '/login' ||
+      location.pathname === '/register' ||
+      location.pathname === '/auth'
+    ) {
+      navigate('/dashboard');
+    }
+  };
 
   // Global Ctrl+K / Cmd+K Quick Search shortcut
   useEffect(() => {
@@ -151,6 +167,8 @@ const AppShell: React.FC = () => {
         open={authModalState.open}
         initialMode={authModalState.mode}
         onClose={() => setAuthModalState((s) => ({ ...s, open: false }))}
+        onAuthSuccess={handleAuthModalSuccess}
+        onStartGuidedOnboarding={() => navigate('/onboarding')}
       />
     </>
   );
