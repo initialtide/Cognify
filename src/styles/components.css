@@ -70,16 +70,16 @@ a {
 /* Container */
 .page-container {
   width: 100%;
-  max-width: 980px;
+  max-width: 1060px;
   margin: 0 auto;
-  padding: 28px 20px 80px;
+  padding: 40px 28px 104px;
 }
 
 .wide-container {
   width: 100%;
-  max-width: 1120px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 28px;
 }
 
 /* Cognito Signature Paper-Stack Card */
@@ -87,17 +87,18 @@ a {
   position: relative;
   background-color: var(--bg-card);
   border: 1px solid var(--border-card);
-  border-radius: var(--radius-lg);
+  border-radius: 18px;
   box-shadow: 0 3px 0 var(--border-lip);
 }
 
 .cognito-card--interactive {
-  transition: transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease;
+  transition: transform 150ms ease, box-shadow 150ms ease, border-color 150ms ease;
 }
 
 .cognito-card--interactive:hover {
   border-color: var(--color-blue-300);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 0 var(--border-lip);
 }
 
 /* Faint Graph Paper Grid Texture */
@@ -278,7 +279,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 40;
-  height: 72px;
+  height: 76px;
   background-color: var(--bg-nav);
   border-bottom: 1px solid var(--border-subtle);
   display: flex;
@@ -287,25 +288,25 @@ a {
 
 .top-nav__inner {
   width: 100%;
-  max-width: 1180px;
+  max-width: 1220px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 28px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: 20px;
 }
 
 .top-nav__left {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 22px;
 }
 
 .top-nav__right {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .nav-pill-group {
@@ -313,7 +314,7 @@ a {
   align-items: stretch;
   background-color: var(--bg-pill);
   border: 1px solid var(--border-card);
-  border-radius: 12px;
+  border-radius: 13px;
   box-shadow: 0 2px 0 var(--border-lip);
   overflow: visible;
 }
@@ -321,14 +322,14 @@ a {
 .nav-pill-btn {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 7px 13px;
+  gap: 7px;
+  padding: 8px 15px;
   background: transparent;
   border: 0;
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   font-weight: 700;
   color: var(--text-primary);
-  border-radius: 10px;
+  border-radius: 11px;
   transition: background-color 120ms ease;
 }
 
@@ -339,7 +340,7 @@ a {
 .nav-pill-divider {
   width: 1px;
   background-color: var(--border-subtle);
-  margin: 6px 0;
+  margin: 7px 0;
 }
 
 /* Native <dialog> Best Practices (from modern-web-guidance) */
@@ -347,22 +348,22 @@ dialog.cognito-dialog {
   margin: auto;
   padding: 0;
   border: 1px solid var(--border-card);
-  border-radius: 20px;
+  border-radius: 22px;
   background-color: var(--bg-card);
   color: var(--text-primary);
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24);
-  max-width: min(94vw, 520px);
+  max-width: min(94vw, 560px);
   width: 100%;
-  max-height: min(90vh, 780px);
+  max-height: min(90vh, 800px);
   overflow: visible;
 }
 
 dialog.cognito-dialog--wide {
-  max-width: min(94vw, 680px);
+  max-width: min(94vw, 720px);
 }
 
 dialog.cognito-dialog--xl {
-  max-width: min(96vw, 960px);
+  max-width: min(96vw, 980px);
 }
 
 dialog.cognito-dialog:modal {
@@ -392,18 +393,18 @@ dialog.cognito-dialog[open] {
 }
 
 .cognito-dialog__scroll {
-  padding: 26px 26px 24px;
-  max-height: min(88vh, 760px);
+  padding: 32px 34px 30px;
+  max-height: min(88vh, 780px);
   overflow-y: auto;
-  border-radius: 20px;
+  border-radius: 22px;
 }
 
 .cognito-dialog__close {
   position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 34px;
-  height: 34px;
+  top: 18px;
+  right: 18px;
+  width: 36px;
+  height: 36px;
   border-radius: 999px;
   border: 0;
   background-color: var(--bg-sunken);
@@ -443,13 +444,13 @@ dialog.cognito-dialog[open] {
 
 .courses-table th {
   text-align: left;
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 800;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--text-heading);
+  color: var(--text-muted);
   border-bottom: 1px solid var(--border-subtle);
-  padding: 14px 16px;
+  padding: 16px 24px;
   white-space: nowrap;
 }
 
@@ -460,10 +461,10 @@ dialog.cognito-dialog[open] {
 .sort-header-btn {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 7px;
   width: 100%;
-  min-height: 44px;
-  padding: 12px 16px;
+  min-height: 48px;
+  padding: 14px 24px;
   border: 0;
   background: transparent;
   font: inherit;
@@ -478,7 +479,7 @@ dialog.cognito-dialog[open] {
 }
 
 .courses-table td {
-  padding: 14px 16px;
+  padding: 20px 24px;
   border-bottom: 1px solid var(--border-subtle);
   vertical-align: middle;
 }
@@ -489,18 +490,18 @@ dialog.cognito-dialog[open] {
 
 .courses-table tbody tr.course-row {
   cursor: pointer;
-  transition: background-color 120ms ease;
+  transition: background-color 140ms ease;
 }
 
 .courses-table tbody tr.course-row:hover {
   background-color: var(--bg-hover);
 }
 
-/* Accessible Tabs Pattern */
+/* Accessible Tabs Pattern — Exact Cognito Clean Underline Rail */
 .cognito-tablist {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 8px;
   overflow-x: auto;
   scrollbar-width: none;
 }
@@ -514,37 +515,38 @@ dialog.cognito-dialog[open] {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  padding: 9px 14px;
+  padding: 12px 16px 14px;
   border: 0;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
   background: transparent;
   font-weight: 700;
-  font-size: 0.94rem;
-  color: var(--text-secondary);
+  font-size: 0.98rem;
+  color: var(--text-muted);
   white-space: nowrap;
   flex: none;
+  transition: color 130ms ease, background-color 130ms ease;
 }
 
 .cognito-tab:hover {
-  color: var(--text-primary);
-  background-color: var(--bg-sunken);
+  color: var(--text-heading);
+  background-color: transparent;
 }
 
 .cognito-tab[aria-selected="true"],
 .cognito-tab--active {
   color: var(--text-heading);
-  background-color: var(--bg-sunken);
+  background-color: transparent;
 }
 
 .cognito-tab[aria-selected="true"]::after,
 .cognito-tab--active::after {
   content: "";
   position: absolute;
-  left: 12px;
-  right: 12px;
-  bottom: 2px;
-  border-block-end: 2.5px solid var(--color-blue-500);
-  border-radius: 2px;
+  left: 6px;
+  right: 6px;
+  bottom: 0;
+  border-block-end: 3px solid var(--color-blue-500);
+  border-radius: 3px 3px 0 0;
 }
 
 /* Toggle Switch */
@@ -677,7 +679,7 @@ dialog.cognito-dialog[open] {
 .flashcard-card {
   position: relative;
   width: 100%;
-  min-height: 330px;
+  min-height: 360px;
   transform-style: preserve-3d;
   transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
   cursor: pointer;
@@ -695,8 +697,8 @@ dialog.cognito-dialog[open] {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 24px 28px;
-  border-radius: 18px;
+  padding: 32px 36px;
+  border-radius: 20px;
   background-color: var(--bg-card);
   border: 1px solid var(--border-card);
   box-shadow: 0 4px 0 var(--border-lip);
@@ -780,22 +782,22 @@ dialog.cognito-dialog[open] {
   }
 }
 
-/* Responsive Two-Column Layouts */
+/* Responsive Two-Column Layouts — Airy Cognito Notes Reader */
 .notes-layout {
   display: grid;
-  grid-template-columns: 224px minmax(0, 720px);
+  grid-template-columns: 256px minmax(0, 760px);
   justify-content: center;
-  gap: 28px;
+  gap: 38px;
   align-items: start;
-  max-width: 1060px;
+  max-width: 1140px;
   margin: 0 auto;
-  padding: 36px 20px 96px;
+  padding: 44px 28px 110px;
 }
 
 .notes-sidebar {
-  padding: 24px 16px 18px;
+  padding: 26px 20px 22px;
   position: sticky;
-  top: 84px;
+  top: 88px;
 }
 
 .notes-contents-list {
@@ -803,13 +805,13 @@ dialog.cognito-dialog[open] {
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 14px;
+  gap: 18px;
 }
 
 .notes-contents-item {
   display: flex;
   align-items: flex-start;
-  gap: 9px;
+  gap: 10px;
   text-decoration: none;
   border-radius: 8px;
   padding: 2px 0;
@@ -821,12 +823,12 @@ dialog.cognito-dialog[open] {
 }
 
 .notes-num-circle {
-  width: 21px;
-  height: 21px;
+  width: 22px;
+  height: 22px;
   border-radius: 999px;
   background-color: var(--color-purple-500);
   color: #ffffff;
-  font-size: 0.74rem;
+  font-size: 0.75rem;
   font-weight: 800;
   display: inline-flex;
   align-items: center;
@@ -836,48 +838,48 @@ dialog.cognito-dialog[open] {
 }
 
 .notes-contents-title {
-  font-size: 0.84rem;
+  font-size: 0.88rem;
   font-weight: 700;
   color: var(--text-heading);
-  line-height: 1.3;
+  line-height: 1.35;
 }
 
 .notes-contents-summary {
-  margin-top: 3px;
-  font-size: 0.77rem;
-  line-height: 1.42;
+  margin-top: 4px;
+  font-size: 0.8rem;
+  line-height: 1.48;
   color: var(--text-muted);
 }
 
 .notes-main-col {
   min-width: 0;
   display: grid;
-  gap: 24px;
+  gap: 30px;
 }
 
 .notes-title-card {
-  padding: 28px 28px 16px;
+  padding: 36px 38px 22px;
 }
 
 .notes-title-footer {
-  margin-top: 20px;
-  padding-top: 14px;
+  margin-top: 24px;
+  padding-top: 16px;
   border-top: 1px solid var(--border-subtle);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  gap: 12px;
 }
 
 .notes-duration-pill {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 4px 12px;
+  padding: 5px 13px;
   border-radius: 999px;
   border: 1px solid var(--border-card);
   background-color: var(--bg-card);
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   font-weight: 700;
   color: var(--text-secondary);
 }
@@ -885,7 +887,7 @@ dialog.cognito-dialog[open] {
 .notes-icon-action {
   border: 0;
   background: transparent;
-  padding: 5px;
+  padding: 6px;
   border-radius: 8px;
   color: var(--text-muted);
   display: inline-flex;
@@ -905,28 +907,28 @@ dialog.cognito-dialog[open] {
 }
 
 .notes-card {
-  padding: 30px 30px 20px;
+  padding: 38px 40px 28px;
 }
 
 .notes-subheading {
   font-family: var(--font-heading);
-  font-size: 1.18rem;
+  font-size: 1.26rem;
   font-weight: 500;
   color: var(--text-heading);
-  margin: 22px 0 10px;
+  margin: 26px 0 12px;
 }
 
 .notes-subheading--first {
-  margin-top: 6px;
+  margin-top: 8px;
 }
 
 .notes-bullet-list {
   margin: 0;
-  padding-left: 20px;
+  padding-left: 22px;
   display: grid;
-  gap: 9px;
-  font-size: 0.95rem;
-  line-height: 1.65;
+  gap: 13px;
+  font-size: 1.01rem;
+  line-height: 1.74;
   color: var(--text-primary);
 }
 
@@ -935,15 +937,15 @@ dialog.cognito-dialog[open] {
 }
 
 .notes-example-heading {
-  font-size: 0.94rem;
+  font-size: 0.96rem;
   font-weight: 700;
   color: var(--text-heading);
-  margin: 16px 0 8px;
+  margin: 20px 0 10px;
 }
 
 .notes-diagram-wrap {
-  margin: 22px auto 14px;
-  max-width: 560px;
+  margin: 26px auto 18px;
+  max-width: 580px;
   display: flex;
   justify-content: center;
 }
@@ -1681,27 +1683,27 @@ dialog.quick-search-dialog[open] {
 /* Dashboard Hero, Freeze Pill, Streak Circles & Resume Strip */
 .dashboard-hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
-  gap: 24px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: 36px;
   align-items: center;
 }
 
 .dashboard-streak-col {
   border-left: 1px solid var(--border-subtle);
-  padding-left: 28px;
+  padding-left: 36px;
 }
 
 .freeze-pill {
-  margin-top: 8px;
+  margin-top: 10px;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 4px 12px;
+  gap: 7px;
+  padding: 5px 14px;
   border-radius: 999px;
   border: 1px solid var(--color-blue-100);
   background-color: var(--color-blue-50);
   color: var(--color-blue-800);
-  font-size: 0.84rem;
+  font-size: 0.86rem;
   font-weight: 700;
   transition: background-color 120ms ease;
 }
@@ -1717,14 +1719,14 @@ dialog.quick-search-dialog[open] {
 }
 
 .streak-day-circle {
-  width: 34px;
-  height: 34px;
+  width: 38px;
+  height: 38px;
   margin: 0 auto;
   border-radius: 999px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   font-weight: 800;
   background-color: var(--bg-sunken);
   color: var(--text-muted);
@@ -1755,12 +1757,12 @@ dialog.quick-search-dialog[open] {
 }
 
 .dashboard-resume-bar {
-  margin-top: 16px;
-  padding: 13px 18px;
+  margin-top: 22px;
+  padding: 16px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 14px;
+  gap: 18px;
   flex-wrap: wrap;
 }
 
@@ -1768,12 +1770,12 @@ dialog.quick-search-dialog[open] {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 6px 13px;
-  border-radius: 9px;
+  padding: 8px 16px;
+  border-radius: 10px;
   background-color: var(--color-blue-50);
   color: var(--color-blue-700);
   border: 1px solid var(--color-blue-200);
-  font-size: 0.84rem;
+  font-size: 0.86rem;
   font-weight: 800;
   white-space: nowrap;
   transition: background-color 120ms ease, color 120ms ease;
@@ -1801,17 +1803,17 @@ dialog.quick-search-dialog[open] {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  gap: 14px;
   flex-wrap: wrap;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 .workspace-progress-card {
-  flex: 1 1 300px;
-  padding: 11px 16px;
+  flex: 1 1 320px;
+  padding: 14px 20px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   text-align: left;
   transition: border-color 120ms ease;
 }
@@ -1822,19 +1824,19 @@ dialog.quick-search-dialog[open] {
 
 .workspace-filter-wrap {
   position: relative;
-  flex: 0 1 230px;
-  min-width: 170px;
+  flex: 0 1 250px;
+  min-width: 185px;
 }
 
 .workspace-filter-input {
   width: 100%;
-  height: 44px;
-  padding: 0 30px 0 36px;
-  border-radius: 14px;
+  height: 48px;
+  padding: 0 34px 0 40px;
+  border-radius: 15px;
   border: 1px solid var(--border-card);
   background-color: var(--bg-card);
   box-shadow: 0 3px 0 var(--border-lip);
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   font-weight: 600;
   color: var(--text-primary);
   transition: border-color 120ms ease;
@@ -1852,13 +1854,13 @@ dialog.quick-search-dialog[open] {
 .workspace-dropdown-item {
   width: 100%;
   text-align: left;
-  padding: 7px 10px;
-  border-radius: 8px;
+  padding: 8px 12px;
+  border-radius: 9px;
   border: 0;
   background: transparent;
   color: var(--text-primary);
   font-weight: 700;
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   transition: background-color 120ms ease;
 }
 
@@ -1878,13 +1880,13 @@ dialog.quick-search-dialog[open] {
 
 .workspace-topic-header {
   width: 100%;
-  padding: 17px 20px;
+  padding: 22px 26px;
   border: 0;
   background: transparent;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 14px;
+  gap: 18px;
   text-align: left;
   transition: background-color 120ms ease;
 }
@@ -1897,8 +1899,8 @@ dialog.quick-search-dialog[open] {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 14px;
-  padding: 13px 20px;
+  gap: 16px;
+  padding: 17px 26px;
   border-top: 1px solid var(--border-subtle);
   background-color: var(--bg-elevated);
   color: var(--text-primary);
@@ -1916,14 +1918,14 @@ dialog.quick-search-dialog[open] {
 .workspace-subtopic-left {
   display: flex;
   align-items: center;
-  gap: 11px;
+  gap: 14px;
   min-width: 0;
   flex: 1;
 }
 
 .workspace-status-indicator {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   border-radius: 999px;
   display: inline-flex;
   align-items: center;
@@ -1952,9 +1954,9 @@ dialog.quick-search-dialog[open] {
 }
 
 .workspace-subtopic-code {
-  padding: 2px 8px;
-  border-radius: 6px;
-  font-size: 0.78rem;
+  padding: 3px 9px;
+  border-radius: 7px;
+  font-size: 0.8rem;
   font-weight: 800;
   background-color: var(--bg-sunken);
   color: var(--text-heading);
@@ -1973,20 +1975,20 @@ dialog.quick-search-dialog[open] {
 
 .workspace-subtopic-title {
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 0.98rem;
   color: var(--text-heading);
-  line-height: 1.35;
+  line-height: 1.4;
 }
 
 .workspace-subtopic-right {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   flex-shrink: 0;
 }
 
 .workspace-confidence-bar {
-  width: 68px;
+  width: 78px;
   height: 7px;
   border-radius: 999px;
   background-color: var(--bg-sunken);
@@ -1999,9 +2001,9 @@ dialog.quick-search-dialog[open] {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  padding: 3px 10px;
+  padding: 5px 13px;
   border-radius: 999px;
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   font-weight: 700;
   background-color: var(--bg-sunken);
   color: var(--text-secondary);

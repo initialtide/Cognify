@@ -45,6 +45,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
   const [weekOffset, setWeekOffset] = useState(0);
   const [sortCol, setSortCol] = useState<SortCol | null>(null);
   const [sortDir, setSortDir] = useState<SortDir>('ascending');
+  const [qualFilter, setQualFilter] = useState<string>('all');
   const [infoTip, setInfoTip] = useState<'questions' | 'flashcards' | null>(null);
   const [dismissedSaveTip, setDismissedSaveTip] = useState(false);
 
@@ -68,10 +69,24 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
     });
   }, [profile.enrolledCourseIds, profile.progressByCourse]);
 
+  const availableQuals = useMemo(() => {
+    const map = new Map<string, string>();
+    for (const { course } of enrolledRows) {
+      if (!map.has(course.qualification)) {
+        map.set(course.qualification, course.qualificationLabel);
+      }
+    }
+    return Array.from(map.entries());
+  }, [enrolledRows]);
+
   const sortedRows = useMemo(() => {
-    if (!sortCol) return enrolledRows;
+    const filtered =
+      qualFilter === 'all'
+        ? enrolledRows
+        : enrolledRows.filter(({ course }) => course.qualification === qualFilter);
+    if (!sortCol) return filtered;
     const factor = sortDir === 'ascending' ? 1 : -1;
-    return [...enrolledRows].sort((a, b) => {
+    return [...filtered].sort((a, b) => {
       if (sortCol === 'subject') {
         return factor * collator.compare(a.course.subjectName, b.course.subjectName);
       }
@@ -80,7 +95,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
       }
       return factor * (a.stats.flashcardsConfident - b.stats.flashcardsConfident);
     });
-  }, [enrolledRows, sortCol, sortDir]);
+  }, [enrolledRows, qualFilter, sortCol, sortDir]);
 
   const resumeTarget = useMemo(() => {
     const latest = profile.activityLog[0];
@@ -117,10 +132,12 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
     }
   };
 
+  const showGuestOnboardingStrip = !isAuthenticated && !profile.onboardingCompleted && !dismissedSaveTip;
+
   return (
     <main className="page-container">
-      {/* Hero Profile & Streak Card */}
-      <section className="cognito-card" style={{ padding: '28px 30px', marginTop: 10 }}>
+      {/* Hero Profile & Streak Card — Spacious Cognito Proportions */}
+      <section className="cognito-card" style={{ padding: '36px 40px', marginTop: 8 }}>
         <button
           type="button"
           onClick={() => navigate('/account/profile')}
@@ -132,7 +149,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
 
         <div className="dashboard-hero-grid">
           {/* Left: Avatar + Greeting + Freezes */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: 18 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 22 }}>
             <button
               type="button"
               onClick={onOpenAvatarModal}
@@ -145,11 +162,11 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
                 flexShrink: 0,
               }}
             >
-              <MonsterAvatar avatarId={profile.avatarId} size={84} />
+              <MonsterAvatar avatarId={profile.avatarId} size={96} />
             </button>
 
             <div>
-              <h1 className="font-heading" style={{ fontSize: '2.05rem', lineHeight: 1.15 }}>
+              <h1 className="font-heading" style={{ fontSize: '2.35rem', lineHeight: 1.12 }}>
                 Hi {profile.name}
               </h1>
               <button
@@ -229,7 +246,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
               </div>
             </div>
 
-            <div style={{ marginTop: 16, display: 'grid', gridTemplateColumns: 'repeat(7, 1fr)', gap: 8 }}>
+            <div style={{ marginTop: 18, display: 'grid', gridTemplateColumns: 'repeat(7, 1fr)', gap: 10 }}>
               {days.map((d) => {
                 const done = streakStats.activeDates.has(d.dateKey);
                 return (
@@ -238,7 +255,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
                     title={`${d.dateKey}${done ? ' — Active!' : ''}`}
                     className={`streak-day-circle${done ? ' is-done' : ''}${d.isToday ? ' is-today' : ''}`}
                   >
-                    {done ? <StreakFlameTickIcon size={34} /> : d.label}
+                    {done ? <StreakFlameTickIcon size={36} /> : d.label}
                   </div>
                 );
               })}
@@ -247,47 +264,27 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
         </div>
       </section>
 
-      {/* Effortless 1-Click Continue Studying Strip */}
-      {resumeTarget && (
-        <section className="cognito-card dashboard-resume-bar" aria-label="Continue studying">
-          <div style={{ display: 'flex', alignItems: 'center', gap: 12, minWidth: 0 }}>
-            <SubjectIcon icon={resumeTarget.course.icon} size={34} />
-            <div style={{ minWidth: 0 }}>
-              <div style={{ fontSize: '0.72rem', fontWeight: 800, letterSpacing: '0.05em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>
-                Continue studying · {resumeTarget.course.qualificationLabel} {resumeTarget.course.subjectName}
-              </div>
-              <div style={{ fontWeight: 700, fontSize: '0.94rem', color: 'var(--text-heading)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                {resumeTarget.title}
-              </div>
-            </div>
-          </div>
-          <Link to={resumeTarget.to} className="dashboard-resume-cta">
-            Resume <ArrowRight size={14} />
-          </Link>
-        </section>
-      )}
-
-      {/* Guided Onboarding / Save Progress Card for Guests */}
-      {!isAuthenticated && !dismissedSaveTip && (
+      {/* Single Calm Contextual Strip (never stack two banners!) */}
+      {showGuestOnboardingStrip ? (
         <section
           className="cognito-card"
           style={{
-            marginTop: 14,
-            padding: '15px 18px',
+            marginTop: 22,
+            padding: '16px 24px',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            gap: 14,
+            gap: 16,
             flexWrap: 'wrap',
             backgroundColor: 'var(--bg-card)',
           }}
         >
-          <div style={{ display: 'flex', alignItems: 'center', gap: 11, minWidth: 0 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 13, minWidth: 0 }}>
             <div
               style={{
-                width: 38,
-                height: 38,
-                borderRadius: 10,
+                width: 40,
+                height: 40,
+                borderRadius: 11,
                 backgroundColor: 'var(--color-blue-50)',
                 color: 'var(--color-blue-600)',
                 display: 'inline-flex',
@@ -299,36 +296,22 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
               <ShieldCheck size={20} />
             </div>
             <div style={{ minWidth: 0 }}>
-              <div style={{ fontWeight: 800, fontSize: '0.95rem', color: 'var(--text-heading)' }}>
-                {!profile.onboardingCompleted
-                  ? 'Personalise Cognify in 60 seconds'
-                  : 'Save your revision progress'}
+              <div style={{ fontWeight: 800, fontSize: '0.96rem', color: 'var(--text-heading)' }}>
+                Personalise Cognify in 60 seconds
               </div>
-              <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)' }}>
-                {!profile.onboardingCompleted
-                  ? 'Pick your IGCSE or A-Level subjects, exam boards, daily XP target, and mascot — and save your account.'
-                  : 'Create a free account or sign in to keep your XP, streaks, quiz scores, and flashcards protected.'}
+              <div style={{ fontSize: '0.84rem', color: 'var(--text-muted)', marginTop: 1 }}>
+                Pick your IGCSE or A-Level subjects, exam boards, daily XP target, and save your progress.
               </div>
             </div>
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
-            {!profile.onboardingCompleted ? (
-              <Link
-                to="/onboarding"
-                className="tactile-btn tactile-btn--sm tactile-btn--solid-blue"
-              >
-                Start guided setup <ArrowRight size={14} />
-              </Link>
-            ) : (
-              <button
-                type="button"
-                className="tactile-btn tactile-btn--sm tactile-btn--solid-blue"
-                onClick={() => (onOpenAuthModal ? onOpenAuthModal('register') : navigate('/register'))}
-              >
-                <UserPlus size={14} /> Create account
-              </button>
-            )}
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
+            <Link
+              to="/onboarding"
+              className="tactile-btn tactile-btn--sm tactile-btn--solid-blue"
+            >
+              Start guided setup <ArrowRight size={14} />
+            </Link>
             <button
               type="button"
               className="tactile-btn tactile-btn--sm"
@@ -352,15 +335,69 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
             </button>
           </div>
         </section>
-      )}
+      ) : resumeTarget ? (
+        <section className="cognito-card dashboard-resume-bar" aria-label="Continue studying">
+          <div style={{ display: 'flex', alignItems: 'center', gap: 14, minWidth: 0 }}>
+            <SubjectIcon icon={resumeTarget.course.icon} size={38} />
+            <div style={{ minWidth: 0 }}>
+              <div style={{ fontSize: '0.74rem', fontWeight: 800, letterSpacing: '0.05em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>
+                Continue studying · {resumeTarget.course.qualificationLabel} {resumeTarget.course.subjectName}
+              </div>
+              <div style={{ fontWeight: 700, fontSize: '0.98rem', color: 'var(--text-heading)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', marginTop: 2 }}>
+                {resumeTarget.title}
+              </div>
+            </div>
+          </div>
+          <Link to={resumeTarget.to} className="dashboard-resume-cta">
+            Resume <ArrowRight size={14} />
+          </Link>
+        </section>
+      ) : !isAuthenticated && !dismissedSaveTip ? (
+        <section
+          className="cognito-card"
+          style={{
+            marginTop: 22,
+            padding: '15px 24px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            gap: 16,
+            flexWrap: 'wrap',
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12, minWidth: 0 }}>
+            <ShieldCheck size={20} color="var(--color-blue-600)" style={{ flexShrink: 0 }} />
+            <div style={{ fontSize: '0.9rem', fontWeight: 700, color: 'var(--text-heading)' }}>
+              Save your XP, streaks &amp; quiz scores with a free account
+            </div>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            <button
+              type="button"
+              className="tactile-btn tactile-btn--sm tactile-btn--solid-blue"
+              onClick={() => (onOpenAuthModal ? onOpenAuthModal('register') : navigate('/register'))}
+            >
+              <UserPlus size={14} /> Create account
+            </button>
+            <button
+              type="button"
+              aria-label="Dismiss save reminder"
+              onClick={() => setDismissedSaveTip(true)}
+              style={{ border: 0, background: 'transparent', color: 'var(--text-muted)', padding: 6, display: 'inline-flex' }}
+            >
+              <X size={16} />
+            </button>
+          </div>
+        </section>
+      ) : null}
 
       {/* Section Header: [N COURSES] - - - - - [Manage courses] */}
       <div
         style={{
-          margin: '30px 0 18px',
+          margin: '44px 0 22px',
           display: 'flex',
           alignItems: 'center',
-          gap: 16,
+          gap: 18,
         }}
       >
         <span className="tilted-badge tilted-badge--navy">
@@ -375,6 +412,37 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
           Manage courses
         </button>
       </div>
+
+      {/* Optional Clean Qualification Filter Pills when enrolled across multiple levels */}
+      {availableQuals.length > 1 && (
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap', marginBottom: 18 }}>
+          {(
+            [['all', `All (${enrolledRows.length})`], ...availableQuals.map(([id, label]) => [id, label])] as [string, string][]
+          ).map(([id, label]) => {
+            const active = qualFilter === id;
+            return (
+              <button
+                key={id}
+                type="button"
+                aria-pressed={active}
+                onClick={() => setQualFilter(id)}
+                style={{
+                  padding: '6px 14px',
+                  borderRadius: 999,
+                  border: active ? '1.5px solid var(--color-blue-500)' : '1px solid var(--border-card)',
+                  backgroundColor: active ? 'var(--color-blue-50)' : 'var(--bg-card)',
+                  color: active ? 'var(--color-blue-700)' : 'var(--text-secondary)',
+                  fontWeight: 800,
+                  fontSize: '0.84rem',
+                  transition: 'all 120ms ease',
+                }}
+              >
+                {label}
+              </button>
+            );
+          })}
+        </div>
+      )}
 
       {/* Courses Table */}
       <section className="cognito-card" style={{ overflow: 'hidden' }}>
@@ -481,13 +549,13 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
                     }}
                   >
                     <td>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-                        <SubjectIcon icon={course.icon} size={42} />
+                      <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+                        <SubjectIcon icon={course.icon} size={46} />
                         <div>
-                          <div style={{ fontWeight: 700, fontSize: '0.98rem', color: 'var(--text-heading)' }}>
+                          <div style={{ fontWeight: 700, fontSize: '1.03rem', color: 'var(--text-heading)' }}>
                             {course.subjectName}
                           </div>
-                          <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)' }}>
+                          <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: 2 }}>
                             {course.subtitle}
                           </div>
                         </div>

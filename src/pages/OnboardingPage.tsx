@@ -408,8 +408,8 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = ({ onOpenAuthModal 
         </div>
       </header>
 
-      <main className="page-container" style={{ maxWidth: 840, paddingTop: 28 }}>
-        <section className="cognito-card cognito-grid-bg" style={{ padding: '30px 28px' }}>
+      <main className="page-container" style={{ maxWidth: 920, paddingTop: 38 }}>
+        <section className="cognito-card cognito-grid-bg" style={{ padding: '40px 42px' }}>
           {/* STEP 1: QUALIFICATION & YEAR GROUP */}
           {step === 1 && (
             <div style={{ display: 'grid', gap: 22 }}>
