@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import {
   AlertCircle,
   ArrowLeft,
@@ -24,7 +24,7 @@ import { CognitoLogo } from '../components/artwork/CognitoLogo';
 import { SubjectIcon } from '../components/artwork/SubjectIcons';
 import { AuthFormCard, AuthMode, AuthSuccessMeta } from '../components/auth/AuthFormCard';
 import { ALL_COURSES } from '../data/catalog';
-import { getPasswordStrength } from '../services/authService';
+import { getPasswordStrength, validateEmail, validatePassword } from '../services/authService';
 import { useApp } from '../store/AppContext';
 import { CourseDefinition } from '../types/curriculum';
 import { OnboardingQualification } from '../types/user';
@@ -142,12 +142,13 @@ function getDefaultCourseIdsForQual(
 export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
-  const { profile, isAuthenticated, completeOnboarding } = useApp();
+  const { profile, isAuthenticated, completeOnboarding, updateProfile } = useApp();
 
   const allGroups = useMemo(() => buildSubjectGroups(), []);
 
+  const modeParam = searchParams.get('mode');
   const initialViewMode: 'setup' | 'signin' =
-    searchParams.get('mode') === 'signin' && !isAuthenticated ? 'signin' : 'setup';
+    modeParam === 'signin' && !isAuthenticated ? 'signin' : 'setup';
   const [viewMode, setViewMode] = useState<'setup' | 'signin'>(initialViewMode);
   const [step, setStep] = useState<1 | 2 | 3 | 4>(1);
   const [qualification, setQualification] = useState<OnboardingQualification>(
@@ -187,6 +188,23 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
   const [errorCode, setErrorCode] = useState<string | undefined>(undefined);
   const [submitting, setSubmitting] = useState(false);
 
+  // Keep viewMode synchronized if the user navigates between /onboarding and /onboarding?mode=signin
+  useEffect(() => {
+    if (modeParam === 'signin' && !isAuthenticated) {
+      setViewMode('signin');
+    } else if (modeParam !== 'signin') {
+      setViewMode('setup');
+    }
+  }, [modeParam, isAuthenticated]);
+
+  // Keep Step 3 personalization synced whenever a different profile becomes active
+  useEffect(() => {
+    setDisplayName(profile.isGuest && profile.name === 'Alex' ? '' : profile.name);
+    setYearGroup(profile.yearGroup || 'YEAR 11');
+    setAvatarId(profile.avatarId ?? 'snorkel');
+    setDailyXpGoal(profile.dailyXpGoal ?? 150);
+  }, [profile.id, isAuthenticated]);
+
   const switchViewMode = (next: 'setup' | 'signin') => {
     setViewMode(next);
     setError('');
@@ -199,10 +217,17 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
   };
 
   const handleInlineAuthSuccess = (meta: AuthSuccessMeta) => {
-    if (meta.needsOnboarding) {
+    if (meta.mode === 'register' && meta.needsOnboarding) {
       setStep(1);
       switchViewMode('setup');
       return;
+    }
+    navigate('/dashboard');
+  };
+
+  const handleSkip = () => {
+    if (isAuthenticated && !profile.onboardingCompleted) {
+      updateProfile((p) => ({ ...p, onboardingCompleted: true }));
     }
     navigate('/dashboard');
   };
@@ -285,6 +310,16 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
     e.preventDefault();
     setError('');
     setErrorCode(undefined);
+    const emailErr = validateEmail(email);
+    if (emailErr) {
+      setError(emailErr);
+      return;
+    }
+    const pwErr = validatePassword(password);
+    if (pwErr) {
+      setError(pwErr);
+      return;
+    }
     if (password !== confirmPassword) {
       setError('Passwords do not match. Please check both fields.');
       return;
@@ -292,7 +327,7 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
     setSubmitting(true);
     try {
       const res = await completeOnboarding({
-        name: displayName.trim() || 'Student',
+        name: displayName.trim(),
         yearGroup,
         avatarId,
         dailyXpGoal,
@@ -433,7 +468,7 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
               ))}
             <button
               type="button"
-              onClick={() => navigate('/dashboard')}
+              onClick={handleSkip}
               style={{
                 border: 0,
                 background: 'transparent',
@@ -463,7 +498,7 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
               <AuthFormCard
                 initialMode="signin"
                 titleId="onboarding-signin-title"
-                defaultRunOnboarding
+                defaultRunOnboarding={false}
                 onSuccess={handleInlineAuthSuccess}
                 onStartGuidedOnboarding={() => switchViewMode('setup')}
               />
@@ -1027,6 +1062,7 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
                 <div style={{ display: 'grid', gap: 16 }}>
                   <form
                     onSubmit={handleFinishWithAccount}
+                    noValidate
                     style={{
                       display: 'grid',
                       gap: 12,
@@ -1122,14 +1158,60 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
                       );
                     })()}
 
+                    {error && (
+                      <div
+                        role="alert"
+                        style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'space-between',
+                          gap: 10,
+                          flexWrap: 'wrap',
+                          padding: '10px 13px',
+                          borderRadius: 11,
+                          backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                          border: '1px solid rgba(239, 68, 68, 0.35)',
+                          color: 'var(--color-red-600)',
+                          fontWeight: 700,
+                          fontSize: '0.86rem',
+                        }}
+                      >
+                        <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+                          <AlertCircle size={17} style={{ flexShrink: 0 }} />
+                          <span>{error}</span>
+                        </span>
+                        {errorCode === 'EMAIL_EXISTS' && (
+                          <button
+                            type="button"
+                            onClick={() => switchViewMode('signin')}
+                            style={{
+                              border: '1px solid var(--color-blue-500)',
+                              borderRadius: 8,
+                              padding: '5px 10px',
+                              backgroundColor: 'var(--bg-elevated)',
+                              color: 'var(--color-blue-600)',
+                              fontWeight: 800,
+                              fontSize: '0.8rem',
+                            }}
+                          >
+                            Sign in instead →
+                          </button>
+                        )}
+                      </div>
+                    )}
+
                     <button
                       type="submit"
                       disabled={submitting}
                       className="tactile-btn tactile-btn--solid-blue"
-                      style={{ width: '100%', marginTop: 4 }}
+                      style={{ width: '100%', marginTop: 2 }}
                     >
                       <Rocket size={16} /> {submitting ? 'Setting up...' : 'Create free account & start studying'}
                     </button>
+
+                    <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)', textAlign: 'center', lineHeight: 1.45 }}>
+                      Saved securely in this browser with an automatic Recovery Key · transfer to another device anytime via <strong>Sync Code</strong>.
+                    </div>
                   </form>
 
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 10, flexWrap: 'wrap' }}>
@@ -1161,8 +1243,8 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
             </div>
           )}
 
-          {/* Error Alert */}
-          {error && (
+          {/* Error Alert for Steps 1–3 */}
+          {error && step < 4 && (
             <div
               role="alert"
               style={{
@@ -1185,23 +1267,6 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
                 <AlertCircle size={17} style={{ flexShrink: 0 }} />
                 <span>{error}</span>
               </span>
-              {errorCode === 'EMAIL_EXISTS' && (
-                <button
-                  type="button"
-                  onClick={() => switchViewMode('signin')}
-                  style={{
-                    border: '1px solid var(--color-blue-500)',
-                    borderRadius: 8,
-                    padding: '5px 10px',
-                    backgroundColor: 'var(--bg-elevated)',
-                    color: 'var(--color-blue-600)',
-                    fontWeight: 800,
-                    fontSize: '0.8rem',
-                  }}
-                >
-                  Sign in instead →
-                </button>
-              )}
             </div>
           )}
 

@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useEffect, useRef, useState } from 'react';
 import { AvatarId } from '../components/artwork/Avatars';
 import { ALL_COURSES, getCourseById } from '../data/catalog';
 import {
@@ -17,6 +17,11 @@ import {
   validatePassword,
   verifyPassword,
 } from '../services/authService';
+import {
+  isLocalStorageWritable,
+  readAuthVaultIdb,
+  writeAuthVaultIdb,
+} from '../services/authStorage';
 import { CourseDefinition, ProfileCreationInput, QuizQuestion } from '../types/curriculum';
 import {
   ActivityEvent,
@@ -482,10 +487,24 @@ function readAccountsVault(): AccountsVaultPayload {
   }
 }
 
+function deriveDisplayNameFromEmail(email: string): string {
+  const localPart = email.split('@')[0] ?? '';
+  const cleaned = localPart
+    .replace(/[._-]+/g, ' ')
+    .replace(/[^a-zA-Z0-9 ]/g, '')
+    .trim();
+  if (!cleaned) return 'Student';
+  return cleaned
+    .split(/\s+/)
+    .slice(0, 2)
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+}
+
 function persistStoreState(next: AppStoreState): void {
+  const accounts = next.accounts ?? [];
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
-    const accounts = next.accounts ?? [];
     if (accounts.length > 0) {
       const accountProfileIds = new Set(accounts.map((a) => a.profileId));
       const vault: AccountsVaultPayload = {
@@ -495,7 +514,10 @@ function persistStoreState(next: AppStoreState): void {
       localStorage.setItem(ACCOUNTS_VAULT_KEY, JSON.stringify(vault));
     }
   } catch {
-    // Ignore quota / restricted storage errors
+    // Ignore quota / restricted storage errors; IndexedDB mirror still attempts backup below
+  }
+  if (accounts.length > 0) {
+    void writeAuthVaultIdb(accounts, next.profiles);
   }
 }
 
@@ -510,26 +532,28 @@ function mergeAccountsByEmail(primary: AuthAccount[], secondary: AuthAccount[]):
   return Array.from(byEmail.values());
 }
 
+function restoreFromVaultOnly(vault: AccountsVaultPayload): AppStoreState {
+  const fresh = createInitialStoreState();
+  if (vault.accounts.length === 0) return fresh;
+  const existingIds = new Set(fresh.profiles.map((p) => p.id));
+  const restoredProfiles = vault.profiles.filter((p) => !existingIds.has(p.id));
+  return {
+    ...fresh,
+    accounts: vault.accounts,
+    profiles: [...fresh.profiles, ...restoredProfiles],
+  };
+}
+
 function loadStoreState(): AppStoreState {
   const vault = readAccountsVault();
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) {
-      const fresh = createInitialStoreState();
-      if (vault.accounts.length > 0) {
-        const existingIds = new Set(fresh.profiles.map((p) => p.id));
-        const restoredProfiles = vault.profiles.filter((p) => !existingIds.has(p.id));
-        return {
-          ...fresh,
-          accounts: vault.accounts,
-          profiles: [...fresh.profiles, ...restoredProfiles],
-        };
-      }
-      return fresh;
+      return restoreFromVaultOnly(vault);
     }
     const parsed = JSON.parse(raw) as AppStoreState;
     if (!parsed || !Array.isArray(parsed.profiles) || parsed.profiles.length === 0) {
-      return createInitialStoreState();
+      return restoreFromVaultOnly(vault);
     }
     const mergedAccounts = mergeAccountsByEmail(
       Array.isArray(parsed.accounts) ? parsed.accounts : [],
@@ -545,8 +569,15 @@ function loadStoreState(): AppStoreState {
       cloudSync: parsed.cloudSync ?? getDefaultCloudSyncConfig(),
     };
   } catch {
-    return createInitialStoreState();
+    return restoreFromVaultOnly(vault);
   }
+}
+
+export interface AuthToastNotice {
+  kind: 'registered' | 'signed-in' | 'password-reset';
+  name: string;
+  email: string;
+  recoveryKey?: string;
 }
 
 interface AppContextValue {
@@ -557,6 +588,9 @@ interface AppContextValue {
   accounts: AuthAccount[];
   cloudSync: CloudSyncConfig;
   lastSavedAt: string | null;
+  storageAvailable: boolean;
+  authToast: AuthToastNotice | null;
+  dismissAuthToast: () => void;
   streakStats: ReturnType<typeof computeStreakStats>;
   updateProfile: (updater: (prev: UserProfile) => UserProfile) => void;
   updatePreferences: (patch: Partial<UserPreferences>) => void;
@@ -629,13 +663,25 @@ const AppContext = createContext<AppContextValue | null>(null);
 
 export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [state, setState] = useState<AppStoreState>(() => loadStoreState());
+  const stateRef = useRef<AppStoreState>(state);
+  stateRef.current = state;
 
-  const commitState = (updater: (prev: AppStoreState) => AppStoreState) => {
-    setState((prev) => {
-      const next = updater(prev);
-      persistStoreState(next);
-      return next;
-    });
+  const [storageAvailable] = useState<boolean>(() => isLocalStorageWritable());
+  const [authToast, setAuthToast] = useState<AuthToastNotice | null>(null);
+
+  const dismissAuthToast = () => setAuthToast(null);
+
+  /**
+   * Synchronous write-through state commit: updates stateRef and localStorage/IndexedDB
+   * IMMEDIATELY before React schedules the next render, eliminating race conditions
+   * on rapid navigation, sign-in, sign-out, or page reload.
+   */
+  const commitState = (updater: (prev: AppStoreState) => AppStoreState): AppStoreState => {
+    const next = updater(stateRef.current);
+    stateRef.current = next;
+    persistStoreState(next);
+    setState(next);
+    return next;
   };
 
   const accounts = state.accounts ?? [];
@@ -664,11 +710,38 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     }
   }, [state, profile.preferences.darkMode]);
 
+  // Hydrate any missing accounts from IndexedDB backup vault on mount
+  useEffect(() => {
+    let cancelled = false;
+    void readAuthVaultIdb().then((idbVault) => {
+      if (cancelled || !idbVault || idbVault.accounts.length === 0) return;
+      const cur = stateRef.current;
+      const curEmails = new Set((cur.accounts ?? []).map((a) => normalizeEmail(a.email)));
+      const hasMissing = idbVault.accounts.some((a) => !curEmails.has(normalizeEmail(a.email)));
+      if (!hasMissing) return;
+      commitState((prev) => {
+        const mergedAccounts = mergeAccountsByEmail(prev.accounts ?? [], idbVault.accounts);
+        const existingProfileIds = new Set(prev.profiles.map((p) => p.id));
+        const missingProfiles = idbVault.profiles.filter((p) => !existingProfileIds.has(p.id));
+        return {
+          ...prev,
+          accounts: mergedAccounts,
+          profiles: [...prev.profiles, ...missingProfiles],
+        };
+      });
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   // Keep open browser tabs in sync whenever an account is registered, signed in, or updated
   useEffect(() => {
     const handleStorage = (e: StorageEvent) => {
       if (e.key === STORAGE_KEY || e.key === ACCOUNTS_VAULT_KEY) {
-        setState(loadStoreState());
+        const fresh = loadStoreState();
+        stateRef.current = fresh;
+        setState(fresh);
       }
     };
     window.addEventListener('storage', handleStorage);
@@ -989,7 +1062,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   };
 
   const switchProfile = (profileId: string) => {
-    setState((prev) => ({
+    commitState((prev) => ({
       ...prev,
       activeProfileId: prev.profiles.some((p) => p.id === profileId)
         ? profileId
@@ -1006,7 +1079,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       progressByCourse: {},
       activityLog: [],
     });
-    setState((prev) => ({
+    commitState((prev) => ({
       ...prev,
       activeProfileId: fresh.id,
       profiles: [...prev.profiles, fresh],
@@ -1016,7 +1089,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const importProfile = (rawJson: string): boolean => {
     const imported = parseImportedProfileJson(rawJson);
     if (!imported) return false;
-    setState((prev) => ({
+    commitState((prev) => ({
       ...prev,
       activeProfileId: imported.id,
       profiles: [...prev.profiles, imported],
@@ -1030,23 +1103,31 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       name: profile.name,
       email: profile.email,
       isGuest: profile.isGuest,
+      onboardingCompleted: profile.onboardingCompleted,
       yearGroup: profile.yearGroup,
       avatarId: profile.avatarId,
       progressByCourse: {},
       activityLog: [],
     });
-    setState((prev) => ({
+    commitState((prev) => ({
       ...prev,
       profiles: prev.profiles.map((p) => (p.id === prev.activeProfileId ? fresh : p)),
     }));
   };
 
-  const getFreshAccountSnapshot = () => {
+  const getFreshAccountSnapshotAsync = async () => {
+    const current = stateRef.current;
     const disk = loadStoreState();
-    const mergedAccounts = mergeAccountsByEmail(state.accounts ?? [], disk.accounts ?? []);
+    const idbVault = await readAuthVaultIdb();
+    const diskAndIdbAccounts = mergeAccountsByEmail(
+      disk.accounts ?? [],
+      idbVault?.accounts ?? []
+    );
+    const mergedAccounts = mergeAccountsByEmail(current.accounts ?? [], diskAndIdbAccounts);
     const profileMap = new Map<string, UserProfile>();
+    for (const p of idbVault?.profiles ?? []) profileMap.set(p.id, p);
     for (const p of disk.profiles) profileMap.set(p.id, p);
-    for (const p of state.profiles) profileMap.set(p.id, p);
+    for (const p of current.profiles) profileMap.set(p.id, p);
     return {
       accounts: mergedAccounts,
       profiles: Array.from(profileMap.values()),
@@ -1065,7 +1146,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     }
 
     const email = normalizeEmail(input.email);
-    const snapshot = getFreshAccountSnapshot();
+    const snapshot = await getFreshAccountSnapshotAsync();
     if (snapshot.accounts.some((a) => normalizeEmail(a.email) === email)) {
       return {
         ok: false,
@@ -1141,6 +1222,13 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       };
     });
 
+    setAuthToast({
+      kind: 'registered',
+      name: cleanName,
+      email,
+      recoveryKey,
+    });
+
     // Optional real cloud sync when Supabase is configured
     if (cloudSync.provider === 'supabase' && cloudSync.supabaseUrl && cloudSync.supabaseAnonKey) {
       void signUpWithSupabaseAuth(cloudSync, email, input.password, cleanName).then(() =>
@@ -1161,7 +1249,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     if (!input.password) return { ok: false, error: 'Please enter your password.' };
 
     const email = normalizeEmail(input.email);
-    const snapshot = getFreshAccountSnapshot();
+    const snapshot = await getFreshAccountSnapshotAsync();
     const account = snapshot.accounts.find((a) => normalizeEmail(a.email) === email);
 
     if (!account) {
@@ -1175,12 +1263,14 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
           const passwordHash = await hashPassword(input.password, salt);
           const profileId = `profile-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
           const accountId = `acct-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
+          const hydratedName = pulled.profile?.name ?? deriveDisplayNameFromEmail(email);
           const hydratedProfile = createDefaultProfile({
             ...(pulled.profile ?? {}),
             id: profileId,
-            name: pulled.profile?.name ?? (email.split('@')[0] || 'Student'),
+            name: hydratedName,
             email,
             isGuest: false,
+            onboardingCompleted: true,
             lastSavedAt: nowIso,
             progressByCourse: pulled.profile?.progressByCourse ?? {},
             activityLog: pulled.profile?.activityLog ?? [],
@@ -1202,9 +1292,14 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
             accounts: mergeAccountsByEmail([...(prev.accounts ?? []), hydratedAccount], snapshot.accounts),
             sessionAccountId: accountId,
           }));
+          setAuthToast({
+            kind: 'signed-in',
+            name: hydratedName,
+            email,
+          });
           return {
             ok: true,
-            needsOnboarding: !hydratedProfile.onboardingCompleted,
+            needsOnboarding: false,
           };
         }
       }
@@ -1227,7 +1322,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
     const nowIso = new Date().toISOString();
     const existingTargetProfile = snapshot.profiles.find((p) => p.id === account.profileId);
-    const needsOnboarding = existingTargetProfile ? !existingTargetProfile.onboardingCompleted : false;
+    const resolvedName = existingTargetProfile?.name ?? deriveDisplayNameFromEmail(email);
 
     commitState((prev) => {
       const profileIds = new Set(prev.profiles.map((p) => p.id));
@@ -1235,14 +1330,19 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       const combinedProfiles = [...prev.profiles, ...missingSnapshotProfiles];
       const hasProfile = combinedProfiles.some((p) => p.id === account.profileId);
       const nextProfiles = hasProfile
-        ? combinedProfiles
+        ? combinedProfiles.map((p) =>
+            p.id === account.profileId
+              ? { ...p, isGuest: false, onboardingCompleted: true }
+              : p
+          )
         : [
             ...combinedProfiles,
             createDefaultProfile({
               id: account.profileId,
-              name: email.split('@')[0] || 'Student',
+              name: resolvedName,
               email,
               isGuest: false,
+              onboardingCompleted: true,
               lastSavedAt: nowIso,
               progressByCourse: {},
               activityLog: [],
@@ -1260,10 +1360,18 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       };
     });
 
-    return { ok: true, needsOnboarding };
+    setAuthToast({
+      kind: 'signed-in',
+      name: resolvedName,
+      email,
+    });
+
+    // Returning students signing in should ALWAYS land straight in their Dashboard
+    return { ok: true, needsOnboarding: false };
   };
 
   const signOutAccount = () => {
+    setAuthToast(null);
     commitState((prev) => {
       const guestProfile =
         prev.profiles.find((p) => p.id === 'profile-default' || p.isGuest) ??
@@ -1325,7 +1433,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     }
 
     const email = normalizeEmail(rawEmail);
-    const snapshot = getFreshAccountSnapshot();
+    const snapshot = await getFreshAccountSnapshotAsync();
     const account = snapshot.accounts.find((a) => normalizeEmail(a.email) === email);
     if (!account) {
       return {
@@ -1355,6 +1463,8 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     const newSalt = generateSalt();
     const newHash = await hashPassword(newPassword, newSalt);
     const nowIso = new Date().toISOString();
+    const existingTargetProfile = snapshot.profiles.find((p) => p.id === account.profileId);
+    const resolvedName = existingTargetProfile?.name ?? deriveDisplayNameFromEmail(email);
 
     commitState((prev) => {
       const mergedAccounts = mergeAccountsByEmail(prev.accounts ?? [], snapshot.accounts).map((a) =>
@@ -1364,16 +1474,41 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       );
       const profileIds = new Set(prev.profiles.map((p) => p.id));
       const extraProfiles = snapshot.profiles.filter((p) => !profileIds.has(p.id));
+      const combinedProfiles = [...prev.profiles, ...extraProfiles];
+      const hasProfile = combinedProfiles.some((p) => p.id === account.profileId);
+      const nextProfiles = hasProfile
+        ? combinedProfiles.map((p) =>
+            p.id === account.profileId ? { ...p, isGuest: false, onboardingCompleted: true } : p
+          )
+        : [
+            ...combinedProfiles,
+            createDefaultProfile({
+              id: account.profileId,
+              name: resolvedName,
+              email,
+              isGuest: false,
+              onboardingCompleted: true,
+              lastSavedAt: nowIso,
+              progressByCourse: {},
+              activityLog: [],
+            }),
+          ];
       return {
         ...prev,
         activeProfileId: account.profileId,
-        profiles: [...prev.profiles, ...extraProfiles],
+        profiles: nextProfiles,
         accounts: mergedAccounts,
         sessionAccountId: account.id,
       };
     });
 
-    return { ok: true };
+    setAuthToast({
+      kind: 'password-reset',
+      name: resolvedName,
+      email,
+    });
+
+    return { ok: true, needsOnboarding: false };
   };
 
   const regenerateRecoveryKey = async (): Promise<AuthActionResult> => {
@@ -1414,6 +1549,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
               id: p.id,
               email: p.email ?? decoded.email,
               isGuest: p.isGuest,
+              onboardingCompleted: true,
               lastSavedAt: nowIso,
             })
           : p
@@ -1466,6 +1602,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
               id: p.id,
               email: p.email ?? email,
               isGuest: false,
+              onboardingCompleted: true,
               lastSavedAt: nowIso,
             })
           : p
@@ -1481,7 +1618,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const completeOnboarding = async (
     input: OnboardingCompletionInput
   ): Promise<AuthActionResult> => {
-    const cleanName = input.name.trim() || profile.name || 'Student';
+    const rawName = input.name.trim();
     const cleanYear = input.yearGroup.trim().toUpperCase() || 'YEAR 11';
     const enrolled = Array.from(new Set(input.enrolledCourseIds)).filter(Boolean);
     const savedBySubject: Record<string, string> = {};
@@ -1501,7 +1638,9 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       if (pwErr) return { ok: false, error: pwErr };
 
       const email = normalizeEmail(input.account.email);
-      const snapshot = getFreshAccountSnapshot();
+      const finalName =
+        !rawName || rawName === 'Student' ? deriveDisplayNameFromEmail(email) : rawName;
+      const snapshot = await getFreshAccountSnapshotAsync();
       if (snapshot.accounts.some((a) => normalizeEmail(a.email) === email)) {
         return {
           ok: false,
@@ -1523,7 +1662,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
       const newProfile = createDefaultProfile({
         id: profileId,
-        name: cleanName,
+        name: finalName,
         email,
         isGuest: false,
         onboardingCompleted: true,
@@ -1570,8 +1709,15 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         };
       });
 
+      setAuthToast({
+        kind: 'registered',
+        name: finalName,
+        email,
+        recoveryKey,
+      });
+
       if (cloudSync.provider === 'supabase' && cloudSync.supabaseUrl && cloudSync.supabaseAnonKey) {
-        void signUpWithSupabaseAuth(cloudSync, email, input.account.password, cleanName).then(() =>
+        void signUpWithSupabaseAuth(cloudSync, email, input.account.password, finalName).then(() =>
           pushProfileToSupabase(cloudSync, email, newProfile)
         );
       }
@@ -1580,6 +1726,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     }
 
     // Guest or already-signed-in user updating their setup
+    const cleanName = rawName || profile.name || 'Alex';
     commitState((prev) => ({
       ...prev,
       profiles: prev.profiles.map((p) =>
@@ -1617,6 +1764,9 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         accounts,
         cloudSync,
         lastSavedAt,
+        storageAvailable,
+        authToast,
+        dismissAuthToast,
         streakStats,
         updateProfile,
         updatePreferences,

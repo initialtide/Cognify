@@ -18,7 +18,7 @@ import {
   UserPlus,
 } from 'lucide-react';
 import { AVATAR_OPTIONS, AvatarId, MonsterAvatar } from '../artwork/Avatars';
-import { getPasswordStrength } from '../../services/authService';
+import { getPasswordStrength, validateEmail, validatePassword } from '../../services/authService';
 import { useApp } from '../../store/AppContext';
 
 export type AuthMode = 'signin' | 'register' | 'reset' | 'sync';
@@ -51,6 +51,7 @@ export const AuthFormCard: React.FC<AuthFormCardProps> = ({
   const {
     accounts,
     state,
+    storageAvailable,
     registerAccount,
     signInAccount,
     resetAccountPassword,
@@ -92,6 +93,15 @@ export const AuthFormCard: React.FC<AuthFormCardProps> = ({
     setError('');
     setErrorCode(undefined);
     setSuccessMsg('');
+    const emailErr = validateEmail(email);
+    if (emailErr) {
+      setError(emailErr);
+      return;
+    }
+    if (!password) {
+      setError('Please enter your password.');
+      return;
+    }
     setSubmitting(true);
     try {
       const res = await signInAccount({ email, password });
@@ -103,7 +113,7 @@ export const AuthFormCard: React.FC<AuthFormCardProps> = ({
       setSuccessMsg('Signed in! Your saved progress is loaded.');
       onSuccess?.({
         mode: 'signin',
-        needsOnboarding: res.needsOnboarding,
+        needsOnboarding: false,
       });
     } finally {
       setSubmitting(false);
@@ -115,6 +125,20 @@ export const AuthFormCard: React.FC<AuthFormCardProps> = ({
     setError('');
     setErrorCode(undefined);
     setSuccessMsg('');
+    if (name.trim().length < 2) {
+      setError('Please enter a display name (at least 2 characters).');
+      return;
+    }
+    const emailErr = validateEmail(email);
+    if (emailErr) {
+      setError(emailErr);
+      return;
+    }
+    const pwErr = validatePassword(password);
+    if (pwErr) {
+      setError(pwErr);
+      return;
+    }
     if (password !== confirmPassword) {
       setError('Passwords do not match. Please re-enter both fields.');
       return;
@@ -151,6 +175,20 @@ export const AuthFormCard: React.FC<AuthFormCardProps> = ({
     setError('');
     setErrorCode(undefined);
     setSuccessMsg('');
+    const emailErr = validateEmail(email);
+    if (emailErr) {
+      setError(emailErr);
+      return;
+    }
+    if (!recoveryKeyInput.trim()) {
+      setError('Please enter your Recovery Key (e.g. COG-XXXX-XXXX-XXXX).');
+      return;
+    }
+    const pwErr = validatePassword(password);
+    if (pwErr) {
+      setError(pwErr);
+      return;
+    }
     if (password !== confirmPassword) {
       setError('New passwords do not match. Please check both fields.');
       return;
@@ -164,7 +202,7 @@ export const AuthFormCard: React.FC<AuthFormCardProps> = ({
         return;
       }
       setSuccessMsg('Password updated! You are now signed back in.');
-      onSuccess?.({ mode: 'reset' });
+      onSuccess?.({ mode: 'reset', needsOnboarding: false });
     } finally {
       setSubmitting(false);
     }
@@ -175,6 +213,10 @@ export const AuthFormCard: React.FC<AuthFormCardProps> = ({
     setError('');
     setErrorCode(undefined);
     setSuccessMsg('');
+    if (!syncCode.trim()) {
+      setError('Please paste your Cognify Sync Code first.');
+      return;
+    }
     const res = applySyncCode(syncCode);
     if (!res.ok) {
       setError(res.error ?? 'Invalid sync code.');
@@ -182,7 +224,7 @@ export const AuthFormCard: React.FC<AuthFormCardProps> = ({
     }
     setSuccessMsg('Study progress restored from your Sync Code!');
     setSyncCode('');
-    onSuccess?.({ mode: 'sync' });
+    onSuccess?.({ mode: 'sync', needsOnboarding: false });
   };
 
   const inputStyle: React.CSSProperties = {
@@ -301,6 +343,30 @@ export const AuthFormCard: React.FC<AuthFormCardProps> = ({
         </button>
       )}
 
+      {!storageAvailable && (
+        <div
+          role="status"
+          style={{
+            display: 'flex',
+            alignItems: 'flex-start',
+            gap: 9,
+            padding: '11px 13px',
+            borderRadius: 12,
+            backgroundColor: 'rgba(245, 158, 11, 0.12)',
+            border: '1px solid rgba(245, 158, 11, 0.4)',
+            color: '#92400e',
+            fontSize: '0.84rem',
+            fontWeight: 600,
+            lineHeight: 1.45,
+          }}
+        >
+          <AlertCircle size={17} style={{ flexShrink: 0, marginTop: 1 }} />
+          <span>
+            Browser storage looks blocked (e.g. strict private browsing). Your account may not survive closing this tab — copy your Sync Code in Account to keep a backup.
+          </span>
+        </div>
+      )}
+
       {error && (
         <div
           role="alert"
@@ -321,12 +387,56 @@ export const AuthFormCard: React.FC<AuthFormCardProps> = ({
             <span>{error}</span>
           </div>
           {mode === 'signin' && errorCode === 'EMAIL_NOT_FOUND' && email.trim() && (
+            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+              <button
+                type="button"
+                onClick={() => {
+                  const rawLocal = email.split('@')[0]?.replace(/[._-]+/g, ' ').replace(/[^a-zA-Z0-9 ]/g, '').trim() ?? '';
+                  const niceName = rawLocal
+                    ? rawLocal.split(/\s+/).slice(0, 2).map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
+                    : '';
+                  setName((prev) => prev || niceName);
+                  switchMode('register');
+                }}
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 6,
+                  padding: '6px 12px',
+                  borderRadius: 8,
+                  border: '1px solid var(--color-blue-300, var(--color-blue-500))',
+                  backgroundColor: 'var(--bg-elevated)',
+                  color: 'var(--color-blue-600)',
+                  fontWeight: 800,
+                  fontSize: '0.82rem',
+                }}
+              >
+                Create free account for {email.trim()} <ArrowRight size={13} />
+              </button>
+              <button
+                type="button"
+                onClick={() => switchMode('sync')}
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 6,
+                  padding: '6px 12px',
+                  borderRadius: 8,
+                  border: '1px solid var(--border-card)',
+                  backgroundColor: 'var(--bg-elevated)',
+                  color: 'var(--text-secondary)',
+                  fontWeight: 700,
+                  fontSize: '0.82rem',
+                }}
+              >
+                <KeyRound size={13} /> Restore with Sync Code
+              </button>
+            </div>
+          )}
+          {mode === 'register' && errorCode === 'EMAIL_EXISTS' && (
             <button
               type="button"
-              onClick={() => {
-                setName((prev) => prev || email.split('@')[0]?.replace(/[^a-zA-Z0-9 ]/g, ' ') || '');
-                switchMode('register');
-              }}
+              onClick={() => switchMode('signin')}
               style={{
                 justifySelf: 'start',
                 display: 'inline-flex',
@@ -341,7 +451,7 @@ export const AuthFormCard: React.FC<AuthFormCardProps> = ({
                 fontSize: '0.82rem',
               }}
             >
-              Create free account for {email.trim()} <ArrowRight size={13} />
+              Sign in with {email.trim()} instead <ArrowRight size={13} />
             </button>
           )}
           {mode === 'signin' && errorCode === 'WRONG_PASSWORD' && (
@@ -388,7 +498,7 @@ export const AuthFormCard: React.FC<AuthFormCardProps> = ({
 
       {/* SIGN IN FORM */}
       {mode === 'signin' && (
-        <form onSubmit={handleSignIn} style={{ display: 'grid', gap: 14 }}>
+        <form onSubmit={handleSignIn} noValidate style={{ display: 'grid', gap: 14 }}>
           {accounts.length > 0 && (
             <div
               style={{
@@ -572,12 +682,39 @@ export const AuthFormCard: React.FC<AuthFormCardProps> = ({
               </button>
             )}
           </div>
+
+          <div
+            style={{
+              fontSize: '0.78rem',
+              color: 'var(--text-muted)',
+              textAlign: 'center',
+              lineHeight: 1.45,
+            }}
+          >
+            Accounts save securely on this browser. Switching devices? Use the{' '}
+            <button
+              type="button"
+              onClick={() => switchMode('sync')}
+              style={{
+                border: 0,
+                background: 'transparent',
+                padding: 0,
+                color: 'var(--color-blue-600)',
+                fontWeight: 700,
+                fontSize: 'inherit',
+                textDecoration: 'underline',
+              }}
+            >
+              Sync Code
+            </button>{' '}
+            tab or Cloud Sync in Account.
+          </div>
         </form>
       )}
 
       {/* REGISTER FORM */}
       {mode === 'register' && (
-        <form onSubmit={handleRegister} style={{ display: 'grid', gap: 13 }}>
+        <form onSubmit={handleRegister} noValidate style={{ display: 'grid', gap: 13 }}>
           <label style={{ display: 'grid', gap: 5, fontWeight: 700, fontSize: '0.86rem' }}>
             <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
               <User size={14} /> Display name
@@ -809,19 +946,20 @@ export const AuthFormCard: React.FC<AuthFormCardProps> = ({
               alignItems: 'center',
               justifyContent: 'center',
               gap: 6,
-              fontSize: '0.8rem',
+              fontSize: '0.79rem',
               color: 'var(--text-muted)',
+              textAlign: 'center',
             }}
           >
-            <ShieldCheck size={14} />
-            <span>Saved instantly with salted PBKDF2-SHA256 hashing &amp; automatic Recovery Key.</span>
+            <ShieldCheck size={14} style={{ flexShrink: 0 }} />
+            <span>Saved securely in this browser with PBKDF2-SHA256 hashing &amp; Recovery Key · use Sync Codes for other devices.</span>
           </div>
         </form>
       )}
 
       {/* PASSWORD RESET FORM */}
       {mode === 'reset' && (
-        <form onSubmit={handlePasswordReset} style={{ display: 'grid', gap: 13 }}>
+        <form onSubmit={handlePasswordReset} noValidate style={{ display: 'grid', gap: 13 }}>
           <label style={{ display: 'grid', gap: 5, fontWeight: 700, fontSize: '0.86rem' }}>
             <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
               <Mail size={14} /> Account email address
@@ -896,7 +1034,7 @@ export const AuthFormCard: React.FC<AuthFormCardProps> = ({
 
       {/* SYNC CODE RESTORE */}
       {mode === 'sync' && (
-        <form onSubmit={handleSyncRestore} style={{ display: 'grid', gap: 12 }}>
+        <form onSubmit={handleSyncRestore} noValidate style={{ display: 'grid', gap: 12 }}>
           <label style={{ display: 'grid', gap: 6, fontWeight: 700, fontSize: '0.88rem' }}>
             <span>Paste your Cognify Sync Code</span>
             <textarea

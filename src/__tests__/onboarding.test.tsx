@@ -172,5 +172,81 @@ describe('Guided 4-Step Onboarding Flow', () => {
     await waitFor(() => {
       expect(screen.getByText(/Hi Kira/i)).toBeInTheDocument();
     });
+    // Confirmation banner is shown immediately upon sign-in
+    expect(screen.getByText(/Welcome back, Kira/i)).toBeInTheDocument();
+  });
+
+  it('registers from /onboarding?mode=signin Register tab and lands directly on Dashboard without onboarding trap', async () => {
+    render(
+      <AppProvider>
+        <MemoryRouter initialEntries={['/onboarding?mode=signin']}>
+          <Routes>
+            <Route path="/onboarding" element={<OnboardingPage />} />
+            <Route
+              path="/dashboard"
+              element={
+                <DashboardPage
+                  onOpenAvatarModal={() => {}}
+                  onOpenStreakModal={() => {}}
+                  onOpenManageCourses={() => {}}
+                />
+              }
+            />
+          </Routes>
+        </MemoryRouter>
+      </AppProvider>
+    );
+
+    // Switch from Sign in to Register tab
+    fireEvent.click(screen.getByRole('tab', { name: /Register/i }));
+    fireEvent.change(screen.getByPlaceholderText(/e\.g\. Maya/i), {
+      target: { value: 'Maya' },
+    });
+    fireEvent.change(screen.getByPlaceholderText(/student@example\.com/i), {
+      target: { value: 'maya@igcse.org' },
+    });
+    fireEvent.change(screen.getByPlaceholderText(/Min 6 characters/i), {
+      target: { value: 'biology2026' },
+    });
+    fireEvent.change(screen.getByPlaceholderText(/Repeat password/i), {
+      target: { value: 'biology2026' },
+    });
+    fireEvent.click(screen.getByRole('button', { name: /Create free account/i }));
+
+    // Must go straight to Dashboard as Maya with Recovery Key confirmation (NOT trapped in Step 1!)
+    await waitFor(() => {
+      expect(screen.getByText(/Hi Maya/i)).toBeInTheDocument();
+    });
+    expect(screen.getByText(/Account created & signed in as Maya/i)).toBeInTheDocument();
+    expect(screen.getByText(/COG-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}/)).toBeInTheDocument();
+  });
+
+  it('derives a clean display name from email if Step 3 name is blank and shows inline Step 4 validation errors', async () => {
+    renderOnboardingApp();
+
+    // Advance straight to Step 4 without typing a name on Step 3
+    fireEvent.click(screen.getByRole('button', { name: /Continue/i }));
+    fireEvent.click(screen.getByRole('button', { name: /Continue/i }));
+    fireEvent.click(screen.getByRole('button', { name: /Continue/i }));
+
+    // Submit empty Step 4 form -> immediate inline alert
+    fireEvent.click(screen.getByRole('button', { name: /Create free account & start studying/i }));
+    expect(screen.getByRole('alert')).toHaveTextContent(/enter your email address/i);
+
+    // Register with email only -> derives "Samira Patel" instead of "Student"
+    fireEvent.change(screen.getByPlaceholderText(/student@example\.com/i), {
+      target: { value: 'samira.patel@school.uk' },
+    });
+    fireEvent.change(screen.getByPlaceholderText(/Min 6 characters/i), {
+      target: { value: 'physics2026' },
+    });
+    fireEvent.change(screen.getByPlaceholderText(/Repeat password/i), {
+      target: { value: 'physics2026' },
+    });
+    fireEvent.click(screen.getByRole('button', { name: /Create free account & start studying/i }));
+
+    await waitFor(() => {
+      expect(screen.getByText(/Hi Samira Patel/i)).toBeInTheDocument();
+    });
   });
 });
