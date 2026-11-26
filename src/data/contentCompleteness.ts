@@ -13,6 +13,7 @@ import {
   TopicDefinition,
 } from '../types/curriculum';
 import { getPastPapersOnlyTopics, makePastPaperSet } from './courses/otherCourses';
+import { getOfficialCambridgePapersForCourse } from './officialCambridgePapers';
 
 const ACCENT_PALETTE = [
   '#42ac88',
@@ -837,6 +838,19 @@ function buildCompletePastPapers(
 
   const defaultInsert = `${course.boardLabel} ${course.qualificationLabel} ${course.subjectName} (${course.specCode}) Official Data, Formulae & Source Insert — Reference values, key equations, and specification tables provided for candidates.`;
 
+  const officialCambridge = getOfficialCambridgePapersForCourse(
+    course.qualification,
+    course.subjectSlug
+  );
+  const officialDocs: PastPaperDoc[] = (officialCambridge?.papers ?? []).map((pp) => {
+    const paperNum: 1 | 2 = /Paper\s+[246]/i.test(pp.title) ? 2 : 1;
+    return {
+      ...pp,
+      sampleQuestions:
+        pp.sampleQuestions.length >= 4 ? pp.sampleQuestions : buildSampleQuestions(paperNum),
+    };
+  });
+
   // First, enrich any existing past papers so every paper has >= 4 sampleQuestions and an insertNote
   const enrichedExisting: PastPaperDoc[] = course.pastPapers.map((pp, idx) => {
     const paperNum: 1 | 2 = pp.title.includes('Paper 2') ? 2 : 1;
@@ -853,10 +867,26 @@ function buildCompletePastPapers(
           ];
     return {
       ...pp,
-      insertNote: pp.insertNote || (idx % 2 === 0 ? defaultInsert : `${course.boardLabel} ${course.subjectName} Paper ${paperNum} Resource Booklet & Specification Insert.`),
+      officialPortalUrl: pp.officialPortalUrl ?? officialCambridge?.portalUrl,
+      insertNote:
+        pp.insertNote ||
+        (idx % 2 === 0
+          ? defaultInsert
+          : `${course.boardLabel} ${course.subjectName} Paper ${paperNum} Resource Booklet & Specification Insert.`),
       sampleQuestions: mergedQs,
     };
   });
+
+  if (officialDocs.length > 0) {
+    // Place real official Cambridge PDFs first, followed by any non-duplicate earlier practice packs
+    const officialYears = new Set(officialDocs.map((d) => d.year));
+    const nonDuplicateExisting = enrichedExisting.filter((p) => !officialYears.has(p.year));
+    const combined = [...officialDocs, ...nonDuplicateExisting];
+    if (combined.length >= 6) {
+      return combined;
+    }
+    return combined;
+  }
 
   if (enrichedExisting.length >= 6) {
     return enrichedExisting;

@@ -183,6 +183,56 @@ import {
   ENGLISH_LANGUAGE_QUIZZES,
   ENGLISH_LANGUAGE_TOPICS,
 } from './courses/englishLanguage';
+import {
+  IGCSE_ENGLISH_LIT_CHEAT_SHEETS,
+  IGCSE_ENGLISH_LIT_EXAM_PRACTICE,
+  IGCSE_ENGLISH_LIT_FLASHCARDS,
+  IGCSE_ENGLISH_LIT_KEY_TERMS,
+  IGCSE_ENGLISH_LIT_NOTES,
+  IGCSE_ENGLISH_LIT_PAST_PAPERS,
+  IGCSE_ENGLISH_LIT_QUIZZES,
+  IGCSE_ENGLISH_LIT_TOPICS,
+} from './courses/igcseEnglishLit';
+import {
+  IGCSE_FRENCH_CHEAT_SHEETS,
+  IGCSE_FRENCH_EXAM_PRACTICE,
+  IGCSE_FRENCH_FLASHCARDS,
+  IGCSE_FRENCH_KEY_TERMS,
+  IGCSE_FRENCH_NOTES,
+  IGCSE_FRENCH_PAST_PAPERS,
+  IGCSE_FRENCH_QUIZZES,
+  IGCSE_FRENCH_TOPICS,
+} from './courses/igcseFrench';
+import {
+  IGCSE_GEOGRAPHY_CHEAT_SHEETS,
+  IGCSE_GEOGRAPHY_EXAM_PRACTICE,
+  IGCSE_GEOGRAPHY_FLASHCARDS,
+  IGCSE_GEOGRAPHY_KEY_TERMS,
+  IGCSE_GEOGRAPHY_NOTES,
+  IGCSE_GEOGRAPHY_PAST_PAPERS,
+  IGCSE_GEOGRAPHY_QUIZZES,
+  IGCSE_GEOGRAPHY_TOPICS,
+} from './courses/igcseGeography';
+import {
+  IGCSE_HISTORY_CHEAT_SHEETS,
+  IGCSE_HISTORY_EXAM_PRACTICE,
+  IGCSE_HISTORY_FLASHCARDS,
+  IGCSE_HISTORY_KEY_TERMS,
+  IGCSE_HISTORY_NOTES,
+  IGCSE_HISTORY_PAST_PAPERS,
+  IGCSE_HISTORY_QUIZZES,
+  IGCSE_HISTORY_TOPICS,
+} from './courses/igcseHistory';
+import {
+  IGCSE_SPANISH_CHEAT_SHEETS,
+  IGCSE_SPANISH_EXAM_PRACTICE,
+  IGCSE_SPANISH_FLASHCARDS,
+  IGCSE_SPANISH_KEY_TERMS,
+  IGCSE_SPANISH_NOTES,
+  IGCSE_SPANISH_PAST_PAPERS,
+  IGCSE_SPANISH_QUIZZES,
+  IGCSE_SPANISH_TOPICS,
+} from './courses/igcseSpanish';
 import { ensureCompleteCourseContent } from './contentCompleteness';
 
 export interface QualificationInfo {
@@ -253,6 +303,11 @@ export const IGCSE_SUBJECTS: SubjectCatalogItem[] = [
   { slug: 'computer-science', name: 'Computer Science', icon: 'computer-science', category: 'other' },
   { slug: 'economics', name: 'Economics', icon: 'economics', category: 'other' },
   { slug: 'english-language', name: 'English Language', icon: 'english-language', category: 'other' },
+  { slug: 'english-literature', name: 'English Literature', icon: 'english-literature', category: 'other' },
+  { slug: 'geography', name: 'Geography', icon: 'geography', category: 'other' },
+  { slug: 'history', name: 'History', icon: 'history', category: 'other' },
+  { slug: 'french', name: 'French', icon: 'french', category: 'other' },
+  { slug: 'spanish', name: 'Spanish', icon: 'spanish', category: 'other' },
 ];
 
 export const ALEVEL_SUBJECTS: SubjectCatalogItem[] = [
@@ -306,6 +361,11 @@ export function getTiersForQualification(
       subject.slug === 'computer-science' ||
       subject.slug === 'economics' ||
       subject.slug === 'english-language' ||
+      subject.slug === 'english-literature' ||
+      subject.slug === 'geography' ||
+      subject.slug === 'history' ||
+      subject.slug === 'french' ||
+      subject.slug === 'spanish' ||
       subject.pastPapersOnly
     ) {
       return ['Core'];
@@ -433,6 +493,61 @@ const IGCSE_ENGLANG_BUNDLE: CourseContentBundle = {
   examPractice: ENGLISH_LANGUAGE_EXAM_PRACTICE,
   pastPapers: ENGLISH_LANGUAGE_PAST_PAPERS,
   keyTerms: ENGLISH_LANGUAGE_KEY_TERMS,
+};
+
+const IGCSE_ENGLIT_BUNDLE: CourseContentBundle = {
+  topics: IGCSE_ENGLISH_LIT_TOPICS,
+  notes: IGCSE_ENGLISH_LIT_NOTES,
+  quizzes: IGCSE_ENGLISH_LIT_QUIZZES,
+  flashcards: IGCSE_ENGLISH_LIT_FLASHCARDS,
+  cheatSheets: IGCSE_ENGLISH_LIT_CHEAT_SHEETS,
+  examPractice: IGCSE_ENGLISH_LIT_EXAM_PRACTICE,
+  pastPapers: IGCSE_ENGLISH_LIT_PAST_PAPERS,
+  keyTerms: IGCSE_ENGLISH_LIT_KEY_TERMS,
+};
+
+const IGCSE_GEOG_BUNDLE: CourseContentBundle = {
+  topics: IGCSE_GEOGRAPHY_TOPICS,
+  notes: IGCSE_GEOGRAPHY_NOTES,
+  quizzes: IGCSE_GEOGRAPHY_QUIZZES,
+  flashcards: IGCSE_GEOGRAPHY_FLASHCARDS,
+  cheatSheets: IGCSE_GEOGRAPHY_CHEAT_SHEETS,
+  examPractice: IGCSE_GEOGRAPHY_EXAM_PRACTICE,
+  pastPapers: IGCSE_GEOGRAPHY_PAST_PAPERS,
+  keyTerms: IGCSE_GEOGRAPHY_KEY_TERMS,
+};
+
+const IGCSE_HISTORY_BUNDLE: CourseContentBundle = {
+  topics: IGCSE_HISTORY_TOPICS,
+  notes: IGCSE_HISTORY_NOTES,
+  quizzes: IGCSE_HISTORY_QUIZZES,
+  flashcards: IGCSE_HISTORY_FLASHCARDS,
+  cheatSheets: IGCSE_HISTORY_CHEAT_SHEETS,
+  examPractice: IGCSE_HISTORY_EXAM_PRACTICE,
+  pastPapers: IGCSE_HISTORY_PAST_PAPERS,
+  keyTerms: IGCSE_HISTORY_KEY_TERMS,
+};
+
+const IGCSE_FRENCH_BUNDLE: CourseContentBundle = {
+  topics: IGCSE_FRENCH_TOPICS,
+  notes: IGCSE_FRENCH_NOTES,
+  quizzes: IGCSE_FRENCH_QUIZZES,
+  flashcards: IGCSE_FRENCH_FLASHCARDS,
+  cheatSheets: IGCSE_FRENCH_CHEAT_SHEETS,
+  examPractice: IGCSE_FRENCH_EXAM_PRACTICE,
+  pastPapers: IGCSE_FRENCH_PAST_PAPERS,
+  keyTerms: IGCSE_FRENCH_KEY_TERMS,
+};
+
+const IGCSE_SPANISH_BUNDLE: CourseContentBundle = {
+  topics: IGCSE_SPANISH_TOPICS,
+  notes: IGCSE_SPANISH_NOTES,
+  quizzes: IGCSE_SPANISH_QUIZZES,
+  flashcards: IGCSE_SPANISH_FLASHCARDS,
+  cheatSheets: IGCSE_SPANISH_CHEAT_SHEETS,
+  examPractice: IGCSE_SPANISH_EXAM_PRACTICE,
+  pastPapers: IGCSE_SPANISH_PAST_PAPERS,
+  keyTerms: IGCSE_SPANISH_KEY_TERMS,
 };
 
 const ALEVEL_BIO_BUNDLE: CourseContentBundle = {
@@ -983,6 +1098,91 @@ const RAW_COURSES: CourseDefinition[] = [
     availableTiers: ['Core'],
     availableBoards: IGCSE_BOARDS,
     bundle: IGCSE_ENGLANG_BUNDLE,
+  }),
+  buildCourseFromBundle({
+    id: 'igcse-english-literature-cie',
+    qualification: 'igcse',
+    qualificationLabel: 'IGCSE',
+    subjectSlug: 'english-literature',
+    subjectName: 'English Literature',
+    board: 'cie',
+    boardLabel: 'CIE',
+    tier: 'Core',
+    specCode: '0475',
+    subtitle: 'IGCSE · CIE',
+    icon: 'english-literature',
+    themeClass: 'subject-theme--english-literature',
+    availableTiers: ['Core'],
+    availableBoards: IGCSE_BOARDS,
+    bundle: IGCSE_ENGLIT_BUNDLE,
+  }),
+  buildCourseFromBundle({
+    id: 'igcse-geography-cie',
+    qualification: 'igcse',
+    qualificationLabel: 'IGCSE',
+    subjectSlug: 'geography',
+    subjectName: 'Geography',
+    board: 'cie',
+    boardLabel: 'CIE',
+    tier: 'Core',
+    specCode: '0460',
+    subtitle: 'IGCSE · CIE',
+    icon: 'geography',
+    themeClass: 'subject-theme--geography',
+    availableTiers: ['Core'],
+    availableBoards: IGCSE_BOARDS,
+    bundle: IGCSE_GEOG_BUNDLE,
+  }),
+  buildCourseFromBundle({
+    id: 'igcse-history-cie',
+    qualification: 'igcse',
+    qualificationLabel: 'IGCSE',
+    subjectSlug: 'history',
+    subjectName: 'History',
+    board: 'cie',
+    boardLabel: 'CIE',
+    tier: 'Core',
+    specCode: '0470',
+    subtitle: 'IGCSE · CIE',
+    icon: 'history',
+    themeClass: 'subject-theme--history',
+    availableTiers: ['Core'],
+    availableBoards: IGCSE_BOARDS,
+    bundle: IGCSE_HISTORY_BUNDLE,
+  }),
+  buildCourseFromBundle({
+    id: 'igcse-french-cie',
+    qualification: 'igcse',
+    qualificationLabel: 'IGCSE',
+    subjectSlug: 'french',
+    subjectName: 'French',
+    board: 'cie',
+    boardLabel: 'CIE',
+    tier: 'Core',
+    specCode: '0520',
+    subtitle: 'IGCSE · CIE',
+    icon: 'french',
+    themeClass: 'subject-theme--french',
+    availableTiers: ['Core'],
+    availableBoards: IGCSE_BOARDS,
+    bundle: IGCSE_FRENCH_BUNDLE,
+  }),
+  buildCourseFromBundle({
+    id: 'igcse-spanish-cie',
+    qualification: 'igcse',
+    qualificationLabel: 'IGCSE',
+    subjectSlug: 'spanish',
+    subjectName: 'Spanish',
+    board: 'cie',
+    boardLabel: 'CIE',
+    tier: 'Core',
+    specCode: '0530',
+    subtitle: 'IGCSE · CIE',
+    icon: 'spanish',
+    themeClass: 'subject-theme--spanish',
+    availableTiers: ['Core'],
+    availableBoards: IGCSE_BOARDS,
+    bundle: IGCSE_SPANISH_BUNDLE,
   }),
 
   // Dedicated A-Level Courses (AQA, Edexcel, CIE)

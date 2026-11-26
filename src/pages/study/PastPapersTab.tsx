@@ -1,16 +1,22 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
   ArrowUpRight,
+  BookOpenCheck,
   ChevronDown,
   ChevronUp,
   ChevronsDown,
   ChevronsUp,
   Clock,
   Columns2,
+  ExternalLink,
   FileCheck2,
   FileText,
   MoreHorizontal,
+  Pause,
+  Play,
   Printer,
+  RotateCcw,
+  ShieldCheck,
   Sparkles,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -19,8 +25,28 @@ import { useApp } from '../../store/AppContext';
 import '../../styles/study-players.css';
 import { CourseDefinition, PastPaperDoc, TopicDefinition } from '../../types/curriculum';
 
-type SpecFilter = 'all' | 'new-9-1' | 'old' | 'with-insert';
-type ViewerMode = 'qp' | 'ms' | 'split' | 'insert';
+type SpecFilter = 'all' | 'official' | 'new-9-1' | 'old' | 'with-insert';
+type ViewerMode = 'qp' | 'ms' | 'split' | 'insert' | 'report';
+
+function sortYearKeys(a: string, b: string): number {
+  const aSpec = /specimen/i.test(a);
+  const bSpec = /specimen/i.test(b);
+  const aNum = parseInt(a, 10) || 0;
+  const bNum = parseInt(b, 10) || 0;
+  // Real exam sessions before specimen papers if same era; newest first within each group
+  if (aSpec !== bSpec) return aSpec ? 1 : -1;
+  return bNum - aNum;
+}
+
+function formatTimer(seconds: number): string {
+  const clamped = Math.max(0, seconds);
+  const hrs = Math.floor(clamped / 3600);
+  const mins = Math.floor((clamped % 3600) / 60);
+  const secs = clamped % 60;
+  const mm = String(mins).padStart(2, '0');
+  const ss = String(secs).padStart(2, '0');
+  return hrs > 0 ? `${hrs}:${mm}:${ss}` : `${mm}:${ss}`;
+}
 
 export const PastPapersTab: React.FC<{ course: CourseDefinition }> = ({ course }) => {
   const { logSimpleActivity } = useApp();
@@ -34,6 +60,11 @@ export const PastPapersTab: React.FC<{ course: CourseDefinition }> = ({ course }
     mode: ViewerMode;
     topicHeading?: string;
   } | null>(null);
+
+  // Built-in timed exam stopwatch for real past paper practice
+  const [timerSeconds, setTimerSeconds] = useState(0);
+  const [timerRunning, setTimerRunning] = useState(false);
+  const [pdfRenderer, setPdfRenderer] = useState<'universal' | 'native'>('universal');
 
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -56,14 +87,41 @@ export const PastPapersTab: React.FC<{ course: CourseDefinition }> = ({ course }
     };
   }, [openResourcePaperId]);
 
-  // Reset filters when switching courses
+  // Reset filters & expand the first 2 year groups when switching courses
   useEffect(() => {
     setSpecFilter('all');
     setPaperFilter('all');
     setOpenResourcePaperId(null);
-    const availableYears = Array.from(new Set(course.pastPapers.map((p) => p.year)));
+    const availableYears = Array.from(new Set(course.pastPapers.map((p) => p.year))).sort(
+      sortYearKeys
+    );
     setExpandedYears(availableYears.slice(0, 2));
   }, [course.id, course.pastPapers]);
+
+  // Countdown tick while timer is running
+  useEffect(() => {
+    if (!timerRunning || !viewerDoc) return;
+    const id = window.setInterval(() => {
+      setTimerSeconds((prev) => {
+        if (prev <= 1) {
+          setTimerRunning(false);
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+    return () => window.clearInterval(id);
+  }, [timerRunning, viewerDoc]);
+
+  const officialPortalUrl = useMemo(
+    () => course.pastPapers.find((p) => p.officialPortalUrl)?.officialPortalUrl,
+    [course.pastPapers]
+  );
+
+  const officialPdfCount = useMemo(
+    () => course.pastPapers.filter((p) => Boolean(p.questionPaperUrl)).length,
+    [course.pastPapers]
+  );
 
   // Extract clean paper number / series filter pills dynamically
   const paperSeriesLabels = useMemo(() => {
@@ -72,7 +130,11 @@ export const PastPapersTab: React.FC<{ course: CourseDefinition }> = ({ course }
       const m = p.title.match(/Paper\s+\d+/i);
       if (m) labels.add(m[0]);
     }
-    return Array.from(labels).sort();
+    return Array.from(labels).sort((a, b) => {
+      const na = parseInt(a.replace(/\D/g, ''), 10) || 0;
+      const nb = parseInt(b.replace(/\D/g, ''), 10) || 0;
+      return na - nb;
+    });
   }, [course.pastPapers]);
 
   const hasNewSpec = useMemo(
@@ -84,15 +146,16 @@ export const PastPapersTab: React.FC<{ course: CourseDefinition }> = ({ course }
     [course.pastPapers]
   );
   const insertCount = useMemo(
-    () => course.pastPapers.filter((p) => Boolean(p.insertNote)).length,
+    () => course.pastPapers.filter((p) => Boolean(p.insertUrl || p.insertNote)).length,
     [course.pastPapers]
   );
 
   const filteredPapers = useMemo(() => {
     return course.pastPapers.filter((p) => {
+      if (specFilter === 'official' && !p.questionPaperUrl) return false;
       if (specFilter === 'new-9-1' && p.specEra !== 'new-9-1') return false;
       if (specFilter === 'old' && p.specEra !== 'old') return false;
-      if (specFilter === 'with-insert' && !p.insertNote) return false;
+      if (specFilter === 'with-insert' && !p.insertUrl && !p.insertNote) return false;
       if (paperFilter !== 'all' && !p.title.toLowerCase().includes(paperFilter.toLowerCase())) {
         return false;
       }
@@ -107,13 +170,19 @@ export const PastPapersTab: React.FC<{ course: CourseDefinition }> = ({ course }
       list.push(p);
       map.set(p.year, list);
     }
-    return Array.from(map.entries()).sort((a, b) => Number(b[0]) - Number(a[0]));
+    return Array.from(map.entries()).sort((a, b) => sortYearKeys(a[0], b[0]));
   }, [filteredPapers]);
 
-  const newSpecYears = groupedByYear.filter(([, docs]) =>
-    docs.some((d) => d.specEra === 'new-9-1')
+  const officialSpecYears = groupedByYear.filter(([, docs]) =>
+    docs.some((d) => Boolean(d.questionPaperUrl))
   );
-  const oldSpecYears = groupedByYear.filter(([, docs]) => docs.some((d) => d.specEra === 'old'));
+  const practiceNewSpecYears = groupedByYear.filter(
+    ([, docs]) =>
+      docs.every((d) => !d.questionPaperUrl) && docs.some((d) => d.specEra === 'new-9-1')
+  );
+  const oldSpecYears = groupedByYear.filter(
+    ([, docs]) => docs.every((d) => !d.questionPaperUrl) && docs.some((d) => d.specEra === 'old')
+  );
 
   // Synthesize a compiled topic past-paper pack for "By topic" across all courses
   const buildTopicPaperDoc = (topic: TopicDefinition, tIdx: number): PastPaperDoc | null => {
@@ -164,6 +233,10 @@ export const PastPapersTab: React.FC<{ course: CourseDefinition }> = ({ course }
       title: `Topic ${topic.number}: ${topic.title} Past Questions`,
       totalMarks,
       durationMinutes: Math.max(25, Math.round(totalMarks * 1.2)),
+      questionPaperUrl: undefined,
+      markSchemeUrl: undefined,
+      insertUrl: undefined,
+      examinerReportUrl: undefined,
       sampleQuestions,
     };
   };
@@ -177,6 +250,8 @@ export const PastPapersTab: React.FC<{ course: CourseDefinition }> = ({ course }
 
   const openDoc = (paper: PastPaperDoc, mode: ViewerMode, topicHeading?: string) => {
     setOpenResourcePaperId(null);
+    setTimerRunning(false);
+    setTimerSeconds(paper.durationMinutes * 60);
     setViewerDoc({ paper, mode, topicHeading });
     logSimpleActivity({
       type: 'past-paper',
@@ -190,24 +265,50 @@ export const PastPapersTab: React.FC<{ course: CourseDefinition }> = ({ course }
     });
   };
 
-  const renderPaperList = (yearsList: [string, PastPaperDoc[]][], heading: string) => {
+  const getActivePdfUrl = (doc: { paper: PastPaperDoc; mode: ViewerMode }): string | undefined => {
+    if (doc.mode === 'qp') return doc.paper.questionPaperUrl;
+    if (doc.mode === 'ms') return doc.paper.markSchemeUrl;
+    if (doc.mode === 'insert') return doc.paper.insertUrl;
+    if (doc.mode === 'report') return doc.paper.examinerReportUrl;
+    return doc.paper.questionPaperUrl;
+  };
+
+  const renderPaperList = (
+    yearsList: [string, PastPaperDoc[]][],
+    heading: string,
+    isOfficialGroup = false
+  ) => {
     if (yearsList.length === 0) return null;
     return (
       <div className="cognito-card" style={{ overflow: 'visible', marginBottom: 18 }}>
         <div
           style={{
-            padding: '13px 20px',
-            fontSize: '0.84rem',
+            padding: '12px 20px',
+            fontSize: '0.82rem',
             fontWeight: 800,
-            color: 'var(--text-secondary)',
-            backgroundColor: 'var(--bg-sunken)',
-            borderRadius: '15px 15px 0 0',
+            color: isOfficialGroup ? 'var(--color-green-700)' : 'var(--text-secondary)',
+            backgroundColor: isOfficialGroup ? 'var(--color-green-50)' : 'var(--bg-sunken)',
+            borderRadius: '14px 14px 0 0',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            gap: 10,
+            flexWrap: 'wrap',
           }}
         >
-          {heading}
+          <span style={{ display: 'inline-flex', alignItems: 'center', gap: 7 }}>
+            {isOfficialGroup && <ShieldCheck size={15} />}
+            <span>{heading}</span>
+          </span>
+          {isOfficialGroup && (
+            <span style={{ fontSize: '0.75rem', fontWeight: 700, opacity: 0.88 }}>
+              Direct official PDFs from Cambridge International ({course.specCode})
+            </span>
+          )}
         </div>
         {yearsList.map(([year, docs], idx) => {
           const isOpen = expandedYears.includes(year);
+          const cleanCode = course.specCode.split('/')[0]?.trim() || course.specCode;
           return (
             <div
               key={year}
@@ -223,7 +324,9 @@ export const PastPapersTab: React.FC<{ course: CourseDefinition }> = ({ course }
                   <span className="sp-pp-chevron">
                     {isOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
                   </span>
-                  <span>{year}</span>
+                  <span>
+                    {year} ({cleanCode})
+                  </span>
                 </span>
                 <span className="sp-mark-badge">
                   {docs.length} {docs.length === 1 ? 'paper' : 'papers'}
@@ -231,26 +334,61 @@ export const PastPapersTab: React.FC<{ course: CourseDefinition }> = ({ course }
               </button>
 
               {isOpen && (
-                <div>
+                <div className="cognito-accordion-body">
                   {docs.map((paper) => {
                     const insertOpen = openResourcePaperId === paper.id;
+                    const hasOfficialPdf = Boolean(paper.questionPaperUrl);
+                    const hasExtraMenu = Boolean(
+                      paper.insertUrl ||
+                        paper.insertNote ||
+                        paper.examinerReportUrl ||
+                        paper.questionPaperUrl
+                    );
+
                     return (
                       <div key={paper.id} className="sp-pp-paper-row">
                         <div style={{ minWidth: 0 }}>
                           <div
                             style={{
-                              fontWeight: 800,
-                              fontSize: '0.96rem',
-                              color: 'var(--text-heading)',
+                              display: 'flex',
+                              alignItems: 'center',
+                              gap: 8,
+                              flexWrap: 'wrap',
                             }}
                           >
-                            {paper.title}
+                            <span
+                              style={{
+                                fontWeight: 800,
+                                fontSize: '0.96rem',
+                                color: 'var(--text-heading)',
+                              }}
+                            >
+                              {paper.title}
+                            </span>
+                            {hasOfficialPdf && (
+                              <span
+                                style={{
+                                  display: 'inline-flex',
+                                  alignItems: 'center',
+                                  gap: 4,
+                                  padding: '2px 8px',
+                                  borderRadius: 999,
+                                  fontSize: '0.7rem',
+                                  fontWeight: 800,
+                                  backgroundColor: 'var(--color-green-100)',
+                                  color: 'var(--color-green-700)',
+                                  letterSpacing: '0.02em',
+                                }}
+                              >
+                                <ShieldCheck size={11} /> OFFICIAL PDF
+                              </span>
+                            )}
                           </div>
                           <div
                             style={{
                               fontSize: '0.82rem',
                               color: 'var(--text-muted)',
-                              marginTop: 2,
+                              marginTop: 3,
                             }}
                           >
                             {paper.series} · {paper.durationMinutes} mins · {paper.totalMarks}{' '}
@@ -258,7 +396,7 @@ export const PastPapersTab: React.FC<{ course: CourseDefinition }> = ({ course }
                           </div>
                         </div>
 
-                        {/* Joined Cognito Segmented Action Group: Paper | Mark scheme | ... (1:1 step_183_shot_1) */}
+                        {/* Joined Cognito Segmented Action Group: Paper | Mark scheme | Split PDF | ... */}
                         <div className="sp-pp-action-group">
                           <button
                             type="button"
@@ -270,6 +408,7 @@ export const PastPapersTab: React.FC<{ course: CourseDefinition }> = ({ course }
                           <button
                             type="button"
                             className="sp-pp-action-btn sp-focusable"
+                            disabled={hasOfficialPdf && !paper.markSchemeUrl}
                             onClick={() => openDoc(paper, 'ms')}
                           >
                             <FileCheck2 size={14} /> Mark scheme
@@ -278,11 +417,12 @@ export const PastPapersTab: React.FC<{ course: CourseDefinition }> = ({ course }
                             type="button"
                             className="sp-pp-action-btn sp-focusable hide-mobile"
                             title="Split view (Paper | Mark scheme)"
+                            disabled={hasOfficialPdf && !paper.markSchemeUrl}
                             onClick={() => openDoc(paper, 'split')}
                           >
                             <Columns2 size={14} /> Split view
                           </button>
-                          {paper.insertNote && (
+                          {hasExtraMenu && (
                             <button
                               type="button"
                               aria-label={`Additional resources for ${paper.title}`}
@@ -298,23 +438,72 @@ export const PastPapersTab: React.FC<{ course: CourseDefinition }> = ({ course }
                             </button>
                           )}
 
-                          {paper.insertNote && insertOpen && (
+                          {hasExtraMenu && insertOpen && (
                             <div
                               role="menu"
                               className="popover-surface sp-pp-insert-popover"
+                              style={{ minWidth: 230 }}
                             >
-                              <button
-                                type="button"
-                                role="menuitem"
-                                className="sp-options-action sp-focusable"
-                                style={{ justifyContent: 'space-between' }}
-                                onClick={() => openDoc(paper, 'insert')}
-                              >
-                                <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
-                                  <FileText size={15} /> Insert
-                                </span>
-                                <ArrowUpRight size={14} color="var(--text-muted)" />
-                              </button>
+                              {paper.questionPaperUrl && (
+                                <a
+                                  href={paper.questionPaperUrl}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  role="menuitem"
+                                  className="sp-options-action sp-focusable"
+                                  style={{ justifyContent: 'space-between' }}
+                                  onClick={() => setOpenResourcePaperId(null)}
+                                >
+                                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+                                    <ExternalLink size={14} /> Paper PDF (new tab)
+                                  </span>
+                                  <ArrowUpRight size={14} color="var(--text-muted)" />
+                                </a>
+                              )}
+                              {paper.markSchemeUrl && (
+                                <a
+                                  href={paper.markSchemeUrl}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  role="menuitem"
+                                  className="sp-options-action sp-focusable"
+                                  style={{ justifyContent: 'space-between' }}
+                                  onClick={() => setOpenResourcePaperId(null)}
+                                >
+                                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+                                    <FileCheck2 size={14} /> Mark scheme PDF (new tab)
+                                  </span>
+                                  <ArrowUpRight size={14} color="var(--text-muted)" />
+                                </a>
+                              )}
+                              {(paper.insertUrl || paper.insertNote) && (
+                                <button
+                                  type="button"
+                                  role="menuitem"
+                                  className="sp-options-action sp-focusable"
+                                  style={{ justifyContent: 'space-between' }}
+                                  onClick={() => openDoc(paper, 'insert')}
+                                >
+                                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+                                    <FileText size={14} /> {paper.insertLabel ?? 'Insert'}
+                                  </span>
+                                  <ArrowUpRight size={14} color="var(--text-muted)" />
+                                </button>
+                              )}
+                              {paper.examinerReportUrl && (
+                                <button
+                                  type="button"
+                                  role="menuitem"
+                                  className="sp-options-action sp-focusable"
+                                  style={{ justifyContent: 'space-between' }}
+                                  onClick={() => openDoc(paper, 'report')}
+                                >
+                                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+                                    <BookOpenCheck size={14} /> Examiner Report
+                                  </span>
+                                  <ArrowUpRight size={14} color="var(--text-muted)" />
+                                </button>
+                              )}
                             </div>
                           )}
                         </div>
@@ -330,9 +519,17 @@ export const PastPapersTab: React.FC<{ course: CourseDefinition }> = ({ course }
     );
   };
 
+  const getEmbedSrc = (rawUrl: string) =>
+    pdfRenderer === 'universal'
+      ? `https://docs.google.com/gview?embedded=true&url=${encodeURI(rawUrl)}`
+      : rawUrl;
+
+  const activePdfUrl = viewerDoc ? getActivePdfUrl(viewerDoc) : undefined;
+  const viewerHasOfficialPdf = Boolean(viewerDoc?.paper.questionPaperUrl);
+
   return (
     <section ref={sectionRef} style={{ marginTop: 20 }}>
-      {/* Top Controls Row (1:1 step_56_shot_2 & step_172_shot_4) */}
+      {/* Top Controls Row (1:1 real Cognito) */}
       <div
         style={{
           display: 'flex',
@@ -406,6 +603,20 @@ export const PastPapersTab: React.FC<{ course: CourseDefinition }> = ({ course }
             <span className="sp-filter-pill__count">{course.pastPapers.length}</span>
           </button>
 
+          {officialPdfCount > 0 && (
+            <button
+              type="button"
+              aria-pressed={specFilter === 'official'}
+              className={`sp-filter-pill sp-focusable${
+                specFilter === 'official' ? ' is-active' : ''
+              }`}
+              onClick={() => setSpecFilter((s) => (s === 'official' ? 'all' : 'official'))}
+            >
+              <span>Official Cambridge PDFs</span>
+              <span className="sp-filter-pill__count">{officialPdfCount}</span>
+            </button>
+          )}
+
           {hasNewSpec && hasOldSpec && (
             <>
               <button
@@ -464,13 +675,36 @@ export const PastPapersTab: React.FC<{ course: CourseDefinition }> = ({ course }
         </div>
       )}
 
-      {/* Intro Description Card (1:1 step_56_shot_2) */}
-      <div className="cognito-card" style={{ padding: '16px 20px', marginBottom: 18 }}>
-        <p style={{ margin: 0, color: 'var(--text-secondary)', fontSize: '0.94rem', lineHeight: 1.55 }}>
+      {/* Intro Description Card (1:1 real Cognito) */}
+      <div
+        className="cognito-card"
+        style={{
+          padding: '16px 20px',
+          marginBottom: 18,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          gap: 14,
+          flexWrap: 'wrap',
+        }}
+      >
+        <p style={{ margin: 0, color: 'var(--text-secondary)', fontSize: '0.93rem', lineHeight: 1.55, flex: '1 1 360px' }}>
           Work through real {course.qualificationLabel} {course.subjectName} {course.boardLabel}{' '}
-          ({course.specCode}) past papers and official mark schemes, sorted by year. Or switch to
-          the by-topic view to see past exam questions ordered by topic.
+          ({course.specCode}) past papers and official mark schemes, sorted by year. Open real
+          Cambridge PDFs side-by-side with their mark schemes, or switch to the by-topic view for
+          targeted practice.
         </p>
+        {officialPortalUrl && (
+          <a
+            href={officialPortalUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="tactile-btn tactile-btn--sm"
+            style={{ whiteSpace: 'nowrap' }}
+          >
+            Cambridge Portal <ExternalLink size={14} />
+          </a>
+        )}
       </div>
 
       {viewBy === 'year' ? (
@@ -499,7 +733,17 @@ export const PastPapersTab: React.FC<{ course: CourseDefinition }> = ({ course }
           </div>
         ) : (
           <>
-            {renderPaperList(newSpecYears, 'New 9-1 specification')}
+            {renderPaperList(
+              officialSpecYears,
+              'Official Cambridge International Papers & Specimen Exams',
+              true
+            )}
+            {renderPaperList(
+              practiceNewSpecYears,
+              officialSpecYears.length > 0
+                ? 'Additional Interactive Practice Papers'
+                : 'New 9-1 specification'
+            )}
             {renderPaperList(oldSpecYears, 'Old specification')}
           </>
         )
@@ -579,10 +823,13 @@ export const PastPapersTab: React.FC<{ course: CourseDefinition }> = ({ course }
         </div>
       )}
 
-      {/* Interactive Paper / Mark Scheme / Split View / Insert Modal */}
+      {/* Interactive Paper / Mark Scheme / Split View / Real Cambridge PDF Viewer Modal */}
       <CognitoDialog
         open={Boolean(viewerDoc)}
-        onClose={() => setViewerDoc(null)}
+        onClose={() => {
+          setTimerRunning(false);
+          setViewerDoc(null);
+        }}
         titleId="past-paper-viewer-title"
         size="xl"
       >
@@ -596,31 +843,42 @@ export const PastPapersTab: React.FC<{ course: CourseDefinition }> = ({ course }
                 flexWrap: 'wrap',
                 gap: 12,
                 paddingRight: 38,
-                marginBottom: 16,
+                marginBottom: 14,
               }}
             >
               <div>
-                <span className="tilted-badge tilted-badge--navy" style={{ marginBottom: 8 }}>
-                  {viewerDoc.mode === 'qp'
-                    ? 'QUESTION PAPER'
-                    : viewerDoc.mode === 'ms'
-                      ? 'MARK SCHEME'
-                      : viewerDoc.mode === 'split'
-                        ? 'SPLIT VIEW · PAPER & MARK SCHEME'
-                        : 'INSERT'}
-                </span>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap', marginBottom: 8 }}>
+                  <span className="tilted-badge tilted-badge--navy">
+                    {viewerDoc.mode === 'qp'
+                      ? 'QUESTION PAPER'
+                      : viewerDoc.mode === 'ms'
+                        ? 'MARK SCHEME'
+                        : viewerDoc.mode === 'split'
+                          ? 'SPLIT VIEW · PAPER & MARK SCHEME'
+                          : viewerDoc.mode === 'report'
+                            ? 'EXAMINER REPORT'
+                            : (viewerDoc.paper.insertLabel ?? 'INSERT').toUpperCase()}
+                  </span>
+                  {viewerHasOfficialPdf && (
+                    <span className="score-pill">
+                      <ShieldCheck size={12} style={{ marginRight: 4 }} />
+                      Official Cambridge PDF
+                    </span>
+                  )}
+                </div>
+
                 <h2
                   id="past-paper-viewer-title"
                   className="font-heading"
-                  style={{ fontSize: '1.65rem' }}
+                  style={{ fontSize: '1.55rem' }}
                 >
                   {viewerDoc.topicHeading
                     ? `${viewerDoc.topicHeading} · ${viewerDoc.paper.year}`
-                    : `${viewerDoc.paper.year} · ${viewerDoc.paper.title}`}
+                    : `${viewerDoc.paper.title}`}
                 </h2>
                 <div
                   style={{
-                    fontSize: '0.86rem',
+                    fontSize: '0.85rem',
                     color: 'var(--text-muted)',
                     display: 'flex',
                     alignItems: 'center',
@@ -637,19 +895,83 @@ export const PastPapersTab: React.FC<{ course: CourseDefinition }> = ({ course }
                 </div>
               </div>
 
-              <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
-                <div className="sp-segmented" role="tablist" aria-label="Document view">
-                  <button
-                    type="button"
-                    role="tab"
-                    aria-selected={viewerDoc.mode === 'qp'}
-                    className={`sp-segmented__btn sp-focusable${
-                      viewerDoc.mode === 'qp' ? ' is-active' : ''
-                    }`}
-                    onClick={() => setViewerDoc({ ...viewerDoc, mode: 'qp' })}
-                  >
-                    Paper
-                  </button>
+              {/* Built-in Exam Countdown Timer */}
+              <div
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 6,
+                  padding: '6px 10px',
+                  borderRadius: 11,
+                  backgroundColor: 'var(--bg-sunken)',
+                  border: '1px solid var(--border-subtle)',
+                }}
+              >
+                <Clock size={15} color="var(--color-blue-600)" />
+                <span
+                  style={{
+                    fontFamily: 'var(--font-mono)',
+                    fontWeight: 800,
+                    fontSize: '0.92rem',
+                    color: timerRunning ? 'var(--color-blue-600)' : 'var(--text-heading)',
+                    minWidth: 56,
+                  }}
+                >
+                  {formatTimer(timerSeconds)}
+                </span>
+                <button
+                  type="button"
+                  className="tactile-btn tactile-btn--sm"
+                  style={{ minHeight: 30, padding: '3px 9px', fontSize: '0.78rem' }}
+                  onClick={() => setTimerRunning((r) => !r)}
+                >
+                  {timerRunning ? <Pause size={13} /> : <Play size={13} />}
+                  <span>{timerRunning ? 'Pause' : 'Start timer'}</span>
+                </button>
+                <button
+                  type="button"
+                  aria-label="Reset exam timer"
+                  onClick={() => {
+                    setTimerRunning(false);
+                    setTimerSeconds(viewerDoc.paper.durationMinutes * 60);
+                  }}
+                  style={{
+                    border: 0,
+                    background: 'transparent',
+                    padding: 4,
+                    color: 'var(--text-muted)',
+                    display: 'inline-flex',
+                  }}
+                >
+                  <RotateCcw size={14} />
+                </button>
+              </div>
+            </div>
+
+            {/* Viewer Mode Switcher + External PDF / Print Buttons */}
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                gap: 10,
+                flexWrap: 'wrap',
+                marginBottom: 14,
+              }}
+            >
+              <div className="sp-segmented" role="tablist" aria-label="Document view">
+                <button
+                  type="button"
+                  role="tab"
+                  aria-selected={viewerDoc.mode === 'qp'}
+                  className={`sp-segmented__btn sp-focusable${
+                    viewerDoc.mode === 'qp' ? ' is-active' : ''
+                  }`}
+                  onClick={() => setViewerDoc({ ...viewerDoc, mode: 'qp' })}
+                >
+                  Paper
+                </button>
+                {(!viewerHasOfficialPdf || viewerDoc.paper.markSchemeUrl) && (
                   <button
                     type="button"
                     role="tab"
@@ -661,6 +983,8 @@ export const PastPapersTab: React.FC<{ course: CourseDefinition }> = ({ course }
                   >
                     Mark scheme
                   </button>
+                )}
+                {(!viewerHasOfficialPdf || viewerDoc.paper.markSchemeUrl) && (
                   <button
                     type="button"
                     role="tab"
@@ -671,34 +995,199 @@ export const PastPapersTab: React.FC<{ course: CourseDefinition }> = ({ course }
                     onClick={() => setViewerDoc({ ...viewerDoc, mode: 'split' })}
                     style={{ display: 'inline-flex', alignItems: 'center', gap: 5 }}
                   >
-                    <Columns2 size={14} /> Split view (Paper | Mark scheme)
+                    <Columns2 size={14} /> Split view
                   </button>
-                  {viewerDoc.paper.insertNote && (
-                    <button
-                      type="button"
-                      role="tab"
-                      aria-selected={viewerDoc.mode === 'insert'}
-                      className={`sp-segmented__btn sp-focusable${
-                        viewerDoc.mode === 'insert' ? ' is-active' : ''
-                      }`}
-                      onClick={() => setViewerDoc({ ...viewerDoc, mode: 'insert' })}
-                    >
-                      Insert
-                    </button>
-                  )}
-                </div>
+                )}
+                {(viewerDoc.paper.insertUrl || viewerDoc.paper.insertNote) && (
+                  <button
+                    type="button"
+                    role="tab"
+                    aria-selected={viewerDoc.mode === 'insert'}
+                    className={`sp-segmented__btn sp-focusable${
+                      viewerDoc.mode === 'insert' ? ' is-active' : ''
+                    }`}
+                    onClick={() => setViewerDoc({ ...viewerDoc, mode: 'insert' })}
+                  >
+                    {viewerDoc.paper.insertLabel ?? 'Insert'}
+                  </button>
+                )}
+                {viewerDoc.paper.examinerReportUrl && (
+                  <button
+                    type="button"
+                    role="tab"
+                    aria-selected={viewerDoc.mode === 'report'}
+                    className={`sp-segmented__btn sp-focusable${
+                      viewerDoc.mode === 'report' ? ' is-active' : ''
+                    }`}
+                    onClick={() => setViewerDoc({ ...viewerDoc, mode: 'report' })}
+                  >
+                    Examiner Report
+                  </button>
+                )}
+              </div>
 
-                <button
-                  type="button"
-                  className="tactile-btn tactile-btn--sm"
-                  onClick={() => window.print()}
-                >
-                  <Printer size={15} /> Print / PDF
-                </button>
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
+                {activePdfUrl && (
+                  <a
+                    href={activePdfUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="tactile-btn tactile-btn--sm tactile-btn--solid-blue"
+                  >
+                    <ExternalLink size={14} /> Open PDF in new tab
+                  </a>
+                )}
+                {!viewerHasOfficialPdf && (
+                  <button
+                    type="button"
+                    className="tactile-btn tactile-btn--sm"
+                    onClick={() => window.print()}
+                  >
+                    <Printer size={15} /> Print / PDF
+                  </button>
+                )}
               </div>
             </div>
 
-            {viewerDoc.mode === 'insert' ? (
+            {/* REAL OFFICIAL CAMBRIDGE PDF EMBED VIEWER */}
+            {viewerHasOfficialPdf ? (
+              viewerDoc.mode === 'split' && viewerDoc.paper.markSchemeUrl ? (
+                <div style={{ display: 'grid', gap: 10 }}>
+                  <div
+                    style={{
+                      display: 'grid',
+                      gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
+                      gap: 12,
+                    }}
+                  >
+                    <div style={{ display: 'grid', gap: 6 }}>
+                      <div
+                        style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'space-between',
+                          fontSize: '0.8rem',
+                          fontWeight: 800,
+                          color: 'var(--text-heading)',
+                        }}
+                      >
+                        <span>Question Paper ({viewerDoc.paper.paperCode})</span>
+                        <a
+                          href={viewerDoc.paper.questionPaperUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{ color: 'var(--text-link)', display: 'inline-flex', alignItems: 'center', gap: 4 }}
+                        >
+                          Full tab <ExternalLink size={12} />
+                        </a>
+                      </div>
+                      <iframe
+                        title={`${viewerDoc.paper.title} Question Paper PDF`}
+                        src={getEmbedSrc(viewerDoc.paper.questionPaperUrl!)}
+                        className="cognito-pdf-frame"
+                      />
+                    </div>
+                    <div style={{ display: 'grid', gap: 6 }}>
+                      <div
+                        style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'space-between',
+                          fontSize: '0.8rem',
+                          fontWeight: 800,
+                          color: 'var(--color-green-700)',
+                        }}
+                      >
+                        <span>Official Mark Scheme</span>
+                        <a
+                          href={viewerDoc.paper.markSchemeUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{ color: 'var(--text-link)', display: 'inline-flex', alignItems: 'center', gap: 4 }}
+                        >
+                          Full tab <ExternalLink size={12} />
+                        </a>
+                      </div>
+                      <iframe
+                        title={`${viewerDoc.paper.title} Mark Scheme PDF`}
+                        src={getEmbedSrc(viewerDoc.paper.markSchemeUrl)}
+                        className="cognito-pdf-frame"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'space-between',
+                      gap: 10,
+                      flexWrap: 'wrap',
+                      fontSize: '0.8rem',
+                      color: 'var(--text-muted)',
+                    }}
+                  >
+                    <span>Source: Official Cambridge International Education PDFs ({viewerDoc.paper.paperCode}).</span>
+                    <button
+                      type="button"
+                      onClick={() => setPdfRenderer((r) => (r === 'universal' ? 'native' : 'universal'))}
+                      style={{ border: 0, background: 'transparent', color: 'var(--text-link)', fontWeight: 700, padding: 0 }}
+                    >
+                      {pdfRenderer === 'universal' ? 'Switch to browser native PDF' : 'Switch to universal PDF viewer'}
+                    </button>
+                  </div>
+                </div>
+              ) : activePdfUrl ? (
+                <div style={{ display: 'grid', gap: 10 }}>
+                  <iframe
+                    title={`${viewerDoc.paper.title} (${viewerDoc.mode.toUpperCase()}) Official Cambridge PDF`}
+                    src={getEmbedSrc(activePdfUrl)}
+                    className="cognito-pdf-frame cognito-pdf-frame--tall"
+                  />
+                  <div
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'space-between',
+                      gap: 10,
+                      flexWrap: 'wrap',
+                      fontSize: '0.82rem',
+                      color: 'var(--text-muted)',
+                      padding: '6px 4px 0',
+                    }}
+                  >
+                    <span>
+                      Source: Official Cambridge International Education PDF ({viewerDoc.paper.paperCode}).
+                    </span>
+                    <div style={{ display: 'inline-flex', alignItems: 'center', gap: 14, flexWrap: 'wrap' }}>
+                      <button
+                        type="button"
+                        onClick={() => setPdfRenderer((r) => (r === 'universal' ? 'native' : 'universal'))}
+                        style={{ border: 0, background: 'transparent', color: 'var(--text-secondary)', fontWeight: 700, padding: 0 }}
+                      >
+                        {pdfRenderer === 'universal' ? 'Try native PDF' : 'Try universal viewer'}
+                      </button>
+                      <a
+                        href={activePdfUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ color: 'var(--text-link)', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: 4 }}
+                      >
+                        Open direct Cambridge PDF <ExternalLink size={13} />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div
+                  className="cognito-card"
+                  style={{ padding: 20, backgroundColor: 'var(--bg-sunken)' }}
+                >
+                  <p style={{ margin: 0, fontWeight: 700, color: 'var(--text-primary)' }}>
+                    {viewerDoc.paper.insertNote ?? 'Document not available for this component.'}
+                  </p>
+                </div>
+              )
+            ) : viewerDoc.mode === 'insert' ? (
               <div
                 className="cognito-card"
                 style={{ padding: 20, backgroundColor: 'var(--bg-sunken)' }}

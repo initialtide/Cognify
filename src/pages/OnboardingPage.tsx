@@ -53,8 +53,8 @@ const QUAL_OPTIONS: {
   {
     id: 'igcse',
     title: 'IGCSE',
-    badge: '8 FULL COURSES',
-    description: 'Cambridge CIE & Edexcel International — Maths, Sciences, Business, CS, Economics & English.',
+    badge: '13 FULL COURSES',
+    description: 'Cambridge CIE & Edexcel International — Maths, Sciences, Business, CS, Economics, English, Humanities & Languages.',
     defaultYear: 'YEAR 11',
   },
   {
