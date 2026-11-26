@@ -46,7 +46,9 @@ export const AuthPage: React.FC<AuthPageProps> = ({ initialMode = 'signin' }) =>
             initialMode={initialMode}
             titleId="auth-page-title"
             onStartGuidedOnboarding={() => navigate('/onboarding')}
-            onSuccess={(meta) => navigate(meta.needsOnboarding ? '/onboarding' : '/dashboard')}
+            onSuccess={(meta) =>
+              navigate(meta.mode === 'register' && meta.needsOnboarding ? '/onboarding' : '/dashboard')
+            }
           />
         </section>
 

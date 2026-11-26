@@ -257,4 +257,86 @@ describe('Sign In, Register & Progress Save System', () => {
     expect(signInRes.ok).toBe(true);
     expect(screen.getByTestId('name')).toHaveTextContent('Amara');
   });
+
+  it('never bounces a returning user back to onboarding on sign-in, and recovers accounts if primary storage is corrupted', async () => {
+    let api!: ReturnType<typeof useApp>;
+    const Harness: React.FC = () => {
+      api = useApp();
+      return (
+        <div>
+          <span data-testid="name">{api.profile.name}</span>
+          <span data-testid="auth">{api.isAuthenticated ? 'yes' : 'no'}</span>
+          <span data-testid="onboarded">{api.profile.onboardingCompleted ? 'yes' : 'no'}</span>
+        </div>
+      );
+    };
+
+    const first = render(
+      <AppProvider>
+        <Harness />
+      </AppProvider>
+    );
+
+    // Register with runOnboardingNext: true so onboardingCompleted starts false
+    const reg = await act(async () =>
+      api.registerAccount({
+        name: 'Toby',
+        email: 'toby@school.uk',
+        password: 'chemistry88',
+        yearGroup: 'YEAR 11',
+        avatarId: 'snorkel',
+        keepGuestProgress: false,
+        runOnboardingNext: true,
+      })
+    );
+    expect(reg.ok).toBe(true);
+    expect(reg.needsOnboarding).toBe(true);
+    expect(screen.getByTestId('onboarded')).toHaveTextContent('no');
+
+    // Sign out, then corrupt the primary STORAGE_KEY while leaving the accounts vault intact
+    act(() => {
+      api.signOutAccount();
+    });
+    localStorage.setItem(STORAGE_KEY, '{corrupted_json');
+    first.unmount();
+
+    // Fresh mount recovers Toby from the accounts vault and signs in straight to Dashboard
+    render(
+      <AppProvider>
+        <Harness />
+      </AppProvider>
+    );
+
+    const loginRes = await act(async () =>
+      api.signInAccount({ email: 'toby@school.uk', password: 'chemistry88' })
+    );
+    expect(loginRes.ok).toBe(true);
+    expect(loginRes.needsOnboarding).toBe(false);
+    expect(screen.getByTestId('auth')).toHaveTextContent('yes');
+    expect(screen.getByTestId('name')).toHaveTextContent('Toby');
+    expect(screen.getByTestId('onboarded')).toHaveTextContent('yes');
+  });
+
+  it('shows immediate inline validation alerts instead of silent native blocks on /login', async () => {
+    render(
+      <AppProvider>
+        <MemoryRouter initialEntries={['/login']}>
+          <Routes>
+            <Route path="/login" element={<AuthPage initialMode="signin" />} />
+          </Routes>
+        </MemoryRouter>
+      </AppProvider>
+    );
+
+    // Submit empty form -> inline alert appears immediately
+    fireEvent.click(screen.getByRole('button', { name: /^Sign in$/i }));
+    expect(screen.getByRole('alert')).toHaveTextContent(/enter your email address/i);
+
+    // Enter valid email but no password -> inline password alert
+    fireEvent.change(screen.getByPlaceholderText(/student@example\.com/i), {
+      target: { value: 'student@school.uk' },
+    });
+    fireEvent.click(screen.getByRole('button', { name: /^Sign in$/i }));
+    expect(screen.getByRole('alert')).toHaveTextContent(/enter your password/i);
+  });
 });

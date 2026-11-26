@@ -2,11 +2,15 @@ import React, { useMemo, useState } from 'react';
 import {
   ArrowRight,
   ArrowUpDown,
+  Check,
+  CheckCircle2,
   ChevronLeft,
   ChevronRight,
+  Copy,
   FileText,
   HelpCircle,
   Info,
+  KeyRound,
   LogIn,
   ShieldCheck,
   UserPlus,
@@ -40,7 +44,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
   onOpenManageCourses,
   onOpenAuthModal,
 }) => {
-  const { profile, isAuthenticated, streakStats } = useApp();
+  const { profile, isAuthenticated, streakStats, authToast, dismissAuthToast } = useApp();
   const navigate = useNavigate();
   const [weekOffset, setWeekOffset] = useState(0);
   const [sortCol, setSortCol] = useState<SortCol | null>(null);
@@ -48,6 +52,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
   const [qualFilter, setQualFilter] = useState<string>('all');
   const [infoTip, setInfoTip] = useState<'questions' | 'flashcards' | null>(null);
   const [dismissedSaveTip, setDismissedSaveTip] = useState(false);
+  const [copiedRecoveryKey, setCopiedRecoveryKey] = useState(false);
 
   const days = getWeekDays(weekOffset);
   const rangeLabel = formatWeekRangeLabel(weekOffset);
@@ -136,8 +141,120 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
 
   const showGuestOnboardingStrip = !isAuthenticated && !profile.onboardingCompleted && !dismissedSaveTip;
 
+  const handleCopyRecoveryKey = async (key: string) => {
+    try {
+      await navigator.clipboard.writeText(key);
+      setCopiedRecoveryKey(true);
+      setTimeout(() => setCopiedRecoveryKey(false), 2400);
+    } catch {
+      // Fallback ignored if clipboard permission unavailable
+    }
+  };
+
   return (
     <main className="page-container">
+      {authToast && isAuthenticated && (
+        <section
+          role="status"
+          aria-live="polite"
+          style={{
+            marginBottom: 18,
+            padding: '14px 18px',
+            borderRadius: 14,
+            backgroundColor: 'rgba(16, 185, 129, 0.11)',
+            border: '1.5px solid rgba(16, 185, 129, 0.35)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            gap: 14,
+            flexWrap: 'wrap',
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'flex-start', gap: 11, flex: '1 1 280px' }}>
+            <CheckCircle2
+              size={20}
+              color="var(--color-green-600)"
+              style={{ flexShrink: 0, marginTop: 2 }}
+            />
+            <div style={{ display: 'grid', gap: 4 }}>
+              <div style={{ fontWeight: 800, fontSize: '0.94rem', color: 'var(--color-green-700)' }}>
+                {authToast.kind === 'registered'
+                  ? `Account created & signed in as ${authToast.name} (${authToast.email})`
+                  : authToast.kind === 'password-reset'
+                    ? `Password updated! Signed back in as ${authToast.name} (${authToast.email})`
+                    : `Welcome back, ${authToast.name}! Signed in as ${authToast.email}`}
+              </div>
+              <div style={{ fontSize: '0.83rem', color: 'var(--text-secondary)', lineHeight: 1.45 }}>
+                {authToast.kind === 'registered'
+                  ? 'Your courses, XP, quiz marks, and flashcards now auto-save on this browser. Save your Recovery Key below in case you ever forget your password:'
+                  : 'Your saved courses, XP, streaks, and quiz scores are loaded and auto-saving.'}
+              </div>
+              {authToast.recoveryKey && (
+                <div
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: 8,
+                    flexWrap: 'wrap',
+                    marginTop: 4,
+                  }}
+                >
+                  <span
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: 6,
+                      padding: '4px 10px',
+                      borderRadius: 8,
+                      backgroundColor: 'var(--bg-elevated)',
+                      border: '1px solid var(--border-card)',
+                      fontFamily: 'monospace',
+                      fontWeight: 800,
+                      fontSize: '0.84rem',
+                      color: 'var(--text-heading)',
+                    }}
+                  >
+                    <KeyRound size={13} /> {authToast.recoveryKey}
+                  </span>
+                  <button
+                    type="button"
+                    onClick={() => handleCopyRecoveryKey(authToast.recoveryKey!)}
+                    className="tactile-btn tactile-btn--sm"
+                    style={{ padding: '4px 10px', fontSize: '0.78rem' }}
+                  >
+                    {copiedRecoveryKey ? (
+                      <>
+                        <Check size={13} /> Copied
+                      </>
+                    ) : (
+                      <>
+                        <Copy size={13} /> Copy key
+                      </>
+                    )}
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
+
+          <button
+            type="button"
+            aria-label="Dismiss account notice"
+            onClick={dismissAuthToast}
+            style={{
+              border: 0,
+              background: 'transparent',
+              padding: 4,
+              color: 'var(--text-muted)',
+              display: 'inline-flex',
+              alignSelf: 'flex-start',
+            }}
+          >
+            <X size={17} />
+          </button>
+        </section>
+      )}
+
       {/* Hero Profile & Streak Card — Spacious Cognito Proportions */}
       <section className="cognito-card" style={{ padding: '36px 40px', marginTop: 8 }}>
         <button

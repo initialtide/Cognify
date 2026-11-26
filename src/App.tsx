@@ -47,7 +47,7 @@ const AppShell: React.FC = () => {
     setAuthModalState({ open: true, mode });
 
   const handleAuthModalSuccess = (meta: AuthSuccessMeta) => {
-    if (meta.needsOnboarding) {
+    if (meta.mode === 'register' && meta.needsOnboarding) {
       navigate('/onboarding');
       return;
     }
