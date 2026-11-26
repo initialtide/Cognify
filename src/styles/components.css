@@ -70,9 +70,9 @@ a {
 /* Container */
 .page-container {
   width: 100%;
-  max-width: 1060px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 40px 28px 104px;
+  padding: 24px 24px 96px;
 }
 
 .wide-container {
@@ -85,10 +85,10 @@ a {
 /* Cognito Signature Paper-Stack Card */
 .cognito-card {
   position: relative;
-  background-color: var(--bg-card);
+  background-color: var(--bg-elevated);
   border: 1px solid var(--border-card);
-  border-radius: 18px;
-  box-shadow: 0 3px 0 var(--border-lip);
+  border-radius: 14px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.03);
 }
 
 .cognito-card--interactive {
@@ -98,16 +98,16 @@ a {
 .cognito-card--interactive:hover {
   border-color: var(--color-blue-300);
   transform: translateY(-2px);
-  box-shadow: 0 5px 0 var(--border-lip);
+  box-shadow: 0 4px 12px rgba(16, 24, 40, 0.06);
 }
 
-/* Faint Graph Paper Grid Texture */
+/* Faint Graph Paper Grid Texture (exact real Cognito density) */
 .cognito-grid-bg {
   background-color: var(--bg-card);
   background-image:
     linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
     linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
-  background-size: 32px 32px;
+  background-size: 26px 26px;
 }
 
 /* Signature Tactile 2px-Border Offset-Shadow Button */
@@ -274,62 +274,61 @@ a {
   margin: 0;
 }
 
-/* Top Navigation Bar */
+/* Top Navigation Bar — Exact Real Cognito Seamless Header */
 .top-nav {
   position: sticky;
   top: 0;
   z-index: 40;
-  height: 76px;
+  height: 62px;
   background-color: var(--bg-nav);
-  border-bottom: 1px solid var(--border-subtle);
   display: flex;
   align-items: center;
 }
 
 .top-nav__inner {
   width: 100%;
-  max-width: 1220px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0 28px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 16px;
 }
 
 .top-nav__left {
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: 20px;
 }
 
 .top-nav__right {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .nav-pill-group {
   display: inline-flex;
   align-items: stretch;
   background-color: var(--bg-pill);
-  border: 1px solid var(--border-card);
-  border-radius: 13px;
-  box-shadow: 0 2px 0 var(--border-lip);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
   overflow: visible;
 }
 
 .nav-pill-btn {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  padding: 8px 15px;
+  gap: 6px;
+  padding: 7px 12px;
   background: transparent;
   border: 0;
-  font-size: 0.92rem;
+  font-size: 0.84rem;
   font-weight: 700;
   color: var(--text-primary);
-  border-radius: 11px;
+  border-radius: 9px;
   transition: background-color 120ms ease;
 }
 
@@ -514,14 +513,14 @@ dialog.cognito-dialog[open] {
   position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  padding: 12px 16px 14px;
+  gap: 5px;
+  padding: 7px 14px;
   border: 0;
-  border-radius: 10px 10px 0 0;
+  border-radius: 9px;
   background: transparent;
-  font-weight: 700;
-  font-size: 0.98rem;
-  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
   white-space: nowrap;
   flex: none;
   transition: color 130ms ease, background-color 130ms ease;
@@ -529,24 +528,24 @@ dialog.cognito-dialog[open] {
 
 .cognito-tab:hover {
   color: var(--text-heading);
-  background-color: transparent;
+  background-color: rgba(15, 23, 42, 0.04);
 }
 
 .cognito-tab[aria-selected="true"],
 .cognito-tab--active {
   color: var(--text-heading);
-  background-color: transparent;
+  font-weight: 700;
+  background-color: #ebeef3;
 }
 
-.cognito-tab[aria-selected="true"]::after,
-.cognito-tab--active::after {
-  content: "";
-  position: absolute;
-  left: 6px;
-  right: 6px;
-  bottom: 0;
-  border-block-end: 3px solid var(--color-blue-500);
-  border-radius: 3px 3px 0 0;
+:root[data-theme="dark"] .cognito-tab:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+:root[data-theme="dark"] .cognito-tab[aria-selected="true"],
+:root[data-theme="dark"] .cognito-tab--active {
+  color: #f8fafc;
+  background-color: rgba(255, 255, 255, 0.11);
 }
 
 /* Toggle Switch */
@@ -1798,45 +1797,97 @@ dialog.quick-search-dialog[open] {
   color: #ffffff;
 }
 
-/* Course Workspace Clean Progress Bar, Inline Filter & Full-Row Subtopics */
+/* Course Workspace — Exact Real Cognito Toolbar, Topic Cards & 3-Column Subtopic Grid */
 .workspace-toolbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 14px;
+  gap: 12px;
   flex-wrap: wrap;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .workspace-progress-card {
-  flex: 1 1 320px;
-  padding: 14px 20px;
-  display: flex;
+  width: fit-content;
+  max-width: 100%;
+  height: 40px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border-card);
+  background-color: var(--bg-elevated);
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.03);
+  display: inline-flex;
   align-items: center;
-  gap: 14px;
+  gap: 11px;
   text-align: left;
-  transition: border-color 120ms ease;
+  transition: border-color 120ms ease, background-color 120ms ease;
 }
 
 .workspace-progress-card:hover {
   border-color: var(--color-blue-300);
+  background-color: var(--bg-hover);
+}
+
+.workspace-toolbar-right {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.workspace-icon-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  border: 1px solid var(--border-card);
+  background-color: var(--bg-elevated);
+  color: var(--text-heading);
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.03);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 120ms ease, background-color 120ms ease;
+}
+
+.workspace-icon-btn:hover {
+  border-color: var(--color-blue-300);
+  background-color: var(--bg-hover);
+}
+
+.workspace-expand-btn {
+  height: 38px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border-card);
+  background-color: var(--bg-elevated);
+  color: var(--text-heading);
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.03);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 0.82rem;
+  transition: border-color 120ms ease, background-color 120ms ease;
+}
+
+.workspace-expand-btn:hover {
+  border-color: var(--color-blue-300);
+  background-color: var(--bg-hover);
 }
 
 .workspace-filter-wrap {
   position: relative;
-  flex: 0 1 250px;
-  min-width: 185px;
+  width: 220px;
 }
 
 .workspace-filter-input {
   width: 100%;
-  height: 48px;
-  padding: 0 34px 0 40px;
-  border-radius: 15px;
-  border: 1px solid var(--border-card);
-  background-color: var(--bg-card);
-  box-shadow: 0 3px 0 var(--border-lip);
-  font-size: 0.92rem;
+  height: 38px;
+  padding: 0 32px 0 34px;
+  border-radius: 10px;
+  border: 1px solid var(--color-blue-300);
+  background-color: var(--bg-elevated);
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+  font-size: 0.84rem;
   font-weight: 600;
   color: var(--text-primary);
   transition: border-color 120ms ease;
@@ -1844,7 +1895,7 @@ dialog.quick-search-dialog[open] {
 
 .workspace-filter-input:focus {
   outline: none;
-  border-color: var(--color-blue-400);
+  border-color: var(--color-blue-500);
 }
 
 .workspace-filter-input::placeholder {
@@ -1878,149 +1929,177 @@ dialog.quick-search-dialog[open] {
   color: var(--color-blue-200);
 }
 
+.workspace-topic-card {
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-card);
+  border-radius: 14px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.03);
+  overflow: hidden;
+}
+
 .workspace-topic-header {
   width: 100%;
-  padding: 22px 26px;
+  padding: 18px 24px;
   border: 0;
   background: transparent;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 18px;
+  gap: 16px;
   text-align: left;
   transition: background-color 120ms ease;
 }
 
 .workspace-topic-header:hover {
-  background-color: var(--bg-hover);
+  background-color: rgba(15, 23, 42, 0.015);
 }
 
-.workspace-subtopic-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 17px 26px;
-  border-top: 1px solid var(--border-subtle);
-  background-color: var(--bg-elevated);
-  color: var(--text-primary);
-  transition: background-color 120ms ease;
+:root[data-theme="dark"] .workspace-topic-header:hover {
+  background-color: rgba(255, 255, 255, 0.025);
 }
 
-.workspace-subtopic-row:first-child {
-  border-top: 0;
-}
-
-.workspace-subtopic-row:hover {
-  background-color: var(--bg-hover);
-}
-
-.workspace-subtopic-left {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  min-width: 0;
-  flex: 1;
-}
-
-.workspace-status-indicator {
-  width: 22px;
-  height: 22px;
-  border-radius: 999px;
+.workspace-topic-title {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  border: 1.5px solid var(--border-card);
-  background-color: var(--bg-card);
-  color: transparent;
+  gap: 10px;
+  min-width: 0;
+  font-size: 0.94rem;
+  color: var(--text-heading);
+  transition: color 120ms ease;
 }
 
-.workspace-status-indicator.is-complete {
-  border-color: var(--color-green-600);
-  background-color: var(--color-green-500);
-  color: #ffffff;
+.workspace-topic-title.is-open {
+  color: #2c86d6;
 }
 
-.workspace-status-indicator.is-progress {
-  border-color: var(--color-blue-400);
-  background-color: var(--color-blue-50);
-  color: var(--color-blue-600);
-}
-
-:root[data-theme="dark"] .workspace-status-indicator.is-progress {
-  background-color: rgba(26, 150, 243, 0.2);
+:root[data-theme="dark"] .workspace-topic-title.is-open {
   color: var(--color-blue-300);
 }
 
-.workspace-subtopic-code {
-  padding: 3px 9px;
-  border-radius: 7px;
-  font-size: 0.8rem;
-  font-weight: 800;
-  background-color: var(--bg-sunken);
-  color: var(--text-heading);
-  flex-shrink: 0;
-}
-
-.workspace-subtopic-code.is-complete {
-  background-color: var(--color-green-100);
-  color: var(--color-green-700);
-}
-
-:root[data-theme="dark"] .workspace-subtopic-code.is-complete {
-  background-color: rgba(83, 215, 170, 0.18);
-  color: var(--color-green-300);
-}
-
-.workspace-subtopic-title {
-  font-weight: 700;
-  font-size: 0.98rem;
-  color: var(--text-heading);
-  line-height: 1.4;
-}
-
-.workspace-subtopic-right {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  flex-shrink: 0;
-}
-
-.workspace-confidence-bar {
+.workspace-mini-track {
   width: 78px;
-  height: 7px;
+  height: 6px;
   border-radius: 999px;
-  background-color: var(--bg-sunken);
+  background-color: #eceae5;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+:root[data-theme="dark"] .workspace-mini-track {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.workspace-mini-fill {
+  height: 100%;
+  border-radius: 999px;
+  background-color: var(--color-green-500);
+  transition: width 220ms ease;
+}
+
+/* Signature Real Cognito 3-Column Subtopic Grid */
+.workspace-subtopics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 28px;
+  padding: 4px 28px 26px 46px;
+}
+
+.workspace-subtopics-col {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.workspace-subtopics-col:not(:last-child) {
+  border-right: 1px solid rgba(15, 23, 42, 0.045);
+  padding-right: 22px;
+}
+
+:root[data-theme="dark"] .workspace-subtopics-col:not(:last-child) {
+  border-right-color: rgba(255, 255, 255, 0.06);
+}
+
+.workspace-subtopic-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 10px 8px;
+  border-radius: 8px;
+  min-width: 0;
+  color: var(--text-heading);
+  transition: background-color 120ms ease, color 120ms ease;
+}
+
+.workspace-subtopic-cell:hover {
+  background-color: rgba(44, 134, 214, 0.055);
+  color: #1e78c8;
+}
+
+:root[data-theme="dark"] .workspace-subtopic-cell:hover {
+  background-color: rgba(72, 171, 246, 0.1);
+  color: var(--color-blue-200);
+}
+
+.workspace-subtopic-cell__label {
+  font-size: 0.835rem;
+  font-weight: 600;
+  line-height: 1.35;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.workspace-subtopic-cell__meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.workspace-subtopic-cell__bar {
+  width: 82px;
+  height: 5px;
+  border-radius: 999px;
+  background-color: #eceae5;
   overflow: hidden;
   display: flex;
   flex-shrink: 0;
 }
 
-.workspace-start-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  padding: 5px 13px;
-  border-radius: 999px;
-  font-size: 0.82rem;
-  font-weight: 700;
-  background-color: var(--bg-sunken);
-  color: var(--text-secondary);
-  border: 1px solid var(--border-subtle);
-  white-space: nowrap;
+:root[data-theme="dark"] .workspace-subtopic-cell__bar {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-.workspace-subtopic-row:hover .workspace-start-pill {
-  background-color: var(--color-blue-50);
-  color: var(--color-blue-700);
-  border-color: var(--color-blue-200);
+.workspace-subtopic-cell__score {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--color-green-700);
 }
 
-:root[data-theme="dark"] .workspace-subtopic-row:hover .workspace-start-pill {
-  background-color: rgba(26, 150, 243, 0.18);
-  color: var(--color-blue-200);
-  border-color: rgba(72, 171, 246, 0.35);
+:root[data-theme="dark"] .workspace-subtopic-cell__score {
+  color: var(--color-green-300);
+}
+
+@media (max-width: 860px) {
+  .workspace-subtopics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 4px 20px 22px 28px;
+  }
+  .workspace-subtopics-col:nth-child(2n) {
+    border-right: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .workspace-subtopics-grid {
+    grid-template-columns: 1fr;
+    padding: 4px 16px 20px 22px;
+  }
+  .workspace-subtopics-col:not(:last-child) {
+    border-right: 0;
+    padding-right: 0;
+  }
 }
 
 /* Catalog Subject Feature Tag & Notes Glossary Popover (Dark-Mode Safe) */
