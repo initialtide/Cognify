@@ -195,10 +195,17 @@ export const QuickSearchModal: React.FC<QuickSearchModalProps> = ({ open, onClos
           if (matchesAll(hay)) {
             const titleStarts = sub.title.toLowerCase().startsWith(q);
             const hasExam = c.examPractice.some((e) => e.subtopicId === sub.id);
-            const jumps: QuickJumpAction[] = [
-              { label: c.isMaths ? 'Lesson' : 'Notes', to: `/course/${c.id}/notes/${sub.id}` },
-              { label: 'Quiz', to: `/course/${c.id}/quiz/${sub.id}` },
-            ];
+            const jumps: QuickJumpAction[] = c.isMaths
+              ? [
+                  { label: 'Lesson', to: `/course/${c.id}/lesson/${sub.id}` },
+                  { label: 'Notes', to: `/course/${c.id}/notes/${sub.id}` },
+                  { label: 'Quiz', to: `/course/${c.id}/quiz/${sub.id}` },
+                ]
+              : [
+                  { label: 'Notes', to: `/course/${c.id}/notes/${sub.id}` },
+                  { label: 'Lesson', to: `/course/${c.id}/lesson/${sub.id}` },
+                  { label: 'Quiz', to: `/course/${c.id}/quiz/${sub.id}` },
+                ];
             if (c.flashcards.length > 0) {
               jumps.push({ label: 'Cards', to: `/course/${c.id}/flashcards/${sub.id}` });
             }
@@ -211,7 +218,7 @@ export const QuickSearchModal: React.FC<QuickSearchModalProps> = ({ open, onClos
               kind: 'subtopic',
               title: `${sub.code} - ${sub.title}`,
               subtitle: `${c.qualificationLabel} ${c.subjectName} · Topic ${topic.number}: ${topic.title}`,
-              to: `/course/${c.id}/notes/${sub.id}`,
+              to: c.isMaths ? `/course/${c.id}/lesson/${sub.id}` : `/course/${c.id}/notes/${sub.id}`,
               jumps,
               score: (titleStarts ? 30 : 10) + enrolledBoost,
             });

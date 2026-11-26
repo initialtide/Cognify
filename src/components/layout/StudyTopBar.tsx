@@ -13,6 +13,7 @@ import {
   Moon,
   MoreVertical,
   Palette,
+  PlayCircle,
   Printer,
   Scan,
   Sparkles,
@@ -20,7 +21,7 @@ import {
   Volume2,
 } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useApp } from '../../store/AppContext';
+import { computeLessonSubtopicProgress, useApp } from '../../store/AppContext';
 import '../../styles/study-players.css';
 import { CourseDefinition } from '../../types/curriculum';
 
@@ -46,7 +47,7 @@ interface StudyTopBarProps {
   course: CourseDefinition;
   currentSubtopicId?: string;
   title: string;
-  activityType: 'notes' | 'quiz' | 'flashcards' | 'exam-practice';
+  activityType: 'lesson' | 'notes' | 'quiz' | 'flashcards' | 'exam-practice';
   progressPercent: number;
   sessionXp?: number;
   sessionStreak?: number;
@@ -56,6 +57,7 @@ interface StudyTopBarProps {
 }
 
 const ACTIVITIES = [
+  { kind: 'lesson' as const, label: 'Lesson', icon: PlayCircle },
   { kind: 'notes' as const, label: 'Notes', icon: BookOpen },
   { kind: 'quiz' as const, label: 'Quiz', icon: ListChecks },
   { kind: 'flashcards' as const, label: 'Flashcards', icon: Layers },
@@ -163,7 +165,7 @@ export const StudyTopBar: React.FC<StudyTopBarProps> = ({
       : allSubtopics[0]?.id;
 
   const backTarget = `/course/${course.id}/${
-    activityType === 'notes' && course.isMaths ? 'lessons' : activityType
+    activityType === 'lesson' ? 'lessons' : activityType
   }`;
 
   const courseProgress = profile.progressByCourse[course.id];
@@ -172,7 +174,10 @@ export const StudyTopBar: React.FC<StudyTopBarProps> = ({
   const subtopicCompletionMap = useMemo(() => {
     const map = new Map<string, { percent: number; completed: boolean }>();
     for (const sub of allSubtopics) {
-      if (activityType === 'notes') {
+      if (activityType === 'lesson') {
+        const lp = computeLessonSubtopicProgress(course, sub.id, courseProgress);
+        map.set(sub.id, { percent: lp.percent, completed: lp.completed });
+      } else if (activityType === 'notes') {
         const isRead = courseProgress?.readNoteIds.includes(sub.id) ?? false;
         const lesson = course.notes[sub.id];
         const totalPts = lesson?.checklistPoints.length ?? 0;
@@ -220,7 +225,7 @@ export const StudyTopBar: React.FC<StudyTopBarProps> = ({
       }
     }
     return map;
-  }, [activityType, allSubtopics, course.examPractice, course.flashcards, course.notes, course.quizzes, courseProgress]);
+  }, [activityType, allSubtopics, course, courseProgress]);
 
   const handleCopy = () => {
     navigator.clipboard?.writeText(window.location.href).catch(() => {});
@@ -286,13 +291,15 @@ export const StudyTopBar: React.FC<StudyTopBarProps> = ({
               {resolvedSubtopicId && (
                 <>
                   <div className="sp-popover-eyebrow">CHANGE ACTIVITY</div>
-                  <div className="sp-activity-grid" role="group" aria-label="Change study activity">
+                  <div
+                    className="sp-activity-grid sp-activity-grid--5"
+                    role="group"
+                    aria-label="Change study activity"
+                  >
                     {ACTIVITIES.map(({ kind, label, icon: Icon }) => {
                       const isActive = activityType === kind;
-                      const displayLabel =
-                        kind === 'notes' && course.isMaths ? 'Lessons' : label;
                       const targetId =
-                        currentSubtopicId === 'all' && kind !== 'notes'
+                        currentSubtopicId === 'all' && kind !== 'notes' && kind !== 'lesson'
                           ? 'all'
                           : resolvedSubtopicId;
                       return (
@@ -307,7 +314,7 @@ export const StudyTopBar: React.FC<StudyTopBarProps> = ({
                           }}
                         >
                           <Icon size={16} />
-                          <span>{displayLabel}</span>
+                          <span>{label}</span>
                         </button>
                       );
                     })}
@@ -643,13 +650,23 @@ export const StudyTopBar: React.FC<StudyTopBarProps> = ({
                 </div>
               </div>
 
+              {resolvedSubtopicId && activityType !== 'lesson' && (
+                <Link
+                  to={`/course/${course.id}/lesson/${resolvedSubtopicId}`}
+                  onClick={() => setOptionsOpen(false)}
+                  className="sp-options-action sp-focusable"
+                >
+                  <PlayCircle size={16} /> Open video lesson
+                </Link>
+              )}
+
               {resolvedSubtopicId && activityType !== 'notes' && (
                 <Link
                   to={`/course/${course.id}/notes/${resolvedSubtopicId}`}
                   onClick={() => setOptionsOpen(false)}
                   className="sp-options-action sp-focusable"
                 >
-                  <BookOpen size={16} /> {course.isMaths ? 'Open lessons' : 'Open notes'}
+                  <BookOpen size={16} /> Open revision notes
                 </Link>
               )}
 

@@ -53,6 +53,7 @@ export const XpHistoryPopover: React.FC<XpHistoryPopoverProps> = ({
       });
     }
     return [
+      { label: 'Lessons', xp: profile.activityLog.filter((e) => e.type === 'lesson').reduce((a, b) => a + b.xpEarned, 0), isToday: false },
       { label: 'Notes', xp: profile.activityLog.filter((e) => e.type === 'notes').reduce((a, b) => a + b.xpEarned, 0), isToday: false },
       { label: 'Quiz', xp: profile.activityLog.filter((e) => e.type === 'quiz').reduce((a, b) => a + b.xpEarned, 0), isToday: true },
       { label: 'Cards', xp: profile.activityLog.filter((e) => e.type === 'flashcards').reduce((a, b) => a + b.xpEarned, 0), isToday: false },

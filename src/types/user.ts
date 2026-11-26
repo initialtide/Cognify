@@ -32,6 +32,7 @@ export interface FlashcardConfidence {
 
 export interface CourseProgress {
   readNoteIds: string[];
+  watchedLessonIds?: string[];
   checkedPointsBySubtopic: Record<string, string[]>;
   questionAttempts: Record<string, QuestionAttempt>;
   flashcardConfidence: Record<string, FlashcardConfidence>;
@@ -42,7 +43,7 @@ export interface ActivityEvent {
   id: string;
   timestamp: string;
   dateKey: string;
-  type: 'notes' | 'quiz' | 'flashcards' | 'exam' | 'key-terms' | 'past-paper';
+  type: 'lesson' | 'notes' | 'quiz' | 'flashcards' | 'exam' | 'key-terms' | 'past-paper';
   courseId: string;
   courseLabel: string;
   subjectName: string;

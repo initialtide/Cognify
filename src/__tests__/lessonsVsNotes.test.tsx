@@ -1,0 +1,188 @@
+import { fireEvent, render, screen } from '@testing-library/react';
+import { MemoryRouter, Route, Routes } from 'react-router-dom';
+import { beforeEach, describe, expect, it } from 'vitest';
+import { getCourseById } from '../data/catalog';
+import { CourseWorkspacePage } from '../pages/CourseWorkspacePage';
+import { LessonPlayerPage } from '../pages/study/LessonPlayerPage';
+import { NotesViewerPage } from '../pages/study/NotesViewerPage';
+import { AppProvider, computeLessonSubtopicProgress, STORAGE_KEY } from '../store/AppContext';
+
+beforeEach(() => {
+  localStorage.clear();
+});
+
+describe('Distinct Cognito Lessons vs Notes Experiences', () => {
+  it('routes Lessons tab subtopics to /lesson/:subtopicId and Notes tab subtopics to /notes/:subtopicId on IGCSE Maths & IGCSE Biology', () => {
+    const { unmount } = render(
+      <AppProvider>
+        <MemoryRouter initialEntries={['/course/igcse-maths-cie']}>
+          <Routes>
+            <Route path="/course/:courseId" element={<CourseWorkspacePage />} />
+            <Route path="/course/:courseId/:tab" element={<CourseWorkspacePage />} />
+          </Routes>
+        </MemoryRouter>
+      </AppProvider>
+    );
+
+    // Maths lands on Lessons by default and links to /lesson/
+    const lessonsTab = screen.getByRole('tab', { name: /^Lessons$/i });
+    const notesTab = screen.getByRole('tab', { name: /^Notes$/i });
+    expect(lessonsTab).toHaveAttribute('aria-selected', 'true');
+    expect(notesTab).toHaveAttribute('aria-selected', 'false');
+
+    const firstLessonLink = document.querySelector('a.workspace-subtopic-cell') as HTMLAnchorElement;
+    expect(firstLessonLink).toBeTruthy();
+    expect(firstLessonLink.getAttribute('href')).toContain('/course/igcse-maths-cie/lesson/');
+
+    // Switching to Notes tab routes subtopics to /notes/
+    fireEvent.click(notesTab);
+    expect(screen.getByRole('tab', { name: /^Notes$/i })).toHaveAttribute('aria-selected', 'true');
+    const firstNoteLink = document.querySelector('a.workspace-subtopic-cell') as HTMLAnchorElement;
+    expect(firstNoteLink.getAttribute('href')).toContain('/course/igcse-maths-cie/notes/');
+
+    unmount();
+
+    // Sciences (IGCSE Biology) land on Notes by default and also expose Lessons tab
+    render(
+      <AppProvider>
+        <MemoryRouter initialEntries={['/course/igcse-biology-cie']}>
+          <Routes>
+            <Route path="/course/:courseId" element={<CourseWorkspacePage />} />
+            <Route path="/course/:courseId/:tab" element={<CourseWorkspacePage />} />
+          </Routes>
+        </MemoryRouter>
+      </AppProvider>
+    );
+
+    expect(screen.getByRole('tab', { name: /^Notes$/i })).toHaveAttribute('aria-selected', 'true');
+    const bioNoteLink = document.querySelector('a.workspace-subtopic-cell') as HTMLAnchorElement;
+    expect(bioNoteLink.getAttribute('href')).toContain('/course/igcse-biology-cie/notes/');
+
+    fireEvent.click(screen.getByRole('tab', { name: /^Lessons$/i }));
+    const bioLessonLink = document.querySelector('a.workspace-subtopic-cell') as HTMLAnchorElement;
+    expect(bioLessonLink.getAttribute('href')).toContain('/course/igcse-biology-cie/lesson/');
+  });
+
+  it('renders LessonPlayerPage with video + interactive follow-up questions (NOT Notes cards), tracks watched state & XP, and switches cleanly to Notes', () => {
+    const course = getCourseById('igcse-maths-cie')!;
+    const firstSub = course.topics[0].subtopics[0];
+
+    const { container } = render(
+      <AppProvider>
+        <MemoryRouter initialEntries={[`/course/${course.id}/lesson/${firstSub.id}`]}>
+          <Routes>
+            <Route path="/course/:courseId/lesson/:subtopicId" element={<LessonPlayerPage />} />
+            <Route path="/course/:courseId/notes/:subtopicId" element={<NotesViewerPage />} />
+          </Routes>
+        </MemoryRouter>
+      </AppProvider>
+    );
+
+    // Distinct Lesson UI: embedded video + interactive Lesson questions, NO Notes reading wall
+    expect(container.querySelector('iframe.cognito-video-iframe')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /Lesson questions/i })).toBeInTheDocument();
+    expect(screen.queryByText(/END OF NOTES/i)).not.toBeInTheDocument();
+    expect(screen.queryByLabelText(/^Contents$/i)).not.toBeInTheDocument();
+
+    // Timestamps are collapsed by default on Lessons for focused video + questions layout
+    const tsSwitch = screen.getByRole('switch', { name: /Show timestamps/i });
+    expect(tsSwitch).toHaveAttribute('aria-checked', 'false');
+
+    // Quick lesson recap is collapsed by default
+    const recapBtn = screen.getByRole('button', { name: /Quick lesson recap/i });
+    expect(recapBtn).toHaveAttribute('aria-expanded', 'false');
+
+    // Mark video as watched -> persists watchedLessonIds & awards +15 XP
+    const watchBtn = screen.getByRole('button', { name: /Mark as watched/i });
+    fireEvent.click(watchBtn);
+    expect(screen.getByRole('button', { name: /^Watched$/i })).toHaveAttribute('aria-pressed', 'true');
+    expect(screen.getByText(/15 XP/i)).toBeInTheDocument();
+
+    const raw = localStorage.getItem(STORAGE_KEY);
+    expect(raw).toBeTruthy();
+    const persisted = JSON.parse(raw as string);
+    expect(persisted.profiles[0].progressByCourse[course.id]?.watchedLessonIds).toContain(
+      firstSub.id
+    );
+
+    // Answer the first MCQ or interactive question on the Lesson page
+    const firstChoice = container.querySelector('.sp-choice-btn') as HTMLButtonElement | null;
+    if (firstChoice) {
+      fireEvent.click(firstChoice);
+      const checkBtn = screen.getByRole('button', { name: /^Check$/i });
+      expect(checkBtn).toBeEnabled();
+      fireEvent.click(checkBtn);
+      expect(screen.getByRole('button', { name: /Next question|Finish lesson/i })).toBeInTheDocument();
+    }
+
+    // StudyTopBar exposes BOTH Lesson and Notes distinctly
+    const switcherBtn = container.querySelector('.sp-topbar__switcher-btn') as HTMLButtonElement;
+    fireEvent.click(switcherBtn);
+    expect(screen.getByRole('button', { name: /^Lesson$/i })).toHaveAttribute('aria-current', 'page');
+    const notesActivityBtn = screen.getByRole('button', { name: /^Notes$/i });
+    expect(notesActivityBtn).toBeInTheDocument();
+
+    // Switching to Notes renders the structured Notes reader (CONTENTS + END OF NOTES)
+    fireEvent.click(notesActivityBtn);
+    expect(screen.getByLabelText(/^Contents$/i)).toBeInTheDocument();
+    expect(screen.getByText(/END OF NOTES/i)).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /Interactive video lesson/i })).toBeInTheDocument();
+  });
+
+  it('computes Lesson progress distinctly from Notes progress via computeLessonSubtopicProgress', () => {
+    const course = getCourseById('a-level-biology-aqa')!;
+    const subId = course.topics[0].subtopics[0].id;
+    const subQs = course.quizzes.filter((q) => q.subtopicId === subId);
+    expect(subQs.length).toBeGreaterThan(0);
+
+    // Notes read alone does NOT mark Lesson complete
+    const notesOnly = computeLessonSubtopicProgress(course, subId, {
+      readNoteIds: [subId],
+      watchedLessonIds: [],
+      checkedPointsBySubtopic: {},
+      questionAttempts: {},
+      flashcardConfidence: {},
+      examPartScores: {},
+    });
+    expect(notesOnly.percent).toBe(0);
+    expect(notesOnly.completed).toBe(false);
+
+    // Watching video gives 25% lesson progress
+    const watchedOnly = computeLessonSubtopicProgress(course, subId, {
+      readNoteIds: [],
+      watchedLessonIds: [subId],
+      checkedPointsBySubtopic: {},
+      questionAttempts: {},
+      flashcardConfidence: {},
+      examPartScores: {},
+    });
+    expect(watchedOnly.percent).toBe(25);
+    expect(watchedOnly.watched).toBe(true);
+    expect(watchedOnly.completed).toBe(false);
+
+    // Watching video + answering all subtopic questions gives 100% completed
+    const attempts = Object.fromEntries(
+      subQs.map((q) => [
+        q.id,
+        {
+          answered: true,
+          correct: true,
+          earnedMarks: q.marks,
+          maxMarks: q.marks,
+          lastAnsweredAt: new Date().toISOString(),
+        },
+      ])
+    );
+    const fullLesson = computeLessonSubtopicProgress(course, subId, {
+      readNoteIds: [],
+      watchedLessonIds: [subId],
+      checkedPointsBySubtopic: {},
+      questionAttempts: attempts,
+      flashcardConfidence: {},
+      examPartScores: {},
+    });
+    expect(fullLesson.percent).toBe(100);
+    expect(fullLesson.completed).toBe(true);
+    expect(fullLesson.scorePercent).toBe(100);
+  });
+});

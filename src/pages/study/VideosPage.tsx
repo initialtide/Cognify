@@ -102,13 +102,12 @@ export const VideosPage: React.FC = () => {
             </div>
 
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8 }}>
-              <button
-                type="button"
+              <Link
+                to={`/course/${course.id}/lesson/${subtopic.id}`}
                 className="tactile-btn tactile-btn--sm tactile-btn--blue"
-                onClick={() => setActiveLesson(lesson)}
               >
-                <PlayCircle size={15} /> Watch
-              </button>
+                <PlayCircle size={15} /> Open lesson
+              </Link>
               <Link
                 to={`/course/${course.id}/notes/${subtopic.id}`}
                 style={{ fontSize: '0.86rem', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: 5, color: 'var(--text-heading)' }}
@@ -133,13 +132,22 @@ export const VideosPage: React.FC = () => {
                 </h2>
               </div>
 
-              <Link
-                to={`/course/${course.id}/notes/${activeLesson.subtopicId}`}
-                onClick={() => setActiveLesson(null)}
-                className="tactile-btn tactile-btn--sm tactile-btn--purple"
-              >
-                <BookOpen size={15} /> Open full notes <ArrowRight size={14} />
-              </Link>
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
+                <Link
+                  to={`/course/${course.id}/lesson/${activeLesson.subtopicId}`}
+                  onClick={() => setActiveLesson(null)}
+                  className="tactile-btn tactile-btn--sm tactile-btn--solid-blue"
+                >
+                  <PlayCircle size={15} /> Open lesson + questions
+                </Link>
+                <Link
+                  to={`/course/${course.id}/notes/${activeLesson.subtopicId}`}
+                  onClick={() => setActiveLesson(null)}
+                  className="tactile-btn tactile-btn--sm tactile-btn--purple"
+                >
+                  <BookOpen size={15} /> Revision notes <ArrowRight size={14} />
+                </Link>
+              </div>
             </div>
 
             <CognitoVideoPlayer
