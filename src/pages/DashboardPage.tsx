@@ -111,6 +111,8 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
         to = `/course/${course.id}/flashcards/${latest.subtopicId}`;
       } else if (latest.type === 'exam') {
         to = `/course/${course.id}/exam-practice/${latest.subtopicId}`;
+      } else if (latest.type === 'lesson') {
+        to = `/course/${course.id}/lesson/${latest.subtopicId}`;
       } else if (latest.type === 'notes') {
         to = `/course/${course.id}/notes/${latest.subtopicId}`;
       }

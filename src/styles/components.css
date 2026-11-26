@@ -883,6 +883,38 @@ dialog.cognito-dialog[open] {
   color: var(--text-secondary);
 }
 
+.notes-lesson-switch-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 13px;
+  border-radius: 999px;
+  border: 1px solid var(--color-blue-200);
+  background-color: var(--color-blue-50);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-blue-700);
+  transition: background-color 120ms ease, border-color 120ms ease, color 120ms ease;
+}
+
+.notes-lesson-switch-pill:hover {
+  background-color: var(--color-blue-100);
+  border-color: var(--color-blue-300);
+  color: var(--color-blue-800);
+}
+
+:root[data-theme="dark"] .notes-lesson-switch-pill {
+  background-color: rgba(26, 150, 243, 0.14);
+  border-color: rgba(118, 192, 248, 0.35);
+  color: var(--color-blue-300);
+}
+
+:root[data-theme="dark"] .notes-lesson-switch-pill:hover {
+  background-color: rgba(26, 150, 243, 0.24);
+  border-color: rgba(118, 192, 248, 0.55);
+  color: #ffffff;
+}
+
 .notes-icon-action {
   border: 0;
   background: transparent;

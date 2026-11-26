@@ -22,6 +22,7 @@ import { CheatSheetDetailPage } from './pages/study/CheatSheetsPage';
 import { ExamPracticePage } from './pages/study/ExamPracticePage';
 import { FlashcardsPlayerPage } from './pages/study/FlashcardsPlayerPage';
 import { KeyTermsPage } from './pages/study/KeyTermsPage';
+import { LessonPlayerPage } from './pages/study/LessonPlayerPage';
 import { NotesViewerPage } from './pages/study/NotesViewerPage';
 import { QuizPlayerPage } from './pages/study/QuizPlayerPage';
 import { VideosPage } from './pages/study/VideosPage';
@@ -75,7 +76,9 @@ const AppShell: React.FC = () => {
   // Study players and Onboarding have their own focused sticky top bar
   const hideTopNav =
     location.pathname === '/onboarding' ||
-    /\/course\/[^/]+\/(notes|quiz|flashcards|exam-practice)\/[^/]+/.test(location.pathname);
+    /\/course\/[^/]+\/(lesson|lessons|notes|quiz|flashcards|exam-practice)\/[^/]+/.test(
+      location.pathname
+    );
 
   return (
     <>
@@ -117,6 +120,8 @@ const AppShell: React.FC = () => {
 
         {/* Study Players & Tools */}
         <Route path="/course/:courseId/revision-session" element={<RevisionSessionBuilderPage />} />
+        <Route path="/course/:courseId/lesson/:subtopicId" element={<LessonPlayerPage />} />
+        <Route path="/course/:courseId/lessons/:subtopicId" element={<LessonPlayerPage />} />
         <Route path="/course/:courseId/notes/:subtopicId" element={<NotesViewerPage />} />
         <Route path="/course/:courseId/quiz/:subtopicId" element={<QuizPlayerPage />} />
         <Route path="/course/:courseId/flashcards/:subtopicId" element={<FlashcardsPlayerPage />} />

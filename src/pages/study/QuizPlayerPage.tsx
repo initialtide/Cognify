@@ -996,10 +996,10 @@ export const QuizPlayerPage: React.FC = () => {
               Switch subtopics or open Notes from the top bar to keep studying.
             </p>
             <Link
-              to={`/course/${course.id}/notes/${subtopicId ?? 'all'}`}
+              to={`/course/${course.id}/${course.isMaths ? 'lesson' : 'notes'}/${subtopicId ?? allSubtopics[0]?.id ?? ''}`}
               className="tactile-btn tactile-btn--solid-blue"
             >
-              Back to course
+              Back to {course.isMaths ? 'lesson' : 'notes'}
             </Link>
           </section>
         ) : browseMode ? (

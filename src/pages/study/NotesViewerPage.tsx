@@ -259,6 +259,7 @@ export interface CognitoVideoPlayerProps {
   defaultTimestampsOpen?: boolean;
   showVideoHeader?: boolean;
   showCardWrapper?: boolean;
+  onVideoStartPlaying?: () => void;
 }
 
 export const CognitoVideoPlayer: React.FC<CognitoVideoPlayerProps> = ({
@@ -274,6 +275,7 @@ export const CognitoVideoPlayer: React.FC<CognitoVideoPlayerProps> = ({
   defaultTimestampsOpen = true,
   showVideoHeader = false,
   showCardWrapper = true,
+  onVideoStartPlaying,
 }) => {
   const reactId = useId().replace(/[^a-zA-Z0-9_-]/g, '');
   const stageRef = useRef<HTMLDivElement>(null);
@@ -285,6 +287,8 @@ export const CognitoVideoPlayer: React.FC<CognitoVideoPlayerProps> = ({
   const pollTimerRef = useRef<number | null>(null);
   const videoTitleRef = useRef(videoTitle);
   videoTitleRef.current = videoTitle;
+  const onVideoStartPlayingRef = useRef(onVideoStartPlaying);
+  onVideoStartPlayingRef.current = onVideoStartPlaying;
 
   const [showTimestamps, setShowTimestamps] = useState(defaultTimestampsOpen);
   const [showMatchInfo, setShowMatchInfo] = useState(false);
@@ -393,6 +397,7 @@ export const CognitoVideoPlayer: React.FC<CognitoVideoPlayerProps> = ({
               if (event.data === playingState) {
                 setIsPlaying(true);
                 setHasInteracted(true);
+                onVideoStartPlayingRef.current?.();
                 syncTimeFromPlayer(event.target);
                 clearPoll();
                 pollTimerRef.current = window.setInterval(() => {
@@ -449,6 +454,7 @@ export const CognitoVideoPlayer: React.FC<CognitoVideoPlayerProps> = ({
   const handleSeekTo = (seconds: number) => {
     setCurrentTime(seconds);
     setHasInteracted(true);
+    onVideoStartPlayingRef.current?.();
     seekLockUntilRef.current = Date.now() + 1800;
 
     if (playerRef.current && isReadyRef.current) {
@@ -949,9 +955,17 @@ export const NotesViewerPage: React.FC = () => {
             </ol>
 
             <div className="notes-title-footer no-print">
-              <span className="notes-duration-pill">
-                <Clock size={14} /> {lesson.readingMinutes} min
-              </span>
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
+                <span className="notes-duration-pill">
+                  <Clock size={14} /> {lesson.readingMinutes} min
+                </span>
+                <Link
+                  to={`/course/${course.id}/lesson/${lesson.subtopicId}`}
+                  className="notes-lesson-switch-pill"
+                >
+                  <PlayCircle size={14} /> Interactive video lesson
+                </Link>
+              </div>
 
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
                 <button
@@ -1325,8 +1339,16 @@ export const NotesViewerPage: React.FC = () => {
             <hr className="dashed-divider no-print" style={{ margin: '22px 0' }} />
 
             <div className="end-notes-actions-grid no-print">
-              {/* Left Unified Tactile Card: Quiz + Flashcards */}
+              {/* Left Unified Tactile Card: Video Lesson + Quiz + Flashcards */}
               <div className="end-action-stack">
+                <Link to={`/course/${course.id}/lesson/${lesson.subtopicId}`} className="end-action-row">
+                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: 10 }}>
+                    <PlayCircle size={17} color="var(--text-heading)" />
+                    <span>Watch interactive lesson</span>
+                  </span>
+                  <ChevronRight size={17} color="var(--text-muted)" />
+                </Link>
+
                 <Link to={`/course/${course.id}/quiz/${lesson.subtopicId}`} className="end-action-row">
                   <span style={{ display: 'inline-flex', alignItems: 'center', gap: 10 }}>
                     <Lightbulb size={17} color="var(--text-heading)" />

@@ -45,6 +45,7 @@ export function formatDateKey(date: Date = new Date()): string {
 export function createEmptyCourseProgress(): CourseProgress {
   return {
     readNoteIds: [],
+    watchedLessonIds: [],
     checkedPointsBySubtopic: {},
     questionAttempts: {},
     flashcardConfidence: {},
@@ -330,6 +331,7 @@ export function getCourseStats(course: CourseDefinition, progress?: CourseProgre
   confidencePercent: number | null;
   notesRead: number;
   notesTotal: number;
+  lessonsWatched: number;
 } {
   const p = progress ?? createEmptyCourseProgress();
   const attempts = Object.values(p.questionAttempts).filter((a) => a.answered);
@@ -356,6 +358,76 @@ export function getCourseStats(course: CourseDefinition, progress?: CourseProgre
     confidencePercent,
     notesRead: p.readNoteIds.length,
     notesTotal: Math.max(1, allSubtopicCount),
+    lessonsWatched: (p.watchedLessonIds ?? []).length,
+  };
+}
+
+export interface LessonSubtopicProgress {
+  watched: boolean;
+  answered: number;
+  totalQuestions: number;
+  earnedMarks: number;
+  maxAttemptedMarks: number;
+  scorePercent: number | null;
+  percent: number;
+  completed: boolean;
+}
+
+/**
+ * Computes real Cognito-style Lesson progress for a subtopic by combining:
+ * - Video watched (25% weight when follow-up questions exist, or 100% if none)
+ * - Follow-up lesson questions answered (75% weight proportionally)
+ */
+export function computeLessonSubtopicProgress(
+  course: CourseDefinition,
+  subtopicId: string,
+  progress?: CourseProgress
+): LessonSubtopicProgress {
+  const watched = Boolean(progress?.watchedLessonIds?.includes(subtopicId));
+  const subQs = course.quizzes.filter((q) => q.subtopicId === subtopicId);
+  let answered = 0;
+  let earnedMarks = 0;
+  let maxAttemptedMarks = 0;
+
+  for (const q of subQs) {
+    const attempt = progress?.questionAttempts[q.id];
+    if (attempt?.answered) {
+      answered += 1;
+      earnedMarks += attempt.earnedMarks;
+      maxAttemptedMarks += attempt.maxMarks;
+    }
+  }
+
+  const scorePercent =
+    maxAttemptedMarks > 0 ? Math.round((earnedMarks / maxAttemptedMarks) * 100) : null;
+
+  if (subQs.length === 0) {
+    return {
+      watched,
+      answered: 0,
+      totalQuestions: 0,
+      earnedMarks: 0,
+      maxAttemptedMarks: 0,
+      scorePercent: null,
+      percent: watched ? 100 : 0,
+      completed: watched,
+    };
+  }
+
+  const videoPart = watched ? 25 : 0;
+  const questionPart = (answered / subQs.length) * 75;
+  const percent = Math.min(100, Math.round(videoPart + questionPart));
+  const completed = watched && answered === subQs.length;
+
+  return {
+    watched,
+    answered,
+    totalQuestions: subQs.length,
+    earnedMarks,
+    maxAttemptedMarks,
+    scorePercent,
+    percent,
+    completed,
   };
 }
 
@@ -493,6 +565,12 @@ interface AppContextValue {
   toggleEnrollCourse: (courseId: string) => void;
   setSavedCourseForSubject: (subjectSlug: string, courseId: string) => void;
   markNoteRead: (courseId: string, subtopicId: string, subtopicTitle: string) => void;
+  setLessonWatched: (
+    courseId: string,
+    subtopicId: string,
+    subtopicTitle: string,
+    watched?: boolean
+  ) => void;
   toggleChecklistPoint: (courseId: string, subtopicId: string, point: string) => void;
   setAllChecklistPoints: (courseId: string, subtopicId: string, points: string[]) => void;
   recordQuestionAttempt: (
@@ -692,6 +770,50 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         title: `Completed notes: ${subtopicTitle}`,
         xpEarned: alreadyRead ? 5 : 25,
         durationSeconds: 180,
+        questionsAnswered: 0,
+      });
+    });
+  };
+
+  const setLessonWatched = (
+    courseId: string,
+    subtopicId: string,
+    subtopicTitle: string,
+    watched = true
+  ) => {
+    const course = getCourseById(courseId) ?? ALL_COURSES[0];
+    updateProfile((p) => {
+      const current = p.progressByCourse[courseId] ?? createEmptyCourseProgress();
+      const existingWatched = current.watchedLessonIds ?? [];
+      const alreadyWatched = existingWatched.includes(subtopicId);
+      const nextWatched = watched
+        ? alreadyWatched
+          ? existingWatched
+          : [...existingWatched, subtopicId]
+        : existingWatched.filter((id) => id !== subtopicId);
+
+      const nextProgress: CourseProgress = {
+        ...current,
+        watchedLessonIds: nextWatched,
+      };
+      const updated = {
+        ...p,
+        progressByCourse: { ...p.progressByCourse, [courseId]: nextProgress },
+      };
+
+      if (!watched || alreadyWatched) {
+        return updated;
+      }
+
+      return appendActivity(updated, {
+        type: 'lesson',
+        courseId,
+        courseLabel: `${course.qualificationLabel} ${course.subjectName} · ${course.boardLabel}`,
+        subjectName: course.subjectName,
+        subtopicId,
+        title: `Watched lesson: ${subtopicTitle}`,
+        xpEarned: 15,
+        durationSeconds: 240,
         questionsAnswered: 0,
       });
     });
@@ -1503,6 +1625,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         toggleEnrollCourse,
         setSavedCourseForSubject,
         markNoteRead,
+        setLessonWatched,
         toggleChecklistPoint,
         setAllChecklistPoints,
         recordQuestionAttempt,

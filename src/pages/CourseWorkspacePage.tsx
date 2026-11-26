@@ -18,7 +18,7 @@ import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { SubjectIcon } from '../components/artwork/SubjectIcons';
 import { ProgressModal } from '../components/modals/ProgressModal';
 import { ALL_COURSES, EXAM_BOARDS, getCourseById, resolveCourseVariant } from '../data/catalog';
-import { useApp } from '../store/AppContext';
+import { computeLessonSubtopicProgress, useApp } from '../store/AppContext';
 import { CourseDefinition, CourseTabId, SubtopicDefinition, TopicDefinition } from '../types/curriculum';
 import { PastPapersTab } from './study/PastPapersTab';
 
@@ -86,16 +86,30 @@ export const CourseWorkspacePage: React.FC = () => {
   const savedCourse = savedCourseId ? getCourseById(savedCourseId) : undefined;
   const showSavedBanner = Boolean(savedCourse && savedCourse.id !== course.id);
 
+  // Maths lands on Lessons first (Video + interactive follow-up questions);
+  // Sciences/Humanities land on Notes first (Structured written revision notes),
+  // while every course exposes BOTH distinct tabs cleanly.
   const tabs: { id: CourseTabId; label: string }[] = course.pastPapersOnly
     ? [{ id: 'past-papers', label: 'Past Papers' }]
-    : [
-        { id: course.isMaths ? 'lessons' : 'notes', label: course.isMaths ? 'Lessons' : 'Notes' },
-        { id: 'quiz', label: 'Quiz' },
-        { id: 'flashcards', label: 'Flashcards' },
-        { id: 'cheat-sheets', label: 'Cheat Sheets' },
-        { id: 'exam-practice', label: 'Exam Practice' },
-        { id: 'past-papers', label: 'Past Papers' },
-      ];
+    : course.isMaths
+      ? [
+          { id: 'lessons', label: 'Lessons' },
+          { id: 'notes', label: 'Notes' },
+          { id: 'quiz', label: 'Quiz' },
+          { id: 'flashcards', label: 'Flashcards' },
+          { id: 'cheat-sheets', label: 'Cheat Sheets' },
+          { id: 'exam-practice', label: 'Exam Practice' },
+          { id: 'past-papers', label: 'Past Papers' },
+        ]
+      : [
+          { id: 'notes', label: 'Notes' },
+          { id: 'lessons', label: 'Lessons' },
+          { id: 'quiz', label: 'Quiz' },
+          { id: 'flashcards', label: 'Flashcards' },
+          { id: 'cheat-sheets', label: 'Cheat Sheets' },
+          { id: 'exam-practice', label: 'Exam Practice' },
+          { id: 'past-papers', label: 'Past Papers' },
+        ];
 
   const allSubtopics = useMemo(
     () => course.topics.flatMap((t) => t.subtopics),
@@ -153,8 +167,40 @@ export const CourseWorkspacePage: React.FC = () => {
     return { total: cards.length, confident, learning };
   };
 
+  const getLessonStatsForSubtopics = (subtopicIds: string[]) => {
+    if (subtopicIds.length === 0) return { avgPct: 0, scorePercent: null as number | null };
+    let sumPct = 0;
+    let earnedMarks = 0;
+    let maxAttemptedMarks = 0;
+    for (const id of subtopicIds) {
+      const lp = computeLessonSubtopicProgress(course, id, progress);
+      sumPct += lp.percent;
+      earnedMarks += lp.earnedMarks;
+      maxAttemptedMarks += lp.maxAttemptedMarks;
+    }
+    return {
+      avgPct: Math.round(sumPct / subtopicIds.length),
+      scorePercent:
+        maxAttemptedMarks > 0 ? Math.round((earnedMarks / maxAttemptedMarks) * 100) : null,
+    };
+  };
+
+  const getNoteSubtopicPct = (subId: string): number => {
+    if (progress?.readNoteIds.includes(subId)) return 100;
+    const totalPts = course.notes[subId]?.checklistPoints.length ?? 0;
+    const checkedPts = progress?.checkedPointsBySubtopic[subId]?.length ?? 0;
+    return totalPts > 0 ? Math.round((checkedPts / totalPts) * 100) : 0;
+  };
+
   const overallMetrics = useMemo(() => {
     const allIds = allSubtopics.map((s) => s.id);
+    if (activeTab === 'lessons') {
+      const lStats = getLessonStatsForSubtopics(allIds);
+      return {
+        pct: lStats.avgPct,
+        accentPill: lStats.scorePercent !== null ? `${lStats.scorePercent}%` : null,
+      };
+    }
     if (activeTab === 'quiz') {
       const stats = getQuizStatsForSubtopics(allIds);
       const pct = stats.total > 0 ? Math.round((stats.answered / stats.total) * 100) : 0;
@@ -177,10 +223,13 @@ export const CourseWorkspacePage: React.FC = () => {
     const total = Math.max(1, allIds.length);
     const pct = Math.round((readCount / total) * 100);
     return { pct, accentPill: null };
-  }, [activeTab, allSubtopics, course.quizzes, course.flashcards, course.examPractice, progress]);
+  }, [activeTab, allSubtopics, course, progress]);
 
   const getTopicPct = (topic: TopicDefinition): number => {
     const ids = topic.subtopics.map((s) => s.id);
+    if (activeTab === 'lessons') {
+      return getLessonStatsForSubtopics(ids).avgPct;
+    }
     if (activeTab === 'quiz') {
       const stats = getQuizStatsForSubtopics(ids);
       return stats.total > 0 ? Math.round((stats.answered / stats.total) * 100) : 0;
@@ -198,6 +247,14 @@ export const CourseWorkspacePage: React.FC = () => {
   };
 
   const getSubtopicBarStats = (sub: SubtopicDefinition) => {
+    if (activeTab === 'lessons') {
+      const lp = computeLessonSubtopicProgress(course, sub.id, progress);
+      return {
+        greenPct: lp.percent,
+        amberPct: 0,
+        scoreText: lp.scorePercent !== null ? `${lp.scorePercent}%` : null,
+      };
+    }
     if (activeTab === 'quiz') {
       const qStats = getQuizStatsForSubtopics([sub.id]);
       const fillPct = qStats.total > 0 ? Math.round((qStats.answered / qStats.total) * 100) : 0;
@@ -227,9 +284,8 @@ export const CourseWorkspacePage: React.FC = () => {
         scoreText: eStats.attemptedParts > 0 ? `${eStats.earnedMarks}/${eStats.maxMarks}` : null,
       };
     }
-    const isRead = progress?.readNoteIds.includes(sub.id) ?? false;
     return {
-      greenPct: isRead ? 100 : 0,
+      greenPct: getNoteSubtopicPct(sub.id),
       amberPct: 0,
       scoreText: null,
     };
@@ -716,13 +772,15 @@ export const CourseWorkspacePage: React.FC = () => {
                           <div key={colIndex} className="workspace-subtopics-col">
                             {col.map((sub) => {
                               const targetRoute =
-                                activeTab === 'quiz'
-                                  ? `/course/${course.id}/quiz/${sub.id}`
-                                  : activeTab === 'flashcards'
-                                    ? `/course/${course.id}/flashcards/${sub.id}`
-                                    : activeTab === 'exam-practice'
-                                      ? `/course/${course.id}/exam-practice/${sub.id}`
-                                      : `/course/${course.id}/notes/${sub.id}`;
+                                activeTab === 'lessons'
+                                  ? `/course/${course.id}/lesson/${sub.id}`
+                                  : activeTab === 'quiz'
+                                    ? `/course/${course.id}/quiz/${sub.id}`
+                                    : activeTab === 'flashcards'
+                                      ? `/course/${course.id}/flashcards/${sub.id}`
+                                      : activeTab === 'exam-practice'
+                                        ? `/course/${course.id}/exam-practice/${sub.id}`
+                                        : `/course/${course.id}/notes/${sub.id}`;
 
                               const bar = getSubtopicBarStats(sub);
                               const fullLabel = `${sub.code} - ${sub.title}`;
@@ -779,6 +837,7 @@ export const CourseWorkspacePage: React.FC = () => {
         open={showProgressModal}
         onClose={() => setShowProgressModal(false)}
         course={course}
+        mode={activeTab === 'lessons' ? 'lessons' : 'notes'}
       />
     </main>
   );
