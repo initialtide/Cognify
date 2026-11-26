@@ -7,9 +7,9 @@
 | Metric | Current | Target |
 | --- | --- | --- |
 | **Overall Learning Depth Score** | **100 / 100** | 95+ / 100 |
-| **Active Deep Courses Audited** | 18 | 31+ |
-| **Total Subtopic Lessons** | 241 | Growing |
-| **IGCSE Unlocked Subjects** | 8 / 13 (0 stubs) | 13 / 13 |
+| **Active Deep Courses Audited** | 23 | 31+ |
+| **Total Subtopic Lessons** | 281 | Growing |
+| **IGCSE Unlocked Subjects** | 13 / 13 (0 stubs) | 13 / 13 |
 | **A-Level Unlocked Subjects** | 5 / 14 (0 stubs) | 14 / 14 |
 | **Explicit Authored Quizzes / Subtopic** | 4.9 | 5.0+ |
 | **Explicit Authored Flashcards / Subtopic** | 4.9 | 5.0+ |
@@ -17,15 +17,12 @@
 | **Explicit Authored Cheat Sheets / Topic** | 1 | 1.0 |
 | **Baked `-extra-` / Template Items** | 0 | 0 |
 | **Runtime `-syn-` Fallback Items** | 67 | 0 |
-| **Gradable Short-Answer MarkPoints** | **100%** (1460 / 1460, 0 ungradable) | 100% |
+| **Gradable Short-Answer MarkPoints** | **100%** (1693 / 1693, 0 ungradable) | 100% |
 
 ## Top Next Learning Upgrades (Auto-Prioritized)
 
 | Priority | Category | Target | Why It Improves Learning |
 | --- | --- | --- | --- |
-| **P3** | Add Roadmap Subject | IGCSE english-literature | Planned in PLAN.md Phase 3 (target: 13 unlocked IGCSE subjects). |
-| **P3** | Add Roadmap Subject | IGCSE geography | Planned in PLAN.md Phase 3 (target: 13 unlocked IGCSE subjects). |
-| **P3** | Add Roadmap Subject | IGCSE history | Planned in PLAN.md Phase 3 (target: 13 unlocked IGCSE subjects). |
 | **P3** | Add Roadmap Subject | A-Level further-maths | Planned in PLAN.md Phase 4 (target: 14 unlocked A-Level subjects). |
 | **P3** | Add Roadmap Subject | A-Level economics | Planned in PLAN.md Phase 4 (target: 14 unlocked A-Level subjects). |
 | **P3** | Add Roadmap Subject | A-Level business | Planned in PLAN.md Phase 4 (target: 14 unlocked A-Level subjects). |
@@ -50,8 +47,13 @@
 | `igcse-computer-science-cie` | 8 | **100/100** | 100% | 100% | 100% | 100% | 2 |
 | `igcse-economics-cie` | 8 | **100/100** | 100% | 100% | 100% | 100% | 2 |
 | `igcse-english-language-cie` | 6 | **100/100** | 100% | 100% | 100% | 100% | 0 |
+| `igcse-english-literature-cie` | 8 | **100/100** | 100% | 100% | 100% | 100% | 0 |
+| `igcse-french-cie` | 8 | **100/100** | 100% | 100% | 100% | 100% | 0 |
+| `igcse-geography-cie` | 8 | **100/100** | 100% | 100% | 100% | 100% | 1 |
+| `igcse-history-cie` | 8 | **100/100** | 100% | 100% | 100% | 100% | 0 |
 | `igcse-maths-cie` | 15 | **100/100** | 100% | 100% | 100% | 100% | 2 |
 | `igcse-physics-cie` | 16 | **100/100** | 100% | 100% | 100% | 100% | 4 |
+| `igcse-spanish-cie` | 8 | **100/100** | 100% | 100% | 100% | 100% | 0 |
 
 ## Assessment Authorship & Rubric Gradability Breakdown
 
@@ -73,8 +75,13 @@
 | `igcse-computer-science-cie` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (40/40) |
 | `igcse-economics-cie` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (40/40) |
 | `igcse-english-language-cie` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (30/30) |
+| `igcse-english-literature-cie` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (46/46) |
+| `igcse-french-cie` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (49/49) |
+| `igcse-geography-cie` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (43/43) |
+| `igcse-history-cie` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (48/48) |
 | `igcse-maths-cie` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (98/98) |
 | `igcse-physics-cie` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (99/99) |
+| `igcse-spanish-cie` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (47/47) |
 
 ## Shallowest Subtopics (Best Quick Wins)
 
@@ -96,5 +103,5 @@
 ## Roadmap Coverage Status
 
 - **IGCSE Stubs to Replace**: None
-- **IGCSE Subjects Not Yet Added**: english-literature, geography, history, french, spanish
+- **IGCSE Subjects Not Yet Added**: None
 - **A-Level Subjects Not Yet Added**: further-maths, economics, business, computer-science, geography, history, sociology, english-literature, religious-studies

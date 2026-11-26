@@ -4,6 +4,7 @@ import {
   BookA,
   Check,
   ChevronDown,
+  ChevronLeft,
   ChevronRight,
   ChevronsDown,
   ChevronsUp,
@@ -16,6 +17,7 @@ import {
 } from 'lucide-react';
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { SubjectIcon } from '../components/artwork/SubjectIcons';
+import { CognitoDialog } from '../components/modals/CognitoDialog';
 import { ProgressModal } from '../components/modals/ProgressModal';
 import { ALL_COURSES, EXAM_BOARDS, getCourseById, resolveCourseVariant } from '../data/catalog';
 import { computeLessonSubtopicProgress, useApp } from '../store/AppContext';
@@ -63,6 +65,7 @@ export const CourseWorkspacePage: React.FC = () => {
   const [showTierDropdown, setShowTierDropdown] = useState(false);
   const [showMoreMenu, setShowMoreMenu] = useState(false);
   const [showProgressModal, setShowProgressModal] = useState(false);
+  const [previewSubtopicId, setPreviewSubtopicId] = useState<string | null>(null);
   const searchInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -71,6 +74,7 @@ export const CourseWorkspacePage: React.FC = () => {
     setSearchOpen(false);
     setShowTierDropdown(false);
     setShowMoreMenu(false);
+    setPreviewSubtopicId(null);
   }, [course.id]);
 
   useEffect(() => {
@@ -368,12 +372,11 @@ export const CourseWorkspacePage: React.FC = () => {
             backgroundColor: 'var(--bg-elevated)',
             color: 'var(--text-heading)',
             border: '1.5px solid var(--subject-border)',
-            transform: 'none',
-            borderRadius: 7,
-            padding: '3px 10px',
-            fontSize: '0.72rem',
+            borderRadius: 8,
+            padding: '3px 11px',
+            fontSize: '0.73rem',
             letterSpacing: '0.05em',
-            top: -12,
+            top: -13,
             left: 16,
           }}
         >
@@ -791,6 +794,19 @@ export const CourseWorkspacePage: React.FC = () => {
                                   to={targetRoute}
                                   title={fullLabel}
                                   className="workspace-subtopic-cell"
+                                  onClick={(e) => {
+                                    if (
+                                      activeTab === 'lessons' &&
+                                      !e.metaKey &&
+                                      !e.ctrlKey &&
+                                      !e.shiftKey &&
+                                      !e.altKey &&
+                                      e.button === 0
+                                    ) {
+                                      e.preventDefault();
+                                      setPreviewSubtopicId(sub.id);
+                                    }
+                                  }}
                                 >
                                   <span className="workspace-subtopic-cell__label">{fullLabel}</span>
                                   <span className="workspace-subtopic-cell__meta">
@@ -832,6 +848,119 @@ export const CourseWorkspacePage: React.FC = () => {
           )}
         </section>
       )}
+
+      {/* Exact Real Cognito Lesson Preview Modal (matches image_2.png 1:1) */}
+      {(() => {
+        const previewIndex = previewSubtopicId
+          ? allSubtopics.findIndex((s) => s.id === previewSubtopicId)
+          : -1;
+        const previewSub = previewIndex >= 0 ? allSubtopics[previewIndex] : null;
+        const previewLesson = previewSub ? course.notes[previewSub.id] : undefined;
+        const previewProgress = previewSub
+          ? computeLessonSubtopicProgress(course, previewSub.id, progress)
+          : null;
+        const previewQuestions = previewSub
+          ? course.quizzes.filter((q) => q.subtopicId === previewSub.id)
+          : [];
+        const totalSteps = 1 + previewQuestions.length;
+        const estTime =
+          previewLesson?.videoDuration || `${previewSub?.readingMinutes ?? 5}:00`;
+        const objectives = previewLesson
+          ? previewLesson.cards.slice(0, 4).map((c) => c.title)
+          : previewSub
+            ? [previewSub.title]
+            : [];
+        const prevSub = previewIndex > 0 ? allSubtopics[previewIndex - 1] : null;
+        const nextSub =
+          previewIndex >= 0 && previewIndex < allSubtopics.length - 1
+            ? allSubtopics[previewIndex + 1]
+            : null;
+        const ctaLabel = previewProgress?.completed
+          ? 'Review lesson'
+          : previewProgress && previewProgress.percent > 0
+            ? 'Continue lesson'
+            : 'Start lesson';
+
+        return (
+          <CognitoDialog
+            open={Boolean(previewSub)}
+            onClose={() => setPreviewSubtopicId(null)}
+            titleId="lesson-preview-modal-title"
+          >
+            {previewSub && (
+              <div className="lesson-preview-modal">
+                <h2 id="lesson-preview-modal-title" className="lesson-preview-modal__title">
+                  {previewSub.title}
+                </h2>
+
+                <ol className="lesson-preview-objectives">
+                  {objectives.map((obj, idx) => (
+                    <li key={idx} className="lesson-preview-objectives__item">
+                      <span className="lesson-preview-objectives__num">{idx + 1}</span>
+                      <span>{obj}</span>
+                    </li>
+                  ))}
+                </ol>
+
+                <div className="lesson-preview-stats-card">
+                  <div className="lesson-preview-stats-grid">
+                    <div className="lesson-preview-stat">
+                      <span className="lesson-preview-stat__value">{totalSteps}</span>
+                      <span className="lesson-preview-stat__label">Steps</span>
+                    </div>
+                    <div className="lesson-preview-stat">
+                      <span className="lesson-preview-stat__value">{estTime}</span>
+                      <span className="lesson-preview-stat__label">Est. time</span>
+                    </div>
+                  </div>
+                  <div
+                    className="lesson-preview-bar"
+                    aria-label={`${previewProgress?.percent ?? 0}% complete`}
+                  >
+                    <div
+                      className="lesson-preview-bar__fill"
+                      style={{ width: `${previewProgress?.percent ?? 0}%` }}
+                    />
+                  </div>
+                </div>
+
+                <div className="lesson-preview-footer">
+                  <div className="lesson-preview-stepper">
+                    <button
+                      type="button"
+                      className="lesson-preview-stepper__btn"
+                      aria-label="Previous lesson"
+                      disabled={!prevSub}
+                      onClick={() => prevSub && setPreviewSubtopicId(prevSub.id)}
+                    >
+                      <ChevronLeft size={16} />
+                    </button>
+                    <span>{previewSub.code}</span>
+                    <button
+                      type="button"
+                      className="lesson-preview-stepper__btn"
+                      aria-label="Next lesson"
+                      disabled={!nextSub}
+                      onClick={() => nextSub && setPreviewSubtopicId(nextSub.id)}
+                    >
+                      <ChevronRight size={16} />
+                    </button>
+                  </div>
+
+                  <Link
+                    to={`/course/${course.id}/lesson/${previewSub.id}`}
+                    onClick={() => setPreviewSubtopicId(null)}
+                    className="tactile-btn"
+                    style={{ minHeight: 42, padding: '8px 20px', fontSize: '0.92rem' }}
+                  >
+                    {ctaLabel}
+                  </Link>
+                </div>
+              </div>
+            )}
+          </CognitoDialog>
+        );
+      })()}
 
       <ProgressModal
         open={showProgressModal}

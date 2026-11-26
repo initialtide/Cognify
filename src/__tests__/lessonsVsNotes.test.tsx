@@ -185,4 +185,51 @@ describe('Distinct Cognito Lessons vs Notes Experiences', () => {
     expect(fullLesson.completed).toBe(true);
     expect(fullLesson.scorePercent).toBe(100);
   });
+
+  it('opens the Cognito Lesson Preview Modal (objectives, Steps, Est. time, stepper, Start lesson) and embeds official Cambridge PDFs in Past Papers', () => {
+    render(
+      <AppProvider>
+        <MemoryRouter initialEntries={['/course/igcse-maths-cie/lessons']}>
+          <Routes>
+            <Route path="/course/:courseId/:tab" element={<CourseWorkspacePage />} />
+            <Route path="/course/:courseId/lesson/:subtopicId" element={<LessonPlayerPage />} />
+          </Routes>
+        </MemoryRouter>
+      </AppProvider>
+    );
+
+    // Click first lesson subtopic -> opens Cognito Lesson Preview Modal
+    const firstLessonLink = document.querySelector('a.workspace-subtopic-cell') as HTMLAnchorElement;
+    expect(firstLessonLink).toBeTruthy();
+    fireEvent.click(firstLessonLink);
+
+    expect(screen.getByText(/^Steps$/i)).toBeInTheDocument();
+    expect(screen.getByText(/^Est\. time$/i)).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /Start lesson/i })).toBeInTheDocument();
+
+    // Step to next lesson inside preview modal
+    fireEvent.click(screen.getByRole('button', { name: /Next lesson/i }));
+    expect(screen.getByText('1.2')).toBeInTheDocument();
+
+    // Close preview modal and switch to Past Papers tab -> official Cambridge PDFs shown!
+    fireEvent.click(screen.getAllByRole('button', { name: /Close modal/i })[0]);
+    fireEvent.click(screen.getByRole('tab', { name: /^Past Papers$/i }));
+
+    expect(
+      screen.getByText(/Official Cambridge International Papers & Specimen Exams/i)
+    ).toBeInTheDocument();
+    expect(screen.getAllByText(/OFFICIAL PDF/i).length).toBeGreaterThanOrEqual(4);
+
+    // Open first official Cambridge paper -> real PDF iframe + live Exam Timer + direct PDF link
+    const paperButtons = screen.getAllByRole('button', { name: /^Paper$/i });
+    fireEvent.click(paperButtons[0]);
+    const pdfFrame = document.querySelector('iframe.cognito-pdf-frame') as HTMLIFrameElement;
+    expect(pdfFrame).toBeTruthy();
+    expect(pdfFrame.getAttribute('src')).toContain('https://www.cambridgeinternational.org/Images/');
+    expect(screen.getByRole('button', { name: /Start timer/i })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /Open PDF in new tab/i })).toHaveAttribute(
+      'href',
+      expect.stringContaining('https://www.cambridgeinternational.org/Images/')
+    );
+  });
 });

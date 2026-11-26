@@ -267,6 +267,13 @@ export interface PastPaperDoc {
     markScheme: string[];
   }[];
   insertNote?: string;
+  questionPaperUrl?: string;
+  markSchemeUrl?: string;
+  insertUrl?: string;
+  insertLabel?: string;
+  examinerReportUrl?: string;
+  sourceName?: string;
+  officialPortalUrl?: string;
 }
 
 export interface KeyTermEntry {

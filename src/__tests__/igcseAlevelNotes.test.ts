@@ -13,6 +13,14 @@ const REQUIRED_IGCSE_COURSE_IDS = [
   'igcse-physics-cie',
   'igcse-maths-cie',
   'igcse-business-cie',
+  'igcse-computer-science-cie',
+  'igcse-economics-cie',
+  'igcse-english-language-cie',
+  'igcse-english-literature-cie',
+  'igcse-geography-cie',
+  'igcse-history-cie',
+  'igcse-french-cie',
+  'igcse-spanish-cie',
 ] as const;
 
 const REQUIRED_ALEVEL_COURSE_IDS = [
@@ -142,6 +150,13 @@ describe('IGCSE & A-Level Notes, Videos & Catalog Coverage', () => {
       expect(course, `Required IGCSE course '${id}' missing from ALL_COURSES`).toBeDefined();
       expect(course?.qualification).toBe('igcse');
       expect(course?.pastPapersOnly).not.toBe(true);
+      const officialPdfs = (course?.pastPapers ?? []).filter((p) =>
+        Boolean(p.questionPaperUrl?.startsWith('https://www.cambridgeinternational.org/Images/'))
+      );
+      expect(
+        officialPdfs.length,
+        `${id} should include official Cambridge International PDF past/specimen papers`
+      ).toBeGreaterThanOrEqual(4);
     }
 
     for (const id of REQUIRED_ALEVEL_COURSE_IDS) {
@@ -149,6 +164,13 @@ describe('IGCSE & A-Level Notes, Videos & Catalog Coverage', () => {
       expect(course, `Required A-Level course '${id}' missing from ALL_COURSES`).toBeDefined();
       expect(course?.qualification).toBe('a-level');
       expect(course?.pastPapersOnly).not.toBe(true);
+      const officialPdfs = (course?.pastPapers ?? []).filter((p) =>
+        Boolean(p.questionPaperUrl?.startsWith('https://www.cambridgeinternational.org/Images/'))
+      );
+      expect(
+        officialPdfs.length,
+        `${id} should include official Cambridge International PDF past/specimen papers`
+      ).toBeGreaterThanOrEqual(6);
     }
   });
 

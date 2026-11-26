@@ -2637,3 +2637,304 @@ dialog.quick-search-dialog[open] {
     break-inside: avoid;
   }
 }
+
+/* ==========================================================================
+   Exact Real Cognito Motion System, Embedded PDF Viewer & Lesson Preview Modal
+   ========================================================================== */
+
+@keyframes cognitoAccordionSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cognitoEnter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 6px, 0) scale(0.975);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes cognitoVideoPlaySway {
+  0%,
+  100% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+}
+
+@keyframes cognitoCtaBob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes cognitoBadgePop {
+  0% {
+    transform: scale(0.92);
+  }
+  60% {
+    transform: scale(1.06);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Apply Cognito fluid transitions across accordions, popovers, tabs & progress bars */
+.cognito-accordion-body,
+.workspace-subtopics-grid {
+  animation: cognitoAccordionSlide 210ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.popover-surface {
+  animation: cognitoEnter 150ms cubic-bezier(0.22, 1, 0.36, 1);
+  transform-origin: top right;
+}
+
+.page-container {
+  animation: cognitoEnter 200ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cognito-video-thumb:hover .cognito-video-thumb__play svg {
+  animation: cognitoVideoPlaySway 650ms ease-in-out infinite;
+}
+
+.dashboard-hero-grid .freeze-pill:hover svg {
+  animation: cognitoCtaBob 700ms ease-in-out infinite;
+}
+
+.workspace-mini-fill,
+.workspace-subtopic-cell__bar > span {
+  transition: width 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.tactile-btn {
+  transition:
+    transform 100ms cubic-bezier(0, 0, 0.2, 1),
+    box-shadow 100ms cubic-bezier(0, 0, 0.2, 1),
+    background-color 150ms cubic-bezier(0, 0, 0.2, 1),
+    border-color 150ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.tactile-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 0 var(--tactile-border);
+}
+
+.tactile-btn--solid-blue:hover:not(:disabled) {
+  box-shadow: 0 4px 0 var(--color-blue-700);
+}
+
+.tactile-btn--blue:hover:not(:disabled) {
+  box-shadow: 0 4px 0 var(--color-blue-500);
+}
+
+.tactile-btn--green:hover:not(:disabled) {
+  box-shadow: 0 4px 0 var(--color-green-600);
+}
+
+.tactile-btn--purple:hover:not(:disabled) {
+  box-shadow: 0 4px 0 var(--color-purple-500);
+}
+
+.workspace-subtopic-cell {
+  transition:
+    background-color 150ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 150ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.workspace-subtopic-cell:hover {
+  transform: translateX(2px);
+}
+
+.sp-choice-btn.is-correct,
+.score-pill {
+  animation: cognitoBadgePop 260ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Official Cambridge Embedded PDF Viewer Frame */
+.cognito-pdf-frame {
+  width: 100%;
+  height: min(64vh, 620px);
+  border: 1.5px solid var(--border-card);
+  border-radius: 12px;
+  background-color: #f8fafc;
+}
+
+.cognito-pdf-frame--tall {
+  height: min(70vh, 720px);
+}
+
+/* Exact Real Cognito Lesson Preview Modal (matches image_2.png 1:1) */
+.lesson-preview-modal {
+  display: grid;
+  gap: 22px;
+}
+
+.lesson-preview-modal__title {
+  font-family: var(--font-heading);
+  font-size: 1.72rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--text-heading);
+  padding-right: 36px;
+}
+
+.lesson-preview-objectives {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 11px;
+}
+
+.lesson-preview-objectives__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  font-size: 0.94rem;
+  line-height: 1.45;
+  color: var(--text-secondary);
+}
+
+.lesson-preview-objectives__num {
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background-color: var(--text-heading);
+  color: var(--bg-elevated);
+  font-size: 0.74rem;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.lesson-preview-stats-card {
+  border-radius: 14px;
+  border: 1px solid var(--border-card);
+  background-color: var(--bg-elevated);
+  padding: 18px 20px 16px;
+  display: grid;
+  gap: 14px;
+}
+
+.lesson-preview-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  position: relative;
+}
+
+.lesson-preview-stats-grid::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 4px;
+  bottom: 4px;
+  width: 1px;
+  background-color: var(--border-subtle);
+}
+
+.lesson-preview-stat {
+  text-align: center;
+  display: grid;
+  gap: 2px;
+}
+
+.lesson-preview-stat__value {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  font-variant-numeric: tabular-nums;
+}
+
+.lesson-preview-stat__label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.lesson-preview-bar {
+  width: 100%;
+  height: 9px;
+  border-radius: 999px;
+  background-color: var(--bg-sunken);
+  overflow: hidden;
+  display: flex;
+}
+
+.lesson-preview-bar__fill {
+  height: 100%;
+  background-color: var(--color-green-500);
+  border-radius: 999px;
+  transition: width 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.lesson-preview-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding-top: 4px;
+}
+
+.lesson-preview-stepper {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-muted);
+  font-weight: 700;
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.lesson-preview-stepper__btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  border: 0;
+  background: transparent;
+  color: var(--text-heading);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 140ms ease;
+}
+
+.lesson-preview-stepper__btn:hover:not(:disabled) {
+  background-color: var(--bg-sunken);
+}
+
+.lesson-preview-stepper__btn:disabled {
+  opacity: 0.32;
+  cursor: not-allowed;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
