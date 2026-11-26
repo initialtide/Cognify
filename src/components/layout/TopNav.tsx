@@ -87,7 +87,7 @@ export const TopNav: React.FC<TopNavProps> = ({
   return (
     <header className="top-nav no-print" ref={navRef}>
       <div className="top-nav__inner">
-        {/* Left: Logo or <- DASHBOARD + My courses + Quick Search */}
+        {/* Left: Logo or <- DASHBOARD + My courses (exact real Cognito minimal left nav) */}
         <div className="top-nav__left">
           {isDashboard ? (
             <Link to="/dashboard" aria-label="Cognito Dashboard">
@@ -100,13 +100,14 @@ export const TopNav: React.FC<TopNavProps> = ({
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
-                gap: 8,
-                fontSize: '0.96rem',
+                gap: 7,
+                fontSize: '0.84rem',
                 fontWeight: 700,
+                letterSpacing: '0.04em',
                 color: 'var(--text-heading)',
               }}
             >
-              <ArrowLeft size={18} />
+              <ArrowLeft size={16} />
               DASHBOARD
             </Link>
           )}
@@ -121,16 +122,16 @@ export const TopNav: React.FC<TopNavProps> = ({
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: 5,
-                padding: '6px 10px',
+                padding: '6px 9px',
                 border: 0,
-                borderRadius: 10,
+                borderRadius: 9,
                 background: openMenu === 'courses' ? 'var(--bg-sunken)' : 'transparent',
-                fontWeight: 700,
-                fontSize: '0.95rem',
+                fontWeight: 600,
+                fontSize: '0.88rem',
                 color: 'var(--text-primary)',
               }}
             >
-              My courses <ChevronDown size={15} />
+              My courses <ChevronDown size={14} />
             </button>
 
             {openMenu === 'courses' && (
@@ -159,6 +160,20 @@ export const TopNav: React.FC<TopNavProps> = ({
                     </span>
                     <ChevronRight size={15} color="var(--text-muted)" />
                   </Link>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setOpenMenu(null);
+                      onOpenQuickSearch();
+                    }}
+                    className="nav-dropdown-action"
+                  >
+                    <span style={{ display: 'inline-flex', alignItems: 'center', gap: 9 }}>
+                      <Search size={16} color="var(--text-secondary)" />
+                      <span>Quick search</span>
+                    </span>
+                    <kbd style={{ fontSize: '0.72rem', fontWeight: 700, color: 'var(--text-muted)' }}>Ctrl K</kbd>
+                  </button>
                   <button
                     type="button"
                     onClick={() => {
@@ -219,31 +234,6 @@ export const TopNav: React.FC<TopNavProps> = ({
               </div>
             )}
           </div>
-
-          {/* Minimalist Quick Search Icon Trigger (Ctrl + K) — keeps left nav airy like real Cognito */}
-          <button
-            type="button"
-            onClick={() => {
-              setOpenMenu(null);
-              onOpenQuickSearch();
-            }}
-            aria-label="Quick search (Ctrl+K)"
-            title="Quick search (Ctrl+K)"
-            style={{
-              width: 38,
-              height: 38,
-              borderRadius: 11,
-              border: '1px solid var(--border-card)',
-              backgroundColor: 'var(--bg-pill)',
-              color: 'var(--text-secondary)',
-              display: 'inline-flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              boxShadow: '0 2px 0 var(--border-lip)',
-            }}
-          >
-            <Search size={16} />
-          </button>
         </div>
 
         {/* Right: Stats Pill + Account Pill (Zero Paywall / Zero Upgrade CTA) */}
@@ -256,7 +246,7 @@ export const TopNav: React.FC<TopNavProps> = ({
               aria-expanded={openMenu === 'xp'}
               style={{ color: 'var(--color-blue-500)' }}
             >
-              <NavXpStarIcon size={22} />
+              <NavXpStarIcon size={18} />
               <span>{streakStats.totalXp} XP</span>
             </button>
 
@@ -268,8 +258,8 @@ export const TopNav: React.FC<TopNavProps> = ({
               aria-label="Activity Log"
               style={{ color: 'var(--color-green-600)' }}
             >
-              <NavActivityBarsIcon size={20} />
-              <span className="hide-mobile">{isDashboard ? 'Activity' : ''}</span>
+              <NavActivityBarsIcon size={17} />
+              <span className="hide-mobile">Activity</span>
             </Link>
 
             <span className="nav-pill-divider" />
@@ -283,7 +273,7 @@ export const TopNav: React.FC<TopNavProps> = ({
               }}
               style={{ color: '#e67e22' }}
             >
-              <NavStreakFlameIcon size={21} />
+              <NavStreakFlameIcon size={18} />
               <span>{streakStats.currentStreak} Days</span>
             </button>
 
@@ -301,16 +291,16 @@ export const TopNav: React.FC<TopNavProps> = ({
                 to="/onboarding?mode=signin"
                 className="nav-pill-btn"
                 style={{
-                  border: '1px solid var(--border-card)',
+                  border: '1px solid var(--border-subtle)',
                   backgroundColor: 'var(--bg-pill)',
                   color: 'var(--text-primary)',
-                  borderRadius: 12,
-                  padding: '8px 13px',
-                  boxShadow: '0 2px 0 var(--border-lip)',
+                  borderRadius: 10,
+                  padding: '7px 12px',
+                  boxShadow: '0 1px 2px rgba(16, 24, 40, 0.04)',
                 }}
                 onClick={() => setOpenMenu(null)}
               >
-                <LogIn size={15} />
+                <LogIn size={14} />
                 <span className="hide-mobile">Sign in</span>
               </Link>
               <Link
@@ -320,9 +310,9 @@ export const TopNav: React.FC<TopNavProps> = ({
                   border: '1px solid var(--color-blue-600)',
                   backgroundColor: 'var(--color-blue-500)',
                   color: '#ffffff',
-                  borderRadius: 12,
-                  padding: '8px 14px',
-                  boxShadow: '0 2px 0 var(--color-blue-700)',
+                  borderRadius: 10,
+                  padding: '7px 13px',
+                  boxShadow: '0 1px 2px rgba(16, 24, 40, 0.08)',
                 }}
                 onClick={() => setOpenMenu(null)}
               >
