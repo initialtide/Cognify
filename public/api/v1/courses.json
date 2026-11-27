@@ -93,7 +93,7 @@
     }
   ],
   "courseCount": 47,
-  "totalSubtopics": 617,
+  "totalSubtopics": 615,
   "courses": [
     {
       "id": "gcse-biology-aqa-higher",
@@ -1824,7 +1824,7 @@
       "topicCount": 6,
       "subtopicCount": 14,
       "pastPaperCount": 6,
-      "keyTermCount": 109,
+      "keyTermCount": 99,
       "cheatSheetCount": 6,
       "url": "https://initialtide.github.io/Cognify/course/gcse-combined-aqa-higher",
       "markdownUrl": "https://initialtide.github.io/Cognify/course/gcse-combined-aqa-higher.md",
@@ -7614,7 +7614,7 @@
       "topicCount": 6,
       "subtopicCount": 18,
       "pastPaperCount": 14,
-      "keyTermCount": 115,
+      "keyTermCount": 119,
       "cheatSheetCount": 6,
       "url": "https://initialtide.github.io/Cognify/course/a-level-psychology-cie-core",
       "markdownUrl": "https://initialtide.github.io/Cognify/course/a-level-psychology-cie-core.md",
@@ -7866,7 +7866,7 @@
       "topicCount": 6,
       "subtopicCount": 18,
       "pastPaperCount": 14,
-      "keyTermCount": 115,
+      "keyTermCount": 119,
       "cheatSheetCount": 6,
       "url": "https://initialtide.github.io/Cognify/course/a-level-psychology-aqa",
       "markdownUrl": "https://initialtide.github.io/Cognify/course/a-level-psychology-aqa.md",
@@ -8305,23 +8305,23 @@
       "availableTiers": [
         "Core"
       ],
-      "topicCount": 5,
-      "subtopicCount": 10,
-      "pastPaperCount": 8,
-      "keyTermCount": 0,
-      "cheatSheetCount": 0,
+      "topicCount": 6,
+      "subtopicCount": 8,
+      "pastPaperCount": 6,
+      "keyTermCount": 35,
+      "cheatSheetCount": 6,
       "url": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core",
       "markdownUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core.md",
       "topics": [
         {
           "id": "topic-1",
           "number": 1,
-          "title": "Data Representation & Computer Systems",
+          "title": "Data Representation",
           "subtopics": [
             {
               "id": "cs-1-1",
               "code": "1.1",
-              "title": "Binary, Hexadecimal, Two’s Complement & Media Representation",
+              "title": "Number Systems: Binary, Hexadecimal, Two’s Complement & Shifts",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-1-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-1-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-1-1",
@@ -8331,7 +8331,7 @@
             {
               "id": "cs-1-2",
               "code": "1.2",
-              "title": "CPU Architecture, Von Neumann & Fetch–Decode–Execute Cycle",
+              "title": "Text (ASCII/Unicode), Sound, Bitmap Images & Compression",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-1-2",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-1-2",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-1-2",
@@ -8343,108 +8343,95 @@
         {
           "id": "topic-2",
           "number": 2,
-          "title": "Boolean Logic, Memory & Storage",
+          "title": "Data Transmission & Error Detection",
           "subtopics": [
             {
               "id": "cs-2-1",
               "code": "2.1",
-              "title": "Logic Gates (AND, OR, NOT, XOR, NAND) & Truth Tables",
+              "title": "Packet Switching, Serial/Parallel, Error Checking & Encryption",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-2-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-2-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-2-1",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-2-1",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/exam-practice/cs-2-1"
-            },
-            {
-              "id": "cs-2-2",
-              "code": "2.2",
-              "title": "RAM, ROM, Virtual Memory & Magnetic/Optical/Solid-State Storage",
-              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-2-2",
-              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-2-2",
-              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-2-2",
-              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-2-2",
-              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/exam-practice/cs-2-2"
             }
           ]
         },
         {
           "id": "topic-3",
           "number": 3,
-          "title": "Networks, Protocols & Cyber Security",
+          "title": "Hardware & CPU Architecture",
           "subtopics": [
             {
               "id": "cs-3-1",
               "code": "3.1",
-              "title": "LAN/WAN, Star & Mesh Topologies, Packet Switching & TCP/IP Layers",
+              "title": "Von Neumann Architecture, FDE Cycle, Cache, Primary & Secondary Storage",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-3-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-3-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-3-1",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-3-1",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/exam-practice/cs-3-1"
-            },
-            {
-              "id": "cs-3-2",
-              "code": "3.2",
-              "title": "Malware, SQL Injection, Phishing, Firewalls & Encryption",
-              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-3-2",
-              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-3-2",
-              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-3-2",
-              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-3-2",
-              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/exam-practice/cs-3-2"
             }
           ]
         },
         {
           "id": "topic-4",
           "number": 4,
-          "title": "Algorithms, Searching & Sorting",
+          "title": "Software & Operating Systems",
           "subtopics": [
             {
               "id": "cs-4-1",
               "code": "4.1",
-              "title": "Decomposition, Abstraction, Pseudocode & Trace Tables",
+              "title": "Operating Systems, Interrupts, High/Low-Level Languages & Translators",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-4-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-4-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-4-1",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-4-1",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/exam-practice/cs-4-1"
-            },
-            {
-              "id": "cs-4-2",
-              "code": "4.2",
-              "title": "Linear vs Binary Search & Bubble, Insertion and Merge Sort",
-              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-4-2",
-              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-4-2",
-              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-4-2",
-              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-4-2",
-              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/exam-practice/cs-4-2"
             }
           ]
         },
         {
           "id": "topic-5",
           "number": 5,
-          "title": "Programming Constructs, Databases & SQL",
+          "title": "The Internet & Cyber Security",
           "subtopics": [
             {
               "id": "cs-5-1",
               "code": "5.1",
-              "title": "Selection, Iteration, 1D/2D Arrays, Subroutines & File Handling",
+              "title": "HTTP/HTTPS, DNS, Malware, Social Engineering & Defences",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-5-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-5-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-5-1",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-5-1",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/exam-practice/cs-5-1"
+            }
+          ]
+        },
+        {
+          "id": "topic-6",
+          "number": 6,
+          "title": "Algorithms, Programming, Databases & Boolean Logic",
+          "subtopics": [
+            {
+              "id": "cs-6-1",
+              "code": "6.1",
+              "title": "Algorithms, Pseudocode, Trace Tables, Validation & Test Data",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-6-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-6-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-6-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-6-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/exam-practice/cs-6-1"
             },
             {
-              "id": "cs-5-2",
-              "code": "5.2",
-              "title": "Relational Databases, Primary Keys & SQL SELECT/UPDATE Queries",
-              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-5-2",
-              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-5-2",
-              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-5-2",
-              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-5-2",
-              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/exam-practice/cs-5-2"
+              "id": "cs-6-2",
+              "code": "6.2",
+              "title": "Relational Databases, SQL Queries & Boolean Logic Gates",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-6-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-6-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-6-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-6-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/exam-practice/cs-6-2"
             }
           ]
         }
@@ -8470,49 +8457,39 @@
         "Core"
       ],
       "topicCount": 5,
-      "subtopicCount": 10,
-      "pastPaperCount": 8,
-      "keyTermCount": 0,
-      "cheatSheetCount": 0,
+      "subtopicCount": 8,
+      "pastPaperCount": 6,
+      "keyTermCount": 38,
+      "cheatSheetCount": 5,
       "url": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core",
       "markdownUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core.md",
       "topics": [
         {
           "id": "topic-1",
           "number": 1,
-          "title": "The Basic Economic Problem & Resource Allocation",
+          "title": "The Basic Economic Problem",
           "subtopics": [
             {
               "id": "econ-1-1",
               "code": "1.1",
-              "title": "Scarcity, Factors of Production, Opportunity Cost & PPC Curves",
+              "title": "Scarcity, Factors of Production, Opportunity Cost & PPC",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-1-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-1-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-1-1",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-1-1",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/exam-practice/econ-1-1"
-            },
-            {
-              "id": "econ-1-2",
-              "code": "1.2",
-              "title": "Demand, Supply, Price Equilibrium & Consumer/Producer Surplus",
-              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-1-2",
-              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-1-2",
-              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-1-2",
-              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-1-2",
-              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/exam-practice/econ-1-2"
             }
           ]
         },
         {
           "id": "topic-2",
           "number": 2,
-          "title": "Elasticities & Market Failure",
+          "title": "Allocation of Resources",
           "subtopics": [
             {
               "id": "econ-2-1",
               "code": "2.1",
-              "title": "Price Elasticity of Demand (PED) & Price Elasticity of Supply (PES)",
+              "title": "Demand, Supply, Market Equilibrium & Price Mechanism",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-2-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-2-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-2-1",
@@ -8522,7 +8499,7 @@
             {
               "id": "econ-2-2",
               "code": "2.2",
-              "title": "Market Failure: Social Costs/Benefits, Public Goods & Indirect Taxes",
+              "title": "Price Elasticity (PED & PES), Market Failure & Government Intervention",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-2-2",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-2-2",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-2-2",
@@ -8534,12 +8511,12 @@
         {
           "id": "topic-3",
           "number": 3,
-          "title": "Microeconomic Decision Makers (Firms, Workers & Banks)",
+          "title": "Microeconomic Decision Makers",
           "subtopics": [
             {
               "id": "econ-3-1",
               "code": "3.1",
-              "title": "Functions of Money, Commercial Banks & Central Bank Monetary Policy",
+              "title": "Money, Central & Commercial Banks, Households & Labour Markets",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-3-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-3-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-3-1",
@@ -8549,7 +8526,7 @@
             {
               "id": "econ-3-2",
               "code": "3.2",
-              "title": "Fixed/Variable Costs, Economies of Scale, Monopoly & Competitive Markets",
+              "title": "Firms, Costs, Revenue, Economies of Scale & Competition vs Monopoly",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-3-2",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-3-2",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-3-2",
@@ -8566,7 +8543,7 @@
             {
               "id": "econ-4-1",
               "code": "4.1",
-              "title": "Economic Growth (Real GDP), CPI Inflation & Types of Unemployment",
+              "title": "Macroeconomic Aims, Fiscal, Monetary & Supply-Side Policies",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-4-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-4-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-4-1",
@@ -8576,7 +8553,7 @@
             {
               "id": "econ-4-2",
               "code": "4.2",
-              "title": "Fiscal Policy, Monetary Policy & Supply-Side Reforms",
+              "title": "Economic Growth (GDP), Employment/Unemployment & Inflation",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-4-2",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-4-2",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-4-2",
@@ -8588,27 +8565,17 @@
         {
           "id": "topic-5",
           "number": 5,
-          "title": "Economic Development & International Trade",
+          "title": "International Trade & Globalisation",
           "subtopics": [
             {
               "id": "econ-5-1",
               "code": "5.1",
-              "title": "Living Standards (HDI), Absolute vs Relative Poverty & Population Structure",
+              "title": "Specialisation, Free Trade vs Protectionism, Exchange Rates & Current Account",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-5-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-5-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-5-1",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-5-1",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/exam-practice/econ-5-1"
-            },
-            {
-              "id": "econ-5-2",
-              "code": "5.2",
-              "title": "Comparative Advantage, Protectionism (Tariffs/Quotas), Exchange Rates & Current Account",
-              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-5-2",
-              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-5-2",
-              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-5-2",
-              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-5-2",
-              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/exam-practice/econ-5-2"
             }
           ]
         }
@@ -8634,78 +8601,98 @@
         "Core"
       ],
       "topicCount": 4,
-      "subtopicCount": 4,
-      "pastPaperCount": 8,
-      "keyTermCount": 0,
-      "cheatSheetCount": 0,
+      "subtopicCount": 6,
+      "pastPaperCount": 6,
+      "keyTermCount": 24,
+      "cheatSheetCount": 4,
       "url": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core",
       "markdownUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core.md",
       "topics": [
         {
           "id": "topic-1",
           "number": 1,
-          "title": "Reading Comprehension, Summary & Synthesis",
+          "title": "Reading Comprehension & Language Analysis",
           "subtopics": [
             {
-              "id": "eng-1-1",
+              "id": "englang-1-1",
               "code": "1.1",
-              "title": "Explicit & Implicit Meaning, Textual Synthesis & Selective Summary",
-              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/lesson/eng-1-1",
-              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/notes/eng-1-1",
-              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/quiz/eng-1-1",
-              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/flashcards/eng-1-1",
-              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/exam-practice/eng-1-1"
+              "title": "Explicit vs Implicit Meaning, Inference & Own-Words Paraphrasing",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/lesson/englang-1-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/notes/englang-1-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/quiz/englang-1-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/flashcards/englang-1-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/exam-practice/englang-1-1"
+            },
+            {
+              "id": "englang-1-2",
+              "code": "1.2",
+              "title": "Writer’s Effect, Imagery, Connotation & Structural Analysis",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/lesson/englang-1-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/notes/englang-1-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/quiz/englang-1-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/flashcards/englang-1-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/exam-practice/englang-1-2"
             }
           ]
         },
         {
           "id": "topic-2",
           "number": 2,
-          "title": "Language Analysis & Writer’s Effects",
+          "title": "Summary & Directed Writing",
           "subtopics": [
             {
-              "id": "eng-2-1",
+              "id": "englang-2-1",
               "code": "2.1",
-              "title": "Analysing Metaphor, Sensory Imagery, Lexical Fields & Structural Shifts",
-              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/lesson/eng-2-1",
-              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/notes/eng-2-1",
-              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/quiz/eng-2-1",
-              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/flashcards/eng-2-1",
-              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/exam-practice/eng-2-1"
+              "title": "Summary Writing: Selecting 15 Points, Own Words & Concision",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/lesson/englang-2-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/notes/englang-2-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/quiz/englang-2-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/flashcards/englang-2-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/exam-practice/englang-2-1"
+            },
+            {
+              "id": "englang-2-2",
+              "code": "2.2",
+              "title": "Directed Writing: Letters, Speeches, Articles, Interviews & Reports",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/lesson/englang-2-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/notes/englang-2-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/quiz/englang-2-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/flashcards/englang-2-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/exam-practice/englang-2-2"
             }
           ]
         },
         {
           "id": "topic-3",
           "number": 3,
-          "title": "Directed Writing & Transactional Rhetoric",
+          "title": "Narrative & Descriptive Composition",
           "subtopics": [
             {
-              "id": "eng-3-1",
+              "id": "englang-3-1",
               "code": "3.1",
-              "title": "Adapting Register, Voice & Rhetorical Devices (Speeches, Letters, Articles)",
-              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/lesson/eng-3-1",
-              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/notes/eng-3-1",
-              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/quiz/eng-3-1",
-              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/flashcards/eng-3-1",
-              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/exam-practice/eng-3-1"
+              "title": "Descriptive & Narrative Composition: Show Don’t Tell, Structure & Voice",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/lesson/englang-3-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/notes/englang-3-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/quiz/englang-3-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/flashcards/englang-3-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/exam-practice/englang-3-1"
             }
           ]
         },
         {
           "id": "topic-4",
           "number": 4,
-          "title": "Descriptive & Narrative Composition",
+          "title": "Argumentative Writing & Technical Accuracy",
           "subtopics": [
             {
-              "id": "eng-4-1",
+              "id": "englang-4-1",
               "code": "4.1",
-              "title": "Crafting Narrative Arcs, Cyclical Structure, Characterization & Punctuation for Effect",
-              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/lesson/eng-4-1",
-              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/notes/eng-4-1",
-              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/quiz/eng-4-1",
-              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/flashcards/eng-4-1",
-              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/exam-practice/eng-4-1"
+              "title": "Persuasive & Discursive Rhetoric + Grammar & Punctuation Precision",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/lesson/englang-4-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/notes/englang-4-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/quiz/englang-4-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/flashcards/englang-4-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/exam-practice/englang-4-1"
             }
           ]
         }

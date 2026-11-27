@@ -11,13 +11,13 @@
 | **Total Subtopic Lessons** | 281 | Growing |
 | **IGCSE Unlocked Subjects** | 13 / 13 (0 stubs) | 13 / 13 |
 | **A-Level Unlocked Subjects** | 5 / 14 (0 stubs) | 14 / 14 |
-| **Explicit Authored Quizzes / Subtopic** | 4.9 | 5.0+ |
-| **Explicit Authored Flashcards / Subtopic** | 4.9 | 5.0+ |
+| **Explicit Authored Quizzes / Subtopic** | 5 | 5.0+ |
+| **Explicit Authored Flashcards / Subtopic** | 5 | 5.0+ |
 | **Explicit Authored Exam Practice / Subtopic** | 1 | 1.0+ |
 | **Explicit Authored Cheat Sheets / Topic** | 1 | 1.0 |
 | **Baked `-extra-` / Template Items** | 0 | 0 |
-| **Runtime `-syn-` Fallback Items** | 67 | 0 |
-| **Gradable Short-Answer MarkPoints** | **100%** (1693 / 1693, 0 ungradable) | 100% |
+| **Runtime `-syn-` Fallback Items** | 0 | 0 |
+| **Gradable Short-Answer MarkPoints** | **100%** (1677 / 1677, 0 ungradable) | 100% |
 
 ## Top Next Learning Upgrades (Auto-Prioritized)
 
@@ -31,11 +31,11 @@
 
 | Course | Subtopics | Score | Subsections | Examples | Common Mistakes | Memory Aids | Diagrams |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| `a-level-biology-aqa` | 16 | **99/100** | 100% | 100% | 100% | 100% | 6 |
+| `a-level-biology-aqa` | 16 | **100/100** | 100% | 100% | 100% | 100% | 6 |
 | `a-level-chemistry-aqa` | 16 | **100/100** | 100% | 100% | 100% | 100% | 4 |
 | `a-level-maths-cie` | 15 | **100/100** | 100% | 100% | 100% | 100% | 2 |
 | `a-level-physics-aqa` | 16 | **100/100** | 100% | 100% | 100% | 100% | 4 |
-| `a-level-psychology-aqa` | 18 | **97/100** | 100% | 100% | 100% | 100% | 3 |
+| `a-level-psychology-aqa` | 18 | **100/100** | 100% | 100% | 100% | 100% | 3 |
 | `gcse-biology-aqa-foundation` | 16 | **100/100** | 100% | 100% | 100% | 100% | 9 |
 | `gcse-chemistry-aqa-higher` | 12 | **100/100** | 100% | 100% | 100% | 100% | 3 |
 | `gcse-combined-aqa-higher` | 14 | **100/100** | 100% | 100% | 100% | 100% | 9 |
@@ -66,7 +66,7 @@
 | `a-level-psychology-aqa` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (109/109) |
 | `gcse-biology-aqa-foundation` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (78/78) |
 | `gcse-chemistry-aqa-higher` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (65/65) |
-| `gcse-combined-aqa-higher` | 3.1 | 3.1 | 0.4 | 0.3 | 0 | 67 | 100% (94/94) |
+| `gcse-combined-aqa-higher` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (78/78) |
 | `gcse-maths-aqa-higher` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (46/46) |
 | `gcse-physics-aqa-higher` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (65/65) |
 | `igcse-biology-cie` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (102/102) |
@@ -87,18 +87,18 @@
 
 | Course | Subtopic | Score | Missing Learning Elements |
 | --- | --- | ---: | --- |
-| `a-level-psychology-aqa` | `al-psy-3-3` — Biopsychology — Localisation, Synaptic Transmission & Fight-or-Flight | 90/100 | Polish depth |
-| `a-level-biology-aqa` | `al-bio-1-2` — Proteins, Enzymes, ATP & Nucleic Acids | 93/100 | Polish depth |
-| `a-level-biology-aqa` | `al-bio-5-1` — Photosynthesis: Light-Dependent & Calvin Cycle | 93/100 | Polish depth |
-| `a-level-psychology-aqa` | `al-psy-1-3` — Ethics, Validity, Reliability & Data Analysis | 94/100 | Polish depth |
-| `a-level-psychology-aqa` | `al-psy-2-3` — Eyewitness Testimony (Loftus & Palmer) & Pozzulo et al. (2010) | 94/100 | Polish depth |
-| `a-level-psychology-aqa` | `al-psy-3-1` — Dement & Kleitman (1957) Sleep & Dreams | 94/100 | Polish depth |
-| `a-level-psychology-aqa` | `al-psy-4-2` — Bandura et al. (1961) Bobo Doll & Social Learning Theory | 94/100 | Polish depth |
-| `a-level-psychology-aqa` | `al-psy-5-3` — Piliavin et al. (1969) Subway Samaritan & Perry et al. (2015) | 94/100 | Polish depth |
-| `a-level-psychology-aqa` | `al-psy-6-3` — Anxiety Disorders, Phobias, OCD & Treatment Evaluation | 94/100 | Polish depth |
 | `a-level-biology-aqa` | `al-bio-1-1` — Carbohydrates & Lipids | 100/100 | Polish depth |
+| `a-level-biology-aqa` | `al-bio-1-2` — Proteins, Enzymes, ATP & Nucleic Acids | 100/100 | Polish depth |
 | `a-level-biology-aqa` | `al-bio-2-1` — Eukaryotic Ultrastructure, Microscopy & Mitosis | 100/100 | Polish depth |
 | `a-level-biology-aqa` | `al-bio-2-2` — Transport Across Membranes & The Immune Response | 100/100 | Polish depth |
+| `a-level-biology-aqa` | `al-bio-3-1` — Gas Exchange in Insects, Fish, Plants & Mammals | 100/100 | Polish depth |
+| `a-level-biology-aqa` | `al-bio-3-2` — Haemoglobin, Cardiac Cycle & Xylem/Phloem Mass Flow | 100/100 | Polish depth |
+| `a-level-biology-aqa` | `al-bio-4-1` — DNA, Transcription, Splicing & Translation | 100/100 | Polish depth |
+| `a-level-biology-aqa` | `al-bio-4-2` — Meiosis, Natural Selection & Biodiversity | 100/100 | Polish depth |
+| `a-level-biology-aqa` | `al-bio-5-1` — Photosynthesis: Light-Dependent & Calvin Cycle | 100/100 | Polish depth |
+| `a-level-biology-aqa` | `al-bio-5-2` — Respiration: Glycolysis, Link, Krebs & Oxidative Phosphorylation | 100/100 | Polish depth |
+| `a-level-biology-aqa` | `al-bio-6-1` — Action Potentials, Saltatory Conduction & Synapses | 100/100 | Polish depth |
+| `a-level-biology-aqa` | `al-bio-6-2` — Sliding Filament Model & Kidney Osmoregulation | 100/100 | Polish depth |
 
 ## Roadmap Coverage Status
 

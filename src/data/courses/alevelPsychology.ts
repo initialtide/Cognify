@@ -580,6 +580,14 @@ export const ALEVEL_PSYCHOLOGY_NOTES: Record<string, NoteLesson> = {
           {
             "term": "concurrent validity",
             "definition": "Checking a new psychometric test by correlating its scores with an already validated test of the same construct."
+          },
+          {
+            "term": "informed consent",
+            "definition": "Ensuring participants understand the aims, procedures, and rights of a study before voluntarily agreeing to take part."
+          },
+          {
+            "term": "Type I error",
+            "definition": "A false positive statistical error where a researcher mistakenly rejects a true null hypothesis (more likely when alpha is too lenient)."
           }
         ],
         "subsections": [
@@ -1048,7 +1056,16 @@ export const ALEVEL_PSYCHOLOGY_NOTES: Record<string, NoteLesson> = {
             ]
           }
         ],
-        "glossaryPills": []
+        "glossaryPills": [
+          {
+            "term": "target-absent lineup",
+            "definition": "An identification array that does not contain the actual perpetrator, testing whether witnesses correctly reject rather than making a false-positive pick."
+          },
+          {
+            "term": "Cognitive Interview",
+            "definition": "Fisher & Geiselman’s four-part forensic interview technique (report everything, context reinstatement, reverse order, change perspective) designed to boost accurate recall."
+          }
+        ]
       },
       {
         "id": "al-psy-2-3-c3",
@@ -1195,7 +1212,16 @@ export const ALEVEL_PSYCHOLOGY_NOTES: Record<string, NoteLesson> = {
             ]
           }
         ],
-        "glossaryPills": []
+        "glossaryPills": [
+          {
+            "term": "EOG (electrooculogram)",
+            "definition": "Electrophysiological recording using electrodes near the eyes to measure horizontal and vertical eye movements during REM sleep."
+          },
+          {
+            "term": "muscle atonia",
+            "definition": "Temporary inhibition of voluntary skeletal muscles during REM sleep that prevents sleepers from physically acting out vivid dreams."
+          }
+        ]
       },
       {
         "id": "al-psy-3-1-c3",
@@ -1444,6 +1470,19 @@ export const ALEVEL_PSYCHOLOGY_NOTES: Record<string, NoteLesson> = {
           "**Acute stress pathway (SAM axis — Sympathomedullary pathway)**: Amygdala detects threat → signals Hypothalamus → activates Sympathetic NS → stimulates Adrenal Medulla to release Adrenaline (epinephrine) and Noradrenaline into the bloodstream.",
           "**Physiological effects**: Increased heart rate, dilated bronchioles and pupils, diverted blood flow to skeletal muscles, glycogenolysis (glucose release), and inhibited digestion/salivation. Chronic stress additionally activates the HPA axis (Hypothalamus → Pituitary ACTH → Adrenal Cortex releasing Cortisol)."
         ],
+        "subsections": [
+          {
+            "heading": "Acute Stress (SAM Axis) vs Parasympathetic Recovery",
+            "bullets": [
+              "**SAM Acute Pathway**: Amygdala detects stressor → Hypothalamus activates **Sympathetic NS** → **Adrenal Medulla** releases **adrenaline** into bloodstream → heart rate, breathing, and blood glucose surge for fight or flight.",
+              "**Parasympathetic Recovery**: Once the threat passes, the parasympathetic branch slows heart rate, constricts bronchioles, and restarts digestion to restore homeostasis."
+            ],
+            "exampleHeading": "Concrete check: Acute (SAM) vs Chronic (HPA) stress pathways",
+            "examples": [
+              "**Acute threat (seconds)**: Sympathomedullary (SAM) axis → **adrenaline** from adrenal medulla; **Chronic stress (days/weeks)**: Hypothalamic-Pituitary-Adrenal (HPA) axis → ACTH → **cortisol** from adrenal cortex (suppresses immunity over time)."
+            ]
+          }
+        ],
         "glossaryPills": [
           {
             "term": "adrenaline",
@@ -1497,6 +1536,19 @@ export const ALEVEL_PSYCHOLOGY_NOTES: Record<string, NoteLesson> = {
           "**Hemispheric lateralisation**: Language is predominantly left-lateralised in ~95% of right-handers, while the right hemisphere excels in visuo-spatial synthesis and facial recognition. Both hemispheres normally communicate via the corpus callosum.",
           "**Sperry (1968) split-brain studies**: Tested 11 commissurotomy patients (corpus callosum severed for severe epilepsy) by flashing stimuli briefly (~0.1 s) to either the Right Visual Field (processed by Left Hemisphere) or Left Visual Field (Right Hemisphere). Words shown to RVF were spoken aloud easily; words shown to LVF could NOT be named, yet the left hand (controlled by RH) could accurately pick up the matching object behind a screen!",
           "**Challenge to strict localisation**: Lashley’s (1950) equipotentiality theory (rat maze memory depended on percentage of cortex removed, not location) and functional recovery after stroke show brain networks operate holistically and plastically."
+        ],
+        "subsections": [
+          {
+            "heading": "Evaluating Strict Localisation vs Neuroplasticity",
+            "bullets": [
+              "**Supporting evidence**: Case studies such as **Phineas Gage** (prefrontal cortex → personality change), Broca’s patient **Tan** (speech production), and Petersen et al. (1988) brain scans showing Wernicke’s active during listening and Broca’s during reading.",
+              "**Challenging evidence**: **Lashley (1950)** showed higher cognitive learning is distributed holistically, and post-stroke functional recovery demonstrates **neural plasticity** (axonal sprouting and recruitment of homologous areas)."
+            ],
+            "exampleHeading": "Concrete check: Contralateral wiring in split-brain exam questions",
+            "examples": [
+              "**Right Visual Field (RVF) → Left Hemisphere → Speech output** (can say the word aloud); **Left Visual Field (LVF) → Right Hemisphere → Left Hand motor control** (cannot name it, CAN select or draw it with the left hand)."
+            ]
+          }
         ]
       },
       {
@@ -1783,7 +1835,16 @@ export const ALEVEL_PSYCHOLOGY_NOTES: Record<string, NoteLesson> = {
             ]
           }
         ],
-        "glossaryPills": []
+        "glossaryPills": [
+          {
+            "term": "identification",
+            "definition": "Cognitive process where an observer associates themselves with a role model (e.g. same-sex or high-status adult) and desires to adopt their behaviours."
+          },
+          {
+            "term": "matched-pairs design",
+            "definition": "Experimental design pairing participants on a key variable (baseline aggression in Bandura, 1961) before allocating them across conditions to control participant variables."
+          }
+        ]
       },
       {
         "id": "al-psy-4-2-c3",
@@ -2382,7 +2443,16 @@ export const ALEVEL_PSYCHOLOGY_NOTES: Record<string, NoteLesson> = {
             ]
           }
         ],
-        "glossaryPills": []
+        "glossaryPills": [
+          {
+            "term": "social salience theory",
+            "definition": "Model proposing that oxytocin amplifies sensitivity to social cues according to an individual’s existing personality traits rather than uniformly boosting friendliness."
+          },
+          {
+            "term": "double-blind crossover",
+            "definition": "Repeated-measures experimental design where neither participant nor researcher knows whether active drug or placebo is administered in each counterbalanced session."
+          }
+        ]
       },
       {
         "id": "al-psy-5-3-c3",
@@ -2829,7 +2899,16 @@ export const ALEVEL_PSYCHOLOGY_NOTES: Record<string, NoteLesson> = {
             ]
           }
         ],
-        "glossaryPills": []
+        "glossaryPills": [
+          {
+            "term": "systematic desensitisation",
+            "definition": "Wolpe’s behavioural therapy for phobias pairing an anxiety hierarchy with progressive relaxation training via reciprocal inhibition."
+          },
+          {
+            "term": "orbitofrontal cortex (OFC)",
+            "definition": "Prefrontal brain region involved in error detection and worry signalling that shows hyperactivity in the OCD worry circuit."
+          }
+        ]
       },
       {
         "id": "al-psy-6-3-c3",
