@@ -36,6 +36,7 @@ interface AuthFormCardProps {
   defaultRunOnboarding?: boolean;
   titleId?: string;
   compact?: boolean;
+  headingAs?: 'h1' | 'h2';
 }
 
 const YEAR_OPTIONS = ['YEAR 10', 'YEAR 11', 'YEAR 12', 'YEAR 13', 'PRIVATE CANDIDATE'];
@@ -47,6 +48,7 @@ export const AuthFormCard: React.FC<AuthFormCardProps> = ({
   defaultRunOnboarding = false,
   titleId = 'auth-dialog-title',
   compact = false,
+  headingAs = 'h2',
 }) => {
   const {
     accounts,
@@ -247,16 +249,18 @@ export const AuthFormCard: React.FC<AuthFormCardProps> = ({
     borderRadius: 10,
     border: active ? '1.5px solid var(--color-blue-500)' : '1.5px solid transparent',
     backgroundColor: active ? 'var(--bg-elevated)' : 'transparent',
-    color: active ? 'var(--color-blue-600)' : 'var(--text-secondary)',
+    color: active ? 'var(--text-link)' : 'var(--text-secondary)',
     fontWeight: 700,
     fontSize: '0.88rem',
     boxShadow: active ? '0 2px 0 var(--border-lip)' : 'none',
   });
 
+  const HeadingTag = headingAs;
+
   return (
     <div style={{ display: 'grid', gap: compact ? 16 : 20 }}>
       <div>
-        <h2
+        <HeadingTag
           id={titleId}
           className="font-heading"
           style={{ fontSize: compact ? '1.5rem' : '1.85rem', lineHeight: 1.2 }}
@@ -268,7 +272,7 @@ export const AuthFormCard: React.FC<AuthFormCardProps> = ({
               : mode === 'reset'
                 ? 'Reset your password'
                 : 'Restore from Sync Code'}
-        </h2>
+        </HeadingTag>
         <p style={{ margin: '6px 0 0', color: 'var(--text-muted)', fontSize: '0.93rem', lineHeight: 1.5 }}>
           {mode === 'signin'
             ? 'Sign in to load your saved courses, XP, streaks, quiz scores, and flashcards.'
@@ -333,7 +337,7 @@ export const AuthFormCard: React.FC<AuthFormCardProps> = ({
             display: 'inline-flex',
             alignItems: 'center',
             gap: 6,
-            color: 'var(--color-blue-600)',
+            color: 'var(--text-link)',
             fontWeight: 700,
             fontSize: '0.88rem',
             justifySelf: 'start',
@@ -354,7 +358,7 @@ export const AuthFormCard: React.FC<AuthFormCardProps> = ({
             borderRadius: 12,
             backgroundColor: 'rgba(245, 158, 11, 0.12)',
             border: '1px solid rgba(245, 158, 11, 0.4)',
-            color: '#92400e',
+            color: 'var(--accent-amber-text)',
             fontSize: '0.84rem',
             fontWeight: 600,
             lineHeight: 1.45,
@@ -377,7 +381,7 @@ export const AuthFormCard: React.FC<AuthFormCardProps> = ({
             borderRadius: 12,
             backgroundColor: 'rgba(239, 68, 68, 0.09)',
             border: '1px solid rgba(239, 68, 68, 0.32)',
-            color: 'var(--color-red-600)',
+            color: 'var(--accent-red-text)',
             fontSize: '0.88rem',
             fontWeight: 600,
           }}
@@ -404,9 +408,9 @@ export const AuthFormCard: React.FC<AuthFormCardProps> = ({
                   gap: 6,
                   padding: '6px 12px',
                   borderRadius: 8,
-                  border: '1px solid var(--color-blue-300, var(--color-blue-500))',
+                  border: '1px solid var(--surface-accent-blue-border)',
                   backgroundColor: 'var(--bg-elevated)',
-                  color: 'var(--color-blue-600)',
+                  color: 'var(--text-link)',
                   fontWeight: 800,
                   fontSize: '0.82rem',
                 }}
@@ -444,9 +448,9 @@ export const AuthFormCard: React.FC<AuthFormCardProps> = ({
                 gap: 6,
                 padding: '6px 12px',
                 borderRadius: 8,
-                border: '1px solid var(--color-blue-300, var(--color-blue-500))',
+                border: '1px solid var(--surface-accent-blue-border)',
                 backgroundColor: 'var(--bg-elevated)',
-                color: 'var(--color-blue-600)',
+                color: 'var(--text-link)',
                 fontWeight: 800,
                 fontSize: '0.82rem',
               }}
@@ -463,7 +467,7 @@ export const AuthFormCard: React.FC<AuthFormCardProps> = ({
                 border: 0,
                 background: 'transparent',
                 padding: 0,
-                color: 'var(--color-blue-600)',
+                color: 'var(--text-link)',
                 fontWeight: 800,
                 fontSize: '0.82rem',
                 textDecoration: 'underline',
@@ -486,7 +490,7 @@ export const AuthFormCard: React.FC<AuthFormCardProps> = ({
             borderRadius: 12,
             backgroundColor: 'rgba(16, 185, 129, 0.12)',
             border: '1px solid rgba(16, 185, 129, 0.35)',
-            color: 'var(--color-green-700)',
+            color: 'var(--accent-green-text)',
             fontSize: '0.88rem',
             fontWeight: 700,
           }}
@@ -543,8 +547,8 @@ export const AuthFormCard: React.FC<AuthFormCardProps> = ({
                         border: selected
                           ? '1.5px solid var(--color-blue-500)'
                           : '1px solid var(--border-card)',
-                        backgroundColor: selected ? 'var(--color-blue-50)' : 'var(--bg-elevated)',
-                        color: selected ? 'var(--color-blue-700)' : 'var(--text-primary)',
+                        backgroundColor: selected ? 'var(--surface-accent-blue)' : 'var(--bg-elevated)',
+                        color: selected ? 'var(--surface-accent-blue-text)' : 'var(--text-primary)',
                         fontSize: '0.83rem',
                         fontWeight: 700,
                       }}
@@ -588,7 +592,7 @@ export const AuthFormCard: React.FC<AuthFormCardProps> = ({
                   border: 0,
                   background: 'transparent',
                   padding: 0,
-                  color: 'var(--color-blue-600)',
+                  color: 'var(--text-link)',
                   fontWeight: 700,
                   fontSize: '0.82rem',
                 }}
@@ -657,7 +661,7 @@ export const AuthFormCard: React.FC<AuthFormCardProps> = ({
                 style={{
                   border: 0,
                   background: 'transparent',
-                  color: 'var(--color-blue-600)',
+                  color: 'var(--text-link)',
                   fontWeight: 800,
                   padding: 0,
                   textDecoration: 'underline',
@@ -672,7 +676,7 @@ export const AuthFormCard: React.FC<AuthFormCardProps> = ({
                 style={{
                   border: 0,
                   background: 'transparent',
-                  color: 'var(--color-blue-600)',
+                  color: 'var(--text-link)',
                   fontWeight: 800,
                   padding: 0,
                   textDecoration: 'underline',
@@ -699,7 +703,7 @@ export const AuthFormCard: React.FC<AuthFormCardProps> = ({
                 border: 0,
                 background: 'transparent',
                 padding: 0,
-                color: 'var(--color-blue-600)',
+                color: 'var(--text-link)',
                 fontWeight: 700,
                 fontSize: 'inherit',
                 textDecoration: 'underline',
@@ -838,9 +842,9 @@ export const AuthFormCard: React.FC<AuthFormCardProps> = ({
                       padding: '6px 11px',
                       borderRadius: 999,
                       border: active
-                        ? '1.5px solid var(--color-blue-500)'
+                        ? '1.5px solid var(--accent-cta-blue)'
                         : '1px solid var(--border-card)',
-                      backgroundColor: active ? 'var(--color-blue-500)' : 'var(--bg-elevated)',
+                      backgroundColor: active ? 'var(--accent-cta-blue)' : 'var(--bg-elevated)',
                       color: active ? '#ffffff' : 'var(--text-secondary)',
                       fontWeight: 800,
                       fontSize: '0.76rem',
@@ -872,7 +876,7 @@ export const AuthFormCard: React.FC<AuthFormCardProps> = ({
                       border: selected
                         ? '2px solid var(--color-blue-500)'
                         : '1.5px solid var(--border-card)',
-                      backgroundColor: selected ? 'var(--color-blue-50)' : 'var(--bg-elevated)',
+                      backgroundColor: selected ? 'var(--surface-accent-blue)' : 'var(--bg-elevated)',
                       display: 'inline-flex',
                     }}
                   >
@@ -912,9 +916,9 @@ export const AuthFormCard: React.FC<AuthFormCardProps> = ({
                 gap: 9,
                 padding: '9px 12px',
                 borderRadius: 10,
-                backgroundColor: 'var(--color-blue-50)',
-                border: '1px solid var(--color-blue-200)',
-                color: '#0b3c61',
+                backgroundColor: 'var(--surface-accent-blue)',
+                border: '1px solid var(--surface-accent-blue-border)',
+                color: 'var(--surface-accent-blue-text)',
                 fontSize: '0.84rem',
                 fontWeight: 700,
                 cursor: 'pointer',

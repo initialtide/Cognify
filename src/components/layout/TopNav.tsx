@@ -90,7 +90,7 @@ export const TopNav: React.FC<TopNavProps> = ({
         {/* Left: Logo or <- DASHBOARD + My courses (exact real Cognito minimal left nav) */}
         <div className="top-nav__left">
           {isDashboard ? (
-            <Link to="/dashboard" aria-label="Cognito Dashboard">
+            <Link to="/dashboard" aria-label="Cognify Dashboard" className="top-nav-logo">
               <CognitoLogo />
             </Link>
           ) : (
@@ -100,11 +100,13 @@ export const TopNav: React.FC<TopNavProps> = ({
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
-                gap: 7,
-                fontSize: '0.84rem',
+                gap: 6,
+                fontSize: '0.82rem',
                 fontWeight: 700,
                 letterSpacing: '0.04em',
                 color: 'var(--text-heading)',
+                whiteSpace: 'nowrap',
+                flexShrink: 0,
               }}
             >
               <ArrowLeft size={16} />
@@ -116,19 +118,11 @@ export const TopNav: React.FC<TopNavProps> = ({
           <div style={{ position: 'relative' }}>
             <button
               type="button"
+              className="nav-courses-btn"
               onClick={() => setOpenMenu((m) => (m === 'courses' ? null : 'courses'))}
               aria-expanded={openMenu === 'courses'}
               style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: 5,
-                padding: '6px 9px',
-                border: 0,
-                borderRadius: 9,
                 background: openMenu === 'courses' ? 'var(--bg-sunken)' : 'transparent',
-                fontWeight: 600,
-                fontSize: '0.88rem',
-                color: 'var(--text-primary)',
               }}
             >
               My courses <ChevronDown size={14} />
@@ -244,34 +238,34 @@ export const TopNav: React.FC<TopNavProps> = ({
               className="nav-pill-btn"
               onClick={() => setOpenMenu((m) => (m === 'xp' ? null : 'xp'))}
               aria-expanded={openMenu === 'xp'}
-              style={{ color: 'var(--color-blue-500)' }}
+              style={{ color: 'var(--accent-blue-text)' }}
             >
               <NavXpStarIcon size={18} />
               <span>{streakStats.totalXp} XP</span>
             </button>
 
-            <span className="nav-pill-divider" />
+            <span className="nav-pill-divider hide-mobile-sm" />
 
             <Link
               to="/account/activity"
-              className="nav-pill-btn"
+              className="nav-pill-btn hide-mobile-sm"
               aria-label="Activity Log"
-              style={{ color: 'var(--color-green-600)' }}
+              style={{ color: 'var(--accent-green-text)' }}
             >
               <NavActivityBarsIcon size={17} />
               <span className="hide-mobile">Activity</span>
             </Link>
 
-            <span className="nav-pill-divider" />
+            <span className="nav-pill-divider hide-mobile-sm" />
 
             <button
               type="button"
-              className="nav-pill-btn"
+              className="nav-pill-btn hide-mobile-sm"
               onClick={() => {
                 setOpenMenu(null);
                 onOpenStreakModal();
               }}
-              style={{ color: '#e67e22' }}
+              style={{ color: 'var(--accent-amber-text)' }}
             >
               <NavStreakFlameIcon size={18} />
               <span>{streakStats.currentStreak} Days</span>
@@ -286,10 +280,11 @@ export const TopNav: React.FC<TopNavProps> = ({
           </div>
 
           {!isAuthenticated && (
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+            <div className="hide-mobile-xs" style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
               <Link
                 to="/onboarding?mode=signin"
                 className="nav-pill-btn"
+                aria-label="Sign in"
                 style={{
                   border: '1px solid var(--border-subtle)',
                   backgroundColor: 'var(--bg-pill)',
@@ -307,8 +302,8 @@ export const TopNav: React.FC<TopNavProps> = ({
                 to="/onboarding"
                 className="nav-pill-btn hide-mobile"
                 style={{
-                  border: '1px solid var(--color-blue-600)',
-                  backgroundColor: 'var(--color-blue-500)',
+                  border: '1px solid var(--color-blue-700)',
+                  backgroundColor: 'var(--accent-cta-blue)',
                   color: '#ffffff',
                   borderRadius: 10,
                   padding: '7px 13px',
@@ -341,7 +336,7 @@ export const TopNav: React.FC<TopNavProps> = ({
                   }}
                 />
               )}
-              <span>{profile.name}</span>
+              <span className="nav-account-name">{profile.name}</span>
               <ChevronDown size={15} />
             </button>
 

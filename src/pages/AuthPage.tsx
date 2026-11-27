@@ -34,16 +34,17 @@ export const AuthPage: React.FC<AuthPageProps> = ({ initialMode = 'signin' }) =>
       <div
         style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))',
           gap: 28,
           alignItems: 'start',
         }}
       >
         {/* Left: Auth Form Card */}
-        <section className="cognito-card" style={{ padding: '36px 36px' }}>
+        <section className="cognito-card" style={{ padding: '32px 30px' }}>
           <AuthFormCard
             key={initialMode}
             initialMode={initialMode}
+            headingAs="h1"
             titleId="auth-page-title"
             onStartGuidedOnboarding={() => navigate('/onboarding')}
             onSuccess={(meta) =>
@@ -55,13 +56,13 @@ export const AuthPage: React.FC<AuthPageProps> = ({ initialMode = 'signin' }) =>
         {/* Right: Why Save Your Account Info Card */}
         <aside
           className="cognito-card cognito-grid-bg"
-          style={{ padding: '36px 36px', display: 'grid', gap: 20 }}
+          style={{ padding: '32px 30px', display: 'grid', gap: 20 }}
         >
           <div>
             <CognitoLogo />
-            <h3 className="font-heading" style={{ fontSize: '1.35rem', marginTop: 14 }}>
+            <h2 className="font-heading" style={{ fontSize: '1.35rem', marginTop: 14 }}>
               Your revision, safely saved.
-            </h3>
+            </h2>
             <p style={{ margin: '6px 0 0', fontSize: '0.92rem', color: 'var(--text-secondary)' }}>
               100% free IGCSE &amp; A-Level notes, quizzes, flashcards, and exam practice — with automatic progress saving.
             </p>
@@ -80,7 +81,7 @@ export const AuthPage: React.FC<AuthPageProps> = ({ initialMode = 'signin' }) =>
                 desc: 'Copy your compact Sync Code or link optional Supabase Cloud Sync to keep laptop and phone in sync.',
               },
               {
-                icon: <ShieldCheck size={18} color="var(--color-purple-600, #7c3aed)" />,
+                icon: <ShieldCheck size={18} color="var(--color-purple-400)" />,
                 title: 'Private & password protected',
                 desc: 'Each student gets their own salted PBKDF2-SHA256 protected account — ideal on shared home or school devices.',
               },

@@ -298,7 +298,7 @@ export const AccountLayout: React.FC<AccountLayoutProps> = ({
                 style={{
                   padding: '5px 14px',
                   borderRadius: 8,
-                  backgroundColor: isAuthenticated ? 'var(--color-green-600)' : 'var(--color-blue-500)',
+                  backgroundColor: isAuthenticated ? 'var(--accent-cta-green)' : 'var(--accent-cta-blue)',
                   color: '#ffffff',
                   fontSize: '0.8rem',
                   fontWeight: 700,
@@ -544,11 +544,11 @@ export const AccountLayout: React.FC<AccountLayoutProps> = ({
                             flexWrap: 'wrap',
                             padding: '10px 14px',
                             borderRadius: 11,
-                            backgroundColor: 'var(--color-blue-50)',
-                            border: '1px solid var(--color-blue-200)',
+                            backgroundColor: 'var(--surface-accent-blue)',
+                            border: '1px solid var(--surface-accent-blue-border)',
                           }}
                         >
-                          <code style={{ fontWeight: 800, fontSize: '0.92rem', color: '#0b3c61', letterSpacing: '0.04em' }}>
+                          <code style={{ fontWeight: 800, fontSize: '0.92rem', color: 'var(--surface-accent-blue-text)', letterSpacing: '0.04em' }}>
                             {freshRecoveryKey}
                           </code>
                           <button
@@ -618,12 +618,12 @@ export const AccountLayout: React.FC<AccountLayoutProps> = ({
                       </form>
 
                       {syncStatusMsg && (
-                        <div style={{ color: 'var(--color-green-600)', fontWeight: 700, fontSize: '0.85rem' }}>
+                        <div style={{ color: 'var(--accent-green-text)', fontWeight: 700, fontSize: '0.85rem' }}>
                           {syncStatusMsg}
                         </div>
                       )}
                       {syncErrorMsg && (
-                        <div style={{ color: 'var(--color-red-600)', fontWeight: 700, fontSize: '0.85rem' }}>
+                        <div style={{ color: 'var(--accent-red-text)', fontWeight: 700, fontSize: '0.85rem' }}>
                           {syncErrorMsg}
                         </div>
                       )}
@@ -720,7 +720,7 @@ export const AccountLayout: React.FC<AccountLayoutProps> = ({
                     <button type="submit" className="tactile-btn tactile-btn--solid-blue">
                       Save details
                     </button>
-                    {savedNotice && <span style={{ color: 'var(--color-green-600)', fontWeight: 700 }}>{savedNotice}</span>}
+                    {savedNotice && <span style={{ color: 'var(--accent-green-text)', fontWeight: 700 }}>{savedNotice}</span>}
                   </div>
                 </form>
               </section>
@@ -732,21 +732,13 @@ export const AccountLayout: React.FC<AccountLayoutProps> = ({
                   {state.profiles.map((p) => (
                     <div
                       key={p.id}
-                      style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'space-between',
-                        padding: '10px 14px',
-                        borderRadius: 12,
-                        backgroundColor: p.id === profile.id ? 'var(--color-blue-50)' : 'var(--bg-sunken)',
-                        color: p.id === profile.id ? '#0b3c61' : 'var(--text-primary)',
-                      }}
+                      className={`account-profile-row${p.id === profile.id ? ' is-active' : ''}`}
                     >
                       <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
                         <MonsterAvatar avatarId={p.avatarId} size={36} />
                         <div>
                           <div style={{ fontWeight: 800 }}>{p.name}</div>
-                          <div style={{ fontSize: '0.78rem', opacity: 0.8 }}>{p.enrolledCourseIds.length} courses</div>
+                          <div style={{ fontSize: '0.78rem', opacity: 0.85 }}>{p.enrolledCourseIds.length} courses</div>
                         </div>
                       </div>
                       {p.id === profile.id ? (
@@ -1013,7 +1005,7 @@ export const AccountLayout: React.FC<AccountLayoutProps> = ({
               {/* Metric Cards */}
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(190px, 1fr))', gap: 16 }}>
                 <div className="cognito-card" style={{ padding: '24px 20px 18px' }}>
-                  <span className="tilted-badge tilted-badge--edge" style={{ backgroundColor: 'var(--color-blue-500)', color: '#ffffff' }}>
+                  <span className="tilted-badge tilted-badge--edge tilted-badge--blue">
                     <Clock size={12} /> TIME STUDIED
                   </span>
                   <div className="font-heading" style={{ fontSize: '2.1rem' }}>{totalMinutes} min</div>
@@ -1029,7 +1021,7 @@ export const AccountLayout: React.FC<AccountLayoutProps> = ({
                 </div>
 
                 <div className="cognito-card" style={{ padding: '24px 20px 18px' }}>
-                  <span className="tilted-badge tilted-badge--edge" style={{ backgroundColor: 'var(--color-green-600)', color: '#ffffff' }}>
+                  <span className="tilted-badge tilted-badge--edge" style={{ backgroundColor: 'var(--accent-cta-green)', color: '#ffffff' }}>
                     QUESTIONS
                   </span>
                   <div className="font-heading" style={{ fontSize: '2.1rem' }}>{totalQuestions}</div>
@@ -1048,7 +1040,7 @@ export const AccountLayout: React.FC<AccountLayoutProps> = ({
                       {bySubject.map(([subj, xp]) => (
                         <div key={subj} style={{ display: 'flex', justifyContent: 'space-between', fontWeight: 700, fontSize: '0.92rem' }}>
                           <span>{subj}</span>
-                          <span style={{ color: 'var(--color-blue-500)' }}>{xp} XP</span>
+                          <span style={{ color: 'var(--accent-blue-text)' }}>{xp} XP</span>
                         </div>
                       ))}
                     </div>

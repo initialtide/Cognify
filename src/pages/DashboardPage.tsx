@@ -256,7 +256,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
       )}
 
       {/* Hero Profile & Streak Card — Spacious Cognito Proportions */}
-      <section className="cognito-card" style={{ padding: '36px 40px', marginTop: 8 }}>
+      <section className="cognito-card dashboard-hero-card">
         <button
           type="button"
           onClick={() => navigate('/account/profile')}
@@ -305,7 +305,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
               <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
                 <FlameMascot active={streakStats.currentStreak > 0} size={50} />
                 <div>
-                  <div style={{ fontWeight: 800, fontSize: '1.18rem', color: '#e07a16', lineHeight: 1.1 }}>
+                  <div style={{ fontWeight: 800, fontSize: '1.18rem', color: 'var(--accent-amber-text)', lineHeight: 1.1 }}>
                     {streakStats.currentStreak} {streakStats.currentStreak === 1 ? 'day' : 'days'}
                   </div>
                   <div style={{ fontSize: '0.84rem', color: 'var(--text-muted)' }}>
@@ -385,27 +385,16 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
 
       {/* Single Calm Contextual Strip (never stack two banners!) */}
       {showGuestOnboardingStrip ? (
-        <section
-          className="cognito-card"
-          style={{
-            marginTop: 22,
-            padding: '16px 24px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            gap: 16,
-            flexWrap: 'wrap',
-            backgroundColor: 'var(--bg-card)',
-          }}
-        >
+        <section className="cognito-card dashboard-guest-strip">
           <div style={{ display: 'flex', alignItems: 'center', gap: 13, minWidth: 0 }}>
             <div
               style={{
                 width: 40,
                 height: 40,
                 borderRadius: 11,
-                backgroundColor: 'var(--color-blue-50)',
-                color: 'var(--color-blue-600)',
+                backgroundColor: 'var(--surface-accent-blue)',
+                border: '1px solid var(--surface-accent-blue-border)',
+                color: 'var(--text-link)',
                 display: 'inline-flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -437,21 +426,16 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
             >
               <LogIn size={14} /> Sign in
             </Link>
-            <button
-              type="button"
-              aria-label="Dismiss setup reminder"
-              onClick={() => setDismissedSaveTip(true)}
-              style={{
-                border: 0,
-                background: 'transparent',
-                color: 'var(--text-muted)',
-                padding: 6,
-                display: 'inline-flex',
-              }}
-            >
-              <X size={16} />
-            </button>
           </div>
+
+          <button
+            type="button"
+            className="dashboard-guest-dismiss"
+            aria-label="Dismiss setup reminder"
+            onClick={() => setDismissedSaveTip(true)}
+          >
+            <X size={16} />
+          </button>
         </section>
       ) : resumeTarget ? (
         <section className="cognito-card dashboard-resume-bar" aria-label="Continue studying">
@@ -471,20 +455,9 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
           </Link>
         </section>
       ) : !isAuthenticated && !dismissedSaveTip ? (
-        <section
-          className="cognito-card"
-          style={{
-            marginTop: 22,
-            padding: '15px 24px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            gap: 16,
-            flexWrap: 'wrap',
-          }}
-        >
+        <section className="cognito-card dashboard-guest-strip">
           <div style={{ display: 'flex', alignItems: 'center', gap: 12, minWidth: 0 }}>
-            <ShieldCheck size={20} color="var(--color-blue-600)" style={{ flexShrink: 0 }} />
+            <ShieldCheck size={20} color="var(--text-link)" style={{ flexShrink: 0 }} />
             <div style={{ fontSize: '0.9rem', fontWeight: 700, color: 'var(--text-heading)' }}>
               Save your XP, streaks &amp; quiz scores with a free account
             </div>
@@ -497,15 +470,15 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
             >
               <UserPlus size={14} /> Create account
             </button>
-            <button
-              type="button"
-              aria-label="Dismiss save reminder"
-              onClick={() => setDismissedSaveTip(true)}
-              style={{ border: 0, background: 'transparent', color: 'var(--text-muted)', padding: 6, display: 'inline-flex' }}
-            >
-              <X size={16} />
-            </button>
           </div>
+          <button
+            type="button"
+            className="dashboard-guest-dismiss"
+            aria-label="Dismiss save reminder"
+            onClick={() => setDismissedSaveTip(true)}
+          >
+            <X size={16} />
+          </button>
         </section>
       ) : null}
 
@@ -548,8 +521,8 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
                   padding: '6px 14px',
                   borderRadius: 999,
                   border: active ? '1.5px solid var(--color-blue-500)' : '1px solid var(--border-card)',
-                  backgroundColor: active ? 'var(--color-blue-50)' : 'var(--bg-card)',
-                  color: active ? 'var(--color-blue-700)' : 'var(--text-secondary)',
+                  backgroundColor: active ? 'var(--surface-accent-blue)' : 'var(--bg-card)',
+                  color: active ? 'var(--surface-accent-blue-text)' : 'var(--text-secondary)',
                   fontWeight: 800,
                   fontSize: '0.84rem',
                   transition: 'all 120ms ease',
@@ -594,10 +567,11 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
                       onClick={() => handleSort('questions')}
                       style={{ width: 'auto' }}
                     >
-                      <span>QUESTIONS / AVG SCORE</span>
+                      <span>QUESTIONS<span className="hide-mobile"> / AVG SCORE</span></span>
                     </button>
                     <button
                       type="button"
+                      className="hide-mobile"
                       aria-label="About questions and average score"
                       onClick={() => setInfoTip((t) => (t === 'questions' ? null : 'questions'))}
                       style={{ border: 0, background: 'transparent', padding: 4, color: 'var(--text-muted)', display: 'inline-flex' }}
@@ -614,7 +588,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
                     </div>
                   )}
                 </th>
-                <th scope="col" aria-sort={sortCol === 'flashcards' ? sortDir : undefined} style={{ position: 'relative' }}>
+                <th scope="col" className="hide-mobile" aria-sort={sortCol === 'flashcards' ? sortDir : undefined} style={{ position: 'relative' }}>
                   <div style={{ display: 'flex', alignItems: 'center' }}>
                     <button
                       type="button"
@@ -622,10 +596,11 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
                       onClick={() => handleSort('flashcards')}
                       style={{ width: 'auto' }}
                     >
-                      <span>FLASHCARDS / CONFIDENCE</span>
+                      <span>FLASHCARDS<span className="hide-mobile"> / CONFIDENCE</span></span>
                     </button>
                     <button
                       type="button"
+                      className="hide-mobile"
                       aria-label="About flashcards and confidence"
                       onClick={() => setInfoTip((t) => (t === 'flashcards' ? null : 'flashcards'))}
                       style={{ border: 0, background: 'transparent', padding: 4, color: 'var(--text-muted)', display: 'inline-flex' }}
@@ -642,7 +617,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
                     </div>
                   )}
                 </th>
-                <th scope="col" style={{ width: 44 }}><span className="sr-only">Open course</span></th>
+                <th scope="col" style={{ width: 36 }}><span className="sr-only">Open course</span></th>
               </tr>
             </thead>
             <tbody>
@@ -667,13 +642,13 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
                     }}
                   >
                     <td>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-                        <SubjectIcon icon={course.icon} size={46} />
+                      <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+                        <SubjectIcon icon={course.icon} size={42} />
                         <div>
-                          <div style={{ fontWeight: 700, fontSize: '1.03rem', color: 'var(--text-heading)' }}>
+                          <div style={{ fontWeight: 700, fontSize: '1.0rem', color: 'var(--text-heading)' }}>
                             {course.subjectName}
                           </div>
-                          <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: 2 }}>
+                          <div style={{ fontSize: '0.83rem', color: 'var(--text-muted)', marginTop: 2 }}>
                             {course.subtitle}
                           </div>
                         </div>
@@ -689,8 +664,8 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
                     ) : (
                       <>
                         <td>
-                          <div style={{ display: 'flex', alignItems: 'center', gap: 14, fontWeight: 600, fontSize: '0.94rem' }}>
-                            <span style={{ minWidth: 68 }}>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: 10, fontWeight: 600, fontSize: '0.92rem', whiteSpace: 'nowrap' }}>
+                            <span style={{ minWidth: 52 }}>
                               {stats.questionsAnswered} / {stats.questionsTotal}
                             </span>
                             {stats.avgScorePercent !== null ? (
@@ -702,8 +677,8 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
                             )}
                           </div>
                         </td>
-                        <td>
-                          <div style={{ display: 'flex', alignItems: 'center', gap: 14, fontWeight: 600, fontSize: '0.94rem' }}>
+                        <td className="hide-mobile">
+                          <div style={{ display: 'flex', alignItems: 'center', gap: 14, fontWeight: 600, fontSize: '0.94rem', whiteSpace: 'nowrap' }}>
                             <span style={{ minWidth: 68 }}>
                               {stats.flashcardsConfident} / {stats.flashcardsTotal}
                             </span>

@@ -207,7 +207,7 @@ export const CoursesCatalogPage: React.FC = () => {
             <div>
               <h1 className="font-heading" style={{ fontSize: '2.6rem' }}>Our courses</h1>
               <p style={{ color: 'var(--text-secondary)', margin: '8px 0 0', fontSize: '0.98rem' }}>
-                Browse Cognito courses for KS3, GCSE, IGCSE, A-Level, IB, and more — all completely unlocked.
+                Browse Cognify courses for KS3, GCSE, IGCSE, A-Level, IB, and more — all completely free.
               </p>
             </div>
           </div>
@@ -215,7 +215,7 @@ export const CoursesCatalogPage: React.FC = () => {
           <h2 className="font-heading" style={{ fontSize: '1.75rem', margin: '32px 0 6px' }}>Qualifications</h2>
           <p style={{ color: 'var(--text-muted)', margin: '0 0 22px', fontSize: '0.94rem' }}>Select course</p>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(305px, 1fr))', gap: 18 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 340px), 1fr))', gap: 18 }}>
             {QUALIFICATIONS.map((q) => (
               <Link
                 key={q.id}

@@ -987,6 +987,11 @@ export const QuizPlayerPage: React.FC = () => {
       />
 
       <main className="page-container sp-quiz-container">
+        {activeQuestions.length > 0 && (browseMode || (!showSummary && Boolean(currentQuestion))) && (
+          <h1 className="sr-only">
+            {subtopicTitle} — {course.subjectName} Quiz
+          </h1>
+        )}
         {activeQuestions.length === 0 ? (
           <section className="cognito-card sp-summary-card">
             <h1 className="font-heading" style={{ fontSize: '1.75rem', marginBottom: 8 }}>

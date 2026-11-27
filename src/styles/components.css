@@ -202,14 +202,14 @@ a {
 }
 
 .tactile-btn--solid-blue {
-  background-color: var(--color-blue-500);
+  background-color: var(--accent-cta-blue);
   color: #ffffff;
   border-color: var(--color-blue-700);
   box-shadow: 0 3px 0 var(--color-blue-700);
 }
 
 .tactile-btn--solid-blue:hover:not(:disabled) {
-  background-color: var(--color-blue-600);
+  background-color: var(--accent-cta-blue-hover);
 }
 
 /* Tilted Display Badge */
@@ -241,6 +241,11 @@ a {
   color: #ffffff;
 }
 
+.tilted-badge--blue {
+  background-color: var(--accent-cta-blue);
+  color: #ffffff;
+}
+
 .tilted-badge--purple {
   background-color: var(--color-purple-500);
   color: #ffffff;
@@ -255,14 +260,18 @@ a {
 
 .tilted-badge--teal {
   background-color: var(--bg-card);
-  color: var(--color-green-600);
+  color: var(--accent-green-text);
   border: 1.5px solid var(--color-green-500);
 }
 
 .tilted-badge--coral {
   background-color: var(--bg-card);
-  color: var(--color-magenta-500);
+  color: #b4234a;
   border: 1.5px solid var(--color-magenta-300);
+}
+
+:root[data-theme="dark"] .tilted-badge--coral {
+  color: #f3a6ba;
 }
 
 /* Dashed Horizontal Divider */
@@ -567,8 +576,9 @@ dialog.cognito-dialog[open] {
   background-color: #4b4e57;
 }
 
-.toggle-switch[aria-checked="true"] {
-  background-color: var(--color-blue-500);
+.toggle-switch[aria-checked="true"],
+:root[data-theme="dark"] .toggle-switch[aria-checked="true"] {
+  background-color: var(--accent-cta-blue);
 }
 
 .toggle-switch__knob {
@@ -1052,7 +1062,7 @@ dialog.cognito-dialog[open] {
 
 .tilted-badge--mistake {
   background-color: #fdf2f5;
-  color: #d4476b;
+  color: #b4234a;
   border: 1.5px solid #eda0b3;
 }
 
@@ -1064,7 +1074,7 @@ dialog.cognito-dialog[open] {
 
 .tilted-badge--memory {
   background-color: #eefbf6;
-  color: #2a8567;
+  color: #1f7658;
   border: 1.5px solid #6bd6b2;
 }
 
@@ -1771,7 +1781,7 @@ dialog.quick-search-dialog[open] {
 
 .streak-day-circle.is-today {
   border: 2px solid #f59e0b;
-  color: #e07a16;
+  color: var(--accent-amber-text);
 }
 
 :root[data-theme="dark"] .streak-day-circle.is-done {
@@ -2001,11 +2011,7 @@ dialog.quick-search-dialog[open] {
 }
 
 .workspace-topic-title.is-open {
-  color: #2c86d6;
-}
-
-:root[data-theme="dark"] .workspace-topic-title.is-open {
-  color: var(--color-blue-300);
+  color: var(--accent-blue-text);
 }
 
 .workspace-overview-card {
@@ -2130,7 +2136,7 @@ dialog.quick-search-dialog[open] {
 
 .workspace-subtopic-cell:hover {
   background-color: rgba(44, 134, 214, 0.055);
-  color: #1e78c8;
+  color: var(--accent-blue-text);
 }
 
 :root[data-theme="dark"] .workspace-subtopic-cell:hover {
@@ -3382,18 +3388,21 @@ dialog.quick-search-dialog[open] {
 
 .info-card-stack {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 16px;
 }
 
 .info-two-col {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: 18px;
   align-items: start;
 }
 
 .info-section-card {
   padding: 24px 26px;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .info-section-card p {
@@ -3526,6 +3535,7 @@ dialog.quick-search-dialog[open] {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  min-width: 0;
 }
 
 .dev-endpoint-card__top {
@@ -3577,11 +3587,13 @@ dialog.quick-search-dialog[open] {
   font-family: var(--font-mono);
   font-size: 0.84rem;
   line-height: 1.55;
+  max-width: 100%;
   overflow-x: auto;
 }
 
 .dev-table-wrap {
   overflow-x: auto;
+  max-width: 100%;
   margin-top: 12px;
 }
 
@@ -3602,6 +3614,237 @@ dialog.quick-search-dialog[open] {
 .dev-table th {
   color: var(--text-heading);
   font-weight: 800;
+}
+
+/* ==========================================================================
+   Site-Wide UI Coherence & Responsive Polish Helpers
+   ========================================================================== */
+
+.dashboard-hero-card {
+  padding: 36px 40px;
+  margin-top: 8px;
+}
+
+.onboarding-card {
+  padding: 40px 42px;
+}
+
+.onboarding-qual-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.dashboard-guest-strip {
+  position: relative;
+  margin-top: 22px;
+  padding: 16px 46px 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  background-color: var(--bg-card);
+}
+
+.dashboard-guest-dismiss {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: 0;
+  background: transparent;
+  color: var(--text-muted);
+  padding: 6px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 120ms ease, color 120ms ease;
+}
+
+.dashboard-guest-dismiss:hover {
+  background-color: var(--bg-hover);
+  color: var(--text-heading);
+}
+
+.nav-courses-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 9px;
+  border: 0;
+  border-radius: 9px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.top-nav-logo {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.onboarding-nav-bar {
+  margin-top: 26px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.account-profile-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background-color: var(--bg-sunken);
+  border: 1px solid transparent;
+  color: var(--text-primary);
+}
+
+.account-profile-row.is-active {
+  background-color: var(--surface-accent-blue);
+  border-color: var(--surface-accent-blue-border);
+  color: var(--surface-accent-blue-text);
+}
+
+.teacher-tool-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background-color: transparent;
+  text-align: left;
+  font-weight: 700;
+  color: var(--text-heading);
+  transition: background-color 130ms ease, border-color 130ms ease;
+}
+
+.teacher-tool-row:hover {
+  background-color: var(--bg-hover);
+  border-color: var(--border-subtle);
+}
+
+.teacher-tool-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background-color: var(--surface-accent-blue);
+  border: 1px solid var(--surface-accent-blue-border);
+  color: var(--text-link);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.nav-account-name {
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 720px) {
+  .wide-container {
+    padding: 0 14px;
+  }
+  .top-nav__inner {
+    padding: 0 12px;
+    gap: 6px;
+  }
+  .top-nav__left {
+    gap: 6px;
+    min-width: 0;
+  }
+  .top-nav__right {
+    gap: 6px;
+    flex-shrink: 0;
+  }
+  .nav-courses-btn {
+    padding: 5px 6px;
+    font-size: 0.8rem;
+    gap: 3px;
+  }
+  .nav-pill-btn {
+    padding: 6px 8px;
+    gap: 4px;
+    font-size: 0.78rem;
+  }
+  .hide-mobile-sm {
+    display: none !important;
+  }
+  .nav-account-name {
+    max-width: 64px;
+  }
+  .dashboard-hero-card {
+    padding: 24px 18px;
+  }
+  .dashboard-guest-strip {
+    padding: 16px 40px 16px 16px;
+  }
+  .courses-table th,
+  .courses-table td {
+    padding: 12px 10px;
+  }
+  .sort-header-btn {
+    padding: 10px 10px;
+  }
+  .onboarding-card {
+    padding: 24px 18px;
+  }
+  .onboarding-qual-grid {
+    grid-template-columns: 1fr;
+  }
+  .info-section-card {
+    padding: 18px 16px;
+  }
+  .dev-code-block {
+    padding: 12px 14px;
+    font-size: 0.78rem;
+  }
+  .floating-feedback-btn {
+    right: 14px;
+    bottom: 14px;
+    width: 40px;
+    height: 40px;
+  }
+  .site-footer__inner {
+    padding: 18px 16px 68px;
+  }
+}
+
+@media (max-width: 520px) {
+  .hide-mobile-xs {
+    display: none !important;
+  }
+  .top-nav__left {
+    gap: 2px;
+  }
+  .top-nav-logo {
+    transform: scale(0.86);
+    transform-origin: left center;
+    margin-right: -12px;
+  }
+  .nav-courses-btn {
+    font-size: 0.78rem;
+  }
+  .onboarding-nav-bar .onboarding-step-dots {
+    order: -1;
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
