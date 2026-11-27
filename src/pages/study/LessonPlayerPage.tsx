@@ -1290,6 +1290,7 @@ export const LessonPlayerPage: React.FC = () => {
             <CognitoVideoPlayer
               subtopicId={resolvedSubtopicId}
               youtubeId={youtubeId}
+              videoUrl={lessonNote?.videoUrl}
               videoTitle={videoTitle}
               videoChannel={lessonNote?.videoChannel}
               videoDuration={lessonNote?.videoDuration}

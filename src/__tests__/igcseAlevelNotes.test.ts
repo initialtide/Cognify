@@ -249,12 +249,12 @@ describe('IGCSE & A-Level Notes, Videos & Catalog Coverage', () => {
       )
     );
 
-    // Embedded YouTube iframe present
-    const iframe = container.querySelector('iframe.cognito-video-iframe');
-    expect(iframe).toBeInTheDocument();
-    expect(iframe?.getAttribute('src')).toContain('https://www.youtube.com/embed/');
+    // Instant-load Lite Facade renders immediately with zero heavy iframe overhead on mount
+    const facadeBtn = container.querySelector('button.cognito-video-facade');
+    expect(facadeBtn).toBeInTheDocument();
+    expect(container.querySelector('iframe.cognito-video-iframe')).not.toBeInTheDocument();
 
-    // Show timestamps toggle switch is ON by default and clickable timestamps highlight on click
+    // Show timestamps toggle switch is ON by default and clicking a chapter immediately boots youtube-nocookie player at that timestamp
     const toggleSwitch = screen.getByRole('switch', { name: /Show timestamps/i });
     expect(toggleSwitch).toHaveAttribute('aria-checked', 'true');
 
@@ -265,6 +265,14 @@ describe('IGCSE & A-Level Notes, Videos & Catalog Coverage', () => {
     expect(secondSeekBtn).toBeTruthy();
     fireEvent.click(secondSeekBtn);
     expect(rows[1]).toHaveAttribute('data-active', 'true');
+
+    // Privacy-enhanced youtube-nocookie iframe mounted with autoplay, iv_load_policy=3 & start time
+    const iframe = container.querySelector('iframe.cognito-video-iframe');
+    expect(iframe).toBeInTheDocument();
+    expect(iframe?.getAttribute('src')).toContain('https://www.youtube-nocookie.com/embed/');
+    expect(iframe?.getAttribute('src')).toContain('autoplay=1');
+    expect(iframe?.getAttribute('src')).toContain('iv_load_policy=3');
+    expect(iframe?.getAttribute('src')).toContain('rel=0');
 
     // Toggle timestamps off and back on cleanly
     fireEvent.click(toggleSwitch);

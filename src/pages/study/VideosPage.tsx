@@ -153,6 +153,7 @@ export const VideosPage: React.FC = () => {
             <CognitoVideoPlayer
               subtopicId={activeLesson.subtopicId}
               youtubeId={activeLesson.youtubeId}
+              videoUrl={activeLesson.videoUrl}
               videoTitle={activeLesson.videoTitle}
               videoChannel={activeLesson.videoChannel}
               videoDuration={activeLesson.videoDuration}
@@ -161,6 +162,7 @@ export const VideosPage: React.FC = () => {
               timestamps={activeLesson.timestamps}
               defaultTimestampsOpen={true}
               showVideoHeader={true}
+              autoLoad={true}
             />
           </div>
         )}
