@@ -115,6 +115,8 @@ export interface NoteLesson {
   readingMinutes: number;
   videoTitle: string;
   youtubeId: string;
+  /** Optional direct ad-free MP4/WebM video URL for instant native HTML5 playback */
+  videoUrl?: string;
   videoChannel?: string;
   videoDuration?: string;
   courseMatchSummary?: string;

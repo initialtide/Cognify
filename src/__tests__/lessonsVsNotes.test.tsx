@@ -79,13 +79,22 @@ describe('Distinct Cognito Lessons vs Notes Experiences', () => {
       </AppProvider>
     );
 
-    // Step 1: Flush YouTube video card + Continue button, NO Notes reading wall, NO question cards revealed yet
-    expect(container.querySelector('iframe.cognito-video-iframe')).toBeInTheDocument();
+    // Step 1: Instant-load Lite Video Facade + Continue button, NO Notes reading wall, NO question cards revealed yet
+    const facadeBtn = container.querySelector('button.cognito-video-facade') as HTMLButtonElement;
+    expect(facadeBtn).toBeInTheDocument();
+    expect(container.querySelector('iframe.cognito-video-iframe')).not.toBeInTheDocument();
     expect(screen.queryByText(/END OF NOTES/i)).not.toBeInTheDocument();
     expect(screen.queryByLabelText(/^Contents$/i)).not.toBeInTheDocument();
     expect(screen.queryByText(`2 of ${1 + subQs.length}`)).not.toBeInTheDocument();
 
-    // Clicking Continue on Video card persists watchedLessonIds, awards +5 XP, and reveals Step 2 card!
+    // Clicking Play on the facade immediately mounts privacy-enhanced youtube-nocookie iframe + marks video watched (+5 XP)
+    fireEvent.click(facadeBtn);
+    const ytFrame = container.querySelector('iframe.cognito-video-iframe');
+    expect(ytFrame).toBeInTheDocument();
+    expect(ytFrame?.getAttribute('src')).toContain('https://www.youtube-nocookie.com/embed/');
+    expect(ytFrame?.getAttribute('src')).toContain('autoplay=1');
+
+    // Clicking Continue on Video card hides Continue and reveals Step 2 card!
     const videoContinueBtn = screen.getByRole('button', { name: /Continue to next card/i });
     fireEvent.click(videoContinueBtn);
 

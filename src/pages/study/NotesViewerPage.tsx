@@ -146,21 +146,53 @@ function loadYouTubeIframeApi(): Promise<YTNamespace | null> {
   return ytApiLoadPromise;
 }
 
-function buildYouTubeEmbedUrl(youtubeId: string): string {
+let ytConnectionsWarmed = false;
+
+function warmYouTubeConnections(): void {
+  if (ytConnectionsWarmed || typeof document === 'undefined') return;
+  ytConnectionsWarmed = true;
+  const hosts = [
+    'https://www.youtube-nocookie.com',
+    'https://i.ytimg.com',
+    'https://s.ytimg.com',
+  ];
+  for (const href of hosts) {
+    if (!document.head.querySelector(`link[rel="preconnect"][href="${href}"]`)) {
+      const link = document.createElement('link');
+      link.rel = 'preconnect';
+      link.href = href;
+      link.crossOrigin = 'anonymous';
+      document.head.appendChild(link);
+    }
+  }
+  void loadYouTubeIframeApi();
+}
+
+function buildYouTubeEmbedUrl(
+  youtubeId: string,
+  options?: { autoplay?: boolean; startSeconds?: number }
+): string {
   const params = new URLSearchParams({
     enablejsapi: '1',
     rel: '0',
+    iv_load_policy: '3',
     modestbranding: '1',
     playsinline: '1',
     hl: 'en',
   });
+  if (options?.autoplay) {
+    params.set('autoplay', '1');
+  }
+  if (options?.startSeconds && options.startSeconds > 0) {
+    params.set('start', String(Math.floor(options.startSeconds)));
+  }
   if (typeof window !== 'undefined' && window.location?.origin) {
     const origin = window.location.origin;
     if (/^https?:\/\//.test(origin)) {
       params.set('origin', origin);
     }
   }
-  return `https://www.youtube.com/embed/${encodeURIComponent(youtubeId)}?${params.toString()}`;
+  return `https://www.youtube-nocookie.com/embed/${encodeURIComponent(youtubeId)}?${params.toString()}`;
 }
 
 const STOP_WORDS = new Set([
@@ -249,6 +281,7 @@ function smoothScrollToElement(id: string, e?: React.MouseEvent): void {
 export interface CognitoVideoPlayerProps {
   subtopicId: string;
   youtubeId: string;
+  videoUrl?: string;
   videoTitle: string;
   videoChannel?: string;
   videoDuration?: string;
@@ -260,12 +293,15 @@ export interface CognitoVideoPlayerProps {
   showTimestampsBar?: boolean;
   showVideoHeader?: boolean;
   showCardWrapper?: boolean;
+  /** When true, mounts the player immediately (e.g. Videos gallery modal); defaults to instant Lite Facade */
+  autoLoad?: boolean;
   onVideoStartPlaying?: () => void;
 }
 
 export const CognitoVideoPlayer: React.FC<CognitoVideoPlayerProps> = ({
   subtopicId,
   youtubeId,
+  videoUrl,
   videoTitle,
   videoChannel,
   videoDuration,
@@ -277,10 +313,12 @@ export const CognitoVideoPlayer: React.FC<CognitoVideoPlayerProps> = ({
   showTimestampsBar = true,
   showVideoHeader = false,
   showCardWrapper = true,
+  autoLoad = false,
   onVideoStartPlaying,
 }) => {
   const reactId = useId().replace(/[^a-zA-Z0-9_-]/g, '');
   const stageRef = useRef<HTMLDivElement>(null);
+  const nativeVideoRef = useRef<HTMLVideoElement | null>(null);
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const playerRef = useRef<YTPlayerInstance | null>(null);
   const isReadyRef = useRef(false);
@@ -298,6 +336,9 @@ export const CognitoVideoPlayer: React.FC<CognitoVideoPlayerProps> = ({
   const [isPlaying, setIsPlaying] = useState(false);
   const [hasInteracted, setHasInteracted] = useState(false);
   const [embedError, setEmbedError] = useState<number | null>(null);
+  const [playerActivated, setPlayerActivated] = useState(autoLoad);
+  const [initialStartSec, setInitialStartSec] = useState(0);
+  const [posterQuality, setPosterQuality] = useState<'sddefault' | 'hqdefault'>('sddefault');
 
   const sortedTimestamps = useMemo(
     () => [...timestamps].sort((a, b) => a.seconds - b.seconds),
@@ -314,7 +355,21 @@ export const CognitoVideoPlayer: React.FC<CognitoVideoPlayerProps> = ({
     setShowMatchInfo(false);
   }, [subtopicId, defaultTimestampsOpen]);
 
+  // Reset facade & playback state whenever subtopic/video changes
   useEffect(() => {
+    setPlayerActivated(autoLoad);
+    setInitialStartSec(0);
+    setPosterQuality('sddefault');
+    setCurrentTime(0);
+    setIsPlaying(false);
+    setHasInteracted(false);
+    setEmbedError(null);
+  }, [subtopicId, youtubeId, videoUrl, autoLoad]);
+
+  // Mount privacy-enhanced YouTube iframe ONLY after user clicks Play (or autoLoad / timestamp jump)
+  useEffect(() => {
+    if (videoUrl || !playerActivated) return;
+
     let cancelled = false;
     const stage = stageRef.current;
     if (!stage) return;
@@ -353,16 +408,16 @@ export const CognitoVideoPlayer: React.FC<CognitoVideoPlayerProps> = ({
     pendingSeekRef.current = null;
     seekLockUntilRef.current = 0;
     playerRef.current = null;
-    setCurrentTime(0);
-    setIsPlaying(false);
-    setHasInteracted(false);
     setEmbedError(null);
 
     stage.innerHTML = '';
     const iframe = document.createElement('iframe');
     iframe.id = `cognito-yt-${subtopicId.replace(/[^a-zA-Z0-9_-]/g, '_')}-${reactId}`;
     iframe.title = videoTitleRef.current;
-    iframe.src = buildYouTubeEmbedUrl(youtubeId);
+    iframe.src = buildYouTubeEmbedUrl(youtubeId, {
+      autoplay: true,
+      startSeconds: initialStartSec,
+    });
     iframe.allow =
       'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
     iframe.allowFullscreen = true;
@@ -439,7 +494,7 @@ export const CognitoVideoPlayer: React.FC<CognitoVideoPlayerProps> = ({
       iframeRef.current = null;
       stage.innerHTML = '';
     };
-  }, [subtopicId, youtubeId, reactId]);
+  }, [subtopicId, youtubeId, videoUrl, reactId, playerActivated, initialStartSec]);
 
   const activeTimestampIndex = useMemo(() => {
     if (sortedTimestamps.length === 0) return -1;
@@ -453,11 +508,32 @@ export const CognitoVideoPlayer: React.FC<CognitoVideoPlayerProps> = ({
     return activeIdx;
   }, [sortedTimestamps, currentTime, isPlaying, hasInteracted]);
 
+  const handleActivateVideo = () => {
+    warmYouTubeConnections();
+    setInitialStartSec(0);
+    setPlayerActivated(true);
+    setHasInteracted(true);
+    onVideoStartPlayingRef.current?.();
+  };
+
   const handleSeekTo = (seconds: number) => {
     setCurrentTime(seconds);
     setHasInteracted(true);
     onVideoStartPlayingRef.current?.();
     seekLockUntilRef.current = Date.now() + 1800;
+
+    if (videoUrl && nativeVideoRef.current) {
+      nativeVideoRef.current.currentTime = seconds;
+      void nativeVideoRef.current.play().catch(() => {});
+      return;
+    }
+
+    if (!playerActivated) {
+      warmYouTubeConnections();
+      setInitialStartSec(seconds);
+      setPlayerActivated(true);
+      return;
+    }
 
     if (playerRef.current && isReadyRef.current) {
       try {
@@ -492,6 +568,7 @@ export const CognitoVideoPlayer: React.FC<CognitoVideoPlayerProps> = ({
       ? `https://www.youtube.com/watch?v=${encodeURIComponent(youtubeId)}&t=${Math.floor(currentTime)}s`
       : `https://www.youtube.com/watch?v=${encodeURIComponent(youtubeId)}`;
 
+  const posterSrc = `https://i.ytimg.com/vi/${encodeURIComponent(youtubeId)}/${posterQuality}.jpg`;
   const channelLabel = videoChannel || 'Cognito';
   const defaultMatchText = `${matchedCount} of ${sortedTimestamps.length} sections match ${courseSubtitle || 'your course'}`;
   const summaryText = courseMatchSummary || defaultMatchText;
@@ -526,9 +603,80 @@ export const CognitoVideoPlayer: React.FC<CognitoVideoPlayerProps> = ({
         </div>
       )}
 
-      {/* Flush 16:9 YouTube Player Stage */}
+      {/* Flush 16:9 Instant-Load Video Stage */}
       <div className="cognito-video-stage-wrap">
-        <div ref={stageRef} className="cognito-video-stage" />
+        {videoUrl ? (
+          <video
+            ref={nativeVideoRef}
+            src={videoUrl}
+            poster={posterSrc}
+            controls
+            playsInline
+            preload="metadata"
+            className="cognito-video-iframe"
+            onPlay={() => {
+              setIsPlaying(true);
+              setHasInteracted(true);
+              onVideoStartPlayingRef.current?.();
+            }}
+            onPause={() => setIsPlaying(false)}
+            onTimeUpdate={(e) => setCurrentTime(e.currentTarget.currentTime)}
+          />
+        ) : !playerActivated ? (
+          <button
+            type="button"
+            className="cognito-video-facade"
+            aria-label={`Play video: ${videoTitle}`}
+            onPointerEnter={warmYouTubeConnections}
+            onFocus={warmYouTubeConnections}
+            onClick={handleActivateVideo}
+          >
+            <img
+              src={posterSrc}
+              alt={videoTitle}
+              className="cognito-video-facade__img"
+              decoding="async"
+              fetchPriority="high"
+              onLoad={(e) => {
+                // YouTube returns a 120x90 grey placeholder when sddefault is unavailable -> swap cleanly to hqdefault
+                if (posterQuality === 'sddefault' && e.currentTarget.naturalWidth <= 120) {
+                  setPosterQuality('hqdefault');
+                }
+              }}
+              onError={() => {
+                if (posterQuality === 'sddefault') setPosterQuality('hqdefault');
+              }}
+            />
+
+            <span className="cognito-video-facade__top" aria-hidden="true">
+              <span className="cognito-video-facade__title-group">
+                <span className="cognito-video-facade__title">{videoTitle}</span>
+                <span className="cognito-video-facade__channel">{channelLabel}</span>
+              </span>
+              {videoDuration && (
+                <span className="cognito-video-facade__badge">{videoDuration}</span>
+              )}
+            </span>
+
+            <span className="cognito-video-facade__play" aria-hidden="true">
+              <svg viewBox="0 0 68 48" width="68" height="48">
+                <path
+                  d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z"
+                  fill="#ff0033"
+                />
+                <path d="M45 24 27 14v20" fill="#ffffff" />
+              </svg>
+            </span>
+
+            <span className="cognito-video-facade__bottom" aria-hidden="true">
+              <span className="cognito-video-facade__pill">
+                Privacy-enhanced · Instant play
+              </span>
+            </span>
+          </button>
+        ) : (
+          <div ref={stageRef} className="cognito-video-stage" />
+        )}
       </div>
 
       {/* Graceful Embed Restriction Fallback */}
@@ -998,6 +1146,7 @@ export const NotesViewerPage: React.FC = () => {
           <CognitoVideoPlayer
             subtopicId={lesson.subtopicId}
             youtubeId={lesson.youtubeId}
+            videoUrl={lesson.videoUrl}
             videoTitle={lesson.videoTitle}
             videoChannel={lesson.videoChannel}
             videoDuration={lesson.videoDuration}
