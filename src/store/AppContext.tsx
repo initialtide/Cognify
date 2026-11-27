@@ -370,18 +370,24 @@ export function getCourseStats(course: CourseDefinition, progress?: CourseProgre
 export interface LessonSubtopicProgress {
   watched: boolean;
   answered: number;
+  correctCount: number;
+  incorrectCount: number;
   totalQuestions: number;
+  totalSteps: number;
   earnedMarks: number;
   maxAttemptedMarks: number;
   scorePercent: number | null;
   percent: number;
+  correctPct: number;
+  incorrectPct: number;
+  videoPct: number;
   completed: boolean;
 }
 
 /**
  * Computes real Cognito-style Lesson progress for a subtopic by combining:
  * - Video watched (25% weight when follow-up questions exist, or 100% if none)
- * - Follow-up lesson questions answered (75% weight proportionally)
+ * - Follow-up lesson questions answered (75% weight split into green correct + rose incorrect)
  */
 export function computeLessonSubtopicProgress(
   course: CourseDefinition,
@@ -391,6 +397,8 @@ export function computeLessonSubtopicProgress(
   const watched = Boolean(progress?.watchedLessonIds?.includes(subtopicId));
   const subQs = course.quizzes.filter((q) => q.subtopicId === subtopicId);
   let answered = 0;
+  let correctCount = 0;
+  let incorrectCount = 0;
   let earnedMarks = 0;
   let maxAttemptedMarks = 0;
 
@@ -400,6 +408,11 @@ export function computeLessonSubtopicProgress(
       answered += 1;
       earnedMarks += attempt.earnedMarks;
       maxAttemptedMarks += attempt.maxMarks;
+      if (attempt.correct) {
+        correctCount += 1;
+      } else {
+        incorrectCount += 1;
+      }
     }
   }
 
@@ -410,28 +423,43 @@ export function computeLessonSubtopicProgress(
     return {
       watched,
       answered: 0,
+      correctCount: 0,
+      incorrectCount: 0,
       totalQuestions: 0,
+      totalSteps: 1,
       earnedMarks: 0,
       maxAttemptedMarks: 0,
       scorePercent: null,
       percent: watched ? 100 : 0,
+      correctPct: 0,
+      incorrectPct: 0,
+      videoPct: watched ? 100 : 0,
       completed: watched,
     };
   }
 
-  const videoPart = watched ? 25 : 0;
-  const questionPart = (answered / subQs.length) * 75;
-  const percent = Math.min(100, Math.round(videoPart + questionPart));
+  const videoPct = watched ? 25 : 0;
+  const questionWeight = 75;
+  const correctPct = Math.round((correctCount / subQs.length) * questionWeight);
+  const incorrectPct = Math.round((incorrectCount / subQs.length) * questionWeight);
+  const questionPart = (answered / subQs.length) * questionWeight;
+  const percent = Math.min(100, Math.round(videoPct + questionPart));
   const completed = watched && answered === subQs.length;
 
   return {
     watched,
     answered,
+    correctCount,
+    incorrectCount,
     totalQuestions: subQs.length,
+    totalSteps: 1 + subQs.length,
     earnedMarks,
     maxAttemptedMarks,
     scorePercent,
     percent,
+    correctPct: Math.min(100, correctPct),
+    incorrectPct: Math.min(100 - Math.min(100, correctPct), incorrectPct),
+    videoPct: Math.min(100 - Math.min(100, correctPct + incorrectPct), videoPct),
     completed,
   };
 }

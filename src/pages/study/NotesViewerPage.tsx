@@ -257,6 +257,7 @@ export interface CognitoVideoPlayerProps {
   timestamps: VideoTimestamp[];
   cards?: NoteCardContent[];
   defaultTimestampsOpen?: boolean;
+  showTimestampsBar?: boolean;
   showVideoHeader?: boolean;
   showCardWrapper?: boolean;
   onVideoStartPlaying?: () => void;
@@ -273,6 +274,7 @@ export const CognitoVideoPlayer: React.FC<CognitoVideoPlayerProps> = ({
   timestamps,
   cards,
   defaultTimestampsOpen = true,
+  showTimestampsBar = true,
   showVideoHeader = false,
   showCardWrapper = true,
   onVideoStartPlaying,
@@ -545,7 +547,7 @@ export const CognitoVideoPlayer: React.FC<CognitoVideoPlayerProps> = ({
       )}
 
       {/* Cognito-style Match Summary + Blue Toggle Switch Bar */}
-      {sortedTimestamps.length > 0 && (
+      {showTimestampsBar && sortedTimestamps.length > 0 && (
         <>
           <div className="cognito-timestamps-bar">
             <div className="cognito-timestamps-match">
