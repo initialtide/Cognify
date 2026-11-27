@@ -384,6 +384,7 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
     <div style={{ minHeight: '100vh', backgroundColor: 'var(--bg-canvas)' }}>
       {/* Clean Sticky Onboarding Progress Bar */}
       <header
+        className="onboarding-header"
         style={{
           position: 'sticky',
           top: 0,
@@ -398,11 +399,11 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            gap: 14,
+            gap: 12,
             minHeight: 62,
           }}
         >
-          <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexShrink: 0 }}>
             <CognitoLogo />
             <span
               className="hide-mobile"
@@ -424,7 +425,7 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
             <div
               aria-label={`Onboarding progress: step ${step} of 4`}
               style={{
-                flex: '1 1 180px',
+                flex: '1 1 80px',
                 maxWidth: 320,
                 height: 10,
                 borderRadius: 999,
@@ -438,7 +439,7 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
                   width: `${progressPercent}%`,
                   height: '100%',
                   borderRadius: 999,
-                  backgroundColor: 'var(--color-blue-500)',
+                  backgroundColor: 'var(--accent-cta-blue)',
                   transition: 'width 240ms ease',
                 }}
               />
@@ -447,11 +448,12 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
             <div style={{ flex: '1 1 auto' }} />
           )}
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 6, flexShrink: 0 }}>
             {!isAuthenticated &&
               (viewMode === 'setup' ? (
                 <button
                   type="button"
+                  aria-label="Sign in"
                   className="tactile-btn tactile-btn--sm"
                   onClick={() => switchViewMode('signin')}
                 >
@@ -460,6 +462,7 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
               ) : (
                 <button
                   type="button"
+                  aria-label="Guided setup"
                   className="tactile-btn tactile-btn--sm tactile-btn--solid-blue"
                   onClick={() => switchViewMode('setup')}
                 >
@@ -484,19 +487,20 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
         </div>
       </header>
 
-      <main className="page-container" style={{ maxWidth: 960, paddingTop: 40 }}>
+      <main className="page-container" style={{ maxWidth: 960, paddingTop: 32 }}>
         {viewMode === 'signin' ? (
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))',
               gap: 28,
               alignItems: 'start',
             }}
           >
-            <section className="cognito-card" style={{ padding: '36px 38px' }}>
+            <section className="cognito-card onboarding-card">
               <AuthFormCard
                 initialMode="signin"
+                headingAs="h1"
                 titleId="onboarding-signin-title"
                 defaultRunOnboarding={false}
                 onSuccess={handleInlineAuthSuccess}
@@ -505,8 +509,8 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
             </section>
 
             <aside
-              className="cognito-card cognito-grid-bg"
-              style={{ padding: '36px 36px', display: 'grid', gap: 20 }}
+              className="cognito-card cognito-grid-bg onboarding-card"
+              style={{ display: 'grid', gap: 20 }}
             >
               <div>
                 <span className="tilted-badge tilted-badge--blue" style={{ marginBottom: 12 }}>
@@ -569,7 +573,7 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
             </aside>
           </div>
         ) : (
-        <section className="cognito-card cognito-grid-bg" style={{ padding: '40px 42px' }}>
+        <section className="cognito-card cognito-grid-bg onboarding-card">
           {/* STEP 1: QUALIFICATION & YEAR GROUP */}
           {step === 1 && (
             <div style={{ display: 'grid', gap: 22 }}>
@@ -585,13 +589,7 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
                 </p>
               </div>
 
-              <div
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))',
-                  gap: 12,
-                }}
-              >
+              <div className="onboarding-qual-grid">
                 {QUAL_OPTIONS.map((opt) => {
                   const active = qualification === opt.id;
                   return (
@@ -607,14 +605,14 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
                         border: active
                           ? '2px solid var(--color-blue-500)'
                           : '1.5px solid var(--border-card)',
-                        backgroundColor: active ? 'var(--color-blue-50)' : 'var(--bg-elevated)',
-                        color: active ? '#0b3c61' : 'var(--text-primary)',
+                        backgroundColor: active ? 'var(--surface-accent-blue)' : 'var(--bg-elevated)',
+                        color: active ? 'var(--surface-accent-blue-text)' : 'var(--text-primary)',
                         boxShadow: active ? '0 3px 0 var(--color-blue-500)' : '0 2px 0 var(--border-lip)',
                         display: 'grid',
                         gap: 6,
                       }}
                     >
-                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8 }}>
+                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8, flexWrap: 'wrap' }}>
                         <span style={{ display: 'inline-flex', alignItems: 'center', gap: 7, fontWeight: 800, fontSize: '1.08rem' }}>
                           <GraduationCap size={18} /> {opt.title}
                         </span>
@@ -624,14 +622,14 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
                             fontWeight: 800,
                             padding: '2px 8px',
                             borderRadius: 999,
-                            backgroundColor: active ? 'var(--color-blue-500)' : 'var(--bg-sunken)',
+                            backgroundColor: active ? 'var(--accent-cta-blue)' : 'var(--bg-sunken)',
                             color: active ? '#ffffff' : 'var(--text-muted)',
                           }}
                         >
                           {opt.badge}
                         </span>
                       </div>
-                      <div style={{ fontSize: '0.84rem', opacity: 0.88, lineHeight: 1.4 }}>
+                      <div style={{ fontSize: '0.84rem', opacity: 0.9, lineHeight: 1.4 }}>
                         {opt.description}
                       </div>
                     </button>
@@ -657,9 +655,9 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
                           padding: '8px 14px',
                           borderRadius: 999,
                           border: active
-                            ? '2px solid var(--color-blue-500)'
+                            ? '2px solid var(--accent-cta-blue)'
                             : '1.5px solid var(--border-card)',
-                          backgroundColor: active ? 'var(--color-blue-500)' : 'var(--bg-elevated)',
+                          backgroundColor: active ? 'var(--accent-cta-blue)' : 'var(--bg-elevated)',
                           color: active ? '#ffffff' : 'var(--text-primary)',
                           fontWeight: 800,
                           fontSize: '0.82rem',
@@ -691,16 +689,7 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
                 </div>
 
                 <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                  <span
-                    style={{
-                      padding: '5px 11px',
-                      borderRadius: 999,
-                      backgroundColor: 'var(--color-green-100)',
-                      color: 'var(--color-green-700)',
-                      fontWeight: 800,
-                      fontSize: '0.82rem',
-                    }}
-                  >
+                  <span className="score-pill">
                     {selectedCourseIds.length} selected
                   </span>
                   <button
@@ -716,7 +705,7 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
               <div
                 style={{
                   display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))',
+                  gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 220px), 1fr))',
                   gap: 12,
                 }}
               >
@@ -734,8 +723,8 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
                         border: isSelected
                           ? '2px solid var(--color-blue-500)'
                           : '1.5px solid var(--border-card)',
-                        backgroundColor: isSelected ? 'var(--color-blue-50)' : 'var(--bg-elevated)',
-                        color: isSelected ? '#0b3c61' : 'var(--text-primary)',
+                        backgroundColor: isSelected ? 'var(--surface-accent-blue)' : 'var(--bg-elevated)',
+                        color: isSelected ? 'var(--surface-accent-blue-text)' : 'var(--text-primary)',
                         boxShadow: isSelected ? '0 3px 0 var(--color-blue-500)' : '0 2px 0 var(--border-lip)',
                         padding: '13px 14px',
                         display: 'grid',
@@ -765,7 +754,7 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
                             <div style={{ fontWeight: 800, fontSize: '0.96rem', lineHeight: 1.2 }}>
                               {grp.subjectName}
                             </div>
-                            <div style={{ fontSize: '0.75rem', opacity: 0.78, marginTop: 2 }}>
+                            <div style={{ fontSize: '0.75rem', opacity: 0.85, marginTop: 2 }}>
                               {grp.qualificationLabel} · {activeVariant.topics.length} topics
                             </div>
                           </div>
@@ -780,7 +769,7 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
                             display: 'inline-flex',
                             alignItems: 'center',
                             justifyContent: 'center',
-                            backgroundColor: isSelected ? 'var(--color-blue-500)' : 'var(--bg-sunken)',
+                            backgroundColor: isSelected ? 'var(--accent-cta-blue)' : 'var(--bg-sunken)',
                             color: isSelected ? '#ffffff' : 'transparent',
                             border: isSelected ? '0' : '1.5px solid var(--border-card)',
                           }}
@@ -805,10 +794,10 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
                                   fontSize: '0.72rem',
                                   fontWeight: 800,
                                   border: boardSelected
-                                    ? '1.5px solid var(--color-blue-500)'
+                                    ? '1.5px solid var(--accent-cta-blue)'
                                     : '1px solid var(--border-card)',
                                   backgroundColor: boardSelected
-                                    ? 'var(--color-blue-500)'
+                                    ? 'var(--accent-cta-blue)'
                                     : 'var(--bg-card)',
                                   color: boardSelected ? '#ffffff' : 'var(--text-secondary)',
                                 }}
@@ -844,12 +833,12 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
               {/* Daily XP Goal Cards */}
               <div style={{ display: 'grid', gap: 8 }}>
                 <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontWeight: 800, fontSize: '0.92rem' }}>
-                  <Target size={16} color="var(--color-blue-500)" /> Choose your daily XP goal
+                  <Target size={16} color="var(--text-link)" /> Choose your daily XP goal
                 </div>
                 <div
                   style={{
                     display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(165px, 1fr))',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 165px), 1fr))',
                     gap: 10,
                   }}
                 >
@@ -868,8 +857,8 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
                           border: active
                             ? '2px solid var(--color-blue-500)'
                             : '1.5px solid var(--border-card)',
-                          backgroundColor: active ? 'var(--color-blue-50)' : 'var(--bg-elevated)',
-                          color: active ? '#0b3c61' : 'var(--text-primary)',
+                          backgroundColor: active ? 'var(--surface-accent-blue)' : 'var(--bg-elevated)',
+                          color: active ? 'var(--surface-accent-blue-text)' : 'var(--text-primary)',
                           boxShadow: active ? '0 3px 0 var(--color-blue-500)' : '0 2px 0 var(--border-lip)',
                           display: 'grid',
                           gap: 4,
@@ -878,24 +867,15 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
                         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 6 }}>
                           <span style={{ fontWeight: 800, fontSize: '0.98rem' }}>{g.label}</span>
                           {g.recommended && (
-                            <span
-                              style={{
-                                fontSize: '0.66rem',
-                                fontWeight: 800,
-                                padding: '2px 7px',
-                                borderRadius: 999,
-                                backgroundColor: 'var(--color-green-100)',
-                                color: 'var(--color-green-700)',
-                              }}
-                            >
+                            <span className="score-pill" style={{ fontSize: '0.66rem', padding: '1px 7px' }}>
                               BEST
                             </span>
                           )}
                         </div>
-                        <div style={{ fontWeight: 800, fontSize: '0.88rem', color: 'var(--color-blue-600)' }}>
+                        <div style={{ fontWeight: 800, fontSize: '0.88rem', color: 'var(--text-link)' }}>
                           {g.xp} XP · {g.minutes}
                         </div>
-                        <div style={{ fontSize: '0.78rem', opacity: 0.8 }}>{g.tagline}</div>
+                        <div style={{ fontSize: '0.78rem', opacity: 0.85 }}>{g.tagline}</div>
                       </button>
                     );
                   })}
@@ -906,7 +886,7 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
               <div
                 style={{
                   display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 240px), 1fr))',
                   gap: 18,
                   padding: 18,
                   borderRadius: 14,
@@ -947,7 +927,7 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
                               border: selected
                                 ? '2px solid var(--color-blue-500)'
                                 : '1.5px solid var(--border-card)',
-                              backgroundColor: selected ? 'var(--color-blue-50)' : 'var(--bg-card)',
+                              backgroundColor: selected ? 'var(--surface-accent-blue)' : 'var(--bg-card)',
                               display: 'inline-flex',
                             }}
                           >
@@ -979,7 +959,7 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
                     <div className="font-heading" style={{ fontSize: '1.45rem', lineHeight: 1.15 }}>
                       Hi {displayName.trim() || 'Alex'}!
                     </div>
-                    <div style={{ display: 'inline-flex', alignItems: 'center', gap: 5, fontSize: '0.8rem', fontWeight: 700, color: '#e07a16', marginTop: 4 }}>
+                    <div style={{ display: 'inline-flex', alignItems: 'center', gap: 5, fontSize: '0.8rem', fontWeight: 700, color: 'var(--accent-amber-text)', marginTop: 4 }}>
                       <Flame size={14} /> {dailyXpGoal} XP daily goal · {selectedCourseIds.length} courses
                     </div>
                   </div>
@@ -1031,19 +1011,7 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
                     </div>
                   </div>
                 </div>
-                <span
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: 5,
-                    padding: '4px 11px',
-                    borderRadius: 999,
-                    backgroundColor: 'var(--color-green-100)',
-                    color: 'var(--color-green-700)',
-                    fontWeight: 800,
-                    fontSize: '0.78rem',
-                  }}
-                >
+                <span className="score-pill" style={{ gap: 5, padding: '4px 11px', fontSize: '0.78rem' }}>
                   <Sparkles size={13} /> 100% Free Forever
                 </span>
               </div>
@@ -1069,11 +1037,11 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
                       padding: 18,
                       borderRadius: 14,
                       backgroundColor: 'var(--bg-elevated)',
-                      border: '1.5px solid var(--color-blue-300, var(--border-card))',
+                      border: '1.5px solid var(--surface-accent-blue-border)',
                     }}
                   >
                     <div style={{ display: 'flex', alignItems: 'center', gap: 7, fontWeight: 800, fontSize: '0.96rem', color: 'var(--text-heading)' }}>
-                      <ShieldCheck size={18} color="var(--color-blue-500)" /> Create free account &amp; auto-save
+                      <ShieldCheck size={18} color="var(--text-link)" /> Create free account &amp; auto-save
                     </div>
 
                     <label style={{ display: 'grid', gap: 5, fontWeight: 700, fontSize: '0.86rem' }}>
@@ -1091,7 +1059,7 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
                       />
                     </label>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 10 }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 180px), 1fr))', gap: 10 }}>
                       <label style={{ display: 'grid', gap: 5, fontWeight: 700, fontSize: '0.86rem' }}>
                         <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
                           <Lock size={14} /> Password
@@ -1150,7 +1118,7 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
                         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 10, flexWrap: 'wrap', fontSize: '0.78rem', fontWeight: 700 }}>
                           <span style={{ color: pwStrength.color }}>{pwStrength.label}</span>
                           {confirmPassword.length > 0 && (
-                            <span style={{ color: matches ? 'var(--color-green-600)' : 'var(--color-red-600)' }}>
+                            <span style={{ color: matches ? 'var(--accent-green-text)' : 'var(--accent-red-text)' }}>
                               {matches ? 'Passwords match ✓' : 'Passwords do not match'}
                             </span>
                           )}
@@ -1171,7 +1139,7 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
                           borderRadius: 11,
                           backgroundColor: 'rgba(239, 68, 68, 0.1)',
                           border: '1px solid rgba(239, 68, 68, 0.35)',
-                          color: 'var(--color-red-600)',
+                          color: 'var(--accent-red-text)',
                           fontWeight: 700,
                           fontSize: '0.86rem',
                         }}
@@ -1185,11 +1153,11 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
                             type="button"
                             onClick={() => switchViewMode('signin')}
                             style={{
-                              border: '1px solid var(--color-blue-500)',
+                              border: '1px solid var(--surface-accent-blue-border)',
                               borderRadius: 8,
                               padding: '5px 10px',
                               backgroundColor: 'var(--bg-elevated)',
-                              color: 'var(--color-blue-600)',
+                              color: 'var(--text-link)',
                               fontWeight: 800,
                               fontSize: '0.8rem',
                             }}
@@ -1229,7 +1197,7 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
                       style={{
                         border: 0,
                         background: 'transparent',
-                        color: 'var(--color-blue-600)',
+                        color: 'var(--text-link)',
                         fontWeight: 700,
                         fontSize: '0.88rem',
                         textDecoration: 'underline',
@@ -1258,7 +1226,7 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
                 borderRadius: 11,
                 backgroundColor: 'rgba(239, 68, 68, 0.1)',
                 border: '1px solid rgba(239, 68, 68, 0.35)',
-                color: 'var(--color-red-600)',
+                color: 'var(--accent-red-text)',
                 fontWeight: 700,
                 fontSize: '0.88rem',
               }}
@@ -1271,26 +1239,16 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
           )}
 
           {/* Bottom Step Navigation Bar */}
-          <div
-            style={{
-              marginTop: 26,
-              paddingTop: 18,
-              borderTop: '1px solid var(--border-subtle)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              gap: 12,
-            }}
-          >
+          <div className="onboarding-nav-bar">
             <button
               type="button"
-              className="tactile-btn"
+              className="tactile-btn tactile-btn--sm"
               onClick={step === 1 ? () => navigate('/dashboard') : goBack}
             >
-              <ArrowLeft size={16} /> {step === 1 ? 'Back to Dashboard' : 'Back'}
+              <ArrowLeft size={15} /> {step === 1 ? 'Dashboard' : 'Back'}
             </button>
 
-            <div style={{ display: 'flex', gap: 7 }} aria-hidden="true">
+            <div className="onboarding-step-dots" style={{ display: 'flex', gap: 7 }} aria-hidden="true">
               {[1, 2, 3, 4].map((n) => (
                 <span
                   key={n}
@@ -1299,7 +1257,7 @@ export const OnboardingPage: React.FC<OnboardingPageProps> = () => {
                     height: 8,
                     borderRadius: 999,
                     backgroundColor:
-                      n <= step ? 'var(--color-blue-500)' : 'var(--border-card)',
+                      n <= step ? 'var(--accent-cta-blue)' : 'var(--border-card)',
                     transition: 'all 200ms ease',
                   }}
                 />

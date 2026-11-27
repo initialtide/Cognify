@@ -120,7 +120,18 @@ export const TeacherToolsPage: React.FC = () => {
             <Shuffle size={15} /> {tool.id === 'picker' ? 'Pick random student' : 'Generate random seating pairs'}
           </button>
           {pickedName && (
-            <div className="cognito-card" style={{ padding: 16, textAlign: 'center', fontWeight: 800, fontSize: '1.25rem', backgroundColor: 'var(--color-blue-50)', color: '#0b3c61' }}>
+            <div
+              className="cognito-card"
+              style={{
+                padding: 16,
+                textAlign: 'center',
+                fontWeight: 800,
+                fontSize: '1.25rem',
+                backgroundColor: 'var(--surface-accent-blue)',
+                borderColor: 'var(--surface-accent-blue-border)',
+                color: 'var(--surface-accent-blue-text)',
+              }}
+            >
               {pickedName}
             </div>
           )}
@@ -199,9 +210,19 @@ export const TeacherToolsPage: React.FC = () => {
   return (
     <main className="page-container">
       <div style={{ marginBottom: 22 }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
           <h1 className="font-heading" style={{ fontSize: '2.3rem' }}>Free Tools for Teachers</h1>
-          <span style={{ padding: '2px 10px', borderRadius: 999, backgroundColor: 'var(--color-blue-50)', border: '1px solid var(--color-blue-300)', color: '#1578c3', fontWeight: 800, fontSize: '0.8rem' }}>
+          <span
+            style={{
+              padding: '3px 10px',
+              borderRadius: 999,
+              backgroundColor: 'var(--surface-accent-blue)',
+              border: '1px solid var(--surface-accent-blue-border)',
+              color: 'var(--text-link)',
+              fontWeight: 800,
+              fontSize: '0.8rem',
+            }}
+          >
             Beta
           </span>
         </div>
@@ -211,7 +232,7 @@ export const TeacherToolsPage: React.FC = () => {
         </p>
       </div>
 
-      <section className="cognito-card" style={{ padding: 26, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(270px, 1fr))', gap: 28 }}>
+      <section className="cognito-card" style={{ padding: 26, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))', gap: 28 }}>
         {categories.map((cat) => (
           <div key={cat}>
             <h2 style={{ fontFamily: 'var(--font-sans)', fontSize: '0.95rem', fontWeight: 800, color: 'var(--text-muted)', marginBottom: 12 }}>
@@ -222,27 +243,15 @@ export const TeacherToolsPage: React.FC = () => {
                 <button
                   key={tool.id}
                   type="button"
+                  className="teacher-tool-row"
                   onClick={() => setActiveTool(tool)}
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                    gap: 10,
-                    padding: '10px 12px',
-                    borderRadius: 12,
-                    border: 0,
-                    backgroundColor: 'transparent',
-                    textAlign: 'left',
-                    fontWeight: 700,
-                    color: 'var(--text-heading)',
-                  }}
                 >
                   <span style={{ display: 'inline-flex', alignItems: 'center', gap: 10 }}>
-                    <span style={{ width: 34, height: 34, borderRadius: 9, backgroundColor: 'var(--color-blue-50)', color: '#1a96f3', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <span className="teacher-tool-icon">
                       {tool.icon}
                     </span>
                     <span>{tool.name}</span>
-                    {tool.category !== 'In the classroom' && <Sparkles size={14} color="var(--color-purple-500)" />}
+                    {tool.category !== 'In the classroom' && <Sparkles size={14} color="var(--color-purple-400)" />}
                   </span>
                   <ArrowRight size={15} color="var(--text-muted)" />
                 </button>

@@ -366,20 +366,7 @@ export const PastPapersTab: React.FC<{ course: CourseDefinition }> = ({ course }
                               {paper.title}
                             </span>
                             {hasOfficialPdf && (
-                              <span
-                                style={{
-                                  display: 'inline-flex',
-                                  alignItems: 'center',
-                                  gap: 4,
-                                  padding: '2px 8px',
-                                  borderRadius: 999,
-                                  fontSize: '0.7rem',
-                                  fontWeight: 800,
-                                  backgroundColor: 'var(--color-green-100)',
-                                  color: 'var(--color-green-700)',
-                                  letterSpacing: '0.02em',
-                                }}
-                              >
+                              <span className="sp-pp-official-pill">
                                 <ShieldCheck size={11} /> OFFICIAL PDF
                               </span>
                             )}

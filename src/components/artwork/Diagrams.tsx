@@ -32,18 +32,32 @@ const DIAGRAM_STAGE_CSS = `
 }
 :root[data-theme="dark"] .cognito-diagram-stage,
 :root:has(> head > meta[name="color-scheme"][content="dark"]) .cognito-diagram-stage {
-  background: #faf9f6;
-  padding: 12px 16px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: #1f2228;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 3px 14px rgba(0, 0, 0, 0.28);
+}
+:root[data-theme="dark"] .cognito-diagram-stage svg,
+:root:has(> head > meta[name="color-scheme"][content="dark"]) .cognito-diagram-stage svg {
+  filter: invert(0.89) hue-rotate(180deg) saturate(1.18) contrast(1.04);
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]):not(:has(> head > meta[name="color-scheme"][content="light"])) .cognito-diagram-stage {
-    background: #faf9f6;
-    padding: 12px 16px;
-    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: #1f2228;
+    padding: 14px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
     box-shadow: 0 3px 14px rgba(0, 0, 0, 0.28);
   }
+  :root:not([data-theme="light"]):not(:has(> head > meta[name="color-scheme"][content="light"])) .cognito-diagram-stage svg {
+    filter: invert(0.89) hue-rotate(180deg) saturate(1.18) contrast(1.04);
+  }
+}
+.sp-exam-diagram-frame .cognito-diagram-stage {
+  background: transparent !important;
+  border: 0 !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  margin: 0 auto;
 }
 `;
 

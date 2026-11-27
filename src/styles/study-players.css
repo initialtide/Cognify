@@ -234,7 +234,7 @@
   gap: 5px;
   font-weight: 800;
   font-size: 0.92rem;
-  color: var(--color-blue-500);
+  color: var(--accent-blue-text);
   font-variant-numeric: tabular-nums;
 }
 
@@ -1641,7 +1641,7 @@
 }
 
 :root[data-theme="dark"] .sp-exam-q-btn.is-active {
-  background-color: var(--color-blue-500);
+  background-color: var(--accent-cta-blue);
   border-color: var(--color-blue-400);
   color: #ffffff;
 }
@@ -1676,6 +1676,18 @@
   border: 1px solid var(--border-subtle);
   display: flex;
   justify-content: center;
+}
+
+:root[data-theme="dark"] .sp-exam-diagram-frame {
+  background-color: #1f2228;
+  border-color: var(--border-card);
+}
+
+:root[data-theme="dark"] .sp-exam-diagram-frame .cognito-diagram-stage {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  box-shadow: none;
 }
 
 .sp-exam-part {
@@ -1851,14 +1863,14 @@
 }
 
 :root[data-theme="dark"] .sp-filter-pill.is-active {
-  background-color: var(--color-blue-500);
+  background-color: var(--accent-cta-blue);
   border-color: var(--color-blue-400);
   color: #ffffff;
 }
 
 .sp-filter-pill__count {
   font-size: 0.74rem;
-  opacity: 0.82;
+  opacity: 0.88;
   font-variant-numeric: tabular-nums;
 }
 
@@ -1883,11 +1895,7 @@
 }
 
 .sp-pp-year-btn.is-open {
-  color: var(--color-blue-500);
-}
-
-:root[data-theme="dark"] .sp-pp-year-btn.is-open {
-  color: var(--color-blue-400);
+  color: var(--accent-blue-text);
 }
 
 .sp-pp-chevron {
@@ -1910,6 +1918,26 @@
   justify-content: space-between;
   gap: 14px;
   flex-wrap: wrap;
+}
+
+.sp-pp-official-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  background-color: var(--color-green-100);
+  color: #166549;
+  border: 1px solid var(--color-green-200);
+}
+
+:root[data-theme="dark"] .sp-pp-official-pill {
+  background-color: rgba(83, 215, 170, 0.16);
+  color: var(--color-green-300);
+  border-color: rgba(83, 215, 170, 0.36);
 }
 
 .sp-pp-action-group {
@@ -2072,7 +2100,7 @@
 }
 
 :root[data-theme="dark"] .sp-kt-alpha-link.is-active {
-  background-color: var(--color-blue-500);
+  background-color: var(--accent-cta-blue);
   color: #ffffff;
 }
 
@@ -3051,17 +3079,17 @@
 }
 
 .cl-choice-btn.is-selected .cl-choice-num {
-  background-color: var(--color-blue-500);
+  background-color: var(--accent-cta-blue);
   color: #ffffff;
 }
 
 .cl-choice-btn.is-correct .cl-choice-num {
-  background-color: var(--color-green-500);
+  background-color: var(--accent-cta-green);
   color: #ffffff;
 }
 
 .cl-choice-btn.is-incorrect .cl-choice-num {
-  background-color: var(--color-magenta-500);
+  background-color: #b4234a;
   color: #ffffff;
 }
 
@@ -3550,6 +3578,38 @@
 
 /* Responsive Adjustments */
 @media (max-width: 720px) {
+  .sp-topbar {
+    height: 60px;
+  }
+  .sp-topbar__inner {
+    padding: 0 10px;
+    gap: 8px;
+  }
+  .sp-topbar__left {
+    gap: 4px;
+    flex: 1 1 auto;
+  }
+  .sp-topbar__switcher-btn {
+    padding: 5px 7px;
+    font-size: 0.85rem;
+    max-width: 190px;
+  }
+  .sp-topbar__right {
+    gap: 6px;
+  }
+  .sp-topbar__xp {
+    font-size: 0.8rem;
+    gap: 3px;
+  }
+  .sp-topbar__browse-label {
+    font-size: 0.8rem;
+    gap: 6px;
+    padding: 4px 6px;
+  }
+  .sp-topbar__progress-track {
+    min-width: 36px;
+    max-width: 90px;
+  }
   .cl-stream {
     padding: 20px 14px 36vh;
     gap: 18px;
@@ -3623,6 +3683,15 @@
   }
   .sp-kt-subtopic-pill {
     justify-self: start;
+  }
+}
+
+@media (max-width: 540px) {
+  .sp-topbar__progress-track {
+    display: none;
+  }
+  .sp-topbar__switcher-btn {
+    max-width: 175px;
   }
 }
 

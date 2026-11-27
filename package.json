@@ -13,7 +13,9 @@
     "check": "npm run typecheck && npm run test && npm run build",
     "verify:youtube": "node scripts/verify_youtube_oembed.mjs",
     "audit:learning": "node scripts/audit_learning_quality.mjs",
-    "audit:learning:write": "node scripts/audit_learning_quality.mjs --write-report"
+    "audit:learning:write": "node scripts/audit_learning_quality.mjs --write-report",
+    "audit:ui": "node scripts/audit_ui_coherence.mjs",
+    "audit:ui:write": "node scripts/audit_ui_coherence.mjs --write-report"
   },
   "dependencies": {
     "lucide-react": "^0.475.0",

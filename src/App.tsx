@@ -164,15 +164,17 @@ const AppShell: React.FC = () => {
 
       {!hideTopNav && <SiteFooter />}
 
-      {/* Bottom-Right Floating Feedback Button */}
-      <button
-        type="button"
-        className="floating-feedback-btn no-print"
-        aria-label="Send feedback"
-        onClick={() => setFeedbackOpen(true)}
-      >
-        <Send size={18} />
-      </button>
+      {/* Bottom-Right Floating Feedback Button (hidden in focused study players & onboarding to avoid CTA overlap) */}
+      {!hideTopNav && (
+        <button
+          type="button"
+          className="floating-feedback-btn no-print"
+          aria-label="Send feedback"
+          onClick={() => setFeedbackOpen(true)}
+        >
+          <Send size={18} />
+        </button>
+      )}
 
       {/* Global Native <dialog> Modals */}
       <AvatarModal open={avatarOpen} onClose={() => setAvatarOpen(false)} />

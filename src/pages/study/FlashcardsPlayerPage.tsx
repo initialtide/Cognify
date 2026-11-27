@@ -333,6 +333,11 @@ export const FlashcardsPlayerPage: React.FC = () => {
       />
 
       <main className="page-container sp-fc-container">
+        {cards.length > 0 && (browseMode || !isComplete) && (
+          <h1 className="sr-only">
+            {title} — {course.subjectName} Flashcards
+          </h1>
+        )}
         {cards.length === 0 ? (
           <section className="cognito-card sp-summary-card">
             <h1 className="font-heading" style={{ fontSize: '1.75rem', marginBottom: 8 }}>

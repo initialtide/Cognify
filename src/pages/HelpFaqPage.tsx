@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const FAQS = [
   {
     q: 'Are there any paywalls, weekly limits, or Pro subscriptions here?',
-    a: 'No! Every paywall and weekly usage cap from Cognito has been removed. All notes, 6-type quizzes, unlimited multi-subtopic revision sessions, flashcards, printable cheat sheets, A–Z key terms (+ Test me), exam practice, past papers, and full activity history are 100% unlocked.',
+    a: 'No! Cognify is completely free with zero paywalls and zero weekly usage caps. All video lessons, revision notes, 6-type quizzes, unlimited multi-subtopic revision sessions, flashcards, printable cheat sheets, A–Z key terms (+ Test me), exam practice, past papers, and full activity history are 100% unlocked.',
   },
   {
     q: 'Where is my XP, streak, and course progress saved?',
@@ -28,7 +28,7 @@ export const HelpFaqPage: React.FC = () => {
         Help &amp; Frequently Asked Questions
       </h1>
       <p style={{ color: 'var(--text-secondary)', marginBottom: 24 }}>
-        Everything you need to know about your unlocked Cognito dashboard clone.
+        Everything you need to know about Cognify — free GCSE, IGCSE &amp; A-Level revision with zero paywalls.
       </p>
 
       <div style={{ display: 'grid', gap: 14 }}>

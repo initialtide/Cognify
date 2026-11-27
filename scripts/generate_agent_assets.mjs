@@ -385,7 +385,7 @@ The requested page could not be found on Cognify (\`${BASE}\`). The URL may have
       markdown: homeMd,
       priority: '1.0',
       changefreq: 'weekly',
-      htmlBody: `<main style="max-width: 920px; margin: 40px auto; padding: 0 24px; font-family: system-ui, sans-serif; color: #1d2939;">
+      htmlBody: `<main style="max-width: 920px; margin: 40px auto; padding: 0 24px; font-family: system-ui, sans-serif; color: inherit;">
         <h1>Cognify — Free GCSE, IGCSE &amp; A-Level Interactive Revision Platform</h1>
         <p>${escapeHtml(meta.shortDescription)}</p>
         <p>Explore ${ALL_COURSES.length} structured courses and ${totalSubtopics}+ subtopics across ${escapeHtml(boardLabels)} with interactive video lessons, revision notes, quizzes, flashcards, official Cambridge past papers, and an open Curriculum API.</p>
@@ -416,7 +416,7 @@ The requested page could not be found on Cognify (\`${BASE}\`). The URL may have
       markdown: dashboardMd,
       priority: '0.9',
       changefreq: 'weekly',
-      htmlBody: `<main style="max-width: 920px; margin: 40px auto; padding: 0 24px; font-family: system-ui, sans-serif; color: #1d2939;">
+      htmlBody: `<main style="max-width: 920px; margin: 40px auto; padding: 0 24px; font-family: system-ui, sans-serif; color: inherit;">
         <h1>Cognify Student Revision Dashboard — GCSE, IGCSE &amp; A-Level</h1>
         <p>${escapeHtml(meta.shortDescription)}</p>
         <p>Study ${ALL_COURSES.length} free courses and ${totalSubtopics}+ subtopics across ${escapeHtml(boardLabels)} with interactive video lessons, structured revision notes, flashcards, active-recall quizzes, and official Cambridge IGCSE past papers.</p>
@@ -443,7 +443,7 @@ The requested page could not be found on Cognify (\`${BASE}\`). The URL may have
       markdown: coursesMd,
       priority: '0.9',
       changefreq: 'weekly',
-      htmlBody: `<main style="max-width: 920px; margin: 40px auto; padding: 0 24px; font-family: system-ui, sans-serif; color: #1d2939;">
+      htmlBody: `<main style="max-width: 920px; margin: 40px auto; padding: 0 24px; font-family: system-ui, sans-serif; color: inherit;">
         <h1>Cognify Course Catalog — ${ALL_COURSES.length} GCSE, IGCSE &amp; A-Level Courses</h1>
         <p>Every course includes interactive video lessons, structured revision notes, 6-format quizzes, spaced-repetition flashcards, exam-style practice, key-term glossaries, and past papers — 100% free.</p>
         <ul>${courseLinksHtml}</ul>
@@ -459,7 +459,7 @@ The requested page could not be found on Cognify (\`${BASE}\`). The URL may have
       markdown: aboutMd,
       priority: '0.8',
       changefreq: 'monthly',
-      htmlBody: `<main style="max-width: 920px; margin: 40px auto; padding: 0 24px; font-family: system-ui, sans-serif; color: #1d2939;">
+      htmlBody: `<main style="max-width: 920px; margin: 40px auto; padding: 0 24px; font-family: system-ui, sans-serif; color: inherit;">
         <h1>About Cognify — Open-Access GCSE, IGCSE &amp; A-Level Revision</h1>
         <p>Cognify is a free, open-access interactive revision platform built by <a href="${meta.githubOrgUrl}">Initialtide</a> for secondary and sixth-form learners preparing for UK GCSE, Cambridge IGCSE, and A-Level examinations. Every interactive lesson, structured revision note, past paper, flashcard deck, and exam-style practice question is available without paywalls, weekly limits, or advertising trackers.</p>
         <h2>Educational Mission &amp; Pedagogy</h2>
@@ -479,7 +479,7 @@ The requested page could not be found on Cognify (\`${BASE}\`). The URL may have
       markdown: contactMd,
       priority: '0.7',
       changefreq: 'monthly',
-      htmlBody: `<main style="max-width: 920px; margin: 40px auto; padding: 0 24px; font-family: system-ui, sans-serif; color: #1d2939;">
+      htmlBody: `<main style="max-width: 920px; margin: 40px auto; padding: 0 24px; font-family: system-ui, sans-serif; color: inherit;">
         <h1>Contact Cognify &amp; Initialtide</h1>
         <p>Reach the Cognify maintainers for curriculum corrections, exam-board syllabus requests, accessibility reports, API or MCP integration questions, school support, or privacy inquiries. We welcome feedback from students, teachers, parents, and educational developers.</p>
         <h2>Direct Contact Channels</h2>
@@ -506,7 +506,7 @@ The requested page could not be found on Cognify (\`${BASE}\`). The URL may have
       markdown: privacyMd,
       priority: '0.7',
       changefreq: 'monthly',
-      htmlBody: `<main style="max-width: 920px; margin: 40px auto; padding: 0 24px; font-family: system-ui, sans-serif; color: #1d2939;">
+      htmlBody: `<main style="max-width: 920px; margin: 40px auto; padding: 0 24px; font-family: system-ui, sans-serif; color: inherit;">
         <h1>Cognify Privacy Policy</h1>
         <p><strong>Effective Date:</strong> ${meta.lastUpdated}. Cognify is designed from the ground up as a local-first, privacy-respecting educational web application. We do not sell student data, run third-party advertising networks, place cross-site behavioural tracking cookies, or require cloud registration to revise.</p>
         <h2>1. Local-First Data Architecture</h2>
@@ -529,7 +529,7 @@ The requested page could not be found on Cognify (\`${BASE}\`). The URL may have
       markdown: docsMd,
       priority: '0.9',
       changefreq: 'weekly',
-      htmlBody: `<main style="max-width: 920px; margin: 40px auto; padding: 0 24px; font-family: system-ui, sans-serif; color: #1d2939;">
+      htmlBody: `<main style="max-width: 920px; margin: 40px auto; padding: 0 24px; font-family: system-ui, sans-serif; color: inherit;">
         <h1>Cognify API &amp; Developer Documentation</h1>
         <p>Official developer documentation for integrating with the Cognify GCSE, IGCSE, and A-Level Curriculum API, Markdown content negotiation (<code>Accept: text/markdown</code>), <code>llms.txt</code> agent instructions, and the Cognify MCP tool manifest. All endpoints are open-access and require no API keys.</p>
         <h2>Machine-Readable Endpoints</h2>
@@ -559,7 +559,7 @@ The requested page could not be found on Cognify (\`${BASE}\`). The URL may have
       markdown: apiMd,
       priority: '0.8',
       changefreq: 'weekly',
-      htmlBody: `<main style="max-width: 920px; margin: 40px auto; padding: 0 24px; font-family: system-ui, sans-serif; color: #1d2939;">
+      htmlBody: `<main style="max-width: 920px; margin: 40px auto; padding: 0 24px; font-family: system-ui, sans-serif; color: inherit;">
         <h1>Cognify Curriculum API Reference</h1>
         <p>Read-only OpenAPI 3.1.0 Curriculum API providing structured JSON and Markdown access to all ${ALL_COURSES.length} Cognify GCSE, IGCSE, and A-Level courses across ${escapeHtml(boardLabels)}.</p>
         <ul>
@@ -579,7 +579,7 @@ The requested page could not be found on Cognify (\`${BASE}\`). The URL may have
       markdown: mcpMd,
       priority: '0.8',
       changefreq: 'weekly',
-      htmlBody: `<main style="max-width: 920px; margin: 40px auto; padding: 0 24px; font-family: system-ui, sans-serif; color: #1d2939;">
+      htmlBody: `<main style="max-width: 920px; margin: 40px auto; padding: 0 24px; font-family: system-ui, sans-serif; color: inherit;">
         <h1>Cognify MCP Server &amp; Agent Tools</h1>
         <p>Connect AI tutors, educational assistants, and Model Context Protocol (MCP) clients to Cognify's free GCSE, IGCSE, and A-Level curriculum catalog via <a href="${BASE}/.well-known/mcp.json">/.well-known/mcp.json</a> and <a href="${BASE}/.well-known/agent-instructions.md">/.well-known/agent-instructions.md</a>.</p>
         <h2>Available MCP Tools</h2>
@@ -601,7 +601,7 @@ The requested page could not be found on Cognify (\`${BASE}\`). The URL may have
       markdown: faqMd,
       priority: '0.6',
       changefreq: 'monthly',
-      htmlBody: `<main style="max-width: 920px; margin: 40px auto; padding: 0 24px; font-family: system-ui, sans-serif; color: #1d2939;">
+      htmlBody: `<main style="max-width: 920px; margin: 40px auto; padding: 0 24px; font-family: system-ui, sans-serif; color: inherit;">
         <h1>Help &amp; Frequently Asked Questions — Cognify</h1>
         <p>All Cognify interactive video lessons, revision notes, quizzes, flashcards, exam-style practice questions, A–Z key terms, and official past papers are 100% free with zero paywalls or weekly caps.</p>
         <p><a href="${BASE}/dashboard">Return to Dashboard</a> · <a href="${BASE}/about">About Cognify</a> · <a href="${BASE}/contact">Contact</a> · <a href="${BASE}/privacy">Privacy Policy</a></p>
@@ -616,7 +616,7 @@ The requested page could not be found on Cognify (\`${BASE}\`). The URL may have
       markdown: teacherToolsMd,
       priority: '0.6',
       changefreq: 'monthly',
-      htmlBody: `<main style="max-width: 920px; margin: 40px auto; padding: 0 24px; font-family: system-ui, sans-serif; color: #1d2939;">
+      htmlBody: `<main style="max-width: 920px; margin: 40px auto; padding: 0 24px; font-family: system-ui, sans-serif; color: inherit;">
         <h1>Cognify Teacher Tools</h1>
         <p>Build custom multi-topic revision sessions across ${ALL_COURSES.length} GCSE, IGCSE, and A-Level courses and share direct subtopic links with classes.</p>
         <p><a href="${BASE}/courses">Browse Courses</a> · <a href="${BASE}/dashboard">Dashboard</a> · <a href="${BASE}/docs">Cognify API Docs</a></p>
@@ -670,7 +670,7 @@ ${topicLinesMd}
       markdown: courseMd,
       priority: '0.8',
       changefreq: 'weekly',
-      htmlBody: `<main style="max-width: 920px; margin: 40px auto; padding: 0 24px; font-family: system-ui, sans-serif; color: #1d2939;">
+      htmlBody: `<main style="max-width: 920px; margin: 40px auto; padding: 0 24px; font-family: system-ui, sans-serif; color: inherit;">
         <h1>${escapeHtml(courseTitle)} — Cognify Revision</h1>
         <p>Free ${escapeHtml(courseTitle)} interactive revision with ${course.topics.length} topics, ${subtopicCount} subtopics, video lessons, revision notes, quizzes, flashcards, exam practice, and ${course.pastPapers.length} past papers.</p>
         <h2>Topics Covered</h2>
@@ -1232,7 +1232,7 @@ function renderNotFoundHtml(templateHtml, meta) {
     /<link\s+rel="alternate"\s+type="text\/markdown"\s+href="[^"]*index\.md"[\s\S]*?\/>/i,
     `<link rel="alternate" type="text/markdown" href="${BASE}/404.md" title="404 Not Found (Markdown)" />`
   );
-  const body = `<main style="max-width: 920px; margin: 40px auto; padding: 0 24px; font-family: system-ui, sans-serif; color: #1d2939;">
+  const body = `<main style="max-width: 920px; margin: 40px auto; padding: 0 24px; font-family: system-ui, sans-serif; color: inherit;">
         <h1>404 Page Not Found — Cognify</h1>
         <p>The requested path could not be found on Cognify. It may have moved, contain a typo, or not exist on this revision platform.</p>
         <ul>
@@ -1336,7 +1336,7 @@ async function main() {
           mdFile: 'dashboard.md',
           title: `${spaRoute.charAt(0).toUpperCase() + spaRoute.slice(1)} — Cognify`,
           description: meta.shortDescription,
-          htmlBody: `<main style="max-width: 920px; margin: 40px auto; padding: 0 24px; font-family: system-ui, sans-serif; color: #1d2939;">
+          htmlBody: `<main style="max-width: 920px; margin: 40px auto; padding: 0 24px; font-family: system-ui, sans-serif; color: inherit;">
             <h1>Cognify — ${escapeHtml(spaRoute.charAt(0).toUpperCase() + spaRoute.slice(1))}</h1>
             <p>${escapeHtml(meta.shortDescription)}</p>
             <p><a href="${meta.baseUrl}/dashboard">Dashboard</a> · <a href="${meta.baseUrl}/courses">Courses</a> · <a href="${meta.baseUrl}/docs">API Docs</a></p>
