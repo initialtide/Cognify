@@ -1,0 +1,6 @@
+name = "cognify-agent-edge"
+main = "cloudflare-worker.js"
+compatibility_date = "2025-11-01"
+
+[vars]
+UPSTREAM_ORIGIN = "https://initialtide.github.io/Cognify"

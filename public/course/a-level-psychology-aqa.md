@@ -1,0 +1,46 @@
+# A-Level Psychology (AQA, A-Level) — Cognify Revision Course
+
+> Free A-Level Psychology (AQA, A-Level) revision course on Cognify with 6 topics, 18 subtopics, interactive video lessons, structured revision notes, quizzes, flashcards, exam-style practice, and 14 past papers.
+
+**Course URL:** https://initialtide.github.io/Cognify/course/a-level-psychology-aqa
+**Qualification:** A-Level
+**Exam Board:** AQA
+**Tier:** A-Level
+
+## Topics & Subtopics
+
+### 1. Research Methods
+- **1.1 Experiments, Variables & Experimental Designs** ([Lesson](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/lesson/al-psy-1-1) · [Notes](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/notes/al-psy-1-1) · [Quiz](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/quiz/al-psy-1-1) · [Flashcards](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/flashcards/al-psy-1-1))
+- **1.2 Observations, Self-Reports, Case Studies & Correlations** ([Lesson](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/lesson/al-psy-1-2) · [Notes](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/notes/al-psy-1-2) · [Quiz](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/quiz/al-psy-1-2) · [Flashcards](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/flashcards/al-psy-1-2))
+- **1.3 Ethics, Validity, Reliability & Data Analysis** ([Lesson](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/lesson/al-psy-1-3) · [Notes](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/notes/al-psy-1-3) · [Quiz](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/quiz/al-psy-1-3) · [Flashcards](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/flashcards/al-psy-1-3))
+
+### 2. Cognitive Approach
+- **2.1 Multi-Store Model & Working Memory Model** ([Lesson](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/lesson/al-psy-2-1) · [Notes](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/notes/al-psy-2-1) · [Quiz](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/quiz/al-psy-2-1) · [Flashcards](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/flashcards/al-psy-2-1))
+- **2.2 Andrade (2010) Doodling & Baron-Cohen et al. (2001) Eyes Test** ([Lesson](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/lesson/al-psy-2-2) · [Notes](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/notes/al-psy-2-2) · [Quiz](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/quiz/al-psy-2-2) · [Flashcards](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/flashcards/al-psy-2-2))
+- **2.3 Eyewitness Testimony (Loftus & Palmer) & Pozzulo et al. (2010)** ([Lesson](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/lesson/al-psy-2-3) · [Notes](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/notes/al-psy-2-3) · [Quiz](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/quiz/al-psy-2-3) · [Flashcards](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/flashcards/al-psy-2-3))
+
+### 3. Biological Approach
+- **3.1 Dement & Kleitman (1957) Sleep & Dreams** ([Lesson](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/lesson/al-psy-3-1) · [Notes](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/notes/al-psy-3-1) · [Quiz](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/quiz/al-psy-3-1) · [Flashcards](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/flashcards/al-psy-3-1))
+- **3.2 Hölzel et al. (2011) Mindfulness & Brain Structure** ([Lesson](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/lesson/al-psy-3-2) · [Notes](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/notes/al-psy-3-2) · [Quiz](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/quiz/al-psy-3-2) · [Flashcards](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/flashcards/al-psy-3-2))
+- **3.3 Biopsychology — Localisation, Synaptic Transmission & Fight-or-Flight** ([Lesson](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/lesson/al-psy-3-3) · [Notes](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/notes/al-psy-3-3) · [Quiz](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/quiz/al-psy-3-3) · [Flashcards](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/flashcards/al-psy-3-3))
+
+### 4. Learning Approach
+- **4.1 Classical & Operant Conditioning (Pavlov & Skinner)** ([Lesson](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/lesson/al-psy-4-1) · [Notes](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/notes/al-psy-4-1) · [Quiz](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/quiz/al-psy-4-1) · [Flashcards](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/flashcards/al-psy-4-1))
+- **4.2 Bandura et al. (1961) Bobo Doll & Social Learning Theory** ([Lesson](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/lesson/al-psy-4-2) · [Notes](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/notes/al-psy-4-2) · [Quiz](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/quiz/al-psy-4-2) · [Flashcards](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/flashcards/al-psy-4-2))
+- **4.3 Saavedra & Silverman (2002) Button Phobia & Fagen et al. (2014)** ([Lesson](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/lesson/al-psy-4-3) · [Notes](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/notes/al-psy-4-3) · [Quiz](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/quiz/al-psy-4-3) · [Flashcards](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/flashcards/al-psy-4-3))
+
+### 5. Social Approach
+- **5.1 Milgram (1963) Obedience & Agency Theory** ([Lesson](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/lesson/al-psy-5-1) · [Notes](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/notes/al-psy-5-1) · [Quiz](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/quiz/al-psy-5-1) · [Flashcards](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/flashcards/al-psy-5-1))
+- **5.2 Conformity — Asch (1951) & Zimbardo (1973) Stanford Prison** ([Lesson](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/lesson/al-psy-5-2) · [Notes](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/notes/al-psy-5-2) · [Quiz](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/quiz/al-psy-5-2) · [Flashcards](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/flashcards/al-psy-5-2))
+- **5.3 Piliavin et al. (1969) Subway Samaritan & Perry et al. (2015)** ([Lesson](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/lesson/al-psy-5-3) · [Notes](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/notes/al-psy-5-3) · [Quiz](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/quiz/al-psy-5-3) · [Flashcards](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/flashcards/al-psy-5-3))
+
+### 6. Clinical Psychology
+- **6.1 Schizophrenia — Diagnosis, Biological & Psychological Explanations** ([Lesson](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/lesson/al-psy-6-1) · [Notes](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/notes/al-psy-6-1) · [Quiz](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/quiz/al-psy-6-1) · [Flashcards](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/flashcards/al-psy-6-1))
+- **6.2 Mood Disorders — Depression (Beck, Ellis) & CBT** ([Lesson](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/lesson/al-psy-6-2) · [Notes](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/notes/al-psy-6-2) · [Quiz](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/quiz/al-psy-6-2) · [Flashcards](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/flashcards/al-psy-6-2))
+- **6.3 Anxiety Disorders, Phobias, OCD & Treatment Evaluation** ([Lesson](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/lesson/al-psy-6-3) · [Notes](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/notes/al-psy-6-3) · [Quiz](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/quiz/al-psy-6-3) · [Flashcards](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa/flashcards/al-psy-6-3))
+
+## Related Links
+
+- [All Courses](https://initialtide.github.io/Cognify/courses)
+- [Cognify API Catalog JSON](https://initialtide.github.io/Cognify/api/v1/courses.json)
+- [Agent Instructions (llms.txt)](https://initialtide.github.io/Cognify/llms.txt)

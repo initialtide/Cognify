@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Send } from 'lucide-react';
 import { BrowserRouter, Navigate, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+import { SiteFooter } from './components/layout/SiteFooter';
 import { TopNav } from './components/layout/TopNav';
 import { AuthMode, AuthSuccessMeta } from './components/auth/AuthFormCard';
 import { AuthModal } from './components/modals/AuthModal';
@@ -15,6 +16,7 @@ import { AuthPage } from './pages/AuthPage';
 import { CoursesCatalogPage } from './pages/CoursesCatalogPage';
 import { CourseWorkspacePage } from './pages/CourseWorkspacePage';
 import { DashboardPage } from './pages/DashboardPage';
+import { ApiReferencePage, DocsPage, McpPage } from './pages/DeveloperDocsPage';
 import { HelpFaqPage } from './pages/HelpFaqPage';
 import { OnboardingPage } from './pages/OnboardingPage';
 import { RevisionSessionBuilderPage } from './pages/RevisionSessionBuilderPage';
@@ -27,6 +29,7 @@ import { NotesViewerPage } from './pages/study/NotesViewerPage';
 import { QuizPlayerPage } from './pages/study/QuizPlayerPage';
 import { VideosPage } from './pages/study/VideosPage';
 import { TeacherToolsPage } from './pages/TeacherToolsPage';
+import { AboutPage, ContactPage, NotFoundPage, PrivacyPage } from './pages/TrustPages';
 import { AppProvider } from './store/AppContext';
 
 const AppShell: React.FC = () => {
@@ -134,6 +137,14 @@ const AppShell: React.FC = () => {
         <Route path="/course/:courseId" element={<CourseWorkspacePage />} />
         <Route path="/course/:courseId/:tab" element={<CourseWorkspacePage />} />
 
+        {/* Trust Anchor & Developer Documentation Pages */}
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/privacy" element={<PrivacyPage />} />
+        <Route path="/docs" element={<DocsPage />} />
+        <Route path="/api" element={<ApiReferencePage />} />
+        <Route path="/mcp" element={<McpPage />} />
+
         {/* Account & Utilities */}
         <Route
           path="/account/:tab"
@@ -148,8 +159,10 @@ const AppShell: React.FC = () => {
         <Route path="/account" element={<Navigate to="/account/profile" replace />} />
         <Route path="/teacher-tools" element={<TeacherToolsPage />} />
         <Route path="/faq" element={<HelpFaqPage />} />
-        <Route path="*" element={<Navigate to="/dashboard" replace />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
+
+      {!hideTopNav && <SiteFooter />}
 
       {/* Bottom-Right Floating Feedback Button */}
       <button

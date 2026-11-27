@@ -1,0 +1,204 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Cognify Curriculum API",
+    "version": "1.0.0",
+    "summary": "Read-only public GCSE, IGCSE & A-Level curriculum discovery API for Cognify.",
+    "description": "Open-access JSON and Markdown endpoints exposing Cognify courses, exam boards (AQA, Edexcel, OCR, CIE), topics, subtopics, past-paper metadata, MCP manifest, and AI agent instructions.",
+    "contact": {
+      "name": "Initialtide (Cognify)",
+      "url": "https://initialtide.github.io/Cognify/contact",
+      "email": "support@cognify.initialtide.org"
+    },
+    "license": {
+      "name": "Open Educational Access",
+      "url": "https://github.com/initialtide/Cognify"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://initialtide.github.io/Cognify",
+      "description": "Cognify Public Production Base URL"
+    }
+  ],
+  "paths": {
+    "/api/v1/courses.json": {
+      "get": {
+        "operationId": "listCourses",
+        "summary": "List all GCSE, IGCSE, and A-Level courses and subtopics",
+        "description": "Returns the complete machine-readable catalog of Cognify courses, topics, subtopics, exam boards, and canonical study links.",
+        "responses": {
+          "200": {
+            "description": "Course catalog JSON payload",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "service",
+                    "version",
+                    "courseCount",
+                    "courses"
+                  ],
+                  "properties": {
+                    "service": {
+                      "type": "string"
+                    },
+                    "version": {
+                      "type": "string"
+                    },
+                    "courseCount": {
+                      "type": "integer"
+                    },
+                    "totalSubtopics": {
+                      "type": "integer"
+                    },
+                    "courses": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "title",
+                          "qualification",
+                          "examBoard",
+                          "url"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "title": {
+                            "type": "string"
+                          },
+                          "qualification": {
+                            "type": "string"
+                          },
+                          "examBoard": {
+                            "type": "string"
+                          },
+                          "tier": {
+                            "type": "string"
+                          },
+                          "url": {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          "markdownUrl": {
+                            "type": "string",
+                            "format": "uri"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/openapi.json": {
+      "get": {
+        "operationId": "getOpenApiSpec",
+        "summary": "Fetch the Cognify OpenAPI 3.1.0 specification",
+        "responses": {
+          "200": {
+            "description": "OpenAPI 3.1.0 JSON document",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/.well-known/mcp.json": {
+      "get": {
+        "operationId": "getMcpManifest",
+        "summary": "Fetch the Cognify Model Context Protocol (MCP) discovery manifest",
+        "responses": {
+          "200": {
+            "description": "MCP discovery manifest JSON",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/llms.txt": {
+      "get": {
+        "operationId": "getLlmsTxt",
+        "summary": "Fetch Cognify LLM & AI agent directory and when-to-use guidance",
+        "responses": {
+          "200": {
+            "description": "Markdown llms.txt document",
+            "content": {
+              "text/markdown": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/": {
+      "get": {
+        "operationId": "getHomepage",
+        "summary": "Fetch Cognify homepage (supports Accept: text/markdown content negotiation)",
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "text/html",
+                "text/markdown"
+              ]
+            },
+            "description": "Set to text/markdown for agent-ready Markdown output."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "HTML or Markdown homepage representation",
+            "headers": {
+              "Vary": {
+                "description": "Indicates response varies by Accept header",
+                "schema": {
+                  "type": "string",
+                  "example": "Accept"
+                }
+              }
+            },
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/markdown": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
