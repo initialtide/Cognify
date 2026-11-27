@@ -3,7 +3,7 @@
 > Launch GCSE, IGCSE, and A-Level revision sessions, track daily XP and study streaks, manage enrolled courses, and jump straight into interactive video lessons, revision notes, quizzes, flashcards, and Cambridge past papers.
 
 **URL:** https://initialtide.github.io/Cognify/dashboard
-**Courses Available:** 47 courses (617+ subtopics) across KS3, GCSE, IGCSE, A-Level, IB, Entrance Exams, US Sciences, US AP
+**Courses Available:** 47 courses (615+ subtopics) across KS3, GCSE, IGCSE, A-Level, IB, Entrance Exams, US Sciences, US AP
 
 ## What You Can Do on the Dashboard
 

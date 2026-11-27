@@ -1,6 +1,6 @@
 # Cognify Course Catalog — 47 Free GCSE, IGCSE & A-Level Courses
 
-> Browse all 47 structured courses and 617+ subtopics across KS3, GCSE, IGCSE, A-Level, IB, Entrance Exams, US Sciences, US AP and AQA, Edexcel, OCR A, OCR B, CCEA, WJEC, SQA National 5, CIE, Edexcel International, Oxford AQA.
+> Browse all 47 structured courses and 615+ subtopics across KS3, GCSE, IGCSE, A-Level, IB, Entrance Exams, US Sciences, US AP and AQA, Edexcel, OCR A, OCR B, CCEA, WJEC, SQA National 5, CIE, Edexcel International, Oxford AQA.
 
 - [GCSE Biology (AQA, Triple · Higher)](https://initialtide.github.io/Cognify/course/gcse-biology-aqa-higher): 7 topics, 16 subtopics, 6 past papers.
 - [GCSE Biology (AQA, Triple · Foundation)](https://initialtide.github.io/Cognify/course/gcse-biology-aqa-foundation): 7 topics, 16 subtopics, 6 past papers.
@@ -40,9 +40,9 @@
 - [A-Level Psychology (CIE, A-Level)](https://initialtide.github.io/Cognify/course/a-level-psychology-cie-core): 6 topics, 18 subtopics, 14 past papers.
 - [A-Level Psychology (AQA, A-Level)](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa): 6 topics, 18 subtopics, 14 past papers.
 - [GCSE Business Studies (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-business-cie-core): 6 topics, 12 subtopics, 6 past papers.
-- [GCSE Computer Science (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core): 5 topics, 10 subtopics, 8 past papers.
-- [GCSE Economics (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core): 5 topics, 10 subtopics, 8 past papers.
-- [GCSE English Language (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core): 4 topics, 4 subtopics, 8 past papers.
+- [GCSE Computer Science (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core): 6 topics, 8 subtopics, 6 past papers.
+- [GCSE Economics (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core): 5 topics, 8 subtopics, 6 past papers.
+- [GCSE English Language (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core): 4 topics, 6 subtopics, 6 past papers.
 - [GCSE Psychology (Oxford AQA, Core)](https://initialtide.github.io/Cognify/course/gcse-psychology-oxford-aqa-core): 4 topics, 4 subtopics, 8 past papers.
 - [KS3 Biology (National Curriculum, Years 7–9)](https://initialtide.github.io/Cognify/course/ks3-biology-core): 7 topics, 16 subtopics, 6 past papers.
 - [IB Biology (IB Diploma, Higher Level)](https://initialtide.github.io/Cognify/course/ib-biology-hl): 7 topics, 16 subtopics, 6 past papers.

@@ -1,6 +1,6 @@
 # Cognify
 
-> Cognify is a free, open-access GCSE, IGCSE, and A-Level interactive revision platform maintained by Initialtide (https://github.com/initialtide). It offers 47 structured courses and 617+ subtopics across AQA, Edexcel, OCR, and Cambridge International (CIE) with video lessons, revision notes, quizzes, flashcards, exam-style practice, official Cambridge past papers, and an open Curriculum API.
+> Cognify is a free, open-access GCSE, IGCSE, and A-Level interactive revision platform maintained by Initialtide (https://github.com/initialtide). It offers 47 structured courses and 615+ subtopics across AQA, Edexcel, OCR, and Cambridge International (CIE) with video lessons, revision notes, quizzes, flashcards, exam-style practice, official Cambridge past papers, and an open Curriculum API.
 
 ## When to use Cognify
 
@@ -40,7 +40,7 @@ Do not reach for Cognify for:
 - [Cognify API & Developer Documentation](https://initialtide.github.io/Cognify/docs): Main developer guide for Curriculum API, Markdown negotiation, and agent discovery
 - [Cognify Curriculum API Reference](https://initialtide.github.io/Cognify/api): Endpoint reference and JSON response examples
 - [Cognify MCP Server & Agent Tools](https://initialtide.github.io/Cognify/mcp): Model Context Protocol tool schemas and integration guide
-- [Curriculum Courses JSON](https://initialtide.github.io/Cognify/api/v1/courses.json): Live structured JSON list of all 47 courses and 617+ subtopics
+- [Curriculum Courses JSON](https://initialtide.github.io/Cognify/api/v1/courses.json): Live structured JSON list of all 47 courses and 615+ subtopics
 - [OpenAPI 3.1 Specification](https://initialtide.github.io/Cognify/api/openapi.json): Formal OpenAPI schema
 - [MCP Discovery Manifest](https://initialtide.github.io/Cognify/.well-known/mcp.json): Machine-readable MCP manifest
 - [Dedicated Agent Instructions](https://initialtide.github.io/Cognify/.well-known/agent-instructions.md): Detailed agent invocation rules and when-to-use matrix
@@ -92,9 +92,9 @@ Do not reach for Cognify for:
 - [A-Level Psychology (CIE, A-Level)](https://initialtide.github.io/Cognify/course/a-level-psychology-cie-core): 6 topics, 18 subtopics, 14 past papers
 - [A-Level Psychology (AQA, A-Level)](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa): 6 topics, 18 subtopics, 14 past papers
 - [GCSE Business Studies (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-business-cie-core): 6 topics, 12 subtopics, 6 past papers
-- [GCSE Computer Science (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core): 5 topics, 10 subtopics, 8 past papers
-- [GCSE Economics (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core): 5 topics, 10 subtopics, 8 past papers
-- [GCSE English Language (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core): 4 topics, 4 subtopics, 8 past papers
+- [GCSE Computer Science (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core): 6 topics, 8 subtopics, 6 past papers
+- [GCSE Economics (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core): 5 topics, 8 subtopics, 6 past papers
+- [GCSE English Language (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core): 4 topics, 6 subtopics, 6 past papers
 - [GCSE Psychology (Oxford AQA, Core)](https://initialtide.github.io/Cognify/course/gcse-psychology-oxford-aqa-core): 4 topics, 4 subtopics, 8 past papers
 - [KS3 Biology (National Curriculum, Years 7–9)](https://initialtide.github.io/Cognify/course/ks3-biology-core): 7 topics, 16 subtopics, 6 past papers
 - [IB Biology (IB Diploma, Higher Level)](https://initialtide.github.io/Cognify/course/ib-biology-hl): 7 topics, 16 subtopics, 6 past papers
@@ -118,7 +118,7 @@ Do not reach for Cognify for:
 > Launch GCSE, IGCSE, and A-Level revision sessions, track daily XP and study streaks, manage enrolled courses, and jump straight into interactive video lessons, revision notes, quizzes, flashcards, and Cambridge past papers.
 
 **URL:** https://initialtide.github.io/Cognify/dashboard
-**Courses Available:** 47 courses (617+ subtopics) across KS3, GCSE, IGCSE, A-Level, IB, Entrance Exams, US Sciences, US AP
+**Courses Available:** 47 courses (615+ subtopics) across KS3, GCSE, IGCSE, A-Level, IB, Entrance Exams, US Sciences, US AP
 
 ## What You Can Do on the Dashboard
 
@@ -139,7 +139,7 @@ Do not reach for Cognify for:
 <!-- Route: /courses -->
 # Cognify Course Catalog — 47 Free GCSE, IGCSE & A-Level Courses
 
-> Browse all 47 structured courses and 617+ subtopics across KS3, GCSE, IGCSE, A-Level, IB, Entrance Exams, US Sciences, US AP and AQA, Edexcel, OCR A, OCR B, CCEA, WJEC, SQA National 5, CIE, Edexcel International, Oxford AQA.
+> Browse all 47 structured courses and 615+ subtopics across KS3, GCSE, IGCSE, A-Level, IB, Entrance Exams, US Sciences, US AP and AQA, Edexcel, OCR A, OCR B, CCEA, WJEC, SQA National 5, CIE, Edexcel International, Oxford AQA.
 
 - [GCSE Biology (AQA, Triple · Higher)](https://initialtide.github.io/Cognify/course/gcse-biology-aqa-higher): 7 topics, 16 subtopics, 6 past papers.
 - [GCSE Biology (AQA, Triple · Foundation)](https://initialtide.github.io/Cognify/course/gcse-biology-aqa-foundation): 7 topics, 16 subtopics, 6 past papers.
@@ -179,9 +179,9 @@ Do not reach for Cognify for:
 - [A-Level Psychology (CIE, A-Level)](https://initialtide.github.io/Cognify/course/a-level-psychology-cie-core): 6 topics, 18 subtopics, 14 past papers.
 - [A-Level Psychology (AQA, A-Level)](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa): 6 topics, 18 subtopics, 14 past papers.
 - [GCSE Business Studies (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-business-cie-core): 6 topics, 12 subtopics, 6 past papers.
-- [GCSE Computer Science (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core): 5 topics, 10 subtopics, 8 past papers.
-- [GCSE Economics (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core): 5 topics, 10 subtopics, 8 past papers.
-- [GCSE English Language (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core): 4 topics, 4 subtopics, 8 past papers.
+- [GCSE Computer Science (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core): 6 topics, 8 subtopics, 6 past papers.
+- [GCSE Economics (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core): 5 topics, 8 subtopics, 6 past papers.
+- [GCSE English Language (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core): 4 topics, 6 subtopics, 6 past papers.
 - [GCSE Psychology (Oxford AQA, Core)](https://initialtide.github.io/Cognify/course/gcse-psychology-oxford-aqa-core): 4 topics, 4 subtopics, 8 past papers.
 - [KS3 Biology (National Curriculum, Years 7–9)](https://initialtide.github.io/Cognify/course/ks3-biology-core): 7 topics, 16 subtopics, 6 past papers.
 - [IB Biology (IB Diploma, Higher Level)](https://initialtide.github.io/Cognify/course/ib-biology-hl): 7 topics, 16 subtopics, 6 past papers.
@@ -205,7 +205,7 @@ Do not reach for Cognify for:
 
 High-quality exam preparation should never depend on household income or subscription tiers. Cognify organises science, mathematics, humanities, and social-science curricula into short, focused study units aligned with AQA, Edexcel, OCR, and Cambridge International (CIE) specifications.
 
-Every single subtopic across our 47 courses and 617+ subtopics connects six complementary study modes with zero paywalls, zero weekly limits, and zero advertising trackers:
+Every single subtopic across our 47 courses and 615+ subtopics connects six complementary study modes with zero paywalls, zero weekly limits, and zero advertising trackers:
 
 - **Progressive Interactive Lessons:** Guided step-by-step video and active-recall check cards.
 - **Structured Revision Notes:** Concise syllabus explanations, worked examples, diagrams, glossary pills, and privacy-enhanced video walkthroughs.
@@ -2182,7 +2182,7 @@ See also: [About Cognify](https://initialtide.github.io/Cognify/about) · [Conta
 <!-- Route: /course/gcse-computer-science-cie-core -->
 # GCSE Computer Science (CIE, Core) — Cognify Revision Course
 
-> Free GCSE Computer Science (CIE, Core) revision course on Cognify with 5 topics, 10 subtopics, interactive video lessons, structured revision notes, quizzes, flashcards, exam-style practice, and 8 past papers.
+> Free GCSE Computer Science (CIE, Core) revision course on Cognify with 6 topics, 8 subtopics, interactive video lessons, structured revision notes, quizzes, flashcards, exam-style practice, and 6 past papers.
 
 **Course URL:** https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core
 **Qualification:** GCSE
@@ -2191,25 +2191,25 @@ See also: [About Cognify](https://initialtide.github.io/Cognify/about) · [Conta
 
 ## Topics & Subtopics
 
-### 1. Data Representation & Computer Systems
-- **1.1 Binary, Hexadecimal, Two’s Complement & Media Representation** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-1-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-1-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-1-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-1-1))
-- **1.2 CPU Architecture, Von Neumann & Fetch–Decode–Execute Cycle** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-1-2) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-1-2) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-1-2) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-1-2))
+### 1. Data Representation
+- **1.1 Number Systems: Binary, Hexadecimal, Two’s Complement & Shifts** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-1-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-1-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-1-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-1-1))
+- **1.2 Text (ASCII/Unicode), Sound, Bitmap Images & Compression** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-1-2) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-1-2) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-1-2) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-1-2))
 
-### 2. Boolean Logic, Memory & Storage
-- **2.1 Logic Gates (AND, OR, NOT, XOR, NAND) & Truth Tables** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-2-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-2-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-2-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-2-1))
-- **2.2 RAM, ROM, Virtual Memory & Magnetic/Optical/Solid-State Storage** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-2-2) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-2-2) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-2-2) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-2-2))
+### 2. Data Transmission & Error Detection
+- **2.1 Packet Switching, Serial/Parallel, Error Checking & Encryption** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-2-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-2-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-2-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-2-1))
 
-### 3. Networks, Protocols & Cyber Security
-- **3.1 LAN/WAN, Star & Mesh Topologies, Packet Switching & TCP/IP Layers** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-3-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-3-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-3-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-3-1))
-- **3.2 Malware, SQL Injection, Phishing, Firewalls & Encryption** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-3-2) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-3-2) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-3-2) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-3-2))
+### 3. Hardware & CPU Architecture
+- **3.1 Von Neumann Architecture, FDE Cycle, Cache, Primary & Secondary Storage** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-3-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-3-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-3-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-3-1))
 
-### 4. Algorithms, Searching & Sorting
-- **4.1 Decomposition, Abstraction, Pseudocode & Trace Tables** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-4-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-4-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-4-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-4-1))
-- **4.2 Linear vs Binary Search & Bubble, Insertion and Merge Sort** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-4-2) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-4-2) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-4-2) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-4-2))
+### 4. Software & Operating Systems
+- **4.1 Operating Systems, Interrupts, High/Low-Level Languages & Translators** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-4-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-4-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-4-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-4-1))
 
-### 5. Programming Constructs, Databases & SQL
-- **5.1 Selection, Iteration, 1D/2D Arrays, Subroutines & File Handling** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-5-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-5-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-5-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-5-1))
-- **5.2 Relational Databases, Primary Keys & SQL SELECT/UPDATE Queries** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-5-2) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-5-2) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-5-2) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-5-2))
+### 5. The Internet & Cyber Security
+- **5.1 HTTP/HTTPS, DNS, Malware, Social Engineering & Defences** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-5-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-5-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-5-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-5-1))
+
+### 6. Algorithms, Programming, Databases & Boolean Logic
+- **6.1 Algorithms, Pseudocode, Trace Tables, Validation & Test Data** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-6-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-6-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-6-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-6-1))
+- **6.2 Relational Databases, SQL Queries & Boolean Logic Gates** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-6-2) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-6-2) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-6-2) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-6-2))
 
 ## Related Links
 
@@ -2221,7 +2221,7 @@ See also: [About Cognify](https://initialtide.github.io/Cognify/about) · [Conta
 <!-- Route: /course/gcse-economics-cie-core -->
 # GCSE Economics (CIE, Core) — Cognify Revision Course
 
-> Free GCSE Economics (CIE, Core) revision course on Cognify with 5 topics, 10 subtopics, interactive video lessons, structured revision notes, quizzes, flashcards, exam-style practice, and 8 past papers.
+> Free GCSE Economics (CIE, Core) revision course on Cognify with 5 topics, 8 subtopics, interactive video lessons, structured revision notes, quizzes, flashcards, exam-style practice, and 6 past papers.
 
 **Course URL:** https://initialtide.github.io/Cognify/course/gcse-economics-cie-core
 **Qualification:** GCSE
@@ -2230,25 +2230,23 @@ See also: [About Cognify](https://initialtide.github.io/Cognify/about) · [Conta
 
 ## Topics & Subtopics
 
-### 1. The Basic Economic Problem & Resource Allocation
-- **1.1 Scarcity, Factors of Production, Opportunity Cost & PPC Curves** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-1-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-1-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-1-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-1-1))
-- **1.2 Demand, Supply, Price Equilibrium & Consumer/Producer Surplus** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-1-2) · [Notes](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-1-2) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-1-2) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-1-2))
+### 1. The Basic Economic Problem
+- **1.1 Scarcity, Factors of Production, Opportunity Cost & PPC** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-1-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-1-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-1-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-1-1))
 
-### 2. Elasticities & Market Failure
-- **2.1 Price Elasticity of Demand (PED) & Price Elasticity of Supply (PES)** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-2-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-2-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-2-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-2-1))
-- **2.2 Market Failure: Social Costs/Benefits, Public Goods & Indirect Taxes** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-2-2) · [Notes](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-2-2) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-2-2) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-2-2))
+### 2. Allocation of Resources
+- **2.1 Demand, Supply, Market Equilibrium & Price Mechanism** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-2-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-2-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-2-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-2-1))
+- **2.2 Price Elasticity (PED & PES), Market Failure & Government Intervention** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-2-2) · [Notes](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-2-2) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-2-2) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-2-2))
 
-### 3. Microeconomic Decision Makers (Firms, Workers & Banks)
-- **3.1 Functions of Money, Commercial Banks & Central Bank Monetary Policy** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-3-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-3-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-3-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-3-1))
-- **3.2 Fixed/Variable Costs, Economies of Scale, Monopoly & Competitive Markets** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-3-2) · [Notes](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-3-2) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-3-2) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-3-2))
+### 3. Microeconomic Decision Makers
+- **3.1 Money, Central & Commercial Banks, Households & Labour Markets** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-3-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-3-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-3-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-3-1))
+- **3.2 Firms, Costs, Revenue, Economies of Scale & Competition vs Monopoly** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-3-2) · [Notes](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-3-2) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-3-2) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-3-2))
 
 ### 4. Government & The Macroeconomy
-- **4.1 Economic Growth (Real GDP), CPI Inflation & Types of Unemployment** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-4-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-4-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-4-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-4-1))
-- **4.2 Fiscal Policy, Monetary Policy & Supply-Side Reforms** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-4-2) · [Notes](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-4-2) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-4-2) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-4-2))
+- **4.1 Macroeconomic Aims, Fiscal, Monetary & Supply-Side Policies** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-4-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-4-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-4-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-4-1))
+- **4.2 Economic Growth (GDP), Employment/Unemployment & Inflation** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-4-2) · [Notes](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-4-2) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-4-2) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-4-2))
 
-### 5. Economic Development & International Trade
-- **5.1 Living Standards (HDI), Absolute vs Relative Poverty & Population Structure** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-5-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-5-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-5-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-5-1))
-- **5.2 Comparative Advantage, Protectionism (Tariffs/Quotas), Exchange Rates & Current Account** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-5-2) · [Notes](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-5-2) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-5-2) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-5-2))
+### 5. International Trade & Globalisation
+- **5.1 Specialisation, Free Trade vs Protectionism, Exchange Rates & Current Account** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-5-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-5-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-5-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-5-1))
 
 ## Related Links
 
@@ -2260,7 +2258,7 @@ See also: [About Cognify](https://initialtide.github.io/Cognify/about) · [Conta
 <!-- Route: /course/gcse-english-language-cie-core -->
 # GCSE English Language (CIE, Core) — Cognify Revision Course
 
-> Free GCSE English Language (CIE, Core) revision course on Cognify with 4 topics, 4 subtopics, interactive video lessons, structured revision notes, quizzes, flashcards, exam-style practice, and 8 past papers.
+> Free GCSE English Language (CIE, Core) revision course on Cognify with 4 topics, 6 subtopics, interactive video lessons, structured revision notes, quizzes, flashcards, exam-style practice, and 6 past papers.
 
 **Course URL:** https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core
 **Qualification:** GCSE
@@ -2269,17 +2267,19 @@ See also: [About Cognify](https://initialtide.github.io/Cognify/about) · [Conta
 
 ## Topics & Subtopics
 
-### 1. Reading Comprehension, Summary & Synthesis
-- **1.1 Explicit & Implicit Meaning, Textual Synthesis & Selective Summary** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/lesson/eng-1-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/notes/eng-1-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/quiz/eng-1-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/flashcards/eng-1-1))
+### 1. Reading Comprehension & Language Analysis
+- **1.1 Explicit vs Implicit Meaning, Inference & Own-Words Paraphrasing** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/lesson/englang-1-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/notes/englang-1-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/quiz/englang-1-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/flashcards/englang-1-1))
+- **1.2 Writer’s Effect, Imagery, Connotation & Structural Analysis** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/lesson/englang-1-2) · [Notes](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/notes/englang-1-2) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/quiz/englang-1-2) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/flashcards/englang-1-2))
 
-### 2. Language Analysis & Writer’s Effects
-- **2.1 Analysing Metaphor, Sensory Imagery, Lexical Fields & Structural Shifts** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/lesson/eng-2-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/notes/eng-2-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/quiz/eng-2-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/flashcards/eng-2-1))
+### 2. Summary & Directed Writing
+- **2.1 Summary Writing: Selecting 15 Points, Own Words & Concision** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/lesson/englang-2-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/notes/englang-2-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/quiz/englang-2-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/flashcards/englang-2-1))
+- **2.2 Directed Writing: Letters, Speeches, Articles, Interviews & Reports** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/lesson/englang-2-2) · [Notes](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/notes/englang-2-2) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/quiz/englang-2-2) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/flashcards/englang-2-2))
 
-### 3. Directed Writing & Transactional Rhetoric
-- **3.1 Adapting Register, Voice & Rhetorical Devices (Speeches, Letters, Articles)** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/lesson/eng-3-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/notes/eng-3-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/quiz/eng-3-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/flashcards/eng-3-1))
+### 3. Narrative & Descriptive Composition
+- **3.1 Descriptive & Narrative Composition: Show Don’t Tell, Structure & Voice** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/lesson/englang-3-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/notes/englang-3-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/quiz/englang-3-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/flashcards/englang-3-1))
 
-### 4. Descriptive & Narrative Composition
-- **4.1 Crafting Narrative Arcs, Cyclical Structure, Characterization & Punctuation for Effect** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/lesson/eng-4-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/notes/eng-4-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/quiz/eng-4-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/flashcards/eng-4-1))
+### 4. Argumentative Writing & Technical Accuracy
+- **4.1 Persuasive & Discursive Rhetoric + Grammar & Punctuation Precision** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/lesson/englang-4-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/notes/englang-4-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/quiz/englang-4-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core/flashcards/englang-4-1))
 
 ## Related Links
 

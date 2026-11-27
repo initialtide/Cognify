@@ -395,6 +395,19 @@ export const ALEVEL_BIOLOGY_NOTES: Record<string, NoteLesson> = {
           "**Tertiary structure**: specific 3D folding driven by R-group interactions — **hydrogen bonds**, ionic bonds (sensitive to pH), hydrophobic interactions, and covalent disulphide bridges between cysteine residues.",
           "**Quaternary structure**: assembly of two or more polypeptide chains (e.g., haemoglobin has 4 subunits + 4 haem prosthetic groups) into a functional protein complex."
         ],
+        "subsections": [
+          {
+            "heading": "Bond Types Across the Four Structural Levels",
+            "bullets": [
+              "**Primary → Secondary**: peptide bonds link the backbone, while **hydrogen bonds** between –C=O and –NH coil the chain into α-helices or fold it into β-pleated sheets.",
+              "**Tertiary → Quaternary**: R-group **ionic bonds**, **hydrogen bonds**, **hydrophobic interactions**, and covalent **disulphide bridges** (between cysteine R-groups) lock the exact 3D shape; multiple subunits combine in quaternary proteins like haemoglobin."
+            ],
+            "exampleHeading": "Worked comparison: Globular (Haemoglobin) vs Fibrous (Collagen)",
+            "examples": [
+              "**Haemoglobin**: soluble, compact spherical quaternary protein (2 α + 2 β chains + 4 Fe²⁺ haem groups) suited to reversible O₂ transport; **Collagen**: insoluble triple-helix fibrous protein with cross-linked fibrils providing high tensile strength in tendons and artery walls."
+            ]
+          }
+        ],
         "glossaryPills": [
           {
             "term": "disulphide bridges",
@@ -447,6 +460,20 @@ export const ALEVEL_BIOLOGY_NOTES: Record<string, NoteLesson> = {
           "DNA consists of two **antiparallel** polynucleotide strands (5′→3′ and 3′→5′) linked by phosphodiester bonds along the sugar-phosphate backbone and complementary base pairing (A=T with 2 H-bonds; C≡G with 3 H-bonds).",
           "Semi-conservative replication: **DNA helicase** breaks **hydrogen bonds** to unwind the helix; free phosphorylated DNA nucleotides pair with exposed template bases; **DNA polymerase** catalyses phosphodiester bond condensation only in the 5′→3′ direction (leading continuous, lagging Okazaki fragments).",
           "**Meselson and Stahl** grew *E. coli* in heavy ¹⁵N then transferred to light ¹⁴N medium: Generation 1 gave one hybrid intermediate density band (disproving conservative replication), and Generation 2 gave 50% hybrid + 50% light bands (confirming semi-conservative replication)."
+        ],
+        "subsections": [
+          {
+            "heading": "Meselson & Stahl (1958) Density-Gradient Band Predictions",
+            "bullets": [
+              "**Generation 0 (100% ¹⁵N)**: 100% heavy DNA band at the bottom of the CsCl gradient.",
+              "**Generation 1 (1 round in ¹⁴N)**: 100% intermediate hybrid (¹⁵N/¹⁴N) band — immediately rules out conservative replication!",
+              "**Generation 2 (2 rounds in ¹⁴N)**: 50% intermediate hybrid (¹⁵N/¹⁴N) + 50% light (¹⁴N/¹⁴N) bands; **Generation 3**: 25% hybrid + 75% light."
+            ],
+            "exampleHeading": "Worked check: Base-percentage exam calculation",
+            "examples": [
+              "If a double-stranded DNA sample contains **22% Adenine (A)**, complementary pairing gives **22% Thymine (T)** (44% A+T total), leaving 56% shared equally between **28% Cytosine (C)** and **28% Guanine (G)**."
+            ]
+          }
         ],
         "glossaryPills": [
           {
@@ -1422,6 +1449,21 @@ export const ALEVEL_BIOLOGY_NOTES: Record<string, NoteLesson> = {
           "**Photolysis of water**: light splits H₂O → 2H⁺ + 2e⁻ + ½O₂. The electrons replace those lost from PSII, O₂ is released as a by-product, and H⁺ ions accumulate in the thylakoid lumen.",
           "Electron Transport Chain & Chemiosmosis: excited electrons pass along carrier proteins in a series of redox reactions, releasing energy to actively pump H⁺ from the stroma into the thylakoid lumen. Protons diffuse back down their electrochemical gradient through **ATP synthase** channels, catalysing ADP + Pᵢ → ATP (photophosphorylation).",
           "At **Photosystem I (PSI)**, electrons are re-excited and transferred with stromal H⁺ to NADP, producing reduced NADP (NADPH) needed for the Calvin cycle."
+        ],
+        "subsections": [
+          {
+            "heading": "Non-Cyclic Photophosphorylation — 4 Exam Steps on the Thylakoid",
+            "bullets": [
+              "**1. Photoionisation**: Light excites chlorophyll electrons in **PSII** to a higher energy level so they leave chlorophyll.",
+              "**2. Photolysis**: H₂O → 2H⁺ + 2e⁻ + ½O₂ replaces the lost PSII electrons and raises thylakoid lumen [H⁺].",
+              "**3. Chemiosmosis**: Electrons flow along the **electron transport chain**, releasing energy to pump H⁺ into the lumen; protons diffuse down their gradient through **ATP synthase** to form **ATP**.",
+              "**4. NADP reduction**: Re-excited electrons from **PSI** combine with stromal H⁺ and NADP to form **reduced NADP (NADPH)**."
+            ],
+            "exampleHeading": "Worked check: Effect of an electron-carrier herbicide (e.g. DCMU) on photosynthesis",
+            "examples": [
+              "Blocking electron flow stops H⁺ pumping and NADP reduction → **ATP and reduced NADP production halts**, so **GP can no longer be reduced to TP** and glucose synthesis stops completely."
+            ]
+          }
         ],
         "glossaryPills": [
           {

@@ -23,7 +23,7 @@ import {
   ThumbsDown,
   ThumbsUp,
 } from 'lucide-react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useLocation, useParams } from 'react-router-dom';
 import { EducationalDiagram } from '../../components/artwork/Diagrams';
 import { StudyTopBar } from '../../components/layout/StudyTopBar';
 import { ALL_COURSES, getCourseById } from '../../data/catalog';
@@ -289,6 +289,10 @@ export interface CognitoVideoPlayerProps {
   courseSubtitle?: string;
   timestamps: VideoTimestamp[];
   cards?: NoteCardContent[];
+  /** When set (e.g. inside LessonPlayerPage), chapter note links route to `${notesBaseUrl}#${cardId}` instead of a same-page anchor */
+  notesBaseUrl?: string;
+  /** Optional imperative seek request (e.g. from Lesson Question "Re-watch chapter" button) */
+  seekRequest?: { seconds: number; nonce: number } | null;
   defaultTimestampsOpen?: boolean;
   showTimestampsBar?: boolean;
   showVideoHeader?: boolean;
@@ -309,6 +313,8 @@ export const CognitoVideoPlayer: React.FC<CognitoVideoPlayerProps> = ({
   courseSubtitle,
   timestamps,
   cards,
+  notesBaseUrl,
+  seekRequest,
   defaultTimestampsOpen = true,
   showTimestampsBar = true,
   showVideoHeader = false,
@@ -563,6 +569,45 @@ export const CognitoVideoPlayer: React.FC<CognitoVideoPlayerProps> = ({
     }
   };
 
+  const handleSeekToRef = useRef<(seconds: number) => void>(() => {});
+  handleSeekToRef.current = handleSeekTo;
+
+  const lastHandledSeekNonceRef = useRef<number | null>(null);
+  useEffect(() => {
+    if (!seekRequest) return;
+    if (lastHandledSeekNonceRef.current === seekRequest.nonce) return;
+    lastHandledSeekNonceRef.current = seekRequest.nonce;
+    handleSeekToRef.current(seekRequest.seconds);
+  }, [seekRequest]);
+
+  const parsedDurationSeconds = useMemo(() => {
+    if (videoDuration) {
+      const parts = videoDuration.split(':').map((n) => Number.parseInt(n, 10));
+      if (parts.length === 2 && parts.every(Number.isFinite)) {
+        return parts[0] * 60 + parts[1];
+      }
+      if (parts.length === 3 && parts.every(Number.isFinite)) {
+        return parts[0] * 3600 + parts[1] * 60 + parts[2];
+      }
+    }
+    const lastSec = sortedTimestamps[sortedTimestamps.length - 1]?.seconds ?? 0;
+    return Math.max(lastSec + 60, 180);
+  }, [videoDuration, sortedTimestamps]);
+
+  const chapterSegments = useMemo(() => {
+    if (sortedTimestamps.length <= 1) return [];
+    const total = Math.max(
+      parsedDurationSeconds,
+      (sortedTimestamps[sortedTimestamps.length - 1]?.seconds ?? 0) + 45
+    );
+    return sortedTimestamps.map((ts, idx) => {
+      const nextSec =
+        idx + 1 < sortedTimestamps.length ? sortedTimestamps[idx + 1].seconds : total;
+      const span = Math.max(15, nextSec - ts.seconds);
+      return { ts, idx, flexGrow: span };
+    });
+  }, [sortedTimestamps, parsedDurationSeconds]);
+
   const youtubeWatchUrl =
     currentTime > 1
       ? `https://www.youtube.com/watch?v=${encodeURIComponent(youtubeId)}&t=${Math.floor(currentTime)}s`
@@ -694,6 +739,34 @@ export const CognitoVideoPlayer: React.FC<CognitoVideoPlayerProps> = ({
         </div>
       )}
 
+      {/* Visual Proportional Chapter Scrubber Bar (instant 1-click chapter jump) */}
+      {showTimestampsBar && chapterSegments.length > 1 && (
+        <div
+          className="cognito-chapter-scrubber"
+          role="group"
+          aria-label="Video chapter timeline"
+        >
+          {chapterSegments.map(({ ts, idx, flexGrow }) => {
+            const isActive = idx === activeTimestampIndex;
+            const isCompleted = activeTimestampIndex > idx;
+            return (
+              <button
+                key={`seg-${ts.time}-${idx}`}
+                type="button"
+                className={`cognito-chapter-seg${isActive ? ' is-active' : ''}${
+                  isCompleted ? ' is-completed' : ''
+                }${ts.outsideCourse ? ' is-outside' : ''}`}
+                style={{ flexGrow }}
+                title={`Jump to ${ts.time} — ${ts.label}`}
+                aria-label={`Jump to chapter ${idx + 1} (${ts.time}): ${ts.label}`}
+                aria-pressed={isActive}
+                onClick={() => handleSeekTo(ts.seconds)}
+              />
+            );
+          })}
+        </div>
+      )}
+
       {/* Cognito-style Match Summary + Blue Toggle Switch Bar */}
       {showTimestampsBar && sortedTimestamps.length > 0 && (
         <>
@@ -807,8 +880,17 @@ export const CognitoVideoPlayer: React.FC<CognitoVideoPlayerProps> = ({
 
                     {ts.outsideCourse ? (
                       <span className="cognito-outside-pill">Outside your course</span>
-                    ) : (
-                      matchedCard && (
+                    ) : matchedCard ? (
+                      notesBaseUrl ? (
+                        <Link
+                          to={`${notesBaseUrl}#${matchedCard.id}`}
+                          className="cognito-timestamp-jump"
+                          title={`Read full revision note: ${matchedCard.title}`}
+                        >
+                          <span>Read note</span>
+                          <ExternalLink size={12} aria-hidden="true" />
+                        </Link>
+                      ) : (
                         <a
                           href={`#${matchedCard.id}`}
                           className="cognito-timestamp-jump"
@@ -819,7 +901,7 @@ export const CognitoVideoPlayer: React.FC<CognitoVideoPlayerProps> = ({
                           <ArrowDown size={12} aria-hidden="true" />
                         </a>
                       )
-                    )}
+                    ) : null}
                   </div>
                 );
               })}
@@ -866,6 +948,7 @@ function createFallbackLesson(code: string, title: string, subtopicId: string): 
 
 export const NotesViewerPage: React.FC = () => {
   const { courseId, subtopicId } = useParams<{ courseId: string; subtopicId: string }>();
+  const location = useLocation();
   const {
     profile,
     markNoteRead,
@@ -903,6 +986,15 @@ export const NotesViewerPage: React.FC = () => {
     setCopiedLink(false);
     setFeedbackByTarget({});
   }, [course.id, lesson.subtopicId]);
+
+  useEffect(() => {
+    const hashId = location.hash?.replace(/^#/, '');
+    if (!hashId) return;
+    const timer = window.setTimeout(() => {
+      smoothScrollToElement(hashId);
+    }, 80);
+    return () => window.clearTimeout(timer);
+  }, [location.hash, lesson.subtopicId]);
 
   useEffect(() => {
     const onScroll = () => {

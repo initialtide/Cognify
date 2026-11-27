@@ -1,9 +1,12 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, render, screen, within } from '@testing-library/react';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { getCourseById } from '../data/catalog';
 import { CourseWorkspacePage } from '../pages/CourseWorkspacePage';
-import { LessonPlayerPage } from '../pages/study/LessonPlayerPage';
+import {
+  findRelevantTimestampForQuestion,
+  LessonPlayerPage,
+} from '../pages/study/LessonPlayerPage';
 import { NotesViewerPage } from '../pages/study/NotesViewerPage';
 import { AppProvider, computeLessonSubtopicProgress, STORAGE_KEY } from '../store/AppContext';
 
@@ -249,5 +252,79 @@ describe('Distinct Cognito Lessons vs Notes Experiences', () => {
       'href',
       expect.stringContaining('https://www.cambridgeinternational.org/Images/')
     );
+  });
+
+  it('shows interactive video timestamps, chapter scrubber, Read note links, and Question Card Watch/Re-watch chapter jumps in Lesson Focus Mode', () => {
+    const course = getCourseById('a-level-biology-aqa')!;
+    const note = course.notes['al-bio-1-2']!;
+    expect(note.timestamps.length).toBeGreaterThanOrEqual(3);
+
+    const { container } = render(
+      <AppProvider>
+        <MemoryRouter initialEntries={['/course/a-level-biology-aqa/lesson/al-bio-1-2']}>
+          <Routes>
+            <Route path="/course/:courseId/lesson/:subtopicId" element={<LessonPlayerPage />} />
+            <Route path="/course/:courseId/notes/:subtopicId" element={<NotesViewerPage />} />
+          </Routes>
+        </MemoryRouter>
+      </AppProvider>
+    );
+
+    // Focus Mode Step 1 immediately renders the chapter timeline scrubber + expanded timestamps list
+    const scrubber = screen.getByRole('group', { name: /Video chapter timeline/i });
+    expect(scrubber).toBeInTheDocument();
+    expect(within(scrubber).getAllByRole('button').length).toBe(note.timestamps.length);
+    const timestampsList = screen.getByRole('list', { name: /Video chapter timestamps/i });
+    expect(timestampsList).toBeInTheDocument();
+    expect(screen.getByRole('switch', { name: /Show timestamps/i })).toHaveAttribute(
+      'aria-checked',
+      'true'
+    );
+
+    // Clicking the second chapter timestamp mounts the youtube-nocookie iframe starting at that exact second!
+    const secondChapter = note.timestamps[1];
+    const seekBtn = within(timestampsList).getByRole('button', {
+      name: new RegExp(`${secondChapter.time}.*${secondChapter.label.slice(0, 12)}`, 'i'),
+    });
+    fireEvent.click(seekBtn);
+
+    const ytFrame = container.querySelector('iframe.cognito-video-iframe');
+    expect(ytFrame).toBeInTheDocument();
+    expect(ytFrame?.getAttribute('src')).toContain(`start=${secondChapter.seconds}`);
+    expect(ytFrame?.getAttribute('src')).toContain('autoplay=1');
+    expect(within(scrubber).getAllByRole('button')[1]).toHaveAttribute('aria-pressed', 'true');
+
+    // Lesson timestamp rows link cleanly to the matching Note card (/notes/:subtopicId#cardId)
+    const readNoteLinks = screen.getAllByRole('link', { name: /Read note/i });
+    expect(readNoteLinks.length).toBeGreaterThanOrEqual(2);
+    expect(readNoteLinks[0].getAttribute('href')).toContain(
+      '/course/a-level-biology-aqa/notes/al-bio-1-2#'
+    );
+
+    // Advance to Step 2 question -> open Hint -> Watch chapter chip appears; check answer -> Re-watch chapter chip appears!
+    fireEvent.click(screen.getByRole('button', { name: /Continue to next card/i }));
+    fireEvent.click(screen.getByRole('button', { name: /Get hint/i }));
+    const watchChip = screen.getByRole('button', { name: /Watch \d+:\d+ ·/i });
+    expect(watchChip).toBeInTheDocument();
+
+    const choiceBtns = Array.from(
+      container.querySelectorAll<HTMLButtonElement>('.cl-choice-btn')
+    );
+    if (choiceBtns.length > 0) {
+      fireEvent.click(choiceBtns[0]);
+      if (choiceBtns[0].getAttribute('role') === 'checkbox' && choiceBtns[1]) {
+        fireEvent.click(choiceBtns[1]);
+      }
+      fireEvent.click(screen.getByRole('button', { name: /^Check$/i }));
+      const rewatchChip = screen.getByRole('button', { name: /Re-watch \d+:\d+ ·/i });
+      expect(rewatchChip).toBeInTheDocument();
+      fireEvent.click(rewatchChip);
+    }
+
+    // Pure chapter matcher resolves keyword-matching chapters accurately
+    const sampleQ = course.quizzes.find((q) => q.subtopicId === 'al-bio-1-2')!;
+    const matched = findRelevantTimestampForQuestion(sampleQ, 0, 5, note.timestamps, note.cards);
+    expect(matched).toBeTruthy();
+    expect(note.timestamps).toContain(matched);
   });
 });

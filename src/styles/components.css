@@ -2578,6 +2578,119 @@ dialog.quick-search-dialog[open] {
   border-radius: 8px;
 }
 
+/* Proportional Video Chapter Timeline Scrubber */
+.cognito-chapter-scrubber {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding: 6px 20px 0;
+  background-color: var(--bg-card);
+}
+
+.cognito-chapter-seg {
+  height: 6px;
+  min-width: 14px;
+  border: 0;
+  border-radius: 999px;
+  background-color: var(--border-card);
+  cursor: pointer;
+  padding: 0;
+  transition: transform 140ms ease, background-color 140ms ease, opacity 140ms ease;
+}
+
+.cognito-chapter-seg:hover {
+  background-color: var(--color-blue-400);
+  transform: scaleY(1.45);
+}
+
+.cognito-chapter-seg.is-completed {
+  background-color: var(--color-blue-300);
+}
+
+.cognito-chapter-seg.is-active {
+  background-color: var(--color-blue-500);
+  transform: scaleY(1.35);
+}
+
+.cognito-chapter-seg.is-outside {
+  opacity: 0.45;
+}
+
+:root[data-theme="dark"] .cognito-chapter-seg {
+  background-color: #3d4048;
+}
+
+:root[data-theme="dark"] .cognito-chapter-seg.is-completed {
+  background-color: rgba(72, 171, 246, 0.55);
+}
+
+:root[data-theme="dark"] .cognito-chapter-seg.is-active {
+  background-color: var(--color-blue-400);
+}
+
+.cl-hint-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  min-width: 0;
+}
+
+.cl-explanation-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.cl-rewatch-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 11px;
+  border-radius: 999px;
+  border: 1px solid var(--color-blue-200);
+  background-color: var(--color-blue-50);
+  color: var(--color-blue-700);
+  font-size: 0.78rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background-color 140ms ease, border-color 140ms ease, transform 120ms ease;
+}
+
+.cl-rewatch-chip:hover {
+  background-color: var(--color-blue-100);
+  border-color: var(--color-blue-400);
+  transform: translateY(-1px);
+}
+
+.cl-rewatch-chip.is-emphasized {
+  border-color: var(--color-amber-300);
+  background-color: var(--color-amber-50);
+  color: var(--color-amber-800);
+}
+
+.cl-rewatch-chip.is-emphasized:hover {
+  background-color: var(--color-amber-100);
+  border-color: var(--color-amber-400);
+}
+
+:root[data-theme="dark"] .cl-rewatch-chip {
+  background-color: rgba(26, 150, 243, 0.16);
+  border-color: rgba(118, 192, 248, 0.35);
+  color: var(--color-blue-200);
+}
+
+:root[data-theme="dark"] .cl-rewatch-chip:hover {
+  background-color: rgba(26, 150, 243, 0.26);
+}
+
+:root[data-theme="dark"] .cl-rewatch-chip.is-emphasized {
+  background-color: rgba(253, 176, 34, 0.16);
+  border-color: rgba(253, 176, 34, 0.42);
+  color: var(--color-amber-200);
+}
+
 .cognito-timestamp-row.is-active {
   background-color: var(--color-blue-50);
   border-radius: 8px;

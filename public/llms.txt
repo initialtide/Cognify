@@ -1,6 +1,6 @@
 # Cognify
 
-> Cognify is a free, open-access GCSE, IGCSE, and A-Level interactive revision platform maintained by Initialtide (https://github.com/initialtide). It offers 47 structured courses and 617+ subtopics across AQA, Edexcel, OCR, and Cambridge International (CIE) with video lessons, revision notes, quizzes, flashcards, exam-style practice, official Cambridge past papers, and an open Curriculum API.
+> Cognify is a free, open-access GCSE, IGCSE, and A-Level interactive revision platform maintained by Initialtide (https://github.com/initialtide). It offers 47 structured courses and 615+ subtopics across AQA, Edexcel, OCR, and Cambridge International (CIE) with video lessons, revision notes, quizzes, flashcards, exam-style practice, official Cambridge past papers, and an open Curriculum API.
 
 ## When to use Cognify
 
@@ -40,7 +40,7 @@ Do not reach for Cognify for:
 - [Cognify API & Developer Documentation](https://initialtide.github.io/Cognify/docs): Main developer guide for Curriculum API, Markdown negotiation, and agent discovery
 - [Cognify Curriculum API Reference](https://initialtide.github.io/Cognify/api): Endpoint reference and JSON response examples
 - [Cognify MCP Server & Agent Tools](https://initialtide.github.io/Cognify/mcp): Model Context Protocol tool schemas and integration guide
-- [Curriculum Courses JSON](https://initialtide.github.io/Cognify/api/v1/courses.json): Live structured JSON list of all 47 courses and 617+ subtopics
+- [Curriculum Courses JSON](https://initialtide.github.io/Cognify/api/v1/courses.json): Live structured JSON list of all 47 courses and 615+ subtopics
 - [OpenAPI 3.1 Specification](https://initialtide.github.io/Cognify/api/openapi.json): Formal OpenAPI schema
 - [MCP Discovery Manifest](https://initialtide.github.io/Cognify/.well-known/mcp.json): Machine-readable MCP manifest
 - [Dedicated Agent Instructions](https://initialtide.github.io/Cognify/.well-known/agent-instructions.md): Detailed agent invocation rules and when-to-use matrix
@@ -92,9 +92,9 @@ Do not reach for Cognify for:
 - [A-Level Psychology (CIE, A-Level)](https://initialtide.github.io/Cognify/course/a-level-psychology-cie-core): 6 topics, 18 subtopics, 14 past papers
 - [A-Level Psychology (AQA, A-Level)](https://initialtide.github.io/Cognify/course/a-level-psychology-aqa): 6 topics, 18 subtopics, 14 past papers
 - [GCSE Business Studies (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-business-cie-core): 6 topics, 12 subtopics, 6 past papers
-- [GCSE Computer Science (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core): 5 topics, 10 subtopics, 8 past papers
-- [GCSE Economics (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core): 5 topics, 10 subtopics, 8 past papers
-- [GCSE English Language (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core): 4 topics, 4 subtopics, 8 past papers
+- [GCSE Computer Science (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core): 6 topics, 8 subtopics, 6 past papers
+- [GCSE Economics (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core): 5 topics, 8 subtopics, 6 past papers
+- [GCSE English Language (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core): 4 topics, 6 subtopics, 6 past papers
 - [GCSE Psychology (Oxford AQA, Core)](https://initialtide.github.io/Cognify/course/gcse-psychology-oxford-aqa-core): 4 topics, 4 subtopics, 8 past papers
 - [KS3 Biology (National Curriculum, Years 7–9)](https://initialtide.github.io/Cognify/course/ks3-biology-core): 7 topics, 16 subtopics, 6 past papers
 - [IB Biology (IB Diploma, Higher Level)](https://initialtide.github.io/Cognify/course/ib-biology-hl): 7 topics, 16 subtopics, 6 past papers

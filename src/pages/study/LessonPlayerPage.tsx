@@ -14,6 +14,7 @@ import {
   Layers,
   Lightbulb,
   Link as LinkIcon,
+  PlayCircle,
   RotateCcw,
   Sparkles,
   ThumbsDown,
@@ -25,11 +26,101 @@ import { EducationalDiagram } from '../../components/artwork/Diagrams';
 import { StudyProgressSegments, StudyTopBar } from '../../components/layout/StudyTopBar';
 import { ALL_COURSES, getCourseById } from '../../data/catalog';
 import { computeLessonSubtopicProgress, useApp } from '../../store/AppContext';
-import { NoteLesson, QuizQuestion } from '../../types/curriculum';
+import { NoteCardContent, NoteLesson, QuizQuestion, VideoTimestamp } from '../../types/curriculum';
 import { gradeShortAnswer, GradeResult } from '../../utils/grader';
 import { playSound } from '../../utils/soundEffects';
 import { CognitoVideoPlayer, renderInlineMarkdown } from './NotesViewerPage';
 import { getShuffledMatchingPairs } from './QuizPlayerPage';
+
+const QUESTION_STOP_WORDS = new Set([
+  'what',
+  'which',
+  'when',
+  'where',
+  'that',
+  'this',
+  'with',
+  'from',
+  'into',
+  'about',
+  'following',
+  'correct',
+  'statement',
+  'describes',
+  'explain',
+  'define',
+  'below',
+  'between',
+  'during',
+  'their',
+  'there',
+  'these',
+  'those',
+]);
+
+function extractTopicTokens(text: string): string[] {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, ' ')
+    .split(/\s+/)
+    .filter((token) => token.length >= 4 && !QUESTION_STOP_WORDS.has(token));
+}
+
+/**
+ * Match a Lesson question to the most relevant in-course video chapter timestamp
+ * using keyword overlap against the chapter label and its linked note card,
+ * falling back proportionally across chapters so every question links cleanly.
+ */
+export function findRelevantTimestampForQuestion(
+  q: QuizQuestion,
+  qIdx: number,
+  totalQuestions: number,
+  timestamps: VideoTimestamp[],
+  cards?: NoteCardContent[]
+): VideoTimestamp | null {
+  const inCourse = timestamps.filter((ts) => !ts.outsideCourse);
+  const pool = inCourse.length > 0 ? inCourse : timestamps;
+  if (pool.length === 0) return null;
+  if (pool.length === 1) return pool[0];
+
+  const queryParts = [q.prompt, q.explanation ?? ''];
+  if (q.type === 'short-answer') {
+    queryParts.push(q.rubric.modelAnswer);
+  }
+  const qTokens = new Set(extractTopicTokens(queryParts.join(' ')));
+
+  let bestTs: VideoTimestamp | null = null;
+  let bestScore = 0;
+
+  if (qTokens.size > 0) {
+    for (const ts of pool) {
+      const linkedCard = ts.cardId ? cards?.find((c) => c.id === ts.cardId) : undefined;
+      const chapterTokens = extractTopicTokens(
+        `${ts.label} ${linkedCard?.title ?? ''} ${linkedCard?.summary ?? ''}`
+      );
+      let score = 0;
+      for (const token of chapterTokens) {
+        if (qTokens.has(token)) {
+          score += 2;
+        }
+      }
+      if (score > bestScore) {
+        bestScore = score;
+        bestTs = ts;
+      }
+    }
+  }
+
+  if (bestTs && bestScore > 0) {
+    return bestTs;
+  }
+
+  const proportionalIdx = Math.min(
+    pool.length - 1,
+    Math.floor((qIdx * pool.length) / Math.max(1, totalQuestions))
+  );
+  return pool[proportionalIdx] ?? pool[0];
+}
 
 interface LessonAnswerState {
   checked: boolean;
@@ -201,9 +292,22 @@ export const LessonPlayerPage: React.FC = () => {
   const [markingId, setMarkingId] = useState<string | null>(null);
   const [qFeedback, setQFeedback] = useState<Record<string, 'up' | 'down' | 'flag' | null>>({});
   const [copiedLink, setCopiedLink] = useState(false);
+  const [videoSeekRequest, setVideoSeekRequest] = useState<{
+    seconds: number;
+    nonce: number;
+  } | null>(null);
 
+  const videoCardRef = useRef<HTMLElement | null>(null);
   const cardRefs = useRef<Record<string, HTMLElement | null>>({});
   const completeCardRef = useRef<HTMLElement | null>(null);
+
+  const handleJumpToVideoTimestamp = useCallback((seconds: number) => {
+    setVideoSeekRequest({ seconds, nonce: Date.now() + Math.random() });
+    const el = videoCardRef.current;
+    if (el && typeof el.scrollIntoView === 'function') {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, []);
 
   useEffect(() => {
     setActiveQuestions(baseQuestions);
@@ -220,6 +324,7 @@ export const LessonPlayerPage: React.FC = () => {
     setMarkingId(null);
     setQFeedback({});
     setCopiedLink(false);
+    setVideoSeekRequest(null);
     if (
       typeof window !== 'undefined' &&
       typeof window.scrollTo === 'function' &&
@@ -1047,32 +1152,81 @@ export const LessonPlayerPage: React.FC = () => {
             </div>
           )}
 
-          {hintOpen && !st.checked && (
-            <div className="lesson-hint-box" role="note" style={{ marginTop: 12, marginBottom: 0 }}>
-              <Lightbulb size={15} style={{ flexShrink: 0, marginTop: 2 }} />
-              <span>{renderInlineMarkdown(hintText)}</span>
-            </div>
-          )}
+          {hintOpen && !st.checked && (() => {
+            const relatedChapter = findRelevantTimestampForQuestion(
+              q,
+              qIdx,
+              activeQuestions.length,
+              timestamps,
+              lessonNote?.cards
+            );
+            return (
+              <div className="lesson-hint-box" role="note" style={{ marginTop: 12, marginBottom: 0 }}>
+                <Lightbulb size={15} style={{ flexShrink: 0, marginTop: 2 }} />
+                <div className="cl-hint-content">
+                  <span>{renderInlineMarkdown(hintText)}</span>
+                  {relatedChapter && (
+                    <button
+                      type="button"
+                      className="cl-rewatch-chip"
+                      onClick={() => handleJumpToVideoTimestamp(relatedChapter.seconds)}
+                    >
+                      <PlayCircle size={13} aria-hidden="true" />
+                      <span>
+                        Watch {relatedChapter.time} · {relatedChapter.label}
+                      </span>
+                    </button>
+                  )}
+                </div>
+              </div>
+            );
+          })()}
 
-          {/* Exact Real Cognito "Show explanation" toggle after checking */}
-          {st.checked && q.explanation && (
-            <div className="cl-explanation-wrap">
-              <button
-                type="button"
-                className="cl-explanation-toggle"
-                aria-expanded={expOpen}
-                onClick={() =>
-                  setOpenExplanations((prev) => ({ ...prev, [q.id]: !prev[q.id] }))
-                }
-              >
-                <span>{expOpen ? 'Hide explanation' : 'Show explanation'}</span>
-                {expOpen ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
-              </button>
-              {expOpen && (
-                <p className="cl-explanation-body">{renderInlineMarkdown(q.explanation)}</p>
-              )}
-            </div>
-          )}
+          {/* Exact Real Cognito "Show explanation" toggle + chapter re-watch shortcut after checking */}
+          {st.checked && (() => {
+            const relatedChapter = findRelevantTimestampForQuestion(
+              q,
+              qIdx,
+              activeQuestions.length,
+              timestamps,
+              lessonNote?.cards
+            );
+            if (!q.explanation && !relatedChapter) return null;
+            return (
+              <div className="cl-explanation-wrap">
+                <div className="cl-explanation-actions">
+                  {q.explanation && (
+                    <button
+                      type="button"
+                      className="cl-explanation-toggle"
+                      aria-expanded={expOpen}
+                      onClick={() =>
+                        setOpenExplanations((prev) => ({ ...prev, [q.id]: !prev[q.id] }))
+                      }
+                    >
+                      <span>{expOpen ? 'Hide explanation' : 'Show explanation'}</span>
+                      {expOpen ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+                    </button>
+                  )}
+                  {relatedChapter && (
+                    <button
+                      type="button"
+                      className={`cl-rewatch-chip${outcome === 'incorrect' || outcome === 'partial' ? ' is-emphasized' : ''}`}
+                      onClick={() => handleJumpToVideoTimestamp(relatedChapter.seconds)}
+                    >
+                      <PlayCircle size={13} aria-hidden="true" />
+                      <span>
+                        Re-watch {relatedChapter.time} · {relatedChapter.label}
+                      </span>
+                    </button>
+                  )}
+                </div>
+                {expOpen && q.explanation && (
+                  <p className="cl-explanation-body">{renderInlineMarkdown(q.explanation)}</p>
+                )}
+              </div>
+            );
+          })()}
         </div>
 
         {/* CARD FOOTER */}
@@ -1246,6 +1400,15 @@ export const LessonPlayerPage: React.FC = () => {
                   <Clock size={14} />
                   <span>{lessonNote?.readingMinutes ?? 5} min</span>
                 </span>
+                {timestamps.length > 0 && (
+                  <span className="cl-meta-pill">
+                    <PlayCircle size={14} />
+                    <span>
+                      {timestamps.length}{' '}
+                      {timestamps.length === 1 ? 'chapter' : 'chapters'}
+                    </span>
+                  </span>
+                )}
                 <span className="cl-meta-pill">
                   <HelpCircle size={14} />
                   <span>
@@ -1275,8 +1438,9 @@ export const LessonPlayerPage: React.FC = () => {
           </section>
         )}
 
-        {/* STEP 1 OF N: Flush Cognito Video Card (matches cognito_lesson_step1.png & walk_browse_1.png) */}
+        {/* STEP 1 OF N: Flush Cognito Video Card with Always-On Interactive Timestamps */}
         <article
+          ref={videoCardRef}
           className={`cl-card cl-card--video${browseMode ? ' is-browse' : ''}`}
           aria-label="Video lesson"
         >
@@ -1297,8 +1461,11 @@ export const LessonPlayerPage: React.FC = () => {
               courseMatchSummary={lessonNote?.courseMatchSummary}
               courseSubtitle={courseSubtitleText}
               timestamps={timestamps}
-              defaultTimestampsOpen={false}
-              showTimestampsBar={browseMode}
+              cards={lessonNote?.cards}
+              notesBaseUrl={`/course/${course.id}/notes/${resolvedSubtopicId}`}
+              seekRequest={videoSeekRequest}
+              defaultTimestampsOpen={true}
+              showTimestampsBar={true}
               showVideoHeader={false}
               showCardWrapper={false}
               onVideoStartPlaying={markVideoWatchedOnce}
