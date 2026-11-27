@@ -172,21 +172,57 @@ export const CourseWorkspacePage: React.FC = () => {
   };
 
   const getLessonStatsForSubtopics = (subtopicIds: string[]) => {
-    if (subtopicIds.length === 0) return { avgPct: 0, scorePercent: null as number | null };
+    if (subtopicIds.length === 0) {
+      return {
+        avgPct: 0,
+        greenPct: 0,
+        redPct: 0,
+        bluePct: 0,
+        scorePercent: null as number | null,
+      };
+    }
     let sumPct = 0;
+    let sumGreen = 0;
+    let sumRed = 0;
+    let sumBlue = 0;
     let earnedMarks = 0;
     let maxAttemptedMarks = 0;
     for (const id of subtopicIds) {
       const lp = computeLessonSubtopicProgress(course, id, progress);
       sumPct += lp.percent;
+      sumGreen += lp.correctPct;
+      sumRed += lp.incorrectPct;
+      sumBlue += lp.videoPct;
       earnedMarks += lp.earnedMarks;
       maxAttemptedMarks += lp.maxAttemptedMarks;
     }
+    const n = subtopicIds.length;
     return {
-      avgPct: Math.round(sumPct / subtopicIds.length),
+      avgPct: Math.round(sumPct / n),
+      greenPct: Math.round(sumGreen / n),
+      redPct: Math.round(sumRed / n),
+      bluePct: Math.round(sumBlue / n),
       scorePercent:
         maxAttemptedMarks > 0 ? Math.round((earnedMarks / maxAttemptedMarks) * 100) : null,
     };
+  };
+
+  const getQuizSegmentStatsForSubtopics = (subtopicIds: string[]) => {
+    const idSet = new Set(subtopicIds);
+    const qs = course.quizzes.filter((q) => idSet.has(q.subtopicId));
+    let correct = 0;
+    let incorrect = 0;
+    for (const q of qs) {
+      const attempt = progress?.questionAttempts[q.id];
+      if (attempt?.answered) {
+        if (attempt.correct) correct += 1;
+        else incorrect += 1;
+      }
+    }
+    const total = qs.length;
+    const greenPct = total > 0 ? Math.round((correct / total) * 100) : 0;
+    const redPct = total > 0 ? Math.min(100 - greenPct, Math.round((incorrect / total) * 100)) : 0;
+    return { greenPct, redPct };
   };
 
   const getNoteSubtopicPct = (subId: string): number => {
@@ -202,70 +238,94 @@ export const CourseWorkspacePage: React.FC = () => {
       const lStats = getLessonStatsForSubtopics(allIds);
       return {
         pct: lStats.avgPct,
+        greenPct: lStats.greenPct,
+        redPct: lStats.redPct,
+        bluePct: lStats.bluePct,
         accentPill: lStats.scorePercent !== null ? `${lStats.scorePercent}%` : null,
       };
     }
     if (activeTab === 'quiz') {
       const stats = getQuizStatsForSubtopics(allIds);
+      const segs = getQuizSegmentStatsForSubtopics(allIds);
       const pct = stats.total > 0 ? Math.round((stats.answered / stats.total) * 100) : 0;
       return {
         pct,
+        greenPct: segs.greenPct,
+        redPct: segs.redPct,
+        bluePct: 0,
         accentPill: stats.scorePercent !== null ? `${stats.scorePercent}%` : null,
       };
     }
     if (activeTab === 'flashcards') {
       const stats = getFlashcardStatsForSubtopics(allIds);
       const pct = stats.total > 0 ? Math.round((stats.confident / stats.total) * 100) : 0;
-      return { pct, accentPill: null };
+      return { pct, greenPct: pct, redPct: 0, bluePct: 0, accentPill: null };
     }
     if (activeTab === 'exam-practice') {
       const stats = getExamStatsForSubtopics(allIds);
       const pct = stats.maxMarks > 0 ? Math.round((stats.earnedMarks / stats.maxMarks) * 100) : 0;
-      return { pct, accentPill: null };
+      return { pct, greenPct: pct, redPct: 0, bluePct: 0, accentPill: null };
     }
     const readCount = allIds.filter((id) => progress?.readNoteIds.includes(id)).length;
     const total = Math.max(1, allIds.length);
     const pct = Math.round((readCount / total) * 100);
-    return { pct, accentPill: null };
+    return { pct, greenPct: pct, redPct: 0, bluePct: 0, accentPill: null };
   }, [activeTab, allSubtopics, course, progress]);
 
-  const getTopicPct = (topic: TopicDefinition): number => {
+  const getTopicBarStats = (topic: TopicDefinition) => {
     const ids = topic.subtopics.map((s) => s.id);
     if (activeTab === 'lessons') {
-      return getLessonStatsForSubtopics(ids).avgPct;
+      const lStats = getLessonStatsForSubtopics(ids);
+      return {
+        pct: lStats.avgPct,
+        greenPct: lStats.greenPct,
+        redPct: lStats.redPct,
+        bluePct: lStats.bluePct,
+      };
     }
     if (activeTab === 'quiz') {
       const stats = getQuizStatsForSubtopics(ids);
-      return stats.total > 0 ? Math.round((stats.answered / stats.total) * 100) : 0;
+      const segs = getQuizSegmentStatsForSubtopics(ids);
+      const pct = stats.total > 0 ? Math.round((stats.answered / stats.total) * 100) : 0;
+      return { pct, greenPct: segs.greenPct, redPct: segs.redPct, bluePct: 0 };
     }
     if (activeTab === 'flashcards') {
       const stats = getFlashcardStatsForSubtopics(ids);
-      return stats.total > 0 ? Math.round((stats.confident / stats.total) * 100) : 0;
+      const pct = stats.total > 0 ? Math.round((stats.confident / stats.total) * 100) : 0;
+      return { pct, greenPct: pct, redPct: 0, bluePct: 0 };
     }
     if (activeTab === 'exam-practice') {
       const stats = getExamStatsForSubtopics(ids);
-      return stats.maxMarks > 0 ? Math.round((stats.earnedMarks / stats.maxMarks) * 100) : 0;
+      const pct = stats.maxMarks > 0 ? Math.round((stats.earnedMarks / stats.maxMarks) * 100) : 0;
+      return { pct, greenPct: pct, redPct: 0, bluePct: 0 };
     }
     const readInTopic = ids.filter((id) => progress?.readNoteIds.includes(id)).length;
-    return ids.length > 0 ? Math.round((readInTopic / ids.length) * 100) : 0;
+    const pct = ids.length > 0 ? Math.round((readInTopic / ids.length) * 100) : 0;
+    return { pct, greenPct: pct, redPct: 0, bluePct: 0 };
   };
 
   const getSubtopicBarStats = (sub: SubtopicDefinition) => {
     if (activeTab === 'lessons') {
       const lp = computeLessonSubtopicProgress(course, sub.id, progress);
       return {
-        greenPct: lp.percent,
+        greenPct: lp.correctPct,
+        redPct: lp.incorrectPct,
+        bluePct: lp.videoPct,
         amberPct: 0,
         scoreText: lp.scorePercent !== null ? `${lp.scorePercent}%` : null,
+        ariaText: `${lp.correctCount} correct, ${lp.incorrectCount} incorrect of ${lp.totalQuestions} questions${lp.watched ? ', video watched' : ''}`,
       };
     }
     if (activeTab === 'quiz') {
       const qStats = getQuizStatsForSubtopics([sub.id]);
-      const fillPct = qStats.total > 0 ? Math.round((qStats.answered / qStats.total) * 100) : 0;
+      const segs = getQuizSegmentStatsForSubtopics([sub.id]);
       return {
-        greenPct: fillPct,
+        greenPct: segs.greenPct,
+        redPct: segs.redPct,
+        bluePct: 0,
         amberPct: 0,
         scoreText: qStats.scorePercent !== null ? `${qStats.scorePercent}%` : null,
+        ariaText: `${qStats.answered} of ${qStats.total} answered`,
       };
     }
     if (activeTab === 'flashcards') {
@@ -274,8 +334,11 @@ export const CourseWorkspacePage: React.FC = () => {
       const amberPct = fStats.total > 0 ? Math.round((fStats.learning / fStats.total) * 100) : 0;
       return {
         greenPct,
+        redPct: 0,
+        bluePct: 0,
         amberPct,
         scoreText: fStats.confident > 0 ? `${fStats.confident}/${fStats.total}` : null,
+        ariaText: `${fStats.confident} confident, ${fStats.learning} still learning of ${fStats.total}`,
       };
     }
     if (activeTab === 'exam-practice') {
@@ -284,14 +347,21 @@ export const CourseWorkspacePage: React.FC = () => {
         eStats.maxMarks > 0 ? Math.round((eStats.earnedMarks / eStats.maxMarks) * 100) : 0;
       return {
         greenPct,
+        redPct: 0,
+        bluePct: 0,
         amberPct: 0,
         scoreText: eStats.attemptedParts > 0 ? `${eStats.earnedMarks}/${eStats.maxMarks}` : null,
+        ariaText: `${eStats.earnedMarks} of ${eStats.maxMarks} marks`,
       };
     }
+    const notePct = getNoteSubtopicPct(sub.id);
     return {
-      greenPct: getNoteSubtopicPct(sub.id),
+      greenPct: notePct,
+      redPct: 0,
+      bluePct: 0,
       amberPct: 0,
       scoreText: null,
+      ariaText: `${notePct}% read`,
     };
   };
 
@@ -634,8 +704,29 @@ export const CourseWorkspacePage: React.FC = () => {
               <span style={{ fontWeight: 600, fontSize: '0.82rem', whiteSpace: 'nowrap', color: 'var(--text-secondary)' }}>
                 Overall progress:
               </span>
-              <div className="workspace-mini-track" style={{ width: 118 }}>
-                <div className="workspace-mini-fill" style={{ width: `${overallMetrics.pct}%` }} />
+              <div
+                className="workspace-mini-track workspace-mini-track--glossy"
+                style={{ width: 124 }}
+                aria-label={`${overallMetrics.pct}% overall progress`}
+              >
+                {overallMetrics.greenPct > 0 && (
+                  <span
+                    className="workspace-bar-seg workspace-bar-seg--green"
+                    style={{ width: `${overallMetrics.greenPct}%` }}
+                  />
+                )}
+                {overallMetrics.redPct > 0 && (
+                  <span
+                    className="workspace-bar-seg workspace-bar-seg--red"
+                    style={{ width: `${overallMetrics.redPct}%` }}
+                  />
+                )}
+                {overallMetrics.bluePct > 0 && (
+                  <span
+                    className="workspace-bar-seg workspace-bar-seg--blue"
+                    style={{ width: `${overallMetrics.bluePct}%` }}
+                  />
+                )}
               </div>
               {overallMetrics.accentPill && (
                 <span className="score-pill">{overallMetrics.accentPill}</span>
@@ -722,6 +813,16 @@ export const CourseWorkspacePage: React.FC = () => {
             </div>
           </div>
 
+          {/* Exact Real Cognito Course Overview Intro Card */}
+          {(activeTab === 'lessons' || activeTab === 'notes') && (
+            <div className="workspace-overview-card">
+              Study any subtopic of {course.qualificationLabel} {course.subjectName}{' '}
+              {course.boardLabel} {course.tier} with interactive video lessons, revision notes,
+              quizzes, flashcards, exam questions and past papers. Everything is mapped straight to
+              the specification so you only cover what you need to know.
+            </div>
+          )}
+
           {/* Topic Accordions with Real Cognito 3-Column Subtopics */}
           {filteredTopics.length === 0 ? (
             <div className="cognito-card" style={{ padding: 36, textAlign: 'center', color: 'var(--text-muted)' }}>
@@ -741,7 +842,7 @@ export const CourseWorkspacePage: React.FC = () => {
             <div style={{ display: 'grid', gap: 14 }}>
               {filteredTopics.map((topic) => {
                 const isOpen = expandedTopics.includes(topic.number);
-                const topicPct = getTopicPct(topic);
+                const topicBar = getTopicBarStats(topic);
                 const columns = splitIntoColumns(topic.subtopics, 3);
 
                 return (
@@ -764,8 +865,28 @@ export const CourseWorkspacePage: React.FC = () => {
                         </span>
                       </span>
 
-                      <div className="workspace-mini-track" aria-label={`${topicPct}% complete`}>
-                        <div className="workspace-mini-fill" style={{ width: `${topicPct}%` }} />
+                      <div
+                        className="workspace-mini-track workspace-mini-track--glossy"
+                        aria-label={`${topicBar.pct}% complete`}
+                      >
+                        {topicBar.greenPct > 0 && (
+                          <span
+                            className="workspace-bar-seg workspace-bar-seg--green"
+                            style={{ width: `${topicBar.greenPct}%` }}
+                          />
+                        )}
+                        {topicBar.redPct > 0 && (
+                          <span
+                            className="workspace-bar-seg workspace-bar-seg--red"
+                            style={{ width: `${topicBar.redPct}%` }}
+                          />
+                        )}
+                        {topicBar.bluePct > 0 && (
+                          <span
+                            className="workspace-bar-seg workspace-bar-seg--blue"
+                            style={{ width: `${topicBar.bluePct}%` }}
+                          />
+                        )}
                       </div>
                     </button>
 
@@ -810,21 +931,40 @@ export const CourseWorkspacePage: React.FC = () => {
                                 >
                                   <span className="workspace-subtopic-cell__label">{fullLabel}</span>
                                   <span className="workspace-subtopic-cell__meta">
-                                    <span className="workspace-subtopic-cell__bar" aria-hidden="true">
+                                    <span
+                                      className="workspace-subtopic-cell__bar"
+                                      role="progressbar"
+                                      aria-label={`${sub.title} progress`}
+                                      aria-valuetext={bar.ariaText}
+                                      aria-valuemin={0}
+                                      aria-valuemax={100}
+                                      aria-valuenow={Math.min(
+                                        100,
+                                        bar.greenPct + bar.redPct + bar.bluePct + bar.amberPct
+                                      )}
+                                    >
                                       {bar.greenPct > 0 && (
                                         <span
-                                          style={{
-                                            width: `${bar.greenPct}%`,
-                                            backgroundColor: 'var(--color-green-500)',
-                                          }}
+                                          className="workspace-bar-seg workspace-bar-seg--green"
+                                          style={{ width: `${bar.greenPct}%` }}
+                                        />
+                                      )}
+                                      {bar.redPct > 0 && (
+                                        <span
+                                          className="workspace-bar-seg workspace-bar-seg--red"
+                                          style={{ width: `${bar.redPct}%` }}
+                                        />
+                                      )}
+                                      {bar.bluePct > 0 && (
+                                        <span
+                                          className="workspace-bar-seg workspace-bar-seg--blue"
+                                          style={{ width: `${bar.bluePct}%` }}
                                         />
                                       )}
                                       {bar.amberPct > 0 && (
                                         <span
-                                          style={{
-                                            width: `${bar.amberPct}%`,
-                                            backgroundColor: 'var(--color-amber-400)',
-                                          }}
+                                          className="workspace-bar-seg workspace-bar-seg--amber"
+                                          style={{ width: `${bar.amberPct}%` }}
                                         />
                                       )}
                                     </span>
@@ -849,7 +989,7 @@ export const CourseWorkspacePage: React.FC = () => {
         </section>
       )}
 
-      {/* Exact Real Cognito Lesson Preview Modal (matches image_2.png 1:1) */}
+      {/* Exact Real Cognito Lesson Preview Modal (matches cognito_maths_lesson_page.png & image_2.png 1:1) */}
       {(() => {
         const previewIndex = previewSubtopicId
           ? allSubtopics.findIndex((s) => s.id === previewSubtopicId)
@@ -915,12 +1055,30 @@ export const CourseWorkspacePage: React.FC = () => {
                   </div>
                   <div
                     className="lesson-preview-bar"
+                    role="progressbar"
                     aria-label={`${previewProgress?.percent ?? 0}% complete`}
+                    aria-valuemin={0}
+                    aria-valuemax={100}
+                    aria-valuenow={previewProgress?.percent ?? 0}
                   >
-                    <div
-                      className="lesson-preview-bar__fill"
-                      style={{ width: `${previewProgress?.percent ?? 0}%` }}
-                    />
+                    {(previewProgress?.correctPct ?? 0) > 0 && (
+                      <span
+                        className="workspace-bar-seg workspace-bar-seg--green"
+                        style={{ width: `${previewProgress?.correctPct ?? 0}%` }}
+                      />
+                    )}
+                    {(previewProgress?.incorrectPct ?? 0) > 0 && (
+                      <span
+                        className="workspace-bar-seg workspace-bar-seg--red"
+                        style={{ width: `${previewProgress?.incorrectPct ?? 0}%` }}
+                      />
+                    )}
+                    {(previewProgress?.videoPct ?? 0) > 0 && (
+                      <span
+                        className="workspace-bar-seg workspace-bar-seg--blue"
+                        style={{ width: `${previewProgress?.videoPct ?? 0}%` }}
+                      />
+                    )}
                   </div>
                 </div>
 

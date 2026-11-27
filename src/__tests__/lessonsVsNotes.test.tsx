@@ -63,9 +63,10 @@ describe('Distinct Cognito Lessons vs Notes Experiences', () => {
     expect(bioLessonLink.getAttribute('href')).toContain('/course/igcse-biology-cie/lesson/');
   });
 
-  it('renders LessonPlayerPage with video + interactive follow-up questions (NOT Notes cards), tracks watched state & XP, and switches cleanly to Notes', () => {
+  it('renders LessonPlayerPage as real Cognito progressive card stream (Step 1 Video -> Continue -> Question cards + full-bleed feedback + Browse mode), and switches cleanly to Notes', () => {
     const course = getCourseById('igcse-maths-cie')!;
     const firstSub = course.topics[0].subtopics[0];
+    const subQs = course.quizzes.filter((q) => q.subtopicId === firstSub.id);
 
     const { container } = render(
       <AppProvider>
@@ -78,25 +79,21 @@ describe('Distinct Cognito Lessons vs Notes Experiences', () => {
       </AppProvider>
     );
 
-    // Distinct Lesson UI: embedded video + interactive Lesson questions, NO Notes reading wall
+    // Step 1: Flush YouTube video card + Continue button, NO Notes reading wall, NO question cards revealed yet
     expect(container.querySelector('iframe.cognito-video-iframe')).toBeInTheDocument();
-    expect(screen.getByRole('heading', { name: /Lesson questions/i })).toBeInTheDocument();
     expect(screen.queryByText(/END OF NOTES/i)).not.toBeInTheDocument();
     expect(screen.queryByLabelText(/^Contents$/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(`2 of ${1 + subQs.length}`)).not.toBeInTheDocument();
 
-    // Timestamps are collapsed by default on Lessons for focused video + questions layout
-    const tsSwitch = screen.getByRole('switch', { name: /Show timestamps/i });
-    expect(tsSwitch).toHaveAttribute('aria-checked', 'false');
+    // Clicking Continue on Video card persists watchedLessonIds, awards +5 XP, and reveals Step 2 card!
+    const videoContinueBtn = screen.getByRole('button', { name: /Continue to next card/i });
+    fireEvent.click(videoContinueBtn);
 
-    // Quick lesson recap is collapsed by default
-    const recapBtn = screen.getByRole('button', { name: /Quick lesson recap/i });
-    expect(recapBtn).toHaveAttribute('aria-expanded', 'false');
-
-    // Mark video as watched -> persists watchedLessonIds & awards +15 XP
-    const watchBtn = screen.getByRole('button', { name: /Mark as watched/i });
-    fireEvent.click(watchBtn);
-    expect(screen.getByRole('button', { name: /^Watched$/i })).toHaveAttribute('aria-pressed', 'true');
-    expect(screen.getByText(/15 XP/i)).toBeInTheDocument();
+    expect(screen.getByText(/\+5 XP/i)).toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: /Continue to next card/i })).not.toBeInTheDocument();
+    if (subQs.length > 0) {
+      expect(screen.getByText(`2 of ${1 + subQs.length}`)).toBeInTheDocument();
+    }
 
     const raw = localStorage.getItem(STORAGE_KEY);
     expect(raw).toBeTruthy();
@@ -105,15 +102,23 @@ describe('Distinct Cognito Lessons vs Notes Experiences', () => {
       firstSub.id
     );
 
-    // Answer the first MCQ or interactive question on the Lesson page
-    const firstChoice = container.querySelector('.sp-choice-btn') as HTMLButtonElement | null;
+    // Answer the first MCQ choice on Card 2 -> Check enables -> full-bleed feedback footer + Continue appears!
+    const firstChoice = container.querySelector('.cl-choice-btn') as HTMLButtonElement | null;
     if (firstChoice) {
       fireEvent.click(firstChoice);
       const checkBtn = screen.getByRole('button', { name: /^Check$/i });
       expect(checkBtn).toBeEnabled();
       fireEvent.click(checkBtn);
-      expect(screen.getByRole('button', { name: /Next question|Finish lesson/i })).toBeInTheDocument();
+      expect(screen.getByRole('button', { name: /Continue|Finish lesson/i })).toBeInTheDocument();
     }
+
+    // Toggling Browse mode reveals the Lesson Overview card + all steps + Quick lesson recap
+    const browseSwitch = screen.getByRole('switch', { name: /Toggle browse mode/i });
+    fireEvent.click(browseSwitch);
+    expect(screen.getByLabelText(/Lesson overview/i)).toBeInTheDocument();
+    expect(screen.getByText(`1 of ${1 + subQs.length}`)).toBeInTheDocument();
+    const recapBtn = screen.getByRole('button', { name: /Quick lesson recap/i });
+    expect(recapBtn).toHaveAttribute('aria-expanded', 'false');
 
     // StudyTopBar exposes BOTH Lesson and Notes distinctly
     const switcherBtn = container.querySelector('.sp-topbar__switcher-btn') as HTMLButtonElement;
@@ -129,7 +134,7 @@ describe('Distinct Cognito Lessons vs Notes Experiences', () => {
     expect(screen.getByRole('link', { name: /Interactive video lesson/i })).toBeInTheDocument();
   });
 
-  it('computes Lesson progress distinctly from Notes progress via computeLessonSubtopicProgress', () => {
+  it('computes Lesson progress distinctly from Notes progress with multi-tone green/rose/blue breakdown via computeLessonSubtopicProgress', () => {
     const course = getCourseById('a-level-biology-aqa')!;
     const subId = course.topics[0].subtopics[0].id;
     const subQs = course.quizzes.filter((q) => q.subtopicId === subId);
@@ -147,7 +152,7 @@ describe('Distinct Cognito Lessons vs Notes Experiences', () => {
     expect(notesOnly.percent).toBe(0);
     expect(notesOnly.completed).toBe(false);
 
-    // Watching video gives 25% lesson progress
+    // Watching video gives 25% lesson progress (videoPct = 25)
     const watchedOnly = computeLessonSubtopicProgress(course, subId, {
       readNoteIds: [],
       watchedLessonIds: [subId],
@@ -157,10 +162,11 @@ describe('Distinct Cognito Lessons vs Notes Experiences', () => {
       examPartScores: {},
     });
     expect(watchedOnly.percent).toBe(25);
+    expect(watchedOnly.videoPct).toBe(25);
     expect(watchedOnly.watched).toBe(true);
     expect(watchedOnly.completed).toBe(false);
 
-    // Watching video + answering all subtopic questions gives 100% completed
+    // Watching video + answering all subtopic questions gives 100% completed (75% green + 25% blue)
     const attempts = Object.fromEntries(
       subQs.map((q) => [
         q.id,
@@ -182,6 +188,9 @@ describe('Distinct Cognito Lessons vs Notes Experiences', () => {
       examPartScores: {},
     });
     expect(fullLesson.percent).toBe(100);
+    expect(fullLesson.correctPct).toBe(75);
+    expect(fullLesson.incorrectPct).toBe(0);
+    expect(fullLesson.videoPct).toBe(25);
     expect(fullLesson.completed).toBe(true);
     expect(fullLesson.scorePercent).toBe(100);
   });

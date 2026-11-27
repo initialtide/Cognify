@@ -43,12 +43,19 @@ const STUDY_THEME_OPTIONS: {
 const THEME_STORAGE_KEY = 'cognito_study_theme';
 const OUTLINES_STORAGE_KEY = 'cognito_card_outlines';
 
+export interface StudyProgressSegments {
+  greenPct: number;
+  redPct: number;
+  bluePct: number;
+}
+
 interface StudyTopBarProps {
   course: CourseDefinition;
   currentSubtopicId?: string;
   title: string;
   activityType: 'lesson' | 'notes' | 'quiz' | 'flashcards' | 'exam-practice';
   progressPercent: number;
+  progressSegments?: StudyProgressSegments;
   sessionXp?: number;
   sessionStreak?: number;
   browseMode?: boolean;
@@ -70,6 +77,7 @@ export const StudyTopBar: React.FC<StudyTopBarProps> = ({
   title,
   activityType,
   progressPercent,
+  progressSegments,
   sessionXp,
   sessionStreak,
   browseMode,
@@ -383,27 +391,55 @@ export const StudyTopBar: React.FC<StudyTopBarProps> = ({
           )}
         </div>
 
-        {/* Center: Progress bar */}
+        {/* Center: Progress bar (Glossy Cognito multi-segment pill when progressSegments provided) */}
         <div
-          className="sp-topbar__progress-track"
+          className={`sp-topbar__progress-track${progressSegments ? ' is-segmented' : ''}`}
           role="progressbar"
           aria-label="Session progress"
           aria-valuenow={Math.min(100, Math.max(0, Math.round(progressPercent)))}
           aria-valuemin={0}
           aria-valuemax={100}
         >
-          <div
-            className="sp-topbar__progress-fill"
-            style={{ width: `${Math.min(100, Math.max(0, progressPercent))}%` }}
-          />
+          {progressSegments ? (
+            <div className="sp-topbar__progress-segments">
+              {progressSegments.greenPct > 0 && (
+                <div
+                  className="sp-topbar__seg sp-topbar__seg--green"
+                  style={{ width: `${Math.min(100, progressSegments.greenPct)}%` }}
+                />
+              )}
+              {progressSegments.redPct > 0 && (
+                <div
+                  className="sp-topbar__seg sp-topbar__seg--red"
+                  style={{ width: `${Math.min(100, progressSegments.redPct)}%` }}
+                />
+              )}
+              {progressSegments.bluePct > 0 && (
+                <div
+                  className="sp-topbar__seg sp-topbar__seg--blue"
+                  style={{ width: `${Math.min(100, progressSegments.bluePct)}%` }}
+                />
+              )}
+            </div>
+          ) : (
+            <div
+              className="sp-topbar__progress-fill"
+              style={{ width: `${Math.min(100, Math.max(0, progressPercent))}%` }}
+            />
+          )}
         </div>
 
         {/* Right: Stats / Total Marks / Browse / ⋮ Options */}
         <div className="sp-topbar__right">
           {typeof sessionXp === 'number' && (
-            <span className="sp-topbar__xp">
-              <Star size={16} fill="#76c0f8" color="#1a96f3" />
-              {sessionXp} XP
+            <span
+              className={`sp-topbar__xp${activityType === 'lesson' ? ' sp-topbar__xp--lesson' : ''}`}
+              aria-live="polite"
+            >
+              {activityType !== 'lesson' && (
+                <Star size={16} fill="#76c0f8" color="#1a96f3" />
+              )}
+              {activityType === 'lesson' && sessionXp > 0 ? `+${sessionXp} XP` : `${sessionXp} XP`}
             </span>
           )}
 
@@ -431,7 +467,7 @@ export const StudyTopBar: React.FC<StudyTopBarProps> = ({
           )}
 
           {onToggleBrowse && typeof browseMode === 'boolean' && (
-            <label className="sp-topbar__browse-label">
+            <label className={`sp-topbar__browse-label${browseMode ? ' is-on' : ''}`}>
               <button
                 type="button"
                 role="switch"
