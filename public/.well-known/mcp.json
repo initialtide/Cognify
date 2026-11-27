@@ -1,0 +1,127 @@
+{
+  "schemaVersion": "2025-03-26",
+  "name": "cognify-curriculum",
+  "displayName": "Cognify MCP Server & Curriculum Tools",
+  "version": "1.0.0",
+  "description": "Discover and query Cognify GCSE, IGCSE, and A-Level courses, exam-board syllabuses, subtopic study links, official Cambridge past papers, and Markdown documentation.",
+  "provider": {
+    "name": "Initialtide (Cognify)",
+    "url": "https://initialtide.github.io/Cognify/",
+    "repository": "https://github.com/initialtide/Cognify",
+    "contactEmail": "support@cognify.initialtide.org"
+  },
+  "documentationUrl": "https://initialtide.github.io/Cognify/mcp",
+  "apiDocsUrl": "https://initialtide.github.io/Cognify/docs",
+  "openApiUrl": "https://initialtide.github.io/Cognify/api/openapi.json",
+  "agentInstructionsUrl": "https://initialtide.github.io/Cognify/.well-known/agent-instructions.md",
+  "llmsTxtUrl": "https://initialtide.github.io/Cognify/llms.txt",
+  "authentication": {
+    "type": "none"
+  },
+  "resources": [
+    {
+      "uri": "https://initialtide.github.io/Cognify/api/v1/courses.json",
+      "name": "Cognify Full Curriculum Catalog",
+      "mimeType": "application/json",
+      "description": "Complete structured catalog of all GCSE, IGCSE, and A-Level courses and subtopics."
+    },
+    {
+      "uri": "https://initialtide.github.io/Cognify/llms.txt",
+      "name": "Cognify Agent Instructions (llms.txt)",
+      "mimeType": "text/markdown",
+      "description": "Concise when-to-use guidance and primary navigation index."
+    },
+    {
+      "uri": "https://initialtide.github.io/Cognify/llms-full.txt",
+      "name": "Cognify Full Markdown Digest",
+      "mimeType": "text/markdown",
+      "description": "Complete single-file Markdown summary of all courses and policies."
+    }
+  ],
+  "tools": [
+    {
+      "name": "list_courses",
+      "description": "List Cognify GCSE, IGCSE, and A-Level courses filtered by qualification, subject, or exam board.",
+      "endpoint": "https://initialtide.github.io/Cognify/api/v1/courses.json",
+      "method": "GET",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "qualification": {
+            "type": "string",
+            "enum": [
+              "gcse",
+              "igcse",
+              "a-level"
+            ]
+          },
+          "subjectSlug": {
+            "type": "string"
+          },
+          "examBoard": {
+            "type": "string",
+            "enum": [
+              "aqa",
+              "edexcel",
+              "ocr",
+              "cie"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "get_course_syllabus",
+      "description": "Retrieve topics, subtopic IDs, and direct lesson/notes/quiz/flashcard/exam-practice URLs for a specific Cognify courseId.",
+      "endpoint": "https://initialtide.github.io/Cognify/api/v1/courses.json",
+      "method": "GET",
+      "inputSchema": {
+        "type": "object",
+        "required": [
+          "courseId"
+        ],
+        "properties": {
+          "courseId": {
+            "type": "string",
+            "description": "Course slug such as gcse-biology-aqa-higher"
+          }
+        }
+      }
+    },
+    {
+      "name": "get_past_papers",
+      "description": "Resolve official Cambridge IGCSE and GCSE past paper routes and mark schemes for a subject.",
+      "endpoint": "https://initialtide.github.io/Cognify/api/v1/courses.json",
+      "method": "GET",
+      "inputSchema": {
+        "type": "object",
+        "required": [
+          "courseId"
+        ],
+        "properties": {
+          "courseId": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "name": "fetch_page_markdown",
+      "description": "Fetch any Cognify page in clean Markdown format using Accept: text/markdown or its .md twin URL.",
+      "endpoint": "https://initialtide.github.io/Cognify/index.md",
+      "method": "GET",
+      "inputSchema": {
+        "type": "object",
+        "required": [
+          "path"
+        ],
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "Path such as /, /docs, /about, or /course/gcse-biology-aqa-higher"
+          }
+        }
+      }
+    }
+  ]
+}

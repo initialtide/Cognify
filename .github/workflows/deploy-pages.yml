@@ -40,8 +40,11 @@ jobs:
           VITE_BASE_PATH: ${{ steps.pages.outputs.base_path }}/
         run: npm run build
 
-      - name: Add SPA 404 fallback
-        run: cp dist/index.html dist/404.html
+      - name: Verify agent-readiness build outputs
+        run: |
+          for f in dist/index.html dist/404.html dist/robots.txt dist/sitemap.xml dist/llms.txt dist/llms-full.txt dist/.well-known/agent-instructions.md dist/.well-known/mcp.json dist/api/openapi.json dist/api/v1/courses.json dist/og-image.png dist/dashboard.html dist/about.html dist/contact.html dist/privacy.html dist/docs.html dist/api.html dist/mcp.html; do
+            test -f "$f" || { echo "Missing required build output: $f"; exit 1; }
+          done
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

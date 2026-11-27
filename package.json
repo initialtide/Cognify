@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noEmit && vite build",
+    "generate:agent-assets": "node scripts/generate_agent_assets.mjs --public",
+    "build": "node scripts/generate_agent_assets.mjs --public && tsc --noEmit && vite build && node scripts/generate_agent_assets.mjs --prerender-dist",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
