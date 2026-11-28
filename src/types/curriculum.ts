@@ -79,7 +79,12 @@ export type DiagramKind =
   | 'elasticity-curves'
   | 'ad-as-macro'
   | 'monopoly-market-structure'
-  | 'externality-market-failure';
+  | 'externality-market-failure'
+  | 'tcpip-packet-switching'
+  | 'sorting-searching-trace'
+  | 'adt-structures'
+  | 'database-normalisation-erd'
+  | 'compiler-pipeline-os';
 
 export interface GlossaryPill {
   term: string;

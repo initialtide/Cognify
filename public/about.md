@@ -6,7 +6,7 @@
 
 High-quality exam preparation should never depend on household income or subscription tiers. Cognify organises science, mathematics, humanities, and social-science curricula into short, focused study units aligned with AQA, Edexcel, OCR, and Cambridge International (CIE) specifications.
 
-Every single subtopic across our 51 courses and 761+ subtopics connects six complementary study modes with zero paywalls, zero weekly limits, and zero advertising trackers:
+Every single subtopic across our 52 courses and 813+ subtopics connects six complementary study modes with zero paywalls, zero weekly limits, and zero advertising trackers:
 
 - **Progressive Interactive Lessons:** Guided step-by-step video and active-recall check cards.
 - **Structured Revision Notes:** Concise syllabus explanations, worked examples, diagrams, glossary pills, and privacy-enhanced video walkthroughs.

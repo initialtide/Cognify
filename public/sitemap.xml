@@ -313,6 +313,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://initialtide.github.io/Cognify/course/a-level-computer-science-cie</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://initialtide.github.io/Cognify/course/gcse-business-cie-core</loc>
     <lastmod>2026-11-27</lastmod>
     <changefreq>weekly</changefreq>

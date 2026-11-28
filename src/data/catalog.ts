@@ -43,6 +43,16 @@ import {
   ALEVEL_CHEMISTRY_TOPICS,
 } from './courses/alevelChemistry';
 import {
+  ALEVEL_CS_CHEAT_SHEETS,
+  ALEVEL_CS_EXAM_PRACTICE,
+  ALEVEL_CS_FLASHCARDS,
+  ALEVEL_CS_KEY_TERMS,
+  ALEVEL_CS_NOTES,
+  ALEVEL_CS_PAST_PAPERS,
+  ALEVEL_CS_QUIZZES,
+  ALEVEL_CS_TOPICS,
+} from './courses/alevelComputerScience';
+import {
   ALEVEL_ECONOMICS_CHEAT_SHEETS,
   ALEVEL_ECONOMICS_EXAM_PRACTICE,
   ALEVEL_ECONOMICS_FLASHCARDS,
@@ -336,6 +346,7 @@ export const ALEVEL_SUBJECTS: SubjectCatalogItem[] = [
   { slug: 'physics', name: 'Physics', icon: 'physics', category: 'science-maths' },
   { slug: 'maths', name: 'Maths', icon: 'maths', category: 'science-maths', isMaths: true },
   { slug: 'business', name: 'Business Studies', icon: 'business', category: 'other' },
+  { slug: 'computer-science', name: 'Computer Science', icon: 'computer-science', category: 'other' },
   { slug: 'economics', name: 'Economics', icon: 'economics', category: 'other' },
   { slug: 'psychology', name: 'Psychology', icon: 'psychology', category: 'other' },
 ];
@@ -352,9 +363,11 @@ export function getBoardsForQualification(
 ): { id: ExamBoardId; label: string }[] {
   let ids: ExamBoardId[];
   if (qualification === 'igcse') {
-    ids = ['cie', 'edexcel-intl', 'oxford-aqa'];
+    ids = subjectSlug === 'computer-science' ? ['cie'] : ['cie', 'edexcel-intl', 'oxford-aqa'];
   } else if (qualification === 'a-level') {
-    if (subjectSlug === 'psychology') {
+    if (subjectSlug === 'computer-science') {
+      ids = ['cie'];
+    } else if (subjectSlug === 'psychology') {
       ids = ['cie', 'aqa', 'edexcel'];
     } else if (subjectSlug === 'business' || subjectSlug === 'economics') {
       ids = ['aqa', 'cie', 'edexcel'];
@@ -426,6 +439,7 @@ const ALEVEL_MATHS_BOARDS: ExamBoardId[] = ['edexcel', 'cie', 'aqa', 'ocr-a'];
 const ALEVEL_PSYCH_BOARDS: ExamBoardId[] = ['cie', 'aqa', 'edexcel'];
 const ALEVEL_BUS_BOARDS: ExamBoardId[] = ['aqa', 'cie', 'edexcel'];
 const ALEVEL_ECON_BOARDS: ExamBoardId[] = ['aqa', 'cie', 'edexcel'];
+const CIE_ONLY_BOARDS: ExamBoardId[] = ['cie'];
 
 interface CourseContentBundle {
   topics: TopicDefinition[];
@@ -656,6 +670,17 @@ const ALEVEL_ECON_BUNDLE: CourseContentBundle = {
   examPractice: ALEVEL_ECONOMICS_EXAM_PRACTICE,
   pastPapers: ALEVEL_ECONOMICS_PAST_PAPERS,
   keyTerms: ALEVEL_ECONOMICS_KEY_TERMS,
+};
+
+const ALEVEL_CS_BUNDLE: CourseContentBundle = {
+  topics: ALEVEL_CS_TOPICS,
+  notes: ALEVEL_CS_NOTES,
+  quizzes: ALEVEL_CS_QUIZZES,
+  flashcards: ALEVEL_CS_FLASHCARDS,
+  cheatSheets: ALEVEL_CS_CHEAT_SHEETS,
+  examPractice: ALEVEL_CS_EXAM_PRACTICE,
+  pastPapers: ALEVEL_CS_PAST_PAPERS,
+  keyTerms: ALEVEL_CS_KEY_TERMS,
 };
 
 function buildCourseFromBundle(config: {
@@ -1151,7 +1176,7 @@ const RAW_COURSES: CourseDefinition[] = [
     icon: 'computer-science',
     themeClass: 'subject-theme--computer-science',
     availableTiers: ['Core'],
-    availableBoards: IGCSE_BOARDS,
+    availableBoards: CIE_ONLY_BOARDS,
     bundle: IGCSE_CS_BUNDLE,
   }),
   buildCourseFromBundle({
@@ -1514,6 +1539,23 @@ const RAW_COURSES: CourseDefinition[] = [
     availableTiers: ['A-Level', 'AS-Level'],
     availableBoards: ALEVEL_ECON_BOARDS,
     bundle: ALEVEL_ECON_BUNDLE,
+  }),
+  buildCourseFromBundle({
+    id: 'a-level-computer-science-cie',
+    qualification: 'a-level',
+    qualificationLabel: 'A-Level',
+    subjectSlug: 'computer-science',
+    subjectName: 'Computer Science',
+    board: 'cie',
+    boardLabel: 'CIE',
+    tier: 'A-Level',
+    specCode: '9618',
+    subtitle: 'A-Level · CIE',
+    icon: 'computer-science',
+    themeClass: 'subject-theme--computer-science',
+    availableTiers: ['A-Level', 'AS-Level'],
+    availableBoards: CIE_ONLY_BOARDS,
+    bundle: ALEVEL_CS_BUNDLE,
   }),
 
   // Dashboard GCSE & CIE Other Courses (preserved IDs for backwards compatibility)

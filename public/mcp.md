@@ -8,7 +8,7 @@
 
 ## Defined MCP Tools
 
-1. **`list_courses`** — List all 51 Cognify courses filterable by qualification (`gcse`, `igcse`, `a-level`), subject slug, or exam board (`aqa`, `edexcel`, `ocr`, `cie`).
+1. **`list_courses`** — List all 52 Cognify courses filterable by qualification (`gcse`, `igcse`, `a-level`), subject slug, or exam board (`aqa`, `edexcel`, `ocr`, `cie`).
 2. **`get_course_syllabus`** — Retrieve topics, subtopic IDs, revision note routes, quiz routes, flashcard routes, and past paper counts for a given `courseId`.
 3. **`get_past_papers`** — Locate official Cambridge IGCSE and GCSE past papers and mark schemes by course.
 4. **`fetch_page_markdown`** — Retrieve any Cognify route as clean Markdown via `Accept: text/markdown` or static `.md` mirror URLs.

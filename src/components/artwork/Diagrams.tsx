@@ -4252,6 +4252,422 @@ export const EducationalDiagram: React.FC<{ kind: DiagramKind; compact?: boolean
             <CLabel x={535} y={193} fill="#5b687a" size={7.8} weight={700}>Pollution permits · Regulation</CLabel>
           </svg>
         );
+
+      /* =====================================================================
+       * 33. TCP/IP 4-LAYER STACK & PACKET SWITCHING (IGCSE 0478 & A-Level 9618)
+       * ===================================================================*/
+      case 'tcpip-packet-switching':
+        return (
+          <svg
+            viewBox="0 0 640 248"
+            preserveAspectRatio="xMidYMid meet"
+            aria-label="TCP/IP 4-layer protocol stack alongside packet structure (header, payload, trailer) and dynamic packet-switched router paths"
+          >
+            <ArrowMarkerDefs prefix={uid} colors={{ blue: '#1d7ac7', teal: '#229680', purple: '#7d3ec4', amber: '#d68816', slate: '#556478' }} />
+
+            {/* LEFT PANEL: TCP/IP 4-LAYER STACK */}
+            <rect x="14" y="16" width="222" height="218" rx="14" fill="#fafbfd" stroke="#d5dfec" strokeWidth="1.8" />
+            <PillHeader cx={125} cy={38} width={186} text="TCP/IP 4-LAYER STACK" bg="#e4f3ff" stroke="#7bc0f7" color="#145a99" />
+
+            {[
+              { y: 60, bg: '#f3eafd', st: '#b988eb', col: '#5c289c', title: '4. APPLICATION', sub: 'HTTP · HTTPS · DNS · SMTP · FTP' },
+              { y: 102, bg: '#e4f3ff', st: '#7bc0f7', col: '#145a99', title: '3. TRANSPORT', sub: 'TCP (ports, seq #, ACK) · UDP' },
+              { y: 144, bg: '#e6faf3', st: '#6ed4b4', col: '#1a7d69', title: '2. INTERNET (NETWORK)', sub: 'IP addressing · Router forwarding' },
+              { y: 186, bg: '#fff3d9', st: '#f2ba5a', col: '#9c5c06', title: '1. LINK (NETWORK ACCESS)', sub: 'MAC addresses · Ethernet / Wi-Fi' },
+            ].map((l) => (
+              <g key={l.title}>
+                <rect x="28" y={l.y} width="194" height="35" rx="9" fill={l.bg} stroke={l.st} strokeWidth="1.6" />
+                <CLabel x={125} y={l.y + 14} fill={l.col} size={8.8}>{l.title}</CLabel>
+                <CLabel x={125} y={l.y + 27} fill="#525e70" size={7.6} weight={700}>{l.sub}</CLabel>
+              </g>
+            ))}
+
+            {/* TOP RIGHT: PACKET STRUCTURE (HEADER | PAYLOAD | TRAILER) */}
+            <rect x="250" y="16" width="376" height="90" rx="14" fill="#fafbfd" stroke="#d5dfec" strokeWidth="1.8" />
+            <PillHeader cx={438} cy={36} width={214} text="DATA PACKET ANATOMY" bg="#f3eafd" stroke="#c59ef0" color="#5c289c" />
+
+            <rect x="264" y="54" width="128" height="40" rx="8" fill="#e4f3ff" stroke="#2282d4" strokeWidth="1.8" />
+            <CLabel x={328} y={69} fill="#145a99" size={8.8}>HEADER</CLabel>
+            <CLabel x={328} y={83} fill="#525e70" size={7.3} weight={700}>Src/Dest IP · Seq # · Size</CLabel>
+
+            <rect x="398" y="54" width="128" height="40" rx="8" fill="#e6faf3" stroke="#229680" strokeWidth="1.8" />
+            <CLabel x={462} y={69} fill="#1a7d69" size={8.8}>PAYLOAD</CLabel>
+            <CLabel x={462} y={83} fill="#525e70" size={7.3} weight={700}>Actual chunk (~64 KiB)</CLabel>
+
+            <rect x="532" y="54" width="80" height="40" rx="8" fill="#fff3d9" stroke="#d68816" strokeWidth="1.8" />
+            <CLabel x={572} y={69} fill="#9c5c06" size={8.8}>TRAILER</CLabel>
+            <CLabel x={572} y={83} fill="#525e70" size={7.3} weight={700}>EOF · CRC</CLabel>
+
+            {/* BOTTOM RIGHT: PACKET SWITCHING DYNAMIC ROUTING */}
+            <rect x="250" y="116" width="376" height="118" rx="14" fill="#fafbfd" stroke="#d5dfec" strokeWidth="1.8" />
+            <CLabel x={438} y={133} fill="#1a7d69" size={8.8}>PACKET SWITCHING (INDEPENDENT ROUTER HOPS)</CLabel>
+
+            {/* Sender & Receiver Nodes */}
+            <rect x="262" y="162" width="54" height="36" rx="8" fill="#e4f3ff" stroke="#2282d4" strokeWidth="1.8" />
+            <CLabel x={289} y={178} fill="#145a99" size={8.2}>HOST A</CLabel>
+            <CLabel x={289} y={190} fill="#525e70" size={7} weight={700}>P1 P2 P3</CLabel>
+
+            <rect x="556" y="162" width="58" height="36" rx="8" fill="#e6faf3" stroke="#229680" strokeWidth="1.8" />
+            <CLabel x={585} y={178} fill="#1a7d69" size={8.2}>HOST B</CLabel>
+            <CLabel x={585} y={190} fill="#525e70" size={7} weight={700}>Reorder</CLabel>
+
+            {/* Routers */}
+            {[
+              { cx: 382, cy: 155, label: 'R1' },
+              { cx: 484, cy: 155, label: 'R2' },
+              { cx: 382, cy: 200, label: 'R3' },
+              { cx: 484, cy: 200, label: 'R4' },
+            ].map((r) => (
+              <g key={r.label}>
+                <circle cx={r.cx} cy={r.cy} r="14.5" fill="#fff3d9" stroke="#d68816" strokeWidth="1.9" />
+                <CLabel x={r.cx} y={r.cy + 3.5} fill="#9c5c06" size={8.6}>{r.label}</CLabel>
+              </g>
+            ))}
+
+            {/* Dynamic routes */}
+            <path d="M 317 173 L 365 158" stroke="#1d7ac7" strokeWidth="2" markerEnd={`url(#${uid}-blue)`} />
+            <path d="M 398 155 L 467 155" stroke="#1d7ac7" strokeWidth="2" markerEnd={`url(#${uid}-blue)`} />
+            <path d="M 499 160 L 553 173" stroke="#1d7ac7" strokeWidth="2" markerEnd={`url(#${uid}-blue)`} />
+
+            <path d="M 317 187 L 365 198" stroke="#7d3ec4" strokeWidth="2" strokeDasharray="4 2.5" markerEnd={`url(#${uid}-purple)`} />
+            <path d="M 398 200 L 467 200" stroke="#7d3ec4" strokeWidth="2" strokeDasharray="4 2.5" markerEnd={`url(#${uid}-purple)`} />
+            <path d="M 499 196 L 553 185" stroke="#7d3ec4" strokeWidth="2" strokeDasharray="4 2.5" markerEnd={`url(#${uid}-purple)`} />
+            <path d="M 393 166 L 472 190" stroke="#229680" strokeWidth="1.7" strokeDasharray="3 2.5" markerEnd={`url(#${uid}-teal)`} />
+
+            <CLabel x={433} y={146} fill="#145a99" size={7.4} weight={700}>P1 (fast path)</CLabel>
+            <CLabel x={433} y={226} fill="#5c289c" size={7.4} weight={700}>P2 (rerouted around congestion)</CLabel>
+          </svg>
+        );
+
+      /* =====================================================================
+       * 34. BINARY SEARCH & SORTING TRACE (IGCSE 0478 & A-Level 9618)
+       * ===================================================================*/
+      case 'sorting-searching-trace':
+        return (
+          <svg
+            viewBox="0 0 640 248"
+            preserveAspectRatio="xMidYMid meet"
+            aria-label="Binary search O(log n) midpoint halving trace alongside Insertion Sort and Merge Sort divide-and-conquer comparison"
+          >
+            <ArrowMarkerDefs prefix={uid} colors={{ blue: '#1d7ac7', teal: '#229680', purple: '#7d3ec4', coral: '#d95378', amber: '#d68816' }} />
+
+            {/* LEFT PANEL: BINARY SEARCH TRACE (TARGET = 31) */}
+            <rect x="14" y="14" width="322" height="220" rx="14" fill="#fafbfd" stroke="#d5dfec" strokeWidth="1.8" />
+            <PillHeader cx={175} cy={36} width={250} text="BINARY SEARCH · TARGET = 31" bg="#e4f3ff" stroke="#7bc0f7" color="#145a99" />
+
+            {/* Step 1: Full sorted array (7 items) */}
+            <CLabel x={28} y={66} anchor="start" fill="#525e70" size={7.8} weight={700}>PASS 1 (mid=3 → 24 &lt; 31: discard left half)</CLabel>
+            {[4, 11, 18, 24, 31, 42, 55].map((val, idx) => (
+              <g key={`p1-${val}`}>
+                <rect
+                  x={28 + idx * 42}
+                  y="73"
+                  width="36"
+                  height="26"
+                  rx="6"
+                  fill={idx === 3 ? '#fff3d9' : idx < 3 ? '#f1f5f9' : '#e4f3ff'}
+                  stroke={idx === 3 ? '#d68816' : idx < 3 ? '#cbd5e1' : '#7bc0f7'}
+                  strokeWidth={idx === 3 ? '2' : '1.4'}
+                />
+                <CLabel x={46 + idx * 42} y={90} fill={idx < 3 ? '#94a3b8' : idx === 3 ? '#9c5c06' : '#145a99'} size={9.5}>
+                  {val}
+                </CLabel>
+              </g>
+            ))}
+
+            {/* Step 2: Right half [31, 42, 55] */}
+            <CLabel x={28} y={118} anchor="start" fill="#525e70" size={7.8} weight={700}>PASS 2 (mid=5 → 42 &gt; 31: discard right half)</CLabel>
+            {[31, 42, 55].map((val, idx) => (
+              <g key={`p2-${val}`}>
+                <rect
+                  x={196 + idx * 42}
+                  y="125"
+                  width="36"
+                  height="26"
+                  rx="6"
+                  fill={idx === 1 ? '#fff3d9' : idx === 2 ? '#f1f5f9' : '#e6faf3'}
+                  stroke={idx === 1 ? '#d68816' : idx === 2 ? '#cbd5e1' : '#229680'}
+                  strokeWidth={idx === 1 ? '2' : '1.5'}
+                />
+                <CLabel x={214 + idx * 42} y={142} fill={idx === 2 ? '#94a3b8' : idx === 1 ? '#9c5c06' : '#1a7d69'} size={9.5}>
+                  {val}
+                </CLabel>
+              </g>
+            ))}
+
+            {/* Step 3: Found! */}
+            <CLabel x={28} y={170} anchor="start" fill="#1a7d69" size={8} weight={700}>PASS 3 (mid=4 → 31 == 31: FOUND in 3 checks!)</CLabel>
+            <rect x="196" y="177" width="36" height="26" rx="6" fill="#d9f7ee" stroke="#1a7d69" strokeWidth="2.2" />
+            <CLabel x={214} y={194} fill="#146353" size={10}>31</CLabel>
+            <CLabel x={106} y={194} fill="#5c289c" size={8.4}>Requires sorted list · O(log n)</CLabel>
+            <CLabel x={175} y={222} fill="#525e70" size={7.6} weight={700}>Linear Search: O(n) unsorted  |  Binary Search: halves list every step</CLabel>
+
+            {/* RIGHT PANEL: SORTING COMPLEXITY & MERGE/INSERTION */}
+            <rect x="348" y="14" width="278" height="220" rx="14" fill="#fafbfd" stroke="#d5dfec" strokeWidth="1.8" />
+            <PillHeader cx={487} cy={36} width={224} text="SORTING ALGORITHMS" bg="#f3eafd" stroke="#c59ef0" color="#5c289c" />
+
+            {/* Bubble Sort */}
+            <rect x="362" y="56" width="250" height="48" rx="10" fill="#fdebf0" stroke="#f0a8bc" strokeWidth="1.5" />
+            <CLabel x={487} y={73} fill="#b5375d" size={9}>BUBBLE SORT · O(n²) worst · O(n) best</CLabel>
+            <CLabel x={487} y={87} fill="#525e70" size={7.6} weight={700}>Adjacent pair swaps; stop early if swapped = FALSE</CLabel>
+            <CLabel x={487} y={98} fill="#7a3248" size={7.3} weight={700}>In-place O(1) space · Slow on large datasets</CLabel>
+
+            {/* Insertion Sort */}
+            <rect x="362" y="112" width="250" height="48" rx="10" fill="#fff3d9" stroke="#f2ba5a" strokeWidth="1.5" />
+            <CLabel x={487} y={129} fill="#9c5c06" size={9}>INSERTION SORT · O(n²) worst · O(n) best</CLabel>
+            <CLabel x={487} y={143} fill="#525e70" size={7.6} weight={700}>Inserts next item into growing sorted left sublist</CLabel>
+            <CLabel x={487} y={154} fill="#8a5206" size={7.3} weight={700}>Fast on small or nearly sorted arrays · In-place</CLabel>
+
+            {/* Merge Sort */}
+            <rect x="362" y="168" width="250" height="52" rx="10" fill="#e6faf3" stroke="#6ed4b4" strokeWidth="1.6" />
+            <CLabel x={487} y={185} fill="#1a7d69" size={9}>MERGE SORT · O(n log n) always</CLabel>
+            <CLabel x={487} y={199} fill="#525e70" size={7.6} weight={700}>Divide recursively into halves → merge sorted runs</CLabel>
+            <CLabel x={487} y={211} fill="#146353" size={7.3} weight={700}>Predictable speed · Needs O(n) extra memory</CLabel>
+          </svg>
+        );
+
+      /* =====================================================================
+       * 35. ABSTRACT DATA TYPES: STACK, QUEUE, LINKED LIST & BST (A-Level 9618)
+       * ===================================================================*/
+      case 'adt-structures':
+        return (
+          <svg
+            viewBox="0 0 640 248"
+            preserveAspectRatio="xMidYMid meet"
+            aria-label="Abstract Data Types comparison: LIFO Stack, FIFO Queue, Linked List with head and node pointers, and Binary Search Tree"
+          >
+            <ArrowMarkerDefs prefix={uid} colors={{ blue: '#1d7ac7', teal: '#229680', purple: '#7d3ec4', amber: '#d68816', coral: '#d95378' }} />
+
+            {/* QUADRANT 1: STACK (LIFO) */}
+            <rect x="12" y="12" width="144" height="224" rx="12" fill="#fafbfd" stroke="#d5dfec" strokeWidth="1.7" />
+            <PillHeader cx={84} cy={32} width={118} text="STACK (LIFO)" bg="#e4f3ff" stroke="#7bc0f7" color="#145a99" />
+            {/* Push / Pop arrows */}
+            <path d="M 48 62 L 48 84" stroke="#229680" strokeWidth="2" markerEnd={`url(#${uid}-teal)`} />
+            <CLabel x={48} y={57} fill="#1a7d69" size={7.4}>PUSH</CLabel>
+            <path d="M 120 84 L 120 62" stroke="#d95378" strokeWidth="2" markerEnd={`url(#${uid}-coral)`} />
+            <CLabel x={120} y={57} fill="#b5375d" size={7.4}>POP</CLabel>
+            {/* Stack cells */}
+            {[
+              { y: 92, v: '42', top: true },
+              { y: 124, v: '19', top: false },
+              { y: 156, v: '07', top: false },
+            ].map((s) => (
+              <g key={s.v}>
+                <rect x="34" y={s.y} width="76" height="26" rx="6" fill={s.top ? '#e4f3ff' : '#f1f5f9'} stroke={s.top ? '#2282d4' : '#94a3b8'} strokeWidth="1.7" />
+                <CLabel x={72} y={s.y + 17} fill="#145a99" size={10}>{s.v}</CLabel>
+              </g>
+            ))}
+            <CLabel x={132} y={108} fill="#145a99" size={7.5}>← Top</CLabel>
+            <CLabel x={84} y={204} fill="#525e70" size={7.4} weight={700}>Call stack · Undo</CLabel>
+            <CLabel x={84} y={218} fill="#525e70" size={7.4} weight={700}>O(1) push / pop</CLabel>
+
+            {/* QUADRANT 2: CIRCULAR QUEUE (FIFO) */}
+            <rect x="166" y="12" width="148" height="224" rx="12" fill="#fafbfd" stroke="#d5dfec" strokeWidth="1.7" />
+            <PillHeader cx={240} cy={32} width={124} text="QUEUE (FIFO)" bg="#e6faf3" stroke="#6ed4b4" color="#1a7d69" />
+            <CLabel x={240} y={62} fill="#1a7d69" size={7.8}>Front → Dequeue</CLabel>
+            {['A', 'B', 'C'].map((v, i) => (
+              <g key={v}>
+                <rect x={180 + i * 41} y="82" width="35" height="36" rx="6" fill="#e6faf3" stroke="#229680" strokeWidth="1.7" />
+                <CLabel x={197 + i * 41} y={104} fill="#146353" size={10.5}>{v}</CLabel>
+              </g>
+            ))}
+            <path d="M 197 72 L 197 80" stroke="#d95378" strokeWidth="1.8" markerEnd={`url(#${uid}-coral)`} />
+            <path d="M 279 138 L 279 122" stroke="#229680" strokeWidth="1.8" markerEnd={`url(#${uid}-teal)`} />
+            <CLabel x={240} y={150} fill="#1a7d69" size={7.8}>Rear ← Enqueue</CLabel>
+            <rect x="178" y="164" width="124" height="58" rx="8" fill="#effcf8" stroke="#9be3cc" strokeWidth="1.2" />
+            <CLabel x={240} y={180} fill="#1a7d69" size={7.8}>CIRCULAR WRAP</CLabel>
+            <CLabel x={240} y={194} fill="#525e70" size={7.2} weight={700}>(Rear + 1) MOD Max</CLabel>
+            <CLabel x={240} y={208} fill="#525e70" size={7.2} weight={700}>Print spool · BFS</CLabel>
+
+            {/* QUADRANT 3: LINKED LIST */}
+            <rect x="324" y="12" width="150" height="224" rx="12" fill="#fafbfd" stroke="#d5dfec" strokeWidth="1.7" />
+            <PillHeader cx={399} cy={32} width={126} text="LINKED LIST" bg="#fff3d9" stroke="#f2ba5a" color="#9c5c06" />
+            <CLabel x={364} y={58} fill="#9c5c06" size={7.6}>StartPtr →</CLabel>
+            {[
+              { y: 66, data: '12', ptr: '•' },
+              { y: 112, data: '25', ptr: '•' },
+              { y: 158, data: '39', ptr: '∅' },
+            ].map((n, i) => (
+              <g key={n.data}>
+                <rect x="346" y={n.y} width="54" height="30" rx="6" fill="#fff3d9" stroke="#d68816" strokeWidth="1.7" />
+                <rect x="400" y={n.y} width="32" height="30" rx="6" fill="#fde6ba" stroke="#d68816" strokeWidth="1.7" />
+                <CLabel x={373} y={n.y + 19} fill="#9c5c06" size={9.5}>{n.data}</CLabel>
+                <CLabel x={416} y={n.y + 19} fill="#9c5c06" size={9.5}>{n.ptr}</CLabel>
+                {i < 2 && (
+                  <path d={`M 433 ${n.y + 15} C 454 ${n.y + 15}, 454 ${n.y + 48}, 435 ${n.y + 56}`} fill="none" stroke="#d68816" strokeWidth="1.7" markerEnd={`url(#${uid}-amber)`} />
+                )}
+              </g>
+            ))}
+            <CLabel x={399} y={206} fill="#525e70" size={7.3} weight={700}>Data | NextPointer</CLabel>
+            <CLabel x={399} y={220} fill="#525e70" size={7.3} weight={700}>O(1) insert · FreeList</CLabel>
+
+            {/* QUADRANT 4: BINARY SEARCH TREE (BST) */}
+            <rect x="484" y="12" width="144" height="224" rx="12" fill="#fafbfd" stroke="#d5dfec" strokeWidth="1.7" />
+            <PillHeader cx={556} cy={32} width={120} text="BINARY TREE" bg="#f3eafd" stroke="#c59ef0" color="#5c289c" />
+
+            <line x1="556" y1="84" x2="522" y2="124" stroke="#7d3ec4" strokeWidth="1.9" />
+            <line x1="556" y1="84" x2="590" y2="124" stroke="#7d3ec4" strokeWidth="1.9" />
+            <line x1="522" y1="124" x2="504" y2="164" stroke="#7d3ec4" strokeWidth="1.7" />
+            <line x1="522" y1="124" x2="540" y2="164" stroke="#7d3ec4" strokeWidth="1.7" />
+            <line x1="590" y1="124" x2="606" y2="164" stroke="#7d3ec4" strokeWidth="1.7" />
+
+            {[
+              { cx: 556, cy: 80, v: '50' },
+              { cx: 522, cy: 124, v: '28' },
+              { cx: 590, cy: 124, v: '74' },
+              { cx: 504, cy: 164, v: '15' },
+              { cx: 540, cy: 164, v: '35' },
+              { cx: 606, cy: 164, v: '91' },
+            ].map((node) => (
+              <g key={node.v}>
+                <circle cx={node.cx} cy={node.cy} r="14" fill="#f3eafd" stroke="#7d3ec4" strokeWidth="1.9" />
+                <CLabel x={node.cx} y={node.cy + 3.5} fill="#5c289c" size={8.8}>{node.v}</CLabel>
+              </g>
+            ))}
+            <CLabel x={556} y={198} fill="#5c289c" size={7.4}>Left &lt; Root &lt; Right</CLabel>
+            <CLabel x={556} y={213} fill="#525e70" size={7.1} weight={700}>In-order: sorted output</CLabel>
+          </svg>
+        );
+
+      /* =====================================================================
+       * 36. RELATIONAL DATABASE ERD & NORMALISATION TO 3NF (IGCSE & A-Level)
+       * ===================================================================*/
+      case 'database-normalisation-erd':
+        return (
+          <svg
+            viewBox="0 0 640 248"
+            preserveAspectRatio="xMidYMid meet"
+            aria-label="Relational database entity-relationship diagram showing 1-to-many Student, Enrolment, and Course tables normalised to Third Normal Form (3NF)"
+          >
+            <ArrowMarkerDefs prefix={uid} colors={{ blue: '#1d7ac7', teal: '#229680', purple: '#7d3ec4' }} />
+
+            {/* TOP BAR: 1NF -> 2NF -> 3NF PROGRESSION */}
+            <rect x="16" y="12" width="184" height="44" rx="10" fill="#fdebf0" stroke="#f0a8bc" strokeWidth="1.6" />
+            <CLabel x={108} y={28} fill="#b5375d" size={8.8}>1NF · ATOMIC FIELDS</CLabel>
+            <CLabel x={108} y={43} fill="#525e70" size={7.3} weight={700}>No repeating groups · Primary Key</CLabel>
+
+            <path d="M 204 34 L 224 34" stroke="#7d3ec4" strokeWidth="2.2" markerEnd={`url(#${uid}-purple)`} />
+
+            <rect x="228" y="12" width="184" height="44" rx="10" fill="#fff3d9" stroke="#f2ba5a" strokeWidth="1.6" />
+            <CLabel x={320} y={28} fill="#9c5c06" size={8.8}>2NF · NO PARTIAL DEPS</CLabel>
+            <CLabel x={320} y={43} fill="#525e70" size={7.3} weight={700}>Non-keys depend on FULL PK</CLabel>
+
+            <path d="M 416 34 L 436 34" stroke="#229680" strokeWidth="2.2" markerEnd={`url(#${uid}-teal)`} />
+
+            <rect x="440" y="12" width="184" height="44" rx="10" fill="#e6faf3" stroke="#6ed4b4" strokeWidth="1.8" />
+            <CLabel x={532} y={28} fill="#1a7d69" size={8.8}>3NF · NO TRANSITIVE DEPS</CLabel>
+            <CLabel x={532} y={43} fill="#525e70" size={7.3} weight={700}>No non-key → non-key dependency</CLabel>
+
+            {/* ERD TABLE 1: STUDENT */}
+            <rect x="20" y="82" width="160" height="148" rx="12" fill="#fafbfd" stroke="#2282d4" strokeWidth="2" />
+            <rect x="20" y="82" width="160" height="30" rx="11" fill="#e4f3ff" stroke="#2282d4" strokeWidth="1.6" />
+            <CLabel x={100} y={101} fill="#145a99" size={9.5}>STUDENT</CLabel>
+            <CLabel x={32} y={132} anchor="start" fill="#145a99" size={8.4}>🔑 StudentID (PK)</CLabel>
+            <CLabel x={32} y={154} anchor="start" fill="#4f5b6b" size={8.2} weight={700}>FullName</CLabel>
+            <CLabel x={32} y={176} anchor="start" fill="#4f5b6b" size={8.2} weight={700}>Email</CLabel>
+            <CLabel x={32} y={198} anchor="start" fill="#4f5b6b" size={8.2} weight={700}>YearGroup</CLabel>
+
+            {/* ERD TABLE 2: ENROLMENT (LINK TABLE RESOLVING M:N) */}
+            <rect x="236" y="82" width="168" height="148" rx="12" fill="#fafbfd" stroke="#7d3ec4" strokeWidth="2" />
+            <rect x="236" y="82" width="168" height="30" rx="11" fill="#f3eafd" stroke="#7d3ec4" strokeWidth="1.6" />
+            <CLabel x={320} y={101} fill="#5c289c" size={9.5}>ENROLMENT (LINK)</CLabel>
+            <CLabel x={248} y={132} anchor="start" fill="#5c289c" size={8.3}>🔑 StudentID (PK, FK)</CLabel>
+            <CLabel x={248} y={154} anchor="start" fill="#5c289c" size={8.3}>🔑 CourseID (PK, FK)</CLabel>
+            <CLabel x={248} y={176} anchor="start" fill="#4f5b6b" size={8.2} weight={700}>EnrolDate</CLabel>
+            <CLabel x={248} y={198} anchor="start" fill="#4f5b6b" size={8.2} weight={700}>ExamGrade</CLabel>
+
+            {/* ERD TABLE 3: COURSE */}
+            <rect x="460" y="82" width="160" height="148" rx="12" fill="#fafbfd" stroke="#229680" strokeWidth="2" />
+            <rect x="460" y="82" width="160" height="30" rx="11" fill="#e6faf3" stroke="#229680" strokeWidth="1.6" />
+            <CLabel x={540} y={101} fill="#1a7d69" size={9.5}>COURSE</CLabel>
+            <CLabel x={472} y={132} anchor="start" fill="#1a7d69" size={8.4}>🔑 CourseID (PK)</CLabel>
+            <CLabel x={472} y={154} anchor="start" fill="#4f5b6b" size={8.2} weight={700}>CourseTitle</CLabel>
+            <CLabel x={472} y={176} anchor="start" fill="#4f5b6b" size={8.2} weight={700}>SyllabusCode</CLabel>
+            <CLabel x={472} y={198} anchor="start" fill="#4f5b6b" size={8.2} weight={700}>DepartmentID (FK)</CLabel>
+
+            {/* 1:M Crow's foot connectors */}
+            <line x1="180" y1="144" x2="236" y2="144" stroke="#556478" strokeWidth="2.1" />
+            <line x1="190" y1="136" x2="190" y2="152" stroke="#556478" strokeWidth="2" />
+            <path d="M 236 135 L 222 144 L 236 153" fill="none" stroke="#556478" strokeWidth="2" />
+            <CLabel x={208} y={132} fill="#145a99" size={8}>1 : M</CLabel>
+
+            <line x1="404" y1="144" x2="460" y2="144" stroke="#556478" strokeWidth="2.1" />
+            <line x1="450" y1="136" x2="450" y2="152" stroke="#556478" strokeWidth="2" />
+            <path d="M 404 135 L 418 144 L 404 153" fill="none" stroke="#556478" strokeWidth="2" />
+            <CLabel x={432} y={132} fill="#1a7d69" size={8}>M : 1</CLabel>
+
+            <CLabel x={320} y={242} fill="#525e70" size={7.6} weight={700}>Referential integrity: every Foreign Key must match an existing Primary Key (eliminates update/delete anomalies)</CLabel>
+          </svg>
+        );
+
+      /* =====================================================================
+       * 37. COMPILER PIPELINE & OS PROCESS STATE MACHINE (IGCSE & A-Level)
+       * ===================================================================*/
+      case 'compiler-pipeline-os':
+        return (
+          <svg
+            viewBox="0 0 640 248"
+            preserveAspectRatio="xMidYMid meet"
+            aria-label="Four-stage compiler pipeline (Lexical, Syntax, Code Generation, Optimisation) above the Operating System process state diagram (Ready, Running, Blocked)"
+          >
+            <ArrowMarkerDefs prefix={uid} colors={{ blue: '#1d7ac7', teal: '#229680', purple: '#7d3ec4', amber: '#d68816', coral: '#d95378', slate: '#556478' }} />
+
+            {/* TOP SECTION: 4 STAGES OF COMPILATION */}
+            <rect x="14" y="10" width="612" height="102" rx="14" fill="#fafbfd" stroke="#d5dfec" strokeWidth="1.8" />
+            <PillHeader cx={320} cy={29} width={236} text="4 STAGES OF COMPILATION" bg="#e4f3ff" stroke="#7bc0f7" color="#145a99" />
+
+            {[
+              { x: 26, bg: '#e4f3ff', st: '#2282d4', col: '#145a99', title: '1. LEXICAL', sub: 'Strip comments →', sub2: 'Token stream + SymTab' },
+              { x: 178, bg: '#f3eafd', st: '#7d3ec4', col: '#5c289c', title: '2. SYNTAX', sub: 'Parse tree / BNF →', sub2: 'Grammar & type checks' },
+              { x: 330, bg: '#fff3d9', st: '#d68816', col: '#9c5c06', title: '3. CODE GEN', sub: 'Object / machine →', sub2: 'Target opcode output' },
+              { x: 482, bg: '#e6faf3', st: '#229680', col: '#1a7d69', title: '4. OPTIMISE', sub: 'Faster & smaller →', sub2: 'Remove redundant code' },
+            ].map((st, idx) => (
+              <g key={st.title}>
+                <rect x={st.x} y="47" width="132" height="54" rx="10" fill={st.bg} stroke={st.st} strokeWidth="1.7" />
+                <CLabel x={st.x + 66} y={63} fill={st.col} size={8.6}>{st.title}</CLabel>
+                <CLabel x={st.x + 66} y={78} fill="#525e70" size={7.2} weight={700}>{st.sub}</CLabel>
+                <CLabel x={st.x + 66} y={91} fill="#525e70" size={7.2} weight={700}>{st.sub2}</CLabel>
+                {idx < 3 && (
+                  <line x1={st.x + 134} y1="74" x2={st.x + 149} y2="74" stroke="#556478" strokeWidth="2.1" markerEnd={`url(#${uid}-slate)`} />
+                )}
+              </g>
+            ))}
+
+            {/* BOTTOM SECTION: OS PROCESS STATE MACHINE */}
+            <rect x="14" y="120" width="612" height="120" rx="14" fill="#fafbfd" stroke="#d5dfec" strokeWidth="1.8" />
+            <PillHeader cx={320} cy={139} width={276} text="OS PROCESS STATES & SCHEDULING" bg="#f3eafd" stroke="#c59ef0" color="#5c289c" />
+
+            {/* READY */}
+            <rect x="46" y="160" width="136" height="44" rx="12" fill="#e4f3ff" stroke="#2282d4" strokeWidth="2" />
+            <CLabel x={114} y={178} fill="#145a99" size={10}>READY</CLabel>
+            <CLabel x={114} y={193} fill="#525e70" size={7.4} weight={700}>Waiting in scheduler queue</CLabel>
+
+            {/* RUNNING */}
+            <rect x="252" y="160" width="136" height="44" rx="12" fill="#e6faf3" stroke="#229680" strokeWidth="2.2" />
+            <CLabel x={320} y={178} fill="#1a7d69" size={10}>RUNNING</CLabel>
+            <CLabel x={320} y={193} fill="#525e70" size={7.4} weight={700}>Executing on CPU core</CLabel>
+
+            {/* BLOCKED */}
+            <rect x="458" y="160" width="136" height="44" rx="12" fill="#fdebf0" stroke="#d95378" strokeWidth="2" />
+            <CLabel x={526} y={178} fill="#b5375d" size={10}>BLOCKED</CLabel>
+            <CLabel x={526} y={193} fill="#525e70" size={7.4} weight={700}>Waiting for I/O or event</CLabel>
+
+            {/* Transitions */}
+            <line x1="184" y1="173" x2="248" y2="173" stroke="#229680" strokeWidth="2.1" markerEnd={`url(#${uid}-teal)`} />
+            <CLabel x={216} y={166} fill="#1a7d69" size={7.2}>DISPATCH</CLabel>
+
+            <line x1="250" y1="191" x2="186" y2="191" stroke="#d68816" strokeWidth="2.1" markerEnd={`url(#${uid}-amber)`} />
+            <CLabel x={216} y={204} fill="#9c5c06" size={7.2}>TIME SLICE</CLabel>
+
+            <line x1="390" y1="182" x2="454" y2="182" stroke="#d95378" strokeWidth="2.1" markerEnd={`url(#${uid}-coral)`} />
+            <CLabel x={422} y={174} fill="#b5375d" size={7.2}>I/O WAIT</CLabel>
+
+            {/* Clean orthogonal/curved return channel with pill badge so text never overlaps line */}
+            <path d="M 526 205 L 526 226 L 114 226 L 114 208" fill="none" stroke="#1d7ac7" strokeWidth="2" strokeDasharray="4 2.5" markerEnd={`url(#${uid}-blue)`} />
+            <rect x="218" y="216" width="204" height="18" rx="9" fill="#e4f3ff" stroke="#7bc0f7" strokeWidth="1.2" />
+            <CLabel x={320} y={228} fill="#145a99" size={7.2}>I/O COMPLETE INTERRUPT → READY QUEUE</CLabel>
+          </svg>
+        );
     }
   };
 
