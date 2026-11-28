@@ -92,8 +92,8 @@
       "label": "Oxford AQA"
     }
   ],
-  "courseCount": 51,
-  "totalSubtopics": 761,
+  "courseCount": 52,
+  "totalSubtopics": 813,
   "courses": [
     {
       "id": "gcse-biology-aqa-higher",
@@ -4738,18 +4738,16 @@
       "tier": "Core",
       "specCode": "0478",
       "availableBoards": [
-        "cie",
-        "edexcel-intl",
-        "oxford-aqa"
+        "cie"
       ],
       "availableTiers": [
         "Core"
       ],
-      "topicCount": 6,
-      "subtopicCount": 8,
+      "topicCount": 10,
+      "subtopicCount": 24,
       "pastPaperCount": 8,
-      "keyTermCount": 35,
-      "cheatSheetCount": 6,
+      "keyTermCount": 185,
+      "cheatSheetCount": 10,
       "url": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie",
       "markdownUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie.md",
       "topics": [
@@ -4761,7 +4759,7 @@
             {
               "id": "cs-1-1",
               "code": "1.1",
-              "title": "Number Systems: Binary, Hexadecimal, Two’s Complement & Shifts",
+              "title": "Number Systems: Binary, Hexadecimal, Binary Addition, Shifts & Two’s Complement",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-1-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-1-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-1-1",
@@ -4771,92 +4769,162 @@
             {
               "id": "cs-1-2",
               "code": "1.2",
-              "title": "Text (ASCII/Unicode), Sound, Bitmap Images & Compression",
+              "title": "Text (ASCII & Unicode), Sound Sampling & Bitmap Images",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-1-2",
               "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-1-2",
               "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-1-2",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-1-2",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/exam-practice/cs-1-2"
+            },
+            {
+              "id": "cs-1-3",
+              "code": "1.3",
+              "title": "Data Storage Units (KiB/MiB), File Size Calculations & Compression",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-1-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-1-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-1-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-1-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/exam-practice/cs-1-3"
             }
           ]
         },
         {
           "id": "topic-2",
           "number": 2,
-          "title": "Data Transmission & Error Detection",
+          "title": "Data Transmission",
           "subtopics": [
             {
               "id": "cs-2-1",
               "code": "2.1",
-              "title": "Packet Switching, Serial/Parallel, Error Checking & Encryption",
+              "title": "Packet Structure, Packet Switching, Serial/Parallel Transmission & USB",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-2-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-2-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-2-1",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-2-1",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/exam-practice/cs-2-1"
+            },
+            {
+              "id": "cs-2-2",
+              "code": "2.2",
+              "title": "Error Detection: Parity Bits, Checksums, Echo Checks, Check Digits & ARQ",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-2-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-2-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-2-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-2-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/exam-practice/cs-2-2"
+            },
+            {
+              "id": "cs-2-3",
+              "code": "2.3",
+              "title": "Symmetric & Asymmetric Encryption (Public & Private Keys)",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-2-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-2-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-2-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-2-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/exam-practice/cs-2-3"
             }
           ]
         },
         {
           "id": "topic-3",
           "number": 3,
-          "title": "Hardware & CPU Architecture",
+          "title": "Hardware",
           "subtopics": [
             {
               "id": "cs-3-1",
               "code": "3.1",
-              "title": "Von Neumann Architecture, FDE Cycle, Cache, Primary & Secondary Storage",
+              "title": "Von Neumann Architecture, FDE Cycle, CPU Performance & Embedded Systems",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-3-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-3-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-3-1",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-3-1",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/exam-practice/cs-3-1"
+            },
+            {
+              "id": "cs-3-2",
+              "code": "3.2",
+              "title": "Input/Output Devices, Sensors & Network Hardware (NIC, MAC, IP & Routers)",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-3-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-3-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-3-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-3-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/exam-practice/cs-3-2"
+            },
+            {
+              "id": "cs-3-3",
+              "code": "3.3",
+              "title": "Primary Memory (RAM/ROM), Secondary Storage, Virtual Memory & Cloud Storage",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-3-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-3-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-3-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-3-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/exam-practice/cs-3-3"
             }
           ]
         },
         {
           "id": "topic-4",
           "number": 4,
-          "title": "Software & Operating Systems",
+          "title": "Software",
           "subtopics": [
             {
               "id": "cs-4-1",
               "code": "4.1",
-              "title": "Operating Systems, Interrupts, High/Low-Level Languages & Translators",
+              "title": "System vs Application Software, Operating System Functions, Firmware & Interrupts",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-4-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-4-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-4-1",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-4-1",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/exam-practice/cs-4-1"
+            },
+            {
+              "id": "cs-4-2",
+              "code": "4.2",
+              "title": "High/Low-Level Languages, Assembly, Compilers, Interpreters & IDEs",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-4-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-4-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-4-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-4-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/exam-practice/cs-4-2"
             }
           ]
         },
         {
           "id": "topic-5",
           "number": 5,
-          "title": "The Internet & Cyber Security",
+          "title": "The Internet & Its Uses",
           "subtopics": [
             {
               "id": "cs-5-1",
               "code": "5.1",
-              "title": "HTTP/HTTPS, DNS, Malware, Social Engineering & Defences",
+              "title": "Internet vs WWW, URLs, HTTP/HTTPS, DNS, Cookies & Blockchain Digital Currencies",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-5-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-5-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-5-1",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-5-1",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/exam-practice/cs-5-1"
+            },
+            {
+              "id": "cs-5-2",
+              "code": "5.2",
+              "title": "Cyber Security Threats (Malware, Phishing, DDoS, SQLi) & Layered Defences",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-5-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-5-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-5-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-5-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/exam-practice/cs-5-2"
             }
           ]
         },
         {
           "id": "topic-6",
           "number": 6,
-          "title": "Algorithms, Programming, Databases & Boolean Logic",
+          "title": "Automated & Emerging Technologies",
           "subtopics": [
             {
               "id": "cs-6-1",
               "code": "6.1",
-              "title": "Algorithms, Pseudocode, Trace Tables, Validation & Test Data",
+              "title": "Automated Systems (Sensors, Microprocessors & Actuators) & Robotics",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-6-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-6-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-6-1",
@@ -4866,12 +4934,130 @@
             {
               "id": "cs-6-2",
               "code": "6.2",
-              "title": "Relational Databases, SQL Queries & Boolean Logic Gates",
+              "title": "Artificial Intelligence, Expert Systems & Machine Learning",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-6-2",
               "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-6-2",
               "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-6-2",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-6-2",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/exam-practice/cs-6-2"
+            }
+          ]
+        },
+        {
+          "id": "topic-7",
+          "number": 7,
+          "title": "Algorithm Design & Problem-Solving",
+          "subtopics": [
+            {
+              "id": "cs-7-1",
+              "code": "7.1",
+              "title": "Program Development Life Cycle, Decomposition, Structure Diagrams & Pseudocode",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-7-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-7-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-7-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-7-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/exam-practice/cs-7-1"
+            },
+            {
+              "id": "cs-7-2",
+              "code": "7.2",
+              "title": "Standard Algorithms: Linear Search, Bubble Sort, Totalling, Counting & Max/Min",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-7-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-7-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-7-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-7-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/exam-practice/cs-7-2"
+            },
+            {
+              "id": "cs-7-3",
+              "code": "7.3",
+              "title": "Validation, Verification, Test Data & Trace Tables",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-7-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-7-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-7-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-7-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/exam-practice/cs-7-3"
+            }
+          ]
+        },
+        {
+          "id": "topic-8",
+          "number": 8,
+          "title": "Programming",
+          "subtopics": [
+            {
+              "id": "cs-8-1",
+              "code": "8.1",
+              "title": "Variables, Data Types, Sequence/Selection/Iteration, Operators & String Handling",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-8-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-8-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-8-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-8-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/exam-practice/cs-8-1"
+            },
+            {
+              "id": "cs-8-2",
+              "code": "8.2",
+              "title": "Procedures, Functions, Parameters, Local/Global Scope, Libraries & Maintainability",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-8-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-8-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-8-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-8-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/exam-practice/cs-8-2"
+            },
+            {
+              "id": "cs-8-3",
+              "code": "8.3",
+              "title": "1D & 2D Arrays, Nested Iteration & Text File Handling",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-8-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-8-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-8-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-8-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/exam-practice/cs-8-3"
+            }
+          ]
+        },
+        {
+          "id": "topic-9",
+          "number": 9,
+          "title": "Databases",
+          "subtopics": [
+            {
+              "id": "cs-9-1",
+              "code": "9.1",
+              "title": "Single-Table Databases, Primary Keys, Data Types & SQL Queries",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-9-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-9-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-9-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-9-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/exam-practice/cs-9-1"
+            }
+          ]
+        },
+        {
+          "id": "topic-10",
+          "number": 10,
+          "title": "Boolean Logic",
+          "subtopics": [
+            {
+              "id": "cs-10-1",
+              "code": "10.1",
+              "title": "Logic Gates (NOT, AND, OR, NAND, NOR, XOR) & Truth Tables",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-10-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-10-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-10-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-10-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/exam-practice/cs-10-1"
+            },
+            {
+              "id": "cs-10-2",
+              "code": "10.2",
+              "title": "Building Logic Circuits & Expressions from Truth Tables & Problem Statements",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-10-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-10-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-10-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-10-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/exam-practice/cs-10-2"
             }
           ]
         }
@@ -9441,6 +9627,290 @@
       ]
     },
     {
+      "id": "a-level-computer-science-cie",
+      "title": "Computer Science",
+      "subtitle": "A-Level · CIE",
+      "qualification": "a-level",
+      "qualificationLabel": "A-Level",
+      "subjectSlug": "computer-science",
+      "examBoard": "cie",
+      "examBoardLabel": "CIE",
+      "tier": "A-Level",
+      "specCode": "9618",
+      "availableBoards": [
+        "cie"
+      ],
+      "availableTiers": [
+        "A-Level",
+        "AS-Level"
+      ],
+      "topicCount": 8,
+      "subtopicCount": 20,
+      "pastPaperCount": 9,
+      "keyTermCount": 192,
+      "cheatSheetCount": 8,
+      "url": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie",
+      "markdownUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie.md",
+      "topics": [
+        {
+          "id": "topic-1",
+          "number": 1,
+          "title": "Information Representation & Multimedia (AS + A2)",
+          "subtopics": [
+            {
+              "id": "al-cs-1-1",
+              "code": "1.1",
+              "title": "Binary Integers, BCD Arithmetic, Character Sets, Bitmap/Vector Graphics & Sound",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-1-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-1-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-1-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-1-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/exam-practice/al-cs-1-1"
+            },
+            {
+              "id": "al-cs-1-2",
+              "code": "1.2",
+              "title": "Floating-Point Binary, Normalisation, Rounding Errors & RLE/Dictionary Compression",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-1-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-1-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-1-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-1-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/exam-practice/al-cs-1-2"
+            }
+          ]
+        },
+        {
+          "id": "topic-2",
+          "number": 2,
+          "title": "Communication, Networking & Internet Protocols (AS + A2)",
+          "subtopics": [
+            {
+              "id": "al-cs-2-1",
+              "code": "2.1",
+              "title": "Client–Server vs P2P, Network Topologies, Cloud Computing, Hardware & IP Addressing",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-2-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-2-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-2-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-2-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/exam-practice/al-cs-2-1"
+            },
+            {
+              "id": "al-cs-2-2",
+              "code": "2.2",
+              "title": "Circuit Switching vs Packet Switching, Routing Tables & BitTorrent Protocol",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-2-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-2-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-2-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-2-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/exam-practice/al-cs-2-2"
+            },
+            {
+              "id": "al-cs-2-3",
+              "code": "2.3",
+              "title": "TCP/IP 4-Layer Protocol Stack, HTTP/SMTP/POP3/IMAP/FTP & DNS Resolution",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-2-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-2-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-2-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-2-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/exam-practice/al-cs-2-3"
+            }
+          ]
+        },
+        {
+          "id": "topic-3",
+          "number": 3,
+          "title": "Hardware, Processor Architecture & Boolean Logic (AS + A2)",
+          "subtopics": [
+            {
+              "id": "al-cs-3-1",
+              "code": "3.1",
+              "title": "Registers, Buses, Assembly Language, Addressing Modes & Bit Manipulation",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-3-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-3-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-3-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-3-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/exam-practice/al-cs-3-1"
+            },
+            {
+              "id": "al-cs-3-2",
+              "code": "3.2",
+              "title": "RISC vs CISC, Pipelining, Parallel Architectures (SISD–MIMD) & Virtual Machines",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-3-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-3-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-3-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-3-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/exam-practice/al-cs-3-2"
+            },
+            {
+              "id": "al-cs-3-3",
+              "code": "3.3",
+              "title": "Half/Full Adders, Flip-Flops, Boolean Algebra, De Morgan’s & Karnaugh Maps",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-3-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-3-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-3-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-3-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/exam-practice/al-cs-3-3"
+            }
+          ]
+        },
+        {
+          "id": "topic-4",
+          "number": 4,
+          "title": "System Software, Operating Systems & Translation (AS + A2)",
+          "subtopics": [
+            {
+              "id": "al-cs-4-1",
+              "code": "4.1",
+              "title": "OS Memory Management (Paging, Segmentation, Virtual Memory) & CPU Scheduling",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-4-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-4-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-4-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-4-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/exam-practice/al-cs-4-1"
+            },
+            {
+              "id": "al-cs-4-2",
+              "code": "4.2",
+              "title": "Compilation Stages, Two-Pass Assembly, Linkers/Loaders, BNF & Reverse Polish Notation",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-4-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-4-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-4-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-4-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/exam-practice/al-cs-4-2"
+            }
+          ]
+        },
+        {
+          "id": "topic-5",
+          "number": 5,
+          "title": "Security, Cryptography & Relational Databases (AS + A2)",
+          "subtopics": [
+            {
+              "id": "al-cs-5-1",
+              "code": "5.1",
+              "title": "Security, Integrity, Digital Signatures, Certificates, TLS/SSL & Quantum Cryptography",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-5-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-5-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-5-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-5-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/exam-practice/al-cs-5-1"
+            },
+            {
+              "id": "al-cs-5-2",
+              "code": "5.2",
+              "title": "Relational Databases, ERDs, Normalisation (1NF → 2NF → 3NF) & SQL (DDL & DML)",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-5-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-5-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-5-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-5-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/exam-practice/al-cs-5-2"
+            }
+          ]
+        },
+        {
+          "id": "topic-6",
+          "number": 6,
+          "title": "Software Development & Algorithm Complexity (AS + A2)",
+          "subtopics": [
+            {
+              "id": "al-cs-6-1",
+              "code": "6.1",
+              "title": "SDLC Models (Waterfall, Iterative, RAD, Agile/XP), Testing & Software Maintenance",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-6-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-6-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-6-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-6-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/exam-practice/al-cs-6-1"
+            },
+            {
+              "id": "al-cs-6-2",
+              "code": "6.2",
+              "title": "Computational Thinking, Structure Charts, State-Transition Diagrams & Big-O Complexity",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-6-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-6-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-6-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-6-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/exam-practice/al-cs-6-2"
+            }
+          ]
+        },
+        {
+          "id": "topic-7",
+          "number": 7,
+          "title": "Abstract Data Types (ADTs), Searching & Sorting (A2 Paper 3 & 4)",
+          "subtopics": [
+            {
+              "id": "al-cs-7-1",
+              "code": "7.1",
+              "title": "Stacks (LIFO), Circular Queues (FIFO) & Linked Lists (Pointers & Free-List)",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-7-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-7-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-7-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-7-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/exam-practice/al-cs-7-1"
+            },
+            {
+              "id": "al-cs-7-2",
+              "code": "7.2",
+              "title": "Binary Search Trees (Pre/In/Post-Order), Hash Tables (Collisions) & Dictionaries",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-7-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-7-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-7-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-7-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/exam-practice/al-cs-7-2"
+            },
+            {
+              "id": "al-cs-7-3",
+              "code": "7.3",
+              "title": "Searching & Sorting: Linear vs Binary Search, Bubble, Insertion & Merge Sort",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-7-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-7-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-7-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-7-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/exam-practice/al-cs-7-3"
+            }
+          ]
+        },
+        {
+          "id": "topic-8",
+          "number": 8,
+          "title": "Programming Paradigms, Recursion & Artificial Intelligence (A2 Paper 3 & 4)",
+          "subtopics": [
+            {
+              "id": "al-cs-8-1",
+              "code": "8.1",
+              "title": "Object-Oriented Programming (OOP), Serial/Random Files & Exception Handling",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-8-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-8-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-8-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-8-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/exam-practice/al-cs-8-1"
+            },
+            {
+              "id": "al-cs-8-2",
+              "code": "8.2",
+              "title": "Recursion: Base/General Cases, Call Stack Frames & Winding/Unwinding Traces",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-8-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-8-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-8-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-8-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/exam-practice/al-cs-8-2"
+            },
+            {
+              "id": "al-cs-8-3",
+              "code": "8.3",
+              "title": "Graphs, Dijkstra’s Shortest Path, A* Heuristic, Neural Networks & Machine Learning",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-8-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-8-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-8-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-8-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/exam-practice/al-cs-8-3"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "gcse-business-cie-core",
       "title": "Business Studies",
       "subtitle": "GCSE · CIE",
@@ -9810,11 +10280,11 @@
       "availableTiers": [
         "Core"
       ],
-      "topicCount": 6,
-      "subtopicCount": 8,
+      "topicCount": 10,
+      "subtopicCount": 24,
       "pastPaperCount": 8,
-      "keyTermCount": 35,
-      "cheatSheetCount": 6,
+      "keyTermCount": 185,
+      "cheatSheetCount": 10,
       "url": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core",
       "markdownUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core.md",
       "topics": [
@@ -9826,7 +10296,7 @@
             {
               "id": "cs-1-1",
               "code": "1.1",
-              "title": "Number Systems: Binary, Hexadecimal, Two’s Complement & Shifts",
+              "title": "Number Systems: Binary, Hexadecimal, Binary Addition, Shifts & Two’s Complement",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-1-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-1-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-1-1",
@@ -9836,92 +10306,162 @@
             {
               "id": "cs-1-2",
               "code": "1.2",
-              "title": "Text (ASCII/Unicode), Sound, Bitmap Images & Compression",
+              "title": "Text (ASCII & Unicode), Sound Sampling & Bitmap Images",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-1-2",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-1-2",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-1-2",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-1-2",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/exam-practice/cs-1-2"
+            },
+            {
+              "id": "cs-1-3",
+              "code": "1.3",
+              "title": "Data Storage Units (KiB/MiB), File Size Calculations & Compression",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-1-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-1-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-1-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-1-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/exam-practice/cs-1-3"
             }
           ]
         },
         {
           "id": "topic-2",
           "number": 2,
-          "title": "Data Transmission & Error Detection",
+          "title": "Data Transmission",
           "subtopics": [
             {
               "id": "cs-2-1",
               "code": "2.1",
-              "title": "Packet Switching, Serial/Parallel, Error Checking & Encryption",
+              "title": "Packet Structure, Packet Switching, Serial/Parallel Transmission & USB",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-2-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-2-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-2-1",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-2-1",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/exam-practice/cs-2-1"
+            },
+            {
+              "id": "cs-2-2",
+              "code": "2.2",
+              "title": "Error Detection: Parity Bits, Checksums, Echo Checks, Check Digits & ARQ",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-2-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-2-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-2-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-2-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/exam-practice/cs-2-2"
+            },
+            {
+              "id": "cs-2-3",
+              "code": "2.3",
+              "title": "Symmetric & Asymmetric Encryption (Public & Private Keys)",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-2-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-2-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-2-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-2-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/exam-practice/cs-2-3"
             }
           ]
         },
         {
           "id": "topic-3",
           "number": 3,
-          "title": "Hardware & CPU Architecture",
+          "title": "Hardware",
           "subtopics": [
             {
               "id": "cs-3-1",
               "code": "3.1",
-              "title": "Von Neumann Architecture, FDE Cycle, Cache, Primary & Secondary Storage",
+              "title": "Von Neumann Architecture, FDE Cycle, CPU Performance & Embedded Systems",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-3-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-3-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-3-1",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-3-1",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/exam-practice/cs-3-1"
+            },
+            {
+              "id": "cs-3-2",
+              "code": "3.2",
+              "title": "Input/Output Devices, Sensors & Network Hardware (NIC, MAC, IP & Routers)",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-3-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-3-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-3-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-3-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/exam-practice/cs-3-2"
+            },
+            {
+              "id": "cs-3-3",
+              "code": "3.3",
+              "title": "Primary Memory (RAM/ROM), Secondary Storage, Virtual Memory & Cloud Storage",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-3-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-3-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-3-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-3-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/exam-practice/cs-3-3"
             }
           ]
         },
         {
           "id": "topic-4",
           "number": 4,
-          "title": "Software & Operating Systems",
+          "title": "Software",
           "subtopics": [
             {
               "id": "cs-4-1",
               "code": "4.1",
-              "title": "Operating Systems, Interrupts, High/Low-Level Languages & Translators",
+              "title": "System vs Application Software, Operating System Functions, Firmware & Interrupts",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-4-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-4-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-4-1",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-4-1",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/exam-practice/cs-4-1"
+            },
+            {
+              "id": "cs-4-2",
+              "code": "4.2",
+              "title": "High/Low-Level Languages, Assembly, Compilers, Interpreters & IDEs",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-4-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-4-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-4-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-4-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/exam-practice/cs-4-2"
             }
           ]
         },
         {
           "id": "topic-5",
           "number": 5,
-          "title": "The Internet & Cyber Security",
+          "title": "The Internet & Its Uses",
           "subtopics": [
             {
               "id": "cs-5-1",
               "code": "5.1",
-              "title": "HTTP/HTTPS, DNS, Malware, Social Engineering & Defences",
+              "title": "Internet vs WWW, URLs, HTTP/HTTPS, DNS, Cookies & Blockchain Digital Currencies",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-5-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-5-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-5-1",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-5-1",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/exam-practice/cs-5-1"
+            },
+            {
+              "id": "cs-5-2",
+              "code": "5.2",
+              "title": "Cyber Security Threats (Malware, Phishing, DDoS, SQLi) & Layered Defences",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-5-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-5-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-5-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-5-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/exam-practice/cs-5-2"
             }
           ]
         },
         {
           "id": "topic-6",
           "number": 6,
-          "title": "Algorithms, Programming, Databases & Boolean Logic",
+          "title": "Automated & Emerging Technologies",
           "subtopics": [
             {
               "id": "cs-6-1",
               "code": "6.1",
-              "title": "Algorithms, Pseudocode, Trace Tables, Validation & Test Data",
+              "title": "Automated Systems (Sensors, Microprocessors & Actuators) & Robotics",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-6-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-6-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-6-1",
@@ -9931,12 +10471,130 @@
             {
               "id": "cs-6-2",
               "code": "6.2",
-              "title": "Relational Databases, SQL Queries & Boolean Logic Gates",
+              "title": "Artificial Intelligence, Expert Systems & Machine Learning",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-6-2",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-6-2",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-6-2",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-6-2",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/exam-practice/cs-6-2"
+            }
+          ]
+        },
+        {
+          "id": "topic-7",
+          "number": 7,
+          "title": "Algorithm Design & Problem-Solving",
+          "subtopics": [
+            {
+              "id": "cs-7-1",
+              "code": "7.1",
+              "title": "Program Development Life Cycle, Decomposition, Structure Diagrams & Pseudocode",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-7-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-7-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-7-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-7-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/exam-practice/cs-7-1"
+            },
+            {
+              "id": "cs-7-2",
+              "code": "7.2",
+              "title": "Standard Algorithms: Linear Search, Bubble Sort, Totalling, Counting & Max/Min",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-7-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-7-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-7-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-7-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/exam-practice/cs-7-2"
+            },
+            {
+              "id": "cs-7-3",
+              "code": "7.3",
+              "title": "Validation, Verification, Test Data & Trace Tables",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-7-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-7-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-7-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-7-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/exam-practice/cs-7-3"
+            }
+          ]
+        },
+        {
+          "id": "topic-8",
+          "number": 8,
+          "title": "Programming",
+          "subtopics": [
+            {
+              "id": "cs-8-1",
+              "code": "8.1",
+              "title": "Variables, Data Types, Sequence/Selection/Iteration, Operators & String Handling",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-8-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-8-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-8-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-8-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/exam-practice/cs-8-1"
+            },
+            {
+              "id": "cs-8-2",
+              "code": "8.2",
+              "title": "Procedures, Functions, Parameters, Local/Global Scope, Libraries & Maintainability",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-8-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-8-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-8-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-8-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/exam-practice/cs-8-2"
+            },
+            {
+              "id": "cs-8-3",
+              "code": "8.3",
+              "title": "1D & 2D Arrays, Nested Iteration & Text File Handling",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-8-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-8-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-8-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-8-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/exam-practice/cs-8-3"
+            }
+          ]
+        },
+        {
+          "id": "topic-9",
+          "number": 9,
+          "title": "Databases",
+          "subtopics": [
+            {
+              "id": "cs-9-1",
+              "code": "9.1",
+              "title": "Single-Table Databases, Primary Keys, Data Types & SQL Queries",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-9-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-9-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-9-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-9-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/exam-practice/cs-9-1"
+            }
+          ]
+        },
+        {
+          "id": "topic-10",
+          "number": 10,
+          "title": "Boolean Logic",
+          "subtopics": [
+            {
+              "id": "cs-10-1",
+              "code": "10.1",
+              "title": "Logic Gates (NOT, AND, OR, NAND, NOR, XOR) & Truth Tables",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-10-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-10-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-10-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-10-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/exam-practice/cs-10-1"
+            },
+            {
+              "id": "cs-10-2",
+              "code": "10.2",
+              "title": "Building Logic Circuits & Expressions from Truth Tables & Problem Statements",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-10-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-10-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-10-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-10-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/exam-practice/cs-10-2"
             }
           ]
         }

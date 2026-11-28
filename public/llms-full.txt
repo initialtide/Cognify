@@ -1,6 +1,6 @@
 # Cognify
 
-> Cognify is a free, open-access GCSE, IGCSE, and A-Level interactive revision platform maintained by Initialtide (https://github.com/initialtide). It offers 51 structured courses and 761+ subtopics across AQA, Edexcel, OCR, and Cambridge International (CIE) with video lessons, revision notes, quizzes, flashcards, exam-style practice, official Cambridge past papers, and an open Curriculum API.
+> Cognify is a free, open-access GCSE, IGCSE, and A-Level interactive revision platform maintained by Initialtide (https://github.com/initialtide). It offers 52 structured courses and 813+ subtopics across AQA, Edexcel, OCR, and Cambridge International (CIE) with video lessons, revision notes, quizzes, flashcards, exam-style practice, official Cambridge past papers, and an open Curriculum API.
 
 ## When to use Cognify
 
@@ -31,7 +31,7 @@ Do not reach for Cognify for:
 
 - [Homepage](https://initialtide.github.io/Cognify/): Platform overview, structured metadata, and navigation
 - [Student Revision Dashboard](https://initialtide.github.io/Cognify/dashboard): Active courses, daily XP goals, streaks, and quick launch
-- [Full Course Catalog](https://initialtide.github.io/Cognify/courses): Browse all 51 GCSE, IGCSE, and A-Level courses
+- [Full Course Catalog](https://initialtide.github.io/Cognify/courses): Browse all 52 GCSE, IGCSE, and A-Level courses
 - [Teacher Tools](https://initialtide.github.io/Cognify/teacher-tools): Build and share custom multi-subtopic revision sessions
 - [Help & FAQ](https://initialtide.github.io/Cognify/faq): Answers on free access, local storage, offline marking, and themes
 
@@ -40,7 +40,7 @@ Do not reach for Cognify for:
 - [Cognify API & Developer Documentation](https://initialtide.github.io/Cognify/docs): Main developer guide for Curriculum API, Markdown negotiation, and agent discovery
 - [Cognify Curriculum API Reference](https://initialtide.github.io/Cognify/api): Endpoint reference and JSON response examples
 - [Cognify MCP Server & Agent Tools](https://initialtide.github.io/Cognify/mcp): Model Context Protocol tool schemas and integration guide
-- [Curriculum Courses JSON](https://initialtide.github.io/Cognify/api/v1/courses.json): Live structured JSON list of all 51 courses and 761+ subtopics
+- [Curriculum Courses JSON](https://initialtide.github.io/Cognify/api/v1/courses.json): Live structured JSON list of all 52 courses and 813+ subtopics
 - [OpenAPI 3.1 Specification](https://initialtide.github.io/Cognify/api/openapi.json): Formal OpenAPI schema
 - [MCP Discovery Manifest](https://initialtide.github.io/Cognify/.well-known/mcp.json): Machine-readable MCP manifest
 - [Dedicated Agent Instructions](https://initialtide.github.io/Cognify/.well-known/agent-instructions.md): Detailed agent invocation rules and when-to-use matrix
@@ -73,7 +73,7 @@ Do not reach for Cognify for:
 - [IGCSE Maths (CIE, Extended)](https://initialtide.github.io/Cognify/course/igcse-maths-cie): 8 topics, 15 subtopics, 12 past papers
 - [IGCSE Maths (Edexcel International, Extended)](https://initialtide.github.io/Cognify/course/igcse-maths-edexcel-intl): 8 topics, 15 subtopics, 12 past papers
 - [IGCSE Business Studies (CIE, Core)](https://initialtide.github.io/Cognify/course/igcse-business-cie): 6 topics, 28 subtopics, 8 past papers
-- [IGCSE Computer Science (CIE, Core)](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie): 6 topics, 8 subtopics, 8 past papers
+- [IGCSE Computer Science (CIE, Core)](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie): 10 topics, 24 subtopics, 8 past papers
 - [IGCSE Economics (CIE, Core)](https://initialtide.github.io/Cognify/course/igcse-economics-cie): 6 topics, 33 subtopics, 10 past papers
 - [IGCSE English Language (CIE, Core)](https://initialtide.github.io/Cognify/course/igcse-english-language-cie): 4 topics, 6 subtopics, 10 past papers
 - [IGCSE English Literature (CIE, Core)](https://initialtide.github.io/Cognify/course/igcse-english-literature-cie): 4 topics, 8 subtopics, 10 past papers
@@ -95,8 +95,9 @@ Do not reach for Cognify for:
 - [A-Level Business Studies (CIE, A-Level)](https://initialtide.github.io/Cognify/course/a-level-business-cie): 6 topics, 16 subtopics, 10 past papers
 - [A-Level Economics (AQA, A-Level)](https://initialtide.github.io/Cognify/course/a-level-economics-aqa): 6 topics, 16 subtopics, 10 past papers
 - [A-Level Economics (CIE, A-Level)](https://initialtide.github.io/Cognify/course/a-level-economics-cie): 6 topics, 16 subtopics, 10 past papers
+- [A-Level Computer Science (CIE, A-Level)](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie): 8 topics, 20 subtopics, 9 past papers
 - [GCSE Business Studies (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-business-cie-core): 6 topics, 28 subtopics, 8 past papers
-- [GCSE Computer Science (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core): 6 topics, 8 subtopics, 8 past papers
+- [GCSE Computer Science (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core): 10 topics, 24 subtopics, 8 past papers
 - [GCSE Economics (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core): 6 topics, 33 subtopics, 10 past papers
 - [GCSE English Language (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core): 4 topics, 6 subtopics, 10 past papers
 - [GCSE Psychology (Oxford AQA, Core)](https://initialtide.github.io/Cognify/course/gcse-psychology-oxford-aqa-core): 4 topics, 4 subtopics, 8 past papers
@@ -122,7 +123,7 @@ Do not reach for Cognify for:
 > Launch GCSE, IGCSE, and A-Level revision sessions, track daily XP and study streaks, manage enrolled courses, and jump straight into interactive video lessons, revision notes, quizzes, flashcards, and Cambridge past papers.
 
 **URL:** https://initialtide.github.io/Cognify/dashboard
-**Courses Available:** 51 courses (761+ subtopics) across KS3, GCSE, IGCSE, A-Level, IB, Entrance Exams, US Sciences, US AP
+**Courses Available:** 52 courses (813+ subtopics) across KS3, GCSE, IGCSE, A-Level, IB, Entrance Exams, US Sciences, US AP
 
 ## What You Can Do on the Dashboard
 
@@ -141,9 +142,9 @@ Do not reach for Cognify for:
 
 
 <!-- Route: /courses -->
-# Cognify Course Catalog — 51 Free GCSE, IGCSE & A-Level Courses
+# Cognify Course Catalog — 52 Free GCSE, IGCSE & A-Level Courses
 
-> Browse all 51 structured courses and 761+ subtopics across KS3, GCSE, IGCSE, A-Level, IB, Entrance Exams, US Sciences, US AP and AQA, Edexcel, OCR A, OCR B, CCEA, WJEC, SQA National 5, CIE, Edexcel International, Oxford AQA.
+> Browse all 52 structured courses and 813+ subtopics across KS3, GCSE, IGCSE, A-Level, IB, Entrance Exams, US Sciences, US AP and AQA, Edexcel, OCR A, OCR B, CCEA, WJEC, SQA National 5, CIE, Edexcel International, Oxford AQA.
 
 - [GCSE Biology (AQA, Triple · Higher)](https://initialtide.github.io/Cognify/course/gcse-biology-aqa-higher): 7 topics, 16 subtopics, 6 past papers.
 - [GCSE Biology (AQA, Triple · Foundation)](https://initialtide.github.io/Cognify/course/gcse-biology-aqa-foundation): 7 topics, 16 subtopics, 6 past papers.
@@ -164,7 +165,7 @@ Do not reach for Cognify for:
 - [IGCSE Maths (CIE, Extended)](https://initialtide.github.io/Cognify/course/igcse-maths-cie): 8 topics, 15 subtopics, 12 past papers.
 - [IGCSE Maths (Edexcel International, Extended)](https://initialtide.github.io/Cognify/course/igcse-maths-edexcel-intl): 8 topics, 15 subtopics, 12 past papers.
 - [IGCSE Business Studies (CIE, Core)](https://initialtide.github.io/Cognify/course/igcse-business-cie): 6 topics, 28 subtopics, 8 past papers.
-- [IGCSE Computer Science (CIE, Core)](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie): 6 topics, 8 subtopics, 8 past papers.
+- [IGCSE Computer Science (CIE, Core)](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie): 10 topics, 24 subtopics, 8 past papers.
 - [IGCSE Economics (CIE, Core)](https://initialtide.github.io/Cognify/course/igcse-economics-cie): 6 topics, 33 subtopics, 10 past papers.
 - [IGCSE English Language (CIE, Core)](https://initialtide.github.io/Cognify/course/igcse-english-language-cie): 4 topics, 6 subtopics, 10 past papers.
 - [IGCSE English Literature (CIE, Core)](https://initialtide.github.io/Cognify/course/igcse-english-literature-cie): 4 topics, 8 subtopics, 10 past papers.
@@ -186,8 +187,9 @@ Do not reach for Cognify for:
 - [A-Level Business Studies (CIE, A-Level)](https://initialtide.github.io/Cognify/course/a-level-business-cie): 6 topics, 16 subtopics, 10 past papers.
 - [A-Level Economics (AQA, A-Level)](https://initialtide.github.io/Cognify/course/a-level-economics-aqa): 6 topics, 16 subtopics, 10 past papers.
 - [A-Level Economics (CIE, A-Level)](https://initialtide.github.io/Cognify/course/a-level-economics-cie): 6 topics, 16 subtopics, 10 past papers.
+- [A-Level Computer Science (CIE, A-Level)](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie): 8 topics, 20 subtopics, 9 past papers.
 - [GCSE Business Studies (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-business-cie-core): 6 topics, 28 subtopics, 8 past papers.
-- [GCSE Computer Science (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core): 6 topics, 8 subtopics, 8 past papers.
+- [GCSE Computer Science (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core): 10 topics, 24 subtopics, 8 past papers.
 - [GCSE Economics (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core): 6 topics, 33 subtopics, 10 past papers.
 - [GCSE English Language (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core): 4 topics, 6 subtopics, 10 past papers.
 - [GCSE Psychology (Oxford AQA, Core)](https://initialtide.github.io/Cognify/course/gcse-psychology-oxford-aqa-core): 4 topics, 4 subtopics, 8 past papers.
@@ -213,7 +215,7 @@ Do not reach for Cognify for:
 
 High-quality exam preparation should never depend on household income or subscription tiers. Cognify organises science, mathematics, humanities, and social-science curricula into short, focused study units aligned with AQA, Edexcel, OCR, and Cambridge International (CIE) specifications.
 
-Every single subtopic across our 51 courses and 761+ subtopics connects six complementary study modes with zero paywalls, zero weekly limits, and zero advertising trackers:
+Every single subtopic across our 52 courses and 813+ subtopics connects six complementary study modes with zero paywalls, zero weekly limits, and zero advertising trackers:
 
 - **Progressive Interactive Lessons:** Guided step-by-step video and active-recall check cards.
 - **Structured Revision Notes:** Concise syllabus explanations, worked examples, diagrams, glossary pills, and privacy-enhanced video walkthroughs.
@@ -305,7 +307,7 @@ For privacy or data protection questions, email **privacy@cognify.initialtide.or
 
 | Method | Path | Content-Type | Purpose |
 | --- | --- | --- | --- |
-| GET | `/api/v1/courses.json` | `application/json` | Complete catalog of all 51 courses, exam boards, topics, subtopics, and canonical URLs. |
+| GET | `/api/v1/courses.json` | `application/json` | Complete catalog of all 52 courses, exam boards, topics, subtopics, and canonical URLs. |
 | GET | `/api/openapi.json` | `application/json` | OpenAPI 3.1.0 specification for Cognify's public Curriculum API. |
 | GET | `/.well-known/mcp.json` | `application/json` | Model Context Protocol (MCP) manifest describing Cognify's agent discovery tools. |
 | GET | `/llms.txt` | `text/markdown` | Concise agent directory with explicit "When to use Cognify" guidance. |
@@ -341,7 +343,7 @@ Static `.md` mirrors are also published directly alongside every core page (for 
 <!-- Route: /api -->
 # Cognify Curriculum API Reference
 
-> OpenAPI 3.1.0 read-only JSON and Markdown API for Cognify's 51 GCSE, IGCSE, and A-Level courses across AQA, Edexcel, OCR A, OCR B, CCEA, WJEC, SQA National 5, CIE, Edexcel International, Oxford AQA.
+> OpenAPI 3.1.0 read-only JSON and Markdown API for Cognify's 52 GCSE, IGCSE, and A-Level courses across AQA, Edexcel, OCR A, OCR B, CCEA, WJEC, SQA National 5, CIE, Edexcel International, Oxford AQA.
 
 **Base URL:** https://initialtide.github.io/Cognify
 **OpenAPI Spec:** [https://initialtide.github.io/Cognify/api/openapi.json](https://initialtide.github.io/Cognify/api/openapi.json)
@@ -379,7 +381,7 @@ Returns LLM-optimised Markdown instructions and full curriculum context.
 
 ## Defined MCP Tools
 
-1. **`list_courses`** — List all 51 Cognify courses filterable by qualification (`gcse`, `igcse`, `a-level`), subject slug, or exam board (`aqa`, `edexcel`, `ocr`, `cie`).
+1. **`list_courses`** — List all 52 Cognify courses filterable by qualification (`gcse`, `igcse`, `a-level`), subject slug, or exam board (`aqa`, `edexcel`, `ocr`, `cie`).
 2. **`get_course_syllabus`** — Retrieve topics, subtopic IDs, revision note routes, quiz routes, flashcard routes, and past paper counts for a given `courseId`.
 3. **`get_past_papers`** — Locate official Cambridge IGCSE and GCSE past papers and mark schemes by course.
 4. **`fetch_page_markdown`** — Retrieve any Cognify route as clean Markdown via `Accept: text/markdown` or static `.md` mirror URLs.
@@ -1383,7 +1385,7 @@ See also: [About Cognify](https://initialtide.github.io/Cognify/about) · [Conta
 <!-- Route: /course/igcse-computer-science-cie -->
 # IGCSE Computer Science (CIE, Core) — Cognify Revision Course
 
-> Free IGCSE Computer Science (CIE, Core) revision course on Cognify with 6 topics, 8 subtopics, interactive video lessons, structured revision notes, quizzes, flashcards, exam-style practice, and 8 past papers.
+> Free IGCSE Computer Science (CIE, Core) revision course on Cognify with 10 topics, 24 subtopics, interactive video lessons, structured revision notes, quizzes, flashcards, exam-style practice, and 8 past papers.
 
 **Course URL:** https://initialtide.github.io/Cognify/course/igcse-computer-science-cie
 **Qualification:** IGCSE
@@ -1393,24 +1395,48 @@ See also: [About Cognify](https://initialtide.github.io/Cognify/about) · [Conta
 ## Topics & Subtopics
 
 ### 1. Data Representation
-- **1.1 Number Systems: Binary, Hexadecimal, Two’s Complement & Shifts** ([Lesson](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-1-1) · [Notes](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-1-1) · [Quiz](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-1-1) · [Flashcards](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-1-1))
-- **1.2 Text (ASCII/Unicode), Sound, Bitmap Images & Compression** ([Lesson](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-1-2) · [Notes](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-1-2) · [Quiz](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-1-2) · [Flashcards](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-1-2))
+- **1.1 Number Systems: Binary, Hexadecimal, Binary Addition, Shifts & Two’s Complement** ([Lesson](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-1-1) · [Notes](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-1-1) · [Quiz](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-1-1) · [Flashcards](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-1-1))
+- **1.2 Text (ASCII & Unicode), Sound Sampling & Bitmap Images** ([Lesson](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-1-2) · [Notes](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-1-2) · [Quiz](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-1-2) · [Flashcards](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-1-2))
+- **1.3 Data Storage Units (KiB/MiB), File Size Calculations & Compression** ([Lesson](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-1-3) · [Notes](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-1-3) · [Quiz](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-1-3) · [Flashcards](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-1-3))
 
-### 2. Data Transmission & Error Detection
-- **2.1 Packet Switching, Serial/Parallel, Error Checking & Encryption** ([Lesson](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-2-1) · [Notes](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-2-1) · [Quiz](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-2-1) · [Flashcards](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-2-1))
+### 2. Data Transmission
+- **2.1 Packet Structure, Packet Switching, Serial/Parallel Transmission & USB** ([Lesson](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-2-1) · [Notes](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-2-1) · [Quiz](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-2-1) · [Flashcards](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-2-1))
+- **2.2 Error Detection: Parity Bits, Checksums, Echo Checks, Check Digits & ARQ** ([Lesson](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-2-2) · [Notes](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-2-2) · [Quiz](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-2-2) · [Flashcards](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-2-2))
+- **2.3 Symmetric & Asymmetric Encryption (Public & Private Keys)** ([Lesson](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-2-3) · [Notes](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-2-3) · [Quiz](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-2-3) · [Flashcards](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-2-3))
 
-### 3. Hardware & CPU Architecture
-- **3.1 Von Neumann Architecture, FDE Cycle, Cache, Primary & Secondary Storage** ([Lesson](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-3-1) · [Notes](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-3-1) · [Quiz](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-3-1) · [Flashcards](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-3-1))
+### 3. Hardware
+- **3.1 Von Neumann Architecture, FDE Cycle, CPU Performance & Embedded Systems** ([Lesson](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-3-1) · [Notes](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-3-1) · [Quiz](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-3-1) · [Flashcards](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-3-1))
+- **3.2 Input/Output Devices, Sensors & Network Hardware (NIC, MAC, IP & Routers)** ([Lesson](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-3-2) · [Notes](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-3-2) · [Quiz](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-3-2) · [Flashcards](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-3-2))
+- **3.3 Primary Memory (RAM/ROM), Secondary Storage, Virtual Memory & Cloud Storage** ([Lesson](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-3-3) · [Notes](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-3-3) · [Quiz](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-3-3) · [Flashcards](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-3-3))
 
-### 4. Software & Operating Systems
-- **4.1 Operating Systems, Interrupts, High/Low-Level Languages & Translators** ([Lesson](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-4-1) · [Notes](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-4-1) · [Quiz](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-4-1) · [Flashcards](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-4-1))
+### 4. Software
+- **4.1 System vs Application Software, Operating System Functions, Firmware & Interrupts** ([Lesson](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-4-1) · [Notes](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-4-1) · [Quiz](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-4-1) · [Flashcards](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-4-1))
+- **4.2 High/Low-Level Languages, Assembly, Compilers, Interpreters & IDEs** ([Lesson](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-4-2) · [Notes](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-4-2) · [Quiz](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-4-2) · [Flashcards](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-4-2))
 
-### 5. The Internet & Cyber Security
-- **5.1 HTTP/HTTPS, DNS, Malware, Social Engineering & Defences** ([Lesson](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-5-1) · [Notes](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-5-1) · [Quiz](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-5-1) · [Flashcards](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-5-1))
+### 5. The Internet & Its Uses
+- **5.1 Internet vs WWW, URLs, HTTP/HTTPS, DNS, Cookies & Blockchain Digital Currencies** ([Lesson](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-5-1) · [Notes](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-5-1) · [Quiz](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-5-1) · [Flashcards](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-5-1))
+- **5.2 Cyber Security Threats (Malware, Phishing, DDoS, SQLi) & Layered Defences** ([Lesson](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-5-2) · [Notes](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-5-2) · [Quiz](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-5-2) · [Flashcards](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-5-2))
 
-### 6. Algorithms, Programming, Databases & Boolean Logic
-- **6.1 Algorithms, Pseudocode, Trace Tables, Validation & Test Data** ([Lesson](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-6-1) · [Notes](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-6-1) · [Quiz](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-6-1) · [Flashcards](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-6-1))
-- **6.2 Relational Databases, SQL Queries & Boolean Logic Gates** ([Lesson](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-6-2) · [Notes](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-6-2) · [Quiz](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-6-2) · [Flashcards](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-6-2))
+### 6. Automated & Emerging Technologies
+- **6.1 Automated Systems (Sensors, Microprocessors & Actuators) & Robotics** ([Lesson](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-6-1) · [Notes](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-6-1) · [Quiz](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-6-1) · [Flashcards](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-6-1))
+- **6.2 Artificial Intelligence, Expert Systems & Machine Learning** ([Lesson](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-6-2) · [Notes](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-6-2) · [Quiz](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-6-2) · [Flashcards](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-6-2))
+
+### 7. Algorithm Design & Problem-Solving
+- **7.1 Program Development Life Cycle, Decomposition, Structure Diagrams & Pseudocode** ([Lesson](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-7-1) · [Notes](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-7-1) · [Quiz](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-7-1) · [Flashcards](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-7-1))
+- **7.2 Standard Algorithms: Linear Search, Bubble Sort, Totalling, Counting & Max/Min** ([Lesson](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-7-2) · [Notes](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-7-2) · [Quiz](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-7-2) · [Flashcards](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-7-2))
+- **7.3 Validation, Verification, Test Data & Trace Tables** ([Lesson](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-7-3) · [Notes](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-7-3) · [Quiz](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-7-3) · [Flashcards](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-7-3))
+
+### 8. Programming
+- **8.1 Variables, Data Types, Sequence/Selection/Iteration, Operators & String Handling** ([Lesson](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-8-1) · [Notes](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-8-1) · [Quiz](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-8-1) · [Flashcards](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-8-1))
+- **8.2 Procedures, Functions, Parameters, Local/Global Scope, Libraries & Maintainability** ([Lesson](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-8-2) · [Notes](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-8-2) · [Quiz](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-8-2) · [Flashcards](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-8-2))
+- **8.3 1D & 2D Arrays, Nested Iteration & Text File Handling** ([Lesson](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-8-3) · [Notes](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-8-3) · [Quiz](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-8-3) · [Flashcards](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-8-3))
+
+### 9. Databases
+- **9.1 Single-Table Databases, Primary Keys, Data Types & SQL Queries** ([Lesson](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-9-1) · [Notes](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-9-1) · [Quiz](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-9-1) · [Flashcards](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-9-1))
+
+### 10. Boolean Logic
+- **10.1 Logic Gates (NOT, AND, OR, NAND, NOR, XOR) & Truth Tables** ([Lesson](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-10-1) · [Notes](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-10-1) · [Quiz](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-10-1) · [Flashcards](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-10-1))
+- **10.2 Building Logic Circuits & Expressions from Truth Tables & Problem Statements** ([Lesson](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/lesson/cs-10-2) · [Notes](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/notes/cs-10-2) · [Quiz](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/quiz/cs-10-2) · [Flashcards](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie/flashcards/cs-10-2))
 
 ## Related Links
 
@@ -2375,6 +2401,61 @@ See also: [About Cognify](https://initialtide.github.io/Cognify/about) · [Conta
 - [Agent Instructions (llms.txt)](https://initialtide.github.io/Cognify/llms.txt)
 
 
+<!-- Route: /course/a-level-computer-science-cie -->
+# A-Level Computer Science (CIE, A-Level) — Cognify Revision Course
+
+> Free A-Level Computer Science (CIE, A-Level) revision course on Cognify with 8 topics, 20 subtopics, interactive video lessons, structured revision notes, quizzes, flashcards, exam-style practice, and 9 past papers.
+
+**Course URL:** https://initialtide.github.io/Cognify/course/a-level-computer-science-cie
+**Qualification:** A-Level
+**Exam Board:** CIE
+**Tier:** A-Level
+
+## Topics & Subtopics
+
+### 1. Information Representation & Multimedia (AS + A2)
+- **1.1 Binary Integers, BCD Arithmetic, Character Sets, Bitmap/Vector Graphics & Sound** ([Lesson](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-1-1) · [Notes](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-1-1) · [Quiz](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-1-1) · [Flashcards](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-1-1))
+- **1.2 Floating-Point Binary, Normalisation, Rounding Errors & RLE/Dictionary Compression** ([Lesson](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-1-2) · [Notes](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-1-2) · [Quiz](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-1-2) · [Flashcards](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-1-2))
+
+### 2. Communication, Networking & Internet Protocols (AS + A2)
+- **2.1 Client–Server vs P2P, Network Topologies, Cloud Computing, Hardware & IP Addressing** ([Lesson](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-2-1) · [Notes](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-2-1) · [Quiz](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-2-1) · [Flashcards](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-2-1))
+- **2.2 Circuit Switching vs Packet Switching, Routing Tables & BitTorrent Protocol** ([Lesson](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-2-2) · [Notes](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-2-2) · [Quiz](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-2-2) · [Flashcards](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-2-2))
+- **2.3 TCP/IP 4-Layer Protocol Stack, HTTP/SMTP/POP3/IMAP/FTP & DNS Resolution** ([Lesson](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-2-3) · [Notes](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-2-3) · [Quiz](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-2-3) · [Flashcards](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-2-3))
+
+### 3. Hardware, Processor Architecture & Boolean Logic (AS + A2)
+- **3.1 Registers, Buses, Assembly Language, Addressing Modes & Bit Manipulation** ([Lesson](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-3-1) · [Notes](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-3-1) · [Quiz](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-3-1) · [Flashcards](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-3-1))
+- **3.2 RISC vs CISC, Pipelining, Parallel Architectures (SISD–MIMD) & Virtual Machines** ([Lesson](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-3-2) · [Notes](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-3-2) · [Quiz](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-3-2) · [Flashcards](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-3-2))
+- **3.3 Half/Full Adders, Flip-Flops, Boolean Algebra, De Morgan’s & Karnaugh Maps** ([Lesson](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-3-3) · [Notes](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-3-3) · [Quiz](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-3-3) · [Flashcards](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-3-3))
+
+### 4. System Software, Operating Systems & Translation (AS + A2)
+- **4.1 OS Memory Management (Paging, Segmentation, Virtual Memory) & CPU Scheduling** ([Lesson](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-4-1) · [Notes](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-4-1) · [Quiz](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-4-1) · [Flashcards](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-4-1))
+- **4.2 Compilation Stages, Two-Pass Assembly, Linkers/Loaders, BNF & Reverse Polish Notation** ([Lesson](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-4-2) · [Notes](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-4-2) · [Quiz](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-4-2) · [Flashcards](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-4-2))
+
+### 5. Security, Cryptography & Relational Databases (AS + A2)
+- **5.1 Security, Integrity, Digital Signatures, Certificates, TLS/SSL & Quantum Cryptography** ([Lesson](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-5-1) · [Notes](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-5-1) · [Quiz](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-5-1) · [Flashcards](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-5-1))
+- **5.2 Relational Databases, ERDs, Normalisation (1NF → 2NF → 3NF) & SQL (DDL & DML)** ([Lesson](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-5-2) · [Notes](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-5-2) · [Quiz](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-5-2) · [Flashcards](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-5-2))
+
+### 6. Software Development & Algorithm Complexity (AS + A2)
+- **6.1 SDLC Models (Waterfall, Iterative, RAD, Agile/XP), Testing & Software Maintenance** ([Lesson](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-6-1) · [Notes](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-6-1) · [Quiz](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-6-1) · [Flashcards](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-6-1))
+- **6.2 Computational Thinking, Structure Charts, State-Transition Diagrams & Big-O Complexity** ([Lesson](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-6-2) · [Notes](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-6-2) · [Quiz](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-6-2) · [Flashcards](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-6-2))
+
+### 7. Abstract Data Types (ADTs), Searching & Sorting (A2 Paper 3 & 4)
+- **7.1 Stacks (LIFO), Circular Queues (FIFO) & Linked Lists (Pointers & Free-List)** ([Lesson](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-7-1) · [Notes](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-7-1) · [Quiz](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-7-1) · [Flashcards](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-7-1))
+- **7.2 Binary Search Trees (Pre/In/Post-Order), Hash Tables (Collisions) & Dictionaries** ([Lesson](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-7-2) · [Notes](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-7-2) · [Quiz](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-7-2) · [Flashcards](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-7-2))
+- **7.3 Searching & Sorting: Linear vs Binary Search, Bubble, Insertion & Merge Sort** ([Lesson](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-7-3) · [Notes](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-7-3) · [Quiz](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-7-3) · [Flashcards](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-7-3))
+
+### 8. Programming Paradigms, Recursion & Artificial Intelligence (A2 Paper 3 & 4)
+- **8.1 Object-Oriented Programming (OOP), Serial/Random Files & Exception Handling** ([Lesson](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-8-1) · [Notes](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-8-1) · [Quiz](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-8-1) · [Flashcards](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-8-1))
+- **8.2 Recursion: Base/General Cases, Call Stack Frames & Winding/Unwinding Traces** ([Lesson](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-8-2) · [Notes](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-8-2) · [Quiz](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-8-2) · [Flashcards](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-8-2))
+- **8.3 Graphs, Dijkstra’s Shortest Path, A* Heuristic, Neural Networks & Machine Learning** ([Lesson](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/lesson/al-cs-8-3) · [Notes](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/notes/al-cs-8-3) · [Quiz](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/quiz/al-cs-8-3) · [Flashcards](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie/flashcards/al-cs-8-3))
+
+## Related Links
+
+- [All Courses](https://initialtide.github.io/Cognify/courses)
+- [Cognify API Catalog JSON](https://initialtide.github.io/Cognify/api/v1/courses.json)
+- [Agent Instructions (llms.txt)](https://initialtide.github.io/Cognify/llms.txt)
+
+
 <!-- Route: /course/gcse-business-cie-core -->
 # GCSE Business Studies (CIE, Core) — Cognify Revision Course
 
@@ -2437,7 +2518,7 @@ See also: [About Cognify](https://initialtide.github.io/Cognify/about) · [Conta
 <!-- Route: /course/gcse-computer-science-cie-core -->
 # GCSE Computer Science (CIE, Core) — Cognify Revision Course
 
-> Free GCSE Computer Science (CIE, Core) revision course on Cognify with 6 topics, 8 subtopics, interactive video lessons, structured revision notes, quizzes, flashcards, exam-style practice, and 8 past papers.
+> Free GCSE Computer Science (CIE, Core) revision course on Cognify with 10 topics, 24 subtopics, interactive video lessons, structured revision notes, quizzes, flashcards, exam-style practice, and 8 past papers.
 
 **Course URL:** https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core
 **Qualification:** GCSE
@@ -2447,24 +2528,48 @@ See also: [About Cognify](https://initialtide.github.io/Cognify/about) · [Conta
 ## Topics & Subtopics
 
 ### 1. Data Representation
-- **1.1 Number Systems: Binary, Hexadecimal, Two’s Complement & Shifts** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-1-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-1-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-1-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-1-1))
-- **1.2 Text (ASCII/Unicode), Sound, Bitmap Images & Compression** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-1-2) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-1-2) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-1-2) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-1-2))
+- **1.1 Number Systems: Binary, Hexadecimal, Binary Addition, Shifts & Two’s Complement** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-1-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-1-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-1-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-1-1))
+- **1.2 Text (ASCII & Unicode), Sound Sampling & Bitmap Images** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-1-2) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-1-2) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-1-2) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-1-2))
+- **1.3 Data Storage Units (KiB/MiB), File Size Calculations & Compression** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-1-3) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-1-3) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-1-3) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-1-3))
 
-### 2. Data Transmission & Error Detection
-- **2.1 Packet Switching, Serial/Parallel, Error Checking & Encryption** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-2-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-2-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-2-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-2-1))
+### 2. Data Transmission
+- **2.1 Packet Structure, Packet Switching, Serial/Parallel Transmission & USB** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-2-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-2-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-2-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-2-1))
+- **2.2 Error Detection: Parity Bits, Checksums, Echo Checks, Check Digits & ARQ** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-2-2) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-2-2) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-2-2) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-2-2))
+- **2.3 Symmetric & Asymmetric Encryption (Public & Private Keys)** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-2-3) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-2-3) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-2-3) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-2-3))
 
-### 3. Hardware & CPU Architecture
-- **3.1 Von Neumann Architecture, FDE Cycle, Cache, Primary & Secondary Storage** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-3-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-3-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-3-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-3-1))
+### 3. Hardware
+- **3.1 Von Neumann Architecture, FDE Cycle, CPU Performance & Embedded Systems** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-3-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-3-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-3-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-3-1))
+- **3.2 Input/Output Devices, Sensors & Network Hardware (NIC, MAC, IP & Routers)** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-3-2) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-3-2) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-3-2) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-3-2))
+- **3.3 Primary Memory (RAM/ROM), Secondary Storage, Virtual Memory & Cloud Storage** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-3-3) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-3-3) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-3-3) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-3-3))
 
-### 4. Software & Operating Systems
-- **4.1 Operating Systems, Interrupts, High/Low-Level Languages & Translators** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-4-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-4-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-4-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-4-1))
+### 4. Software
+- **4.1 System vs Application Software, Operating System Functions, Firmware & Interrupts** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-4-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-4-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-4-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-4-1))
+- **4.2 High/Low-Level Languages, Assembly, Compilers, Interpreters & IDEs** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-4-2) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-4-2) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-4-2) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-4-2))
 
-### 5. The Internet & Cyber Security
-- **5.1 HTTP/HTTPS, DNS, Malware, Social Engineering & Defences** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-5-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-5-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-5-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-5-1))
+### 5. The Internet & Its Uses
+- **5.1 Internet vs WWW, URLs, HTTP/HTTPS, DNS, Cookies & Blockchain Digital Currencies** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-5-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-5-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-5-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-5-1))
+- **5.2 Cyber Security Threats (Malware, Phishing, DDoS, SQLi) & Layered Defences** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-5-2) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-5-2) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-5-2) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-5-2))
 
-### 6. Algorithms, Programming, Databases & Boolean Logic
-- **6.1 Algorithms, Pseudocode, Trace Tables, Validation & Test Data** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-6-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-6-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-6-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-6-1))
-- **6.2 Relational Databases, SQL Queries & Boolean Logic Gates** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-6-2) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-6-2) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-6-2) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-6-2))
+### 6. Automated & Emerging Technologies
+- **6.1 Automated Systems (Sensors, Microprocessors & Actuators) & Robotics** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-6-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-6-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-6-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-6-1))
+- **6.2 Artificial Intelligence, Expert Systems & Machine Learning** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-6-2) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-6-2) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-6-2) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-6-2))
+
+### 7. Algorithm Design & Problem-Solving
+- **7.1 Program Development Life Cycle, Decomposition, Structure Diagrams & Pseudocode** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-7-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-7-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-7-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-7-1))
+- **7.2 Standard Algorithms: Linear Search, Bubble Sort, Totalling, Counting & Max/Min** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-7-2) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-7-2) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-7-2) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-7-2))
+- **7.3 Validation, Verification, Test Data & Trace Tables** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-7-3) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-7-3) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-7-3) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-7-3))
+
+### 8. Programming
+- **8.1 Variables, Data Types, Sequence/Selection/Iteration, Operators & String Handling** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-8-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-8-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-8-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-8-1))
+- **8.2 Procedures, Functions, Parameters, Local/Global Scope, Libraries & Maintainability** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-8-2) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-8-2) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-8-2) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-8-2))
+- **8.3 1D & 2D Arrays, Nested Iteration & Text File Handling** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-8-3) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-8-3) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-8-3) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-8-3))
+
+### 9. Databases
+- **9.1 Single-Table Databases, Primary Keys, Data Types & SQL Queries** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-9-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-9-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-9-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-9-1))
+
+### 10. Boolean Logic
+- **10.1 Logic Gates (NOT, AND, OR, NAND, NOR, XOR) & Truth Tables** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-10-1) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-10-1) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-10-1) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-10-1))
+- **10.2 Building Logic Circuits & Expressions from Truth Tables & Problem Statements** ([Lesson](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/lesson/cs-10-2) · [Notes](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/notes/cs-10-2) · [Quiz](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/quiz/cs-10-2) · [Flashcards](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core/flashcards/cs-10-2))
 
 ## Related Links
 

@@ -7,25 +7,25 @@
 | Metric | Current | Target |
 | --- | --- | --- |
 | **Overall Learning Depth Score** | **100 / 100** | 95+ / 100 |
-| **Active Deep Courses Audited** | 25 | 31+ |
-| **Total Subtopic Lessons** | 354 | Growing |
+| **Active Deep Courses Audited** | 26 | 31+ |
+| **Total Subtopic Lessons** | 390 | Growing |
 | **IGCSE Unlocked Subjects** | 13 / 13 (0 stubs) | 13 / 13 |
-| **A-Level Unlocked Subjects** | 7 / 14 (0 stubs) | 14 / 14 |
+| **A-Level Unlocked Subjects** | 8 / 14 (0 stubs) | 14 / 14 |
 | **Explicit Authored Quizzes / Subtopic** | 5 | 5.0+ |
 | **Explicit Authored Flashcards / Subtopic** | 5 | 5.0+ |
 | **Explicit Authored Exam Practice / Subtopic** | 1 | 1.0+ |
 | **Explicit Authored Cheat Sheets / Topic** | 1 | 1.0 |
 | **Baked `-extra-` / Template Items** | 0 | 0 |
 | **Runtime `-syn-` Fallback Items** | 0 | 0 |
-| **Gradable Short-Answer MarkPoints** | **100%** (2153 / 2153, 0 ungradable) | 100% |
+| **Gradable Short-Answer MarkPoints** | **100%** (2349 / 2349, 0 ungradable) | 100% |
 
 ## Top Next Learning Upgrades (Auto-Prioritized)
 
 | Priority | Category | Target | Why It Improves Learning |
 | --- | --- | --- | --- |
 | **P3** | Add Roadmap Subject | A-Level further-maths | Planned in PLAN.md Phase 4 (target: 14 unlocked A-Level subjects). |
-| **P3** | Add Roadmap Subject | A-Level computer-science | Planned in PLAN.md Phase 4 (target: 14 unlocked A-Level subjects). |
 | **P3** | Add Roadmap Subject | A-Level geography | Planned in PLAN.md Phase 4 (target: 14 unlocked A-Level subjects). |
+| **P3** | Add Roadmap Subject | A-Level history | Planned in PLAN.md Phase 4 (target: 14 unlocked A-Level subjects). |
 
 ## Course Pedagogical Depth Breakdown
 
@@ -34,6 +34,7 @@
 | `a-level-biology-aqa` | 16 | **100/100** | 100% | 100% | 100% | 100% | 6 |
 | `a-level-business-aqa` | 16 | **100/100** | 100% | 100% | 100% | 100% | 4 |
 | `a-level-chemistry-aqa` | 16 | **100/100** | 100% | 100% | 100% | 100% | 4 |
+| `a-level-computer-science-cie` | 20 | **100/100** | 100% | 100% | 100% | 100% | 7 |
 | `a-level-economics-aqa` | 16 | **100/100** | 100% | 100% | 100% | 100% | 8 |
 | `a-level-maths-cie` | 15 | **100/100** | 100% | 100% | 100% | 100% | 2 |
 | `a-level-physics-aqa` | 16 | **100/100** | 100% | 100% | 100% | 100% | 4 |
@@ -46,7 +47,7 @@
 | `igcse-biology-cie` | 20 | **100/100** | 100% | 100% | 100% | 100% | 7 |
 | `igcse-business-cie` | 28 | **100/100** | 100% | 100% | 100% | 100% | 5 |
 | `igcse-chemistry-cie` | 16 | **100/100** | 100% | 100% | 100% | 100% | 3 |
-| `igcse-computer-science-cie` | 8 | **100/100** | 100% | 100% | 100% | 100% | 2 |
+| `igcse-computer-science-cie` | 24 | **100/100** | 100% | 100% | 100% | 100% | 6 |
 | `igcse-economics-cie` | 33 | **100/100** | 100% | 100% | 100% | 100% | 11 |
 | `igcse-english-language-cie` | 6 | **100/100** | 100% | 100% | 100% | 100% | 0 |
 | `igcse-english-literature-cie` | 8 | **100/100** | 100% | 100% | 100% | 100% | 0 |
@@ -64,6 +65,7 @@
 | `a-level-biology-aqa` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (117/117) |
 | `a-level-business-aqa` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (127/127) |
 | `a-level-chemistry-aqa` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (114/114) |
+| `a-level-computer-science-cie` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (108/108) |
 | `a-level-economics-aqa` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (144/144) |
 | `a-level-maths-cie` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (90/90) |
 | `a-level-physics-aqa` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (115/115) |
@@ -76,7 +78,7 @@
 | `igcse-biology-cie` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (102/102) |
 | `igcse-business-cie` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (140/140) |
 | `igcse-chemistry-cie` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (98/98) |
-| `igcse-computer-science-cie` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (40/40) |
+| `igcse-computer-science-cie` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (128/128) |
 | `igcse-economics-cie` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (165/165) |
 | `igcse-english-language-cie` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (30/30) |
 | `igcse-english-literature-cie` | 5 | 5 | 1 | 1 | 0 | 0 | 100% (46/46) |
@@ -108,4 +110,4 @@
 
 - **IGCSE Stubs to Replace**: None
 - **IGCSE Subjects Not Yet Added**: None
-- **A-Level Subjects Not Yet Added**: further-maths, computer-science, geography, history, sociology, english-literature, religious-studies
+- **A-Level Subjects Not Yet Added**: further-maths, geography, history, sociology, english-literature, religious-studies

@@ -1,6 +1,6 @@
 # Cognify Curriculum API Reference
 
-> OpenAPI 3.1.0 read-only JSON and Markdown API for Cognify's 51 GCSE, IGCSE, and A-Level courses across AQA, Edexcel, OCR A, OCR B, CCEA, WJEC, SQA National 5, CIE, Edexcel International, Oxford AQA.
+> OpenAPI 3.1.0 read-only JSON and Markdown API for Cognify's 52 GCSE, IGCSE, and A-Level courses across AQA, Edexcel, OCR A, OCR B, CCEA, WJEC, SQA National 5, CIE, Edexcel International, Oxford AQA.
 
 **Base URL:** https://initialtide.github.io/Cognify
 **OpenAPI Spec:** [https://initialtide.github.io/Cognify/api/openapi.json](https://initialtide.github.io/Cognify/api/openapi.json)

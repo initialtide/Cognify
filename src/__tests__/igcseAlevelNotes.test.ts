@@ -33,6 +33,7 @@ const REQUIRED_ALEVEL_COURSE_IDS = [
   'a-level-business-cie',
   'a-level-economics-aqa',
   'a-level-economics-cie',
+  'a-level-computer-science-cie',
 ] as const;
 
 const YOUTUBE_ID_REGEX = /^[A-Za-z0-9_-]{11}$/;
@@ -70,6 +71,11 @@ const VALID_DIAGRAM_KINDS = new Set<DiagramKind>([
   'ad-as-macro',
   'monopoly-market-structure',
   'externality-market-failure',
+  'tcpip-packet-switching',
+  'sorting-searching-trace',
+  'adt-structures',
+  'database-normalisation-erd',
+  'compiler-pipeline-os',
 ]);
 
 function assertCourseHasCompleteNotes(course: CourseDefinition) {
@@ -375,5 +381,47 @@ describe('IGCSE & A-Level Notes, Videos & Catalog Coverage', () => {
     const alBusEdexcel = resolveCourseVariant('a-level', 'business', 'edexcel', 'A-Level');
     expect(alBusEdexcel.qualification).toBe('a-level');
     expect(alBusEdexcel.topics[0]?.subtopics[0]?.id.startsWith('al-bus-')).toBe(true);
+  });
+
+  it('enforces CIE-only IGCSE (0478) & A-Level (9618) Computer Science with 100% Craig’n’Dave attribution and official PDFs', () => {
+    const igCs = getCourseById('igcse-computer-science-cie');
+    const alCs = getCourseById('a-level-computer-science-cie');
+    expect(igCs).toBeDefined();
+    expect(alCs).toBeDefined();
+
+    // CIE-only boards enforced on both IGCSE & A-Level Computer Science
+    expect(igCs!.availableBoards).toEqual(['cie']);
+    expect(alCs!.availableBoards).toEqual(['cie']);
+    const igAlCs = ALL_COURSES.filter(
+      (c) => (c.qualification === 'igcse' || c.qualification === 'a-level') && c.subjectSlug === 'computer-science'
+    );
+    expect(igAlCs.map((c) => c.id).sort()).toEqual([
+      'a-level-computer-science-cie',
+      'igcse-computer-science-cie',
+    ]);
+
+    // Full syllabus coverage: 10 units / 24 chapters on IGCSE 0478; 8 units / 20 chapters on A-Level 9618
+    expect(igCs!.topics.length).toBe(10);
+    expect(igCs!.topics.flatMap((t) => t.subtopics).length).toBe(24);
+    expect(alCs!.topics.length).toBe(8);
+    expect(alCs!.topics.flatMap((t) => t.subtopics).length).toBe(20);
+
+    // 100% Craig'n'Dave attribution + unique YouTube IDs per course
+    for (const course of [igCs!, alCs!]) {
+      const subs = course.topics.flatMap((t) => t.subtopics);
+      const ytIds = new Set<string>();
+      for (const sub of subs) {
+        const lesson = course.notes[sub.id];
+        expect(lesson?.videoChannel, `${course.id}/${sub.id} should use Craig'n'Dave`).toBe("Craig'n'Dave");
+        if (lesson?.youtubeId) ytIds.add(lesson.youtubeId);
+      }
+      expect(ytIds.size, `${course.id} should have 100% unique videos`).toBe(subs.length);
+    }
+
+    // Official Cambridge 9618 PDFs attached
+    const alOfficialPdfs = alCs!.pastPapers.filter((p) =>
+      Boolean(p.questionPaperUrl?.startsWith('https://www.cambridgeinternational.org/Images/'))
+    );
+    expect(alOfficialPdfs.length).toBeGreaterThanOrEqual(7);
   });
 });

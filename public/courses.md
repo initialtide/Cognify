@@ -1,6 +1,6 @@
-# Cognify Course Catalog — 51 Free GCSE, IGCSE & A-Level Courses
+# Cognify Course Catalog — 52 Free GCSE, IGCSE & A-Level Courses
 
-> Browse all 51 structured courses and 761+ subtopics across KS3, GCSE, IGCSE, A-Level, IB, Entrance Exams, US Sciences, US AP and AQA, Edexcel, OCR A, OCR B, CCEA, WJEC, SQA National 5, CIE, Edexcel International, Oxford AQA.
+> Browse all 52 structured courses and 813+ subtopics across KS3, GCSE, IGCSE, A-Level, IB, Entrance Exams, US Sciences, US AP and AQA, Edexcel, OCR A, OCR B, CCEA, WJEC, SQA National 5, CIE, Edexcel International, Oxford AQA.
 
 - [GCSE Biology (AQA, Triple · Higher)](https://initialtide.github.io/Cognify/course/gcse-biology-aqa-higher): 7 topics, 16 subtopics, 6 past papers.
 - [GCSE Biology (AQA, Triple · Foundation)](https://initialtide.github.io/Cognify/course/gcse-biology-aqa-foundation): 7 topics, 16 subtopics, 6 past papers.
@@ -21,7 +21,7 @@
 - [IGCSE Maths (CIE, Extended)](https://initialtide.github.io/Cognify/course/igcse-maths-cie): 8 topics, 15 subtopics, 12 past papers.
 - [IGCSE Maths (Edexcel International, Extended)](https://initialtide.github.io/Cognify/course/igcse-maths-edexcel-intl): 8 topics, 15 subtopics, 12 past papers.
 - [IGCSE Business Studies (CIE, Core)](https://initialtide.github.io/Cognify/course/igcse-business-cie): 6 topics, 28 subtopics, 8 past papers.
-- [IGCSE Computer Science (CIE, Core)](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie): 6 topics, 8 subtopics, 8 past papers.
+- [IGCSE Computer Science (CIE, Core)](https://initialtide.github.io/Cognify/course/igcse-computer-science-cie): 10 topics, 24 subtopics, 8 past papers.
 - [IGCSE Economics (CIE, Core)](https://initialtide.github.io/Cognify/course/igcse-economics-cie): 6 topics, 33 subtopics, 10 past papers.
 - [IGCSE English Language (CIE, Core)](https://initialtide.github.io/Cognify/course/igcse-english-language-cie): 4 topics, 6 subtopics, 10 past papers.
 - [IGCSE English Literature (CIE, Core)](https://initialtide.github.io/Cognify/course/igcse-english-literature-cie): 4 topics, 8 subtopics, 10 past papers.
@@ -43,8 +43,9 @@
 - [A-Level Business Studies (CIE, A-Level)](https://initialtide.github.io/Cognify/course/a-level-business-cie): 6 topics, 16 subtopics, 10 past papers.
 - [A-Level Economics (AQA, A-Level)](https://initialtide.github.io/Cognify/course/a-level-economics-aqa): 6 topics, 16 subtopics, 10 past papers.
 - [A-Level Economics (CIE, A-Level)](https://initialtide.github.io/Cognify/course/a-level-economics-cie): 6 topics, 16 subtopics, 10 past papers.
+- [A-Level Computer Science (CIE, A-Level)](https://initialtide.github.io/Cognify/course/a-level-computer-science-cie): 8 topics, 20 subtopics, 9 past papers.
 - [GCSE Business Studies (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-business-cie-core): 6 topics, 28 subtopics, 8 past papers.
-- [GCSE Computer Science (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core): 6 topics, 8 subtopics, 8 past papers.
+- [GCSE Computer Science (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core): 10 topics, 24 subtopics, 8 past papers.
 - [GCSE Economics (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-economics-cie-core): 6 topics, 33 subtopics, 10 past papers.
 - [GCSE English Language (CIE, Core)](https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core): 4 topics, 6 subtopics, 10 past papers.
 - [GCSE Psychology (Oxford AQA, Core)](https://initialtide.github.io/Cognify/course/gcse-psychology-oxford-aqa-core): 4 topics, 4 subtopics, 8 past papers.
