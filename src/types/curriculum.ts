@@ -73,7 +73,13 @@ export type DiagramKind =
   | 'cpu-fde-architecture'
   | 'logic-gates-truth'
   | 'tectonic-plate-margins'
-  | 'break-even-chart';
+  | 'break-even-chart'
+  | 'product-life-cycle'
+  | 'business-cycle'
+  | 'elasticity-curves'
+  | 'ad-as-macro'
+  | 'monopoly-market-structure'
+  | 'externality-market-failure';
 
 export interface GlossaryPill {
   term: string;

@@ -666,9 +666,9 @@ export const IGCSE_ENGLISH_LIT_NOTES: Record<string, NoteLesson> = {
     subtopicCode: '3.2',
     subtopicTitle: 'Shakespeare & Modern Drama: Dialogue, Soliloquy & Staging',
     readingMinutes: 10,
-    videoTitle: 'Shakespeare vs Modern Drama: Soliloquies, Blank Verse & Staging',
-    youtubeId: 'v1EE7ylBqtM',
-    videoChannel: 'First Rate Tutors',
+    videoTitle: 'Shakespeare Drama: Structure, Soliloquy & Staging Analysis',
+    youtubeId: '95Vfcb7VvCA',
+    videoChannel: 'Mr Bruff',
     videoDuration: '9:10',
     courseMatchSummary: '4 of 4 sections match Cambridge IGCSE Literature in English (0475) Drama Texts',
     timestamps: [

@@ -840,7 +840,8 @@ function buildCompletePastPapers(
 
   const officialCambridge = getOfficialCambridgePapersForCourse(
     course.qualification,
-    course.subjectSlug
+    course.subjectSlug,
+    course.board
   );
   const officialDocs: PastPaperDoc[] = (officialCambridge?.papers ?? []).map((pp) => {
     const paperNum: 1 | 2 = /Paper\s+[246]/i.test(pp.title) ? 2 : 1;

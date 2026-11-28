@@ -3847,6 +3847,25 @@ dialog.quick-search-dialog[open] {
   }
 }
 
+.cognito-inline-formula {
+  display: inline;
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  font-weight: 600;
+  color: #1e3a8a;
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 6px;
+  padding: 1px 6px;
+  white-space: break-spaces;
+}
+
+:root[data-theme="dark"] .cognito-inline-formula {
+  color: #dbeafe;
+  background-color: rgba(59, 130, 246, 0.16);
+  border-color: rgba(96, 165, 250, 0.35);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

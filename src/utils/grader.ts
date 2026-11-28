@@ -33,11 +33,15 @@ function matchesKeywordGroup(normalizedAnswer: string, group: string[]): boolean
 }
 
 function matchesNumeric(rawAnswer: string, target: { value: number; tolerance: number; unit?: string }): boolean {
-  const nums = rawAnswer.match(/-?\d+(?:\.\d+)?/g);
+  const sanitized = rawAnswer
+    .replace(/[\u2212\u2013\u2014]/g, '-')
+    .replace(/(?<=\d),(?=\d{3}(?!\d))/g, '')
+    .replace(/-\s*[£$€¥]/g, '-');
+  const nums = sanitized.match(/-?\d+(?:\.\d+)?/g);
   if (!nums) return false;
   const hasMatchingNumber = nums.some((token) => {
     const val = Number.parseFloat(token);
-    return Number.isFinite(val) && Math.abs(val - target.value) <= target.tolerance;
+    return Number.isFinite(val) && Math.abs(val - target.value) <= target.tolerance + 1e-9;
   });
   if (!hasMatchingNumber) return false;
   if (!target.unit) return true;

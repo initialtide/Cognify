@@ -1,6 +1,6 @@
 # GCSE English Language (CIE, Core) — Cognify Revision Course
 
-> Free GCSE English Language (CIE, Core) revision course on Cognify with 4 topics, 6 subtopics, interactive video lessons, structured revision notes, quizzes, flashcards, exam-style practice, and 6 past papers.
+> Free GCSE English Language (CIE, Core) revision course on Cognify with 4 topics, 6 subtopics, interactive video lessons, structured revision notes, quizzes, flashcards, exam-style practice, and 10 past papers.
 
 **Course URL:** https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core
 **Qualification:** GCSE

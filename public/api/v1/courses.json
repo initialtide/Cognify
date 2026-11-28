@@ -92,8 +92,8 @@
       "label": "Oxford AQA"
     }
   ],
-  "courseCount": 47,
-  "totalSubtopics": 615,
+  "courseCount": 51,
+  "totalSubtopics": 761,
   "courses": [
     {
       "id": "gcse-biology-aqa-higher",
@@ -614,7 +614,7 @@
       ],
       "topicCount": 10,
       "subtopicCount": 20,
-      "pastPaperCount": 6,
+      "pastPaperCount": 16,
       "keyTermCount": 96,
       "cheatSheetCount": 10,
       "url": "https://initialtide.github.io/Cognify/course/gcse-biology-cie-extended",
@@ -1144,7 +1144,7 @@
       ],
       "topicCount": 10,
       "subtopicCount": 16,
-      "pastPaperCount": 6,
+      "pastPaperCount": 16,
       "keyTermCount": 73,
       "cheatSheetCount": 10,
       "url": "https://initialtide.github.io/Cognify/course/gcse-chemistry-cie-extended",
@@ -1590,7 +1590,7 @@
       ],
       "topicCount": 6,
       "subtopicCount": 16,
-      "pastPaperCount": 6,
+      "pastPaperCount": 16,
       "keyTermCount": 65,
       "cheatSheetCount": 6,
       "url": "https://initialtide.github.io/Cognify/course/gcse-physics-cie-extended",
@@ -4395,9 +4395,9 @@
         "Core"
       ],
       "topicCount": 6,
-      "subtopicCount": 12,
+      "subtopicCount": 28,
       "pastPaperCount": 8,
-      "keyTermCount": 66,
+      "keyTermCount": 157,
       "cheatSheetCount": 6,
       "url": "https://initialtide.github.io/Cognify/course/igcse-business-cie",
       "markdownUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie.md",
@@ -4410,7 +4410,7 @@
             {
               "id": "igcse-bus-1-1",
               "code": "1.1",
-              "title": "Enterprise, Added Value & Classification of Businesses",
+              "title": "Business Activity, Scarcity & Added Value",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/lesson/igcse-bus-1-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/notes/igcse-bus-1-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/quiz/igcse-bus-1-1",
@@ -4420,12 +4420,42 @@
             {
               "id": "igcse-bus-1-2",
               "code": "1.2",
-              "title": "Business Growth, Types of Organisation, Objectives & Stakeholders",
+              "title": "Classification of Businesses & Economic Sectors",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/lesson/igcse-bus-1-2",
               "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/notes/igcse-bus-1-2",
               "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/quiz/igcse-bus-1-2",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/flashcards/igcse-bus-1-2",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/exam-practice/igcse-bus-1-2"
+            },
+            {
+              "id": "igcse-bus-1-3",
+              "code": "1.3",
+              "title": "Enterprise, Business Growth & Measuring Size",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/lesson/igcse-bus-1-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/notes/igcse-bus-1-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/quiz/igcse-bus-1-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/flashcards/igcse-bus-1-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/exam-practice/igcse-bus-1-3"
+            },
+            {
+              "id": "igcse-bus-1-4",
+              "code": "1.4",
+              "title": "Types of Business Organisations (Sole Trader, Ltd, Plc, Franchise)",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/lesson/igcse-bus-1-4",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/notes/igcse-bus-1-4",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/quiz/igcse-bus-1-4",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/flashcards/igcse-bus-1-4",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/exam-practice/igcse-bus-1-4"
+            },
+            {
+              "id": "igcse-bus-1-5",
+              "code": "1.5",
+              "title": "Business Objectives & Stakeholder Objectives",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/lesson/igcse-bus-1-5",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/notes/igcse-bus-1-5",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/quiz/igcse-bus-1-5",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/flashcards/igcse-bus-1-5",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/exam-practice/igcse-bus-1-5"
             }
           ]
         },
@@ -4437,7 +4467,7 @@
             {
               "id": "igcse-bus-2-1",
               "code": "2.1",
-              "title": "Motivating Employees (Taylor, Maslow, Herzberg) & Rewards",
+              "title": "Motivating Employees (Taylor, Maslow, Herzberg & Rewards)",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/lesson/igcse-bus-2-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/notes/igcse-bus-2-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/quiz/igcse-bus-2-1",
@@ -4447,12 +4477,32 @@
             {
               "id": "igcse-bus-2-2",
               "code": "2.2",
-              "title": "Organisation Structure, Leadership, Recruitment, Training & Communication",
+              "title": "Organisation, Management, Leadership & Trade Unions",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/lesson/igcse-bus-2-2",
               "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/notes/igcse-bus-2-2",
               "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/quiz/igcse-bus-2-2",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/flashcards/igcse-bus-2-2",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/exam-practice/igcse-bus-2-2"
+            },
+            {
+              "id": "igcse-bus-2-3",
+              "code": "2.3",
+              "title": "Recruitment, Selection, Training & Legal Controls",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/lesson/igcse-bus-2-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/notes/igcse-bus-2-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/quiz/igcse-bus-2-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/flashcards/igcse-bus-2-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/exam-practice/igcse-bus-2-3"
+            },
+            {
+              "id": "igcse-bus-2-4",
+              "code": "2.4",
+              "title": "Internal & External Communication",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/lesson/igcse-bus-2-4",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/notes/igcse-bus-2-4",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/quiz/igcse-bus-2-4",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/flashcards/igcse-bus-2-4",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/exam-practice/igcse-bus-2-4"
             }
           ]
         },
@@ -4464,7 +4514,7 @@
             {
               "id": "igcse-bus-3-1",
               "code": "3.1",
-              "title": "Market Segmentation, Niche vs Mass Markets & Market Research",
+              "title": "Marketing, Competition, Segmentation & Niche vs Mass Markets",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/lesson/igcse-bus-3-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/notes/igcse-bus-3-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/quiz/igcse-bus-3-1",
@@ -4474,12 +4524,62 @@
             {
               "id": "igcse-bus-3-2",
               "code": "3.2",
-              "title": "The Marketing Mix (4 Ps: Product, Price, Place, Promotion) & E-Commerce",
+              "title": "Market Research (Primary, Secondary & Sampling)",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/lesson/igcse-bus-3-2",
               "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/notes/igcse-bus-3-2",
               "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/quiz/igcse-bus-3-2",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/flashcards/igcse-bus-3-2",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/exam-practice/igcse-bus-3-2"
+            },
+            {
+              "id": "igcse-bus-3-3",
+              "code": "3.3",
+              "title": "Marketing Mix: Product, Branding & Product Life Cycle",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/lesson/igcse-bus-3-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/notes/igcse-bus-3-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/quiz/igcse-bus-3-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/flashcards/igcse-bus-3-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/exam-practice/igcse-bus-3-3"
+            },
+            {
+              "id": "igcse-bus-3-4",
+              "code": "3.4",
+              "title": "Marketing Mix: Pricing Strategies & Price Elasticity",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/lesson/igcse-bus-3-4",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/notes/igcse-bus-3-4",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/quiz/igcse-bus-3-4",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/flashcards/igcse-bus-3-4",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/exam-practice/igcse-bus-3-4"
+            },
+            {
+              "id": "igcse-bus-3-5",
+              "code": "3.5",
+              "title": "Marketing Mix: Place & Channels of Distribution",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/lesson/igcse-bus-3-5",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/notes/igcse-bus-3-5",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/quiz/igcse-bus-3-5",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/flashcards/igcse-bus-3-5",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/exam-practice/igcse-bus-3-5"
+            },
+            {
+              "id": "igcse-bus-3-6",
+              "code": "3.6",
+              "title": "Marketing Mix: Promotion, Advertising & E-Commerce",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/lesson/igcse-bus-3-6",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/notes/igcse-bus-3-6",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/quiz/igcse-bus-3-6",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/flashcards/igcse-bus-3-6",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/exam-practice/igcse-bus-3-6"
+            },
+            {
+              "id": "igcse-bus-3-7",
+              "code": "3.7",
+              "title": "Marketing Strategy, Legal Controls & Foreign Markets",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/lesson/igcse-bus-3-7",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/notes/igcse-bus-3-7",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/quiz/igcse-bus-3-7",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/flashcards/igcse-bus-3-7",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/exam-practice/igcse-bus-3-7"
             }
           ]
         },
@@ -4491,7 +4591,7 @@
             {
               "id": "igcse-bus-4-1",
               "code": "4.1",
-              "title": "Production Methods (Job, Batch, Flow), Productivity & Lean Production",
+              "title": "Production Methods, Productivity, Technology & Lean Production",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/lesson/igcse-bus-4-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/notes/igcse-bus-4-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/quiz/igcse-bus-4-1",
@@ -4501,12 +4601,32 @@
             {
               "id": "igcse-bus-4-2",
               "code": "4.2",
-              "title": "Costs, Economies of Scale, Break-Even Analysis & Quality",
+              "title": "Costs, Economies of Scale & Break-Even Analysis",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/lesson/igcse-bus-4-2",
               "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/notes/igcse-bus-4-2",
               "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/quiz/igcse-bus-4-2",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/flashcards/igcse-bus-4-2",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/exam-practice/igcse-bus-4-2"
+            },
+            {
+              "id": "igcse-bus-4-3",
+              "code": "4.3",
+              "title": "Achieving Quality Production (Quality Control, Quality Assurance & TQM)",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/lesson/igcse-bus-4-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/notes/igcse-bus-4-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/quiz/igcse-bus-4-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/flashcards/igcse-bus-4-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/exam-practice/igcse-bus-4-3"
+            },
+            {
+              "id": "igcse-bus-4-4",
+              "code": "4.4",
+              "title": "Location Decisions (Manufacturing, Services & Relocating Overseas)",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/lesson/igcse-bus-4-4",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/notes/igcse-bus-4-4",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/quiz/igcse-bus-4-4",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/flashcards/igcse-bus-4-4",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/exam-practice/igcse-bus-4-4"
             }
           ]
         },
@@ -4518,7 +4638,7 @@
             {
               "id": "igcse-bus-5-1",
               "code": "5.1",
-              "title": "Sources of Business Finance & Cash-Flow Forecasting",
+              "title": "Business Finance: Needs & Sources (Internal vs External)",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/lesson/igcse-bus-5-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/notes/igcse-bus-5-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/quiz/igcse-bus-5-1",
@@ -4528,12 +4648,42 @@
             {
               "id": "igcse-bus-5-2",
               "code": "5.2",
-              "title": "Income Statements, Balance Sheets & Financial Ratios",
+              "title": "Cash-Flow Forecasting & Working Capital",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/lesson/igcse-bus-5-2",
               "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/notes/igcse-bus-5-2",
               "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/quiz/igcse-bus-5-2",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/flashcards/igcse-bus-5-2",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/exam-practice/igcse-bus-5-2"
+            },
+            {
+              "id": "igcse-bus-5-3",
+              "code": "5.3",
+              "title": "Income Statements (Profit & Loss Accounts)",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/lesson/igcse-bus-5-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/notes/igcse-bus-5-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/quiz/igcse-bus-5-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/flashcards/igcse-bus-5-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/exam-practice/igcse-bus-5-3"
+            },
+            {
+              "id": "igcse-bus-5-4",
+              "code": "5.4",
+              "title": "Statement of Financial Position (Balance Sheet)",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/lesson/igcse-bus-5-4",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/notes/igcse-bus-5-4",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/quiz/igcse-bus-5-4",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/flashcards/igcse-bus-5-4",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/exam-practice/igcse-bus-5-4"
+            },
+            {
+              "id": "igcse-bus-5-5",
+              "code": "5.5",
+              "title": "Analysis of Accounts (Profitability & Liquidity Ratios)",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/lesson/igcse-bus-5-5",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/notes/igcse-bus-5-5",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/quiz/igcse-bus-5-5",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/flashcards/igcse-bus-5-5",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/exam-practice/igcse-bus-5-5"
             }
           ]
         },
@@ -4545,7 +4695,7 @@
             {
               "id": "igcse-bus-6-1",
               "code": "6.1",
-              "title": "Economic Issues (Business Cycle, Inflation, Tax, Interest & Exchange Rates)",
+              "title": "Economic Issues: Business Cycle, Inflation, Tax & Interest Rates",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/lesson/igcse-bus-6-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/notes/igcse-bus-6-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/quiz/igcse-bus-6-1",
@@ -4555,12 +4705,22 @@
             {
               "id": "igcse-bus-6-2",
               "code": "6.2",
-              "title": "Environmental & Ethical Issues, Globalisation & Multinational Companies",
+              "title": "Environmental & Ethical Issues (Externalities & Pressure Groups)",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/lesson/igcse-bus-6-2",
               "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/notes/igcse-bus-6-2",
               "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/quiz/igcse-bus-6-2",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/flashcards/igcse-bus-6-2",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/exam-practice/igcse-bus-6-2"
+            },
+            {
+              "id": "igcse-bus-6-3",
+              "code": "6.3",
+              "title": "Business & The International Economy (Globalisation, MNCs & Exchange Rates)",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/lesson/igcse-bus-6-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/notes/igcse-bus-6-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/quiz/igcse-bus-6-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/flashcards/igcse-bus-6-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-business-cie/exam-practice/igcse-bus-6-3"
             }
           ]
         }
@@ -4736,11 +4896,11 @@
       "availableTiers": [
         "Core"
       ],
-      "topicCount": 5,
-      "subtopicCount": 8,
+      "topicCount": 6,
+      "subtopicCount": 33,
       "pastPaperCount": 10,
-      "keyTermCount": 38,
-      "cheatSheetCount": 5,
+      "keyTermCount": 196,
+      "cheatSheetCount": 6,
       "url": "https://initialtide.github.io/Cognify/course/igcse-economics-cie",
       "markdownUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie.md",
       "topics": [
@@ -4758,18 +4918,28 @@
               "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/quiz/econ-1-1",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/flashcards/econ-1-1",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/exam-practice/econ-1-1"
+            },
+            {
+              "id": "econ-1-2",
+              "code": "1.2",
+              "title": "Economic Assumptions, Sectors & Resource Allocation",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/lesson/econ-1-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/notes/econ-1-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/quiz/econ-1-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/flashcards/econ-1-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/exam-practice/econ-1-2"
             }
           ]
         },
         {
           "id": "topic-2",
           "number": 2,
-          "title": "Allocation of Resources",
+          "title": "The Allocation of Resources",
           "subtopics": [
             {
               "id": "econ-2-1",
               "code": "2.1",
-              "title": "Demand, Supply, Market Equilibrium & Price Mechanism",
+              "title": "Role of Markets in Allocating Resources",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/lesson/econ-2-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/notes/econ-2-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/quiz/econ-2-1",
@@ -4779,12 +4949,82 @@
             {
               "id": "econ-2-2",
               "code": "2.2",
-              "title": "Price Elasticity (PED & PES), Market Failure & Government Intervention",
+              "title": "Demand: Curves, Movements vs Shifts & Determinants",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/lesson/econ-2-2",
               "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/notes/econ-2-2",
               "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/quiz/econ-2-2",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/flashcards/econ-2-2",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/exam-practice/econ-2-2"
+            },
+            {
+              "id": "econ-2-3",
+              "code": "2.3",
+              "title": "Supply: Curves, Extensions vs Shifts & Determinants",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/lesson/econ-2-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/notes/econ-2-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/quiz/econ-2-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/flashcards/econ-2-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/exam-practice/econ-2-3"
+            },
+            {
+              "id": "econ-2-4",
+              "code": "2.4",
+              "title": "Price Determination, Market Equilibrium & Disequilibrium",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/lesson/econ-2-4",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/notes/econ-2-4",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/quiz/econ-2-4",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/flashcards/econ-2-4",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/exam-practice/econ-2-4"
+            },
+            {
+              "id": "econ-2-5",
+              "code": "2.5",
+              "title": "Price Changes & Simultaneous Market Shifts",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/lesson/econ-2-5",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/notes/econ-2-5",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/quiz/econ-2-5",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/flashcards/econ-2-5",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/exam-practice/econ-2-5"
+            },
+            {
+              "id": "econ-2-6",
+              "code": "2.6",
+              "title": "Price Elasticity of Demand (PED) & Total Revenue",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/lesson/econ-2-6",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/notes/econ-2-6",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/quiz/econ-2-6",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/flashcards/econ-2-6",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/exam-practice/econ-2-6"
+            },
+            {
+              "id": "econ-2-7",
+              "code": "2.7",
+              "title": "Price Elasticity of Supply (PES) & Determinants",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/lesson/econ-2-7",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/notes/econ-2-7",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/quiz/econ-2-7",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/flashcards/econ-2-7",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/exam-practice/econ-2-7"
+            },
+            {
+              "id": "econ-2-8",
+              "code": "2.8",
+              "title": "Market Economic System & Market Failure (Externalities, Merit/Demerit, Public Goods)",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/lesson/econ-2-8",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/notes/econ-2-8",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/quiz/econ-2-8",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/flashcards/econ-2-8",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/exam-practice/econ-2-8"
+            },
+            {
+              "id": "econ-2-9",
+              "code": "2.9",
+              "title": "Mixed Economic System & Government Intervention (Taxes, Subsidies, Price Controls)",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/lesson/econ-2-9",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/notes/econ-2-9",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/quiz/econ-2-9",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/flashcards/econ-2-9",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/exam-practice/econ-2-9"
             }
           ]
         },
@@ -4796,7 +5036,7 @@
             {
               "id": "econ-3-1",
               "code": "3.1",
-              "title": "Money, Central & Commercial Banks, Households & Labour Markets",
+              "title": "Money, Commercial Banks & Central Banks",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/lesson/econ-3-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/notes/econ-3-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/quiz/econ-3-1",
@@ -4806,12 +5046,62 @@
             {
               "id": "econ-3-2",
               "code": "3.2",
-              "title": "Firms, Costs, Revenue, Economies of Scale & Competition vs Monopoly",
+              "title": "Households: Influences on Spending, Saving & Borrowing",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/lesson/econ-3-2",
               "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/notes/econ-3-2",
               "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/quiz/econ-3-2",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/flashcards/econ-3-2",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/exam-practice/econ-3-2"
+            },
+            {
+              "id": "econ-3-3",
+              "code": "3.3",
+              "title": "Workers, Wage Determination, Division of Labour & Trade Unions",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/lesson/econ-3-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/notes/econ-3-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/quiz/econ-3-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/flashcards/econ-3-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/exam-practice/econ-3-3"
+            },
+            {
+              "id": "econ-3-4",
+              "code": "3.4",
+              "title": "Firms: Size, Mergers & Economies/Diseconomies of Scale",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/lesson/econ-3-4",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/notes/econ-3-4",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/quiz/econ-3-4",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/flashcards/econ-3-4",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/exam-practice/econ-3-4"
+            },
+            {
+              "id": "econ-3-5",
+              "code": "3.5",
+              "title": "Firms & Production: Labour- vs Capital-Intensive & Productivity",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/lesson/econ-3-5",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/notes/econ-3-5",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/quiz/econ-3-5",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/flashcards/econ-3-5",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/exam-practice/econ-3-5"
+            },
+            {
+              "id": "econ-3-6",
+              "code": "3.6",
+              "title": "Firms' Costs, Revenue & Business Objectives",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/lesson/econ-3-6",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/notes/econ-3-6",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/quiz/econ-3-6",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/flashcards/econ-3-6",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/exam-practice/econ-3-6"
+            },
+            {
+              "id": "econ-3-7",
+              "code": "3.7",
+              "title": "Market Structures: Competitive Markets vs Monopoly",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/lesson/econ-3-7",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/notes/econ-3-7",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/quiz/econ-3-7",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/flashcards/econ-3-7",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/exam-practice/econ-3-7"
             }
           ]
         },
@@ -4823,7 +5113,7 @@
             {
               "id": "econ-4-1",
               "code": "4.1",
-              "title": "Macroeconomic Aims, Fiscal, Monetary & Supply-Side Policies",
+              "title": "Government Macroeconomic Aims & Policy Conflicts",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/lesson/econ-4-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/notes/econ-4-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/quiz/econ-4-1",
@@ -4833,29 +5123,156 @@
             {
               "id": "econ-4-2",
               "code": "4.2",
-              "title": "Economic Growth (GDP), Employment/Unemployment & Inflation",
+              "title": "Fiscal Policy, Taxation & Government Budgets",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/lesson/econ-4-2",
               "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/notes/econ-4-2",
               "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/quiz/econ-4-2",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/flashcards/econ-4-2",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/exam-practice/econ-4-2"
+            },
+            {
+              "id": "econ-4-3",
+              "code": "4.3",
+              "title": "Monetary Policy: Interest Rates, Money Supply & Exchange Rates",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/lesson/econ-4-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/notes/econ-4-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/quiz/econ-4-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/flashcards/econ-4-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/exam-practice/econ-4-3"
+            },
+            {
+              "id": "econ-4-4",
+              "code": "4.4",
+              "title": "Supply-Side Policies & Long-Run Productive Capacity",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/lesson/econ-4-4",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/notes/econ-4-4",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/quiz/econ-4-4",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/flashcards/econ-4-4",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/exam-practice/econ-4-4"
+            },
+            {
+              "id": "econ-4-5",
+              "code": "4.5",
+              "title": "Economic Growth: Real GDP, Causes, Consequences & Recessions",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/lesson/econ-4-5",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/notes/econ-4-5",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/quiz/econ-4-5",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/flashcards/econ-4-5",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/exam-practice/econ-4-5"
+            },
+            {
+              "id": "econ-4-6",
+              "code": "4.6",
+              "title": "Employment & Unemployment: Measurement, Causes & Policies",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/lesson/econ-4-6",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/notes/econ-4-6",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/quiz/econ-4-6",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/flashcards/econ-4-6",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/exam-practice/econ-4-6"
+            },
+            {
+              "id": "econ-4-7",
+              "code": "4.7",
+              "title": "Inflation & Deflation: CPI Measurement, Causes & Consequences",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/lesson/econ-4-7",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/notes/econ-4-7",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/quiz/econ-4-7",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/flashcards/econ-4-7",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/exam-practice/econ-4-7"
             }
           ]
         },
         {
           "id": "topic-5",
           "number": 5,
-          "title": "International Trade & Globalisation",
+          "title": "Economic Development",
           "subtopics": [
             {
               "id": "econ-5-1",
               "code": "5.1",
-              "title": "Specialisation, Free Trade vs Protectionism, Exchange Rates & Current Account",
+              "title": "Living Standards: Real GDP per Head & Human Development Index (HDI)",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/lesson/econ-5-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/notes/econ-5-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/quiz/econ-5-1",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/flashcards/econ-5-1",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/exam-practice/econ-5-1"
+            },
+            {
+              "id": "econ-5-2",
+              "code": "5.2",
+              "title": "Poverty: Absolute vs Relative Poverty & Alleviation Policies",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/lesson/econ-5-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/notes/econ-5-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/quiz/econ-5-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/flashcards/econ-5-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/exam-practice/econ-5-2"
+            },
+            {
+              "id": "econ-5-3",
+              "code": "5.3",
+              "title": "Population: Growth, Age Structure, Ageing & Dependency Ratios",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/lesson/econ-5-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/notes/econ-5-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/quiz/econ-5-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/flashcards/econ-5-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/exam-practice/econ-5-3"
+            },
+            {
+              "id": "econ-5-4",
+              "code": "5.4",
+              "title": "Differences in Economic Development Between Countries",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/lesson/econ-5-4",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/notes/econ-5-4",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/quiz/econ-5-4",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/flashcards/econ-5-4",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/exam-practice/econ-5-4"
+            }
+          ]
+        },
+        {
+          "id": "topic-6",
+          "number": 6,
+          "title": "International Trade & Globalisation",
+          "subtopics": [
+            {
+              "id": "econ-6-1",
+              "code": "6.1",
+              "title": "International Specialisation & Free Trade",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/lesson/econ-6-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/notes/econ-6-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/quiz/econ-6-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/flashcards/econ-6-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/exam-practice/econ-6-1"
+            },
+            {
+              "id": "econ-6-2",
+              "code": "6.2",
+              "title": "Globalisation, Multinational Corporations (MNCs) & Protectionism",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/lesson/econ-6-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/notes/econ-6-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/quiz/econ-6-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/flashcards/econ-6-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/exam-practice/econ-6-2"
+            },
+            {
+              "id": "econ-6-3",
+              "code": "6.3",
+              "title": "Foreign Exchange Rates: Floating, Fixed & SPICED/WPIDEC",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/lesson/econ-6-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/notes/econ-6-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/quiz/econ-6-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/flashcards/econ-6-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/exam-practice/econ-6-3"
+            },
+            {
+              "id": "econ-6-4",
+              "code": "6.4",
+              "title": "Current Account of the Balance of Payments: Structure & Policies",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/lesson/econ-6-4",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/notes/econ-6-4",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/quiz/econ-6-4",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/flashcards/econ-6-4",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/igcse-economics-cie/exam-practice/econ-6-4"
             }
           ]
         }
@@ -8096,6 +8513,934 @@
       ]
     },
     {
+      "id": "a-level-business-aqa",
+      "title": "Business Studies",
+      "subtitle": "A-Level · AQA",
+      "qualification": "a-level",
+      "qualificationLabel": "A-Level",
+      "subjectSlug": "business",
+      "examBoard": "aqa",
+      "examBoardLabel": "AQA",
+      "tier": "A-Level",
+      "specCode": "7132",
+      "availableBoards": [
+        "aqa",
+        "cie",
+        "edexcel"
+      ],
+      "availableTiers": [
+        "A-Level",
+        "AS-Level"
+      ],
+      "topicCount": 6,
+      "subtopicCount": 16,
+      "pastPaperCount": 10,
+      "keyTermCount": 109,
+      "cheatSheetCount": 6,
+      "url": "https://initialtide.github.io/Cognify/course/a-level-business-aqa",
+      "markdownUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa.md",
+      "topics": [
+        {
+          "id": "topic-1",
+          "number": 1,
+          "title": "Business Strategy, Structure & Corporate Objectives",
+          "subtopics": [
+            {
+              "id": "al-bus-1-1",
+              "code": "1.1",
+              "title": "Mission Statements, Corporate Objectives, CSR & Stakeholder Mapping",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/lesson/al-bus-1-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/notes/al-bus-1-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/quiz/al-bus-1-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/flashcards/al-bus-1-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/exam-practice/al-bus-1-1"
+            },
+            {
+              "id": "al-bus-1-2",
+              "code": "1.2",
+              "title": "Ownership Structures, Corporate Governance, Privatisation & Growth",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/lesson/al-bus-1-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/notes/al-bus-1-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/quiz/al-bus-1-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/flashcards/al-bus-1-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/exam-practice/al-bus-1-2"
+            },
+            {
+              "id": "al-bus-1-3",
+              "code": "1.3",
+              "title": "Strategic Analysis: SWOT, PESTLE, Porter's Five Forces & Ansoff's Matrix",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/lesson/al-bus-1-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/notes/al-bus-1-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/quiz/al-bus-1-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/flashcards/al-bus-1-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/exam-practice/al-bus-1-3"
+            }
+          ]
+        },
+        {
+          "id": "topic-2",
+          "number": 2,
+          "title": "People, Leadership & Human Resource Strategy",
+          "subtopics": [
+            {
+              "id": "al-bus-2-1",
+              "code": "2.1",
+              "title": "Organisational Design, Delegation, Centralisation & Matrix Structures",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/lesson/al-bus-2-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/notes/al-bus-2-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/quiz/al-bus-2-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/flashcards/al-bus-2-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/exam-practice/al-bus-2-1"
+            },
+            {
+              "id": "al-bus-2-2",
+              "code": "2.2",
+              "title": "Leadership Models (Blake Mouton, Tannenbaum-Schmidt) & Motivation (Maslow, Herzberg, Vroom, Mayo)",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/lesson/al-bus-2-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/notes/al-bus-2-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/quiz/al-bus-2-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/flashcards/al-bus-2-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/exam-practice/al-bus-2-2"
+            },
+            {
+              "id": "al-bus-2-3",
+              "code": "2.3",
+              "title": "HR Analytics (Labour Turnover, Retention, Productivity), Soft vs Hard HRM & Trade Unions",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/lesson/al-bus-2-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/notes/al-bus-2-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/quiz/al-bus-2-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/flashcards/al-bus-2-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/exam-practice/al-bus-2-3"
+            }
+          ]
+        },
+        {
+          "id": "topic-3",
+          "number": 3,
+          "title": "Marketing Analytics, Portfolio & Global Marketing",
+          "subtopics": [
+            {
+              "id": "al-bus-3-1",
+              "code": "3.1",
+              "title": "Market Analysis, PED/YED Pricing Strategy & Moving-Average Sales Forecasting",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/lesson/al-bus-3-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/notes/al-bus-3-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/quiz/al-bus-3-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/flashcards/al-bus-3-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/exam-practice/al-bus-3-1"
+            },
+            {
+              "id": "al-bus-3-2",
+              "code": "3.2",
+              "title": "Product Portfolio Strategy (Boston Matrix, PLC) & The Extended 7 Ps",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/lesson/al-bus-3-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/notes/al-bus-3-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/quiz/al-bus-3-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/flashcards/al-bus-3-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/exam-practice/al-bus-3-2"
+            },
+            {
+              "id": "al-bus-3-3",
+              "code": "3.3",
+              "title": "Digital Marketing, Omni-Channel Distribution & International Market Entry",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/lesson/al-bus-3-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/notes/al-bus-3-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/quiz/al-bus-3-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/flashcards/al-bus-3-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/exam-practice/al-bus-3-3"
+            }
+          ]
+        },
+        {
+          "id": "topic-4",
+          "number": 4,
+          "title": "Operations Strategy, Critical Path & Quality",
+          "subtopics": [
+            {
+              "id": "al-bus-4-1",
+              "code": "4.1",
+              "title": "Capacity Utilisation, Inventory Control Charts & Lean Operations",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/lesson/al-bus-4-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/notes/al-bus-4-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/quiz/al-bus-4-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/flashcards/al-bus-4-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/exam-practice/al-bus-4-1"
+            },
+            {
+              "id": "al-bus-4-2",
+              "code": "4.2",
+              "title": "Contribution Costing, Special Orders, Break-Even & Critical Path Analysis (CPA)",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/lesson/al-bus-4-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/notes/al-bus-4-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/quiz/al-bus-4-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/flashcards/al-bus-4-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/exam-practice/al-bus-4-2"
+            },
+            {
+              "id": "al-bus-4-3",
+              "code": "4.3",
+              "title": "Quality Management (TQM, Benchmarking), ERP & Global Supply-Chain Location",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/lesson/al-bus-4-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/notes/al-bus-4-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/quiz/al-bus-4-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/flashcards/al-bus-4-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/exam-practice/al-bus-4-3"
+            }
+          ]
+        },
+        {
+          "id": "topic-5",
+          "number": 5,
+          "title": "Corporate Finance, Ratio Analysis & Investment Appraisal",
+          "subtopics": [
+            {
+              "id": "al-bus-5-1",
+              "code": "5.1",
+              "title": "Budgeting, Favourable vs Adverse Variance Analysis & Cash-Flow Management",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/lesson/al-bus-5-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/notes/al-bus-5-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/quiz/al-bus-5-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/flashcards/al-bus-5-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/exam-practice/al-bus-5-1"
+            },
+            {
+              "id": "al-bus-5-2",
+              "code": "5.2",
+              "title": "Financial Statements, Depreciation & Advanced Ratio Analysis (Gearing, ROCE, Efficiency)",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/lesson/al-bus-5-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/notes/al-bus-5-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/quiz/al-bus-5-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/flashcards/al-bus-5-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/exam-practice/al-bus-5-2"
+            },
+            {
+              "id": "al-bus-5-3",
+              "code": "5.3",
+              "title": "Investment Appraisal (Payback, ARR, Discounted Cash Flow / NPV) & Decision Trees",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/lesson/al-bus-5-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/notes/al-bus-5-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/quiz/al-bus-5-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/flashcards/al-bus-5-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/exam-practice/al-bus-5-3"
+            }
+          ]
+        },
+        {
+          "id": "topic-6",
+          "number": 6,
+          "title": "External Environment, Economic Policy & Global Strategy",
+          "subtopics": [
+            {
+              "id": "al-bus-6-1",
+              "code": "6.1",
+              "title": "Macroeconomic Policy, Exchange Rates, Business Ethics, CSR & Managing Strategic Change",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/lesson/al-bus-6-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/notes/al-bus-6-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/quiz/al-bus-6-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/flashcards/al-bus-6-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-business-aqa/exam-practice/al-bus-6-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a-level-business-cie",
+      "title": "Business Studies",
+      "subtitle": "A-Level · CIE",
+      "qualification": "a-level",
+      "qualificationLabel": "A-Level",
+      "subjectSlug": "business",
+      "examBoard": "cie",
+      "examBoardLabel": "CIE",
+      "tier": "A-Level",
+      "specCode": "9609",
+      "availableBoards": [
+        "aqa",
+        "cie",
+        "edexcel"
+      ],
+      "availableTiers": [
+        "A-Level",
+        "AS-Level"
+      ],
+      "topicCount": 6,
+      "subtopicCount": 16,
+      "pastPaperCount": 10,
+      "keyTermCount": 109,
+      "cheatSheetCount": 6,
+      "url": "https://initialtide.github.io/Cognify/course/a-level-business-cie",
+      "markdownUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie.md",
+      "topics": [
+        {
+          "id": "topic-1",
+          "number": 1,
+          "title": "Business Strategy, Structure & Corporate Objectives",
+          "subtopics": [
+            {
+              "id": "al-bus-1-1",
+              "code": "1.1",
+              "title": "Mission Statements, Corporate Objectives, CSR & Stakeholder Mapping",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/lesson/al-bus-1-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/notes/al-bus-1-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/quiz/al-bus-1-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/flashcards/al-bus-1-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/exam-practice/al-bus-1-1"
+            },
+            {
+              "id": "al-bus-1-2",
+              "code": "1.2",
+              "title": "Ownership Structures, Corporate Governance, Privatisation & Growth",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/lesson/al-bus-1-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/notes/al-bus-1-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/quiz/al-bus-1-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/flashcards/al-bus-1-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/exam-practice/al-bus-1-2"
+            },
+            {
+              "id": "al-bus-1-3",
+              "code": "1.3",
+              "title": "Strategic Analysis: SWOT, PESTLE, Porter's Five Forces & Ansoff's Matrix",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/lesson/al-bus-1-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/notes/al-bus-1-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/quiz/al-bus-1-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/flashcards/al-bus-1-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/exam-practice/al-bus-1-3"
+            }
+          ]
+        },
+        {
+          "id": "topic-2",
+          "number": 2,
+          "title": "People, Leadership & Human Resource Strategy",
+          "subtopics": [
+            {
+              "id": "al-bus-2-1",
+              "code": "2.1",
+              "title": "Organisational Design, Delegation, Centralisation & Matrix Structures",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/lesson/al-bus-2-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/notes/al-bus-2-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/quiz/al-bus-2-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/flashcards/al-bus-2-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/exam-practice/al-bus-2-1"
+            },
+            {
+              "id": "al-bus-2-2",
+              "code": "2.2",
+              "title": "Leadership Models (Blake Mouton, Tannenbaum-Schmidt) & Motivation (Maslow, Herzberg, Vroom, Mayo)",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/lesson/al-bus-2-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/notes/al-bus-2-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/quiz/al-bus-2-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/flashcards/al-bus-2-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/exam-practice/al-bus-2-2"
+            },
+            {
+              "id": "al-bus-2-3",
+              "code": "2.3",
+              "title": "HR Analytics (Labour Turnover, Retention, Productivity), Soft vs Hard HRM & Trade Unions",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/lesson/al-bus-2-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/notes/al-bus-2-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/quiz/al-bus-2-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/flashcards/al-bus-2-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/exam-practice/al-bus-2-3"
+            }
+          ]
+        },
+        {
+          "id": "topic-3",
+          "number": 3,
+          "title": "Marketing Analytics, Portfolio & Global Marketing",
+          "subtopics": [
+            {
+              "id": "al-bus-3-1",
+              "code": "3.1",
+              "title": "Market Analysis, PED/YED Pricing Strategy & Moving-Average Sales Forecasting",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/lesson/al-bus-3-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/notes/al-bus-3-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/quiz/al-bus-3-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/flashcards/al-bus-3-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/exam-practice/al-bus-3-1"
+            },
+            {
+              "id": "al-bus-3-2",
+              "code": "3.2",
+              "title": "Product Portfolio Strategy (Boston Matrix, PLC) & The Extended 7 Ps",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/lesson/al-bus-3-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/notes/al-bus-3-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/quiz/al-bus-3-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/flashcards/al-bus-3-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/exam-practice/al-bus-3-2"
+            },
+            {
+              "id": "al-bus-3-3",
+              "code": "3.3",
+              "title": "Digital Marketing, Omni-Channel Distribution & International Market Entry",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/lesson/al-bus-3-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/notes/al-bus-3-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/quiz/al-bus-3-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/flashcards/al-bus-3-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/exam-practice/al-bus-3-3"
+            }
+          ]
+        },
+        {
+          "id": "topic-4",
+          "number": 4,
+          "title": "Operations Strategy, Critical Path & Quality",
+          "subtopics": [
+            {
+              "id": "al-bus-4-1",
+              "code": "4.1",
+              "title": "Capacity Utilisation, Inventory Control Charts & Lean Operations",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/lesson/al-bus-4-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/notes/al-bus-4-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/quiz/al-bus-4-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/flashcards/al-bus-4-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/exam-practice/al-bus-4-1"
+            },
+            {
+              "id": "al-bus-4-2",
+              "code": "4.2",
+              "title": "Contribution Costing, Special Orders, Break-Even & Critical Path Analysis (CPA)",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/lesson/al-bus-4-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/notes/al-bus-4-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/quiz/al-bus-4-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/flashcards/al-bus-4-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/exam-practice/al-bus-4-2"
+            },
+            {
+              "id": "al-bus-4-3",
+              "code": "4.3",
+              "title": "Quality Management (TQM, Benchmarking), ERP & Global Supply-Chain Location",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/lesson/al-bus-4-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/notes/al-bus-4-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/quiz/al-bus-4-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/flashcards/al-bus-4-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/exam-practice/al-bus-4-3"
+            }
+          ]
+        },
+        {
+          "id": "topic-5",
+          "number": 5,
+          "title": "Corporate Finance, Ratio Analysis & Investment Appraisal",
+          "subtopics": [
+            {
+              "id": "al-bus-5-1",
+              "code": "5.1",
+              "title": "Budgeting, Favourable vs Adverse Variance Analysis & Cash-Flow Management",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/lesson/al-bus-5-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/notes/al-bus-5-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/quiz/al-bus-5-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/flashcards/al-bus-5-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/exam-practice/al-bus-5-1"
+            },
+            {
+              "id": "al-bus-5-2",
+              "code": "5.2",
+              "title": "Financial Statements, Depreciation & Advanced Ratio Analysis (Gearing, ROCE, Efficiency)",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/lesson/al-bus-5-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/notes/al-bus-5-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/quiz/al-bus-5-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/flashcards/al-bus-5-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/exam-practice/al-bus-5-2"
+            },
+            {
+              "id": "al-bus-5-3",
+              "code": "5.3",
+              "title": "Investment Appraisal (Payback, ARR, Discounted Cash Flow / NPV) & Decision Trees",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/lesson/al-bus-5-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/notes/al-bus-5-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/quiz/al-bus-5-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/flashcards/al-bus-5-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/exam-practice/al-bus-5-3"
+            }
+          ]
+        },
+        {
+          "id": "topic-6",
+          "number": 6,
+          "title": "External Environment, Economic Policy & Global Strategy",
+          "subtopics": [
+            {
+              "id": "al-bus-6-1",
+              "code": "6.1",
+              "title": "Macroeconomic Policy, Exchange Rates, Business Ethics, CSR & Managing Strategic Change",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/lesson/al-bus-6-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/notes/al-bus-6-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/quiz/al-bus-6-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/flashcards/al-bus-6-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-business-cie/exam-practice/al-bus-6-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a-level-economics-aqa",
+      "title": "Economics",
+      "subtitle": "A-Level · AQA",
+      "qualification": "a-level",
+      "qualificationLabel": "A-Level",
+      "subjectSlug": "economics",
+      "examBoard": "aqa",
+      "examBoardLabel": "AQA",
+      "tier": "A-Level",
+      "specCode": "7136",
+      "availableBoards": [
+        "aqa",
+        "cie",
+        "edexcel"
+      ],
+      "availableTiers": [
+        "A-Level",
+        "AS-Level"
+      ],
+      "topicCount": 6,
+      "subtopicCount": 16,
+      "pastPaperCount": 10,
+      "keyTermCount": 110,
+      "cheatSheetCount": 6,
+      "url": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa",
+      "markdownUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa.md",
+      "topics": [
+        {
+          "id": "topic-1",
+          "number": 1,
+          "title": "Economic Methodology, Price Mechanism & Elasticities",
+          "subtopics": [
+            {
+              "id": "al-econ-1-1",
+              "code": "1.1",
+              "title": "Scarcity, Positive vs Normative Statements, PPC & Behavioural Economics",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/lesson/al-econ-1-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/notes/al-econ-1-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/quiz/al-econ-1-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/flashcards/al-econ-1-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/exam-practice/al-econ-1-1"
+            },
+            {
+              "id": "al-econ-1-2",
+              "code": "1.2",
+              "title": "Price Mechanism, Consumer & Producer Surplus & Welfare Analysis",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/lesson/al-econ-1-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/notes/al-econ-1-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/quiz/al-econ-1-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/flashcards/al-econ-1-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/exam-practice/al-econ-1-2"
+            },
+            {
+              "id": "al-econ-1-3",
+              "code": "1.3",
+              "title": "Elasticities: PED, YED, XED & PES Quantitative Applications",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/lesson/al-econ-1-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/notes/al-econ-1-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/quiz/al-econ-1-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/flashcards/al-econ-1-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/exam-practice/al-econ-1-3"
+            }
+          ]
+        },
+        {
+          "id": "topic-2",
+          "number": 2,
+          "title": "Market Failure & Government Intervention",
+          "subtopics": [
+            {
+              "id": "al-econ-2-1",
+              "code": "2.1",
+              "title": "Externalities (MSC, MPC, MSB, MPB), Public Goods & Asymmetric Information",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/lesson/al-econ-2-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/notes/al-econ-2-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/quiz/al-econ-2-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/flashcards/al-econ-2-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/exam-practice/al-econ-2-1"
+            },
+            {
+              "id": "al-econ-2-2",
+              "code": "2.2",
+              "title": "Indirect Taxes, Tax Incidence & Pigouvian Internalisation",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/lesson/al-econ-2-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/notes/al-econ-2-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/quiz/al-econ-2-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/flashcards/al-econ-2-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/exam-practice/al-econ-2-2"
+            },
+            {
+              "id": "al-econ-2-3",
+              "code": "2.3",
+              "title": "Subsidies, Price Controls (Max/Min Prices), Permits & Government Failure",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/lesson/al-econ-2-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/notes/al-econ-2-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/quiz/al-econ-2-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/flashcards/al-econ-2-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/exam-practice/al-econ-2-3"
+            }
+          ]
+        },
+        {
+          "id": "topic-3",
+          "number": 3,
+          "title": "Theory of the Firm & Market Structures",
+          "subtopics": [
+            {
+              "id": "al-econ-3-1",
+              "code": "3.1",
+              "title": "Short-Run & Long-Run Costs, Marginal/Average Revenue & Firm Objectives",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/lesson/al-econ-3-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/notes/al-econ-3-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/quiz/al-econ-3-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/flashcards/al-econ-3-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/exam-practice/al-econ-3-1"
+            },
+            {
+              "id": "al-econ-3-2",
+              "code": "3.2",
+              "title": "Perfect Competition, Shut-Down Point & Economic Efficiency",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/lesson/al-econ-3-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/notes/al-econ-3-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/quiz/al-econ-3-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/flashcards/al-econ-3-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/exam-practice/al-econ-3-2"
+            },
+            {
+              "id": "al-econ-3-3",
+              "code": "3.3",
+              "title": "Monopoly, Natural Monopoly, Third-Degree Price Discrimination & Regulation",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/lesson/al-econ-3-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/notes/al-econ-3-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/quiz/al-econ-3-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/flashcards/al-econ-3-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/exam-practice/al-econ-3-3"
+            },
+            {
+              "id": "al-econ-3-4",
+              "code": "3.4",
+              "title": "Oligopoly, Kinked Demand, Game Theory, Collusion & Contestable Markets",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/lesson/al-econ-3-4",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/notes/al-econ-3-4",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/quiz/al-econ-3-4",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/flashcards/al-econ-3-4",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/exam-practice/al-econ-3-4"
+            }
+          ]
+        },
+        {
+          "id": "topic-4",
+          "number": 4,
+          "title": "Macroeconomic Performance & AD/AS Analysis",
+          "subtopics": [
+            {
+              "id": "al-econ-4-1",
+              "code": "4.1",
+              "title": "Circular Flow of Income, The Multiplier (1 ÷ MPW) & Economic Cycle",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/lesson/al-econ-4-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/notes/al-econ-4-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/quiz/al-econ-4-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/flashcards/al-econ-4-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/exam-practice/al-econ-4-1"
+            },
+            {
+              "id": "al-econ-4-2",
+              "code": "4.2",
+              "title": "Aggregate Demand, SRAS & Keynesian vs Classical LRAS Output Gaps",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/lesson/al-econ-4-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/notes/al-econ-4-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/quiz/al-econ-4-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/flashcards/al-econ-4-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/exam-practice/al-econ-4-2"
+            }
+          ]
+        },
+        {
+          "id": "topic-5",
+          "number": 5,
+          "title": "Macroeconomic Policy, Inflation & Inequality",
+          "subtopics": [
+            {
+              "id": "al-econ-5-1",
+              "code": "5.1",
+              "title": "Inflation, Unemployment & Short-Run / Long-Run Phillips Curve",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/lesson/al-econ-5-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/notes/al-econ-5-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/quiz/al-econ-5-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/flashcards/al-econ-5-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/exam-practice/al-econ-5-1"
+            },
+            {
+              "id": "al-econ-5-2",
+              "code": "5.2",
+              "title": "Fiscal Policy, Monetary Policy (Interest Rates & QE) & Policy Trade-offs",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/lesson/al-econ-5-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/notes/al-econ-5-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/quiz/al-econ-5-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/flashcards/al-econ-5-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/exam-practice/al-econ-5-2"
+            },
+            {
+              "id": "al-econ-5-3",
+              "code": "5.3",
+              "title": "Supply-Side Policies, Income Inequality, Lorenz Curve & Gini Coefficient",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/lesson/al-econ-5-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/notes/al-econ-5-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/quiz/al-econ-5-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/flashcards/al-econ-5-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/exam-practice/al-econ-5-3"
+            }
+          ]
+        },
+        {
+          "id": "topic-6",
+          "number": 6,
+          "title": "International Economics, Trade & Exchange Rates",
+          "subtopics": [
+            {
+              "id": "al-econ-6-1",
+              "code": "6.1",
+              "title": "Comparative Advantage, Tariff Welfare Diagrams, Marshall-Lerner / J-Curve & BoP",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/lesson/al-econ-6-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/notes/al-econ-6-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/quiz/al-econ-6-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/flashcards/al-econ-6-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-aqa/exam-practice/al-econ-6-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a-level-economics-cie",
+      "title": "Economics",
+      "subtitle": "A-Level · CIE",
+      "qualification": "a-level",
+      "qualificationLabel": "A-Level",
+      "subjectSlug": "economics",
+      "examBoard": "cie",
+      "examBoardLabel": "CIE",
+      "tier": "A-Level",
+      "specCode": "9708",
+      "availableBoards": [
+        "aqa",
+        "cie",
+        "edexcel"
+      ],
+      "availableTiers": [
+        "A-Level",
+        "AS-Level"
+      ],
+      "topicCount": 6,
+      "subtopicCount": 16,
+      "pastPaperCount": 10,
+      "keyTermCount": 110,
+      "cheatSheetCount": 6,
+      "url": "https://initialtide.github.io/Cognify/course/a-level-economics-cie",
+      "markdownUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie.md",
+      "topics": [
+        {
+          "id": "topic-1",
+          "number": 1,
+          "title": "Economic Methodology, Price Mechanism & Elasticities",
+          "subtopics": [
+            {
+              "id": "al-econ-1-1",
+              "code": "1.1",
+              "title": "Scarcity, Positive vs Normative Statements, PPC & Behavioural Economics",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/lesson/al-econ-1-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/notes/al-econ-1-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/quiz/al-econ-1-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/flashcards/al-econ-1-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/exam-practice/al-econ-1-1"
+            },
+            {
+              "id": "al-econ-1-2",
+              "code": "1.2",
+              "title": "Price Mechanism, Consumer & Producer Surplus & Welfare Analysis",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/lesson/al-econ-1-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/notes/al-econ-1-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/quiz/al-econ-1-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/flashcards/al-econ-1-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/exam-practice/al-econ-1-2"
+            },
+            {
+              "id": "al-econ-1-3",
+              "code": "1.3",
+              "title": "Elasticities: PED, YED, XED & PES Quantitative Applications",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/lesson/al-econ-1-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/notes/al-econ-1-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/quiz/al-econ-1-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/flashcards/al-econ-1-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/exam-practice/al-econ-1-3"
+            }
+          ]
+        },
+        {
+          "id": "topic-2",
+          "number": 2,
+          "title": "Market Failure & Government Intervention",
+          "subtopics": [
+            {
+              "id": "al-econ-2-1",
+              "code": "2.1",
+              "title": "Externalities (MSC, MPC, MSB, MPB), Public Goods & Asymmetric Information",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/lesson/al-econ-2-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/notes/al-econ-2-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/quiz/al-econ-2-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/flashcards/al-econ-2-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/exam-practice/al-econ-2-1"
+            },
+            {
+              "id": "al-econ-2-2",
+              "code": "2.2",
+              "title": "Indirect Taxes, Tax Incidence & Pigouvian Internalisation",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/lesson/al-econ-2-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/notes/al-econ-2-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/quiz/al-econ-2-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/flashcards/al-econ-2-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/exam-practice/al-econ-2-2"
+            },
+            {
+              "id": "al-econ-2-3",
+              "code": "2.3",
+              "title": "Subsidies, Price Controls (Max/Min Prices), Permits & Government Failure",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/lesson/al-econ-2-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/notes/al-econ-2-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/quiz/al-econ-2-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/flashcards/al-econ-2-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/exam-practice/al-econ-2-3"
+            }
+          ]
+        },
+        {
+          "id": "topic-3",
+          "number": 3,
+          "title": "Theory of the Firm & Market Structures",
+          "subtopics": [
+            {
+              "id": "al-econ-3-1",
+              "code": "3.1",
+              "title": "Short-Run & Long-Run Costs, Marginal/Average Revenue & Firm Objectives",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/lesson/al-econ-3-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/notes/al-econ-3-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/quiz/al-econ-3-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/flashcards/al-econ-3-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/exam-practice/al-econ-3-1"
+            },
+            {
+              "id": "al-econ-3-2",
+              "code": "3.2",
+              "title": "Perfect Competition, Shut-Down Point & Economic Efficiency",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/lesson/al-econ-3-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/notes/al-econ-3-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/quiz/al-econ-3-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/flashcards/al-econ-3-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/exam-practice/al-econ-3-2"
+            },
+            {
+              "id": "al-econ-3-3",
+              "code": "3.3",
+              "title": "Monopoly, Natural Monopoly, Third-Degree Price Discrimination & Regulation",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/lesson/al-econ-3-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/notes/al-econ-3-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/quiz/al-econ-3-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/flashcards/al-econ-3-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/exam-practice/al-econ-3-3"
+            },
+            {
+              "id": "al-econ-3-4",
+              "code": "3.4",
+              "title": "Oligopoly, Kinked Demand, Game Theory, Collusion & Contestable Markets",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/lesson/al-econ-3-4",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/notes/al-econ-3-4",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/quiz/al-econ-3-4",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/flashcards/al-econ-3-4",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/exam-practice/al-econ-3-4"
+            }
+          ]
+        },
+        {
+          "id": "topic-4",
+          "number": 4,
+          "title": "Macroeconomic Performance & AD/AS Analysis",
+          "subtopics": [
+            {
+              "id": "al-econ-4-1",
+              "code": "4.1",
+              "title": "Circular Flow of Income, The Multiplier (1 ÷ MPW) & Economic Cycle",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/lesson/al-econ-4-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/notes/al-econ-4-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/quiz/al-econ-4-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/flashcards/al-econ-4-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/exam-practice/al-econ-4-1"
+            },
+            {
+              "id": "al-econ-4-2",
+              "code": "4.2",
+              "title": "Aggregate Demand, SRAS & Keynesian vs Classical LRAS Output Gaps",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/lesson/al-econ-4-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/notes/al-econ-4-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/quiz/al-econ-4-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/flashcards/al-econ-4-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/exam-practice/al-econ-4-2"
+            }
+          ]
+        },
+        {
+          "id": "topic-5",
+          "number": 5,
+          "title": "Macroeconomic Policy, Inflation & Inequality",
+          "subtopics": [
+            {
+              "id": "al-econ-5-1",
+              "code": "5.1",
+              "title": "Inflation, Unemployment & Short-Run / Long-Run Phillips Curve",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/lesson/al-econ-5-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/notes/al-econ-5-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/quiz/al-econ-5-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/flashcards/al-econ-5-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/exam-practice/al-econ-5-1"
+            },
+            {
+              "id": "al-econ-5-2",
+              "code": "5.2",
+              "title": "Fiscal Policy, Monetary Policy (Interest Rates & QE) & Policy Trade-offs",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/lesson/al-econ-5-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/notes/al-econ-5-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/quiz/al-econ-5-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/flashcards/al-econ-5-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/exam-practice/al-econ-5-2"
+            },
+            {
+              "id": "al-econ-5-3",
+              "code": "5.3",
+              "title": "Supply-Side Policies, Income Inequality, Lorenz Curve & Gini Coefficient",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/lesson/al-econ-5-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/notes/al-econ-5-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/quiz/al-econ-5-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/flashcards/al-econ-5-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/exam-practice/al-econ-5-3"
+            }
+          ]
+        },
+        {
+          "id": "topic-6",
+          "number": 6,
+          "title": "International Economics, Trade & Exchange Rates",
+          "subtopics": [
+            {
+              "id": "al-econ-6-1",
+              "code": "6.1",
+              "title": "Comparative Advantage, Tariff Welfare Diagrams, Marshall-Lerner / J-Curve & BoP",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/lesson/al-econ-6-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/notes/al-econ-6-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/quiz/al-econ-6-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/flashcards/al-econ-6-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/a-level-economics-cie/exam-practice/al-econ-6-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "gcse-business-cie-core",
       "title": "Business Studies",
       "subtitle": "GCSE · CIE",
@@ -8115,9 +9460,9 @@
         "Core"
       ],
       "topicCount": 6,
-      "subtopicCount": 12,
-      "pastPaperCount": 6,
-      "keyTermCount": 66,
+      "subtopicCount": 28,
+      "pastPaperCount": 8,
+      "keyTermCount": 157,
       "cheatSheetCount": 6,
       "url": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core",
       "markdownUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core.md",
@@ -8130,7 +9475,7 @@
             {
               "id": "igcse-bus-1-1",
               "code": "1.1",
-              "title": "Enterprise, Added Value & Classification of Businesses",
+              "title": "Business Activity, Scarcity & Added Value",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/lesson/igcse-bus-1-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/notes/igcse-bus-1-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/quiz/igcse-bus-1-1",
@@ -8140,12 +9485,42 @@
             {
               "id": "igcse-bus-1-2",
               "code": "1.2",
-              "title": "Business Growth, Types of Organisation, Objectives & Stakeholders",
+              "title": "Classification of Businesses & Economic Sectors",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/lesson/igcse-bus-1-2",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/notes/igcse-bus-1-2",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/quiz/igcse-bus-1-2",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/flashcards/igcse-bus-1-2",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/exam-practice/igcse-bus-1-2"
+            },
+            {
+              "id": "igcse-bus-1-3",
+              "code": "1.3",
+              "title": "Enterprise, Business Growth & Measuring Size",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/lesson/igcse-bus-1-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/notes/igcse-bus-1-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/quiz/igcse-bus-1-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/flashcards/igcse-bus-1-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/exam-practice/igcse-bus-1-3"
+            },
+            {
+              "id": "igcse-bus-1-4",
+              "code": "1.4",
+              "title": "Types of Business Organisations (Sole Trader, Ltd, Plc, Franchise)",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/lesson/igcse-bus-1-4",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/notes/igcse-bus-1-4",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/quiz/igcse-bus-1-4",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/flashcards/igcse-bus-1-4",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/exam-practice/igcse-bus-1-4"
+            },
+            {
+              "id": "igcse-bus-1-5",
+              "code": "1.5",
+              "title": "Business Objectives & Stakeholder Objectives",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/lesson/igcse-bus-1-5",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/notes/igcse-bus-1-5",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/quiz/igcse-bus-1-5",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/flashcards/igcse-bus-1-5",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/exam-practice/igcse-bus-1-5"
             }
           ]
         },
@@ -8157,7 +9532,7 @@
             {
               "id": "igcse-bus-2-1",
               "code": "2.1",
-              "title": "Motivating Employees (Taylor, Maslow, Herzberg) & Rewards",
+              "title": "Motivating Employees (Taylor, Maslow, Herzberg & Rewards)",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/lesson/igcse-bus-2-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/notes/igcse-bus-2-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/quiz/igcse-bus-2-1",
@@ -8167,12 +9542,32 @@
             {
               "id": "igcse-bus-2-2",
               "code": "2.2",
-              "title": "Organisation Structure, Leadership, Recruitment, Training & Communication",
+              "title": "Organisation, Management, Leadership & Trade Unions",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/lesson/igcse-bus-2-2",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/notes/igcse-bus-2-2",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/quiz/igcse-bus-2-2",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/flashcards/igcse-bus-2-2",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/exam-practice/igcse-bus-2-2"
+            },
+            {
+              "id": "igcse-bus-2-3",
+              "code": "2.3",
+              "title": "Recruitment, Selection, Training & Legal Controls",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/lesson/igcse-bus-2-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/notes/igcse-bus-2-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/quiz/igcse-bus-2-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/flashcards/igcse-bus-2-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/exam-practice/igcse-bus-2-3"
+            },
+            {
+              "id": "igcse-bus-2-4",
+              "code": "2.4",
+              "title": "Internal & External Communication",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/lesson/igcse-bus-2-4",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/notes/igcse-bus-2-4",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/quiz/igcse-bus-2-4",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/flashcards/igcse-bus-2-4",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/exam-practice/igcse-bus-2-4"
             }
           ]
         },
@@ -8184,7 +9579,7 @@
             {
               "id": "igcse-bus-3-1",
               "code": "3.1",
-              "title": "Market Segmentation, Niche vs Mass Markets & Market Research",
+              "title": "Marketing, Competition, Segmentation & Niche vs Mass Markets",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/lesson/igcse-bus-3-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/notes/igcse-bus-3-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/quiz/igcse-bus-3-1",
@@ -8194,12 +9589,62 @@
             {
               "id": "igcse-bus-3-2",
               "code": "3.2",
-              "title": "The Marketing Mix (4 Ps: Product, Price, Place, Promotion) & E-Commerce",
+              "title": "Market Research (Primary, Secondary & Sampling)",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/lesson/igcse-bus-3-2",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/notes/igcse-bus-3-2",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/quiz/igcse-bus-3-2",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/flashcards/igcse-bus-3-2",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/exam-practice/igcse-bus-3-2"
+            },
+            {
+              "id": "igcse-bus-3-3",
+              "code": "3.3",
+              "title": "Marketing Mix: Product, Branding & Product Life Cycle",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/lesson/igcse-bus-3-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/notes/igcse-bus-3-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/quiz/igcse-bus-3-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/flashcards/igcse-bus-3-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/exam-practice/igcse-bus-3-3"
+            },
+            {
+              "id": "igcse-bus-3-4",
+              "code": "3.4",
+              "title": "Marketing Mix: Pricing Strategies & Price Elasticity",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/lesson/igcse-bus-3-4",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/notes/igcse-bus-3-4",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/quiz/igcse-bus-3-4",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/flashcards/igcse-bus-3-4",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/exam-practice/igcse-bus-3-4"
+            },
+            {
+              "id": "igcse-bus-3-5",
+              "code": "3.5",
+              "title": "Marketing Mix: Place & Channels of Distribution",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/lesson/igcse-bus-3-5",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/notes/igcse-bus-3-5",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/quiz/igcse-bus-3-5",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/flashcards/igcse-bus-3-5",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/exam-practice/igcse-bus-3-5"
+            },
+            {
+              "id": "igcse-bus-3-6",
+              "code": "3.6",
+              "title": "Marketing Mix: Promotion, Advertising & E-Commerce",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/lesson/igcse-bus-3-6",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/notes/igcse-bus-3-6",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/quiz/igcse-bus-3-6",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/flashcards/igcse-bus-3-6",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/exam-practice/igcse-bus-3-6"
+            },
+            {
+              "id": "igcse-bus-3-7",
+              "code": "3.7",
+              "title": "Marketing Strategy, Legal Controls & Foreign Markets",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/lesson/igcse-bus-3-7",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/notes/igcse-bus-3-7",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/quiz/igcse-bus-3-7",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/flashcards/igcse-bus-3-7",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/exam-practice/igcse-bus-3-7"
             }
           ]
         },
@@ -8211,7 +9656,7 @@
             {
               "id": "igcse-bus-4-1",
               "code": "4.1",
-              "title": "Production Methods (Job, Batch, Flow), Productivity & Lean Production",
+              "title": "Production Methods, Productivity, Technology & Lean Production",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/lesson/igcse-bus-4-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/notes/igcse-bus-4-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/quiz/igcse-bus-4-1",
@@ -8221,12 +9666,32 @@
             {
               "id": "igcse-bus-4-2",
               "code": "4.2",
-              "title": "Costs, Economies of Scale, Break-Even Analysis & Quality",
+              "title": "Costs, Economies of Scale & Break-Even Analysis",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/lesson/igcse-bus-4-2",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/notes/igcse-bus-4-2",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/quiz/igcse-bus-4-2",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/flashcards/igcse-bus-4-2",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/exam-practice/igcse-bus-4-2"
+            },
+            {
+              "id": "igcse-bus-4-3",
+              "code": "4.3",
+              "title": "Achieving Quality Production (Quality Control, Quality Assurance & TQM)",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/lesson/igcse-bus-4-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/notes/igcse-bus-4-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/quiz/igcse-bus-4-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/flashcards/igcse-bus-4-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/exam-practice/igcse-bus-4-3"
+            },
+            {
+              "id": "igcse-bus-4-4",
+              "code": "4.4",
+              "title": "Location Decisions (Manufacturing, Services & Relocating Overseas)",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/lesson/igcse-bus-4-4",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/notes/igcse-bus-4-4",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/quiz/igcse-bus-4-4",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/flashcards/igcse-bus-4-4",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/exam-practice/igcse-bus-4-4"
             }
           ]
         },
@@ -8238,7 +9703,7 @@
             {
               "id": "igcse-bus-5-1",
               "code": "5.1",
-              "title": "Sources of Business Finance & Cash-Flow Forecasting",
+              "title": "Business Finance: Needs & Sources (Internal vs External)",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/lesson/igcse-bus-5-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/notes/igcse-bus-5-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/quiz/igcse-bus-5-1",
@@ -8248,12 +9713,42 @@
             {
               "id": "igcse-bus-5-2",
               "code": "5.2",
-              "title": "Income Statements, Balance Sheets & Financial Ratios",
+              "title": "Cash-Flow Forecasting & Working Capital",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/lesson/igcse-bus-5-2",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/notes/igcse-bus-5-2",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/quiz/igcse-bus-5-2",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/flashcards/igcse-bus-5-2",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/exam-practice/igcse-bus-5-2"
+            },
+            {
+              "id": "igcse-bus-5-3",
+              "code": "5.3",
+              "title": "Income Statements (Profit & Loss Accounts)",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/lesson/igcse-bus-5-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/notes/igcse-bus-5-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/quiz/igcse-bus-5-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/flashcards/igcse-bus-5-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/exam-practice/igcse-bus-5-3"
+            },
+            {
+              "id": "igcse-bus-5-4",
+              "code": "5.4",
+              "title": "Statement of Financial Position (Balance Sheet)",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/lesson/igcse-bus-5-4",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/notes/igcse-bus-5-4",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/quiz/igcse-bus-5-4",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/flashcards/igcse-bus-5-4",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/exam-practice/igcse-bus-5-4"
+            },
+            {
+              "id": "igcse-bus-5-5",
+              "code": "5.5",
+              "title": "Analysis of Accounts (Profitability & Liquidity Ratios)",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/lesson/igcse-bus-5-5",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/notes/igcse-bus-5-5",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/quiz/igcse-bus-5-5",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/flashcards/igcse-bus-5-5",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/exam-practice/igcse-bus-5-5"
             }
           ]
         },
@@ -8265,7 +9760,7 @@
             {
               "id": "igcse-bus-6-1",
               "code": "6.1",
-              "title": "Economic Issues (Business Cycle, Inflation, Tax, Interest & Exchange Rates)",
+              "title": "Economic Issues: Business Cycle, Inflation, Tax & Interest Rates",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/lesson/igcse-bus-6-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/notes/igcse-bus-6-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/quiz/igcse-bus-6-1",
@@ -8275,12 +9770,22 @@
             {
               "id": "igcse-bus-6-2",
               "code": "6.2",
-              "title": "Environmental & Ethical Issues, Globalisation & Multinational Companies",
+              "title": "Environmental & Ethical Issues (Externalities & Pressure Groups)",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/lesson/igcse-bus-6-2",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/notes/igcse-bus-6-2",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/quiz/igcse-bus-6-2",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/flashcards/igcse-bus-6-2",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/exam-practice/igcse-bus-6-2"
+            },
+            {
+              "id": "igcse-bus-6-3",
+              "code": "6.3",
+              "title": "Business & The International Economy (Globalisation, MNCs & Exchange Rates)",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/lesson/igcse-bus-6-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/notes/igcse-bus-6-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/quiz/igcse-bus-6-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/flashcards/igcse-bus-6-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-business-cie-core/exam-practice/igcse-bus-6-3"
             }
           ]
         }
@@ -8307,7 +9812,7 @@
       ],
       "topicCount": 6,
       "subtopicCount": 8,
-      "pastPaperCount": 6,
+      "pastPaperCount": 8,
       "keyTermCount": 35,
       "cheatSheetCount": 6,
       "url": "https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core",
@@ -8456,11 +9961,11 @@
       "availableTiers": [
         "Core"
       ],
-      "topicCount": 5,
-      "subtopicCount": 8,
-      "pastPaperCount": 6,
-      "keyTermCount": 38,
-      "cheatSheetCount": 5,
+      "topicCount": 6,
+      "subtopicCount": 33,
+      "pastPaperCount": 10,
+      "keyTermCount": 196,
+      "cheatSheetCount": 6,
       "url": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core",
       "markdownUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core.md",
       "topics": [
@@ -8478,18 +9983,28 @@
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-1-1",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-1-1",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/exam-practice/econ-1-1"
+            },
+            {
+              "id": "econ-1-2",
+              "code": "1.2",
+              "title": "Economic Assumptions, Sectors & Resource Allocation",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-1-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-1-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-1-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-1-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/exam-practice/econ-1-2"
             }
           ]
         },
         {
           "id": "topic-2",
           "number": 2,
-          "title": "Allocation of Resources",
+          "title": "The Allocation of Resources",
           "subtopics": [
             {
               "id": "econ-2-1",
               "code": "2.1",
-              "title": "Demand, Supply, Market Equilibrium & Price Mechanism",
+              "title": "Role of Markets in Allocating Resources",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-2-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-2-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-2-1",
@@ -8499,12 +10014,82 @@
             {
               "id": "econ-2-2",
               "code": "2.2",
-              "title": "Price Elasticity (PED & PES), Market Failure & Government Intervention",
+              "title": "Demand: Curves, Movements vs Shifts & Determinants",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-2-2",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-2-2",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-2-2",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-2-2",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/exam-practice/econ-2-2"
+            },
+            {
+              "id": "econ-2-3",
+              "code": "2.3",
+              "title": "Supply: Curves, Extensions vs Shifts & Determinants",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-2-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-2-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-2-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-2-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/exam-practice/econ-2-3"
+            },
+            {
+              "id": "econ-2-4",
+              "code": "2.4",
+              "title": "Price Determination, Market Equilibrium & Disequilibrium",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-2-4",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-2-4",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-2-4",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-2-4",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/exam-practice/econ-2-4"
+            },
+            {
+              "id": "econ-2-5",
+              "code": "2.5",
+              "title": "Price Changes & Simultaneous Market Shifts",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-2-5",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-2-5",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-2-5",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-2-5",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/exam-practice/econ-2-5"
+            },
+            {
+              "id": "econ-2-6",
+              "code": "2.6",
+              "title": "Price Elasticity of Demand (PED) & Total Revenue",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-2-6",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-2-6",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-2-6",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-2-6",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/exam-practice/econ-2-6"
+            },
+            {
+              "id": "econ-2-7",
+              "code": "2.7",
+              "title": "Price Elasticity of Supply (PES) & Determinants",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-2-7",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-2-7",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-2-7",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-2-7",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/exam-practice/econ-2-7"
+            },
+            {
+              "id": "econ-2-8",
+              "code": "2.8",
+              "title": "Market Economic System & Market Failure (Externalities, Merit/Demerit, Public Goods)",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-2-8",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-2-8",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-2-8",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-2-8",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/exam-practice/econ-2-8"
+            },
+            {
+              "id": "econ-2-9",
+              "code": "2.9",
+              "title": "Mixed Economic System & Government Intervention (Taxes, Subsidies, Price Controls)",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-2-9",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-2-9",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-2-9",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-2-9",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/exam-practice/econ-2-9"
             }
           ]
         },
@@ -8516,7 +10101,7 @@
             {
               "id": "econ-3-1",
               "code": "3.1",
-              "title": "Money, Central & Commercial Banks, Households & Labour Markets",
+              "title": "Money, Commercial Banks & Central Banks",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-3-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-3-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-3-1",
@@ -8526,12 +10111,62 @@
             {
               "id": "econ-3-2",
               "code": "3.2",
-              "title": "Firms, Costs, Revenue, Economies of Scale & Competition vs Monopoly",
+              "title": "Households: Influences on Spending, Saving & Borrowing",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-3-2",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-3-2",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-3-2",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-3-2",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/exam-practice/econ-3-2"
+            },
+            {
+              "id": "econ-3-3",
+              "code": "3.3",
+              "title": "Workers, Wage Determination, Division of Labour & Trade Unions",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-3-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-3-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-3-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-3-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/exam-practice/econ-3-3"
+            },
+            {
+              "id": "econ-3-4",
+              "code": "3.4",
+              "title": "Firms: Size, Mergers & Economies/Diseconomies of Scale",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-3-4",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-3-4",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-3-4",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-3-4",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/exam-practice/econ-3-4"
+            },
+            {
+              "id": "econ-3-5",
+              "code": "3.5",
+              "title": "Firms & Production: Labour- vs Capital-Intensive & Productivity",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-3-5",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-3-5",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-3-5",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-3-5",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/exam-practice/econ-3-5"
+            },
+            {
+              "id": "econ-3-6",
+              "code": "3.6",
+              "title": "Firms' Costs, Revenue & Business Objectives",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-3-6",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-3-6",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-3-6",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-3-6",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/exam-practice/econ-3-6"
+            },
+            {
+              "id": "econ-3-7",
+              "code": "3.7",
+              "title": "Market Structures: Competitive Markets vs Monopoly",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-3-7",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-3-7",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-3-7",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-3-7",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/exam-practice/econ-3-7"
             }
           ]
         },
@@ -8543,7 +10178,7 @@
             {
               "id": "econ-4-1",
               "code": "4.1",
-              "title": "Macroeconomic Aims, Fiscal, Monetary & Supply-Side Policies",
+              "title": "Government Macroeconomic Aims & Policy Conflicts",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-4-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-4-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-4-1",
@@ -8553,29 +10188,156 @@
             {
               "id": "econ-4-2",
               "code": "4.2",
-              "title": "Economic Growth (GDP), Employment/Unemployment & Inflation",
+              "title": "Fiscal Policy, Taxation & Government Budgets",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-4-2",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-4-2",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-4-2",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-4-2",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/exam-practice/econ-4-2"
+            },
+            {
+              "id": "econ-4-3",
+              "code": "4.3",
+              "title": "Monetary Policy: Interest Rates, Money Supply & Exchange Rates",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-4-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-4-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-4-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-4-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/exam-practice/econ-4-3"
+            },
+            {
+              "id": "econ-4-4",
+              "code": "4.4",
+              "title": "Supply-Side Policies & Long-Run Productive Capacity",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-4-4",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-4-4",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-4-4",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-4-4",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/exam-practice/econ-4-4"
+            },
+            {
+              "id": "econ-4-5",
+              "code": "4.5",
+              "title": "Economic Growth: Real GDP, Causes, Consequences & Recessions",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-4-5",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-4-5",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-4-5",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-4-5",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/exam-practice/econ-4-5"
+            },
+            {
+              "id": "econ-4-6",
+              "code": "4.6",
+              "title": "Employment & Unemployment: Measurement, Causes & Policies",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-4-6",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-4-6",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-4-6",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-4-6",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/exam-practice/econ-4-6"
+            },
+            {
+              "id": "econ-4-7",
+              "code": "4.7",
+              "title": "Inflation & Deflation: CPI Measurement, Causes & Consequences",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-4-7",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-4-7",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-4-7",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-4-7",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/exam-practice/econ-4-7"
             }
           ]
         },
         {
           "id": "topic-5",
           "number": 5,
-          "title": "International Trade & Globalisation",
+          "title": "Economic Development",
           "subtopics": [
             {
               "id": "econ-5-1",
               "code": "5.1",
-              "title": "Specialisation, Free Trade vs Protectionism, Exchange Rates & Current Account",
+              "title": "Living Standards: Real GDP per Head & Human Development Index (HDI)",
               "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-5-1",
               "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-5-1",
               "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-5-1",
               "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-5-1",
               "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/exam-practice/econ-5-1"
+            },
+            {
+              "id": "econ-5-2",
+              "code": "5.2",
+              "title": "Poverty: Absolute vs Relative Poverty & Alleviation Policies",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-5-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-5-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-5-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-5-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/exam-practice/econ-5-2"
+            },
+            {
+              "id": "econ-5-3",
+              "code": "5.3",
+              "title": "Population: Growth, Age Structure, Ageing & Dependency Ratios",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-5-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-5-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-5-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-5-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/exam-practice/econ-5-3"
+            },
+            {
+              "id": "econ-5-4",
+              "code": "5.4",
+              "title": "Differences in Economic Development Between Countries",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-5-4",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-5-4",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-5-4",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-5-4",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/exam-practice/econ-5-4"
+            }
+          ]
+        },
+        {
+          "id": "topic-6",
+          "number": 6,
+          "title": "International Trade & Globalisation",
+          "subtopics": [
+            {
+              "id": "econ-6-1",
+              "code": "6.1",
+              "title": "International Specialisation & Free Trade",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-6-1",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-6-1",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-6-1",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-6-1",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/exam-practice/econ-6-1"
+            },
+            {
+              "id": "econ-6-2",
+              "code": "6.2",
+              "title": "Globalisation, Multinational Corporations (MNCs) & Protectionism",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-6-2",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-6-2",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-6-2",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-6-2",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/exam-practice/econ-6-2"
+            },
+            {
+              "id": "econ-6-3",
+              "code": "6.3",
+              "title": "Foreign Exchange Rates: Floating, Fixed & SPICED/WPIDEC",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-6-3",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-6-3",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-6-3",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-6-3",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/exam-practice/econ-6-3"
+            },
+            {
+              "id": "econ-6-4",
+              "code": "6.4",
+              "title": "Current Account of the Balance of Payments: Structure & Policies",
+              "lessonUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/lesson/econ-6-4",
+              "notesUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/notes/econ-6-4",
+              "quizUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/quiz/econ-6-4",
+              "flashcardsUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/flashcards/econ-6-4",
+              "examPracticeUrl": "https://initialtide.github.io/Cognify/course/gcse-economics-cie-core/exam-practice/econ-6-4"
             }
           ]
         }
@@ -8602,7 +10364,7 @@
       ],
       "topicCount": 4,
       "subtopicCount": 6,
-      "pastPaperCount": 6,
+      "pastPaperCount": 10,
       "keyTermCount": 24,
       "cheatSheetCount": 4,
       "url": "https://initialtide.github.io/Cognify/course/gcse-english-language-cie-core",

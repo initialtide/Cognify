@@ -1,6 +1,6 @@
 # GCSE Computer Science (CIE, Core) — Cognify Revision Course
 
-> Free GCSE Computer Science (CIE, Core) revision course on Cognify with 6 topics, 8 subtopics, interactive video lessons, structured revision notes, quizzes, flashcards, exam-style practice, and 6 past papers.
+> Free GCSE Computer Science (CIE, Core) revision course on Cognify with 6 topics, 8 subtopics, interactive video lessons, structured revision notes, quizzes, flashcards, exam-style practice, and 8 past papers.
 
 **Course URL:** https://initialtide.github.io/Cognify/course/gcse-computer-science-cie-core
 **Qualification:** GCSE

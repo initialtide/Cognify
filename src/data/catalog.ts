@@ -23,6 +23,16 @@ import {
   ALEVEL_BIOLOGY_TOPICS,
 } from './courses/alevelBiology';
 import {
+  ALEVEL_BUSINESS_CHEAT_SHEETS,
+  ALEVEL_BUSINESS_EXAM_PRACTICE,
+  ALEVEL_BUSINESS_FLASHCARDS,
+  ALEVEL_BUSINESS_KEY_TERMS,
+  ALEVEL_BUSINESS_NOTES,
+  ALEVEL_BUSINESS_PAST_PAPERS,
+  ALEVEL_BUSINESS_QUIZZES,
+  ALEVEL_BUSINESS_TOPICS,
+} from './courses/alevelBusiness';
+import {
   ALEVEL_CHEMISTRY_CHEAT_SHEETS,
   ALEVEL_CHEMISTRY_EXAM_PRACTICE,
   ALEVEL_CHEMISTRY_FLASHCARDS,
@@ -32,6 +42,16 @@ import {
   ALEVEL_CHEMISTRY_QUIZZES,
   ALEVEL_CHEMISTRY_TOPICS,
 } from './courses/alevelChemistry';
+import {
+  ALEVEL_ECONOMICS_CHEAT_SHEETS,
+  ALEVEL_ECONOMICS_EXAM_PRACTICE,
+  ALEVEL_ECONOMICS_FLASHCARDS,
+  ALEVEL_ECONOMICS_KEY_TERMS,
+  ALEVEL_ECONOMICS_NOTES,
+  ALEVEL_ECONOMICS_PAST_PAPERS,
+  ALEVEL_ECONOMICS_QUIZZES,
+  ALEVEL_ECONOMICS_TOPICS,
+} from './courses/alevelEconomics';
 import {
   ALEVEL_MATHS_CHEAT_SHEETS,
   ALEVEL_MATHS_EXAM_PRACTICE,
@@ -282,7 +302,7 @@ export const GCSE_SUBJECTS: SubjectCatalogItem[] = [
   { slug: 'maths', name: 'Maths', icon: 'maths', category: 'science-maths', isMaths: true },
   { slug: 'business', name: 'Business Studies', icon: 'business', category: 'other' },
   { slug: 'computer-science', name: 'Computer Science', icon: 'computer-science', category: 'other', pastPapersOnly: true },
-  { slug: 'economics', name: 'Economics', icon: 'economics', category: 'other', pastPapersOnly: true },
+  { slug: 'economics', name: 'Economics', icon: 'economics', category: 'other' },
   { slug: 'english-language', name: 'English Language', icon: 'english-language', category: 'other', pastPapersOnly: true },
   { slug: 'english-literature', name: 'English Literature', icon: 'english-literature', category: 'other', pastPapersOnly: true },
   { slug: 'french', name: 'French', icon: 'french', category: 'other', pastPapersOnly: true },
@@ -315,6 +335,8 @@ export const ALEVEL_SUBJECTS: SubjectCatalogItem[] = [
   { slug: 'chemistry', name: 'Chemistry', icon: 'chemistry', category: 'science-maths' },
   { slug: 'physics', name: 'Physics', icon: 'physics', category: 'science-maths' },
   { slug: 'maths', name: 'Maths', icon: 'maths', category: 'science-maths', isMaths: true },
+  { slug: 'business', name: 'Business Studies', icon: 'business', category: 'other' },
+  { slug: 'economics', name: 'Economics', icon: 'economics', category: 'other' },
   { slug: 'psychology', name: 'Psychology', icon: 'psychology', category: 'other' },
 ];
 
@@ -334,6 +356,8 @@ export function getBoardsForQualification(
   } else if (qualification === 'a-level') {
     if (subjectSlug === 'psychology') {
       ids = ['cie', 'aqa', 'edexcel'];
+    } else if (subjectSlug === 'business' || subjectSlug === 'economics') {
+      ids = ['aqa', 'cie', 'edexcel'];
     } else if (subjectSlug === 'maths') {
       ids = ['edexcel', 'cie', 'aqa', 'ocr-a'];
     } else {
@@ -376,7 +400,12 @@ export function getTiersForQualification(
     if (subject.isMaths) {
       return ['Higher', 'Foundation'];
     }
-    if (subject.slug === 'business' || subject.slug === 'psychology' || subject.pastPapersOnly) {
+    if (
+      subject.slug === 'business' ||
+      subject.slug === 'economics' ||
+      subject.slug === 'psychology' ||
+      subject.pastPapersOnly
+    ) {
       return ['Core'];
     }
     if (board === 'cie' || board === 'edexcel-intl') {
@@ -395,6 +424,8 @@ const IGCSE_BOARDS: ExamBoardId[] = ['cie', 'edexcel-intl', 'oxford-aqa'];
 const ALEVEL_SCIENCE_BOARDS: ExamBoardId[] = ['aqa', 'cie', 'edexcel', 'ocr-a'];
 const ALEVEL_MATHS_BOARDS: ExamBoardId[] = ['edexcel', 'cie', 'aqa', 'ocr-a'];
 const ALEVEL_PSYCH_BOARDS: ExamBoardId[] = ['cie', 'aqa', 'edexcel'];
+const ALEVEL_BUS_BOARDS: ExamBoardId[] = ['aqa', 'cie', 'edexcel'];
+const ALEVEL_ECON_BOARDS: ExamBoardId[] = ['aqa', 'cie', 'edexcel'];
 
 interface CourseContentBundle {
   topics: TopicDefinition[];
@@ -603,6 +634,28 @@ const ALEVEL_PSYCH_BUNDLE: CourseContentBundle = {
   examPractice: ALEVEL_PSYCHOLOGY_EXAM_PRACTICE,
   pastPapers: ALEVEL_PSYCHOLOGY_PAST_PAPERS,
   keyTerms: ALEVEL_PSYCHOLOGY_KEY_TERMS,
+};
+
+const ALEVEL_BUS_BUNDLE: CourseContentBundle = {
+  topics: ALEVEL_BUSINESS_TOPICS,
+  notes: ALEVEL_BUSINESS_NOTES,
+  quizzes: ALEVEL_BUSINESS_QUIZZES,
+  flashcards: ALEVEL_BUSINESS_FLASHCARDS,
+  cheatSheets: ALEVEL_BUSINESS_CHEAT_SHEETS,
+  examPractice: ALEVEL_BUSINESS_EXAM_PRACTICE,
+  pastPapers: ALEVEL_BUSINESS_PAST_PAPERS,
+  keyTerms: ALEVEL_BUSINESS_KEY_TERMS,
+};
+
+const ALEVEL_ECON_BUNDLE: CourseContentBundle = {
+  topics: ALEVEL_ECONOMICS_TOPICS,
+  notes: ALEVEL_ECONOMICS_NOTES,
+  quizzes: ALEVEL_ECONOMICS_QUIZZES,
+  flashcards: ALEVEL_ECONOMICS_FLASHCARDS,
+  cheatSheets: ALEVEL_ECONOMICS_CHEAT_SHEETS,
+  examPractice: ALEVEL_ECONOMICS_EXAM_PRACTICE,
+  pastPapers: ALEVEL_ECONOMICS_PAST_PAPERS,
+  keyTerms: ALEVEL_ECONOMICS_KEY_TERMS,
 };
 
 function buildCourseFromBundle(config: {
@@ -1393,6 +1446,74 @@ const RAW_COURSES: CourseDefinition[] = [
     availableTiers: ['A-Level', 'AS-Level'],
     availableBoards: ALEVEL_PSYCH_BOARDS,
     bundle: ALEVEL_PSYCH_BUNDLE,
+  }),
+  buildCourseFromBundle({
+    id: 'a-level-business-aqa',
+    qualification: 'a-level',
+    qualificationLabel: 'A-Level',
+    subjectSlug: 'business',
+    subjectName: 'Business Studies',
+    board: 'aqa',
+    boardLabel: 'AQA',
+    tier: 'A-Level',
+    specCode: '7132',
+    subtitle: 'A-Level · AQA',
+    icon: 'business',
+    themeClass: 'subject-theme--business',
+    availableTiers: ['A-Level', 'AS-Level'],
+    availableBoards: ALEVEL_BUS_BOARDS,
+    bundle: ALEVEL_BUS_BUNDLE,
+  }),
+  buildCourseFromBundle({
+    id: 'a-level-business-cie',
+    qualification: 'a-level',
+    qualificationLabel: 'A-Level',
+    subjectSlug: 'business',
+    subjectName: 'Business Studies',
+    board: 'cie',
+    boardLabel: 'CIE',
+    tier: 'A-Level',
+    specCode: '9609',
+    subtitle: 'A-Level · CIE',
+    icon: 'business',
+    themeClass: 'subject-theme--business',
+    availableTiers: ['A-Level', 'AS-Level'],
+    availableBoards: ALEVEL_BUS_BOARDS,
+    bundle: ALEVEL_BUS_BUNDLE,
+  }),
+  buildCourseFromBundle({
+    id: 'a-level-economics-aqa',
+    qualification: 'a-level',
+    qualificationLabel: 'A-Level',
+    subjectSlug: 'economics',
+    subjectName: 'Economics',
+    board: 'aqa',
+    boardLabel: 'AQA',
+    tier: 'A-Level',
+    specCode: '7136',
+    subtitle: 'A-Level · AQA',
+    icon: 'economics',
+    themeClass: 'subject-theme--economics',
+    availableTiers: ['A-Level', 'AS-Level'],
+    availableBoards: ALEVEL_ECON_BOARDS,
+    bundle: ALEVEL_ECON_BUNDLE,
+  }),
+  buildCourseFromBundle({
+    id: 'a-level-economics-cie',
+    qualification: 'a-level',
+    qualificationLabel: 'A-Level',
+    subjectSlug: 'economics',
+    subjectName: 'Economics',
+    board: 'cie',
+    boardLabel: 'CIE',
+    tier: 'A-Level',
+    specCode: '9708',
+    subtitle: 'A-Level · CIE',
+    icon: 'economics',
+    themeClass: 'subject-theme--economics',
+    availableTiers: ['A-Level', 'AS-Level'],
+    availableBoards: ALEVEL_ECON_BOARDS,
+    bundle: ALEVEL_ECON_BUNDLE,
   }),
 
   // Dashboard GCSE & CIE Other Courses (preserved IDs for backwards compatibility)

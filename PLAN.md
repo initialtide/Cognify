@@ -35,24 +35,27 @@ This document is the self-contained handoff and execution roadmap for continuing
 
 | Qualification | Subject | Status | File / Subtopics |
 | --- | --- | --- | --- |
-| **GCSE** | Biology, Chemistry, Physics, Maths | Complete / Baseline | `biologyAqa.ts`, `chemistryAqa.ts`, `physicsAqa.ts`, `mathsGcse.ts` |
-| **IGCSE** | Biology (`0610`) | Full Notes (`igbio-1-1`..`10-1`) | `src/data/courses/igcseBiology.ts` (20 subtopics — needs `subsections` enrichment on shallow subtopics) |
+| **GCSE** | Biology, Chemistry, Physics, Maths, Business, Economics | Complete / Unlocked | `biologyAqa.ts`, `chemistryAqa.ts`, `physicsAqa.ts`, `mathsGcse.ts`, `igcseBusiness.ts` (28 subs, Mr Lee), `economics.ts` (33 subs, Mr Lee) |
+| **IGCSE** | Biology (`0610`) | Full Notes (`igbio-1-1`..`10-1`) | `src/data/courses/igcseBiology.ts` (20 subtopics) |
 | **IGCSE** | Chemistry (`0620`) | Full Notes | `src/data/courses/igcseChemistry.ts` (16 subtopics) |
 | **IGCSE** | Physics (`0625`) | Full Notes | `src/data/courses/igcsePhysics.ts` (16 subtopics) |
 | **IGCSE** | Maths (`0580` / `4MA1`) | Full Notes | `src/data/courses/igcseMaths.ts` (15 subtopics) |
-| **IGCSE** | Business Studies (`0450`) | Full Notes | `src/data/courses/igcseBusiness.ts` (12 subtopics) |
-| **IGCSE** | Computer Science (`0478`) | `pastPapersOnly` stub | Replace in `src/data/catalog.ts` |
-| **IGCSE** | Economics (`0455`) | `pastPapersOnly` stub | Replace in `src/data/catalog.ts` |
-| **IGCSE** | English Language (`0500`) | `pastPapersOnly` stub | Replace in `src/data/catalog.ts` |
-| **A-Level** | Biology (`7402`) | Full Notes | `src/data/courses/alevelBiology.ts` (16 subtopics) |
-| **A-Level** | Chemistry (`7405`) | Full Notes (needs deeper 3rd cards) | `src/data/courses/alevelChemistry.ts` (16 subtopics) |
-| **A-Level** | Physics (`7408`) | Full Notes (needs deeper 3rd cards) | `src/data/courses/alevelPhysics.ts` (16 subtopics) |
+| **IGCSE** | Business Studies (`0450` / `0264`) | Complete 6 Units (100% Mr Lee) | `src/data/courses/igcseBusiness.ts` + `business/igcse*.ts` (28 subtopics, 6 units) |
+| **IGCSE** | Computer Science (`0478`) | Complete | `src/data/courses/computerScience.ts` (8 subtopics) |
+| **IGCSE** | Economics (`0455`, 2027 spec) | Complete 6 Units (100% Mr Lee) | `src/data/courses/economics.ts` + `economics/igcse*.ts` (33 subtopics, 6 units) |
+| **IGCSE** | English Language (`0500`) | Complete | `src/data/courses/englishLanguage.ts` (6 subtopics) |
+| **A-Level** | Biology (`7402` / `9700`) | Full Notes | `src/data/courses/alevelBiology.ts` (16 subtopics) |
+| **A-Level** | Chemistry (`7405` / `9701`) | Full Notes | `src/data/courses/alevelChemistry.ts` (16 subtopics) |
+| **A-Level** | Physics (`7408` / `9702`) | Full Notes | `src/data/courses/alevelPhysics.ts` (16 subtopics) |
 | **A-Level** | Maths (`9MA0` / `9709`) | Full Notes | `src/data/courses/alevelMaths.ts` (15 subtopics) |
-| **A-Level** | Psychology (`9990`) | Full Notes | `src/data/courses/alevelPsychology.ts` (18 subtopics) |
+| **A-Level** | Psychology (`9990` / `7182`) | Full Notes | `src/data/courses/alevelPsychology.ts` (18 subtopics) |
+| **A-Level** | Business (`7132` / `9609`) | Complete 6 Units (100% Mr Lee) | `src/data/courses/alevelBusiness.ts` + `business/alevel*.ts` (16 subtopics, official CIE 9609 PDFs) |
+| **A-Level** | Economics (`7136` / `9708`) | Complete 6 Units (100% Mr Lee) | `src/data/courses/alevelEconomics.ts` + `economics/alevel*.ts` (16 subtopics, official CIE 9708 PDFs) |
 
-### Verified YouTube Resource Pool & Script
-- [`docs/yt_verified_pool.json`](./docs/yt_verified_pool.json) holds 1,300+ real YouTube videos collected across educational channels (Craig'n'Dave, EconplusDal, Mr Bruff, First Rate Tutors, TLMaths, Bicen Maths, tutor2u, Cognito, Internet Geography, History Matters, Simple History, Learn French with Alexa, Butterfly Spanish, Ben Wardle, CrashCourse, TakingTheBiz, plus 30 pre-verified CS/Business IDs).
-- [`scripts/verify_youtube_oembed.mjs`](./scripts/verify_youtube_oembed.mjs) scans `src/data/courses/*.ts` and verifies every unique `youtubeId` against YouTube oEmbed (`HTTP 200`).
+### Verified YouTube Resource Pool & Scripts
+- [`docs/yt_verified_pool.json`](./docs/yt_verified_pool.json) holds 1,300+ real YouTube videos collected across educational channels; [`docs/mr_lee_verified_videos.json`](./docs/mr_lee_verified_videos.json) holds 107 HTTP-200 verified `Mr Lee - Business Econ` (`@Mrlee-business-econ`) videos powering 100% of GCSE/IGCSE/A-Level Economics & Business lessons.
+- [`scripts/verify_youtube_oembed.mjs`](./scripts/verify_youtube_oembed.mjs) recursively scans `src/data/courses/**/*.ts` and verifies every unique `youtubeId` against YouTube oEmbed (`HTTP 200`).
+- [`scripts/audit_study_content.mjs`](./scripts/audit_study_content.mjs) (`npm run audit:content` / `npm run audit:content:write` → `docs/STUDY_CONTENT_REPORT.md`) grades all 8 Economics & Business courses out of 100/100 across 10 strict pedagogical dimensions using the live production grader (`src/utils/grader.ts`).
 
 ---
 
@@ -71,86 +74,42 @@ Replicate the benchmark card style used in `igbio-1-2` (`src/data/courses/igcseB
 2. **`src/data/courses/alevelChemistry.ts` & `src/data/courses/alevelPhysics.ts`**: Expand all 16 subtopics in each file to **3 deep Cognito cards** featuring `subsections`, step-by-step `Worked example:` calculations (`Step 1`, `Step 2`, ...), intuitive physical/chemical explanations, `glossaryPills`, `memoryAid`, and `commonMistake`.
 3. **Foundational Subtopic Polish**: Add `subsections` and `Worked example:` / `Examples:` blocks to foundational subtopics in `igcseChemistry.ts`, `igcsePhysics.ts`, `igcseMaths.ts`, `igcseBusiness.ts`, `alevelBiology.ts`, and `alevelMaths.ts`.
 
-### Phase 3 — Build All Missing IGCSE Subjects (Target: 13 Subjects, Zero `pastPapersOnly`)
-Create the following `CourseContentBundle` files using verified YouTube IDs from `docs/yt_verified_pool.json`:
+### Phase 3 — Build All Missing IGCSE Subjects (Completed: 13/13 Subjects, Zero `pastPapersOnly`)
+Full IGCSE list (13/13 unlocked): `biology`, `chemistry`, `physics`, `maths`, `business` (28 chapters, Mr Lee), `computer-science`, `economics` (33 chapters, Mr Lee), `english-language`, `english-literature`, `geography`, `history`, `french`, `spanish`.
 
-1. `src/data/courses/igcseComputerScience.ts` (`IGCSE_CS_BUNDLE` — CIE 0478, 6 topics / 12 subtopics; Craig'n'Dave videos)
-2. `src/data/courses/igcseEconomics.ts` (`IGCSE_ECONOMICS_BUNDLE` — CIE 0455, 6 topics / 12 subtopics; EconplusDal videos)
-3. `src/data/courses/igcseEnglishLanguage.ts` (`IGCSE_ENGLISH_LANG_BUNDLE` — CIE 0500, 4 topics / 8 subtopics; First Rate Tutors / Mr Bruff videos)
-4. `src/data/courses/igcseHumanitiesLanguages.ts` exporting:
-   - `IGCSE_GEOGRAPHY_BUNDLE` (`internetgeography` / `timeforgeography`)
-   - `IGCSE_HISTORY_BUNDLE` (`historymatters` / `simplehistory`)
-   - `IGCSE_ENGLISH_LIT_BUNDLE` (`mrbruff` / `firstratetutors`)
-   - `IGCSE_FRENCH_BUNDLE` (`learnfrenchalexa`)
-   - `IGCSE_SPANISH_BUNDLE` (`butterflyspanish`)
+### Phase 4 — Build All Missing A-Level Subjects (Progress: 7/14 Unlocked — Business & Economics Shipped!)
+- **Completed**:
+  - `src/data/courses/alevelEconomics.ts` + `economics/alevel*.ts` (6 units / 16 chapters — 100% verified Mr Lee videos + official CIE 9708 PDFs)
+  - `src/data/courses/alevelBusiness.ts` + `business/alevel*.ts` (6 units / 16 chapters — 100% verified Mr Lee videos + official CIE 9609 PDFs)
+- **Remaining**:
+  1. `ALEVEL_CS_BUNDLE` (6 topics / 12 subtopics — Craig'n'Dave)
+  2. `ALEVEL_FURTHER_MATHS_BUNDLE` (5 topics / 10 subtopics — TLMaths / Bicen Maths)
+  3. `ALEVEL_GEOGRAPHY_BUNDLE`, `ALEVEL_HISTORY_BUNDLE`, `ALEVEL_SOCIOLOGY_BUNDLE`, `ALEVEL_ENGLISH_LIT_BUNDLE`, `ALEVEL_RS_BUNDLE`.
 
-Full target IGCSE list (13 unlocked): `biology`, `chemistry`, `physics`, `maths`, `business`, `computer-science`, `economics`, `english-language`, `english-literature`, `geography`, `history`, `french`, `spanish`.
-
-### Phase 4 — Build All Missing A-Level Subjects (Target: 14 Subjects, Zero `pastPapersOnly`)
-Create the following `CourseContentBundle` modules:
-
-1. `src/data/courses/alevelEconomicsBusinessCS.ts` exporting:
-   - `ALEVEL_ECONOMICS_BUNDLE` (6 topics / 12 subtopics — EconplusDal)
-   - `ALEVEL_BUSINESS_BUNDLE` (6 topics / 12 subtopics — TakingTheBiz / tutor2u)
-   - `ALEVEL_CS_BUNDLE` (6 topics / 12 subtopics — Craig'n'Dave)
-2. `src/data/courses/alevelHumanitiesFurtherMaths.ts` exporting:
-   - `ALEVEL_FURTHER_MATHS_BUNDLE` (5 topics / 10 subtopics — TLMaths / Bicen Maths)
-   - `ALEVEL_GEOGRAPHY_BUNDLE` (4 topics / 8 subtopics)
-   - `ALEVEL_HISTORY_BUNDLE` (4 topics / 8 subtopics)
-   - `ALEVEL_SOCIOLOGY_BUNDLE` (4 topics / 8 subtopics — fetch/verify A-Level Sociology YouTube IDs via oEmbed, note `tutor2u` and `TheHecticTeacher` RSS/channel lookup)
-   - `ALEVEL_ENGLISH_LIT_BUNDLE` (3 topics / 6 subtopics)
-   - `ALEVEL_RS_BUNDLE` (3 topics / 6 subtopics — Ben Wardle / CrashCourse Philosophy)
-
-Full target A-Level list (14 unlocked): `biology`, `chemistry`, `physics`, `maths`, `further-maths`, `psychology`, `economics`, `business`, `computer-science`, `geography`, `history`, `sociology`, `english-literature`, `religious-studies`.
+Full target A-Level list (14 unlocked): `biology`, `chemistry`, `physics`, `maths`, `business`, `economics`, `psychology` (done) + `further-maths`, `computer-science`, `geography`, `history`, `sociology`, `english-literature`, `religious-studies` (next).
 
 ### Phase 5 — Wire Types, Subject Icons, Theme CSS, and Catalog
 - `src/types/curriculum.ts`: add `'sociology'` to `SubjectIconId` (verify whether `'further-maths'` needs a separate icon id or reuses `'maths'` cleanly).
 - `src/components/artwork/SubjectIcons.tsx`: map `'sociology': '/assets/cognito/subject-badges/sociology.svg'` (SVG already exists in `public/assets/cognito/subject-badges/sociology.svg`).
 - `src/styles/components.css`: add theme token classes (light + dark mode) for `.subject-theme--sociology`, `.subject-theme--english-literature`, `.subject-theme--rs`, `.subject-theme--further-maths`, `.subject-theme--french`, `.subject-theme--spanish`.
 - `src/data/catalog.ts`:
-  - Expand `IGCSE_SUBJECTS` (13 unlocked) and `ALEVEL_SUBJECTS` (14 unlocked).
-  - Replace the 3 IGCSE `pastPapersOnly` stubs (`igcse-computer-science-cie`, `igcse-economics-cie`, `igcse-english-language-cie` or exact catalog IDs) with `buildCourseFromBundle`.
-  - Register all new IGCSE & A-Level courses in `RAW_COURSES`.
-  - Update `getBoardsForQualification` and `getTiersForQualification` for all new subject slugs (`further-maths`, `business`, `economics`, `computer-science`, `sociology`, `religious-studies`, `english-literature`, `geography`, `history`, `french`, `spanish`).
+  - Expand `ALEVEL_SUBJECTS` toward all 14 unlocked subjects as remaining bundles land.
 
 ### Phase 6 — Full Automated & Visual Verification
-- Upgrade `src/__tests__/igcseAlevelNotes.test.ts` to assert all 13 IGCSE and 14 A-Level subjects have:
-  - `pastPapersOnly` falsy
-  - Complete `notes` covering every subtopic
-  - `>= 2` cards per lesson, `>= 3` strictly ascending timestamps, valid 11-character `youtubeId`, and valid `DiagramKind` values
-  - `>= 5` quizzes & flashcards per subtopic (except `isMaths` flashcards), `>= 1` `examPractice` per subtopic, `>= topics.length` `cheatSheets`, and `>= 6` `pastPapers`.
-- Run `node scripts/verify_youtube_oembed.mjs` and replace any non-200 video IDs.
-- Run `npm run typecheck`, `npm run test`, and `npm run build` — all must exit `0`.
-- Visually inspect `/courses/igcse`, `/courses/a-level`, and newly added note pages in both Light and Dark mode with zero console errors and zero broken SVG/image assets.
+- Run `npm run verify:youtube`, `npm run audit:content -- --strict`, `npm run audit:learning`, `npm run audit:ui`, and `npm run check` — all must exit `0` with `100/100` scores.
 
-### Phase 7 — Deployment & Remote Hosting *(Optional Next)*
-- Deploy static `dist/` output to Vercel, Netlify, or GitHub Pages.
-- Configure SPA history fallback rewrite (`/* -> /index.html`) so deep client routes like `/course/.../notes/...` work on hard refresh.
+### Phase 7 — Deployment & Remote Hosting *(Shipped on GitHub Pages)*
+- Static `dist/` output deployed to GitHub Pages with SPA fallback and prerendered agent routes.
 
 ---
 
 ## 3. Critical Technical Reference & Guardrails (for Remote Agents)
 
 ### Valid `DiagramKind` Union (`src/types/curriculum.ts`)
-Only use these 18 registered diagram identifiers unless you also implement and export the new diagram in `src/components/artwork/Diagrams.tsx`:
-- `eukaryotic-vs-prokaryotic`
-- `root-hair-vs-palisade`
-- `microscope`
-- `atomic-structure`
-- `circuit-series-parallel`
-- `transverse-wave`
-- `bacterial-cell`
-- `virus-particle`
-- `enzyme-lock-key`
-- `osmosis-membrane`
-- `mitosis-cycle`
-- `ionic-covalent-bonding`
-- `exothermic-endothermic`
-- `reflex-arc`
-- `forces-free-body`
-- `multi-store-memory`
-- `synaptic-transmission`
-- `photosynthesis-chloroplast`
+Only use these 32 registered diagram identifiers unless you also implement and export the new diagram in `src/components/artwork/Diagrams.tsx`:
+- `eukaryotic-vs-prokaryotic`, `root-hair-vs-palisade`, `microscope`, `atomic-structure`, `circuit-series-parallel`, `transverse-wave`, `bacterial-cell`, `virus-particle`, `enzyme-lock-key`, `osmosis-membrane`, `mitosis-cycle`, `ionic-covalent-bonding`, `exothermic-endothermic`, `reflex-arc`, `forces-free-body`, `multi-store-memory`, `synaptic-transmission`, `photosynthesis-chloroplast`
+- `quadratic-graph`, `right-triangle-trig`, `supply-demand-equilibrium`, `production-possibility-curve`, `cpu-fde-architecture`, `logic-gates-truth`, `tectonic-plate-margins`, `break-even-chart`
+- `product-life-cycle`, `business-cycle`, `elasticity-curves`, `ad-as-macro`, `monopoly-market-structure`, `externality-market-failure`
 
 ### Test & Integrity Constraints
 - **`src/__tests__/paywallFree.test.tsx`**: Keep zero paywall or `"Upgrade"` prompts across UI and data, and preserve the unique `"White blood cell"` key-term match inside `src/data/courses/biologyAqa.ts` (note how `contentCompleteness.ts` intentionally sanitizes incidental `"white blood cell"` mentions elsewhere unless the term itself is `"White blood cell"`).

@@ -289,6 +289,30 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://initialtide.github.io/Cognify/course/a-level-business-aqa</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://initialtide.github.io/Cognify/course/a-level-business-cie</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://initialtide.github.io/Cognify/course/a-level-economics-aqa</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://initialtide.github.io/Cognify/course/a-level-economics-cie</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://initialtide.github.io/Cognify/course/gcse-business-cie-core</loc>
     <lastmod>2026-11-27</lastmod>
     <changefreq>weekly</changefreq>

@@ -1,6 +1,6 @@
 # GCSE Biology (CIE, Combined · Extended) — Cognify Revision Course
 
-> Free GCSE Biology (CIE, Combined · Extended) revision course on Cognify with 10 topics, 20 subtopics, interactive video lessons, structured revision notes, quizzes, flashcards, exam-style practice, and 6 past papers.
+> Free GCSE Biology (CIE, Combined · Extended) revision course on Cognify with 10 topics, 20 subtopics, interactive video lessons, structured revision notes, quizzes, flashcards, exam-style practice, and 16 past papers.
 
 **Course URL:** https://initialtide.github.io/Cognify/course/gcse-biology-cie-extended
 **Qualification:** GCSE

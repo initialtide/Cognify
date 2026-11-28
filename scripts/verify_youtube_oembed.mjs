@@ -10,21 +10,30 @@ const COURSES_DIR = path.join(ROOT_DIR, 'src', 'data', 'courses');
 const BATCH_SIZE = 8;
 const YOUTUBE_ID_RE = /youtubeId\s*:\s*['"]([A-Za-z0-9_-]{11})['"]/g;
 
+function listTsFiles(dir) {
+  const out = [];
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      out.push(...listTsFiles(full));
+    } else if (entry.isFile() && entry.name.endsWith('.ts')) {
+      out.push(full);
+    }
+  }
+  return out.sort();
+}
+
 function collectYoutubeIds() {
   if (!fs.existsSync(COURSES_DIR)) {
     throw new Error(`Courses directory not found: ${COURSES_DIR}`);
   }
 
-  const files = fs
-    .readdirSync(COURSES_DIR)
-    .filter((f) => f.endsWith('.ts'))
-    .sort();
+  const files = listTsFiles(COURSES_DIR);
 
   /** @type {Map<string, Set<string>>} */
   const idToFiles = new Map();
 
-  for (const file of files) {
-    const fullPath = path.join(COURSES_DIR, file);
+  for (const fullPath of files) {
     const content = fs.readFileSync(fullPath, 'utf8');
     let match;
     while ((match = YOUTUBE_ID_RE.exec(content)) !== null) {
