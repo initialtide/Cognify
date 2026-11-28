@@ -1,6 +1,6 @@
 # GCSE Physics (CIE, Combined · Extended) — Cognify Revision Course
 
-> Free GCSE Physics (CIE, Combined · Extended) revision course on Cognify with 6 topics, 16 subtopics, interactive video lessons, structured revision notes, quizzes, flashcards, exam-style practice, and 6 past papers.
+> Free GCSE Physics (CIE, Combined · Extended) revision course on Cognify with 6 topics, 16 subtopics, interactive video lessons, structured revision notes, quizzes, flashcards, exam-style practice, and 16 past papers.
 
 **Course URL:** https://initialtide.github.io/Cognify/course/gcse-physics-cie-extended
 **Qualification:** GCSE

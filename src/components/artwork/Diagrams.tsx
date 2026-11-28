@@ -3816,6 +3816,442 @@ export const EducationalDiagram: React.FC<{ kind: DiagramKind; compact?: boolean
             </CLabel>
           </svg>
         );
+
+      /* =====================================================================
+       * 27. PRODUCT LIFE CYCLE & EXTENSION STRATEGIES
+       * ===================================================================*/
+      case 'product-life-cycle':
+        return (
+          <svg
+            viewBox="0 0 640 246"
+            preserveAspectRatio="xMidYMid meet"
+            aria-label="Product Life Cycle diagram showing Development, Introduction, Growth, Maturity, Decline, and an Extension Strategy curve"
+          >
+            <ArrowMarkerDefs prefix={uid} colors={{ slate: '#556478', teal: '#229680', purple: '#7d3ec4' }} />
+
+            {/* Stage bands */}
+            <rect x="74" y="30" width="52" height="174" fill="#f3f5f8" opacity="0.65" />
+            <rect x="126" y="30" width="66" height="174" fill="#edf7ff" opacity="0.65" />
+            <rect x="192" y="30" width="76" height="174" fill="#effcf8" opacity="0.65" />
+            <rect x="268" y="30" width="84" height="174" fill="#fff8eb" opacity="0.65" />
+            <rect x="352" y="30" width="76" height="174" fill="#fdebf0" opacity="0.65" />
+
+            {/* Axes */}
+            <line x1="74" y1="204" x2="74" y2="24" stroke="#556478" strokeWidth="2.3" markerEnd={`url(#${uid}-slate)`} />
+            <line x1="74" y1="204" x2="434" y2="204" stroke="#556478" strokeWidth="2.3" markerEnd={`url(#${uid}-slate)`} />
+            <CLabel x={66} y={24} anchor="end" fill="#4f5b6b" size={9.5}>SALES</CLabel>
+            <CLabel x={66} y={36} anchor="end" fill="#4f5b6b" size={9.5}>REV (£)</CLabel>
+            <CLabel x={432} y={224} anchor="end" fill="#4f5b6b" size={9.5}>TIME</CLabel>
+
+            {/* Stage headings */}
+            <CLabel x={100} y={44} fill="#5b687a" size={8}>DEV</CLabel>
+            <CLabel x={159} y={44} fill="#145a99" size={8}>INTRO</CLabel>
+            <CLabel x={230} y={44} fill="#1a7d69" size={8}>GROWTH</CLabel>
+            <CLabel x={310} y={44} fill="#9c5c06" size={8}>MATURITY</CLabel>
+            <CLabel x={390} y={44} fill="#b5375d" size={8}>DECLINE</CLabel>
+
+            {/* Sales curve */}
+            <path
+              d="M 74 204 L 126 204 C 154 202, 174 184, 196 150 C 224 106, 250 72, 294 68 C 330 65, 354 88, 376 130 C 394 162, 408 182, 424 190"
+              fill="none"
+              stroke="#2282d4"
+              strokeWidth="3.2"
+              strokeLinecap="round"
+            />
+
+            {/* Extension strategy dashed curve */}
+            <path
+              d="M 326 74 C 350 66, 372 56, 396 58 C 410 59, 418 66, 426 76"
+              fill="none"
+              stroke="#7d3ec4"
+              strokeWidth="2.8"
+              strokeDasharray="6 4"
+              strokeLinecap="round"
+              markerEnd={`url(#${uid}-purple)`}
+            />
+            <circle cx="326" cy="74" r="5" fill="#7d3ec4" stroke="#ffffff" strokeWidth="1.8" />
+            <CLabel x={378} y={50} fill="#5c289c" size={8.4}>EXTENSION</CLabel>
+            <CLabel x={392} y={178} fill="#b5375d" size={8.2}>NO ACTION</CLabel>
+
+            {/* Right summary panel */}
+            <rect x="448" y="26" width="178" height="194" rx="14" fill="#fafbfd" stroke="#d5dfec" strokeWidth="1.8" />
+            <PillHeader cx={537} cy={48} width={154} text="EXTENSION TACTICS" bg="#f3eafd" stroke="#c59ef0" color="#5c289c" />
+
+            <rect x="460" y="70" width="154" height="36" rx="10" fill="#effcf8" stroke="#7bdcc1" strokeWidth="1.4" />
+            <CLabel x={537} y={85} fill="#1a7d69" size={8.8}>PRODUCT REFRESH</CLabel>
+            <CLabel x={537} y={98} fill="#5b687a" size={8} weight={700}>New flavours / features</CLabel>
+
+            <rect x="460" y="114" width="154" height="36" rx="10" fill="#edf7ff" stroke="#7bc0f7" strokeWidth="1.4" />
+            <CLabel x={537} y={129} fill="#145a99" size={8.8}>NEW MARKETS</CLabel>
+            <CLabel x={537} y={142} fill="#5b687a" size={8} weight={700}>Export or new segment</CLabel>
+
+            <rect x="460" y="158" width="154" height="48" rx="10" fill="#fff3d9" stroke="#f2ba5a" strokeWidth="1.4" />
+            <CLabel x={537} y={174} fill="#9c5c06" size={8.8}>PROMO &amp; PRICE</CLabel>
+            <CLabel x={537} y={187} fill="#5b687a" size={8} weight={700}>Rebrand packaging &amp;</CLabel>
+            <CLabel x={537} y={198} fill="#5b687a" size={8} weight={700}>competitive discounts</CLabel>
+          </svg>
+        );
+
+      /* =====================================================================
+       * 28. THE BUSINESS / ECONOMIC CYCLE (Boom, Recession, Slump, Recovery)
+       * ===================================================================*/
+      case 'business-cycle':
+        return (
+          <svg
+            viewBox="0 0 640 246"
+            preserveAspectRatio="xMidYMid meet"
+            aria-label="Business cycle showing Real GDP fluctuating around long-run trend growth through Boom, Recession, Slump, and Recovery"
+          >
+            <ArrowMarkerDefs prefix={uid} colors={{ slate: '#556478', teal: '#229680' }} />
+
+            {/* Axes */}
+            <line x1="72" y1="206" x2="72" y2="24" stroke="#556478" strokeWidth="2.3" markerEnd={`url(#${uid}-slate)`} />
+            <line x1="72" y1="206" x2="432" y2="206" stroke="#556478" strokeWidth="2.3" markerEnd={`url(#${uid}-slate)`} />
+            <CLabel x={64} y={28} anchor="end" fill="#4f5b6b" size={9.5}>REAL</CLabel>
+            <CLabel x={64} y={40} anchor="end" fill="#4f5b6b" size={9.5}>GDP</CLabel>
+            <CLabel x={428} y={224} anchor="end" fill="#4f5b6b" size={9.5}>TIME (YEARS)</CLabel>
+
+            {/* Long-run Trend Growth line */}
+            <line x1="80" y1="168" x2="418" y2="74" stroke="#94a3b8" strokeWidth="2.2" strokeDasharray="7 4" />
+            <CLabel x={368} y={76} fill="#64748b" size={8.2}>TREND GDP</CLabel>
+
+            {/* Actual Real GDP wave */}
+            <path
+              d="M 80 180 C 110 156, 134 90, 168 88 C 202 86, 224 166, 264 168 C 304 170, 326 68, 366 54 C 388 47, 404 62, 418 82"
+              fill="none"
+              stroke="#229680"
+              strokeWidth="3.4"
+              strokeLinecap="round"
+            />
+
+            {/* Phase callout dots */}
+            <circle cx="168" cy="88" r="5.5" fill="#d98916" stroke="#ffffff" strokeWidth="1.8" />
+            <CLabel x={168} y={74} fill="#9c5c06" size={9.2}>BOOM</CLabel>
+
+            <circle cx="216" cy="134" r="5" fill="#d95378" stroke="#ffffff" strokeWidth="1.8" />
+            <CLabel x={208} y={120} anchor="end" fill="#b5375d" size={8.6}>RECESSION</CLabel>
+
+            <circle cx="264" cy="168" r="5.5" fill="#7d3ec4" stroke="#ffffff" strokeWidth="1.8" />
+            <CLabel x={264} y={188} fill="#5c289c" size={9.2}>SLUMP / TROUGH</CLabel>
+
+            <circle cx="318" cy="112" r="5" fill="#2282d4" stroke="#ffffff" strokeWidth="1.8" />
+            <CLabel x={328} y={126} anchor="start" fill="#145a99" size={8.8}>RECOVERY</CLabel>
+
+            <circle cx="366" cy="54" r="5.5" fill="#d98916" stroke="#ffffff" strokeWidth="1.8" />
+            <CLabel x={366} y={40} fill="#9c5c06" size={9.2}>PEAK</CLabel>
+
+            {/* Right summary panel */}
+            <rect x="446" y="26" width="180" height="194" rx="14" fill="#fafbfd" stroke="#d5dfec" strokeWidth="1.8" />
+            <PillHeader cx={536} cy={48} width={154} text="PHASE IMPACTS" bg="#d9f7ee" stroke="#229680" color="#1a7d69" />
+
+            <rect x="458" y="68" width="156" height="42" rx="10" fill="#fff3d9" stroke="#f2ba5a" strokeWidth="1.4" />
+            <CLabel x={536} y={84} fill="#9c5c06" size={8.8}>BOOM / PEAK</CLabel>
+            <CLabel x={536} y={98} fill="#5b687a" size={8} weight={700}>High sales · Inflation risk</CLabel>
+
+            <rect x="458" y="118" width="156" height="44" rx="10" fill="#fdebf0" stroke="#f0a8bc" strokeWidth="1.4" />
+            <CLabel x={536} y={134} fill="#b5375d" size={8.8}>RECESSION (2 QTRS ↓)</CLabel>
+            <CLabel x={536} y={148} fill="#5b687a" size={8} weight={700}>Falling GDP · Job losses</CLabel>
+
+            <rect x="458" y="170" width="156" height="38" rx="10" fill="#edf7ff" stroke="#7bc0f7" strokeWidth="1.4" />
+            <CLabel x={536} y={185} fill="#145a99" size={8.8}>RECOVERY</CLabel>
+            <CLabel x={536} y={198} fill="#5b687a" size={8} weight={700}>Rising confidence &amp; hiring</CLabel>
+          </svg>
+        );
+
+      /* =====================================================================
+       * 29. PRICE ELASTICITY OF DEMAND (Elastic vs Inelastic + Revenue Test)
+       * ===================================================================*/
+      case 'elasticity-curves':
+        return (
+          <svg
+            viewBox="0 0 660 248"
+            preserveAspectRatio="xMidYMid meet"
+            aria-label="Comparison of Price Elastic demand (flat curve, price rise cuts revenue) and Price Inelastic demand (steep curve, price rise boosts revenue)"
+          >
+            <ArrowMarkerDefs prefix={uid} colors={{ slate: '#556478', coral: '#d95378', teal: '#229680' }} />
+
+            {/* LEFT PANEL: PRICE ELASTIC */}
+            <rect x="14" y="14" width="306" height="220" rx="14" fill="#fff9fa" stroke="#f0a8bc" strokeWidth="1.8" />
+            <PillHeader cx={167} cy={34} width={224} text="PRICE ELASTIC (|PED| > 1)" bg="#fdebf0" stroke="#d95378" color="#b5375d" />
+
+            <line x1="62" y1="184" x2="62" y2="56" stroke="#556478" strokeWidth="2" markerEnd={`url(#${uid}-slate)`} />
+            <line x1="62" y1="184" x2="294" y2="184" stroke="#556478" strokeWidth="2" markerEnd={`url(#${uid}-slate)`} />
+            <CLabel x={54} y={64} anchor="end" fill="#4f5b6b" size={9}>P</CLabel>
+            <CLabel x={294} y={198} anchor="end" fill="#4f5b6b" size={9}>Q</CLabel>
+
+            {/* Revenue lost / gained rectangles */}
+            <rect x="62" y="102" width="70" height="26" fill="#d9f7ee" opacity="0.85" />
+            <rect x="132" y="128" width="126" height="56" fill="#fdebf0" opacity="0.9" />
+
+            {/* Flat Elastic Demand curve */}
+            <line x1="86" y1="90" x2="286" y2="146" stroke="#d95378" strokeWidth="3.2" strokeLinecap="round" />
+            <CLabel x={292} y={152} anchor="start" fill="#b5375d" size={9.5}>D</CLabel>
+
+            {/* P1 -> P2 dashed lines */}
+            <line x1="62" y1="128" x2="258" y2="128" stroke="#94a3b8" strokeWidth="1.4" strokeDasharray="4 3" />
+            <line x1="258" y1="128" x2="258" y2="184" stroke="#94a3b8" strokeWidth="1.4" strokeDasharray="4 3" />
+            <line x1="62" y1="102" x2="132" y2="102" stroke="#d95378" strokeWidth="1.5" strokeDasharray="4 3" />
+            <line x1="132" y1="102" x2="132" y2="184" stroke="#d95378" strokeWidth="1.5" strokeDasharray="4 3" />
+
+            <CLabel x={52} y={132} anchor="end" fill="#4f5b6b" size={8.5}>P₁</CLabel>
+            <CLabel x={52} y={106} anchor="end" fill="#b5375d" size={8.5}>P₂</CLabel>
+            <CLabel x={258} y={198} fill="#4f5b6b" size={8.5}>Q₁</CLabel>
+            <CLabel x={132} y={198} fill="#b5375d" size={8.5}>Q₂</CLabel>
+            <CLabel x={194} y={160} fill="#b5375d" size={8.2}>BIG REV LOSS</CLabel>
+            <CLabel x={167} y={220} fill="#b5375d" size={8.8}>P ↑ → BIG Q ↓ → TOTAL REVENUE FALLS</CLabel>
+
+            {/* RIGHT PANEL: PRICE INELASTIC */}
+            <rect x="340" y="14" width="306" height="220" rx="14" fill="#f4fdf9" stroke="#7bdcc1" strokeWidth="1.8" />
+            <PillHeader cx={493} cy={34} width={236} text="PRICE INELASTIC (|PED| < 1)" bg="#d9f7ee" stroke="#229680" color="#1a7d69" />
+
+            <line x1="388" y1="184" x2="388" y2="56" stroke="#556478" strokeWidth="2" markerEnd={`url(#${uid}-slate)`} />
+            <line x1="388" y1="184" x2="620" y2="184" stroke="#556478" strokeWidth="2" markerEnd={`url(#${uid}-slate)`} />
+            <CLabel x={380} y={64} anchor="end" fill="#4f5b6b" size={9}>P</CLabel>
+            <CLabel x={620} y={198} anchor="end" fill="#4f5b6b" size={9}>Q</CLabel>
+
+            {/* Revenue gained / lost rectangles */}
+            <rect x="388" y="80" width="110" height="58" fill="#d9f7ee" opacity="0.92" />
+            <rect x="498" y="138" width="24" height="46" fill="#fdebf0" opacity="0.85" />
+
+            {/* Steep Inelastic Demand curve */}
+            <line x1="484" y1="58" x2="540" y2="176" stroke="#229680" strokeWidth="3.2" strokeLinecap="round" />
+            <CLabel x={548} y={176} anchor="start" fill="#1a7d69" size={9.5}>D</CLabel>
+
+            {/* P1 -> P2 dashed lines */}
+            <line x1="388" y1="138" x2="522" y2="138" stroke="#94a3b8" strokeWidth="1.4" strokeDasharray="4 3" />
+            <line x1="522" y1="138" x2="522" y2="184" stroke="#94a3b8" strokeWidth="1.4" strokeDasharray="4 3" />
+            <line x1="388" y1="80" x2="498" y2="80" stroke="#229680" strokeWidth="1.5" strokeDasharray="4 3" />
+            <line x1="498" y1="80" x2="498" y2="184" stroke="#229680" strokeWidth="1.5" strokeDasharray="4 3" />
+
+            <CLabel x={378} y={142} anchor="end" fill="#4f5b6b" size={8.5}>P₁</CLabel>
+            <CLabel x={378} y={84} anchor="end" fill="#1a7d69" size={8.5}>P₂</CLabel>
+            <CLabel x={526} y={198} fill="#4f5b6b" size={8.5}>Q₁</CLabel>
+            <CLabel x={494} y={198} fill="#1a7d69" size={8.5}>Q₂</CLabel>
+            <CLabel x={444} y={114} fill="#1a7d69" size={8.2}>BIG REV GAIN</CLabel>
+            <CLabel x={493} y={220} fill="#1a7d69" size={8.8}>P ↑ → SMALL Q ↓ → TOTAL REVENUE RISES</CLabel>
+          </svg>
+        );
+
+      /* =====================================================================
+       * 30. A-LEVEL KEYNESIAN AD/AS MODEL (Spare Capacity -> Full Employment)
+       * ===================================================================*/
+      case 'ad-as-macro':
+        return (
+          <svg
+            viewBox="0 0 640 248"
+            preserveAspectRatio="xMidYMid meet"
+            aria-label="Keynesian Aggregate Demand and Long-Run Aggregate Supply diagram showing spare capacity, bottleneck, and full-employment output Yfe"
+          >
+            <ArrowMarkerDefs prefix={uid} colors={{ slate: '#556478', blue: '#2282d4', teal: '#229680' }} />
+
+            {/* Axes */}
+            <line x1="80" y1="206" x2="80" y2="24" stroke="#556478" strokeWidth="2.3" markerEnd={`url(#${uid}-slate)`} />
+            <line x1="80" y1="206" x2="432" y2="206" stroke="#556478" strokeWidth="2.3" markerEnd={`url(#${uid}-slate)`} />
+            <CLabel x={72} y={26} anchor="end" fill="#4f5b6b" size={9.2}>PRICE</CLabel>
+            <CLabel x={72} y={38} anchor="end" fill="#4f5b6b" size={9.2}>LEVEL</CLabel>
+            <CLabel x={428} y={226} anchor="end" fill="#4f5b6b" size={9.2}>REAL GDP (Y)</CLabel>
+
+            {/* Full employment vertical dashed marker */}
+            <line x1="364" y1="36" x2="364" y2="206" stroke="#c59ef0" strokeWidth="1.6" strokeDasharray="4 3" />
+            <CLabel x={364} y={220} fill="#5c289c" size={9}>Yfe</CLabel>
+
+            {/* Keynesian LRAS Curve */}
+            <path
+              d="M 96 168 L 236 168 C 314 168, 364 148, 364 42"
+              fill="none"
+              stroke="#7d3ec4"
+              strokeWidth="3.4"
+              strokeLinecap="round"
+            />
+            <CLabel x={388} y={48} fill="#5c289c" size={9.5}>LRAS</CLabel>
+
+            {/* AD1 (Spare capacity) */}
+            <line x1="108" y1="104" x2="206" y2="194" stroke="#229680" strokeWidth="2.6" strokeLinecap="round" />
+            <CLabel x={212} y={196} fill="#1a7d69" size={8.8}>AD₁</CLabel>
+
+            {/* AD2 (Near bottleneck) */}
+            <line x1="184" y1="74" x2="316" y2="190" stroke="#2282d4" strokeWidth="2.8" strokeLinecap="round" />
+            <CLabel x={320} y={194} fill="#145a99" size={8.8}>AD₂</CLabel>
+
+            {/* AD3 (Inflationary / Full capacity) */}
+            <line x1="258" y1="38" x2="404" y2="144" stroke="#d95378" strokeWidth="2.8" strokeLinecap="round" />
+            <CLabel x={410} y={150} fill="#b5375d" size={8.8}>AD₃</CLabel>
+
+            {/* Equilibrium dots */}
+            <circle cx="178" cy="168" r="4.8" fill="#229680" stroke="#ffffff" strokeWidth="1.6" />
+            <circle cx="290" cy="166" r="4.8" fill="#2282d4" stroke="#ffffff" strokeWidth="1.6" />
+            <circle cx="364" cy="115" r="5.2" fill="#d95378" stroke="#ffffff" strokeWidth="1.6" />
+
+            {/* Shift arrow AD1 -> AD2 */}
+            <line x1="164" y1="126" x2="218" y2="126" stroke="#2282d4" strokeWidth="2.1" markerEnd={`url(#${uid}-blue)`} />
+
+            {/* Price level labels */}
+            <line x1="80" y1="168" x2="178" y2="168" stroke="#94a3b8" strokeWidth="1.3" strokeDasharray="4 3" />
+            <line x1="80" y1="115" x2="364" y2="115" stroke="#d95378" strokeWidth="1.3" strokeDasharray="4 3" />
+            <CLabel x={70} y={172} anchor="end" fill="#1a7d69" size={8.5}>P₁</CLabel>
+            <CLabel x={70} y={119} anchor="end" fill="#b5375d" size={8.5}>P₃</CLabel>
+
+            {/* Right summary panel */}
+            <rect x="446" y="26" width="180" height="194" rx="14" fill="#fafbfd" stroke="#d5dfec" strokeWidth="1.8" />
+            <PillHeader cx={536} cy={48} width={156} text="KEYNESIAN ZONES" bg="#f3eafd" stroke="#c59ef0" color="#5c289c" />
+
+            <rect x="458" y="68" width="156" height="40" rx="10" fill="#effcf8" stroke="#7bdcc1" strokeWidth="1.4" />
+            <CLabel x={536} y={83} fill="#1a7d69" size={8.6}>SPARE CAPACITY</CLabel>
+            <CLabel x={536} y={96} fill="#5b687a" size={7.8} weight={700}>AD₁→AD₂: Growth, no CPI ↑</CLabel>
+
+            <rect x="458" y="116" width="156" height="42" rx="10" fill="#fdebf0" stroke="#f0a8bc" strokeWidth="1.4" />
+            <CLabel x={536} y={132} fill="#b5375d" size={8.6}>FULL CAPACITY (Yfe)</CLabel>
+            <CLabel x={536} y={146} fill="#5b687a" size={7.8} weight={700}>AD₃: Pure demand-pull CPI ↑</CLabel>
+
+            <rect x="458" y="166" width="156" height="42" rx="10" fill="#edf7ff" stroke="#7bc0f7" strokeWidth="1.4" />
+            <CLabel x={536} y={182} fill="#145a99" size={8.6}>SUPPLY-SIDE SHIFT</CLabel>
+            <CLabel x={536} y={196} fill="#5b687a" size={7.8} weight={700}>LRAS → right raises Yfe</CLabel>
+          </svg>
+        );
+
+      /* =====================================================================
+       * 31. A-LEVEL MONOPOLY DIAGRAM (AR, MR, MC, AC, Supernormal Profit, DWL)
+       * ===================================================================*/
+      case 'monopoly-market-structure':
+        return (
+          <svg
+            viewBox="0 0 640 248"
+            preserveAspectRatio="xMidYMid meet"
+            aria-label="Profit-maximising monopoly diagram showing AR, MR, MC, AC curves, supernormal profit box, and deadweight welfare loss triangle"
+          >
+            <ArrowMarkerDefs prefix={uid} colors={{ slate: '#556478' }} />
+
+            {/* Axes */}
+            <line x1="78" y1="206" x2="78" y2="24" stroke="#556478" strokeWidth="2.3" markerEnd={`url(#${uid}-slate)`} />
+            <line x1="78" y1="206" x2="430" y2="206" stroke="#556478" strokeWidth="2.3" markerEnd={`url(#${uid}-slate)`} />
+            <CLabel x={70} y={26} anchor="end" fill="#4f5b6b" size={9}>COST /</CLabel>
+            <CLabel x={70} y={38} anchor="end" fill="#4f5b6b" size={9}>REV (£)</CLabel>
+            <CLabel x={426} y={224} anchor="end" fill="#4f5b6b" size={9}>OUTPUT (Q)</CLabel>
+
+            {/* Supernormal Profit Box (Pm to C1, 0 to Qm) */}
+            <rect x="78" y="88" width="134" height="44" fill="#d9f7ee" opacity="0.88" />
+            <CLabel x={145} y={114} fill="#1a7d69" size={8.5}>SUPERNORMAL PROFIT</CLabel>
+
+            {/* Deadweight Welfare Loss Triangle */}
+            <polygon points="212,88 212,158 294,126" fill="#fdebf0" opacity="0.9" />
+            <CLabel x={242} y={128} fill="#b5375d" size={8.2}>DWL</CLabel>
+
+            {/* AR (Demand) and MR curves */}
+            <line x1="94" y1="42" x2="404" y2="176" stroke="#2282d4" strokeWidth="3" strokeLinecap="round" />
+            <CLabel x={406} y={184} fill="#145a99" size={9}>AR = D</CLabel>
+            <line x1="94" y1="42" x2="256" y2="196" stroke="#7d3ec4" strokeWidth="2.6" strokeLinecap="round" />
+            <CLabel x={264} y={198} fill="#5c289c" size={9}>MR</CLabel>
+
+            {/* MC Curve (J-shaped) */}
+            <path d="M 118 176 Q 178 174, 212 158 Q 272 134, 344 52" fill="none" stroke="#d95378" strokeWidth="3" strokeLinecap="round" />
+            <CLabel x={356} y={54} fill="#b5375d" size={9.5}>MC</CLabel>
+
+            {/* AC Curve (U-shaped, below AR at Qm) */}
+            <path d="M 112 110 Q 198 148, 256 130 Q 326 112, 376 80" fill="none" stroke="#d98916" strokeWidth="2.6" strokeLinecap="round" />
+            <CLabel x={386} y={84} fill="#9c5c06" size={9.2}>AC</CLabel>
+
+            {/* Dashed guides for Qm, Pm, C1 */}
+            <line x1="212" y1="88" x2="212" y2="206" stroke="#7d3ec4" strokeWidth="1.6" strokeDasharray="4 3" />
+            <line x1="78" y1="88" x2="212" y2="88" stroke="#2282d4" strokeWidth="1.5" strokeDasharray="4 3" />
+            <line x1="78" y1="132" x2="212" y2="132" stroke="#d98916" strokeWidth="1.5" strokeDasharray="4 3" />
+
+            <circle cx="212" cy="158" r="4.8" fill="#7d3ec4" stroke="#ffffff" strokeWidth="1.6" />
+            <circle cx="212" cy="88" r="5" fill="#2282d4" stroke="#ffffff" strokeWidth="1.6" />
+            <circle cx="294" cy="126" r="4.5" fill="#229680" stroke="#ffffff" strokeWidth="1.6" />
+
+            <CLabel x={68} y={92} anchor="end" fill="#145a99" size={8.8}>Pm</CLabel>
+            <CLabel x={68} y={136} anchor="end" fill="#9c5c06" size={8.8}>C₁</CLabel>
+            <CLabel x={212} y={220} fill="#5c289c" size={8.8}>Qm</CLabel>
+            <CLabel x={294} y={220} fill="#1a7d69" size={8.4}>Qalloc</CLabel>
+
+            {/* Right summary panel */}
+            <rect x="444" y="26" width="182" height="194" rx="14" fill="#fafbfd" stroke="#d5dfec" strokeWidth="1.8" />
+            <PillHeader cx={535} cy={48} width={156} text="MONOPOLY RULES" bg="#f3eafd" stroke="#c59ef0" color="#5c289c" />
+
+            <rect x="456" y="70" width="158" height="38" rx="10" fill="#effcf8" stroke="#7bdcc1" strokeWidth="1.4" />
+            <CLabel x={535} y={85} fill="#1a7d69" size={8.8}>PROFIT MAX: MC = MR</CLabel>
+            <CLabel x={535} y={98} fill="#5b687a" size={7.8} weight={700}>Sets Qm then reads Pm off AR</CLabel>
+
+            <rect x="456" y="116" width="158" height="40" rx="10" fill="#fdebf0" stroke="#f0a8bc" strokeWidth="1.4" />
+            <CLabel x={535} y={132} fill="#b5375d" size={8.8}>INEFFICIENCY (P &gt; MC)</CLabel>
+            <CLabel x={535} y={145} fill="#5b687a" size={7.8} weight={700}>Under-produces → DWL triangle</CLabel>
+
+            <rect x="456" y="164" width="158" height="42" rx="10" fill="#fff3d9" stroke="#f2ba5a" strokeWidth="1.4" />
+            <CLabel x={535} y={180} fill="#9c5c06" size={8.8}>DYNAMIC EFFICIENCY</CLabel>
+            <CLabel x={535} y={193} fill="#5b687a" size={7.8} weight={700}>Profits can fund R&amp;D + EoS</CLabel>
+          </svg>
+        );
+
+      /* =====================================================================
+       * 32. NEGATIVE EXTERNALITY OF PRODUCTION (MSC > MPC & Welfare Loss)
+       * ===================================================================*/
+      case 'externality-market-failure':
+        return (
+          <svg
+            viewBox="0 0 640 248"
+            preserveAspectRatio="xMidYMid meet"
+            aria-label="Negative externality of production diagram showing MSC above MPC, overproduction at Qm vs Qopt, and deadweight welfare loss triangle"
+          >
+            <ArrowMarkerDefs prefix={uid} colors={{ slate: '#556478', coral: '#d95378', teal: '#229680' }} />
+
+            {/* Axes */}
+            <line x1="78" y1="206" x2="78" y2="24" stroke="#556478" strokeWidth="2.3" markerEnd={`url(#${uid}-slate)`} />
+            <line x1="78" y1="206" x2="430" y2="206" stroke="#556478" strokeWidth="2.3" markerEnd={`url(#${uid}-slate)`} />
+            <CLabel x={70} y={26} anchor="end" fill="#4f5b6b" size={9}>PRICE /</CLabel>
+            <CLabel x={70} y={38} anchor="end" fill="#4f5b6b" size={9}>COST</CLabel>
+            <CLabel x={426} y={224} anchor="end" fill="#4f5b6b" size={9}>QUANTITY (Q)</CLabel>
+
+            {/* Welfare loss triangle (points toward social optimum Qopt) */}
+            <polygon points="222,110 286,78 286,144" fill="#fdebf0" opacity="0.92" />
+            <CLabel x={264} y={114} fill="#b5375d" size={8.2}>W. LOSS</CLabel>
+
+            {/* Demand (MPB = MSB) */}
+            <line x1="112" y1="54" x2="386" y2="196" stroke="#2282d4" strokeWidth="3" strokeLinecap="round" />
+            <CLabel x={384} y={182} anchor="end" fill="#145a99" size={8.8}>MPB = MSB</CLabel>
+
+            {/* MPC (Free-market Supply) */}
+            <line x1="118" y1="194" x2="368" y2="90" stroke="#229680" strokeWidth="3" strokeLinecap="round" />
+            <CLabel x={378} y={92} anchor="start" fill="#1a7d69" size={9}>MPC (S)</CLabel>
+
+            {/* MSC (Social Cost = MPC + External Cost) */}
+            <line x1="118" y1="146" x2="352" y2="48" stroke="#d95378" strokeWidth="3.2" strokeLinecap="round" />
+            <CLabel x={360} y={50} anchor="start" fill="#b5375d" size={9.5}>MSC</CLabel>
+
+            {/* External Cost vertical arrow */}
+            <line x1="176" y1="168" x2="176" y2="128" stroke="#d95378" strokeWidth="2.2" markerEnd={`url(#${uid}-coral)`} />
+            <CLabel x={166} y={150} anchor="end" fill="#b5375d" size={7.8}>EXT. COST</CLabel>
+
+            {/* Equilibrium dashed guides */}
+            <line x1="222" y1="110" x2="222" y2="206" stroke="#d95378" strokeWidth="1.6" strokeDasharray="4 3" />
+            <line x1="78" y1="110" x2="222" y2="110" stroke="#d95378" strokeWidth="1.5" strokeDasharray="4 3" />
+            <line x1="286" y1="144" x2="286" y2="206" stroke="#229680" strokeWidth="1.6" strokeDasharray="4 3" />
+            <line x1="78" y1="144" x2="286" y2="144" stroke="#229680" strokeWidth="1.5" strokeDasharray="4 3" />
+
+            <circle cx="222" cy="110" r="5" fill="#d95378" stroke="#ffffff" strokeWidth="1.8" />
+            <circle cx="286" cy="144" r="5" fill="#229680" stroke="#ffffff" strokeWidth="1.8" />
+
+            <CLabel x={68} y={114} anchor="end" fill="#b5375d" size={8.6}>Popt</CLabel>
+            <CLabel x={68} y={148} anchor="end" fill="#1a7d69" size={8.6}>Pm</CLabel>
+            <CLabel x={222} y={220} fill="#b5375d" size={8.8}>Qopt</CLabel>
+            <CLabel x={286} y={220} fill="#1a7d69" size={8.8}>Qm</CLabel>
+
+            {/* Right summary panel */}
+            <rect x="444" y="26" width="182" height="194" rx="14" fill="#fafbfd" stroke="#d5dfec" strokeWidth="1.8" />
+            <PillHeader cx={535} cy={48} width={156} text="MARKET FAILURE" bg="#fdebf0" stroke="#d95378" color="#b5375d" />
+
+            <rect x="456" y="70" width="158" height="38" rx="10" fill="#fdebf0" stroke="#f0a8bc" strokeWidth="1.4" />
+            <CLabel x={535} y={85} fill="#b5375d" size={8.6}>OVERPRODUCTION</CLabel>
+            <CLabel x={535} y={98} fill="#5b687a" size={7.8} weight={700}>Qm &gt; Qopt (MSC &gt; MSB)</CLabel>
+
+            <rect x="456" y="116" width="158" height="40" rx="10" fill="#effcf8" stroke="#7bdcc1" strokeWidth="1.4" />
+            <CLabel x={535} y={132} fill="#1a7d69" size={8.6}>INTERNALISE COST</CLabel>
+            <CLabel x={535} y={145} fill="#5b687a" size={7.8} weight={700}>Tax = MEC shifts MPC → MSC</CLabel>
+
+            <rect x="456" y="164" width="158" height="42" rx="10" fill="#fff3d9" stroke="#f2ba5a" strokeWidth="1.4" />
+            <CLabel x={535} y={180} fill="#9c5c06" size={8.6}>OTHER REMEDIES</CLabel>
+            <CLabel x={535} y={193} fill="#5b687a" size={7.8} weight={700}>Pollution permits · Regulation</CLabel>
+          </svg>
+        );
     }
   };
 

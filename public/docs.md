@@ -10,7 +10,7 @@
 
 | Method | Path | Content-Type | Purpose |
 | --- | --- | --- | --- |
-| GET | `/api/v1/courses.json` | `application/json` | Complete catalog of all 47 courses, exam boards, topics, subtopics, and canonical URLs. |
+| GET | `/api/v1/courses.json` | `application/json` | Complete catalog of all 51 courses, exam boards, topics, subtopics, and canonical URLs. |
 | GET | `/api/openapi.json` | `application/json` | OpenAPI 3.1.0 specification for Cognify's public Curriculum API. |
 | GET | `/.well-known/mcp.json` | `application/json` | Model Context Protocol (MCP) manifest describing Cognify's agent discovery tools. |
 | GET | `/llms.txt` | `text/markdown` | Concise agent directory with explicit "When to use Cognify" guidance. |

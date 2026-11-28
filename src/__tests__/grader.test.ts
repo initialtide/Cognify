@@ -63,4 +63,27 @@ describe('gradeShortAnswerLocal', () => {
     expect(res.earnedMarks).toBe(0);
     expect(res.missedPoints).toHaveLength(3);
   });
+
+  it('handles Unicode minus signs, thousand commas, and negative currency prefixes accurately', () => {
+    const econRubric: MarkSchemeRubric = {
+      maxMarks: 3,
+      modelAnswer: 'YED = −1.5, current account = -$18bn, new volume = 48,000 tickets.',
+      markPoints: [
+        { id: 'mp1', markDescription: 'YED = -1.5', numericMatch: { value: -1.5, tolerance: 0.05 } },
+        { id: 'mp2', markDescription: 'Current account = -$18bn', numericMatch: { value: -18, tolerance: 0.1 } },
+        { id: 'mp3', markDescription: 'Volume = 48,000', numericMatch: { value: 48000, tolerance: 50 } },
+      ],
+    };
+
+    const pass = gradeShortAnswerLocal(
+      'YED = −1.5; current account balance is -$18bn; ticket volume = 48,000.',
+      econRubric
+    );
+    expect(pass.earnedMarks).toBe(3);
+    expect(pass.missedPoints).toHaveLength(0);
+
+    // Wrong sign (+1.5 instead of -1.5) must NOT receive credit
+    const wrongSign = gradeShortAnswerLocal('YED = +1.5; current account = +$18bn; volume = 48,000', econRubric);
+    expect(wrongSign.earnedMarks).toBe(1);
+  });
 });

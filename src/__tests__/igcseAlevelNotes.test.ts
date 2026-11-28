@@ -2,7 +2,7 @@ import React from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import { describe, expect, it } from 'vitest';
-import { ALL_COURSES, getCourseById, resolveCourseVariant } from '../data/catalog';
+import { ALL_COURSES, GCSE_SUBJECTS, getCourseById, resolveCourseVariant } from '../data/catalog';
 import { NotesViewerPage } from '../pages/study/NotesViewerPage';
 import { AppProvider } from '../store/AppContext';
 import { CourseDefinition, DiagramKind } from '../types/curriculum';
@@ -29,6 +29,10 @@ const REQUIRED_ALEVEL_COURSE_IDS = [
   'a-level-physics-aqa',
   'a-level-maths-edexcel',
   'a-level-psychology-cie-core',
+  'a-level-business-aqa',
+  'a-level-business-cie',
+  'a-level-economics-aqa',
+  'a-level-economics-cie',
 ] as const;
 
 const YOUTUBE_ID_REGEX = /^[A-Za-z0-9_-]{11}$/;
@@ -60,6 +64,12 @@ const VALID_DIAGRAM_KINDS = new Set<DiagramKind>([
   'logic-gates-truth',
   'tectonic-plate-margins',
   'break-even-chart',
+  'product-life-cycle',
+  'business-cycle',
+  'elasticity-curves',
+  'ad-as-macro',
+  'monopoly-market-structure',
+  'externality-market-failure',
 ]);
 
 function assertCourseHasCompleteNotes(course: CourseDefinition) {
@@ -327,5 +337,43 @@ describe('IGCSE & A-Level Notes, Videos & Catalog Coverage', () => {
     expect(firstKeyTermRow).toBeTruthy();
     fireEvent.click(firstKeyTermRow);
     expect(screen.queryByText(/TRY TO RECALL EACH DEFINITION, THEN TAP IT TO CHECK/i)).not.toBeInTheDocument();
+  });
+
+  it('unlocks GCSE Economics and attributes 100% of Business & Economics lessons to Mr Lee - Business Econ', () => {
+    const gcseEconSubject = GCSE_SUBJECTS.find((s) => s.slug === 'economics');
+    expect(gcseEconSubject).toBeDefined();
+    expect(gcseEconSubject?.pastPapersOnly).not.toBe(true);
+
+    const econBizIds = [
+      'igcse-business-cie',
+      'igcse-economics-cie',
+      'gcse-business-cie-core',
+      'gcse-economics-cie-core',
+      'a-level-business-aqa',
+      'a-level-business-cie',
+      'a-level-economics-aqa',
+      'a-level-economics-cie',
+    ];
+
+    for (const id of econBizIds) {
+      const course = getCourseById(id);
+      expect(course, `Missing course ${id}`).toBeDefined();
+      const subs = course!.topics.flatMap((t) => t.subtopics);
+      expect(course!.topics.length, `${id} should cover all 6 units`).toBe(6);
+      for (const sub of subs) {
+        const lesson = course!.notes[sub.id];
+        expect(lesson?.videoChannel, `${id}/${sub.id} should use Mr Lee - Business Econ`).toBe(
+          'Mr Lee - Business Econ'
+        );
+      }
+    }
+
+    const alEconEdexcel = resolveCourseVariant('a-level', 'economics', 'edexcel', 'A-Level');
+    expect(alEconEdexcel.qualification).toBe('a-level');
+    expect(alEconEdexcel.topics[0]?.subtopics[0]?.id.startsWith('al-econ-')).toBe(true);
+
+    const alBusEdexcel = resolveCourseVariant('a-level', 'business', 'edexcel', 'A-Level');
+    expect(alBusEdexcel.qualification).toBe('a-level');
+    expect(alBusEdexcel.topics[0]?.subtopics[0]?.id.startsWith('al-bus-')).toBe(true);
   });
 });

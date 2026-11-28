@@ -31,18 +31,13 @@ import { useApp } from '../../store/AppContext';
 import { GlossaryPill, NoteCardContent, NoteLesson, VideoTimestamp } from '../../types/curriculum';
 import { playSound } from '../../utils/soundEffects';
 
-const INLINE_MARKDOWN_REGEX = /(\*\*[^*]+\*\*|\*[^\s*](?:[^*]*[^\s*])?\*)/g;
+const INLINE_MARKDOWN_REGEX = /(\*\*[^*]+\*\*|`[^`]+`|\*[^\s*](?:[^*]*[^\s*])?\*)/g;
 
 export function stripInlineMarkdown(text: string): string {
-  return text.replace(INLINE_MARKDOWN_REGEX, (seg) => {
-    if (seg.startsWith('**') && seg.endsWith('**') && seg.length > 4) {
-      return seg.slice(2, -2);
-    }
-    if (seg.startsWith('*') && seg.endsWith('*') && seg.length > 2) {
-      return seg.slice(1, -1);
-    }
-    return seg;
-  });
+  return text
+    .replace(/\*\*([^*]+)\*\*/g, '$1')
+    .replace(/`([^`]+)`/g, '$1')
+    .replace(/\*([^\s*](?:[^*]*[^\s*])?)\*/g, '$1');
 }
 
 export function renderInlineMarkdown(text: string): React.ReactNode {
@@ -51,10 +46,29 @@ export function renderInlineMarkdown(text: string): React.ReactNode {
   if (segments.length === 1) return text;
   return segments.map((seg, idx) => {
     if (seg.startsWith('**') && seg.endsWith('**') && seg.length > 4) {
+      const inner = seg.slice(2, -2);
+      const codeSegs = inner.split(/(`[^`]+`)/g);
       return (
         <strong key={`b-${idx}`} style={{ fontWeight: 700, color: 'var(--text-heading)' }}>
-          {seg.slice(2, -2)}
+          {codeSegs.length === 1
+            ? inner
+            : codeSegs.map((cs, cIdx) =>
+                cs.startsWith('`') && cs.endsWith('`') && cs.length > 2 ? (
+                  <code key={`bc-${idx}-${cIdx}`} className="cognito-inline-formula">
+                    {cs.slice(1, -1)}
+                  </code>
+                ) : (
+                  <React.Fragment key={`bt-${idx}-${cIdx}`}>{cs}</React.Fragment>
+                )
+              )}
         </strong>
+      );
+    }
+    if (seg.startsWith('`') && seg.endsWith('`') && seg.length > 2) {
+      return (
+        <code key={`c-${idx}`} className="cognito-inline-formula">
+          {seg.slice(1, -1)}
+        </code>
       );
     }
     if (seg.startsWith('*') && seg.endsWith('*') && seg.length > 2) {
@@ -1059,20 +1073,54 @@ export const NotesViewerPage: React.FC = () => {
     return parts;
   };
 
+  const renderBoldInner = (
+    inner: string,
+    cardId: string,
+    pills: GlossaryPill[],
+    keyPrefix: string
+  ): React.ReactNode => {
+    const codeSegs = inner.split(/(`[^`]+`)/g);
+    if (codeSegs.length === 1) {
+      return applyGlossaryPills(inner, cardId, pills, keyPrefix);
+    }
+    return codeSegs.map((cs, cIdx) => {
+      if (cs.startsWith('`') && cs.endsWith('`') && cs.length > 2) {
+        return (
+          <code key={`${keyPrefix}-c-${cIdx}`} className="cognito-inline-formula">
+            {cs.slice(1, -1)}
+          </code>
+        );
+      }
+      return (
+        <React.Fragment key={`${keyPrefix}-t-${cIdx}`}>
+          {applyGlossaryPills(cs, cardId, pills, `${keyPrefix}-t-${cIdx}`)}
+        </React.Fragment>
+      );
+    });
+  };
+
   const renderRichText = (
     text: string,
     cardId: string,
     pills: GlossaryPill[] = []
   ): React.ReactNode => {
-    const tokenRegex = /(\*\*[^*]+\*\*|\*[^\s*](?:[^*]*[^\s*])?\*)/g;
+    const tokenRegex = /(\*\*[^*]+\*\*|`[^`]+`|\*[^\s*](?:[^*]*[^\s*])?\*)/g;
     const segments = text.split(tokenRegex);
     return segments.map((seg, idx) => {
       if (seg.startsWith('**') && seg.endsWith('**') && seg.length > 4) {
         const inner = seg.slice(2, -2);
         return (
           <strong key={`b-${idx}`} style={{ fontWeight: 700, color: 'var(--text-heading)' }}>
-            {applyGlossaryPills(inner, cardId, pills, `b-${idx}`)}
+            {renderBoldInner(inner, cardId, pills, `b-${idx}`)}
           </strong>
+        );
+      }
+      if (seg.startsWith('`') && seg.endsWith('`') && seg.length > 2) {
+        const inner = seg.slice(1, -1);
+        return (
+          <code key={`c-${idx}`} className="cognito-inline-formula">
+            {inner}
+          </code>
         );
       }
       if (seg.startsWith('*') && seg.endsWith('*') && seg.length > 2) {

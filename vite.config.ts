@@ -172,9 +172,9 @@ export default defineConfig(({ mode }) => {
               }
               return 'vendor';
             }
-            const courseMatch = normalized.match(/\/src\/data\/courses\/([^/]+)\.ts$/);
+            const courseMatch = normalized.match(/\/src\/data\/courses\/(.+)\.ts$/);
             if (courseMatch) {
-              return `course-${courseMatch[1]}`;
+              return `course-${courseMatch[1].replace(/\//g, '-')}`;
             }
             return undefined;
           },
